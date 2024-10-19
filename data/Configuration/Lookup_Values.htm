@@ -1,0 +1,387 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Lookup Values">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Lookup Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+li.hcp3 { list-style:none;
+display:inline; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+li.hcp5 { font-weight:bold; }
+span.hcp6 { font-weight:normal; }
+ol.hcp7 { list-style:decimal; }
+p.hcp8 { font-weight:normal; }
+p.hcp9 { font-weight:bold; }
+p.hcp10 { margin-left:6pt;
+margin-right:6pt;
+color:#ffffff; }
+p.hcp11 { color:#2363b7;
+margin-left:6pt;
+margin-right:6pt; }
+span.hcp12 { color:#2363b7; }
+li.hcp13 { color:#2363b7; }
+p.hcp14 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp15 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Lookup Values</h1>
+<p>Throughout the system you will encounter lists which are fields containing 
+ predefined lookup values for selection. These lists are useful time-saving 
+ devices that also prevent data inconsistency. </p>
+<p>This screen contains a list of the lookup tables that you can customise, 
+ if required. This includes: </p>
+<ul class="hcp1">
+	<li><p>adding tags to the lookup table</p></li>
+	<li><p>adding new values so that you have additional options from the 
+	 list for the user to select</p></li>
+</ul>
+<p class="FldExplain">Lookup Tables Listing</p>
+<p>Lookup tables that can be customised are displayed here. If the lookup 
+ table is not found here, this means that you are not able to customise 
+ the lookup table. The list shows both the code and name of the lookup 
+ table and you can sort it by clicking on the header of the column. To 
+ easily look for a lookup table, you can use the Find function by pressing 
+ CTRL + F keys. To select the lookup table, click on it.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Edit</span> - Click to edit 
+	 the selected lookup table in terms of:</p></li>
+	<li class="hcp3"><ul class="hcp1">
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Tag 
+		 Values field</a> - Tags will apply only to the 
+		 selected Lookup Table.</p>
+		<div class="droptext" id="POPUP521426848" style="display: none;">
+			<p>In the Tag Values field, you can enter:</p>
+			<ul class="hcp1">
+				<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a11">Control 
+				 whether new values can be added to the Lookup Table</a></p>
+				<div class="droptext" id="POPUP509234597" style="display: none;">
+					<p>[ALLOWNEW=N] prevents users from adding new values 
+					 to the Lookup Table manually by disabling the New 
+					 button for the Lookup Value.</p>
+					<p>For import actions either through <a href="Import_Export_Settings.htm">Import/Export 
+					 Settings</a> or <a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Data 
+					 Replication</a>, this tag is to be entered in the 
+					 environment where the Lookup Table will be exported 
+					 (Source/Master) environment.</p>
+					<p>In Data Replication, the Master environment is used 
+					 to set up the configuration, hence the [ALLOWNEW=N] 
+					 tag does not limit the Master environment to create 
+					 new Lookup Value.</p>
+					<p>The [ALLOWNEW=N] tag and configurations from Master 
+					 environment will then replicated to the Subcribers 
+					 where the tag will take effect and disallow user in 
+					 creating new Lookup Value.</p>
+					<p>In the environment where import is performed (Destination/Subscriber):</p>
+					<ul class="hcp1">
+						<li><p>when the exported .xml file contains value 
+						 but the values do not exist in the destination/subscriber 
+						 environment, these will be added.</p></li>
+						<li><p>when the exported .xml file does not contain 
+						 value but the values exist in the destination/subscriber 
+						 environment, these will be deactivated in the 
+						 destination/subscriber environment.</p></li>
+						<li><p>when the exported .xml file contains the 
+						 Lookup Table but the Lookup Table does not exist 
+						 in the destination/subscriber environment, the 
+						 Lookup Table will be imported.</p></li>
+						<li><p>when the exported .xml file does not contain 
+						 the Lookup Table but the Lookup Table exists in 
+						 the destination/subscriber environment, the Lookup 
+						 Table will be deactivated in the destination/subscriber 
+						 environment.</p></li>
+					</ul>
+					<p>&#160;If this tag is not entered, the default value 
+					 is [ALLOWNEW=Y].</p>
+					<p>&#160;</p>
+    </div></li>
+				<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a21">Specify 
+				 the subscriber(s) of the Lookup Table</a></p>
+				<div class="droptext" id="POPUP509538206" style="display: none;">
+					<ul class="hcp1">
+						<li><p>[SUBSCRIBER=<span class="hcp4">&lt;Subscriber&gt;</span>] 
+						 is to specify the subscriber group(s) that the 
+						 Lookup Table is for. For multiple groups, use 
+						 a comma to separate e.g. [SUBSCRIBER=GEN,ASA,EUR]</p></li>
+						<li><p>[SUBSCRIBER&lt;&gt;<span class="hcp4">&lt;Subscriber&gt;</span>] 
+						 is to specify subscribers that will be excluded.</p></li>
+					</ul>
+					<p class="SeeAlso">See also:</p>
+					<ul class="hcp1">
+						<li><p><a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Master 
+						 Configuration Environment (MCE) and Data Replication</a></p></li>
+					</ul>
+    </div></li>
+			</ul>
+   </div></li>
+		<li><p><a href="Risk_Ratings.htm">Risk Rating</a> option - Tick 
+		 this to apply risk scores for the values of the Lookup Table.</p></li>
+		<li><p>Customised option - Tick this to ensure that customisations 
+		 for the selected Lookup Table will not be overwritten when an 
+		 upgrade is performed.</p></li>
+	</ul>
+	<p><span class="hcp4">Note:</span> 
+	 The table code and name fields are displayed as reference. These fields 
+	 are not editable.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Filter</p>
+<p>The filter applies to the lookup table values for the selected lookup 
+ table where you can choose to view Active, Inactive or All values.</p>
+<p>&#160;</p>
+<p class="FldExplain">Lookup Values</p>
+<p>This shows the values for the selected lookup table based on the selected 
+ filter.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li class="hcp5"><p>New<span class="hcp6">&#160;- 
+	 Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">add</a> 
+	 a new lookup value.</span><span class="hcp6">&#160;If 
+	 this is not active, this means that new values cannot be added to 
+	 the lookup table.</span></p>
+	<div class="droptext" id="POPUP444207840" style="display: none;">
+		<ol class="hcp7">
+			<li><p>Enter details for the new value.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		
+		<ul class="hcp1">
+			
+			
+		</ul>
+		<p>&#160;</p>
+ </div></li>
+	<li class="hcp5"><p>Edit <span class="hcp6">- 
+	 Click this to edit an existing lookup value.</span></p></li>
+	<li class="hcp5"><p>Global Change <span class="hcp6">- 
+	 Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a2">update</a> 
+	 lookup values throughout Viewpoint. The global change screen that 
+	 appears contain the following:</span></p>
+	<div class="droptext" id="POPUP444278563" style="display: none;">
+		<ol class="hcp7">
+			<li><p>In the global change screen, specify the change you 
+			 want to make.</p></li>
+			<li><p>Click Global Update.</p></li>
+		</ol>
+ </div></li>
+	<li class="hcp3"><ul class="hcp1">
+		<li class="hcp5"><p class="hcp8"><span class="hcp2">Show All/With new code/Without new 
+		 code</span> - The Show All radio button is selected by default 
+		 when you activate the Global Change screen, so all existing codes 
+		 in the selected lookup table will be displayed. Select With new 
+		 code or Without new code to isolate code with/without entries 
+		 in the New Code column of the table.</p></li>
+		<li class="hcp5"><p class="hcp9">Suggest 
+		 - <span class="hcp6">This function is available 
+		 only for the Country Codes [CNTR] and Currency Codes [CURR] lookup 
+		 value tables. When this button is clicked, the system will <a class="dropspot" href="javascript:TextPopup(this)" id="a5">compare 
+		 non-ISO standard codes to ISO-compliant ones</a> 
+		 and suggest the appropriate ISO-compliant code for the non-ISO 
+		 standard one. If the ISO-compliant code suggested by the system 
+		 already exists, the Delete check box will be ticked and a &quot;[code] 
+		 already exists&quot; message will be displayed in the Message 
+		 column.</span></p>
+		<div class="droptext" id="POPUP498230650" style="display: none;">
+			<p>To allow the comparison, the ISO-compliant value will contain 
+			 the tag [VPO=&lt;OldCode&gt;] where &lt;OldCode&gt; is the 
+			 non-ISO standard code.</p>
+  </div></li>
+		<li class="hcp5"><p class="hcp9">Current 
+		 Code <span class="hcp6">- This column displays 
+		 the current codes in the lookup value table. If you click a cell 
+		 in this column, a search button will be activated. Click this 
+		 button to see where the selected code is being used.</span></p></li>
+		<li class="hcp5"><p class="hcp9">Current 
+		 Name <span class="hcp6">-</span> <span class="hcp6">This 
+		 column displays the current names that exist in the lookup value 
+		 table. In some instances, such as in the Country Codes and Currency 
+		 Codes tables, there may be duplicates or variations of a country 
+		 name or currency.</span></p></li>
+		<li class="hcp5"><p class="hcp9">VP 
+		 Std. - <span class="hcp6">This checkbox will</span> 
+		 <span class="hcp6">be ticked to indicate they 
+		 are Viewpoint's standard codes which cannot be deleted.</span></p></li>
+		<li class="hcp5"><p class="hcp9">New 
+		 Code <span class="hcp6">- This column is where 
+		 you enter the new code for an existing code. Doing so will add 
+		 the [CVC=] tag with the old code to the Tag Values field.</span></p></li>
+		<li class="hcp5"><p class="hcp9">Deactivate 
+		 <span class="hcp6">- Tick this to deactivate a 
+		 code. Codes that are in use cannot be deactivated.</span></p></li>
+		<li class="hcp5"><p class="hcp9">Delete 
+		 - <span class="hcp6">Tick this to remove the code.</span></p></li>
+		<li class="hcp5"><p class="hcp9">Message 
+		 <span class="hcp6">- This will display <a class="dropspot" href="javascript:TextPopup(this)" id="a3">system 
+		 messages</a>.</span></p>
+		<div class="droptext" id="POPUP449871360" style="display: none;">
+			<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+					 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="850">
+				<col style="width: 30%;">
+				<col style="width: 70%;">
+				<tr class="t1st">
+					<td><p class="hcp10">Message</p></td>
+					<td><p class="hcp10">Explanation</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td style="vertical-align: top;" class="t1Col"><p class="hcp11">Unable 
+					 to delete/deactivate. Code is in use.</p></td>
+					<td style="vertical-align: top;" class="t2Col"><p class="hcp11"><span class="hcp12">This error may occur if you 
+					 attempt to delete or deactivate a code that is being 
+					 used.</span></p>
+					<ul class="hcp1">
+						<li class="hcp13"><p class="hcp14">If 
+						 you are attempting to deactivate a code that is 
+						 being used, we recommend that you do this in the 
+						 Customize Lookup Values screen.</p></li>
+						<li class="hcp13"><p class="hcp14">If 
+						 you are attempting to delete a code that is being 
+						 used, we recommend that you rename the code AND 
+						 tick the Delete check box. This will rename the 
+						 code and delete the old one.</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t1Row">
+					<td style="vertical-align: top;" class="t1Col"><p class="hcp11">TABLE: 
+					 &lt;Table&gt; FIELD: &lt;Field&gt;-&gt;The changes 
+					 you requested to the table were not successful because 
+					 they would create duplicate values in the index, primary 
+					 key, or relationship. Change the data in the field 
+					 or fields that contain duplicated data, remove the 
+					 index, or redefine the index to permit duplicate entries 
+					 and try again.</p></td>
+					<td style="vertical-align: top;" class="t2Col"><p class="hcp11"><span class="hcp12">This type of error may occur 
+					 if you attempt to change a code to an existing code.</span></p>
+					<ul class="hcp1">
+						<li class="hcp13"><p class="hcp14">For 
+						 example, if you change Guernsey [GG] to Guernsey 
+						 [GI] in the Country Codes [CNTR] table. Since 
+						 [GI] is already being used by Gibraltar, other 
+						 areas such as the EntityType table may be affected: 
+						 Gibraltar may have a Limited Company [LC] set 
+						 up, and converting GG to GI may affect Gibraltar’s 
+						 Limited Company [LC]. When this happens the change 
+						 is aborted.</p></li>
+						<li class="hcp13"><p class="hcp14">If 
+						 you choose to ignore the warning, you can redo 
+						 the change and tick the Ignore error during global 
+						 update check box. If you do this, the change will 
+						 be done on database rows that do not cause the 
+						 error. All rows that generate errors will be skipped.</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t2Row">
+					<td style="vertical-align: top;" class="t1Col"><p class="hcp11"><span class="hcp12">[CODE1] already exists. Circular 
+					 reference CODE -&gt; CODE1 -&gt; CODE2.</span></p>
+					<p class="hcp11">[CODE2] 
+					 already exists. Please update this code first to prevent 
+					 circular reference.</p></td>
+					<td style="vertical-align: top;" class="t2Col"><p class="hcp11"><span class="hcp12">These messages appear if you 
+					 are attempting to change one code to another code 
+					 that already exists.</span></p>
+					<ul class="hcp1">
+						<li class="hcp13"><p class="hcp14">To 
+						 overcome circular reference errors, rename CODE2 
+						 first, then CODE1;</p></li>
+						<li class="hcp13"><p class="hcp14">or, 
+						 use different codes for [CODE1] and [CODE2].</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t1Row">
+					<td style="vertical-align: top;" class="t1Col"><p class="hcp11">[CODE] 
+					 already exists.</p></td>
+					<td style="vertical-align: top;" class="t2Col"><p class="hcp11"><span class="hcp12">This normally happens when 
+					 a code is being re-coded to a code that already exists.</span></p>
+					<ul class="hcp1">
+						<li class="hcp13"><p class="hcp14">Use 
+						 a different code for the new code.</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t2Row">
+					<td style="vertical-align: top;" class="t1Col"><p class="hcp11">[CODE] 
+					 is used more than once.</p></td>
+					<td style="vertical-align: top;" class="t2Col"><p class="hcp11"><span class="hcp12">This normally happens when 
+					 two or more codes are being recoded to the same code, 
+					 as shown in the image above.</span></p>
+					<ul class="hcp1">
+						<li class="hcp13"><p class="hcp14">Use 
+						 different codes for each of the new codes.</p></li>
+					</ul></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp5"><p class="hcp9">Global 
+		 Update - <span class="hcp6">Click to start the 
+		 global update. Note that all other users should be logged out 
+		 of Viewpoint before you do this. Results of the change will be 
+		 logged in the</span> <span class="hcp6">LookValuesDecode_&lt;TABLECODE&gt;xx.csv 
+		 file.</span></p></li>
+		<li class="hcp5"><p class="hcp8"><span class="hcp2">Ignore error during global update</span> 
+		 - Tick this to ignore warnings or errors that occur during a global 
+		 update.</p></li>
+		<li class="hcp5"><p>Close <span class="hcp6">- 
+		 Click to close the screen.</span></p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Lookup_Tables.htm">Lookup Tables</a></p></li>
+	<li><p><a href="Localise_Script_-_Lookup_Values.htm">Localise Script 
+	 - Lookup Values</a></p></li>
+</ul>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Lookup_Values.htm">General</a> &gt; <a href="Lookup_Values.htm">Lookup Values</a> &gt; Lookup Values</p>
+  <p class="hcp15">&#160;</p>
+  <p class="hcp15">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp15">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a4','POPUP521426848');
+	TextPopupInit('a11','POPUP509234597');
+	TextPopupInit('a21','POPUP509538206');
+	TextPopupInit('a1','POPUP444207840');
+	TextPopupInit('a2','POPUP444278563');
+	TextPopupInit('a5','POPUP498230650');
+	TextPopupInit('a3','POPUP449871360');
+//]]></script>
+ </body>
+</html>

@@ -1,0 +1,661 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Engage Servicing Portal Jobs</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+li.hcp4 { list-style:disc; }
+li.hcp5 { list-style:none;
+display:inline; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Engage Servicing Portal Task Scheduler Jobs</h1>
+<p>In Viewpoint's Engage Servicing Portal (ESP), task scheduler jobs can 
+ be set up to:</p>
+<ul class="hcp1">
+	<li><p>Send e-mails on new user account activation or password reset.</p></li>
+	<li><p>Update the ESP Calendar.</p></li>
+	<li><p>Generate registers in ESP (registers printing).</p></li>
+	<li><p>Receive notification in ESP.</p></li>
+	<li><p>Synchronise Debtor Aging from ESP Back-office to Front-office.</p></li>
+	<li><p>Automate document sharing to ESP.</p></li>
+	<li><p>Process any Notification triggered by the Change from the Back-office 
+	 (for Followers feature).</p></li>
+	<li><p>Retrieve unread notifications from the ESP and send the report 
+	 to the subscribers who did not log in overnight (more than 24 hours).</p></li>
+	<li><p>Retrieve all notifications from the ESP within the week and 
+	 send the report to the subscribers.</p></li>
+	<li><p>Update the pending payment transaction to ‘Expired’ status if 
+	 it is pending/idle for more than a certain period.</p></li>
+	<li><p>Retrieve Back-office records based on the queries stored in 
+	 System Settings ‘ENTADD’ key and store in the Front-office database. 
+	 The retrieved record will be displayed in the ESP 'Entities' list 
+	 as per the tag configured in System Settings ‘ENTLST’ key. See <a 
+	 href="../Configuration/System_Settings.htm">System Settings</a> for 
+	 details.</p></li>
+</ul>
+<p style="font-weight: bold; font-style: italic;">Note: <span style="font-style: normal; 
+	 font-weight: normal;">The ESP task scheduler jobs are configured in 
+ the Front-office Client Portal Administrator (CP-AD). Prior to this, please 
+ ensure that the Viewpoint Task Scheduler and Notification Agent has been 
+ set up in the Front-office ViewPointDbMgt.</span></p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for ESP User Activation</h2>
+<p>This job will send out an activation e-mail to the user with a link 
+ to activate the user account.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Activation E-mail [CPLA]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, you can change the E-mail Subject and E-mail Template.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for ESP Password Reset</h2>
+<p>This job will send out an e-mail with a link to reset the user password.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Reset Password E-mail [CPLE]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, you can change the E-mail Subject and E-mail Template.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for ESP Calendar Update</h2>
+<p>The ESP Calendar displays important dates for tasks and actions before 
+ they are due. The information is retrieved from the Back-office to be 
+ updated to the ESP. A task scheduler has to be configured to enable the 
+ calendar updates.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Calendar Update [CPUC]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, select the database of the Back-office.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for ESP Register Printing</h2>
+<p>In the ESP, user can select register that is shared out to the portal 
+ for printing. The register will be generated by the Back-office before 
+ it is sent back to the ESP. The following job has to be configured to 
+ allow user to print register in ESP.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Register Printing [CPPR]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>This job will prompt instant notification to user if the register is 
+ successfully generated or failed. To do so, administrator can configure 
+ in the Front-office Configuration &gt; Engage Servicing Portal &gt; Global 
+ &gt; Notifications to enable the instant notifications on:</p>
+<ul class="hcp1">
+	<li><p>Document Generation - Success</p></li>
+	<li><p>Document Generation - Fail</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for ESP Get Notification</h2>
+<p>In the ESP, administrator can configure in the Front-office Configuration 
+ &gt; Engage Servicing Portal &gt; Global &gt; Notifications to enable 
+ the instant notifications on:</p>
+<ul class="hcp1">
+	<li><p>My Request - Message Received</p></li>
+	<li><p>My Request - Status Update</p></li>
+	<li><p>Online Payment Completed</p></li>
+</ul>
+<p>The following job has to be configured in order for user to receive 
+ notification:</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Get Notification [CPGN]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<h2>Setting up Task Scheduler for Debtor Aging</h2>
+<p>This job synchronise the Debtor Aging information in the Back-office 
+ to the Front-office. The information will then be displayed in the CP-WP 
+ dashboard widget in both Home and File page. To configure this job,</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Debtor Ageing [CPDA]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, select the database of the Back-office.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<h2>Setting up Task Scheduler to Automate Document Sharing to ESP</h2>
+<p>This job automates document sharing from the Document Manager to the 
+ ESP Web Portal. Administrator can configure the tag values to allow certain 
+ documents to be shared to ESP.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Document Sharing [CSPD]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Tag Values, enter the tag accordingly. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a> 
+	 for details.</p>
+	<div class="droptext" id="POPUP571286181" style="display: none;">
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 26.397%;">
+			<col style="width: 73.603%;">
+			<tr class="t1st">
+				<td><p>Tag Values</p></td>
+				<td><p>Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>DocType</p></td>
+				<td class="t2Col"><p>This refers to the Document Type that 
+				 the user wishes to store. It can be one or more document 
+				 types separated in comma (',').</p>
+				<p>Example:</p>
+				<p>[/DocType=DOCX,PDF/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Cabinet</p></td>
+				<td class="t2Col"><p>This specifies the documents to be 
+				 retrieved from which Filing Cabinet in Document Manager 
+				 (source) and to be stored into which ESP cabinet. The 
+				 syntax is:</p>
+				<p>[/Cabinet= Document Manager Filing Cabinet key tag:ESP 
+				 Cabinet code/]. It can be one or more sets of filing cabinet 
+				 separated in comma (',').</p>
+				<p>Example :</p>
+				<p>[/Cabinet=REFMAT:AGRE,HREMP:STAT/]</p>
+				<p>&#160;</p>
+				<p><span class="hcp3">Note</span>: 
+				 The Document Manager Filing Cabinet key tag can be referred 
+				 from Home &gt; Configuration &gt; Business Parameters 
+				 &gt; Document Management &gt; Filing Cabinets.</p>
+				<p>The ESP Filing Cabinet code can be referred from Home 
+				 &gt; Configuration &gt; Business Parameters &gt; General 
+				 &gt; Lookup Values &gt; Engage Portal Filing Cabinets 
+				 [CPFC] lookup value.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>FileContain</p></td>
+				<td class="t2Col"><p>This will set the rule in selecting 
+				 the documents with or without specific keyword in the 
+				 file name.</p>
+				<p>The '*' indicates the keyword position as per example 
+				 below:</p>
+				<ul class="hcp1">
+					<li><p>Agreement* - the file name shall begin with 
+					 the word 'Agreement'.</p></li>
+					<li><p>*Agreement* - the file name shall contain the 
+					 word 'Agreement'.</p></li>
+					<li><p>*Agreement - the file name shall end with the 
+					 word 'Agreement'.</p></li>
+				</ul>
+				<p>Example :</p>
+				<p>[/FileContain=Agreement*,*Minutes*/]</p>
+				<p>[/FileContain&lt;&gt;*DRAFT*/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>RequireApproval</p></td>
+				<td class="t2Col"><p>This will set whether an approval 
+				 is required when sharing out the document. If 'RequireApproval' 
+				 is set to 'Y', the document will need to be approved by 
+				 another user before being shared to ESP. If 'RequireApproval' 
+				 is set to 'N', the document does not need to be approved 
+				 and will be shared to ESP automatically. &#160;</p>
+				<p>Example :</p>
+				<p>[/RequireApproval=N/]</p>
+				<p><span class="hcp3">Note</span>: 
+				 If [/RequireApproval=/] is not defined or incorrectly 
+				 defined, by default the document will be approved by the 
+				 system and gets published to ESP automatically.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>LastRun</p></td>
+				<td class="t2Col"><p>This refers to the task scheduler 
+				 job last run date. The system will compare the 'LastRun 
+				 date' with the Document Holder 'Date Last Updated'. Only 
+				 Document Holder with the 'Date Last Updated' later than 
+				 the task scheduler job 'LastRun date' will be processed 
+				 for sharing.</p>
+				<p>During the task scheduler job setup, it is recommended 
+				 to put a past date into the 'LastRun' so that all documents 
+				 that are after this date will be processed for sharing 
+				 during the job's first run. If&#160;'LastRun' is not defined 
+				 during the&#160;task scheduler job setup, it will take 
+				 the current date as its 'LastRun' and will only process 
+				 document with Document Holder 'Date Last Updated' later 
+				 than the current date.</p>
+				<p>For the subsequent task run, the 'LastRun' field will 
+				 be updated automatically by the system.</p>
+				<p>Example :</p>
+				<p>[/LastRun=2018-08-16/]</p></td>
+			</tr>
+		</table>
+		<p>Notation:</p>
+		<p>&#160;= &#160;&#160;means equals to</p>
+		<p>&lt;&gt; &#160;means not equals to</p>
+		<p>&#160;</p>
+		<p>Example tag values:</p>
+		<p>[/DocType=PDF,DOCX/]</p>
+		<p>[/Cabinet=REFMAT:AGRE,HREMP:STAT/]</p>
+		<p>[/FileContain=Agreement*,*Minutes*/]</p>
+		<p>[/FileContain&lt;&gt;*DRAFT*/]</p>
+		<p>[/RequireApproval=Y/]</p>
+		<p>[/LastRun=2018-08-16/]</p>
+		<p>&#160;</p>
+		<p>Explanation:</p>
+		<p>The above configuration will look for document type of PDF and 
+		 DOCX, from the filing cabinet with key tag 'REFMAT' and will store 
+		 them into ESP cabinet 'AGRE'; while for the filing cabinet with 
+		 key tag 'HREMP', the document will be stored into ESP cabinet 
+		 'STAT'. Additionally, it will only retrieve documents whereby 
+		 the file name starts with the word 'Agreement' or contains the 
+		 word 'Minutes'. It will exclude documents whereby the file name 
+		 contains the word 'DRAFT'. Likewise, the approval is set to Y; 
+		 hence, approval is required before the document is published to 
+		 ESP. The system will process documents where the Document Holder 
+		 'Date Last Updated' is after 2018-08-16.</p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>Successfully shared document is logged in the Audit Trail which can 
+ be viewed at:</p>
+<ul class="hcp1">
+	<li><p>Home &gt; Enquiry &gt; Audit Trails &gt; Document Management; 
+	 or</p></li>
+	<li><p>Audit Trail from the Ribbon's Documents tab.</p></li>
+</ul>
+<h2>Setting up Task Scheduler to Process Notification Triggered by the 
+ Change from the Back-Office (for Followers Feature)</h2>
+<p>In the Front-office, this job will process any Notification triggered 
+ by the Change from the Back-office.</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New. In the Setup, select Job Type ‘Engage Servicing Portal 
+	 – Follower Notification [CPFN]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Criteria, enter the Database where the notification is 
+	 retrieved.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul>
+		<li class="hcp4"><p>Success - This is the notification 
+		 when the job is completed successfully.</p></li>
+		<li class="hcp4"><p>Fail - This is the notification 
+		 when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<h2>Setting up Task Scheduler to Retrieve Unread Notifications from the 
+ ESP and Send the Report to the Subscribers Who Did Not Login Overnight</h2>
+<p>This job retrieves unread notifications from the ESP and send the report 
+ to the subscribers. It will only send out e-mail to user who did not login 
+ overnight (more than 24 hours).</p>
+<p>It retrieves notifications on:</p>
+<ul class="hcp1">
+	<li><p>Documents that the user generated (both successful and failed).</p></li>
+	<li><p>User ‘Requests’ status updates.</p></li>
+	<li><p>User ‘Requests’ messages received.</p></li>
+	<li><p>All items that the user followed which includes:</p></li>
+	<li class="hcp5"><ul class="hcp1">
+		<li><p>Entity Information</p></li>
+		<li><p>Documents</p></li>
+		<li><p>Filings</p></li>
+		<li><p>Meetings</p></li>
+		<li><p>Requests</p></li>
+	</ul></li>
+</ul>
+<p>To set up the task scheduler job:</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New. In the Setup, select Job Type ‘Engage Servicing Portal 
+	 – Daily Report [CPDR]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Criteria, enter the E-mail Subject and <a class="dropspot" href="javascript:TextPopup(this)" id="a2">E-mail 
+	 Template</a>.</p>
+	<div class="droptext" id="POPUP562824060" style="display: none;">
+		<p>The default e-mail template used in ESP Notifications is 'ESP 
+		 Daily Notification' (Code: CPDR01).</p>
+		<p>It is accessible in Configuration &gt; Document Libraries &gt; 
+		 Other Document Templates, in Document Type 'Email Notification 
+		 Templates [D03]'</p>
+		<p>The e-mail will show all Notifications retrieved from the ESP; 
+		 however, administrator can choose to exclude any Notification 
+		 in the e-mail via tag customisation.</p>
+		<p>&#160;</p>
+		<h3>Customising Tag to Selectively Exclude (Not Show) Certain Notifications</h3>
+		<p>The default tag (+Notification+) is used in the e-mail template 
+		 to show all Notifications retrieved from the ESP.</p>
+		<p>To exclude any Notification from appearing in the e-mail, replace 
+		 the tag with:</p>
+		<p>(+Notification|NS:&lt;Subscription Id&gt;+)</p>
+		<p>where the ‘Subscription Id’ refers to the Notification to be 
+		 excluded from the e-mail.</p>
+		<p>The ‘Subscription Id’ can be referred from the Notification 
+		 'Subscription Id' field in Configuration &gt; Engage Servicing 
+		 Portal &gt; Global &gt; Notifications.</p>
+		<p>For example, to exclude the report on 'Document Generation - 
+		 Success', replace the default tag with:</p>
+		<p>(+Notification|NS:1+)</p>
+		<p>The 'Subscription Id' operates in bitwise. If the administrator 
+		 would like to exclude more than one Notification in the e-mail 
+		 template, this can be done by adding up the 'Subscription Id' 
+		 of each Notification.</p>
+		<p>For example, to exclude the report on 'Document Generation - 
+		 Success' and 'Document Generation - Fail', add up both the 'Subscription 
+		 Id' (1+2=3). Hence, the tag become (+Notification|NS:3+).</p>
+		<p><span class="hcp3">Note</span>: 
+		 The Subscription Id for ‘Followers’ item is 32. To exclude the 
+		 ‘Followers’ item updates from appearing in the e-mail report, 
+		 replace it with the tag (+Notification|NS:32+).</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul>
+		<li class="hcp4"><p>Success - This is the notification 
+		 when the job is completed successfully.</p></li>
+		<li class="hcp4"><p>Fail - This is the notification 
+		 when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>This job runs on a daily basis as per default setting. However, 
+	 you can set the preferred ‘Start Date’, frequency and occurrence time 
+	 in the Schedule tab.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<h2>Setting up Task Scheduler to Retrieve All Notifications from the ESP 
+ within the Week and Send the Report to the Subscribers</h2>
+<p>This job retrieves all notifications from the ESP within the week and 
+ send the report to the subscribers, regardless of whether they login to 
+ the ESP or not.</p>
+<p>It retrieves notifications on:</p>
+<ul class="hcp1">
+	<li><p>Calendar items that are ‘Overdue’ and ‘Due Soon’.</p></li>
+	<li><p>Documents that the user generated (both successful and failed).</p></li>
+	<li><p>User ‘Requests’ status updates.</p></li>
+	<li><p>User ‘Requests’ messages received.</p></li>
+	<li><p>All items that the user followed which includes:</p></li>
+	<li class="hcp5"><ul class="hcp1">
+		<li><p>Entity Information</p></li>
+		<li><p>Documents</p></li>
+		<li><p>Filings</p></li>
+		<li><p>Meetings</p></li>
+		<li><p>Requests</p></li>
+	</ul></li>
+</ul>
+<p><span class="hcp3">Note</span>: Before 
+ enabling this job, ensure that the ‘Engage Servicing Portal - Calendar 
+ Update [CPUC]’ job is activated; otherwise, it will fail to retrieve the 
+ Calendar items.</p>
+<p>To set up the task scheduler job:</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New. In the Setup, select Job Type ‘Engage Servicing Portal 
+	 – Weekly Report [CPWR]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Criteria, enter the E-mail Subject and <a class="dropspot" href="javascript:TextPopup(this)" id="a3">E-mail 
+	 Template</a>.</p>
+	<div class="droptext" id="POPUP562877712" style="display: none;">
+		<p>The default e-mail template used in ESP Notifications is 'ESP 
+		 Weekly Notification' (Code: CPWR01).</p>
+		<p>It is accessible in Configuration &gt; Document Libraries &gt; 
+		 Other Document Templates, in Document Type 'Email Notification 
+		 Templates [D03]'</p>
+		<p>The e-mail will show all Notifications retrieved from the ESP; 
+		 however, administrator can choose to exclude any Notification 
+		 in the e-mail via tag customisation.</p>
+		<p>&#160;</p>
+		<h3>Customising Tag to Selectively Exclude (Not Show) Certain Notifications</h3>
+		<p>The default tag (+Notification+) is used in the e-mail template 
+		 to show all Notifications retrieved from the CSP.</p>
+		<p>To exclude any Notification from appearing in the e-mail, replace 
+		 the tag with:</p>
+		<p>(+Notification|NS:&lt;Subscription Id&gt;+)</p>
+		<p>where the ‘Subscription Id’ refers to the Notification to be 
+		 excluded from the e-mail.</p>
+		<p>The ‘Subscription Id’ can be referred from the Notification 
+		 'Subscription Id' field in Configuration &gt; Engage Servicing 
+		 Portal &gt; Global &gt; Notifications.</p>
+		<p>For example, to exclude the report on 'Document Generation - 
+		 Success', replace the default tag with:</p>
+		<p>(+Notification|NS:1+)</p>
+		<p>The 'Subscription Id' operates in bitwise. If the administrator 
+		 would like to exclude more than one Notification in the e-mail 
+		 template, this can be done by adding up the 'Subscription Id' 
+		 of each Notification.</p>
+		<p>For example, to exclude the report on 'Document Generation - 
+		 Success' and 'Document Generation - Fail', add up both the 'Subscription 
+		 Id' (1+2=3). Hence, the tag become (+Notification|NS:3+).</p>
+		<p><span class="hcp3">Note</span>: 
+		 The Subscription Id for ‘Followers’ item is 32. To exclude the 
+		 ‘Followers’ item updates from appearing in the e-mail report, 
+		 replace with the tag (+Notification|NS:32+).</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul>
+		<li class="hcp4"><p>Success - This is the notification 
+		 when the job is completed successfully.</p></li>
+		<li class="hcp4"><p>Fail - This is the notification 
+		 when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>This job runs on weekly basis as per default setting. However, 
+	 you can set the preferred ‘Start Date’, frequency and occurrence time 
+	 in the Schedule tab.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<h2>Setting up Task Scheduler to Update the Pending Payment Transaction 
+ to ‘Expired’ Status When Pending for a Certain Period</h2>
+<p>This job updates the pending payment transaction in ESP 'Invoices' page 
+ to ‘Expired’ status if it is pending/idle for more than 10 minutes.</p>
+<p><span class="hcp3">Note</span>: The 
+ ‘Expired’ status timeout is set to default 10 minutes, however this setting 
+ can be changed in the Front-office Configuration &gt; Settings &gt; Customise 
+ &gt; System Settings, under the key ‘CSPPYT’.</p>
+<p>To set up the task scheduler job:</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New. In the Setup, select Job Type ‘Engage Servicing Portal 
+	 - Payment Record Cleanup [CPPC]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul>
+		<li class="hcp4"><p>Success - This is the notification 
+		 when the job is completed successfully.</p></li>
+		<li class="hcp4"><p>Fail - This is the notification 
+		 when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>Set the job frequency to 'Continuous [C]'.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler to Retrieve Back-Office Records Based on 
+ the Queries Stored in System Settings ‘ENTADD’ Key and Store the Records 
+ in the Front-Office Database</h2>
+<p>This job retrieves the Back-office records based on the queries in the 
+ System Settings ‘ENTADD’ key and stores the retrieved records in the Front-office 
+ database. The records will then be displayed in the ESP 'Entities' list 
+ as per the tag configured in System Settings ‘ENTLST’ key. This task scheduler 
+ job and both the settings in ‘ENTADD’ key and ‘ENTLST’ key is used to 
+ customise the Entity's display information in ESP 'Entities' list. It 
+ also allows ESP to show the Master File compliance status or any defined 
+ status in colour badge. Refer to <a href="../Configuration/System_Settings.htm">System 
+ Settings</a> for details.</p>
+<p>To set up the task scheduler job:</p>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Engage Servicing 
+	 Portal - Entity Update [CPEU]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, select the database of the Back-office.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+</ul>
+<p>&#160;</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Engage Servicing Portal Jobs</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP571286181');
+	TextPopupInit('a2','POPUP562824060');
+	TextPopupInit('a3','POPUP562877712');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Process Diagram">
+<meta name="MS-HAID" content="Statement Import and Processing">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statement Import - Process Diagram</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Statement Import &amp; Processing - Process Diagram</h1>
+<p>The following diagram shows the reconciliation process, and how the 
+ statement line status is defined:</p>
+&#160; 
+<h3>Statement line status</h3>
+<p>A statement line will be processed if its status number is less than 
+ 10.</p>
+<p>Below is the list of statuses and their numbers.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="49.754%" border="1">
+	<col style="width: 29.77%;">
+	<col style="width: 70.23%;">
+	<tr class="t1st">
+		<td><p>Status Number</p></td>
+		<td><p>Status</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>00</p></td>
+		<td class="t2Col"><p>Non-processed</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>01</p></td>
+		<td class="t2Col"><p>Failed to identify Account (sub-ledger)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>02</p></td>
+		<td class="t2Col"><p>Account File / Sub-ledger Recognised (waiting 
+		 for processing)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>10</p></td>
+		<td class="t2Col"><p>Reconciled - Waiting Confirmation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>11</p></td>
+		<td class="t2Col"><p>Reconciled - Confirmed</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>12</p></td>
+		<td class="t2Col"><p>Reconciled - Automatic</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>13</p></td>
+		<td class="t2Col"><p>Reconciled - Manual</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>20</p></td>
+		<td class="t2Col"><p>Script to Pending - Waiting Confirmation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>21</p></td>
+		<td class="t2Col"><p>Script to Pending - Confirmed</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>22</p></td>
+		<td class="t2Col"><p>Script to Pending&#160;- Automatic</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>23</p></td>
+		<td class="t2Col"><p>Script to Pending&#160;- Manual</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>30</p></td>
+		<td class="t2Col"><p>Script to Journal - Waiting Confirmation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>31</p></td>
+		<td class="t2Col"><p>Script to Journal - Confirmed</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>32</p></td>
+		<td class="t2Col"><p>Script to Journal - Automatic</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>33</p></td>
+		<td class="t2Col"><p>Script to Journal - Manual</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>34</p></td>
+		<td class="t2Col"><p>Script to Journal - Failed and Posted to Pending</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>80</p></td>
+		<td class="t2Col"><p>No rule applicable - Pending - Waiting Confirmation</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>81</p></td>
+		<td class="t2Col"><p>No rule applicable - Pending - Confirmed</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>82</p></td>
+		<td class="t2Col"><p>No rule applicable - Pending - Automatic</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>83</p></td>
+		<td class="t2Col"><p>No rule applicable - Pending - Manual</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>98</p></td>
+		<td class="t2Col"><p>Ignored - on account list</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>99</p></td>
+		<td class="t2Col"><p>Ignored - no processing done</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+	<li><p><a href="Statement_Import_Process_Reconcile_Folder.htm">Statement 
+	 Import&#160;&amp; Processing - Process &amp; Reconcile Folder</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Statement Import - Process Diagram</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp1">Version: 8.0.2022.09.20</p>
+</body>
+</html>

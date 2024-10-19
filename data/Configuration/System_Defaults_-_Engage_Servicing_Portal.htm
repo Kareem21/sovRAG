@@ -1,0 +1,207 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Engage Servicing Portal</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>System Defaults - Engage Servicing Portal</h1>
+<p>The defaults for Engage Servicing Portal (ESP) are set up here.</p>
+<p>&#160;</p>
+<p class="FldExplain">Web Title</p>
+<p>Enter the title that will appear on the Engage Servicing Portal.</p>
+<p>&#160;</p>
+<p class="FldExplain">Web URL</p>
+<p>Enter the URL where the Engage Servicing Portal is hosted.</p>
+<p>&#160;</p>
+<p class="FldExplain">Token Expires in</p>
+<p>Enter the time period (in Hours) before a token expired. The token is 
+ issued when user activation and password reset is requested.</p>
+<p>&#160;</p>
+<p class="FldExplain">Timeout of Data Synchronisation is</p>
+<p>This refers to the timeout period for data synchronisation between the 
+ front-end (ESP web portal) and back-end server. Enter the time period 
+ (in Minutes). If value is '0' or negative, this indicates that timeout 
+ is disabled.</p>
+<p>&#160;</p>
+<p class="FldExplain">Login Failure Threshold</p>
+<p>Enter the number of login attempts permitted. Enter '0' to disable the 
+ feature.</p>
+<p>&#160;</p>
+<p class="FldExplain">Terms and Conditions</p>
+<p>Enter text for the terms and conditions that show during Engage Servicing 
+ Portal user login. HTML tags are supported. The terms and conditions will 
+ only show when 'Enable Terms and Conditions' option is ticked. User must 
+ agree to the terms and conditions in order to access the Engage Servicing 
+ Portal.</p>
+<p>&#160;</p>
+<p class="FldExplain">Maximum Search Result</p>
+<p>Set the maximum number of records to display in the Engage Servicing 
+ Portal search result screen. The range allowed is from 1 to 1000.</p>
+<p>&#160;</p>
+<p class="FldExplain">Maximum Grid Records</p>
+<p>Set the maximum number of grid records to display in the Engage Servicing 
+ Portal grid. Enter '0' for unlimited records.</p>
+<p>&#160;</p>
+<p class="FldExplain">Document Expiry</p>
+<p>This setting restricts access of documents in the ESP by setting an 
+ expiry period. It includes documents in the Request (Workflow) document 
+ holder and linked binders for Meetings and Filings that are shared from 
+ the Back-office.</p>
+<p>When expires, the document will be inaccessible to the ESP users. Attempt 
+ to download the document will prompt the message ‘This document has expired 
+ and can no longer be downloaded’ (or based on the message as customised 
+ in the ‘Expired Document Message’ field). The document, however, can still 
+ be accessed from the Back-office.</p>
+<p>To define the document expiry, enter the value for the document expiration 
+ in Days/Months/Years from:</p>
+<ul class="hcp1">
+	<li><p>the date the Request (Workflow) is marked as ‘Completed'</p></li>
+	<li><p>the Meeting’s actual date</p></li>
+	<li><p>the Filing’s filed date</p></li>
+</ul>
+<p>Set the value by entering the value followed by:</p>
+<ul class="hcp1">
+	<li><p>D - for days</p></li>
+	<li><p>M - for months</p></li>
+	<li><p>Y - for years</p></li>
+</ul>
+<p>For example, a value of 30D means that the expiration period is 30 days 
+ after the request's completion date or the meeting's actual date or the 
+ filing's filed date.</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: The 
+ value is not case-sensitive; hence, it can also be entered as d/m/y, for 
+ example: 30d.</p>
+<p>&#160;</p>
+<p class="FldExplain">Expired Document Message</p>
+<p>This message will show when the ESP user opens an expired document in 
+ Request (Workflow), Meetings binder or Filings binder. You can customise 
+ the display message by entering the plain text. This is only applicable 
+ when Document Expiry is set (enabled).</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Terms and Conditions</p>
+<p>Tick this to display the terms and conditions to user upon log in. The 
+ user must agree to the terms and conditions in order to access the Engage 
+ Servicing Portal.</p>
+<p>&#160;</p>
+<p class="FldExplain">Convert Document to PDF</p>
+<p>Tick this to automatically convert registers to PDF when the registers 
+ are downloaded.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Auto Load Profile</p>
+<p>Tick this to enable auto load Back-office user profile to ESP. Refer 
+ to <a href="../Task_Scheduler/ESP_Auto_Load_Profile.htm">ESP Auto Load 
+ Profile</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Direct Document Generation</p>
+<p>Tick this to enable direct document generation. This allows the documents 
+ to be generated immediately without having a waiting time as compared 
+ to the existing 'Generate' function. When enabled, only the 'Download' 
+ and 'View' functions are seen in the Documents &gt; Generate page for 
+ both Home and File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Real-Time Virus Scanning in File Upload </p>
+<p>Tick this to enable real-time virus scanning in file upload. When this 
+ option is disabled, there will be no virus scan for file uploaded from 
+ the ESP.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Saved Tabs</p>
+<p>Tick this to allow for opened tabs to be saved. Saved tabs will be loaded 
+ when user next logs in.</p>
+<p>&#160;</p>
+<p class="FldExplain">No Approval Required for Configuration Change</p>
+<p>Tick to bypass the need for approval in ESP configuration change.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Export Calendar</p>
+<p>Tick this to allow ESP user to export the calendar item from Engage 
+ Servicing Portal Calendar to Outlook or other calendar applications via 
+ .ics file. When this feature is enabled, ESP user will be able to see 
+ the ‘Add to Calendar’ option in each Calendar item.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Multilingual</p>
+<p>Tick this to enable the multilingual function in ESP. When this is enabled, 
+ user will be able to select their preferred language in the Engage Servicing 
+ Portal (by clicking on the globe icon in the portal). The available languages 
+ are English (default), Dutch, German, Chinese Simplified and French.</p>
+<p>&#160;</p>
+<h4>ESP Security Options</h4>
+<p class="FldExplain">Password Expires in</p>
+<p>Set the number of days before the password expires since the last password 
+ change. Enter '0' to disable the feature.</p>
+<p>&#160;</p>
+<p class="FldExplain">Minimum Password Length</p>
+<p>Specify the number of characters for the ESP login password. The minimum 
+ password length should not be more than 20 characters. However, when 'Require 
+ Complex Passwords' option is enabled, the 'Minimum Password Length' should 
+ not be&#160;less than 6 or more than 20. Enter '0' to disable the feature.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Forget Password</p>
+<p>Tick this box to allow Engage users to reset their login password from 
+ the Engage portal.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Require Complex Passwords</p>
+<p>Tick this box to enforce complex password. When this option is enabled, 
+ password should consist of a mix of alphanumeric, upper case, lower case, 
+ special characters and must NOT match or contain any part of the ESP user 
+ code. It will validate the password length as set in the 'Minimum Password 
+ Length' field and prompt an 'Invalid Minimum Password Length' message 
+ if the password length is less than 6 or more than 20.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Two-Step Verification</p>
+<p>Tick this box to enforce two-step verification. Upon enabled, the Engage 
+ portal login will prompt users to enter a six-digit verification passcode 
+ generated by the authenticator app installed in their mobile device.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Authentication Using E-mail</p>
+<p>Tick this to enable authentication using E-mail when the login option 
+ is OpenId Connect Single Sign-On login.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Engage Servicing Portal</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

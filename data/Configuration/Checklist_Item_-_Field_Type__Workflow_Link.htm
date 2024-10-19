@@ -1,0 +1,408 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Workflow Link</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+td.hcp2 { vertical-align:top; }
+span.hcp3 { font-weight:bold;
+color:#ffffff; }
+p.hcp4 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+span.hcp5 { mso-bidi-font-size:12.0pt;
+mso-fareast-font-family:Times New Roman;
+mso-bidi-font-family:Times New Roman;
+mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;
+mso-bidi-language:TH; }
+span.hcp6 { mso-bidi-language:TH; }
+span.hcp7 { font-weight:bold;
+font-style:italic; }
+p.hcp8 { mso-bidi-language:TH; }
+ul.hcp9 { list-style:disc;
+font-family:"Microsoft Sans Serif"  , sans-serif;
+font-size:13px; }
+p.hcp10 { font-weight:bold; }
+p.hcp11 { mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+font-weight:bold; }
+span.hcp12 { font-size:10.0pt;
+mso-bidi-language:TH; }
+li.hcp13 { font-family:"Microsoft Sans Serif"  , sans-serif;
+font-size:13px; }
+p.hcp14 { margin-left:36px; }
+span.hcp15 { font-weight:bold; }
+p.hcp16 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Field Type: Workflow Link</h1>
+<p>This field type is used to start another workflow from within a workflow 
+ step. When there is a workflow link, clicking on the item will show the 
+ following options:</p>
+<ul class="hcp1">
+	<li><p>Initiate new workflow - This is to start a new workflow from 
+	 the current workflow.</p></li>
+	<li><p>Link to existing - This is to link the current workflow to another 
+	 workflow that has been started. If the selected workflow is incorrect, 
+	 click to select it and click Remove Link.</p></li>
+</ul>
+
+<p>&#160;</p>
+<p>The options appear in the Complete Field column but you can click and 
+ drag around the options to place them in another location. However, the 
+ options will return to its original location after you close the workflow.</p>
+<p>When configuring a Workflow Link, ensure that you do the following:</p>
+<ul class="hcp1">
+	<li><p>Item field type is 'Workflow Link'</p></li>
+	<li><p>Tags are added to specify additional information such as the 
+	 linked workflow, information to pass to the linked workflow, etc.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Workflow Link - Tags</h2>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st" style="height: 20px;">
+		<td class="hcp2"><span class="hcp3">Tag</span></td>
+		<td class="hcp2"><span class="hcp3">Explanation</span></td>
+		<td class="hcp2"><span class="hcp3">Example</span></td>
+	</tr>
+	
+		
+		
+	
+	
+		
+		
+	
+	
+		
+		
+	
+	<tr class="t2Row" style="height: 116px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.Code=&lt;WorkflowKey&gt;]</b></p>
+		<p><span class="hcp5">where 
+		 &lt;WorkflowKey&gt; is the Key of the new workflow.</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This sets the 
+		 workflow that will be initiated when user clicks on the Workflow 
+		 Link icon.</p>
+		<p>Ensure that the &lt;WorkflowKey&gt; entered is valid. When configuring 
+		 the Workflow Link item, if the key is not specified or invalid, 
+		 a message prompt will appear so that this can be corrected. Otherwise, 
+		 the user will also be alerted when running the Verify function.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.Code=VPWF1]</b></p>
+		<p><span class="hcp5">will 
+		 initiate the workflow with the Key ‘VPWF1’.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 172px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.FileCode=&lt;MasterFile&gt;]</b></p>
+		<p>where &lt;MasterFile&gt; can be:</p>
+		<ul class="hcp1">
+			<li><p>A specific Master File code.</p></li>
+			<li><p>A checklist item key with a Master File value.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p style="mso-ansi-language: EN-US; 
+															 mso-fareast-language: EN-US;"><span class="hcp6">This is to set the Master File 
+		 the new workflow is for.</span></p>
+		<p>&#160;</p>
+		<p style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+			 mso-bidi-language: TH;"><span class="hcp7">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.FileCode=BRIGHT]</b></p>
+		<p style="mso-ansi-language: EN-US; mso-bidi-language: TH; font-family: 'Microsoft Sans Serif', sans-serif;">will 
+		 initiate the workflow for the Master File ‘BRIGHT’.</p>
+		<p>&#160;</p>
+		<p class="hcp4"><b>[WF.FileCode=(+CurAppoint+)]</b></p>
+		<p><span class="hcp5">will 
+		 initiate the workflow for the Master File that is entered in the 
+		 checklist item with the key ‘CurAppoint’.</span></p></td>
+	</tr>
+	<tr class="t2Row" style="height: 160px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.StopIfNotComplete=&lt;Value&gt;]</b></p>
+		<p class="hcp8">where &lt;Value&gt; can be:</p>
+		<ul class="hcp9">
+			<li><p class="hcp8">Y for Yes</p></li>
+			<li><p class="hcp8">N for No (default)</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span class="hcp5">This 
+		 is to specify whether the current step of the main workflow can 
+		 be completed if the linked workflow is not yet completed.</span></p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WF.StopIfNotComplete=Y]</b></p>
+		<p class="hcp4">will 
+		 not allow main workflow to be completed if the linked workflow 
+		 is not yet completed.</p>
+		<p>&#160;</p>
+		<p class="hcp4"><b>[WF.StopIfNotComplete=N]</b></p>
+		<p><span class="hcp5">allows 
+		 the main workflow to be completed even if the linked workflow 
+		 is not yet completed.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 160px;">
+		<td class="t1Col" style="vertical-align: top;"><p style="mso-ansi-language: EN-US;"><span 
+		 style="mso-bidi-language: TH; font-weight: bold;">[WF.StopIfNotSubmit=&lt;Value&gt;]</span><span class="hcp6"> </span></p>
+		<p>where &lt;Value&gt; can be:</p>
+		<ul class="hcp1">
+			<li><p>Y for Yes</p></li>
+			<li><p>N for No (default)</p></li>
+		</ul>
+		<p><span class="hcp7">Note</span>: 
+		 This is applicable only for Engage Servicing Portal workflow.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 whether the current step of the main workflow can be completed 
+		 if the linked workflow is not yet submitted. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p style="mso-ansi-language: EN-US; 
+															 font-weight: bold;"><span class="hcp6">[WF.StopIfNotSubmit=Y]</span></p>
+		<p>will not allow main workflow to be completed if the linked workflow 
+		 is not yet submitted.</p>
+		<p>&#160;</p>
+		<p class="hcp10">[WF.StopIfNotSubmit=N]</p>
+		<p>allows the main workflow to be completed even if the linked 
+		 workflow is not yet submitted.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 192px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11">[WF.AutoComplete.Keys=&lt;Key&gt;]</p>
+		<p class="hcp11">[WF.AutoComplete.&lt;Key&gt;=(+WF.Key+)]</p>
+		<p class="hcp4">where:</p>
+		<ul class="hcp1">
+			<li><p class="hcp4">&lt;Key&gt; 
+			 refers to the checklist item of the main workflow where the 
+			 value will be pasted.</p></li>
+			<li><p class="hcp4">&lt;WF.Key&gt; 
+			 refers to the checklist item of the linked workflow where 
+			 its value will be retrieved.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp4">This 
+		 is to retrieve the value of the linked workflow's checklist item 
+		 and paste it to the main workflow's checklist item. Multiple keys 
+		 can be specified, separated by commas.</p>
+		<p class="hcp4">The 
+		 supported field formats are:</p>
+		<ul class="hcp1">
+			<li><p class="hcp4">VALUE</p></li>
+			<li><p class="hcp4">VALSHOW</p></li>
+			<li><p class="hcp4">SCORE</p></li>
+		</ul>
+		<p class="hcp4"><span class="hcp7">Note</span>: This 
+		 tag is supported on workflows published to Viewpoint Engage. In 
+		 Viewpoint Engage, the supported format is only VALUE or VALSHOW.</p>
+		<p class="hcp4">&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin-top: 3.0pt;"><b><span lang="EN-GB" xml:lang="EN-GB" class="hcp12">[WF.AutoComplete.Keys=A,B]</span></b></p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;"><span lang="EN-GB" 
+		 xml:lang="EN-GB" style="font-size: 10.0pt; mso-bidi-language: TH; 
+		 mso-bidi-font-weight: bold;">will retrieve value for items with 
+		 the key A and B in the main workflow.</span></p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;">&#160;</p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;"><b><span lang="EN-GB" xml:lang="EN-GB" class="hcp12">[WF.AutoComplete.A=(+WF.MF\VALUE+)]</span></b></p>
+		<p class="MsoNormal" style="margin-top: 3.0pt; font-size: 10.0pt; 
+			 mso-bidi-language: TH;"><span lang="EN-GB" xml:lang="EN-GB" 
+											 style="mso-bidi-font-weight: bold;">will 
+		 retrieve the value in item with the key MF in linked workflow 
+		 to item A in main workflow.</span></p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;">&#160;</p>
+		<p class="MsoNormal" style="margin-top: 3.0pt; font-size: 10.0pt; 
+			 mso-bidi-language: TH;"><b><span lang="EN-GB" xml:lang="EN-GB">[WF.AutoComplete.B=(+WF.MF\SCORE+)]</span></b></p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;"><span>will retrieve 
+		 the score in item with the key MF in linked workflow to item B 
+		 in main workflow.</span></p>
+		&#160;</td>
+	</tr>
+	<tr class="t1Row" style="height: 160px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11">[WF.LinkStatus=&lt;Value&gt;]</p>
+		<p style="mso-ansi-language: EN-US; mso-bidi-language: TH; font-weight: normal;">where 
+		 &lt;Value&gt; can be:</p>
+		<ul style="list-style: disc; font-family: 'Microsoft Sans Serif', sans-serif;">
+			<li><p class="hcp8">I for Pending</p></li>
+			<li><p class="hcp8">C for Completed</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp4">This 
+		 is to filter the list of available workflow by status when the 
+		 'Link to existing' option is selected.</p>
+		<p class="hcp4">&#160;</p>
+		<p class="hcp4"><span class="hcp7">Note</span>: This 
+		 tag is supported on workflows published to Viewpoint Engage.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11">[WF.LinkStatus=I]</p>
+		<p class="hcp4">will 
+		 limit the list to show only pending workflow for selection to 
+		 link to the workflow.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 315px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WH.&lt;Field&gt;=&lt;Value&gt;]</b></p>
+		<p>where:</p>
+		<ul class="hcp9">
+			<li class="hcp13"><p class="hcp8">WH.&lt;Field&gt; 
+			 refers to workflow header field such as:</p></li>
+			<li class="hcp13"><p class="hcp14">WH.WflowDescr</p></li>
+			<li class="hcp13"><p class="hcp14">WH.AdminCode</p></li>
+			<li class="hcp13"><p class="hcp14">WH.DateDeadLine</p></li>
+			<li class="hcp13"><p class="hcp14">WH.WflowNote</p></li>
+			<li class="hcp13"><p><span class="hcp5">&lt;Value&gt; 
+			 is the default value to assign to the field and this can be 
+			 text or retrieved from the main workflow.</span></p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp4">This 
+		 is to specify the value for a workflow header field for the linked 
+		 workflow.</p>
+		<p class="hcp8">The available fields are:</p>
+		<ul class="hcp9">
+			<li class="hcp13"><p class="hcp8">Description</p></li>
+			<li class="hcp13"><p class="hcp8">Administrator</p></li>
+			<li class="hcp13"><p class="hcp8">Date 
+			 Due</p></li>
+			<li class="hcp13"><p class="hcp4">Note</p></li>
+		</ul>
+		<p class="hcp4">The 
+		 above fields can be configured for the child workflow to have 
+		 the same workflow header details by adding <span class="hcp15">(+WH.&lt;Field&gt;+)</span> 
+		 to the tag. This is applicable when initiating a new child workflow 
+		 which is not linked to any existing workflow.</p>
+		<p class="hcp4">&#160;</p>
+		<p class="hcp4"><span class="hcp7">Note</span>: This 
+		 tag is supported on workflows published to Viewpoint Engage.</p>
+		<p class="hcp4">&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WH.WflowDescr=Resignation 
+		 of (+OFR\#AD-1-0+)]</b></p>
+		<p><span class="hcp5">will 
+		 set the description for the linked workflow’s header with the 
+		 text ‘Resignation of’ followed by the name of the Master File 
+		 specified in the checklist item with the key ‘OFR’</span><span 
+		 style="mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+		 mso-fareast-language: EN-US; mso-bidi-language: TH; mso-spacerun: yes;">&#160;</span><span class="hcp5">&#160;from 
+		 the main workflow.</span></p>
+		<p>&#160;</p>
+		<p class="MsoNormal" style="margin-top: 3.0pt; font-weight: bold;">[WH.AdminCode=(+WH.AdminCode+)]</p>
+		<p class="MsoNormal" style="margin-top: 3.0pt;"><span>will copy 
+		 the Administrator from the main workflow to the linked workflow.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 315px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WS.&lt;Field&gt;=&lt;Value&gt;]</b></p>
+		<p class="hcp8">where:</p>
+		<ul class="hcp9">
+			<li class="hcp13"><p>WS.&lt;Field&gt; refers to the workflow 
+			 step field such as:</p></li>
+			<li class="hcp13"><p class="hcp14">WS.WfPageDescr</p></li>
+			<li class="hcp13"><p class="hcp14">WS.AdminCode</p></li>
+			<li class="hcp13"><p class="hcp14">WS.DateStart</p></li>
+			<li class="hcp13"><p style="mso-bidi-language: TH; margin-left: 36px;">WS.DateDeadLine</p></li>
+			<li class="hcp13"><p><span class="hcp5">&lt;Value&gt; 
+			 is the default value to assign to the field and this can be 
+			 text or retrieved from the main workflow.</span></p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp4">This 
+		 is to specify the value for a workflow step field for the linked 
+		 workflow.</p>
+		<p>The available fields are:</p>
+		<ul class="hcp9">
+			<li class="hcp13"><p class="hcp8">Step 
+			 Description</p></li>
+			<li class="hcp13"><p class="hcp8">Administrator</p></li>
+			<li class="hcp13"><p class="hcp8">Due</p></li>
+			<li class="hcp13"><p class="hcp4">Completed</p></li>
+		</ul>
+		<p class="hcp4">The 
+		 above fields can be configured for the child workflow to have 
+		 the same workflow header details by adding <span class="hcp15">(+WS.&lt;Field&gt;+)</span> 
+		 to the tag.</p>
+		<p class="hcp4">&#160;</p>
+		<p class="hcp4"><span class="hcp7">Note</span>: This 
+		 tag is supported on workflows published to Viewpoint Engage.</p>
+		<p class="hcp4">&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp10">[WS.DateStart=(+WS.DateStart+)]</p>
+		<p class="hcp10"><span style="font-weight: normal;">will 
+		 copy the Date Start of the step from the main workflow to the 
+		 linked workflow.</span></p></td>
+	</tr>
+	<tr class="t2Row" style="height: 202px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WK.&lt;Key&gt;=&lt;Value&gt;]</b></p>
+		<p>where:</p>
+		<ul class="hcp9">
+			<li><p>&lt;Key&gt; refers to the key of the checklist item 
+			 for the workflow.</p></li>
+			<li><p>&lt;Value&gt; is the default value to be assigned and 
+			 this can be a fixed value or retrieved from the main workflow.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the value for the linked workflow's checklist item.</p>
+		<p><span class="hcp7">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp4"><b>[WK.RMF2=(+OFR+)]</b></p>
+		<p><span class="hcp5">will 
+		 set the value specified for the checklist item with the key ‘OFR’ 
+		 (in the main workflow) to be the default value for the checklist 
+		 item ‘RMF2’ in the linked workflow.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 202px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="Tablecontent"><b><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">[DisplayName=&lt;Value&gt;]</span></b></p>
+		<p class="Tablecontent"><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">where 
+		 &lt;Value&gt; can be any custom text to recaption the Workflow 
+		 Link.</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to customise 
+		 the displayed caption for the Workflow Link in the Complete Field 
+		 column. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="Tablecontent"><b><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">[DisplayName=Click 
+		 to Initiate New Master File Creation]</span></b></p>
+		<p class="Tablecontent"><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">will 
+		 set the value to this new caption.</span></p></td>
+	</tr>
+	
+		
+		
+	
+	
+		
+		
+	
+	
+		
+		
+	
+	
+		
+		
+	
+	
+		
+		
+	
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Workflow Link</p>
+<p class="hcp16">&#160;</p>
+<p class="hcp16">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp16">Version: 8.0.2022.09.20</p>
+</body>
+</html>

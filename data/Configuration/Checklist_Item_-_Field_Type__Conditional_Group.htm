@@ -1,0 +1,178 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Conditional Group</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+td.hcp3 { vertical-align:top; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-weight:bold; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Field Type: Conditional Group</h1>
+<p>The condition or conditions must be defined in the Values/Default column 
+ and can refer to the value or score of a checklist item in the same workflow 
+ step, in a previous workflow step or information for the Master File. 
+ For each condition, you need to specify:</p>
+<ul class="hcp1">
+	<li><p>The Key of the item that will become the condition.</p></li>
+	<li><p>If the condition is based on the item's value or score.</p></li>
+	<li><p>The operator and value for the condition.</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="hcp1">
+	<li><p>If the condition is that the value for item 'A1' is 'Yes', then 
+	 the condition will be defined as <span class="hcp2">A1.Value=Yes</span> 
+	 or <span class="hcp2">A1=Yes</span></p></li>
+	<li><p>If the condition is that the score for item 'B1' is more than 
+	 5, then the condition will be defined as <span class="hcp2">B1.Score&gt;5</span></p></li>
+</ul>
+<p>&#160;</p>
+<p>The below lists the Conditional Group operators and values that are 
+ supported in both Viewpoint Connect and Engage.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="80.467%" border="1">
+	<col style="width: 15.017%;">
+	<col style="width: 74.007%;">
+	<tr class="t1st">
+		<td class="hcp3"><p><span>Operator</span></p></td>
+		<td class="hcp3"><p><span class="hcp2">Explanation</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>=</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Equal to a single 
+		 value.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Bigger than the 
+		 specified value.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Smaller than 
+		 the specified value.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>&gt;=</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Bigger or equal 
+		 to the specified value.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;=</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Smaller or equal 
+		 to the specified value.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Not equal to 
+		 the specified value.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>IN</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Is the same as 
+		 any of the specified values.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>NOTIN</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Is not the same 
+		 as any of the specified values.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>When the condition is based on the value, the value can also be ‘EMPTY’ 
+ if the condition is for the checklist item to be empty. For example:</p>
+<ul class="hcp1">
+	<li><p>The condition – <span class="hcp2">F1=EMPTY</span> 
+	 – Means the checklist item ‘F1’ must not contain any value.</p></li>
+	<li><p>The condition – <span class="hcp2">FI&lt;&gt;EMPTY</span> 
+	 – Means as long as the checklist item ‘F1’ is not empty.</p></li>
+</ul>
+<p><span class="hcp4">Note</span>: The 
+ value 'EMPTY' must be in uppercase.</p>
+<p>&#160;</p>
+<p>If the checklist item is in a previous step, then you need to add the 
+ prefix #WF before the Key. For example:</p>
+<p><span class="hcp2">#WF.F1&lt;&gt;EMPTY</span></p>
+<p>means the condition is that checklist item ‘FI’ in a previous workflow 
+ step must not contain any value.</p>
+<p>&#160;</p>
+<p>If referring to the Master File information, these apply only to fields 
+ that can be retrieved from the following:</p>
+<ul class="hcp1">
+	<li><p>RefMaster table – Prefix #MF.</p></li>
+	<li><p>Compliance table – Prefix #MC.</p></li>
+	<li><p>Entity table – Prefix #EN.</p></li>
+	<li><p>EntityAccount table – Prefix #AC.</p></li>
+	<li><p>RmClients table – Prefix #BF.</p></li>
+	<li><p>RmSupplier table – Prefix #SF.</p></li>
+	<li><p>UserFieldSetup table – Prefix #UF.</p></li>
+</ul>
+<p>where it must be defined as &lt;Prefix&gt;.&lt;Field&gt;. For example:</p>
+<p><span class="hcp2">#MF.RefType=I</span></p>
+<p>means the condition is that the Master File type must be I for Individual.</p>
+<p>&#160;</p>
+<p class="hcp5">#EN.IncorpPlace=HK</p>
+<p>means the condition is that the Jurisdiction of the Entity File is Hong 
+ Kong.</p>
+<p>&#160;</p>
+<p><span class="hcp4">Note</span>: Refer 
+ to the <a href="../Shared/Workflow_Field_Wizard.htm">Workflow Field Wizard</a> 
+ to see the list of available fields for each table.</p>
+<p>&#160;</p>
+<p>For multiple conditions, it is possible to use:</p>
+<ul class="hcp1">
+	<li><p>AND - This requires all specified conditions to be met. The 
+	 conditions are to be defined as follows:<br>
+	<br>
+	<span class="hcp2">AND(&lt;Condition1&gt;;&lt;Condition2&gt;;&lt;Condition3&gt;:...)</span><br>
+	<br>
+	For example: AND(F1.Value=Yes,F2.Value=Yes;F3.Value=Yes).</p></li>
+	<li><p>OR - This requires just one of the conditions to be met. the 
+	 conditions are to be defined as follows:<br>
+	<br>
+	<span class="hcp2">OR(&lt;Condition1&gt;;&lt;Condition2&gt;;&lt;Condition3&gt;;...)<br>
+	</span><br>
+	For example: OR(F1.Value=Yes;F2.Value=Yes;F3.Value=Yes).</p></li>
+</ul>
+<p>To configure the field type with ‘Conditional Group’ as duplicate, insert 
+ a pipe ‘|’ symbol, followed by the <span class="hcp2">[Duplicate=1]</span> 
+ tag.</p>
+<p>For example:</p>
+<p class="hcp5">F1&lt;&gt;EMPTY|[Duplicate=1]</p>
+<p>means that the checklist item ‘FI’ in the current workflow step which 
+ must not contain any value can be duplicated, if required. &#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Conditional Group</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

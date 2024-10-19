@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Import/Export Settings">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Import/Export Settings</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Import/Export Settings</h1>
+<p>The Import/Export Settings screen allows you to import or export customised 
+ data and settings as well as reports from one Viewpoint database to another. 
+ These items are:</p>
+<ul class="hcp1">
+	<li><p>Customised data refers to values and tables that can be customised 
+	 including Lookup Values, Drop-down Values, User Tables, To-Do Rules, 
+	 Windows/Web Menu, Grid Fields, Change Code Links, etc.</p></li>
+	<li><p>System settings include Field Settings, Service Master, Service 
+	 Tax Codes, Account Mapping, Filing Cabinet, Index Fields, User Fields, 
+	 User Group Security and User Role Authority.</p></li>
+	<li><p>Standard Reports and Custom Reports.</p></li>
+	<li><p>Word Templates and HTML Templates.</p></li>
+	<li><p>Workflow Templates.</p></li>
+	<li><p>Activities Profiles.</p></li>
+	<li><p>Dashboard Widgets</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Profile</p>
+<p>Select the profile for the settings that you want to export. Switching 
+ profiles will change the settings selected. Profiles are created when 
+ performing an export, see steps for export below.</p>
+<p>&#160;</p>
+<p class="FldExplain">Delete button</p>
+<p>Click to delete the selected profile. You cannot delete the Default 
+ profile [DEFT].</p>
+<p>&#160;</p>
+<p class="FldExplain">Settings</p>
+<p>This lists all settings supported by this feature organised by categories. 
+ To select, you can:</p>
+<ul class="hcp1">
+	<li><p>Expand the category heading and tick the checkbox for individual 
+	 items.</p></li>
+	<li><p>Tick the checkbox for the category heading to select all settings 
+	 in the category.</p></li>
+	<li><p>Tick the checkbox for the main Import/Export heading to select 
+	 all settings.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Import</span> - Click to start 
+	 the import process. Find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a>.</p>
+	<div class="droptext" id="POPUP319222070" style="display: none;">
+		<p>When importing settings from another environment, Viewpoint 
+		 will recognise and list .xml files that contain a &lt;ViewPointCustomisedSetting&gt; 
+		 tag. The import will only work for the same database type, for 
+		 instance, importing information from one database to another database. 
+		 Data in the current database will be deleted if it is dependent 
+		 data, for instance, data in the VpAGroupUsers table is dependent 
+		 on the VpUsers table.</p>
+		<ol>
+			<li><p>Browse to&#160;the folder containing the profile you 
+			 want to import.</p></li>
+			<li><p>Click Import - load list.</p></li>
+			<li><p>Tick the checkbox of items you want to import.</p></li>
+			<li><p>Click Import.</p></li>
+			<li><p>Click Close when completed.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Export</span> - Click to start 
+	 the export process. Find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a2">here</a>.</p>
+	<div class="droptext" id="POPUP319235167" style="display: none;">
+		<p>When exporting the settings of one environment to another, you 
+		 can select the data you want to export, and save this selection 
+		 under a specific profile name. Once exported, you will see .xml 
+		 files with the names 'VPSS_&lt;jobcode&gt;.xml' or 'REL_VPSS_&lt;jobcode&gt;.xml'. 
+		 Each of these .xml files contain all the fields for the database 
+		 table involved in the selection. For document forms, the actual 
+		 physical files will be exported to a Form sub-folder within the 
+		 selected Export folder.</p>
+		<ol>
+			<li><p>In the Import/Export Settings screen, tick the check 
+			 box next to the settings that you want to export. Click the 
+			 + or - nodes to expand or collapse the list.</p></li>
+			<li><p>Click Export.</p></li>
+			<li><p>Enter a name for the profile and click OK.</p></li>
+			<li><p>Browse to the location of the Export folder.</p></li>
+			<li><p>Click Export.</p></li>
+			<li><p>Click Close when the process is completed.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Refresh</span> - Click to reload 
+	 the screen.</p></li>
+</ul>
+<p style="margin-bottom: 1.5pt; margin-top: 1.5pt; font-size: 13px;">&#160;</p>
+<p class="SeeAlso"><span style="font-size: 13px;">See also:</span></p>
+<ul class="hcp1">
+	<li><p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;"><a 
+	 href="Import_Settings_Limitations.htm">Import Settings - Limitations</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Database_Archiving.htm">Database Archiving</a> &gt; Import/Export Settings</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP319222070');
+	TextPopupInit('a2','POPUP319235167');
+//]]></script>
+</body>
+</html>

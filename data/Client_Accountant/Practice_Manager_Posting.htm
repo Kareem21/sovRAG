@@ -1,0 +1,163 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Practice Management Posting">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Practice Management Posting</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Practice Management Posting</h1>
+<p>This feature is used to post entries from Practice Management to Accounting 
+ in the following situations:</p>
+<ul class="hcp1">
+	<li class="p"><p>Your environment has been set up for manual posting, 
+	 or</p></li>
+	<li class="p"><p>You have recently added the Accounting component and 
+	 now wish to post all past entries from Practice Management to Accounting.</p></li>
+</ul>
+<p>The posting feature will work slightly differently based on the selection 
+ made for the handling of PM Accounting Journals in Configuration Ribbon 
+ button &gt; Settings &gt; <a href="../Configuration/System_Defaults_-_Accounting.htm">System 
+ Defaults &gt; Accounting</a>:</p>
+<ul class="hcp1">
+	<li class="p" style="font-weight: normal; font-style: normal;"><p>None 
+	 [0] - No postings are made, and no journals are kept.</p></li>
+	<li class="p" style="font-weight: normal; font-style: normal;"><p>PM 
+	 Journals [1] - The journals are generated in Practice Management, 
+	 and if necessary, manually imported into Accounting.</p></li>
+	<li class="p" style="font-weight: normal; font-style: normal;"><p>CA 
+	 Journals RC [2] - The journals are posted directly to Revenue Company 
+	 account(s) only.</p></li>
+	<li class="p" style="font-weight: normal; font-style: normal;"><p>CA 
+	 Journals CE [4] - The journals are posted directly to the Client Entity 
+	 account(s) only.</p></li>
+	<li class="p" style="font-weight: normal; font-style: normal;"><p>CA 
+	 Journals RC + CE [6] - The journals are posted directly to both the 
+	 Revenue Company and the Client Entity accounts.</p></li>
+</ul>
+<p>Note the following:</p>
+<ul class="hcp1">
+	<li><p>In order for the straight-through posting feature to work correctly, 
+	 ensure that you have correctly done the account mapping. Failure to 
+	 do this will cause errors in the posting process.</p></li>
+	<li><p>Straight-through posting from Practice Management will not produce 
+	 draft journals even though you have enabled <a href="Account_File_-_Setup.htm">draft 
+	 journals</a> when setting up the Account File.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Posting journals</h3>
+<ol style="list-style: decimal;">
+	<li><p>Select the functions you want to run:</p>
+	<ul class="hcp1">
+		<li><p>Show Control Balances - Tick this if you want to show differences 
+		 in the journal totals between Practice Management and Accounting. 
+		 This same information can be seen in the Journal Posting Reconciliation 
+		 reports in Billing. If there is any difference, then you should 
+		 run the Post New Journals (Invoices/Receipts/Payments) option 
+		 (see below). This function is disabled in the Global - Functions 
+		 - Practice Management Posting screen.</p></li>
+		<li><p>Review All Receipts/Payments - Tick this to check all payments 
+		 and receipts for any errors such as invalid Billing File, Matter, 
+		 etc. This function is only available in the Global - Functions 
+		 - Practice Management Posting screen.</p></li>
+		<li><p>Post New Journals (Invoices/Receipts/Payments) - Select 
+		 this option to post outstanding journals from Billing to Accounting. 
+		 Enter the From and to dates to post journals in a period, or leave 
+		 the fields empty to post all outstanding journals.</p></li>
+		<li><p>Set Invoices/Receipts/Payments before the 'From' date and 
+		 not yet posted, to 'Post' done - This option is enabled if you 
+		 enter a From date for the above option. Tick this if you want 
+		 to mark all unposted invoices, receipts and payments before the 
+		 From date as posted. There will be no journals created for these 
+		 transactions. This function is disabled in the Global - Functions 
+		 - Practice Management Posting screen.</p></li>
+	</ul></li>
+	<li><p>Click Start to begin the posting process.</p></li>
+	<li><p>At the end, click Open Log to view the log file and see if there 
+	 are any errors. The file (Recalculate.txt) is located in the location 
+	 specified in Configuration &gt; Settings &gt; <a href="../Configuration/System_Defaults_-_Folders.htm">System 
+	 Defaults &gt; Folders</a> - Temporary Files. The information in the 
+	 log is overwritten at each posting.</p></li>
+</ol>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Can I post journals 
+ from the Practice Management module?</a></p>
+<div class="droptext" id="POPUP379515339" style="display: none;">
+	<p>Yes, you can.</p>
+	<ul class="hcp1">
+		<li><p>To post the journals of a specific file: In File Maintenance 
+		 screen, click Sales Ledger &gt; Billing File &gt; Recalculate/Journal 
+		 and tick Post New Journals.</p></li>
+		<li><p>To post the journals of all Account Files (this include 
+		 in-house files): In Viewpoint - Home screen, click Practice manager 
+		 &gt; Recalculate/Journal and tick Post New Journals.</p></li>
+	</ul>
+</div>
+<p><a href="Posted_Invoices_Receipts_Payments.htm">How do I know if an 
+ invoice/receipt/payment has been posted?</a></p>
+<p><a href="Journal_Posting_Reconciliation.htm">What are Journal Posting 
+ Reconciliation reports?</a></p>
+<p><a href="../Configuration/Account_Mapping_Journals.htm">What kind of 
+ journals are created during the posting process?</a></p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Where do I map 
+ accounts?</a></p>
+<div class="droptext" id="POPUP379538212" style="display: none;">
+	<p>This is done in Configuration &gt; Business Parameters &gt; Practice 
+	 Management &gt; Account Mapping.</p>
+	<p>&#160;</p>
+</div>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Where do I set 
+ up the PM Account Journals?</a></p>
+<div class="droptext" id="POPUP379536901" style="display: none;">
+	<p>This is done in Configuration &gt; Settings &gt; <a href="../Configuration/System_Defaults_-_Accounting.htm">System 
+	 Defaults &gt; Accounting</a>.</p>
+	<p>&#160;</p>
+</div>
+
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/File_Maintenance_screen.htm\">File Maintenance</a> &gt; <a href=\"Accounting.htm\">Accounting</a> &gt; <a href=\"Account_File_-_Setup.htm\">Account File</a> &gt; <a href=\"Recalculate_Calendar.htm\">Functions</a> &gt; Practice Management Posting</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"Draft_Journals.htm\">Accounting</a> &gt; <a href=\"Practice_Manager_Posting.htm\">Settings (CA)</a> &gt; Practice Management Posting</p>");
+</script>
+
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP379515339');
+	TextPopupInit('a2','POPUP379538212');
+	TextPopupInit('a3','POPUP379536901');
+//]]></script>
+</body>
+</html>

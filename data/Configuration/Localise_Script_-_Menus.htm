@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Menus</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Menus</h1>
+<p>The menu tags allow you to activate/deactivate and set caption for a 
+ menu (screen).</p>
+<p>&#160;</p>
+<h3>Activating/Deactivating a Screen</h3>
+<p>Screens in Viewpoint can be set to active or inactive using the tag 
+ below.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">MENUAUTH:&lt;MenuID&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p><span class="hcp4">&lt;MenuID&gt;</span> can be 
+	 retrieved from the Navigation ID field in Configurations &gt; Settings 
+	 &gt; Customise &gt; Windows Menu.</p></li>
+	<li><p><span class="hcp4">&lt;Value&gt;</span> is 1 to 
+	 activate and 0 to deactivate.</p></li>
+</ul>
+<p><img src="../image104.jpg" alt="" style="border: none;" width="993" height="311" border="0"></p>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To activate the CDD screen: MENUAUTH:FMMKYCVV=1</p>
+<p>&#160;</p>
+<h3>Setting Captions</h3>
+<p>The tag below allows you to set the caption for the screen and will 
+ over-write previous customised caption.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">MENUCAP:&lt;MenuID&gt;=&lt;Caption&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p><span class="hcp4">&lt;MenuID&gt;</span> can be 
+	 retrieved from the Navigation ID field in Configurations &gt; Settings 
+	 &gt; Customise &gt; Windows Menu.</p></li>
+	<li><p><span class="hcp4">&lt;Caption&gt;</span> is the 
+	 screen caption.</p></li>
+</ul>
+<p style="font-weight: normal; text-decoration: none; ">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set the caption for the CDD screen to ‘Due Diligence’: MENUCAP:FMMKYCVV=Due 
+ Diligence</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Menus</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

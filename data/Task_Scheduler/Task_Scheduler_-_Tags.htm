@@ -1,0 +1,779 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Task Scheduler - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+td.hcp2 { border:Solid 1px #000000; }
+p.hcp3 { font-weight:bold; }
+td.hcp4 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000; }
+p.hcp5 { font-style:italic; }
+p.hcp6 { font-weight:bold;
+text-decoration:underline; }
+span.hcp7 { font-weight:bold;
+font-style:italic; }
+table.hcp8 { border-collapse:separate; }
+span.hcp9 { font-weight:bold; }
+td.hcp10 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+vertical-align:top; }
+td.hcp11 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+vertical-align:top; }
+p.hcp12 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Task Scheduler - Tags</h1>
+<p>For certain job types, the Advanced Settings option in the Setup tab 
+ of the Add New Job Wizard screen will be ticked by default. This means 
+ that for these job types, the configuration must be done using tags which 
+ are to be entered in the Tag Values tab of the Add New Job Wizard.</p>
+<p>Tags that are available for Task Scheduler can be classified as:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a37">Task 
+	 Job Tags</a> - These are prefixed with 'TASK' and 
+	 are non-customisable except for TASK_NOOPTIME.</p>
+	<div class="droptext" id="POPUP475990929" style="display: none;">
+		<p>Task Job Tags are for predefined tasks (with tag TASK_ROUTINE=...) 
+		 and SQL-driven task (with tag TASK_SQL=...).</p>
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 17.97%;">
+			<col style="width: 39.795%;">
+			<col style="width: 41.188%;">
+			<tr class="t1st">
+				<td class="hcp2"><p class="hcp3">Job 
+				 Tag</p></td>
+				<td class="hcp4"><p class="hcp3">Explanation</p></td>
+				<td class="hcp4"><p class="hcp3">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/TASK_ROUTINE=&lt;JobCode&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>It 
+				 is automatically added when you select Job Types considered 
+				 as predefined task such as Reminders Review.</p>
+				<p>For this predefined task, both FORM_CODE and MAIL_BODY 
+				 are optional.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/TASK_ROUTINE=TDRE/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/TASK_SQL=&lt;SQLQuery&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>It 
+				 is automatically added when you select Job Types considered 
+				 as SQL-driven task such as Timesheet Reminder.</p>
+				<p>The FORM_CODE or MAIL_BODY tag should be specified when 
+				 it is SQL-driven task.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/TASK_SQL=SELECT 
+				 * FROM &#160;AdminPeriodsTimeView WHERE DateTo&lt;GETDATE() 
+				 AND AdminTimeStatus &lt;&gt; 'Closed' AND UnitsDifferent 
+				 &lt; 0/]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/TASK_KEY=&lt;KeyCode&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is used with SQL-driven tasks. It is to specify the primary 
+				 key used to define the data context to be retrieved via 
+				 the TASK_SQL tag.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/TASK_KEY=UserCode/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/TASK_ NOOPTIME=&lt;TimePeriod&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define a pause between last e-mail sent and the 
+				 next e-mail. The period is considered a 'no operation 
+				 time' where the next e-mail will not be send out if the 
+				 previous e-mail was sent in less than the defined 'no 
+				 operation time'.</p>
+				<p>The time period is in hours.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/TASK_NOOPTIME 
+				 =24/]</p>
+				<p>This means that the pause time is 24 hours. The reminder 
+				 e-mail will only be send out 24 hours after the notification 
+				 e-mail.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a38">Form 
+	 Job Tags</a> - These are prefixed with 'FORM' and 
+	 are customisable.</p>
+	<div class="droptext" id="POPUP475968577" style="display: none;">
+		<p>These are used to specify the template to use and handling of 
+		 conditional cases.</p>
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 18.428%;">
+			<col style="width: 48.238%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td class="hcp2"><p class="hcp3">Job 
+				 Tag</p></td>
+				<td class="hcp4"><p class="hcp3">Explanation</p></td>
+				<td class="hcp4"><p class="hcp3">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/FORM_CONDITION=&lt;Condition&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is only for SQL-driven task and is optional. It allows 
+				 for different e-mail template to be used depending on 
+				 the value returned by the TASK_SQL tag.</p>
+				<p>For example, when TASK_SQL is:</p>
+				<p class="hcp5">… AgentSendLog.KeyCode = 
+				 ('[PERIODNR='+CAST(a.PeriodNr as nvarchar)+' [USERCODE=' 
+				 + UPPER(a.UserCode)+']'))</p>
+				<p class="hcp5">WHEN 0 THEN 'R0'</p>
+				<p class="hcp5">WHEN 1 THEN 'R1'</p>
+				<p class="hcp5">ELSE 'R2' END AS 'ConditionalField'</p>
+				<p>&#160;</p>
+				<p>you can set the value returned by ConditionalField as 
+				 the condition and specify different templates for different 
+				 value returned.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/FORM_CONDITION=ConditionalField/]</p>
+				<p>&#160;</p>
+				<p>&#160;</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/FORM_CODE.&lt;Condition&gt;=&lt;FormCode&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to specify the e-mail template to use.</p>
+				<p>&#160;</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_SQL:</p>
+				<p>This is to specify different templates based on the 
+				 return value specified in FORM_CONDITION tag. For example:</p>
+				<p>[/FORM_CODE.R1=&lt;FormCode&gt;/]</p>
+				<p>Where R1 is the value of ConditionalField retrieved 
+				 from TASK_SQL.</p>
+				<p>&#160;</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_ROUTINE:</p>
+				<p>This is to specify different templates for completed 
+				 task and failed task:</p>
+				<ul class="hcp1">
+					<li><p>Use FORM_CODE.S for task completed successfully</p></li>
+					<li><p>Use FORM_CODE.F for failed task</p></li>
+				</ul></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/FORM_CODE=FORM1/]</p>
+				<p>This means to use the template 'FORM1'.</p>
+				<p>&#160;</p>
+				<p>[/FORM_CODE.R1=FORM2/]</p>
+				<p>This means use the template 'FORM2' if the value for 
+				 Conditional Field as specified using FORM_CONDITION is 
+				 R1.</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>[/FORM_CODE.S=FORM1/]</p>
+				<p>[/FORM_CODE.F=FORM2/]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/FORM_SELECT=&lt;Information&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define information that is to be passed into the 
+				 e-mail content. The information must be value returned 
+				 by the query for TASK_SQL.</p>
+				<p>&#160;</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/FORM_SELECT=UCode=(+UserCode+) 
+				 AND InActive&lt;&gt;0]</p>
+				<p>[FORM_SELECT.R=(+UserCode+)/]</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a39">Mail 
+	 Job Tags</a> - These are prefixed with 'MAIL' and 
+	 are user-customisable.</p>
+	<div class="droptext" id="POPUP476012980" style="display: none;">
+		<p>Mail job tags are used to define mailing information such as 
+		 recipient, carbon-copy and so on.</p>
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 15.257%;">
+			<col style="width: 51.409%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td class="hcp2"><p class="hcp3">Job 
+				 Tag</p></td>
+				<td class="hcp4"><p class="hcp3">Explanation</p></td>
+				<td class="hcp4"><p class="hcp3">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_SUBJECT=&lt;Subject&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to specify the e-mail subject. It can be just one subject 
+				 line or you can have different ones.</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_SQL:</p>
+				<p>This is to have different subject line based on value 
+				 of the conditional field retrieved by TASK_SQL. This is 
+				 defined by adding the value, for example:</p>
+				<p>[/MAIL_SUBJECT.R1=&lt;Subject&gt;/]</p>
+				<p>Where R1 is the value of conditional field retrieved 
+				 from TASK_SQL.</p>
+				<p>&#160;</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_ROUTINE:</p>
+				<p>This is to define different subject line for completed 
+				 task and failed task:</p>
+				<ul class="hcp1">
+					<li><p>Use MAIL_SUBJECT.S for task completed successfully</p></li>
+					<li><p>Use MAIL_SUBJECT.F for failed task</p></li>
+					<li><p>Use MAIL.SUBJECT to combine both task completed 
+					 and task failed with single e-mail</p></li>
+				</ul>
+				<p><span class="hcp7">Note</span>: 
+				 If all three tags MAIL_SUBJECT.S, MAIL_SUBJECT.F, and 
+				 MAIL_SUBJECT are specified, both MAIL_SUBJECT.S and MAIL_SUBJECT.F 
+				 will take precedence over MAIL_SUBJECT.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_SUBJECT=Time 
+				 Sheet Overdue/]</p>
+				<p>&#160;</p>
+				<p>[/MAIL_SUBJECT.R1=First Reminder: Timesheet/]</p>
+				<p>This means the subject line is 'First Reminder: Timesheet' 
+				 if the value is R1.</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>[/MAIL_SUBJECT.S=CSP Calendar update complete/]</p>
+				<p>[/MAIL_SUBJECT.F=Update CSP Calendar failed/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_BODY=&lt;E-mailBody&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define the e-mail content. If FORM_CODE is entered, 
+				 it overrides MAIL_BODY.</p>
+				<p>The e-mail body can contain:</p>
+				<ul class="hcp1">
+					<li><p>HTML formatting tags – this can be used to format 
+					 the e-mail body</p></li>
+					<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a40">Job 
+					 field codes</a> – this is to include 
+					 job details</p>
+					<div class="droptext" id="POPUP476025132" style="display: none;">
+						<p>The field codes here allow for job details to 
+						 be included in e-mails for the job. Like all Viewpoint 
+						 field code, the field codes are enclosed within 
+						 (+…+).</p>
+						<p>Available field codes:</p>
+						<p>(+JT.ErrorLog+) - This retrieves the error log 
+						 for errors that occurred during a job.</p>
+						<p>(+JT.CompletedDate+) - This retrieves the date 
+						 of completion for the job and applies to all job 
+						 types.</p>
+						<p>(+JT.Status+) - This retrieves the job status 
+						 and applies to all job types.</p>
+						<p>(+JT.StatusCode+) - This retrieves the job status 
+						 code and applies to all job types.</p>
+						<p>(+JT.EmailList+) - This retrieves the list of 
+						 e-mail recipient for the job and applies to all 
+						 job types.</p>
+						<p>(+JT.MachineName+) - This retrieves the name 
+						 of the machine used to perform the job and applies 
+						 to Report Queue Generation job type.</p>
+						<p>&#160;</p>
+						<p>Besides the list above, Job Tags for the different 
+						 Job Type can also be used as field codes by enclosing 
+						 them within (+JT. …+):</p>
+						<table class="Table1" cellspacing="0px" width="100%">
+							<col style="width: 33.333%;">
+							<col style="width: 33.333%;">
+							<col style="width: 33.333%;">
+							<tr class="t1st">
+								<td>Job Tag</td>
+								<td>Job Type</td>
+								<td>Job Field Code</td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col">SelType</td>
+								<td class="t2Col">To Do Review Rebuild</td>
+								<td class="t1Col">(+JT.SelType+)</td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col">Condition</td>
+								<td class="t2Col">Report Queue Generation</td>
+								<td class="t1Col">(+JT.Condition+)</td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col">ReminderTime</td>
+								<td class="t2Col">ESP Notification</td>
+								<td class="t1Col">(+JT.ReminderTime+)</td>
+							</tr>
+						</table>
+						<p>&#160;</p>
+						<p>&#160;</p>
+     </div></li>
+				</ul>
+				<p>&#160;</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_SQL:</p>
+				<p>This is to have different e-mail body based on value 
+				 of the conditional field retrieved by TASK_SQL. This is 
+				 defined by adding the value, for example:</p>
+				<p>[/MAIL_BODY.R1=&lt;E-mailBody&gt;/]</p>
+				<p>where R1 is the value of conditional field retrieved 
+				 from TASK_SQL.</p>
+				<p><span class="hcp7">Note</span>: 
+				 The FORM_CONDITION tag must be defined.</p>
+				<p>&#160;</p>
+				<p class="hcp6">Job 
+				 Scope defined by TASK_ROUTINE:</p>
+				<p>This is to define different subject line for completed 
+				 task and failed task:</p>
+				<ul class="hcp1">
+					<li><p>Use MAIL_BODY.S for task completed successfully</p></li>
+					<li><p>Use MAIL_BODY.F for failed task</p></li>
+					<li><p>Use MAIL to combine both task completed and 
+					 task failed within a single e-mail</p></li>
+				</ul>
+				<p><span class="hcp7">Note</span>: 
+				 If three MAIL_ BODY.S, MAIL_ BODY.F, and MAIL_ BODY are 
+				 specified, both MAIL_ BODY.S and MAIL_ BODY.F will take 
+				 privilege over MAIL_ BODY.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_BODY=Dear 
+				 Sir,&lt;br/&gt; your task is completed./]</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>[/MAIL_BODY.R1=Dear Sir,&lt;br/&gt; Your task is completed./]</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>&#160;</p>
+				<p>[/MAIL_BODY.S=Dear Sir,&lt;br/&gt; Your task has been 
+				 completed./]</p>
+				<p>[/MAIL_BODY.F=Dear Sir,&lt;br/&gt; Your task failed 
+				 to complete./]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_TO=&lt;Recipient&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define the recipient in the To field. You can specify 
+				 the e-mail address or use codes to retrieve it.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_TO=(+MailID+)/]</p>
+				<p>[/MAIL_TO=demo@vp.com.my/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_CC=&lt;Recipient&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define the recipient in the CC field. You can specify 
+				 the e-mail address or use codes to retrieve it.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_CC=(+MailID+)/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_BCC=&lt;Recipient&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to define the recipient in the BCC field. You can specify 
+				 the e-mail address or use codes to retrieve it.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_BCC=(+MailID+)/]</p>
+				<p>[/MAIL_BCC=demo@vp.com.my/]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>[/MAIL_REPLYTO=&lt;E-mail&gt;/]</p></td>
+				<td class="t2Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>This 
+				 is to specify the e-mail address for replies. You can 
+				 specify the e-mail address or use codes to retrieve it.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_REPLYTO=(+MailID+)/]</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+    </div></li>
+	<li><p>Job Criteria Tags - These do not have any prefix and are used 
+	 to define the criteria for the job. Except for Global File Review 
+	 [GLFR], the tags can be replaced by the Criteria tab.</p></li>
+</ul>
+<p>For e-mails related to the job type, these can be specified using the 
+ FORM_CODE tag (which makes use of e-mail templates) as well as the MAIL_BODY 
+ tag. Regardless of whether it is via template or through MAIL_BODY tag, 
+ the following can be used as parameters for the resulting e-mails:</p>
+<p>&#160;</p>
+<h2>Job Tags</h2>
+<p>These refers to the standard Job Tags which can be added to e-mail template 
+ or MAIL_BODY by enclosing it within (+..+). Click <a class="dropspot" href="javascript:TextPopup(this)" id="a42">here</a> 
+ to view an example.</p>
+    <div class="droptext" id="POPUP475973846" style="display: none;">
+	<p>Using Job Tags in E-mail Template</p>
+	<table cellspacing="0" class="hcp8">
+		<col style="width: 23.215%;">
+		<col style="width: 31.875%;">
+		<col style="width: 44.91%;">
+		<tr>
+			<td class="hcp2"><span class="hcp9">Job 
+			 Tags</span></td>
+			<td class="hcp4"><span class="hcp9">Template 
+			 Coding</span></td>
+			<td class="hcp4"><span class="hcp9">Sample 
+			 Generated E-mail</span></td>
+		</tr>
+		<tr>
+			<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+			<p>[/FORM_CODE=EMAIL1/]</p>
+			<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+			<p>[/MAIL_TO=sm@vp.com.my/]</p>
+			<p>[/MAIL_CC=demo@vp.com.my/]</p></td>
+			<td class="hcp11"><p>Dear Sir/Madam,</p>
+			<p>Your task has been completed and notification e-mail has 
+			 been sent to (+MAIL_TO+) and carbon copy to (+MAIL_CC+).</p></td>
+			<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+			<p>CC: &#160;demo@vp.com.my</p>
+			<p>Subject: &#160;TASK COMPLETE</p>
+			&#160;&#160; 
+			<p>Dear Sir/Madam,</p>
+			<p>Your task has been completed and notification e-mail has 
+			 been sent to sm@vp.com.my and carbon copy to demo@vp.com.my.</p>
+			<p>&#160;</p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+	<p>Using Job Tags with MAIL_BODY tag</p>
+	<table cellspacing="0" width="99.79%" class="hcp8">
+		<col style="width: 55.725%;">
+		<col style="width: 44.275%;">
+		<tr>
+			<td class="hcp2"><span class="hcp9">Job 
+			 Tags</span></td>
+			<td class="hcp4"><span class="hcp9">Sample 
+			 Generated E-mail</span></td>
+		</tr>
+		<tr>
+			<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+			<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+			<p>[/MAIL_TO=sm@vp.com.my/]</p>
+			<p>[/MAIL_CC=demo@vp.com.my/]</p>
+			<p>[/MAIL_BODY=Dear Sir/Madam, &lt;br/&gt; Your task has been 
+			 completed and notification e-mail has been sent to (+MAIL_TO+) 
+			 and carbon copy to (+MAIL_CC+)/]</p></td>
+			<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+			<p>CC: &#160;demo@vp.com.my</p>
+			<p>Subject: &#160;TASK COMPLETE</p>
+			&#160;&#160; 
+			<p>Dear Sir/Madam,</p>
+			<p>Your task has been completed and notification e-mail has 
+			 been sent to sm@vp.com.my and carbon copy to demo@vp.com.my.</p>
+			<p>&#160;</p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+    </div>
+<ul class="hcp1">
+	<li><p>Self-defined tags - These are codes that you defined with a 
+	 set value. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a43">here</a> 
+	 to view an example.</p>
+	<div class="droptext" id="POPUP475982736" style="display: none;">
+		<p>Using self-defined tags in E-mail Template</p>
+		<table cellspacing="0" class="hcp8">
+			<col style="width: 23.215%;">
+			<col style="width: 31.875%;">
+			<col style="width: 44.91%;">
+			<tr>
+				<td class="hcp2"><span class="hcp9">Job 
+				 Tags</span></td>
+				<td class="hcp4"><span class="hcp9">Template 
+				 Coding</span></td>
+				<td class="hcp4"><span class="hcp9">Sample 
+				 Generated E-mail</span></td>
+			</tr>
+			<tr>
+				<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+				<p>[/FORM_CODE=EMAIL1/]</p>
+				<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+				<p>[/MAIL_TO=sm@vp.com.my/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p>
+				<p class="hcp3">[/JobName=Print Register/]</p>
+				<p>&#160;</p></td>
+				<td class="hcp11"><p>Dear Sir/Madam,</p>
+				<p>Your task - <span class="hcp9">(+JobName+)</span> 
+				 - has been completed and notification e-mail has been 
+				 sent to (+MAIL_TO+) and carbon copy to (+MAIL_CC+).</p></td>
+				<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+				<p>CC: &#160;demo@vp.com.my</p>
+				<p>Subject: &#160;TASK COMPLETE</p>
+				&#160;&#160;&#160; 
+				<p>Dear Sir/Madam,</p>
+				<p>Your task - <span class="hcp9">Print Register</span> 
+				 - has been completed and notification e-mail has been 
+				 sent to sm@vp.com.my and carbon copy to demo@vp.com.my.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>Using self-defined tags with MAIL_BODY tag</p>
+		<table cellspacing="0" width="99.79%" class="hcp8">
+			<col style="width: 55.725%;">
+			<col style="width: 44.275%;">
+			<tr>
+				<td class="hcp2"><span class="hcp9">Job 
+				 Tags</span></td>
+				<td class="hcp4"><span class="hcp9">Sample 
+				 Generated E-mail</span></td>
+			</tr>
+			<tr>
+				<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+				<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+				<p>[/MAIL_TO=sm@vp.com.my/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p>
+				<p class="hcp3">[/JobName=Print Register/]</p>
+				<p>[/MAIL_BODY=Dear Sir/Madam, &lt;br/&gt; Your task - 
+				 <span class="hcp9">(+JobName+)</span> - 
+				 has been completed and notification e-mail has been sent 
+				 to (+MAIL_TO+) and carbon copy to (+MAIL_CC+)./]</p></td>
+				<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+				<p>CC: &#160;demo@vp.com.my</p>
+				<p>Subject: &#160;TASK COMPLETE</p>
+				&#160;&#160;&#160;&#160; 
+				<p>Dear Sir/Madam,</p>
+				<p>Your task - <span class="hcp9">Print Register</span> 
+				 - has been completed and notification e-mail has been 
+				 sent to sm@vp.com.my and carbon copy to demo@vp.com.my.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Task result tags - These are codes that retrieve results for 
+	 tasks. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a44">here</a> 
+	 to view an example.</p>
+	<div class="droptext" id="POPUP475970548" style="display: none;">
+		<p>This applies only to TASK_ROUTINE and there are three parameters:</p>
+		<ul class="hcp1">
+			<li><p>(+JT.ErrorLog+) - retrieves the error log for errors 
+			 that occurred during a job</p></li>
+			<li><p>(+JT.CompletedDate+) - retrieves the date of completion 
+			 for the job</p></li>
+			<li><p>(+JT.Status+) - retrieves the job status</p></li>
+			<li><p>(+JT.StatusCode+) - retrieves the job status code</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>Using task result tags in E-mail Template</p>
+		<table cellspacing="0" class="hcp8">
+			<col style="width: 23.215%;">
+			<col style="width: 31.875%;">
+			<col style="width: 44.91%;">
+			<tr>
+				<td class="hcp2"><span class="hcp9">Job 
+				 Tags</span></td>
+				<td class="hcp4"><span class="hcp9">Template 
+				 Coding</span></td>
+				<td class="hcp4"><span class="hcp9">Sample 
+				 Generated E-mail</span></td>
+			</tr>
+			<tr>
+				<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+				<p>[/FORM_CODE=EMAIL1/]</p>
+				<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+				<p>[/MAIL_TO=sm@vp.com.my/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p></td>
+				<td class="hcp11"><p>Dear Sir/Madam,</p>
+				<p>You task status is: <span class="hcp9">(+JT.StatusCode+)</span> 
+				 - <span class="hcp9">(+JT.Status+)</span>. 
+				 It was completed on <span class="hcp9">(+JT.CompletedDate+)</span>.</p></td>
+				<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+				<p>CC: &#160;demo@vp.com.my</p>
+				<p>Subject: &#160;TASK COMPLETE</p>
+				&#160;&#160;&#160; 
+				<p>Dear Sir/Madam,</p>
+				<p>You task status is: <span class="hcp9">3</span> 
+				 - <span class="hcp9">Completed</span>. It 
+				 was completed on <span class="hcp9">6th 
+				 January 2014</span>.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>Using task result tags with MAIL_BODY tag</p>
+		<table cellspacing="0" width="99.79%" class="hcp8">
+			<col style="width: 55.725%;">
+			<col style="width: 44.275%;">
+			<tr>
+				<td class="hcp2"><span class="hcp9">Job 
+				 Tags</span></td>
+				<td class="hcp4"><span class="hcp9">Sample 
+				 Generated E-mail</span></td>
+			</tr>
+			<tr>
+				<td class="hcp10"><p>[/TASK_ROUTINE=CPPR/]</p>
+				<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+				<p>[/MAIL_TO=sm@vp.com.my/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p>
+				<p>[/MAIL_BODY=Dear Sir/Madam, &lt;br/&gt; You task status 
+				 is: <span class="hcp9">(+JT.StatusCode+)</span> 
+				 - <span class="hcp9">(+JT.Status+)</span>. 
+				 It was completed on <span class="hcp9">(+JT.CompletedDate+)</span>./]</p></td>
+				<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+				<p>CC: &#160;demo@vp.com.my</p>
+				<p>Subject: &#160;TASK COMPLETE</p>
+				&#160;&#160;&#160;&#160;&#160; 
+				<p>Dear Sir/Madam,</p>
+				<p>You task status is: <span class="hcp9">3</span> 
+				 - <span class="hcp9">Completed</span>. It 
+				 was completed on <span class="hcp9">6th 
+				 January 2014</span>.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Context data tags - These are codes to get information retrieved 
+	 by TASK_SQL. It works only with MAIL_BODY tag. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a45">here</a> 
+	 to view an example.</p>
+	<div class="droptext" id="POPUP475995144" style="display: none;">
+		<p>Using context data tags with MAIL_BODY tag</p>
+		<table cellspacing="0" width="99.79%" class="hcp8">
+			<col style="width: 55.725%;">
+			<col style="width: 44.275%;">
+			<tr>
+				<td class="hcp2"><span class="hcp9">Job 
+				 Tags</span></td>
+				<td class="hcp4"><span class="hcp9">Sample 
+				 Generated E-mail</span></td>
+			</tr>
+			<tr>
+				<td class="hcp10"><p>[/TASK_SQL= 
+				 SELECT a.*,u.Uname FROM &#160;AdminPeriodsTimeView a INNER 
+				 JOIN VpUser u ON &#160;a.UserCode=u.Ucode &#160;WHERE 
+				 DateTo&lt;GETDATE() AND AdminTimeStatus &lt;&gt; 'Closed' 
+				 AND UnitsDifferent &lt; 0/]</p>
+				<p>[/MAIL_SUBJECT=TASK COMPLETE/]</p>
+				<p>[/MAIL_TO=sm@vp.com.my/]</p>
+				<p>[/MAIL_CC=demo@vp.com.my/]</p>
+				<p>[/MAIL_BODY=Dear <span class="hcp9">(+Uname+)</span>, 
+				 &lt;br/&gt; Your task has been completed./]</p></td>
+				<td class="hcp11"><p>To: &#160;&#160;sm@vp.com.my</p>
+				<p>CC: &#160;demo@vp.com.my</p>
+				<p>Subject: &#160;TASK COMPLETE</p>
+				&#160;&#160;&#160;&#160;&#160; 
+				<p>Dear <span class="hcp9">Sally Michaels</span>,</p>
+				<p>Your task has been completed.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Template queries - This is when you are using an e-mail template 
+	 and information is to be retrieved using SQL queries for the template.</p></li>
+</ul>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">How do I know 
+ if the job type is a predefined task or an SQL-driven task?</a></p>
+ <div class="droptext" id="POPUP475992543" style="display: none;">
+	<p>At the moment, only the below are SQL-driven task:</p>
+	<ul class="hcp1">
+		<li>Timesheet Reminder [TSRE]</li>
+		<li>Email Notification - Unread Notification Summary [EUNS]</li>
+		<li>Customisable SQL Driven Task [CSDT]</li>
+		<li>Reminder Notifications [TDNT]</li>
+	</ul>
+ </div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Task Scheduler - Tags</p>
+ <p class="hcp12">&#160;</p>
+ <p class="hcp12">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp12">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a37','POPUP475990929');
+	TextPopupInit('a38','POPUP475968577');
+	TextPopupInit('a39','POPUP476012980');
+	TextPopupInit('a40','POPUP476025132');
+	TextPopupInit('a42','POPUP475973846');
+	TextPopupInit('a43','POPUP475982736');
+	TextPopupInit('a44','POPUP475970548');
+	TextPopupInit('a45','POPUP475995144');
+	TextPopupInit('a1','POPUP475992543');
+//]]></script>
+</body>
+</html>

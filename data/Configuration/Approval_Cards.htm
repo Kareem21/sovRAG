@@ -1,0 +1,131 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Approval Cards">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Approval Cards</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Approval Cards</h1>
+<p>Approval cards are used when an item requires an approval from a user. These can be for any of the following:</p>
+<ul class="hcp1">
+<li>
+<p>Payee and bank payments - the relevant approval card will be automatically applied to the payment record based on matching values in the Master File Code, Sub-ledger/Account, Currency and Up to Amount fields.</p>
+</li>
+<li>
+<p>Changes - the approval card must be linked to the relevant Change Code through <a href="../Shared/Changes_Codes.htm">Change Codes</a> screen.</p>
+</li>
+<li>
+<p>Workflow steps - the approval card must be specified for the workflow step.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h2>Create Approval Cards</h2>
+<p>The approval cards are created in the Approval Cards screen which can be accessed through Configuration &gt; Users &amp; Security &gt; Approval Cards.</p>
+<p>&#160;</p>
+<p class="FldExplain">Approval Card list</p>
+<p>The list shows all existing Approval Cards.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+<li>
+<p><span class="hcp2">New</span> - Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a5">create</a> a new Approval Card.</p>
+<div class="droptext" id="POPUP408501804" style="display: none;">
+<ol class="hcp3">
+<li>
+<p>Enter details for the Approval Card.</p>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If the option 'Restrict Own Record Approval' is ticked, this means that if the item for approval was created by the approver, then approval is only possible by another user in the Approval List.</p>
+</div></li>
+<li>
+<p><span class="hcp2">Edit</span> - Click this to edit the details of an existing Approval Card.</p>
+</li>
+<li>
+<p><span class="hcp2">Rebuild Approval List</span> - Click this if you made changes to the Approval List of an existing Approval Card. This will also update the Approvals screen for the relevant approvers.</p>
+</li>
+<li>
+<p><span class="hcp2">Rebuild All</span> - Click this rebuild the Approval List of all existing Approval Cards.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h2>Assign Approval Cards</h2>
+<p>If the approval card is for a Change or workflow, then the approval card must be assigned to the Change Code or workflow step.</p>
+<p>&#160;</p>
+<h3>Assigning Approval Card to Change</h3>
+<ol class="hcp3">
+<li>
+<p>In Viewpoint - Home, go to Configuration &gt; Business Parameters &gt; General &gt; Change Codes.</p>
+</li>
+<li>
+<p>Select the Change Code.</p>
+</li>
+<li>
+<p>Click New.</p>
+</li>
+<li>
+<p>In the Change Link screen, set the Link Type as Approval Cards and select the approval card.</p>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+</ol>
+<h3>Assigning Approval Card to Workflow Step</h3>
+<p>Approval card in workflow is used to have a workflow step approved before the step can be completed. To assign the approval card, the workflow step must contain a checklist item with the field type set as 'Approval Card' and the relevant approval card specified in the Values/Default column. Refer to Linking Approval Card to Workflow Step in <a href="Configuring_Checklist_Item.htm">Configuring Checklist Item</a>.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="Approval_Cards_-_Tags.htm">Approval Cards - Tags</a></p>
+</li>
+<li>
+<p><a href="../Shared/Changes_Codes.htm">Change Codes</a></p>
+</li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Users.htm">Users & Security</a> &gt; Approval Cards</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a5','POPUP408501804');
+//]]></script>
+</body>
+</html>

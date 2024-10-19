@@ -1,0 +1,132 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Decision Step</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Decision Step</h1>
+<p>For each workflow template, a decision step is automatically included 
+ in the Step list. This decision step allows for two-way branching in the 
+ workflow where the flow can go in either one way. The decision step can 
+ be used multiple times in the workflow by adding it to the relevant order 
+ in the workflow diagram either by drag and drop or using the Add to Link.</p>
+<p>When a decision step is added, it is also possible to automate the decision: 
+ </p>
+<ul class="hcp1">
+	<li><p>If the decision is not automated, the user will arrive at the 
+	 decision step and be able to select the branch by clicking on command 
+	 buttons that represent the Yes and No branch.</p></li>
+	<li><p>If the decision is automated, then the user will not encounter 
+	 the decision. Instead, the decision will be based on a checklist item 
+	 within the workflow step just before the decision step.</p></li>
+</ul>
+<h2>Changing Caption for Decision Step</h2>
+<p>When added to the workflow diagram, the default caption will be:</p>
+<ul class="hcp1">
+	<li><p>Decision for the decision step</p></li>
+	<li><p>Yes and No for the branches</p></li>
+</ul>
+<p>These captions can be changed by doing the following:</p>
+<ol class="hcp2">
+	<li><p>In the workflow diagram, click to select the decision step.</p></li>
+	<li><p>In Step details, enter the caption in the Completed Field column 
+	 for:</p></li>
+	<ul class="hcp1">
+		<li><p>Decision - caption for the decision step shape in the workflow 
+		 diagram</p></li>
+		<li><p>Yes - caption for Yes branch</p></li>
+		<li><p>No - caption for No branch</p></li>
+	</ul>
+	<li><p>Click Update to save the changes.</p></li>
+</ol>
+<p><span class="hcp3">Note</span>: The 
+ caption change for Yes and No branches will also apply to the command 
+ buttons seen if the decision is not automated.</p>
+<p>&#160;</p>
+<h2>Automating Decision Step</h2>
+<p>By automating a decision step, there is no need for the user to manually 
+ select the Yes or No branch. Instead, the required value that will decide 
+ on the branch will be a checklist item that the user has completed in 
+ the workflow step before the decision step. This requires the following:</p>
+<ul class="hcp1">
+	<li><p>define the item as a source for the decision step</p></li>
+	<li><p>define the value for the Yes branch</p></li>
+</ul>
+<h3>Define Item as Source for Decision Step</h3>
+<p>If the workflow step has one checklist item that will be the source 
+ for the decision step, then this can be indicated by ticking the Output 
+ checkbox for the checklist item.</p>
+<ol class="hcp2">
+	<li><p>In the workflow step containing the item, select the item.</p></li>
+	<li><p>In Values/Default, tick the Output checkbox.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>If the workflow step contains conditional groups and within each group 
+ is a checklist item that will be the source for the decision step, then 
+ do the following:</p>
+<ol class="hcp2">
+	<li><p>In the workflow step, assign the same key to these checklist 
+	 items and click Update.</p></li>
+	<li><p>Click Edit Properties for this workflow step.</p></li>
+	<li><p>Add the [OUTPUT=&lt;Key&gt;] tag in Tag Values with the &lt;Key&gt; 
+	 referring to the key assigned in step 1.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p><span class="hcp3">Note</span>: If 
+ it is the score of the checklist item that is to be the source for the 
+ decision step, the tag is [OUTPUT=&lt;Key&gt;.SCORE].</p>
+<p>&#160;</p>
+<h3>Define the Value for the Yes Branch</h3>
+<ol class="hcp2">
+	<li><p>In the workflow diagram, click to select the decision step.</p></li>
+	<li><p>In the Step details, specify the following:</p></li>
+	<ul class="hcp1">
+		<li><p>Input Type - in Complete Field column, select if the Input 
+		 is Text or Number</p></li>
+		<li><p>If Yes - in Complete Field column, select the operator, 
+		 and in the Value field, enter the value for the Yes branch.</p></li>
+	</ul>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Workflow_Designer_Screen.htm">Workflow Designer Screen</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Decision Step</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

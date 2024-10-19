@@ -1,0 +1,107 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Field Settings</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+span.hcp4 { font-weight:bold; }
+img.hcp5 { border:none; }
+span.hcp6 { font-weight:normal; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Field Settings</h1>
+<p>Tags are available for Localise Scripts to set the caption and authority 
+ required for update for Viewpoint standard fields.</p>
+<p>&#160;</p>
+<h3>Setting Field Caption</h3>
+<p>When using Localise Script to set the caption, this apply also to Custom 
+ Reports and Grid Fields. If you have customised the caption earlier, this 
+ will also be over-written by the caption defined by the Localise Script.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">FIELDCAP:&lt;FieldDef&gt;+&lt;DBField&gt;=&lt;Caption&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p><span class="hcp4">&lt;FieldDef&gt;</span> can 
+	 be retrieved from Field Definition in Configurations &gt; Settings 
+	 &gt; Customise &gt; Field Settings.</p></li>
+	<li><p><span class="hcp4">&lt;DBField&gt;</span> is retrieved 
+	 from the Database Field.</p></li>
+	<li><p><span class="hcp4">&lt;Caption&gt;</span> is the 
+	 caption for the field.</p></li>
+</ul>
+<p><img src="../image105.jpg" alt="" width="988" height="329" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set the caption for CDD Note as ‘Additional Information’: FIELDCAP:KYC.Note+KYC_Note=Additional 
+ Information</p>
+<p>&#160;</p>
+<h3>Setting Update Authority</h3>
+<p>The tag below allows you specify the value for Auth. Req. for Update 
+ setting of the field.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">FIELDAUTH:&lt;FieldDef&gt;+&lt;DBField&gt;=&lt;Authority&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p class="hcp2">&lt;FieldDef&gt; <span class="hcp6">can 
+	 be retrieved from Field Definition in Configurations &gt; Settings 
+	 &gt; Customise &gt; Field Settings.</span></p></li>
+	<li><p class="hcp2">&lt;DBField&gt; <span class="hcp6">is 
+	 retrieved from the Database Field.</span></p></li>
+	<li><p class="hcp2">&lt;Authority&gt; <span class="hcp6">is 
+	 the value for the Auth. Req. for Update field.</span></p></li>
+</ul>
+<p style="font-weight: normal; text-decoration: none; ">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set the authority for CDD Note to Regular User [6]: FIELDAUTH:KYC.Note+KYC_Note=6</p>
+<p><img src="../image123.jpg" alt="" width="662" height="292" border="0" class="hcp5"></p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: The 
+ Auth. Req. for New should not be changed without consulting Viewpoint.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Field_Settings.htm">Field Settings</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Field Settings</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+</body>
+</html>

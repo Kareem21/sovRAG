@@ -1,0 +1,1256 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Settings">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Filing Settings</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Filing Settings</h1>
+<p>This screen contains Viewpoint's standard settings for the different filing types.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filing Settings list</p>
+<p>The list shows settings of filing types such as:</p>
+<ul class="hcp1">
+<li>
+<p>Global - these are settings that are required by both FATCA and CRS Reporting Schemas for all Reporting Authorities</p>
+</li>
+<li>
+<p>CRS - these are settings that are specific to CRS schema for all Reporting Authorities C_E*/E_*) such as C_JE, E_GI</p>
+</li>
+<li>
+<p>FATCA - these are settings that are specific to FATCA schema for all Reporting Authorities (F_*) such as F_IM</p>
+</li>
+<li>
+<p>Reporting Authority-specific (e.g. C_BM for Bermuda CRS) - these are settings that are as per guidelines set by the jurisdiction's Tax Authority. Changes to the settings are as per the Tax Authority's update on their portal.</p>
+</li>
+</ul>
+<p>For each filing type, are filing information and values retrieved.</p>
+<p>&#160;</p>
+<p class="FldExplain">Edit</p>
+<p>Click this to make changes to the selected filing information such as:</p>
+<ul class="hcp1">
+<li>
+<p>Filing Value</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h2>Recommended Values</h2>
+<h3>Global</h3>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 18.351%;">
+<col style="width: 6.784%;">
+<col style="width: 27.852%;">
+<col style="width: 14.629%;">
+<col style="width: 32.432%;">
+<tr class="t1st">
+<td>
+<p>Description</p>
+</td>
+<td>
+<p>Code</p>
+</td>
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Value</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Status Code(s) for Retrieval</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RASRET</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Reportable Account Status value to use for data retrieval.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>A</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>This field is ‘A’ by default, and it is referring to the Status field in Viewpoint Reportable Accounts.</p>
+<p>A will retrieve reportable accounts with only ‘A’ Status.</p>
+<p>A,X will retrieve reportable accounts with Status either ‘A’ and ‘X’.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Code (Individual)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TCODEI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the TIN Code for Individual Account Holder using any of the below:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>or</p>
+<p>IR:&lt;IRType&gt;.IdCode-&lt;CountryCode&gt;</p>
+<p>or</p>
+<p>MF:&lt;DBField&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+<li>
+<p>&lt;DBField&gt; is the database name for the field used to record the TIN</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIN.IdCode</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIN.IdCode</p>
+<p>This will retrieve the TIN from Identity Register where the identity register type = FIN for the individual Account Holder.</p>
+<p>&#160;</p>
+<p>IR:FIN.IdCode-US</p>
+<p>This will retrieve the TIN from Identity Register where the identity register type = FIN and where Country code = US for the individual Account Holder.</p>
+<p>&#160;</p>
+<p>MF:GlobalID</p>
+<p>This will retrieve the TIN from Master File General – Global Identifier.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Code Issued By (Individual)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TCISSI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the jurisdiction issuing the TIN for Individual Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>&lt;CountryCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIN.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIN.Country</p>
+<p>This will retrieve the issuing country of the TIN from Identity Register where the register type = FIN for the individual Account Holder.</p>
+<p>&#160;</p>
+<p>US</p>
+<p>This will default the Country Code to the specified Country Code. Use this only for FATCA.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Type (Individual)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TTYPEI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify TIN Type registered for Individual Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.UdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIN.UdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIN.UdCode</p>
+<p>This will retrieve the TIN Type from Identity Register where the register type = FIN for the individual Account Holder.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Code (Organisation)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TCODEO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify TIN Code for Organisation Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>or</p>
+<p>MF:&lt;DBField&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;DBField&gt; is the database name for the field used to record the TIN</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode;IR:GIIN.IdCode-US;IR:INC.IdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode</p>
+<p>This will retrieve TIN from Identity Register where the identity register type = FIC for entity Account Holder.</p>
+<p>&#160;</p>
+<p>MF:GlobalID</p>
+<p>This will retrieve TIN code from Master File General – Global Identifier.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Code Issued By (Organisation)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TCISSO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the jurisdiction issuing the TIN for Organisation Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>&lt;CountryCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.Country;IR:GIIN.Country-US;IR:INC.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+<p>This will retrieve the issuing country of the TIN Issued from Identity Register where the register type = FIC for entity Account Holder.</p>
+<p>&#160;</p>
+<p>US</p>
+<p>This will default the Country Code to the specified Country Code. Use this only for FATCA.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN Type (Organisation)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TTYPEO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify TIN Type registered for Organisation Account Holder &#160;as:</p>
+<p>IR:&lt;IRType&gt;.UdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.UdCode;IR:GIIN.UdCode-US;IR:INC.UdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.UdCode</p>
+<p>This will retrieve the TIN type from Identity Register where the register type = FIC for the entity Account Holder.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Address Type for Individual</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>ADTYPI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Address Type to use in Submission for Account Holder – Individual by entering only the code for the address type.</p>
+<p>For multiple address types, separate with a comma.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RA,MA</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>RA</p>
+<p>This will retrieve the address active within the Reporting Period from address type RA relating to the individual Account Holder.</p>
+<p>&#160;</p>
+<p>RA,MA</p>
+<p>This will retrieve the address active within the Reporting Period relating to the individual Account Holder from the address type in the order specified. First, system will find the RA type address and identify if active in Reporting Period, if found then the RA address will be used for submission. If not found, system will continue search for MA type address for the submission.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Address Type for Reporting FI, Sponsor, Intermedia</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>ADTYPO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Address Type to use in Submission for Account Holder – Organisation, Reporting FI, Sponsor, Intermediary by entering only the code for the address type.</p>
+<p>For multiple address types, separate with a comma.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>SR,RO,MA</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>RO</p>
+<p>This will retrieve the address active within the Reporting Period from address type RO relating to the Organisation, Reporting FI, Sponsor, or Intermediary.</p>
+<p>&#160;</p>
+<p>RO,SR</p>
+<p>This will retrieve addresses active within the Reporting Period relating to the Organisation, Reporting FI, Sponsor, or Intermediary from the address type in the order specified. First, system will find the RO type address and identify if active in Reporting Period, if found then the RO address will be used for submission. If not found, system will continue search for SR type address for the submission.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Tax Residence Country Code for Individual</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TRCOCI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Residence Country to use in Submission for Account Holder – Individual as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>AD:&lt;AddTypeCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;AddTypeCode&gt; refers to the code for the address type</p>
+</li>
+</ul>
+<p>For multiple address types, separate with a comma.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIN.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIN.Country</p>
+<p>This will retrieve Tax Residence Country where the Identity Register Type = FIN.</p>
+<p>&#160;</p>
+<p>AD:RA</p>
+<p>This will retrieve Country from the address type RA address for submission.</p>
+<p>&#160;</p>
+<p>AD:RA,MA</p>
+<p>This will retrieve Residence Country from the RA address type active within the Reporting Period in the order specified. First, system will find the RA type address, if found and active in Reporting Period then the RA address country will be used for submission. If not found, system will continue search for MA type address country for the submission.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Tax Residence Country Code for Reporting FI, Spons</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TRCOCO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Residence Country to use in Submission for Account Holder – Organisation, Reporting FI, Sponsor, Intermediary as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>AD:&lt;AddTypeCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the TIN</p>
+</li>
+<li>
+<p>&lt;AddTypeCode&gt; refers to the code for the address type</p>
+</li>
+</ul>
+<p>For multiple address types, separate with a comma.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+<p>This will retrieve Residence Country from Identity Register Type - Country Code field, where Code is INC.</p>
+<p>&#160;</p>
+<p>AD:RO</p>
+<p>This will retrieve Country from the address type RO address for submission</p>
+<p>.</p>
+<p>AD:SR,RO,BA</p>
+<p>This will retrieve Residence Country from the address type active within the Reporting Period in the order specified. First, system will find the SR type address, if found and active in Reporting Period then the SR address country will be used for submission. If not found, system will continue search for RO and then BA type address country for the submission.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Birth Certificate</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>BTHCRT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Date of Birth to use in Submission for Individual Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.&lt;DBField&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type containing the date of birth</p>
+</li>
+<li>
+<p>&lt;DBField&gt; refers to the database name of the field containing the date of birth</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:BCT.FromDate</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:BCT.FromDate</p>
+<p>This will retrieve the Date of Birth from Identity Register Type BCT:From Date field.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>CRS</h3>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 18.849%;">
+<col style="width: 6.572%;">
+<col style="width: 27.569%;">
+<col style="width: 14.629%;">
+<col style="width: 32.432%;">
+<tr class="t1st">
+<td>
+<p>Description</p>
+</td>
+<td>
+<p>Code</p>
+</td>
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Value</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Reporting Financial Institution</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RARCFI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Reportable Account for Reporting Financial Institution as:</p>
+<p>IR:&lt;IRType&gt;.MFCODE</p>
+<p>&#160;</p>
+<p>where refers to the code used for the Identity Register Type for the CRSReporting FI.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:CRFI.MFCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:CRFI.MFCODE</p>
+<p>This will retrieve the CRS Reporting FI from Identity Register Type CRFI: CRS Reporting FI field.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Controlling Person(s)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>CONPER</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Controlling Person(s) as:</p>
+<p>REL:&lt;RelTypeCode&gt;</p>
+<p>&#160;</p>
+<p>where &lt;RelTypeCode&gt; refers to the code for the relationship type for Controlling Person.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>REL:CNP</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>REL:CNP</p>
+<p>This will retrieve Substantial Owner from Relations where the Relation Type = CNP.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Trustee of Trustee Documented Trust</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TRUTDT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Trustee of the Trustee documented Trust</p>
+<p>REL:&lt;Relation Type Code&gt;</p>
+<p>&#160;</p>
+<p>where &lt;RelTypeCode&gt; refers to the code for the relationship type for Trustee.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>REL:TRU</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>REL:TRU</p>
+<p>This will retrieve the TIN from the Master File linked as Relation Type = TRU</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>FATCA</h3>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 19.145%;">
+<col style="width: 6.714%;">
+<col style="width: 27.286%;">
+<col style="width: 14.629%;">
+<col style="width: 32.432%;">
+<tr class="t1st">
+<td>
+<p>Description</p>
+</td>
+<td>
+<p>Code</p>
+</td>
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Value</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Reporting Financial Institution</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RARFFI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify where to identify the Reporting Financial Institution as:</p>
+<p>IR:&lt;IRType&gt;.MFCODE</p>
+<p>&#160;</p>
+<p>where refers to the code used for the Identity Register Type for the FATCA Reporting FI.</p>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FRFI.MFCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FRFI.MFCODE</p>
+<p>This will retrieve FATCA Reporting FI from Identity Register Type FRFI: FATCA Reporting FI field.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Accounts Reporting Financial Institution</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RARFFC</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify where to identify the Reporting Financial Institution Filer Category as:</p>
+<p>IR:&lt;IRType&gt;.UDCODE</p>
+<p>&#160;</p>
+<p>where refers to the code used for the Identity Register Type for the Financial Institution Filer Category.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FRFI.UDCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FRFI.UDCODE</p>
+<p>This will retrieve Reporting FI Category from Identity Register Type FRFI: Reporting FI Category field.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Sponsor</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RASPON</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify where to identify the Sponsor as:</p>
+<p>IR:&lt;IRType&gt;.MFCODE</p>
+<p>&#160;</p>
+<p>where refers to the code used for the Identity Register Type for the Sponsor.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FSPR.MFCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>REL:TRU</p>
+<p>This will retrieve the TIN from the Master File linked as Relation Type = TRU</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Sponsor - Category</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RASPOC</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify where to identify the Sponsor Filer Category as:</p>
+<p>IR:&lt;IRType&gt;.UDCODE</p>
+<p>&#160;</p>
+<p>where refers to the code used for the Identity Register Type for the Sponsor Filer Category.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FSPR.UDCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FSPR.UDCODE</p>
+<p>This will retrieve Sponsoring Entity Category from Identity Register Type FSPR: Sponsoring Entity Category field.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reportable Account Intermediary</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RAINTE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify where to identify the Intermediary as:</p>
+<p>IR:&lt;IRType&gt;.MFCODE</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for the FATCA Intermediary.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIMD.MFCODE</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIMD.MFCODE</p>
+<p>This will retrieve FATCA Intermediary from Identity Register Type FIMD: FATCA Intermediary field.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>GLGINU</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Global Intermediary Identification Number (GIIN) for Reporting FI as:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>or</p>
+<p>MF:&lt;DBField&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the GIIN</p>
+</li>
+<li>
+<p>&lt;DBField&gt; refers to the database name of the field containing the GIIN</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:GIIN.IdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:GIIN.IdCode</p>
+<p>This will retrieve the GIIN number from Identity Register where register type = GIIN of the Reporting FI defined with Identity Register Type 'FRFI’.</p>
+<p>&#160;</p>
+<p>MF:GlobalID</p>
+<p>This will retrieve GIIN number from Master File General – Global Identifier of the Reporting FI (Identity Register type ’FRFI’).</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number Issued Country</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>GLGIIS</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the jurisdiction issuing the Global Intermediary Identification Number (GIIN) for Reporting FI as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>&lt;CountryCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the GIIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>US</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:GIIN.Country</p>
+<p>This will retrieve the country issuing the GIIN from the Identity Register where the register type = GIIN of the Reporting FI.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number - Sponsor</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>SPGINU</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Global Intermediary Identification Number (GIIN) for Sponsor as:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for the Sponsor's GIIN.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:GIINSP.IdCode</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:GIINSP.IdCode</p>
+<p>This will retrieve the GIIN number from Identity Register of the Sponsor where the register type = GIINSP.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number Issued Country - Sponsor</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>SPGIIS</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the jurisdiction issuing the Global Intermediary Identification Number (GIIN) for the Sponsor as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>&lt;CountryCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the Sponsor's GIIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>US</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:GIINSP.Country</p>
+<p>This will retrieve the country issuing the GIIN number from the Identity Register of the Sponsor where the register type = GIINSP.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number - Intermediary</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IMGINU</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Global Intermediary Identification Number (GIIN) for Intermediary as:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for recording the Intermediary's GIIN</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:GIINIM.IdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:GIINIM.IdCode</p>
+<p>This will retrieve the GIIN number from Identity Register of the Intermediary where the register type = GIINIM.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Global Intermediary Identification Number Issued Country</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IMGIIS</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Global Intermediary Identification Number Issued Country – Intermediary as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>or</p>
+<p>&lt;CountryCode&gt;</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;IRType&gt; refers to the code used for the Identity Register Type for recording the Intermediary's GIIN</p>
+</li>
+<li>
+<p>&lt;CountryCode&gt; refers to the code for country based on the Country Code [CNTR] lookup table</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>US</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR.GIINIM.Country</p>
+<p>This will retrieve the country issuing the GIIN number from the Identity Register of the Intermediary where the register type = GIINIM.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Substantial Owner(s)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>SUBOWN</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Substantial Owner group to be retrieved for Organisation Account Holder as:</p>
+<p>REL:&lt;RelTypeCode&gt;</p>
+<p>&#160;</p>
+<p>where &lt;RelTypeCode&gt; refers to the code for the relationship type for Substantial Owner</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>REL:SOW</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>REL:SOW</p>
+<p>This will retrieve Substantial Owner from Relations where the Relation Type = SOW.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>Reporting Authority</h3>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 18.849%;">
+<col style="width: 6.572%;">
+<col style="width: 27.569%;">
+<col style="width: 14.629%;">
+<col style="width: 32.432%;">
+<tr class="t1st">
+<td>
+<p>Description</p>
+</td>
+<td>
+<p>Code</p>
+</td>
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Value</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Date Format</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>DATFMT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify date format in AEOI Submission Manager.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>yyyy-MM-dd</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>yyyy-MM-dd</p>
+<p>All data values will be formatted to yyyy-MM-dd</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>TIN - Maximum number in message</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>TINCNT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the maximum number of allowable TIN/GIIN to be used in the Submission.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>99</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>99</p>
+<p>Means up to a maximum of 99 TIN/GIINs may be used in the submission per record.</p>
+<p>Set to 1, if only 1 (one) TIN/GIIN is allowed for each record in the submission.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Validation Option</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>VALOPT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify if you want validations to be done where:</p>
+<ul class="hcp1">
+<li>
+<p>0 – Enable all validations</p>
+</li>
+<li>
+<p>2 – Enable GIIN format validation only</p>
+</li>
+<li>
+<p>4 – Replace space on XML character restriction</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>0</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>0</p>
+<p>Will show all validations</p>
+<p>&#160;</p>
+<p>2</p>
+<p>Will check that the GIIN format is XXXXXX.XXXXX.XX.XXX</p>
+<p>&#160;</p>
+<p>4</p>
+<p>Will replace XML character restriction (&amp;,&lt;,&gt;,’,#,’’) with empty space. The restricted character will be replaced with the Entity Reference.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Fix Address Format</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>FADFMT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify address mapping for Fixed Address format.</p>
+<p>For AddressFree, leave blank.</p>
+<p>&#160;</p>
+<p>For AddressFix(structured address),</p>
+<p>[BuildingIdentifier=]</p>
+<p>[Street=]</p>
+<p>[District=]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Customise how the structured/ fixed address is to be retrieved according to your data entry for Addresses. If not applicable, leave the field blank as default, and the address will be extracted as AddressFree.</p>
+<p>For AddressFix, please noted that there is restriction on maximum length allowed for each field in the address e.g. 70 for Building Identifier (name and/or number).</p>
+<p>Format:</p>
+<p>[&lt;XML field name&gt;=&lt;Viewpoint address field name&gt;]</p>
+<p>&#160;</p>
+<p>Viewpoint:</p>
+<p>Address1- referring to the first line in Address</p>
+<p>Address2- referring to the second line in Address</p>
+<p>Up to and including Address5</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[BuildingID=Address1]</p>
+<p>[Street=Address2]</p>
+<p>[District=Address3]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Due Diligence</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>DUDILI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify value to use for the due diligence confirmation as:</p>
+<p>IR:&lt;IRType&gt;.UdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for recording FDDCON - &#160;FATCA Due Diligence Confirmation.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FDDCON.UdCode</p>
+<p>This will retrieve the value from Identity Register Type : FDDCON – FATCA Due Diligence Confirmation field.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: This field is not required for US FATCA and CRS. Leave blank.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Threshold</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>THRHOL</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify value to use for the THRHOL confirmation as:</p>
+<p>IR:&lt;IRType&gt;.UdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; refers to the code used for the Identity Register Type for recording FTHCON - FATCA Due Diligence Confirmation.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FTHCON.UdCode</p>
+<p>This will retrieve the value from Identity Register Type: FTHCON – FATCA Due Diligence Confirmation field.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: This field is not required for US FATCA and CRS. Leave blank.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Recalcitrant for Individual</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RECALI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify value to use for individual recalcitrant confirmation as:</p>
+<ul class="hcp1">
+<li>
+<p>1 or Y for Yes</p>
+</li>
+<li>
+<p>0 or N for No</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p><span class="hcp2">Note</span>: This field is only applicable for Curacao. For other reporting, leave blank.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Recalcitrant for Organisation</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RECALO</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify value to use for organisation recalcitrant confirmation as:</p>
+<ul class="hcp1">
+<li>
+<p>1 or Y for Yes</p>
+</li>
+<li>
+<p>0 or N for No</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p><span class="hcp2">Note</span>: This field is only applicable for Curacao. For other reporting, leave blank.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Withholding Tax for Individual</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>WHTAXI</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify value to use for individual withholding tax confirmation as:</p>
+<ul class="hcp1">
+<li>
+<p>1 or Y for Yes</p>
+</li>
+<li>
+<p>0 or N for No</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p><span class="hcp2">Note</span>: This field is only applicable for Curacao. For other reporting, leave blank.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>NIL Report</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>NILRPT</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify if Nil Reporting is required as:</p>
+<ul class="hcp1">
+<li>
+<p>Yes - if Nil reporting is required</p>
+</li>
+<li>
+<p>No - if Nil reporting is not required</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Yes</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Account Holder TIN Code (Organisation)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RAHTIN</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Tax Identification Number (TIN) for Organisation Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.IdCode</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; is the code of the Identity Register Type for the TIN.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode</p>
+<p>This will retrieve Tax Identification No (TIN) from Identity Register Type FIC: Tax Residence and Identification No (TIN) for the organisation Account Holder.</p>
+<p>&#160;</p>
+<p>IR:GIIN.IdCode</p>
+<p>This will retrieve the GIIN No from Identity Register Type GIIN: Global Intermediary Identification Number for the organisation Account Holder.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Account Holder TIN Code Issued By (Organisation)</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RAHTIS</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Jurisdiction issuing the TIN for Organisation Account Holder as:</p>
+<p>IR:&lt;IRType&gt;.Country</p>
+<p>&#160;</p>
+<p>where &lt;IRType&gt; is the code of the Identity Register Type for the TIN.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+<p>This will retrieve the Tax Registered/Country Issuing TIN from Identity Register Type FIC: Tax Residence and Identification No (TIN) for the organisation Account Holder.</p>
+<p>&#160;</p>
+<p>IR:GIIN.Country</p>
+<p>This will retrieve the Country Issuing GIIN from the Identity Register Type GIIN: Global Intermediary Identification Number for the organisation Account Holder.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reporting FI TIN Code</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RFITIN</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify Tax Identification Number (TIN) for Reporting FI</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.IdCode</p>
+<p>This will retrieve Tax Identification No (TIN) from Identity Register Type where the register type = FIC: for the Reporting FI.</p>
+<p>&#160;</p>
+<p>IR:GIIN.IdCode</p>
+<p>This will retrieve the GIIN No from Identity Register Type where th</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Reporting FI TIN Code Issued By</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>RFITIS</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the jurisdiction issuing the TIN for Reporting FI</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>IR:FIC.Country</p>
+<p>This will retrieve the Tax Registered/ Country Issuing TIN from Identity Register Type where the register type = FIC: for the Reporting FI.</p>
+<p>&#160;</p>
+<p>IR:GIIN.Country</p>
+<p>This will retrieve the Country Issuing GIIN from Identity Register Type where the register type = GIIN: for the Reporting FI.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="../Shared/AEOI_Filing_Management.htm">AEOI Filing Management</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Settings.htm">Settings</a> &gt; <a href="Settings_-_Windows_menu.htm">Customise</a> &gt; Filing Settings</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

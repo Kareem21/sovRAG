@@ -1,0 +1,117 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Account Settlement</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Account Settlement</h1>
+<p>This features allows an accounting transaction for a sub-ledger to be 
+ linked to another accounting transaction. When the Practice Management 
+ component is not used and invoices and receipts are entered directly into 
+ Accounting component, this feature can be used to track whether invoices 
+ for a client has been paid or not by linking the invoices and the receipts.</p>
+<p>To use this, the Settlement Method must be specified for the account 
+ type. This can be done through:</p>
+<ul style="list-style: disc;">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Globally</a> 
+	 in Viewpoint - Home &gt; Accounting &gt; Chart of Accounts &gt; <a 
+	 href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">Nominal Accounts</a>.</p>
+	<div class="droptext" id="POPUP433044718" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Select the Chart of Account.</p></li>
+			<li><p>Select the account.</p></li>
+			<li><p>Click Edit.</p></li>
+			<li><p>Select the method in Settlement Method.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Per Account File in File Maintenance &gt; Accounting &gt; <a 
+	 href="Chart_of_Accounts.htm">Chart of Accounts</a>.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Settlement Methods</h2>
+<h3>Manual Settlement</h3>
+<p>If the settlement method is Manual Settlement, you need to perform the 
+ settlement in the <a href="Sub-Ledger_Accounts.htm">Sub-ledger Accounts</a> 
+ screen using either the Auto Settle or Settle command button in the Settlements 
+ tab.</p>
+<p>&#160;</p>
+<h3>FIFO Settlement</h3>
+<p>If the settlement method is Automatically (FIFO Settlement) [8], when 
+ a receipt is entered, as soon as it is posted, the system will 'look' 
+ for as many transaction(s) to link to it in order to settle it immediately. 
+ The settlement will be done with FIFO transactions.</p>
+<p>For sales transactions where no receipt transactions have been entered, 
+ the system will 'wait' for a receipt transaction which can be used to 
+ settle them, also on a FIFO basis.</p>
+<p>&#160;</p>
+<h3>Through Reconciliation Screen</h3>
+<p>If the settlement method is Through Reconciliation Screen [1]. the Settlements 
+ command button in the Sub-Ledger Accounts screen will be disabled, and 
+ the user will only be able to do the settlement process through the Account 
+ File &gt; Accounting &gt; Processing &gt; <a href="Reconcile_Account.htm">Reconcile 
+ Account</a> screen.</p>
+<p>&#160;</p>
+<h2>Realised Exchange Gain/Loss</h2>
+<p>For settlement methods Manual Settlement [9] or Automatically (FIFO 
+ Settlement) [8], a Settlements command button will be visible in the Sub-Ledger 
+ Account screen. Clicking this command button allows users to key in the 
+ settlement amount and the system will create the journal entries for realised 
+ exchange gain/loss based on the item(s) settled versus the exchange rate 
+ of the selected sub-ledger currency on the screen.</p>
+<p>The line being settled can either be partial or full settlement, but 
+ 'over settlement' is not allowed.</p>
+<p><img src="../image286.gif" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h6 class="Heading8">Example</h6>
+<p>If we click the Settlements command button on the screen as shown above, 
+ we will see the following:</p>
+<p><img src="../image285.gif" alt="" border="0" class="hcp1"></p>
+<p>If we now change the exchange rate, we will see there is an Exchange 
+ Gain/Loss amount in the summary on the right hand side of the screen.</p>
+<p><img src="../image287.gif" alt="" border="0" class="hcp1"></p>
+<p>When we click Post Journal and look at the journal, we can see that 
+ there are lines automatically created for the Realised Exchange Loss.</p>
+<p><img src="../image288.gif" alt="" border="0" class="hcp1"></p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Account Settlement</p>
+ <p class="hcp2">&#160;</p>
+ <p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp2">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP433044718');
+//]]></script>
+</body>
+</html>

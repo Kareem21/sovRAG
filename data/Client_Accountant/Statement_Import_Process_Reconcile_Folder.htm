@@ -1,0 +1,654 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Statement Import and Processing">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statement Import - Process &amp; Reconcile Folder</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+td.hcp2 { border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+border-left-style:solid;
+border-left-width:1px; }
+td.hcp3 { border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+li.hcp5 { list-style:none;
+display:inline; }
+p.hcp6 { text-align:center; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Statement Import &amp; Processing - Process &amp; Reconcile Folder</h1>
+<p>This screen is where the actual processing and reconciliation takes 
+ place, and this is also where the rules used for the reconciliation process 
+ are defined. The function buttons at the top of the screen are used globally, 
+ i.e. on all lines. For instance, filtering the lines, performing enquiries 
+ or generating reports. The main section of the screen is where the statement 
+ lines are displayed. The function buttons below the statement pane relate 
+ to the reconciliation process.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filter</p>
+<p>Use this to filter the statement lines:</p>
+<ul class="hcp1">
+	<li><p>All - Display all lines.</p></li>
+	<li><p>Error - Display only lines that show an error after processing 
+	 (status type: 1, 2).</p></li>
+	<li><p>Waiting Confirmation - Display lines that are waiting for user 
+	 confirmation after processing (status type: 10, 20, 30, 41, 80).</p></li>
+	<li><p>Pending Posting - Display lines that are pending for posting 
+	 (status type: 21, 22, 23, 31, 32, 33, 81, 82, 83).</p></li>
+	<li><p>Settlements AR - Display settlements AR manual records only 
+	 (status type: 3, 40). Click <a class="dropspot" href="javascript:TextPopup(this)" id="a11">here</a> 
+	 to see the types of AR settlements matching criteria.</p>
+	<div class="droptext" id="POPUP4141111001" style="display: none;">
+		<p>The following are AR settlements matching criteria.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="100%">
+			<col style="width: 33.333%;">
+			<col style="width: 38.778%;">
+			<col style="width: 27.889%;">
+			<tr class="t1st">
+				<td class="hcp2"><p>Status</p></td>
+				<td class="hcp3"><p>Condition</p></td>
+				<td class="hcp2"><p>Remark</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#BBilling File Name 
+				 + Single/Multiple Invoices Outstanding &gt; 0</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Revenue Entity + Match 
+				 Amount Transaction + Match Currency Code (single/multiple)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Single 
+				 Invoice Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Invoice 
+				 Number must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (single 
+				 invoice)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Billing 
+				 File Name must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Multiple 
+				 Invoices Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (multiple 
+				 invoices)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+		</table>
+ </div></li>
+	<li><p>Settlements AR - Exact Match - Display settlements AR with only 
+	 one invoice matched (status type: 44). Click <a class="dropspot" href="javascript:TextPopup(this)" id="a111">here</a> 
+	 to see the types of AR settlements matching criteria.</p>
+	<div class="droptext" id="POPUP41411110011" style="display: none;">
+		<p>The following are AR settlements matching criteria.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="100%">
+			<col style="width: 33.333%;">
+			<col style="width: 38.778%;">
+			<col style="width: 27.889%;">
+			<tr class="t1st">
+				<td class="hcp2"><p>Status</p></td>
+				<td class="hcp3"><p>Condition</p></td>
+				<td class="hcp2"><p>Remark</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#BBilling File Name 
+				 + Single/Multiple Invoices Outstanding &gt; 0</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Revenue Entity + Match 
+				 Amount Transaction + Match Currency Code (single/multiple)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Single 
+				 Invoice Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Invoice 
+				 Number must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (single 
+				 invoice)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Billing 
+				 File Name must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Multiple 
+				 Invoices Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (multiple 
+				 invoices)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+		</table>
+ </div></li>
+	<li><p>Settlements AR - Close Matches - Display settlements AR with 
+	 more than one invoices matched (status type: 45). Click <a class="dropspot" href="javascript:TextPopup(this)" id="a112">here</a> 
+	 to see the types of AR settlements matching criteria.</p>
+	<div class="droptext" id="POPUP41411110012" style="display: none;">
+		<p>The following are AR settlements matching criteria.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="100%">
+			<col style="width: 33.333%;">
+			<col style="width: 38.778%;">
+			<col style="width: 27.889%;">
+			<tr class="t1st">
+				<td class="hcp2"><p>Status</p></td>
+				<td class="hcp3"><p>Condition</p></td>
+				<td class="hcp2"><p>Remark</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#BBilling File Name 
+				 + Single/Multiple Invoices Outstanding &gt; 0</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Manual</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Revenue Entity + Match 
+				 Amount Transaction + Match Currency Code (single/multiple)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Single 
+				 Invoice Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Invoice 
+				 Number must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Exact 
+				 Match (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (single 
+				 invoice)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">#Billing 
+				 File Name must match the source from Description and Narrative 
+				 columns.</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Invoice Number + Multiple 
+				 Invoices Outstanding &gt; 0</p>
+				<p><span class="hcp4">Note</span><span class="hcp4">:</span> 
+				 Currency is not included in this condition.</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px; border-left-style: solid; 
+					 border-left-width: 1px;"><p>Settlement AR - Close 
+				 Matches (pending)</p></td>
+				<td class="t2Col" style="border-top-width: 1px; border-right-width: 1px; 
+					 border-bottom-width: 1px;"><p>#Billing File Name + 
+				 Match Amount Transaction + Match Currency Code (multiple 
+				 invoices)</p></td>
+				<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+					 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;">&#160;</td>
+			</tr>
+		</table>
+ </div></li>
+	<li><p>Completed - Display lines that are completed, i.e. successfully 
+	 reconciled, after processing.</p></li>
+	<li><p>Non-Processed - Display lines that have not been processed (status 
+	 type: 0).</p></li>
+	<li><p>Ignore - Display lines that were ignored during the processing 
+	 (status type: 43, 98, 99). Please see Action below.</p></li>
+</ul>
+<p class="FldExplain">Reload</p>
+<p>Click this to reload the statement lines.</p>
+<p>&#160;</p>
+<p class="FldExplain">Set Filter</p>
+<p>Use this to filter the list based on the highlighted account number. 
+ Click this button again to remove the filter.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enquiry</p>
+<p>This is enabled if the highlighted transaction line is recognised, and 
+ displays all lines related to the account number.</p>
+<ul class="hcp1">
+	<li><p>Statement - Journal - This is the default selection, and places 
+	 the Statement pane on the left of the Account Reconciliation pane 
+	 (see Statement pane and Account reconciliation pane, below).</p></li>
+	<li class="hcp5"><ul class="hcp1">
+		<li><p>Account Number - &lt;selected account number&gt; - This 
+		 shows the selected account number.</p></li>
+		<li><p>Date - from, Filter and - to - These fields allow you to 
+		 filter the display according to the Transaction Date, Value Date 
+		 or Settlement Date range.</p></li>
+		<li><p>Reconciled and Pending - Tick either check box or both, 
+		 to filter the list and show only reconciled, pending or both types 
+		 of transactions. Leave both check boxes empty to display ALL transactions.</p></li>
+	</ul></li>
+	<li><p>Journal - Statement - This selection puts the Account Reconciliation 
+	 pane, which is known as the Journal pane here, on the left of the 
+	 Statement pane. Any unmatched journals will be displayed in the Journal 
+	 pane.</p></li>
+	<li class="hcp5"><ul class="hcp1">
+		<li><p>Date Filter, Date - from and - to - These fields allow you 
+		 to filter the display according to Journal Date and Reconciliation 
+		 Date for the date range.</p></li>
+		<li><p>Sort By - Use this to sort the display.</p></li>
+		<li><p>Non-Reconciled - Tick this to display only unreconciled 
+		 items.</p></li>
+	</ul></li>
+</ul>
+<p class="FldExplain">Statement</p>
+<p>Click to generate a report.</p>
+<p>&#160;</p>
+<p class="FldExplain">Define Rules</p>
+<p>Click this to define the processing rules.</p>
+<p>&#160;</p>
+<p class="FldExplain">Statement pane</p>
+<p>Information in the Status column will change depending on the outcome 
+ of the processing. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a> 
+ to see the types of status that can be displayed.</p>
+ <div class="droptext" id="POPUP414111100" style="display: none;">
+	<p>A statement line will be processed only if its status number is 
+	 less than 10.</p>
+	<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+			 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="93.693%">
+		<col style="width: 23.431%;">
+		<col style="width: 76.569%;">
+		<tr class="t1st">
+			<td class="hcp2"><p>Status 
+			 Number</p></td>
+			<td class="hcp2"><p>Status</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">00</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Non-processed</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">01</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Failed 
+			 to identify Account (sub-ledger)</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">02</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Account 
+			 File/Sub-ledger Recognised (waiting for processing)</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">10</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Reconciled 
+			 - Waiting Confirmation</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">11</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Reconciled 
+			 - Confirmed</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">12</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Reconciled 
+			 - Automatic</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">13</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Reconciled 
+			 - Manual</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">20</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Pending - Waiting Confirmation</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">21</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Pending - Confirmed</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">22</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Pending - Automatic</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">23</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Pending - Manual</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">30</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Journal - Waiting Confirmation</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">31</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Journal - Confirmed</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">32</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Journal - Automatic</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">33</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Journal - Manual</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">34</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Script 
+			 to Journal - Failed and Posted to Pending</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">80</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>No 
+			 rule applicable ~ Pending - Waiting Confirmation</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">81</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>No 
+			 rule applicable ~ Pending - Confirmed</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">82</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>No 
+			 rule applicable ~ Pending - Automatic</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">83</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>No 
+			 rule applicable ~ Pending - Manual</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">98</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Ignored 
+			 - on account list</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp6">99</p></td>
+			<td class="t2Col" style="border-left-width: 1px; border-left-style: solid; 
+				 border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Ignored 
+			 - no processing done</p></td>
+		</tr>
+	</table>
+ </div>
+<p>&#160;</p>
+<p><span class="hcp4">Tips</span>:</p>
+<p>- Use Ctrl+C to copy the Account Number to the clipboard;</p>
+<p>- Double-click a statement line to view its details.</p>
+<p>&#160;</p>
+<p class="FldExplain">Account Reconciliation pane</p>
+<p>The Account Reconciliation pane is placed to the right of the Statement 
+ pane and shows the results of the rules processing.</p>
+<p>&#160;</p>
+<p class="FldExplain">Select</p>
+<p>Use this to customise the current view of the grid. Alternatively, right-mouse 
+ click on the grid and select Customise from the Context Menu.</p>
+<p>&#160;</p>
+<p class="FldExplain">Select All</p>
+<p>Click to select all the statement lines. Alternatively, use Ctrl+A or 
+ press the F5 key.</p>
+<p>&#160;</p>
+<p class="FldExplain">Process</p>
+<p>Click to process all selected lines or press the F6 key. If you exit 
+ the Statement Import &amp; Processing screen at this point, the processed 
+ items will be reloaded the next time you use the feature.</p>
+<p>&#160;</p>
+<p class="FldExplain">Confirm</p>
+<p>Click to confirm the process when required, or press the F7 key. This 
+ will be noted in the Status column of the Statement pane (see above).</p>
+<p>&#160;</p>
+<p class="FldExplain">Action</p>
+<p>Click this or press F8 to open a separate menu with the following options:</p>
+<ul class="hcp1">
+	<li><p>Undo - Select this option to undo the last process for the selected 
+	 statement lines. The status of the lines will revert to Not processed.</p></li>
+	<li><p>Ignore - Select this to ignore selected statement lines. Ideally, 
+	 you should do this before you process the lines. You may still ignore 
+	 lines post-processing: this action can be done on all status types 
+	 except Reconciled - Automatic. See also Ignore (undo) Option below.</p></li>
+	<li><p>Disregard for Account Receivable (AR) Settlement - Select this 
+	 to ignore the selected AR - Settlement statement lines. This action 
+	 can be done on AR - Settlement status type 3, 40, 44, 45.</p></li>
+	<li><p>Process - Select this to process the selected statement lines. 
+	 This is the same as clicking the Process button (see Process above).</p></li>
+	<li><p>Confirm - Select this to confirm the process for selected statement 
+	 lines. This is the same as clicking the Confirm button (see Confirm 
+	 above).</p></li>
+	<li><p>Commit Journals - Select this to commit the process for the 
+	 selected statement lines. This is the same as clicking the Commit 
+	 Journals button (see Commit Journals below). This action is final, 
+	 and cannot be undone.</p></li>
+	<li><p>Assign Rule - Select a rule from the list to apply to the selected 
+	 statement lines.</p></li>
+	<li><p>Reconcile - Select this to reconcile the selected line against 
+	 a specific journal number, which is entered in the Journal Number 
+	 field.</p></li>
+	<li><p>Ignore (undo) option - Tick the Add to (Remove from) the 'Ignore 
+	 account codes' list check box if you want to add or remove the selected 
+	 account number from the Ignore list in the Define Rules screen. This 
+	 option must be used with the Ignore option to add an account number 
+	 to the Ignore list; and used with the Undo option to remove an account 
+	 number from the Ignore list.</p></li>
+	<li><p>Perform - Click this button to perform the selected action.</p></li>
+	<li><p>Cancel (Esc) - Click this button or the Esc key to close the 
+	 menu.</p></li>
+</ul>
+<p class="FldExplain">Commit Journals</p>
+<p>Click this to commit the application of the rules. This action is final 
+ and cannot be undone.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Statement_Import_Process_Diagram.htm">Statement Import&#160;&amp; 
+	 Processing - Process Diagram</a></p></li>
+	<li><p><a href="Statement_Import_Defining_Rules.htm">Statement Import&#160;&amp; 
+	 Processing - Defining Rules</a></p></li>
+	<li><p><a href="statement_import_and_processing.htm">Statement Import 
+	 &amp; Processing</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Statement Import - Process & Reconcile Folder</p>
+ <p class="hcp7">&#160;</p>
+ <p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp7">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP4141111001');
+	TextPopupInit('a111','POPUP41411110011');
+	TextPopupInit('a112','POPUP41411110012');
+	TextPopupInit('a1','POPUP414111100');
+//]]></script>
+</body>
+</html>

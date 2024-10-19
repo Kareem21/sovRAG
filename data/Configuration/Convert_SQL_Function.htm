@@ -1,0 +1,189 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Convert SQL Function">
+<meta http-equiv="Content-Language" content="en-UK">
+
+<meta name="robots" content="NOODP">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Convert SQL Function</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Convert SQL function</h1>
+<p>The convert SQL function streamlines SQL statements for both MS Access and MS SQL and is performed only when you refresh a form using Refresh/Options function. Use this to refresh your forms when you upgrade from MS Access to MS SQL.</p>
+<p>The convert feature is not exhaustive, and will only upgrade the following statements:</p>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="800">
+<col style="width: 50%;">
+<col style="width: 50%;">
+<tr class="t1st">
+<td>
+<p class="hcp1">Before</p>
+</td>
+<td>
+<p class="hcp1">After</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">Keywords such as:</p>
+<p class="hcp1">OPEN, CURRENCY, CURRENT, etc.</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">Adds brackets:</p>
+<p class="hcp1">[OPEN], [CURRENCY], [CURRENT]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">UCASE</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">UPPER</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">LCASE</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">LOWER</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">MID</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">SUBSTRING</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">DATE()</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">CONVERT(CHAR(10),GETDATE(),110)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">Now</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">GETDATE</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">CDATE</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">CONVERT(DATETIME,</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">CSTR(</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">CONVERT(nVarChar,</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">STR(</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">CONVERT(VarChar(10),</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">MOD</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">%</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">ISNULL</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">IS NULL</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">STRING$</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">REPLICATE</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">IIF</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">CASE WHEN</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp1">"</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">'</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp1">&amp;</p>
+</td>
+<td class="t2Col">
+<p class="hcp1">+</p>
+</td>
+</tr>
+</table>
+<p>The Convert SQL function will NOT perform the following:</p>
+<ul style="list-style: disc;">
+<li class="p">
+<p>Convert bit values like: "First Officer" to "First Officer&lt;&gt;0", "FirstOfficer=True" to "FirstOfficer&lt;&gt;0".</p>
+</li>
+<li class="p">
+<p>Convert the usage of Format functions in MS Access.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Convert SQL Function</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

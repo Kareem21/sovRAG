@@ -1,0 +1,373 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Nominal Accounts</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+li.hcp3 { list-style:none;
+display:inline; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+span.hcp5 { font-weight:normal; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Nominal Accounts</h1>
+<p>The nominal accounts that are linked to a particular Chart of Accounts 
+ (CoA) template are created here. Each CoA template contains a number of 
+ nominal accounts, which must be linked to a Sub group.</p>
+<p>There are three types of nominal accounts: posting accounts, control 
+ accounts and system control accounts. The posting and control accounts 
+ can be further divided into balance sheet and profit/loss accounts. Note 
+ that the system prevents the linking of a balance sheet account to a profit/loss 
+ account.</p>
+<p>Each control account contains certain properties, which must be specified 
+ when creating the template. There are mandatory (such as exchange gains 
+ and loses) and optional properties. The advantage of specifying these 
+ properties is that the system will automate certain accounting functions 
+ such as the creation of valuation/ revaluation journals.</p>
+<p>&#160;</p>
+<p class="FldExplain">Chart of Account</p>
+<p>Select the Chart of Account template you want to work on.</p>
+<p>&#160;</p>
+<p class="FldExplain">Account list</p>
+<p>This shows all the accounts for the selected CoA template.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<p>&#160;</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">add</a> new 
+	 account.</p></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit an existing account.</p></li>
+	<li><p><span class="hcp2">Properties</span> - Click this 
+	 to edit the <a class="dropspot" href="javascript:TextPopup(this)" id="a12">properties</a>&#160;of 
+	 the selected account. This button is enabled for control accounts 
+	 only. Exchange gains/losses, capital gains/loses, income/expenses 
+	 and unrealised value /exchange revaluations should be linked to posting 
+	 accounts.</p>
+	<div class="droptext" id="POPUP3962974972" style="display: none;">
+		<p>Specify the accounts and options for the listed items:</p>
+		<ul class="hcp1">
+			<li><p>Realised Exchange Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Exchange Revaluation - Select the applicable <a class="dropspot" href="javascript:TextPopup(this)" id="a22">method</a>.</p>
+				<div class="droptext" id="POPUP3963028022" style="display: none;">
+					<ul class="hcp1">
+						<li><p>Realise all Gains/Losses [0] - Selecting 
+						 this method will realise all exchange gains and 
+						 losses. By default, this option is displayed.</p></li>
+						<li><p>Do not Revalue [1] - Selecting this method 
+						 will not post any valuation.</p></li>
+						<li><p>Realise only losses [2] - Selecting this 
+						 method will create a valuation journal if there 
+						 is loss in the exchange revaluation.</p></li>
+						<li><p>Realise only Gains [3] - Selecting this 
+						 method will create valuation journal if there 
+						 is gain in the exchange revaluation.</p></li>
+					</ul>
+					<p><span class="hcp4">Note</span>: 
+					 The selected method will be displayed in the Exchange 
+					 Revaluation screen.</p>
+    </div></li>
+			</ul></li>
+			<li><p>Realised Value Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+			</ul></li>
+			<li><p>Sub-Ledger related Income or Expenses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Income - Select the applicable posting account.</p></li>
+				<li><p>Expenses - Select the applicable posting account.</p></li>
+			</ul></li>
+			<li><p>Unrealised Value Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Valuation Journal - Select the <a class="dropspot" href="javascript:TextPopup(this)" id="a32">method</a> 
+				 for the valuation journal.</p>
+				<div class="droptext" id="POPUP3963122162" style="display: none;">
+					<ul class="hcp1">
+						<li><p>Detailed on Sub-ledger [0] - Selecting this 
+						 method will create a valuation journal based on 
+						 the sub-ledger code and currency.</p></li>
+						<li><p>No Valuation Journal [1] - Selecting this 
+						 method will not create any valuation journal.</p></li>
+						<li><p>Summary Journal using Off-set Account [2] 
+						 - Selecting this method will create a summary 
+						 of journal using an off-set account. The amount 
+						 shown in the off-set account is based on the total 
+						 for the specified date. The selected method will 
+						 be displayed in the Account File Valuation screen 
+						 and Sub-ledger Valuation screen.<br>
+						Example:<br>
+						If there are two different sub-ledgers using the 
+						 same nominal account, only 1 journal line will 
+						 be created using the off-set account. The amount 
+						 is the sum of both sub-ledgers.</p></li>
+						<li><p>Detailed Journal using Off-set Account [3] 
+						 - Select this method will create a detailed journal 
+						 using an off-set account. Each sub-ledger will 
+						 be created in the same journal but in different 
+						 lines. The nominal account will be the off-set 
+						 account while the currency is based on the Account 
+						 File base currency. The selected method will be 
+						 displayed in the Account File Valuation screen 
+						 and Sub-ledger Valuation screen.</p></li>
+					</ul>
+					<p>&#160;</p>
+    </div></li>
+				<li><p>Off-set Account - This is mandatory if the selected 
+				 method is method 2 or 3.</p></li>
+			</ul></li>
+			<li><p>Unrealised Exchange Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Valuation Journal - Select the method for the valuation 
+				 journal. The available methods are the same as Unrealised 
+				 Value Gains/Losses. The selected method will be displayed 
+				 in the Account File Valuation screen and Exchange Revaluation 
+				 screen. &#160;</p></li>
+				<li><p>Off-set Account - This is mandatory if the selected 
+				 method is method 2 or 3.</p></li>
+			</ul></li>
+		</ul>
+		<p>&#160;</p>
+   </div></li>
+	<li><p style="font-weight: bold;">Global Properties - <span class="hcp5">Click 
+	 this to edit the </span><a class="dropspot" href="javascript:TextPopup(this)" id="a11" style="font-weight: normal;">properties</a><span class="hcp5">&#160;of tall control accounts. This 
+	 button is enabled for control accounts only. Exchange gains/losses, 
+	 capital gains/loses, income/expenses and unrealised value /exchange 
+	 revaluations should be linked to posting accounts.</span></p>
+	<div class="droptext" id="POPUP3962974971" style="display: none;">
+		<p>Specify the accounts and options for the listed items:</p>
+		<ul class="hcp1">
+			<li><p>Realised Exchange Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Exchange Revaluation - Select the applicable <a class="dropspot" href="javascript:TextPopup(this)" id="a21">method</a>.</p>
+				<div class="droptext" id="POPUP3963028021" style="display: none;">
+					<ul class="hcp1">
+						<li><p>Realise all Gains/Losses [0] - Selecting 
+						 this method will realise all exchange gains and 
+						 losses. By default, this option is displayed.</p></li>
+						<li><p>Do not Revalue [1] - Selecting this method 
+						 will not post any valuation.</p></li>
+						<li><p>Realise only losses [2] - Selecting this 
+						 method will create a valuation journal if there 
+						 is loss in the exchange revaluation.</p></li>
+						<li><p>Realise only Gains [3] - Selecting this 
+						 method will create valuation journal if there 
+						 is gain in the exchange revaluation.</p></li>
+					</ul>
+					<p><span class="hcp4">Note</span>: 
+					 The selected method will be displayed in the Exchange 
+					 Revaluation screen.</p>
+    </div></li>
+			</ul></li>
+			<li><p>Realised Value Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+			</ul></li>
+			<li><p>Sub-Ledger related Income or Expenses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Income - Select the applicable posting account.</p></li>
+				<li><p>Expenses - Select the applicable posting account.</p></li>
+			</ul></li>
+			<li><p>Unrealised Value Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Valuation Journal - Select the <a class="dropspot" href="javascript:TextPopup(this)" id="a31">method</a> 
+				 for the valuation journal.</p>
+				<div class="droptext" id="POPUP3963122161" style="display: none;">
+					<ul class="hcp1">
+						<li><p>Detailed on Sub-ledger [0] - Selecting this 
+						 method will create a valuation journal based on 
+						 the sub-ledger code and currency.</p></li>
+						<li><p>No Valuation Journal [1] - Selecting this 
+						 method will not create any valuation journal.</p></li>
+						<li><p>Summary Journal using Off-set Account [2] 
+						 - Selecting this method will create a summary 
+						 of journal using an off-set account. The amount 
+						 shown in the off-set account is based on the total 
+						 for the specified date. The selected method will 
+						 be displayed in the Account File Valuation screen 
+						 and Sub-ledger Valuation screen.<br>
+						Example:<br>
+						If there are two different sub-ledgers using the 
+						 same nominal account, only 1 journal line will 
+						 be created using the off-set account. The amount 
+						 is the sum of both sub-ledgers.</p></li>
+						<li><p>Detailed Journal using Off-set Account [3] 
+						 - Select this method will create a detailed journal 
+						 using an off-set account. Each sub-ledger will 
+						 be created in the same journal but in different 
+						 lines. The nominal account will be the off-set 
+						 account while the currency is based on the Account 
+						 File base currency. The selected method will be 
+						 displayed in the Account File Valuation screen 
+						 and Sub-ledger Valuation screen.</p></li>
+					</ul>
+					<p>&#160;</p>
+    </div></li>
+				<li><p>Off-set Account - This is mandatory if the selected 
+				 method is method 2 or 3.</p></li>
+			</ul></li>
+			<li><p>Unrealised Exchange Gains/Losses</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Account - Gains - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Account - Losses - Select the applicable posting 
+				 account.</p></li>
+				<li><p>Valuation Journal - Select the method for the valuation 
+				 journal. The available methods are the same as Unrealised 
+				 Value Gains/Losses. The selected method will be displayed 
+				 in the Account File Valuation screen and Exchange Revaluation 
+				 screen. &#160;</p></li>
+				<li><p>Off-set Account - This is mandatory if the selected 
+				 method is method 2 or 3.</p></li>
+			</ul></li>
+		</ul>
+		<p>&#160;</p>
+   </div></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected account.</p></li>
+	<li style="font-weight: bold;"><p>Select All - <span class="hcp5">Click 
+	 this to select all the accounts</span></p></li>
+	<li><p><span class="hcp2">Deselect All -</span> Click 
+	 this to deselect all the accounts</p></li>
+	<li><p><span class="hcp2">Apply Globally</span> - Click 
+	 this to <a class="dropspot" href="javascript:TextPopup(this)" id="a41">apply 
+	 change or a new account</a> to all Account Files that 
+	 are linked to the selected CoA template.</p>
+	<div class="droptext" id="POPUP4033564901" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Tick the desired options:</p>
+			<ul class="hcp1">
+				<li><p>Add and/or activate account - Tick this to add or 
+				 activate the account.</p></li>
+				<li><p>Update Account Name - Tick this to update the account 
+				 name.</p></li>
+				<li><p>Update Restricted Account flag (Posting Account 
+				 only) - Tick this to allow global update on restricted 
+				 accounts.</p></li>
+				<li><p>Update Settlement Method - Tick this to update the 
+				 Settlement Method. This is available only if the account 
+				 is a control account (account type is denoted by letters 
+				 of the alphabet).</p></li>
+				<li class="hcp3"><ul class="hcp1">
+					<li><p>Update Outstanding Amount/Delete Settlement 
+					 Linking - Tick this to also perform the following 
+					 if:</p></li>
+					<li class="hcp3"><ul class="hcp1">
+						<li><p>Settlement Method is changed from 'No Settlement 
+						 Required [0]' to 'Automatically (FIFO Settlement) 
+						 [8]' or 'Manual Settlement [9]' - The outstanding 
+						 amount will be set to be the same as 'Transaction 
+						 amount'.</p></li>
+						<li><p>Settlement Method is changed from either 
+						 'Automatically (FIFO Settlement) [8]' or 'Manual 
+						 Settlement [9]' to 'No Settlement Required [0]' 
+						 or 'Through Reconciliation Screen [1]' - The existing 
+						 link will be deleted.</p></li>
+					</ul></li>
+				</ul></li>
+				<li><p>Update Exchange Revaluation to linked sub-ledgers 
+				 - This option only applies to control accounts. When this 
+				 option is ticked, the program will update all sub-ledgers’ 
+				 exchange revaluation using the selected Chart of Account 
+				 with the exchange revaluation of the selected nominal 
+				 accounts.</p></li>
+				<li><p>Deactivate account - Tick this to deactivate the 
+				 account.</p></li>
+				<li class="hcp3"><ul class="hcp1">
+					<li><p>Deactivate Subaccount if any (Account Files) 
+					 - This is only available if the selected nominal account 
+					 type is 1, 2 or 4.</p></li>
+				</ul></li>
+				<li><p>Also apply to INACTIVE Account Files - Tick this 
+				 if you want the change(s) to apply to Account File that 
+				 are not active.</p></li>
+			</ul></li>
+			<li><p>Click Apply.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>: 
+		 If the option 'Update Outstanding Amount/Delete Settlement Linking' 
+		 is not ticked when you choose to update the Settlement Method, 
+		 a warning will be shown.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Chart_of_Accounts.htm">Chart of Accounts</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="../Shared/Overview.htm">Home</a> &gt; <a href="Draft_Journals.htm">Accounting</a> &gt; <a href="Chart_of_Accounts_Setup.htm">Chart of Accounts</a> &gt; Nominal Accounts</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a12','POPUP3962974972');
+	TextPopupInit('a22','POPUP3963028022');
+	TextPopupInit('a32','POPUP3963122162');
+	TextPopupInit('a11','POPUP3962974971');
+	TextPopupInit('a21','POPUP3963028021');
+	TextPopupInit('a31','POPUP3963122161');
+	TextPopupInit('a41','POPUP4033564901');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Approval Cards - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { color:#300063; }
+ul.hcp3 { list-style:disc; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Approval Cards - Tags</h1>
+<p>For approval cards, tags are available to define the approval list for 
+ the approval card.</p>
+<p>&#160;</p>
+<p class="hcp1">Specify approvers 
+ based on responsibilities</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 18.425%;">
+	<col style="width: 48.241%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td><p class="hcp2">Tag</p></td>
+		<td><p class="hcp2">Explanation</p></td>
+		<td><p class="hcp2">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM1.&lt;FileType&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval is required 
+		 from the user appointed as the file administrator. Replace &lt;FileType&gt; 
+		 with one of the following:</p>
+		<ul class="hcp3">
+			<li><p>A - Account File</p></li>
+			<li><p>B - Billing File</p></li>
+			<li><p>E - Entity File</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM1.A</p>
+		<p>means the user appointed as the Administrator of the Account 
+		 File.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM2.&lt;FileType&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval is required 
+		 from the user appointed as the file manager. Replace &lt;FileType&gt; 
+		 with one of the following:</p>
+		<ul class="hcp3">
+			<li><p>A - Account File</p></li>
+			<li><p>B - Billing File</p></li>
+			<li><p>E - Entity File</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM2.A</p>
+		<p>means the user appointed as the Manager of the Account File.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM3.&lt;FileType&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval is required 
+		 from the user appointed as the file controller. Replace &lt;FileType&gt; 
+		 with one of the following:</p>
+		<ul class="hcp3">
+			<li><p>A - Account File</p></li>
+			<li><p>B - Billing File</p></li>
+			<li><p>E - Entity File</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@ADM3.A</p>
+		<p>means the user appointed as the Controller of the Account File.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@RELC.&lt;RelationTypeCode&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 user appointed as the specified User Relation. Replace &lt;RelationTypeCode&gt; 
+		 with actual code for the User Relation.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@RELC.LAW</p>
+		<p>means the user appointed as the 'LAW' relation.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@USGR.&lt;UserGroupCode&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 any user belonging to the specified User Group. Replace &lt;UserGroupCode&gt; 
+		 with actual code for the User Group.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@USGR.MNGR</p>
+		<p>means any user belonging to the User Group 'MNGR'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@ADGR.&lt;AdminGroupCode&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 any user belonging to the specified Administrator Group. Replace 
+		 &lt;AdminGroupCode&gt; with actual code for the Administrator 
+		 Group.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@ADGR.GROUP1</p>
+		<p>means any user belonging to the Administrator Group 'GROUP1'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@ORGU.&lt;OrgUnitCode&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 any user belonging to the specified Organisational Unit. Replace 
+		 &lt;OrgUnitCode&gt; with actual code for the Organisational Unit.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@ORGU.ORGUNIT1</p>
+		<p>means any user belonging to the Organisational Unit 'ORGUNIT1'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@AGUG.&lt;UserAdminGroup&gt;+&lt;UserGroup&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 any user belonging to the specified User Group has the specified 
+		 Administrator Group as default Administrator Group. Replace &lt;UserAdminGroup&gt; 
+		 with actual code for the Administrator Group and &lt;UserGroup&gt; 
+		 with actual code for the User Group.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@AGUG.GROUP1+MNGR</p>
+		<p>means any user belonging to the User Group 'MNGR' and has the 
+		 Administrator Group 'GROUP1' as default Administrator Group.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@AAUG.&lt;AssignedAdminGroup&gt;+&lt;UserGroup&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 any user belonging to the specified User Group and has the specified 
+		 Administrator Group as assigned Administrator Group. Replace &lt;AssignedAdminGroup&gt; 
+		 with actual code for the Administrator Group and &lt;UserGroup&gt; 
+		 with actual code for the User Group.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>@AAUG.GROUP1+MNGR</p>
+		<p>means any user belonging to the User Group 'MNGR' and has the 
+		 Administrator Group 'GROUP1' as assigned Administrator Group.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@USER.MGR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 the user appointed as the Manager in Configuration &gt; Users 
+		 &amp; Security &gt; Users.</p></td>
+		<td class="t1Col" style="vertical-align: top;">&#160;</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@MASF.KYC_Officer</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 the user appointed as the CDD Officer in General &gt; Master File 
+		 &gt; [Master File] &gt; Compliance &gt; CDD screen.</p></td>
+		<td class="t1Col" style="vertical-align: top;">&#160;</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@WH.ADMIN.MGR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 the user appointed as the Manager of the Workflow Header Administrator 
+		 as specified in Configuration &gt; Users &amp; Security &gt; Users. 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;">&#160;</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@WS.ADMIN.MGR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 the user appointed as the Manager of the Workflow Step Administrator 
+		 as specified in Configuration &gt; Users &amp; Security &gt; Users. 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;">&#160;</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>@WK.&lt;Key&gt;.MGR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Approval from 
+		 the user appointed as the Manager of the selected system user 
+		 as specified in Configuration &gt; Users &amp; Security &gt; Users.</p>
+		<p>&lt;Key&gt; refers to the checklist item's key.</p></td>
+		<td class="t1Col" style="vertical-align: top;">&#160;</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="hcp1">Define approver 
+ group</p>
+<p>It is also possible to group the approvers and specify the number of 
+ approvers required per group or the order of approval.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 18.425%;">
+	<col style="width: 29.035%;">
+	<col style="width: 41.811%;">
+	<tr class="t1st">
+		<td><p class="hcp2">Tag</p></td>
+		<td><p class="hcp2">Explanation</p></td>
+		<td><p class="hcp2">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.&lt;GroupName&gt;:&lt;GroupMembers&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to define 
+		 the group of approvers and members within the group. You can have 
+		 more than one group specified.</p>
+		<p>When specifying the &lt;GroupMembers&gt;, this can be: </p>
+		<ul class="hcp3">
+			<li><p>specific user codes </p></li>
+			<li><p>tags to define users such as&#160;@USGR.&lt;UserGroupCode</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>:When 
+		 using tags to define to &lt;GroupMembers&gt;, ensure that you 
+		 leave two spaces after the colon e.g. [GROUP.Managers: &#160;@USGR.MGR]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.Managers: 
+		 &#160;@USGR.MGR]</p>
+		<p>[GROUP.Directors:sm</p>
+		<p>anne]</p>
+		<p>means there are two groups - Managers and Directors. For Managers, 
+		 the members are users in the User Group 'MGR'. For Directors, 
+		 the members are the users 'sm' and 'anne'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.Require:</p>
+		<p>&lt;GroupName1&gt;:&lt;Number of approval&gt;</p>
+		<p>&lt;GroupName2&gt;:&lt;Number of approval&gt;</p>
+		<p>]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the number of approvals required from a group.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note:</span> 
+		 You cannot use this tag with the tag below.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.Require:</p>
+		<p>Managers:1</p>
+		<p>Directors:0</p>
+		<p>]</p>
+		<p>means one approval is required from the Managers group. Where 
+		 the quantity is 0, this gives flexibility to the approval card 
+		 in which members of the Directors can be counted to fulfil the 
+		 card's minimum required approvers i.e. if 3 approvals are required, 
+		 one needs to be from Managers group while the other two can be 
+		 from Directors group.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.Order:</p>
+		<p>&lt;GroupName1&gt;:&lt;Number of approval&gt;</p>
+		<p>&lt;GroupName2&gt;:&lt;Number of approval&gt;</p>
+		<p>]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the number of approvals required from a group and which group 
+		 should approve first.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note:</span> 
+		 You cannot use this tag with the tag above.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[GROUP.Order:</p>
+		<p>Managers:2</p>
+		<p>Directors:1</p>
+		<p>]</p>
+		<p>means that two managers must approve before a director will 
+		 be able to complete the approval.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 If the number required if not specified, the default value is 
+		 one.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Approval_Cards.htm">Approval Cards</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Approval Cards - Tags</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

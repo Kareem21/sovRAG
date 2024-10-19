@@ -1,0 +1,282 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Viewpoint Name Check Services</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+li.hcp3 { list-style:disc;
+margin-left:-20px; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Viewpoint Name Check Services</h1>
+<p>Viewpoint Name Check Services allows for information in Viewpoint to 
+ be extracted and submitted to name check service providers such as World-Check, 
+ RDC, CDDS, Accuity and ComplyAdvantage. This means that if you have an 
+ account with any of the service provider, you can set up Viewpoint Name 
+ Check Services so that the following can take place using Viewpoint Task 
+ Scheduler and Notification Agent:</p>
+<ul class="hcp1">
+	<li><p>Information in Viewpoint is extracted as an XML file</p></li>
+	<li><p>The XML file is uploaded to the name check service provider 
+	 for comparison</p></li>
+	<li><p>Results from the comparison is sent back to Viewpoint to be 
+	 viewed in the Changes screen</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Requirements</h2>
+<p>Viewpoint Name Check Services requires the following to be installed 
+ and set up:</p>
+<ul class="hcp1">
+	<li><p>Viewpoint Application Server </p></li>
+	<li><p>Viewpoint Task Scheduler and Notification Agent (TSNA)</p></li>
+	<li><p>Viewpoint Name Check Services</p></li>
+</ul>
+<p>Additionally, the template for the XML file must also be imported. Both 
+ the Viewpoint Name Check Services and the template can be downloaded from 
+ the Support Portal. For Viewpoint Application Server and Viewpoint Task 
+ Scheduler and Notification Agent, these are to be set up using ViewPointDbMgt.exe.</p>
+<p>&#160;</p>
+<h3>Downloading and Installing the Viewpoint Services .zip File</h3>
+<ol class="hcp2">
+	<li><p>Download the Viewpoint Name Check Service.zip file from Viewpoint’s 
+	 Support Portal.</p></li>
+	<li><p>Unzip it to an accessible location folder.</p></li>
+	<li><p>Right-click and run the ViewPointServicesInstaller.exe as administrator.</p></li>
+	<li><p>In the Viewpoint Services screen, enter the required <a class="dropspot" href="javascript:TextPopup(this)" id="a1">Service 
+	 details</a>.</p>
+	<div class="droptext" id="POPUP644127531" style="display: none;">
+		<ul>
+			<li class="hcp3"><p>Service 
+			 Name – Enter the Viewpoint Services name</p></li>
+			<li class="hcp3"><p>Program 
+			 Folder – Enter or browse to the folder where the service is 
+			 located</p></li>
+			<li class="hcp3"><p>Service 
+			 Address – Enter the same Service Address as the Application 
+			 Server</p></li>
+			<li class="hcp3"><p>Service 
+			 Port – Enter a Service Port number</p></li>
+		</ul>
+		<p><span style="font-weight: bold; font-style: italic;">Note</span>: 
+		 Both the Service Address and the Service Port will be used for 
+		 the setting up of the Name Check Service jobs.</p>
+ </div></li>
+	<li><p>Click Install.</p></li>
+	<li><p>When prompted, click OK.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Configuring the Viewpoint Services</h3>
+<ol class="hcp2">
+	<li><p>Once the service has been installed, enter the Settings details 
+	 which will be required when setting up the Name Check Service jobs.</p>
+	<ul class="hcp1">
+		<li><p>Username – Enter a username for Viewpoint Services.</p></li>
+		<li><p>Password – Enter a password for Viewpoint Services.</p></li>
+	</ul></li>
+	<li><p>Select the service provider tab that you would like to integrate 
+	 with. Enter the necessary details based on the service provider.</p></li>
+	<li><p>Click Save.</p></li>
+	<li><p>Go to Control Panel &gt; System and Security &gt; Administrative 
+	 Tools &gt; Services to check the status of the Viewpoint Services 
+	 application. If the Status does not show ‘Running’, right-click on 
+	 the service and click Start.</p></li>
+</ol>
+<h3>Upgrading Viewpoint Services</h3>
+<p>If you would like to upgrade Viewpoint Services, this is done by first 
+ stopping the service through Control Panel &gt; System and Security &gt; 
+ Administrative Tools &gt; Services. Once the service has been stopped, 
+ proceed with the following:</p>
+<ol class="hcp2">
+	<li><p>Uninstall the service by right-clicking and running the ViewPointServicesInstaller.exe 
+	 as administrator.</p></li>
+	<li><p>Click Uninstall.</p></li>
+	<li><p>When complete, click OK and exit Viewpoint Services.</p></li>
+	<li><p>Download the newer version of Viewpoint Name Check Service.zip 
+	 file.</p></li>
+	<li><p>Extract the contents to the existing folder for Name Check Services.</p></li>
+	<li><p>Right-click and run the ViewPointServicesInstaller.exe as administrator.</p></li>
+	<li><p>Click Install.</p></li>
+	<li><p>When complete, click OK.</p></li>
+	<li><p>Re-enter the password for the username in Settings.</p></li>
+	<li><p>Select the service provider tab and re-enter the details.</p></li>
+	<li><p>Click Save and exit Viewpoint Services.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Importing Name Check XML [NCXML] Template</h3>
+<ol class="hcp2">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Document Libraries 
+	 &gt; Word Reports - Report Folder 'Master FIle [F12]'.</p></li>
+	<li><p>Click Import and select the folder containing the NCXML template.</p></li>
+	<li><p>Click Import - Load List.</p></li>
+	<li><p>Click Import.</p></li>
+	<li><p>Once completed, click Close.</p></li>
+</ol>
+<p>&#160;</p>
+<h4>Specifying GUID and Data Set ID</h4>
+<p>If the service provider is Accuity, then you need to specify the DatasetGuid 
+ and DatasetId in the Key Information part of the template.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Document Libraries 
+	 &gt; Word Reports - Report Folder 'Master FIle [F12]'.</p></li>
+	<li><p>Select the XML - Name Check Service template.</p></li>
+	<li><p>Click Edit.</p></li>
+	<li><p>Double-click within Key Information and for the [/MFDetails=/] 
+	 query, specify the relevant Accuity’s GUID as DatasetGuid and DataSet 
+	 ID as DatasetID.</p></li>
+	<li><p>Click OK.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Click Refresh.</p></li>
+</ol>
+<p>If you are using multiple dataset from Accuity, then the [/MFDetails=/] 
+ query is to be amended to contain all the relevant datasets. &#160;For 
+ example:</p>
+<p>[/MFDetails=SELECT RM.RefCode, RM.RefType, CASE WHEN RM.RefType='I' 
+ THEN 'P' ELSE 'O' END AS InquiryType, CASE WHEN (C.GivenNames IS NULL 
+ OR C.GivenNames='') THEN RM.Initials ELSE C.GivenNames END AS GivenNames, 
+ '3663b370-ca7d-4ceb-9851-3669fed8d61b' AS 'DatasetGuid', '1092' AS 'DatasetId' 
+ FROM RefMaster RM LEFT JOIN Compliance C ON C.AddrCode=RM.RefCode WHERE 
+ RefCode IN ((-SC.ListOfRefCode-))</p>
+<p>UNION</p>
+<p>SELECT RM.RefCode, RM.RefType, CASE WHEN RM.RefType='I' THEN 'P' ELSE 
+ 'O' END AS InquiryType, CASE WHEN (C.GivenNames IS NULL OR C.GivenNames='') 
+ THEN RM.Initials ELSE C.GivenNames END AS GivenNames, '3b62af7d-6f88-4a09-a487-7d3f388e2dff' 
+ AS 'DatasetGuid', '1093' AS 'DatasetId' FROM RefMaster RM LEFT JOIN Compliance 
+ C ON C.AddrCode=RM.RefCode WHERE RefCode IN ((-SC.ListOfRefCode-))/]</p>
+<p>&#160;</p>
+<h3>Setting Up Name Check Service Jobs</h3>
+<p>In Viewpoint Task Scheduler and Notification Agent, there are two new 
+ job types introduced for Viewpoint Name Check Services and they are:</p>
+<ul class="hcp1">
+	<li><p>Name Check Service - Submit Name [NCCN] - This will create the 
+	 XML report based on the criteria defined for the data for submission 
+	 via Viewpoint Services for name screening. This job is applicable 
+	 for submission of data to all supported service providers.</p></li>
+	<li><p>Name Check Service – Check Status/Change Status [NCCS] - This 
+	 checks the status for each batch of name submitted to the service 
+	 provider. This will retrieve the results from service provider and 
+	 update the event string for further processing. This job is only applicable 
+	 for data retrieval from RDC and World-Check. It also allows the update 
+	 of status for World-Check data screening.</p></li>
+</ul>
+<p>Each job type needs to be created separately for different service providers. 
+ Once the job type is being setup, the task will run as scheduled in the 
+ job frequency. Refer to <a href="Name_Check_Service.htm">Name Check Service</a> 
+ for information on setting up these job types.</p>
+<p>&#160;</p>
+<h2>Name Check Status Result in Changes Screen</h2>
+<p>To view the Name Check Status result, in Viewpoint - Home, click on 
+ the Changes button in the Ribbon to open the Changes screen where you 
+ will be able to see these Change Codes that relate to Name Check Services:</p>
+<ul class="hcp1">
+	<li><p>Name Check - Submit [MNCS] - this indicates the Master File 
+	 submitted to name check service provider</p></li>
+	<li><p>Name Check - Negative [MNCN] - this is a negative result returned 
+	 by the name check service provider i.e. meaning there is no exact 
+	 match</p></li>
+	<li><p>Name Check - Positive [MNCP] - this is a positive result returned 
+	 by the name check service provider when there is an exact match</p></li>
+	<li><p>Name Check - Pending Client Action [MNCE] - this is returned 
+	 when there is a possible match</p></li>
+</ul>
+<p>If desired, you can link these changes code to allow for further actions 
+ such as generating a document or creating a task. Refer to <a href="../Shared/Changes_Codes.htm">Change 
+ Codes</a> for more information.</p>
+<p>&#160;</p>
+<h3>Mapping of Viewpoint Status with Service Providers</h3>
+<table class="Table1" style="border-collapse: separate;" cellspacing="0px" border="1">
+	<col width="253">
+	<col width="170">
+	<col width="170">
+	<col width="170">
+	<col width="170">
+	<col width="170">
+	<tr class="t1st">
+		<td>Viewpoint Change Code</td>
+		<td>Status in Viewpoint</td>
+		<td>World-Check</td>
+		<td>RDC</td>
+		<td>Accuity</td>
+		<td>ComplyAdvantage</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col">Name Check - Positive [MNCP]</td>
+		<td class="t2Col"><p>Positive</p></td>
+		<td class="t1Col"><p>POSITIVE</p>
+		<p>POSSIBLE</p></td>
+		<td class="t2Col"><p>AL</p>
+		<p>NR</p>
+		<p>DA</p></td>
+		<td class="t1Col"><p>Changed</p>
+		<p>Open</p>
+		<p>Possible Match - Approved</p>
+		<p>Positive Match - Approved</p></td>
+		<td class="t2Col"><p>Potential Match</p>
+		<p>False Positive</p>
+		<p>True Positive</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col">Name Check - Negative [MNCN]
+		<br>&#160;</td>
+		<td class="t2Col"><p>Negative</p></td>
+		<td class="t1Col"><p>FALSE</p>
+		<p>UNSPECIFIED</p></td>
+		<td class="t2Col"><p>NM</p>
+		<p>DN</p>
+		<p>DI</p></td>
+		<td class="t1Col"><p>No Matches</p>
+		<p>Possible Match - Rejected</p>
+		<p>Negative Match - Rejected</p>
+		<p>Passed by Rules</p></td>
+		<td class="t2Col"><p>Unknown</p>
+		<p>No Match</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col">Name Check - Pending Client Action [MNCE]
+		<br>&#160;</td>
+		<td class="t2Col"><p>Pending</p></td>
+		<td class="t1Col"><p>Unresolved Cases</p></td>
+		<td class="t2Col"><p>DR</p></td>
+		<td class="t1Col"><p>-</p></td>
+		<td class="t2Col"><p>-</p></td>
+	</tr>
+</table>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="../Shared/Confidential_Database.htm">General</a> &gt; Viewpoint Name Check Services</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP644127531');
+//]]></script>
+</body>
+</html>

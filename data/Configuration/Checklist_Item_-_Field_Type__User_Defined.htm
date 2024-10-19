@@ -1,0 +1,250 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: User Defined</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+img.hcp3 { border:none; }
+p.hcp4 { font-weight:bold; }
+p.hcp5 { color:#2d005b; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Checklist Item - Field Type: User Defined</h1>
+<p>The User Defined field type allows for filtering of options for users 
+ to select through the definition of the data source. This means that instead 
+ of the whole list, this can be reduced to only those that apply.</p>
+<p>The data source can be from any Viewpoint database table or view so 
+ it is possible to filter lookup table values, user table values, drop-down 
+ values, Master Files, and even relationship types or share classes based 
+ on predefined option or user defined data source.</p>
+<p><span class="hcp1">Note</span>: Using 
+ user defined tags in Viewpoint Engage Workflow could potentially disclose 
+ private data to third party.</p>
+<p>&#160;</p>
+<h3><span lang="EN-GB" xml:lang="EN-GB">User Defined List based on Predefined 
+ Data Source</span></h3>
+<p>These are options that you select as the Data Source and can be:</p>
+<ul class="hcp2">
+	<li><p><span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Master 
+	 File-specific</a></span></p>
+	<div class="droptext" id="POPUP580166661" style="display: none;">
+		<ul class="hcp2">
+			<li><p>#PM.ST - Services for Time</p></li>
+			<li><p>#PM.SD - Services for Disbursements</p></li>
+			<li><p>#PM.MT - Matter Account</p></li>
+			<li><p>#PM.RF – Recurring Fee</p></li>
+			<li><p>#CA.NA - Nominal Account</p></li>
+			<li><p>#CA.SL - Sub-Ledger</p></li>
+			<li><p>#CA.SL.CC - Sub-Ledger based on Currency</p></li>
+		</ul>
+ </div></li>
+	<li><p><span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Non 
+	 Master File-specific (Global)</a></span></p>
+	<div class="droptext" id="POPUP580636536" style="display: none;">
+		<ul class="hcp2">
+			<li><p>#CF.IR - Identity/AEOI Register Types</p></li>
+			<li><p>#CF.IRC - Identity Register Types</p></li>
+			<li><p>#CF.IRR - AEOI Register Types</p></li>
+			<li><p>#CF.RT - Relationship Types</p></li>
+			<li><p>#CF.AM - Account Movement Codes</p></li>
+			<li><p>#CF.OCT - Owners &amp; Controllers Types</p></li>
+			<li><p>#CF.BIP - Binder Index Pages</p></li>
+			
+			
+		</ul>
+ </div></li>
+</ul>
+<p><img src="../recurring%20fee.JPG" alt="" width="573" height="322" border="0" class="hcp3"></p>
+<p>You can also customise the code to further filter by type or code by 
+ specifying the data source like below:</p>
+<p class="hcp4">&lt;OptionCode&gt;:&lt;Type&gt;</p>
+<p>where:</p>
+<ul>
+	<li><p>&lt;OptionCode&gt; refers to the code of the selected option.</p></li>
+	<li><p>&lt;Type&gt; refers to the code of the type.</p></li>
+</ul>
+<table class="Table1" cellspacing="0px" width="94.391%">
+	<col style="width: 22.272%;">
+	<col style="width: 77.728%;">
+	<tr class="t1st" style="height: 26px;">
+		<td><p class="hcp5">Option Code</p></td>
+		<td><p class="hcp5">Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 103px;">
+		<td class="t1Col" style="vertical-align: top;"><p>PM.MT</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Matter Account code.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>PM.MT.G* - the list will show only matter code starts with 'G'.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 172px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CA.NA</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Nominal Account based on the type or code.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>CA.NA:F,2 - the list will show only Nominal Accounts where the 
+		 account type is 'F' or '2'.</p>
+		<p>CA.NA.12*,20* - the list will show only Nominal Accounts where 
+		 the account code starts with '12' or '20'.</p>
+		<p>CA.NA.14*,92*:F,4 - the list will show Nominal Accounts where 
+		 the account code starts with '14' or '92' and the account type 
+		 is 'F' or '4'.</p>
+		<p><span class="hcp1">Note</span>: 
+		 The types are from Nominal Accounts Setup.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 122px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CA.SL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Sub-ledger for the Nominal Account.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>CA.SL.23*,4250 - the list will show only sub-ledgers for Nominal 
+		 Account '4250' or Nominal Account starts with '23'.</p>
+		<p>CA.SL:B,C - the list will show only sub-ledgers where the Nominal 
+		 Account type is 'B' or 'C'.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 103px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CF.IR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Identity Register Types.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>CF.IR:F* - the list will show only Identity Register types start 
+		 with 'F'.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 146px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CF.RT</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Relationship Types. This also supports Relation Types based 
+		 on the tag value configuration in Master File Type Lookup Table 
+		 and Entity Type. </p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>CF.RT:O - the list will show only Relationship types where the 
+		 class is 'O'.</p>
+		<p>CF.RT.D*,S* - the list will show only Relationship types where 
+		 the code starts with 'D' or 'S'.</p>
+		<p>CF.RT.A*,L*:E - the list will show only Relationship types where 
+		 the code starts with 'A' or 'L' and the class is 'E'.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 88px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CF.AM</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to filter 
+		 the Account Movement Codes.</p>
+		<p>Example:<br>
+		CF.AM:B,W - the list will show only Account Movement Codes where 
+		 account type is 'B' or 'W'.</p></td>
+	</tr>
+	
+		
+	
+</table>
+<p>&#160;</p>
+<p>For all Master File-based option codes, filtering is allowed for other 
+ Master Files defined in the Master File field type with the following:</p>
+<p class="hcp4">[FileCode=&lt;KEY&gt;]</p>
+<p><span>w</span>here</p>
+<ul>
+	<li><p>&lt;KEY&gt; refers to the item key of the Master File field 
+	 type where the value will be retrieved for</p></li>
+</ul>
+<p><span class="hcp1">Note</span>: When 
+ the &lt;KEY&gt; is not specified, the result will return an empty list.</p>
+<p>Example:</p>
+<p><img src="../image325.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p>For #PM.ST, #PM.SD and #CA.SL.CC, filtering can be done with the following:</p>
+<p class="hcp4">[SourceInput=&lt;KEY&gt;]</p>
+<p>where</p>
+<ul>
+	<li><p>&lt;KEY&gt; refers to the item key of the field where the value 
+	 will be retrieved based on the condition. This can be lookup table, 
+	 user table and drop-down.</p></li>
+</ul>
+<p>Example:</p>
+<p><img src="../image326.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<h3><span lang="EN-GB" xml:lang="EN-GB">User Defined List based on User-Defined 
+ Data Source</span></h3>
+<p>When setting up the checklist item, do the following:</p>
+<ul class="hcp2">
+	<li><p>Ensure the field type is set to User Defined</p></li>
+	<li><p>In Values/Default column, enter a name for the data source within 
+	 Data Source field</p></li>
+	<li><p>Define the Data Source using tags in the workflow step properties 
+	 - refer to <a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+	 Step - Tags</a></p></li>
+</ul>
+<p>In the workflow step properties, define the data source.</p>
+<p>&#160;</p>
+<p>Examples:</p>
+<p>[/OfficerList=|0:OfficerType|1:OfficerText|2:Officers|3:Status='A' AND 
+ RelClass IN('O','T') AND EntCode='(-MF-)'|/]</p>
+<p>- This data source will display the code and description of active officer 
+ types (relationship types in Relation Class 'O' and 'T') of the Master 
+ File the workflow is for.</p>
+<p>&#160;</p>
+<p>[/Shares=|0:ShareClass|1:ShareClassName|2:Share_Capital|3:NrShare&lt;&gt;0 
+ AND EntCode='(-MF-)'|/]</p>
+<p>- This data source will display the code and share class name of share 
+ classes that have not been cancelled for the Master File of the workflow.</p>
+<p>&#160;</p>
+<p>[/BankList=|0:BankAddrCode|1:Name|2:BankAccounts AS A INNER JOIN RefMaster 
+ AS B ON A.BankAddrCode=B.RefCode|3:DateClosed IS NULL AND EntCode='(-MF-)'|/]</p>
+<p>- This data source will display the code and name of banks where the 
+ Master File the workflow is for has an active bank account.</p>
+<p>&#160;</p>
+<p>[/UtilityOptions=|0:ElCode|1:Name|2:UserTables|3:TabCode='ADVA' AND 
+ LEFT(Name,1)='U'|/]</p>
+<p>- This data source will display only utility options from the ADVA user 
+ table.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: User Defined</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP580166661');
+	TextPopupInit('a3','POPUP580636536');
+//]]></script>
+</body>
+</html>

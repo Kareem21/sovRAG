@@ -1,0 +1,303 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Customisable SQL Driven Task</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+ <meta http-equiv="Content-Language" content="en-UK">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+p.hcp2 { font-weight:normal; }
+b.hcp3 { box-sizing:border-box;
+color:rgba(0, 0, 0, 0.9);
+font-family:"Segoe UI VSS "  , , "Segoe UI"  , -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue"  , Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji"  , "Segoe UI Emoji"  , "Segoe UI Symbol";
+font-variant-ligatures:normal;
+font-variant-caps:normal;
+orphans:2;
+widows:2;
+-webkit-text-stroke-width:0px;
+background-color:#ffffff;
+text-decoration-thickness:initial;
+text-decoration-style:initial;
+text-decoration-color:initial;
+font-weight:normal; }
+ul.hcp4 { list-style:disc; }
+p.hcp5 { text-decoration:underline; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Customisable SQL Driven Task</h1>
+<p>The job type 'Customisable SQL Driven Task [CSDT]' is introduced to 
+ support dynamic SQL for e-mail notification. With this job type, the administrator 
+ can customise e-mail notifications on various jobs such as notification 
+ for users when they received new invoices on Billing File, assigned tasks 
+ that are due soon, etc.</p>
+<p>&#160;</p>
+<h2>Setting-up 'Customisable SQL Driven Task [CSDT]' Task Scheduler Job</h2>
+<p>To set up this job, go to Configuration &gt; Business Parameters &gt; 
+ Task Scheduler &gt; Agent Job Scheduler.</p>
+<ol style="list-style: decimal;">
+	<li><p>Click New. </p></li>
+	<li><p>Select 'Customisable SQL Driven Task [CSDT]' for the Job Type.</p></li>
+	<li><p>Click Next &gt;. <span class="hcp1">Note</span>: 
+	 Alternatively, you can also use the ‘Advanced Settings’ to configure 
+	 the job by using tags. You may refer to <a href="Task_Scheduler_-_Tags.htm">Task 
+	 Scheduler - Tags</a> on tags used in Advanced settings. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a7">here</a> 
+	 for sample tag.</p>
+	<div class="droptext" id="POPUP587977503" style="display: none;">
+		<p class="hcp2">Below tags are required to configure 
+		 if you want to use an E-mail Template and Templates Queries:</p>
+		<p class="hcp2">[FORM_CODE], [FORM_SELECT]</p>
+		<p>&#160;</p>
+		<p>Example tags:</p>
+		<p>[/TASK_SQL=SELECT T.* FROM DocTasks T WHERE DateDue&lt;=GETDATE() 
+		 AND IsDone &lt;&gt; 1/] </p>
+		<p>[/TASK_KEY=TaskNr/] </p>
+		<p>[/TASK_SQL_UCode=AssignedTo/] </p>
+		<p class="hcp2"><b class="hcp3">[/FORM_CODE=DD0001/]</b> 
+		 </p>
+		<p><b class="hcp3">[/FORM_SELECT=TaskNr='(+TaskNr+)'/]</b> 
+		 </p>
+		<p>[/MAIL_TO=seitwai.chong@goviewpoint.com;/] </p>
+		<p>[/MAIL_CC=/] </p>
+		<p>[/MAIL_BCC=/] </p>
+		<p>[/MAIL_REPLYTO=/] </p>
+		<p>[/MAIL_SUBJECT=(+M.DateDue+) /] </p>
+		<p>[/FORM_CONDITION=ConditionalField/] &#160;- Required if set 
+		 advanced email notification </p>
+		<p>[/parameters=TASK_NOOPTIME,TASK_SQL,TASK_KEY,TASK_SQL_UCode,FORM_CODE,FORM_SELECT/] 
+		 </p>
+		<p>[/TASK_SQL.Code=CSDT/] </p>
+		<p>[/notification=R0,R1,R2/] </p>
+		<p>[/R0.Caption=First Notification/] </p>
+		<p>[/R1.Caption=First Reminder/] </p>
+		<p>[/R2.Caption=Second Reminder/] </p>
+		<p>[/wizard.Email=(+U.supervisorMail+),(+U.MailID+)/] </p>
+		<p>[/RETRY_ON_FAILURE=0/] </p>
+ </div></li>
+	<li><p>In Criteria, enter the following <a class="dropspot" href="javascript:TextPopup(this)" id="a1">required 
+	 fields</a>.</p>
+	<div class="droptext" id="POPUP589456081" style="display: none;">
+		<ul class="hcp4">
+			<li><p>No Operation Time (Hour) - this refers to the idle time 
+			 until the next e-mail reminder to be sent out. When the idle 
+			 time ends, an e-mail reminder will be sent out to the recipient 
+			 unless the user has completed the task or no longer have items 
+			 pending. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a8">here</a> 
+			 for example scenario. When the value is not defined, the next 
+			 email notification will be sent in the next TSNA service scheduled 
+			 time set under the ‘Schedule’ tab.</p>
+			<div class="droptext" id="POPUP589047655" style="display: none;">
+				<p class="hcp5">In the 'Schedule' 
+				 tab:</p>
+				<p>Job Frequency is set to 'Daily' and occurs once at 5pm.</p>
+				<p class="hcp5">In the 'Criteria' 
+				 tab:</p>
+				<p>No Operation Time (Hour) is set to 48.</p>
+				<p class="hcp5">Scenario:</p>
+				<p>On 23 April, the task scheduler job runs at 5pm and 
+				 found that ‘User A’ has an item pending. An e-mail is 
+				 sent out immediately.</p>
+				<p>Then on 24 April, the task scheduler job runs again 
+				 at 5pm and found that ‘User A’ still have an item pending. 
+				 However, the system will not send out an e-mail due to 
+				 the setting in 'No Operation Time (Hour)' is set to 48 
+				 hours.</p>
+				<p>On 25 April, when the task scheduler job runs at 5pm, 
+				 ‘User A’ will receive an e-mail if the item is still pending. 
+				 The user will only stop receiving reminder e-mail once 
+				 the pending item is cleared.</p>
+				<p><span class="hcp1">Note</span>: 
+				 If the 'Advanced' e-mail notification is configured, the 
+				 system will send out the First Notification, followed 
+				 by First Reminder, and lastly Second Reminder. It will 
+				 then continue to send out the Second Reminder until the 
+				 user has cleared the pending item.</p>
+   </div></li>
+			<li><p>SQL - this is the query to retrieve the records for 
+			 notification. Please see <a class="dropspot" href="javascript:TextPopup(this)" id="a4">exception</a> 
+			 for list of operators that are not supported.</p>
+			<div class="droptext" id="POPUP588642233" style="display: none;">
+				<p>The below SQL operators are not supported in the query:</p>
+				<ul class="hcp4">
+					<li><p>‘INSERT’</p></li>
+					<li><p>‘CREATE’</p></li>
+					<li><p>‘ALTER’</p></li>
+					<li><p>‘DROP’</p></li>
+					<li><p>‘SELECT INTO’</p></li>
+					<li><p>‘USE’</p></li>
+					<li><p>‘DELETE’</p></li>
+					<li><p>‘TRUNCATE’</p></li>
+					<li><p>‘UPDATE’</p></li>
+					<li><p>‘EXECUTE’</p></li>
+					<li><p>‘EXEC’</p></li>
+				</ul>
+   </div></li>
+			<li><p>Primary Key(s) (Separated by Comma) - this refers to 
+			 the <a class="dropspot" href="javascript:TextPopup(this)" id="a5">Primary 
+			 Key</a> for the query. </p>
+			<div class="droptext" id="POPUP588576622" style="display: none;">
+				<p>You can run the following script in the database to 
+				 retrieve the primary key(s):</p>
+				<p>SELECT </p>
+				<p>&#160;&#160;&#160;&#160;&#160;KU.table_name as TABLENAME</p>
+				<p>&#160;&#160;&#160;&#160;,column_name as PRIMARYKEYCOLUMN</p>
+				<p>FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC </p>
+				<p>INNER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU</p>
+				<p>&#160;&#160;&#160;&#160;ON TC.CONSTRAINT_TYPE = 'PRIMARY 
+				 KEY' </p>
+				<p>&#160;&#160;&#160;&#160;AND TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME 
+				 </p>
+				<p>&#160;&#160;&#160;&#160;AND KU.table_name= ‘&lt;Specified 
+				 table name here&gt;’</p>
+				<p>ORDER BY </p>
+				<p>&#160;&#160;&#160;&#160;&#160;KU.TABLE_NAME</p>
+				<p>&#160;&#160;&#160;&#160;,KU.ORDINAL_POSITION</p>
+				<p><span class="hcp1">Note</span>: 
+				 Please replace ‘&lt;Specified table name here&gt;’ with 
+				 the table name.</p>
+   </div></li>
+			<li><p>User Code Field - this refers to the User Code field 
+			 for the notification recipients.</p></li>
+			<li><p>Template Queries - provide the conditional information 
+			 to be retrieved using SQL queries for the template. [FORM_SELECT] 
+			 in tag values configuration.</p></li>
+		</ul>
+  </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Notification tab, the ‘Enable E-mail Notification’ option 
+	 is ticked by default and cannot be disabled. You are required to specify 
+	 the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">details 
+	 for the e-mail notification</a>. </p>
+	<div class="droptext" id="POPUP589531861" style="display: none;">
+		<p>The following tags are supported for ‘To’, ‘CC’, ‘BCC’ and 'Reply 
+		 To' fields:</p>
+		<ul class="hcp4">
+			<li><p><span>(+U.supervisorMail+) - This refers to the supervisor's 
+			 e-mail.</span></p></li>
+			<li><p><span>(+U.MailID+) - This refers to the recipient/user's 
+			 e-mail.</span></p></li>
+		</ul>
+ </div></li>
+	<li><p>If there is no template selection is made, the mail 'Body' section 
+	 will be available for your to configure. Both ‘Basic’ and ‘Advanced’ 
+	 support <a class="dropspot" href="javascript:TextPopup(this)" id="a6">tags 
+	 configuration</a>. &#160;<span class="hcp1">Note</span>: 
+	 Alternatively, you can also tick the ‘Advanced’ option to configure 
+	 the<a class="dropspot" href="javascript:TextPopup(this)" id="a3"> First Notification, 
+	 First Reminder and Second Reminder e-mail notifications</a>. 
+	 You can configure different templates in the Advanced tab of the Notification 
+	 screen, but must ensure that the Template Queries entered in the Criteria 
+	 screen can be used for all of the templates selected in the Notification 
+	 screen.</p>
+	<div class="droptext" id="POPUP589579374" style="display: none;">
+		<ul class="hcp4">
+			<li><p>First Notification – This is for the first e-mail notification 
+			 that will be sent.</p></li>
+			<li><p>First Reminder – This is for the second e-mail notification 
+			 that will be sent if the user still have pending item.</p></li>
+			<li><p>Second Reminder – This is for the third e-mail notification 
+			 that will be sent if the user still have pending item.</p></li>
+		</ul>
+ </div>
+	<div class="droptext" id="POPUP587759989" style="display: none;">
+		<p><span lang="EN-GB" xml:lang="EN-GB">T</span>he following are 
+		 the tags syntax for E-mail Notification:</p>
+		<p><span class="hcp1">Note</span>: 
+		 Please replace the text within the &lt; &gt; with the value as 
+		 described.</p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">Basic:</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO=&lt;To Recipient&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC=&lt;CC Recipient&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC=&lt;BCC Recipient&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO=&lt;Reply 
+		 to Recipient&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT=&lt;E-mail 
+		 subject&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY=Body Text/]</span></p>
+		<p>&#160;</p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">Advanced:</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R0=&lt;To Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R0=&lt;CC Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R0=&lt;BCC Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R0=&lt;Reply 
+		 to Recipient for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R0=&lt;E-mail 
+		 subject for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R0=&lt;Body 
+		 Text for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R1=&lt;To Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R1=&lt;CC Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R1=&lt;BCC Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R1=&lt;Reply 
+		 to Recipient for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R1=&lt;E-mail 
+		 subject for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R1=&lt;Body 
+		 Text for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R2=&lt;To Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R2=&lt;CC Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R2=&lt;BCC Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R2=&lt;Reply 
+		 to Recipient for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R2=&lt;Email 
+		 subject for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R2=&lt;Body 
+		 Text for second reminder&gt;/]</span></p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Customisable SQL Driven Task</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a7','POPUP587977503');
+	TextPopupInit('a1','POPUP589456081');
+	TextPopupInit('a8','POPUP589047655');
+	TextPopupInit('a4','POPUP588642233');
+	TextPopupInit('a5','POPUP588576622');
+	TextPopupInit('a2','POPUP589531861');
+	TextPopupInit('a6','POPUP587759989');
+	TextPopupInit('a3','POPUP589579374');
+//]]></script>
+</body>
+</html>

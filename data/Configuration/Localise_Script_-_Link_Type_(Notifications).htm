@@ -1,0 +1,112 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Link Type (Notifications)</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:normal; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { font-weight:bold;
+text-decoration:underline; }
+p.hcp5 { font-weight:bold;
+text-decoration:none; }
+p.hcp6 { font-weight:normal;
+text-decoration:none; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script - Link Type (Notifications)</h1>
+<p>&#160;</p>
+<p>Viewpoint provides two localise scripts that you can run to create certain 
+ notification items for the <a href="Notifications.htm">Notifications</a> 
+ feature. The localise scripts are:</p>
+<ul class="hcp1">
+	<li><p class="hcp2"><span class="hcp3">Add 
+	 Notifications for Data/Information Changes</span> - This will add 
+	 notification items to inform users about changes made to file details 
+	 such as change of entity status.</p></li>
+	<li><p class="hcp2"><span class="hcp3">Add 
+	 Notifications for Assignments</span> - This will add notification 
+	 items to inform users about new work assigned such as a new task. 
+	 This type of notification items is linked to new Document Management 
+	 change codes that have been added. To include these notification items, 
+	 ensure that the option 'Enable Audit Trail' and 'Add Master File Code 
+	 to Master File Name Display' are enabled in System Defaults &gt; Document 
+	 Management and you have selected task and scan batch audit types in 
+	 Business Parameters &gt; Document Management &gt; Audit Trail Setup.</p></li>
+</ul>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: The 
+ localise script only supports Notifications Link Type.</p>
+<p>&#160;</p>
+<h3>Adding Notifications Link Type</h3>
+<p>When adding a notification item, you also need to specify the Change 
+ Code, Link Item and Tag Values.</p>
+<p>&#160;</p>
+<p class="hcp4">Syntax</p>
+<p class="hcp5">NOTIFICATION:|IMPORT_METHOD=UPGRADE_EXISTING||EventCode=&lt;Code&gt;||Description=&lt;Text&gt;||Condition=&lt;Parameters&gt;||TagValue=&lt;Tags&gt;|</p>
+<p class="hcp5">&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p class="hcp2"><span class="hcp3">&lt;Code&gt;</span> 
+	 refers to the change code.</p></li>
+	<li><p class="hcp2"><span class="hcp3">&lt;Text&gt;</span> 
+	 refers to the description for the link item.</p></li>
+	<li><p class="hcp2"><span class="hcp3">&lt;Parameters&gt;</span> 
+	 refers to the Change Link Parameters for form generation.</p></li>
+	<li style="text-decoration: none; "><p class="hcp6"><span class="hcp3">&lt;Tags&gt;</span> refers to the tag to 
+	 configure notification such as the header, message related screen 
+	 and the intended recipient of the notification. For more information, 
+	 refer to <a href="Change_Codes_Link_Items_-_Tags.htm">Change Codes 
+	 - Tags</a>.</p></li>
+</ul>
+<p class="hcp6"><img src="../image329.gif" alt="" style="border: none;" border="0"></p>
+<p class="hcp6">&#160;</p>
+<p class="hcp4"><span style="font-weight: bold; 
+	 text-decoration: underline; ">Example</span></p>
+<p>To set up a notifications link type for a change code as shown above:</p>
+<p>NOTIFICATION:|IMPORT_METHOD=UPGRADE_EXISTING||EventCode=CGC||Description=Notification 
+ for Jurisdiction Change||Condition={Condition:^^LinkType=SQL.RefMaster^^LinkField=*^^LinkOper==^^} 
+ &#160;{Condition:^^LinkType=CC^^LinkField=IncorpPlace^^LinkOper=@HCH^^} 
+ ||TagValue=[/NOTIFY_CAT=MF/][/NOTIFY_SYSTEMFLAGS=1/][/NAVIGATION_KEY=FSEGENER/][/PRIORITY=0/][/NOTIFY_HEADER=Jurisdiction 
+ Changed/][/NOTIFY_MSG=New Jurisdiction: (+CC.IncorpPlace\#LT-CNTR+)./] 
+ /][/NOTIFY_ADMINGP=(+SQL.RefMaster.AdminGroup+)/][/SQL.RefMaster=SELECT 
+ AdminGroup FROM RefMaster WHERE RefCode='(-EntCode-)'/]|</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Link Type (Notifications)</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+</body>
+</html>

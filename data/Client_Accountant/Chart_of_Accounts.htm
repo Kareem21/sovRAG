@@ -1,0 +1,193 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Account File - Chart of Accounts">
+<meta name="MS-HAID" content="Chart of Accounts">
+
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Chart of Accounts</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+img.hcp2 { border:none; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Chart of Accounts</h1>
+<p>This displays all accounts in the file's Chart of Accounts. The Chart 
+ of Accounts template used by the Account File is determined when you set 
+ up the file; however, you may still make adjustments to the accounts that 
+ are used or not within that template. Major changes such as switching 
+ to a new Chart of Accounts must be done using the <a href="Archive_Change_CoA_or_BC.htm">Archive/Change 
+ CoA or BC</a> function.</p>
+<p>You can click on the following to minimise or expand the sections in 
+ this screen:</p>
+<ul class="hcp1">
+	<li><p><img src="../image307.gif" alt="" border="0" class="hcp2"> 
+	 - To minimise this section and hide the command buttons. In the grid, 
+	 only the selected row will be seen.</p></li>
+	<li><p><img src="../image308.gif" alt="" border="0" class="hcp2"> 
+	 - To expand the section and show the command buttons.</p></li>
+</ul>
+<p class="FldExplain">Filter</p>
+<p>You can filter the accounts by their status.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Accounts list</p>
+<p>This displays the accounts that are in use.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp3">New Subaccount</span> - Click 
+	 this to create new <a class="dropspot" href="javascript:TextPopup(this)" id="a1">sub-accounts</a>. 
+	 It is available only for the account types Asset, Liability, Expense 
+	 and Income. Sub-accounts on one Account File will not appear in another 
+	 Account File. Sub-account ranks equally with the account types (Asset, 
+	 Liability, Expense and Income) where you can post journals directly 
+	 into them and into the root nominal. However for reporting, it is 
+	 advised to not post into the root nominal due to the <a class="dropspot" href="javascript:TextPopup(this)" id="a3">reporting</a>. 
+	 By default, this button is not active. You need to activate this in 
+	 Configuration &gt; Settings &gt; Customise &gt; Field Settings. For 
+	 Practice Management to Accounting mapping, if the Nominal Account 
+	 is inactive, the system will post the entry to the first active sub-account 
+	 based on Account Code.</p>
+	<div class="droptext" id="POPUP562096698" style="display: none;">
+		<ul class="hcp1">
+			<li><p>Excel Statement code [.na.] will sum and report the 
+			 Sub-accounts under the root nominal – this is for comparability 
+			 with other Account Files where the Sub-accounts don’t exist.</p></li>
+			<li><p>Excel Statement code [.nb.] will disclose each Sub-account 
+			 separately – this means each Account File will have different 
+			 Sub-accounts showing, depending on what was created in that 
+			 Account File.</p></li>
+		</ul>
+		<p>An example – 6110 is the root nominal and 611001 and 611002 
+		 are its Sub-accounts.</p>
+		<p><img src="../6110.png" alt="" border="0" class="hcp2"></p>
+		<ul class="hcp1">
+			<li><p>[.na.] code will show one sum of 12,250,000.00 on 6110.</p></li>
+			<li><p>[.nb.] code will show the amounts against 611001 and 
+			 611002 as in the screenshot above.</p></li>
+		</ul>
+ </div>
+	<div class="droptext" id="POPUP431962433" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Complete details of the sub-account:</p>
+			<ul class="hcp1">
+				<li><p>Nominal Account - This defaults to the selected 
+				 nominal account.</p></li>
+				<li><p>Account Code - Enter the code for the subaccount.</p></li>
+				<li><p>Account Name - This defaults to the selected nominal 
+				 account but you can modify this.</p></li>
+				<li><p>Settlement Method - By default, this field is not 
+				 enabled. When enabled, it is available only for control 
+				 accounts (denoted by letters) and is used to link a debtor/creditor 
+				 transaction to a bank transaction. The default method 
+				 follows the method set in Home &gt; Accounting &gt; Chart 
+				 of Accounts &gt; <a href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">Nominal 
+				 Accounts</a> but you can change this for the Account File.</p></li>
+				<li><p>Restricted Account - Tick this to set restriction 
+				 on account. When account is flagged as 'restricted account', 
+				 user must have authority 8 (Power-user) on the respective 
+				 journal entry screen to post in this account. This field 
+				 is only visible if the account type is within the range 
+				 1 - 4.</p></li>
+				<li><p>Active - This will be ticked by default.</p></li>
+				<li><p>Update the 'Exchange Revaluation' of the linked 
+				 sub-ledgers - This is only available for control accounts 
+				 (denoted by letters of the alphabet).</p></li>
+				<li><p>Exchange Revaluation - This will be active only 
+				 when the above option is ticked.</p></li>
+			</ul></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp3">Edit</span> - Click this to 
+	 edit the name of the selected account in the Chart of Accounts or 
+	 deactivate the account. If it is a control account (accounts denoted 
+	 by letters), you can also change the settlement method and <a class="dropspot" href="javascript:TextPopup(this)" id="a2">update 
+	 the 'Exchange Revaluation' of the linked sub-ledgers.</a></p>
+	<div class="droptext" id="POPUP489579511" style="display: none;">
+		<p style="mso-bidi-font-style: italic;"><span style="mso-bidi-font-style: italic;">Update 
+		 the ‘Exchange Revaluation’ of the linked sub-ledgers - this option 
+		 is unticked by default. When this option is ticked, it will perform 
+		 batch update on the ‘Exchange Revaluation’ field to all the linked 
+		 sub-ledgers of the same Nominal Account.</span></p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;">Example:</p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;">In Nominal 
+		 Account '2320', the option &quot;Update the ‘Exchange Revaluation’ 
+		 of the linked sub-ledgers&quot; has been ticked with the 'Exchange 
+		 Revaluation' field set to 'Realise only Gains [3]'.</p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;">The 'Exchange 
+		 Revaluation' field will then be updated to all linked sub-ledgers 
+		 with the Nominal Account '2320' in File &gt; Accounting &gt; Journals</p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;"><img src="../Drawing1.jpg" alt="" border="0" class="hcp2"></p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;">&#160;</p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;">As seen 
+		 here, the Exchange Revaluation has now set to 'Realise only Gains 
+		 [3]'.</p>
+		<p class="MsoNormal" style="mso-bidi-font-style: italic;"><img src="../subledger.png" alt="" border="0" class="hcp2"></p>
+ </div></li>
+	<li><p><span class="hcp3">Delete</span> - Click this 
+	 to delete the selected account. Deleted accounts are moved to the 
+	 Accounts Not Used list below the Chart of Accounts. This is applicable 
+	 only in Chart of Accounts screen.</p></li>
+	<li><p><span class="hcp3">Remove Unused</span> - Click 
+	 this to remove the unused accounts listed at the top panel to the 
+	 bottom panel of the screen (Accounts Not Used panel). This prevents 
+	 users from accidentally reactivating an account that is not meant 
+	 to be used. This is applicable only in Chart of Accounts screen.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Accounts Not Used list</p>
+<p>This displays accounts that are not used for the Account File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Add</p>
+<p>Click to add an unused account back into the Chart of Accounts. This 
+ is applicable only in Chart of Accounts screen.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Chart_of_Accounts_Setup.htm">Chart of Accounts Setup</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Account_File_-_Setup.htm">Account File</a> &gt; Chart of Accounts</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP431962433');
+	TextPopupInit('a3','POPUP562096698');
+	TextPopupInit('a2','POPUP489579511');
+//]]></script>
+</body>
+</html>

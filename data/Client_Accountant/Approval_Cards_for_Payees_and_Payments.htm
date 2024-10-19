@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Approval Cards">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Approval Cards for Payees and Payments</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Approval Cards for Payees and Payments</h1>
+<p>Approval cards contain the rules for payee and bank payment approvals. 
+ These approval cards can be set up at various approval levels:</p>
+<ul style="list-style: disc;">
+	<li class="p"><p>Global - The approval card applies to all Master Files.</p></li>
+	<li class="p"><p>Master File - The approval card applies to the named 
+	 Master File.</p></li>
+	<li class="p"><p>Sub-ledger Account - The approval card applies to 
+	 the named sub-ledger account in the Master File. This approval level 
+	 applies to the bank payment approval cards only.</p></li>
+</ul>
+<p>The approval level represents the hierarchy which will be used when 
+ applying the approval cards. Approval cards on the sub-ledger account 
+ level will be applied before those on the Master File and Global levels. 
+ Approval cards on the Master File level will be applied before those on 
+ the Global level.</p>
+<p>In the following example, approval cards were set up as shown:</p>
+<p><img src="../image99.gif" alt="" width="943" height="119" border="0" class="hcp1"></p>
+<p>Based on the setup above, system will check the following when approving 
+ payees:</p>
+<p><img src="../image107.gif" alt="" width="720" height="164" border="0" class="hcp1"></p>
+<ol>
+	<li><p class="Listing">All INVEST payees up to EUR15,000 (Payee No 
+	 5) will use Payee card no. 1.</p></li>
+	<li><p class="Listing">All INVEST payees more than EUR15,000 (Payee 
+	 No 3) will use Payee card no. 2.</p></li>
+	<li><p class="Listing">All INVEST payees NOT using EUR (Payee No 2, 
+	 6, 7 and 8) will use Payee card no. 2.</p></li>
+	<li><p class="Listing">All other Account Files will use Payee card 
+	 no. 2.</p></li>
+</ol>
+<p>When approving bank payments:</p>
+<p><img src="../image105.gif" alt="" width="1009" height="94" border="0" class="hcp1"></p>
+<ol>
+	<li><p class="Listing">All INVEST payments up to EUR10,000 (Payment 
+	 ID 20) will use Payment card no. 3.</p></li>
+	<li><p class="Listing">All INVEST payments more than EUR10,000 (Payment 
+	 ID 21) will use Payment card no. 4.</p></li>
+	<li><p class="Listing">All INVEST payments NOT using EUR (Payment ID 
+	 22) will use Payment card no. 4.</p></li>
+	<li><p class="Listing">All other Account Files will use Payment card 
+	 no. 4.</p></li>
+</ol>
+<p>Approval cards are set up in Configuration &gt; Users &amp; Security 
+ &gt; <a href="../Configuration/Approval_Cards.htm">Approval Cards</a>.</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Confidential_Database.htm\">Additional Information</a> &gt; <a href=\"Account_Settlement.htm\">Accounting</a> &gt; Approval Cards for Payees and Bank Payments </p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Confidential_Database.htm\">Additional Information</a> &gt; <a href=\"Approval_Cards_for_Payees_and_Payments.htm\">Practice Management</a> &gt; Approval Cards for Payees and Payments</p>");
+</script>
+
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

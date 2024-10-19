@@ -1,0 +1,282 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Input Field</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { mso-bidi-language:TH; }
+span.hcp3 { mso-bidi-language:TH; }
+img.hcp4 { border:none; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+ol.hcp6 { list-style:decimal; }
+br.hcp7 { page-break-before:always; }
+span.hcp8 { font-weight:bold;
+text-decoration:underline; }
+p.hcp9 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Checklist Item - Field Type: Input Field</h1>
+<p>This field type is used to show or allow edit only relevant checklist 
+ items to the users based on:</p>
+<ul class="hcp1">
+	<li><p>selected type/jurisdiction/reporting authority/number of shares 
+	 - will show or allow edit fields included for the selected type/jurisdiction/reporting 
+	 authority/number of shares and applies to screens where the fields 
+	 for the records differ based on the type, jurisdiction, reporting 
+	 authority or number of shares such as:</p></li>
+	<ul class="hcp1">
+		<li><p class="hcp2">Identity Register screen 
+		 – user to select the type to see the relevant fields</p></li>
+		<li><p><span class="hcp3">Classification and 
+		 Indicia screen – user to select the type to see the relevant fields</span></p></li>
+		<li><p><span class="hcp3">Reportable Accounts 
+		 screen – user to select the reporting authority to see the relevant 
+		 fields</span></p></li>
+		<li><p><span class="hcp3">Owners &amp; Controllers 
+		 screen – user to select the jurisdiction to see the relevant fields</span></p></li>
+		<li><p><span class="hcp3">All Relations and Officers 
+		 screens – user to select the type to see the relevant fields</span></p></li>
+		<li><p class="hcp2">Interests screen – user to 
+		 select the type to see the relevant fields</p></li>
+		<li><p class="hcp2">Capital screen – users are 
+		 allowed to edit relevant fields based on the entity’s ownership 
+		 structure </p></li>
+		<li><p class="hcp2">Shareholders screen – users 
+		 to enter the number of shares to see the relevant fields</p></li>
+	</ul>
+	<li><p>user's authority rights - will show fields that user have access 
+	 and this applies to the screens above as well as screens where the 
+	 fields do not depend on the type/jurisdiction/reporting authority 
+	 and currently includes</p></li>
+	<ul class="hcp1">
+		<li><p>Master File's General, Identity Details, CDD and Alerts 
+		 screens</p></li>
+		<li><p>Entity File's General, M&amp;A/Dates and Accounts screen</p></li>
+		<li><p>Billing File's General screen</p></li>
+		<li><p>Account File's General screen</p></li>
+	</ul>
+</ul>
+<p>The use of this field type requires items to be grouped with the parent 
+ item's field type set to Input Field. If this is for screens with different 
+ fields for its records, then there must be a sub-item for the selection 
+ of the type, jurisdiction or reporting authority that will determine what 
+ other sub-items will be displayed. Otherwise, the sub-items are just fields 
+ within the screen. <span class="hcp3">The sub-items 
+ cannot be set as Input Field or have the Duplicate checkbox ticked.</span></p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal">Example - Statutory Officers screen</p>
+<p class="MsoNormal">&#160;</p>
+<p><img src="../image218.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p class="hcp2"><span class="hcp3">In 
+ the workflow, users will be able to select the type/jurisdiction/reporting 
+ authority and see only the relevant sub-items.</span></p>
+<p class="hcp2"><img src="../image219.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp2">&#160;</p>
+<p><img src="../image220.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p>Example - Master File's General and Alerts screens</p>
+<p><img src="../image224.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p class="hcp2">In the workflow, users will see only 
+ items if they have access to the screen and field:</p>
+<p class="hcp2"><img src="../image225.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><img src="../image226.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp5">Note</span>: If 
+ the workflow step includes items for multiple screens and the user does 
+ not have access to one of the screen, items for that screen will not be 
+ displayed.</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<h2>Configuration - Parent Item</h2>
+<p>Apart from setting the field type for the parent item as Input Field, 
+ you must also specify the following in Values/Default:</p>
+<ul class="hcp1">
+	<li><p>Screen/Type - select the screen e.g. Identity Register [FMMCOMPR]</p></li>
+	<li><p>Screen Entry - select the action that will take e.g. &amp;New 
+	 [IDE.NEWR] to add a new identity Register record</p></li>
+</ul>
+<p class="MsoNormal" style="mso-bidi-language: TH;">Optional configurations 
+ are:</p>
+<ul class="hcp1">
+	<li><p class="MsoNormal" style="mso-bidi-language: TH;">Duplicate - 
+	 tick this to allow the group to be duplicated</p></li>
+	<li><p class="MsoNormal" style="mso-bidi-language: TH;">Overwrite Caption 
+	 - tick this to allow the item's caption to be overwritten by caption 
+	 defined for the mapped field </p></li>
+</ul>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<h2>Configuration - Sub-Items</h2>
+<p class="MsoNormal">The sub-items must be mapped to the field in the screen. 
+ When adding the sub-items, these can be done: </p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">manually</a></p>
+	<div class="droptext" id="POPUP528253777" style="display: none;">
+		<ol class="hcp6">
+			<li><p>Click the icon to add item and indent it to make it 
+			 a sub-item.</p></li>
+			<li><p>Map the item to the field by:</p></li>
+			<ul class="hcp1">
+				<li><p>Clicking the Browse button and specifying the Database 
+				 Field in Clipboard Field; or</p></li>
+				<li><p>Assign the Database Field as the key for the item.</p></li>
+			</ul>
+		</ol>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">using 
+	 Viewpoint Clipboard</a></p>
+	<div class="droptext" id="POPUP528452732" style="display: none;">
+		<ol class="hcp6">
+			<li><p class="hcp2"><span style="mso-ansi-language: EN-US;">Configure 
+			 a parent item as an ‘Input Field’ field type and define the 
+			 Screen/Type and Screen Entry in the Values/Default column.</span></p></li>
+			<li><p>Click the Paste - Viewpoint Clipboard icon. This will 
+			 paste the fields as sub-items for the workflow step with the 
+			 mapping in place.</p></li>
+		</ol>
+ </div></li>
+</ul>
+<p>If the workflow step is for screens with child grid such as Reportable 
+ Accounts and Owners &amp; Controllers, then for this group, there must 
+ also be a sub-item for the selection of the reporting authority/jurisdiction 
+ and the following tags can be added:</p>
+<ul class="hcp1">
+	<li><p>[InputRefresh=1] - this is to refresh the sub-items for the 
+	 child grid based to refresh the other sub-items.<br class="hcp7">
+	<br class="hcp7">
+	<span class="hcp8"><img src="../image221.png" alt="" border="0" class="hcp4"></span><br class="hcp7">
+	<br class="hcp7">
+	<span class="hcp8"><img src="../image222.png" alt="" border="0" class="hcp4"></span></p></li>
+	<li><p>[SourceInput=&lt;Key&gt;] - the &lt;Key&gt; refers to the key 
+	 of the sub-item containing the reporting authority/jurisdiction value 
+	 and the tag is added to filter values for the action type according 
+	 to the reporting authority/jurisdiction..<br class="hcp7">
+	<br class="hcp7">
+	<span class="hcp8"><img src="../image223.png" alt="" border="0" class="hcp4"></span></p></li>
+</ul>
+<p><span class="hcp5">Note</span>: Filter 
+ tags, referencing tags and tags to mask the field description added to 
+ Lookup Values and User Tables will be applied to the workflow as well.<span 
+	 style="mso-spacerun: yes;">&#160;</span></p>
+<p>&#160;</p>
+<h3>Sub-Item with User Defined Field Type</h3>
+<p>When users defined a filter for the parent item with field type that 
+ is set to Input Field, the filter will be applied to all of the sub-items 
+ that are grouped under the parent item. If a filter is also defined in 
+ the sub-item, the values will be filtered based on the filter of the sub-item 
+ followed by the filter of the parent item. If the parent item is not configured 
+ with a filter, the values of the sub-item will be filtered based on the 
+ configuration of the Master File or Entity Type. Refer to <a href="Checklist_Item_-_Field_Type__User_Defined.htm">Checklist 
+ Item - Field Type: User Defined</a> for more information.</p>
+<p>&#160;</p>
+<p>Example - Parent item is not configured with tag values</p>
+<p>Values retrieved will be based on the data source of the sub-item and 
+ filtered by the Master File Type configuration of the Master File that 
+ executed the workflow. </p>
+<p><img src="../image211.png" alt="" border="0" class="hcp4"></p>
+<p>The Master File Type configuration is referred to the tag values configured 
+ in the Master File Types [ADTP] lookup table in Configuration &gt; Business 
+ Parameters &gt; General &gt; Lookup Values. </p>
+<p><img src="../image215.png" alt="" border="0" class="hcp4"></p>
+<p>The Entity Type configuration is referred to the tag values configured 
+ in Configuration &gt; Business Parameters &gt; Entity Administration &gt; 
+ Entity Types.</p>
+<p><img src="../image216.png" alt="" border="0" class="hcp4"></p>
+<p><span class="hcp5">Note</span>: If 
+ tag values are configured for both, Master File Types configuration will 
+ be prioritised, followed by Entity Types configuration.</p>
+<p>&#160;</p>
+<p>Example - Parent item is configured with a tag value</p>
+<p>The [/InputField.MFPROP=] tag is entered in the Tag Values field in 
+ the Edit Step Properties screen to filter the values shown. </p>
+<p><img src="../image217.png" alt="" border="0" class="hcp4"></p>
+<p>Values retrieved in the sub-item will be filtered by Company Master 
+ File Type. The [FILTER:MAS.TYPE=&lt;RelationshipTypes&gt;] tag configured 
+ in Company Master File Type will be applied to all sub-items.</p>
+<p><img src="../image227.png" alt="" border="0" class="hcp4"></p>
+<p><img src="../image228.png" alt="" border="0" class="hcp4"></p>
+<p>The data source of the sub-item is configured with a filter to show 
+ only relationship types that belongs to Class M. The values retrieved 
+ will be filtered by Class M and Company Master File Type.</p>
+<p><img src="../image229.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Retrieve Balance Number of Shares </h2>
+<p>Following the support of Input Field for the Shareholders screen, the 
+ [+SYS:SHAREBALANCE.&lt;Key&gt;+] tag can be used to retrieve the balance 
+ number of shares of the selected share sequence number and be included 
+ in a workflow step. &lt;Key&gt; refers to the key in the workflow step 
+ that defines the share sequence number. Example: [+SYS:SHAREBALANCE.ShareSeqNr+]</p>
+<p>&#160;</p>
+<h2>Configuration for Partial Transfer, Redeem, Cancellation or Forfeit</h2>
+<p>Users are required to configure a conditional group for the items that 
+ will only be shown and allow for editing if the number of shares to transfer, 
+ redeem, cancel and forfeit are partial of the total amount of shares. 
+ After pasting the sub-items that mapped to the Transfer, Redeem, Cancel 
+ Cert. or Forfeit screens, users need to configure as follows:</p>
+<ol class="hcp6">
+	<li><p>Insert a new checklist item below the item with the ‘CertificateNr’ 
+	 key </p></li>
+	<li><p>Define the key for the new checklist item as ‘Partial’</p></li>
+	<li><p>Set the field type to Formula</p></li>
+	<li><p>In the Values/Default column, enter the formula, V=IF(NrShare.V&lt;&gt;ShareTotal.V,1,0)</p></li>
+	<li><p>Insert another checklist item below the Formula item</p></li>
+	<li><p>Set the field type to Conditional Group.</p></li>
+	<li><p>In the Values/Default column, enter Partial=1.</p></li>
+	<li><p>Group all of the items below the Conditional Group item as the 
+	 sub-item of the Conditional Group item.</p></li>
+	<li><p>Click Update when completed.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist/Workflow 
+	 Step Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Input Field</p>
+ <p class="hcp9">&#160;</p>
+ <p class="hcp9">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp9">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP528253777');
+	TextPopupInit('a2','POPUP528452732');
+//]]></script>
+</body>
+</html>

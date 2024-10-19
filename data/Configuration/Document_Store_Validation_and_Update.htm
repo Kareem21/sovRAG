@@ -1,0 +1,194 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="OCR Text Update">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Document Store Validation and Update</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-weight:bold;
+text-decoration:underline; }
+ol.hcp4 { list-style:decimal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Document Store Validation and Update</h1>
+<p>In this screen, you can run two functions:</p>
+<ul class="hcp1">
+	<li><p>OCR Update - Which will recognise text in stored documents and 
+	 images so the text can be used to locate specific documents.</p></li>
+	<li><p>Compression - Which will compress stored document files.</p></li>
+	<li><p>Revision - Which will create or undo revision groups in holders.</p></li>
+</ul>
+<p>You can perform the both functions together or separately. However, 
+ note the following:</p>
+<ul class="hcp1">
+	<li><p>OCR update can only be performed on files that have not been 
+	 compressed.</p></li>
+	<li><p>Compression is only for environments where Document Store is 
+	 in file structure. It is not applicable if SQL database is used for 
+	 Document Store.</p></li>
+	<li><p>Compression is not possible for the following file types: .jpg, 
+	 .jpeg, .png, .gif, .tif, .tiff, .eps, .pdf, .zip, .rar and .7z</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Select Holder Range</p>
+<ul class="hcp1">
+	<li><p>All holders (Require longer processing time).</p></li>
+	<li><p>Document holder range, Holder number - from and - to - Enter 
+	 the range of document holders you want.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">OCR Update</p>
+<p>Tick to select OCR Update function and tick the document types you want 
+ to run the function on. <span lang="EN-GB" xml:lang="EN-GB">Note that 
+ w</span>hen using OCR Transym, the sequence will be the pdf text first, 
+ followed by the text in the image.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: For 
+ multi-paged TIF files, pages with JPEG compression are not supported and 
+ will not be recognised when performing OCR updates. Only pages with other 
+ compression types will be recognised.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="FldExplain">Compression</p>
+<p>Tick to select the Compression function and specify the minimum file 
+ size for compression. If this option is not active, it may be that the 
+ Document Store is an SQL database. Note also that if you selected All 
+ holders, this option will also be inactive. This is to ensure that you 
+ specify correctly the range of document holders for compression as compression 
+ is not reversible.</p>
+<p>&#160;</p>
+<p class="FldExplain">Revision</p>
+<p>This allows you to apply revision management on existing holders. Tick 
+ to enable the revision grouping options where you can choose:</p>
+<ul class="hcp1">
+	<li><p>Build revision groups - To create revision groups for holders 
+	 without any revision groups.</p></li>
+	<li><p>Includes holder with existing revision groups - Tick this to 
+	 create new revision groups and rebuild existing ones according to 
+	 the algorithm.</p></li>
+	<li><p>Undo revision groups - To remove all revision groups and all 
+	 files and revision will be shown in the holder details.</p></li>
+</ul>
+<p>Find out more on Revision Management <a href="../Document_Manager/Revision_Management.htm">here</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Start</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">start</a> 
+	 the selected function(s). Ensure that you are the one person logged 
+	 in to the database.</p>
+	<div class="droptext" id="POPUP422487151" style="display: none;">
+		<p class="hcp3"><span 
+		 style="font-weight: bold; text-decoration: underline; ">Performing 
+		 OCR Update</span></p>
+		<p>This may take some time if you have a large database of stored 
+		 documents. It is therefore recommended that you run this at the 
+		 end of the day to avoid interruptions.</p>
+		<ol class="hcp4">
+			<li><p>Select the document holders for the OCR Update.</p></li>
+			<li><p>Tick OCR Update.</p></li>
+			<li><p>Tick document types that you want to include.</p></li>
+			<li><p>Click Start.</p></li>
+			<li><p>Click Yes to confirm.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<p class="hcp3">Performing 
+		 Compression</p>
+		<ol class="hcp4">
+			<li><p>Select the document holders you want to compress.</p></li>
+			<li><p>Tick Compression.</p></li>
+			<li><p>Enter the minimum file size for compression.</p></li>
+			<li><p>Click Start.</p></li>
+			<li><p>Click Yes to confirm.</p></li>
+			<li><p>Type 'yes do compress' and click OK.</p></li>
+			<li><p>Once completed, a log file - DMValidationAndUpdate_&lt;DatePerformed&gt;.csv 
+			 - will be created and saved to Viewpoint\Program folder.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<p class="hcp3">Performing 
+		 OCR Update and Compression</p>
+		<p>Once a document file has been compressed, it is no longer possible 
+		 to perform OCR update on it. As such, if there is a need to perform 
+		 OCR update and compress the document file, you can do that at 
+		 the same time.</p>
+		<ol class="hcp4">
+			<li><p>Select the document holders.</p></li>
+			<li><p>Tick OCR Update and select the document type.</p></li>
+			<li><p>Tick Compression and enter the minimum file size for 
+			 compression.</p></li>
+			<li><p>Click Start.</p></li>
+			<li><p>Click Yes to confirm.</p></li>
+			<li><p>Type 'yes do compress' and click OK.</p></li>
+			<li><p>Once completed, a log file will be created and saved 
+			 to Viewpoint\Program folder.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<p class="hcp3">Applying 
+		 Revision Management to Holders</p>
+		<ol class="hcp4">
+			<li><p>Select the document holders.</p></li>
+			<li><p>Tick Revision.</p></li>
+			<li><p>Select one of the following options.</p>
+			<ul class="hcp1">
+				<li><p>Build revision groups. The 'Includes holder with 
+				 existing revision groups' option is optional.</p></li>
+				<li><p>Undo revision groups.</p></li>
+			</ul></li>
+			<li><p>Click Start.</p></li>
+			<li><p>Click Yes to confirm.</p></li>
+			<li><p>Once completed, a log file will be created and saved 
+			 to Viewpoint\Program folder.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to stop the process.</p></li>
+</ul>
+<p>&#160;</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Verify_&amp;_Correct.htm">Document Management</a> &gt; Document Store Validation and Update</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP422487151');
+//]]></script>
+</body>
+</html>

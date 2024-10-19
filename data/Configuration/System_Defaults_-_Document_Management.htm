@@ -1,0 +1,422 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Document Management</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+p.hcp2 { text-align:center;
+font-weight:bold;
+color:#300063; }
+p.hcp3 { margin-left:6pt;
+margin-right:6pt;
+color:#000000; }
+ol.hcp4 { list-style:decimal; }
+ul.hcp5 { list-style:disc; }
+span.hcp6 { text-indent:-.25in;
+mso-list:l0 level1 lfo1; }
+span.hcp7 { font-weight:bold; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>System Defaults - Document Management</h1>
+<p>The settings for Document Management are defined here.</p>
+<p>&#160;</p>
+<p class="FldExplain">Document Store</p>
+<p>Enter or browse to the folder path where documents are to be stored. 
+ Use relative paths to assign drives (for example: \\server\Viewpoint\DocStore). 
+ Special attention must be paid when Viewpoint programs are installed on 
+ a server and workstations are used to run the programs. To assign drives, 
+ relative paths must be used to ensure that the programs will properly 
+ run from the workstations. Therefore, Viewpoint recommends using the network 
+ name instead of the assigned drive name.</p>
+<p>Folder path validation is disabled when Viewpoint Connect is set up 
+ in Cloud Solution ('Enabled Viewpoint Connect to connect through Application 
+ Server' is ticked in Viewpoint Management with Application Server running).</p>
+<p><span class="hcp1">Note</span>: If 
+ you have moved your Document Store to the SQL database, then this field 
+ will show ;[DMSTORAGE].</p>
+<p>&#160;</p>
+<p class="FldExplain">Audit Trail Folder</p>
+<p>Enter or browse to the path where scanned batches and the audit trail 
+ are stored. Folder path validation is disabled when Viewpoint Connect 
+ is set up in Cloud Solution ('Enabled Viewpoint Connect to connect through 
+ Application Server' is ticked in Viewpoint Management with Application 
+ Server running).</p>
+<p>&#160;</p>
+<p class="FldExplain">Holder Security</p>
+<p>This feature allows you to increase the security level on a document 
+ holder. Select the appropriate security type from the system standards. 
+ The following table shows the conditions to access document holders determined 
+ by the Holder Security and File Access selected.</p>
+<table class="Table1" cellspacing="0px" width="1514">
+	<col style="width: 16.454%;">
+	<col style="width: 22.727%;">
+	<col style="width: 22.727%;">
+	<col style="width: 38.092%;">
+	<tr class="t1st">
+		<td rowspan="2" style="border-right-width: 1px;">Holder Security</td>
+		<td colspan="3" style="border-bottom-width: 1px;"><p style="text-align: center; 
+															 color: #300063;"><span 
+		 style="color: #300063;">File Access</span></p>
+		<p>&#160;</p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="border-right-width: 1px; border-bottom-width: 1px;" bgcolor="#C0C0C0"><p class="hcp2">No Files [0]</p></td>
+		<td class="t1Col" style="border-right-width: 1px; border-bottom-width: 1px;" bgcolor="#C0C0C0"><p class="hcp2">Administrator Groups 
+		 [2]</p></td>
+		<td class="t2Col" style="border-right-width: 1px; border-bottom-width: 1px;" bgcolor="#C0C0C0"><p class="hcp2">Administrator Groups 
+		 + View-only for Others [4]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">No 
+		 Additional [0]</p></td>
+		<td rowspan="3" class="t2Col" style="vertical-align: top;"><p>No 
+		 authority to view any holder.</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" colspan="2" style="vertical-align: top;"><p>Has 
+		 authority to view and access all holders in their authorised Filing 
+		 Cabinets based on the Document Management Authority Settings in 
+		 User Groups. </p>
+		<p>&#160;</p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Security 
+		 Model - Master File [1]</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Has authority 
+		 to view and access holder when user:</p>
+		<ol class="hcp4">
+			<li>Has access to Master File.</li>
+			<li>Has Filing Cabinet authority. </li>
+		</ol></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Has authority 
+		 to view and access holder when user:</p>
+		<ol class="hcp4">
+			<li>Has access to Master File. <span class="hcp1">Note</span>: 
+			 Without access, holders will be view-only.&#160;User cannot 
+			 Edit or Delete a holder. Holder Details is viewable and documents 
+			 can be opened.</li>
+			<li>Has Filing Cabinet authority. </li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Administrator 
+		 Group - Index Field [5]</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Has authority 
+		 to view and access holder when:</p>
+		<ol class="hcp4">
+			<li>Holder's Administrator Group matches the User's Administrator 
+			 Group.</li>
+			<li>User Has Filing Cabinet authority.</li>
+			<li>User has access to Master File. </li>
+		</ol></td>
+		<td class="t2Col"><p>Has authority to view and access holder when:</p>
+		<ol class="hcp4">
+			<li>Holder's Administrator Group matches the User's Administrator 
+			 Group.</li>
+			<li>User has access to Master File. <span class="hcp1">Note</span>: 
+			 If 1 or 2 is not fulfilled, holders will be view-only. User 
+			 cannot Edit or Delete a holder. Holder Details is viewable 
+			 and documents can be opened.</li>
+			<li>User has Filing Cabinet authority. <span class="hcp1">Note</span>: 
+			 If the Administrator Groups do not match, the holder will 
+			 not appear in Documents Enquiry screen. </li>
+		</ol></td>
+	</tr>
+</table>
+<p><span class="hcp1">Note:</span> If 
+ a user does not have the authority to access the holder, the Detail Window 
+ will show a 'Group Security - Not authorised to view this document holder' 
+ status when the grid record is selected. </p>
+<p>&#160;</p>
+<p>If you are using Administrator Group - Index Field [5], you need to 
+ set up the Administrator Group index field, which must be made mandatory 
+ for completion:</p>
+<ol class="hcp4">
+	<li>In Business Parameters &gt; Document Management &gt; Index Fields, 
+	 click New.</li>
+	<li>Enter the details of the new index field, but ensure that you do 
+	 the following:</li>
+	<ul class="hcp5">
+		<li>Mandatory - Tick this check box.</li>
+		<li>Field type - Select Admin. Group (dropdown) [73].</li>
+		<li>Format/Mask - Select Assigned Groups [A]. This option means 
+		 that the user will be able to select his Administrator Group(s) 
+		 or the <a class="dropspot" href="javascript:TextPopup(this)" id="a17">common 
+		 Administrator Group</a> &#160;when creating a 
+		 new holder. 
+		<div class="droptext" id="POPUP666620605" style="display: none;">
+			<p>The common Administrator Group allows for users to access 
+			 the holder even if the user is not a member of the Administrator 
+			 Group. To apply, define the common Administrator Group in 
+			 <a href="System_Settings.htm">System Settings</a> and set 
+			 this as the Administrator Group for the holder.</p>
+			<p>&#160;</p>
+			<p>&#160;</p>
+  </div></li>
+	</ul>
+	<li>Click Update.</li>
+</ol>
+<p>Ensure that this index field is applied to all filing cabinets using 
+ Apply Global. </p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="FldExplain">Processed E-mail/Attachments</p>
+<p>Select the default method for storing attachments of e-mails. This applies 
+ to processed e-mails and e-mail sent through <a href="../Document_Manager/Delivery_Manager.htm">Delivery 
+ Manager</a> function.</p>
+<ul class="hcp5">
+	<li><p>Separate Documents in Holder - Attachments are stored as separate 
+	 documents from the e-mail.</p></li>
+	<li><p>Embedded in e-mail - Attachments are stored embedded in the 
+	 e-mail. You would not know if the stored e-mail contains any attachments 
+	 unless you open the e-mail.</p></li>
+	<li><p>Both Embedded and Separate Documents - Attachments are stored 
+	 embedded with the e-mail as well as separately from the e-mail.</p></li>
+</ul>
+<p class="FldExplain">Electronic Signatories</p>
+<p>Select ARX Cosign, DocuSign OAuth, Skribble, or Adobe if you use either 
+ one of these program and you would like to turn on Electronic Signatories 
+ option for stored holders. Otherwise, choose No Integration. Depending 
+ on the selected option, additional details may be required. </p>
+<p>Note that Viewpoint only allows the use of these program in Document 
+ Management for PDF and scanned documents that have been stored.</p>
+<p class="SeeAlso">See also: </p>
+<ul class="hcp5">
+	<li><p><a href="../Document_Manager/DocuSign_Integration.htm">DocuSign 
+	 Integration</a></p></li>
+	<li><p><a href="../Document_Manager/Skribble_Integration.htm">Skribble 
+	 Integration</a></p></li>
+	<li><p><a href="../Document_Manager/Adobe_Sign_Integration.htm">Adobe 
+	 Sign Integration</a></p></li>
+</ul>
+<p class="FldExplain">Default Reject Task</p>
+<p class="Heading8">Select a task that you want to be added to the workflow's 
+ step when user choose to reject the current step. The task will be assigned 
+ to the administrator of the rejected step and the due date will follow 
+ the rejected step's date due or set to today's date. This works only if 
+ the option 'Task for Workflow Undo/Reject' is ticked. If there is no task 
+ selected, user will manually select the task to be added.</p>
+<p class="Heading8">&#160;</p>
+<p class="FldExplain">Default Undo Task</p>
+<p>Select a task that you want to be added to the workflow's previous step 
+ when user choose to undo the current step. The task will be assigned to 
+ the administrator of the previous step and the due date will follow the 
+ previous step's date due or set to today's date. This works only if the 
+ option 'Task for Workflow Undo/Reject' is ticked. If there is no task 
+ selected, user will manually select the task to be added.</p>
+<p>The task list is maintained in Configuration &gt; Business Parameters 
+ &gt; Document Management &gt; Tasks.</p>
+<p>&#160;</p>
+<p class="FldExplain">Display Completed Task up to (days ago)</p>
+<p>You can view completed tasks up to the number of days specified here. 
+ For example, if you enter 10, it means you can see tasks that are completed 
+ up to 10 days ago in the Task Created By (Me) screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Maximum File Size (MB)</p>
+<p>This field limits the maximum file size (MB) during document storing. 
+ Warning will prompt if maximum file size has exceeded and user will not 
+ be able to store the file. By default, this field is blank (no limit).</p>
+<p>&#160;</p>
+<p class="FldExplain">Include File Format</p>
+<p>This field includes specific file formats (extension) during document 
+ storing. Warning will prompt for file formats that are not in this field 
+ and user will not be able to store the file. To enter more than one file 
+ format, separate the file format with ';'. By default this field is blank 
+ (no file extension to include). Both the Include File Format and Exclude 
+ File Format fields cannot be used simultaneously. </p>
+<p>&#160;</p>
+<p class="FldExplain">Exclude File Format</p>
+<p>This field excludes the file format (extension) during document storing. 
+ Warning will prompt if the prohibited file format is found and user will 
+ not be able to store the file. To enter more than one file format, separate 
+ the file format with ';'. By default this field is blank (no file extension 
+ to exclude). Both the Include File Format and Exclude File Format fields 
+ cannot be used simultaneously. </p>
+<p>&#160;</p>
+<p class="FldExplain">Global Outlook Correspondence</p>
+<p class="Heading8">This acts as an indicator to Outlook on which Filing 
+ Cabinet to retrieve files from/store to for each of the Master Files.</p>
+<p class="Heading8">&#160;</p>
+<p class="FldExplain">Retrieve Correspondence Files up to (days ago)</p>
+<p class="Heading8">Enter the number of days from the 'Date Last Updated' 
+ of the document Holder where Outlook shall retrieve the files.</p>
+<p class="Heading8">&#160;</p>
+<p class="FldExplain">SharePoint Integration</p>
+<p class="Heading8">Tick this to enable SharePoint Integration feature 
+ where you can<span class="hcp6"> 
+ p</span><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">ublish a document stored in 
+ Document Management to SharePoint for collaboration and editing and check 
+ in documents on completion of collaboration.</span></p>
+<p class="Heading8">&#160;</p>
+<p class="FldExplain">Integrate DM for Generated Documents</p>
+<p>Tick this if you are using the Document Management module and would 
+ like to be able to store generated documents using &quot;Document Management 
+ Index Tags&quot;. You would not use this option together with the Archive 
+ by Master File option in System Defaults &gt; General/Master File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow to Delete Holder/Task in Same Day</p>
+<p>Tick this to allow users to delete a stored document holder only on 
+ the same day it was stored. This means a user will be able to delete a 
+ holder that he stored, even if he was not given the authority to do so 
+ in his User Group.</p>
+<p>&#160;</p>
+<p class="FldExplain">Delete Forms when Stored in DM</p>
+<p>Tick this if, after you have stored a form from Viewpoint, you want 
+ to delete it from Form Queue. The file will also be deleted from the Archive 
+ folder. Note that the form must have Document Manager index tags.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disable Auto-check for Add-in Upgrades</p>
+<p>Tick this if you want to disable the Verify/upgrade Office Add-ins pop 
+ up box, which will appear after every Document Management upgrade to remind 
+ you to upgrade the Document Management Add-ins.</p>
+<p>&#160;</p>
+<p class="FldExplain">Engage Servicing Portal Document Sharing</p>
+<p>Tick this if you want to enable document sharing through Client Servicing 
+ Portal (ESP). However, you need to ensure that you have a licensed ESP 
+ environment set up.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp5">
+	<li><p><a href="../Document_Manager/Document_Sharing_on_Engage_Servicing_Portal.htm">Document 
+	 Sharing on ESP</a></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Add Master File Code to Master File Name Display</p>
+<p>Tick this to also include the Master File code in Master File index 
+ fields. Otherwise, only the Master File name is seen. This applies only 
+ to document holders created henceforth. For existing holders, you need 
+ to rebuild the information using 'Document Management Master File Field' 
+ in <a href="Database_Archiving.htm">Database Archiving &gt; Troubleshooting.</a></p>
+<p>If you would like to enable <a href="Localise_Script_-_Link_Type_(Notifications).htm">Notifications 
+ feature for Document Management</a> change codes, ensure that this is 
+ ticked.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Audit Trail</p>
+<p>Tick this if you want to enable the Audit Trail function in Document 
+ Management. The Audit Trail is set up in Business Parameters &gt; Document 
+ Management &gt; Audit Trail Setup.</p>
+<p><span class="hcp1">Note</span>: The 
+ feature will only begin the trail when you enable it. There is no information 
+ on actions done prior to the time you enable it. If you would like to 
+ enable <a href="Localise_Script_-_Link_Type_(Notifications).htm">Notifications 
+ feature for Document Management</a> change codes, ensure that this is 
+ ticked. </p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Scan-Batch 'Carbon Copy'</p>
+<p>Tick this if you want to assign copies of scanned batches to multiple 
+ users in Document Management. You may want to set up default assignments 
+ of the owner and copy recipients in Settings &gt; <a href="System_Settings.htm">System 
+ Settings</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Full Text Searching</p>
+<p>This option is automatically enabled when you have properly set up the 
+ Full Text search catalogs in the Viewpoint Database Management utility 
+ (ViewPointDbMgt.exe). Full Text searching provides an additional search 
+ field in Document Management's Advanced Search feature, but is not available 
+ to users of Access, MSDE or SQL Express databases.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Folder Templates</p>
+<p>This feature allows you to set up templates so that you can quickly 
+ complete the details in a Document Holder before storing.</p>
+<p>&#160;</p>
+<p class="FldExplain">Task for Workflow Undo/Reject</p>
+<p>This option allows for a task to be added to:</p>
+<ul class="hcp5">
+	<li><p>the workflow's previous step when user chooses to undo a workflow 
+	 step.</p></li>
+	<li><p>the workflow's current step when user chooses to reject approval 
+	 of the current workflow step.</p></li>
+</ul>
+<p class="FldExplain">Automatically Link Viewpoint Generated Forms</p>
+<p>Tick this to automatically add record link to forms generated from Viewpoint 
+ when the form is stored.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Revision Management</p>
+<p><span lang="EN-GB" xml:lang="EN-GB">When ticked, the <a href="../Document_Manager/Revision_Management.htm">Revision 
+ Management</a> will group versions of a document in a holder into revision 
+ groups.</span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB">Untick to disable the feature. This 
+ will undo all existing revision groups, and all Ribbon icons and right-click 
+ context menu options relating to Revision Management will be hidden.</span></p>
+<p>&#160;</p>
+<p class="FldExplain">Open Safe Document Only</p>
+<p>Tick this to enable the option to only open documents that have been 
+ <a href="../Document_Manager/Document_Virus_Scanning.htm">scanned for 
+ virus</a> and considered safe. A warning message will be prompted when 
+ trying to open unsafe or unscanned documents. Various document related 
+ functions will also be restricted for such documents. </p>
+<p>&#160;</p>
+<p class="FldExplain">Store Scanned Image as PDF</p>
+<p>Tick this to enable the option to save scanned images in PDF format. 
+ This will enable the 'Store as PDF' icon in the Scan and Batch Management 
+ Preferences Ribbon group.</p>
+<p>&#160;</p>
+<p class="FldExplain">Primary Master File Accessible Security</p>
+<p>Tick this to restrict access to a holder for users who can access any 
+ of the Master Files specified as the holder's Master File index field 
+ with the Key Tag 'INDEX'. Other Master File index fields with other Key 
+ Tags will not be considered. For example, Correspondent index field with 
+ Key Tag 'CORR'. </p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp5">
+	<li><p><span class="hcp7">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp7">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp5">
+	<li><p><a href="User_Group_-_Document_Management_Authorities.htm">User 
+	 Group - Document Management Authorities</a></p></li>
+</ul>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Document Management</p>
+  <p class="hcp8">&#160;</p>
+  <p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a17','POPUP666620605');
+//]]></script>
+ </body>
+</html>

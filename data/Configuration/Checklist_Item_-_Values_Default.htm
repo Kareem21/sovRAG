@@ -1,0 +1,641 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Values/Default</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+p.hcp3 { margin-left:96px; }
+span.hcp4 { mso-ansi-language:EN-US; }
+ol.hcp5 { list-style:decimal; }
+p.hcp6 { text-decoration:underline; }
+span.hcp7 { font-weight:bold;
+font-style:italic; }
+p.hcp8 { font-weight:bold; }
+p.hcp9 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Checklist Item - Values/Default</h1>
+<p>The Values/Default column are for additional configuration details of 
+ the checklist item. Depending on the field type, when clicking on the 
+ Values/Default column, you may be able to:</p>
+<ul class="hcp1">
+	<li><p>Enter information - This applies to the field types 'Formula' 
+	 and 'Conditional Group' where you can click and enter the formula 
+	 or condition.</p></li>
+	<li><p>See the Browse button - This applies to the other field types 
+	 and you need to click on the button in order to add the configuration 
+	 details. Different field types will require different &#160;types 
+	 of configuration details which can be entered in the following:</p></li>
+</ul>
+<ol style="list-style: disc;">
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>Values/Default - This is available for most field types 
+		 and is used to set a default value which can be:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>Hard-coded value by entering the value e.g. 'Individual'. 
+			 For the field type 'Address Card', enter the Address Card 
+			 number.</p></li>
+			<li><p>Retrieved from another checklist item using codes which 
+			 you can enter or obtain from <a href="../Shared/Workflow_Field_Wizard.htm">Workflow 
+			 Field Wizard</a>. </p></li>
+			<li><p>Fields with default value will be in read-only mode 
+			 unless the ‘[ROW.RW]’ tag is present. </p></li>
+		</ul></li>
+		<li><p>Values - This is available only for the field types 'List 
+		 with Edit' and 'List without Edit' for you to specify the options 
+		 for the list.</p></li>
+		<li><p>Default - This is available only for the field types 'List 
+		 with Edit' and 'List without Edit' to allow you to set a default 
+		 value.</p></li>
+		<li><p>Row Height - This is available only for the field types 
+		 'Text' and 'Go to Screen' and is used to:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>Increase the row height for memo-style input when the 
+			 field type is 'Text'.</p></li>
+			<li><p>Increase the row height to display multiple line Help/Description 
+			 for checklist items with the field type 'Go to Screen'.</p></li>
+		</ul></li>
+		<li><p>Max Characters - This is available only for the field type 
+		 'Text' to limit the number of characters that the users can input.</p></li>
+		<li><p>Validation Option - This is available only for the field 
+		 type 'Text' and is used to ensure the value entered by users is 
+		 of a valid format. Users cannot complete the step if the wrong 
+		 format is entered. There are three options:</p></li>
+		<ul class="hcp1">
+			<li><p>EMAIL - Select this for e-mail where the value entered 
+			 must contain '@'.</p></li>
+			<li><p>WEBSITE - Select this for website where the value entered 
+			 can start with 'http://', 'https://', or 'www.'.</p></li>
+			<li><p>REGEX - Select this for Regular Expression where the 
+			 value entered must match with the specific character pattern. 
+			 You can further configure this in 'Regular Expression Pattern'.</p></li>
+		</ul>
+		<li><p>Regular Expression Pattern - This is available only for 
+		 the field type 'Text'. For 'Validation Option' that is set to 
+		 'REGEX', you can confifure the character pattern according to 
+		 a certain format. For example, if you want users to enter a Malaysian 
+		 Identity Card number as the value, configure '\d{6}-\d{4}'. This 
+		 means that the value must be numbers in the format of 'xxxxxx-xx-xxxx', 
+		 where 'x' is a digit from 0-9. </p></li>
+		<li><p>Show List - This is available only for the field type 'Yes/No' 
+		 to allow the checklist item to be a Yes or No value.</p></li>
+		<li><p>Clipboard Field - This is available for most field type 
+		 to allow mapping of the item to the Database Field for copying 
+		 and pasting using <a href="../Shared/Viewpoint_Clipboard.htm">Viewpoint 
+		 Clipboard</a>.</p></li>
+		<li><p>Tag Values - This is available for most field types for 
+		 checklist item tags to be entered. Refer to <a href="../Shared/Checklist_Item_-_Tags.htm">Checklist 
+		 Item - Tags</a>.</p></li>
+		<li><p>Approval Card - This is available only for the field type 
+		 'Approval Card' and it is to specify the approval card.</p></li>
+		<li><p>ESP Option - This is available only for the field type 'Master 
+		 File (ESP)' to display the list of Master Files that can be selected. 
+		 There are two options:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>From Master File Relations - This retrieves all Master 
+			 Files that are related to the Master file the workflow is 
+			 for.</p></li>
+			<li><p>From Organisation - This retrieves all Master Files 
+			 that are in the same Organisation of the Master File the workflow 
+			 is for.</p></li>
+		</ul></li>
+		<li><p>Output - This is available for most field types and is used 
+		 to pass the value of the checklist item to the decision step.</p></li>
+		<li><p>Duplicate - This is available for most field types except 
+		 'Approval Card', 'Conditional Group', 'Change Link', 'Disbursement 
+		 Entry', 'Document Holder', 'Go to Screen', /Macro', 'Task', 'Time 
+		 Entry' and 'Workflow Link' field types to duplicate items and 
+		 grouped items within the workflow step.</p></li>
+		<li><p>Refresh - This option is available for most field types. 
+		 It is used to allow values for items to be refreshed automatically 
+		 when the workflow is opened. The refresh will apply to all items 
+		 AFTER the item where Refresh option is ticked. It is applicable 
+		 only for checklist used as workflow step.</p></li>
+		<li><p>Display Name - This is available only for the field type 
+		 'Document Link' to describe the linked document.</p></li>
+		<li><p>Jurisdiction Key - This is available only for the field 
+		 type 'Entity Type' to specify the key of a checklist item with 
+		 the country value.</p></li>
+		<li><p>Field/Mask - This is available only for the field types 
+		 'Lookup Value', 'User Table Value', 'Record Link' and 'Drop Down 
+		 Value' to specify the table and record type.</p></li>
+		<li><p>Multi Selection - This is available only for the field types 
+		 'Lookup Value' and 'User Table Value'. If ticked, users can select 
+		 more than one values.</p></li>
+		<li><p>Show Search Control - This is available only for the field 
+		 type 'Lookup Value' and 'User Table Value'. When ticked, the list 
+		 of lookup values or user table values will be displayed in the 
+		 'Select' screen. Only ‘Multi Selection’ or ‘Show Search Control’ 
+		 can be selected at a time, not both.</p></li>
+		<li><p>Formula - This is available only for the field types 'Lookup 
+		 Value' and 'User Table Value' and is used with Multi Selection 
+		 where you can apply a formula to the selections made. The available 
+		 formulas are:</p></li>
+		<li><p class="hcp3">SUM - This will add the scores 
+		 of the selected values.</p></li>
+		<li><p class="hcp3">AVG - This will calculate the 
+		 average of the scores for the selected values.</p></li>
+		<li><p class="hcp3">MAX - This will return the biggest 
+		 score for the selected values.</p></li>
+		<li><p class="hcp3">MIN - This will return the smaller 
+		 score for the selected value.</p></li>
+		<li><p>Sort - This is available only for the field types ’Lookup 
+		 Value’ and ’User Table Value’ to sort the available values alphabetically. 
+		 Select ‘N’ to sort by the Name, and ‘C’ to sort by the Code. If 
+		 the checkbox ’Multi Selection’ is ticked, the drop-down list will 
+		 be sorted according to Name in alphabetical order.</p></li>
+		<li><p>Include - This is available only for the field types ’Lookup 
+		 Value’ and ’User Table Value’ to filter the drop-down list of 
+		 a lookup table or user table by including only certain values. 
+		 The values to be included in the field can be obtained from the 
+		 corresponding lookup table or user table. To include multiple 
+		 values, separate each value with a ‘|’ (pipe) symbol.</p></li>
+		<li><p>Exclude - This is available only for the field types ’Lookup 
+		 Value’ and ’User Table Value’ to filter the drop-down list of 
+		 a lookup table or user table by excluding certain values. The 
+		 values to be included in the field can be obtained from the corresponding 
+		 lookup table or user table. To include multiple values, separate 
+		 each value with a ‘|’ (pipe) symbol.</p></li>
+		<li><p>Screen/Type - This is available only for the field type 
+		 'Go to Screen' to specify the screen by selecting it from the 
+		 list available.</p></li>
+		<li><p>Screen Entry - This is available only for the field type 
+		 'Go to Screen'. For screens with grids, this will give the option 
+		 of command button for adding new record such as Appoint for Statutory 
+		 Officers screen or New for Registrations screen, or updating information 
+		 on the existing record as well as removing. When specified, information 
+		 copied using Viewpoint Clipboard can be paste without the need 
+		 for users to manually click Appoint or New - users can click on 
+		 the icon and a new record will be created with the copied information. 
+		 If this is not specified, users will still need to manually click 
+		 New or Appoint command button in order to have the copied information 
+		 automatically pasted.</p></li>
+		<li><p>Criteria - This is available only for the field type 'Go 
+		 to Screen' to specify the record for screen shortcut.<br>
+		Note: This does not apply to Addresses and Statutory – Company 
+		 screens.</p></li>
+		<li><p>Overwrite Caption - This is available only for the field 
+		 type ‘Input Field’. This is to allow the captions for the checklist 
+		 items within the Input Field group in workflow to be overwritten 
+		 with the field captions specified in the corresponding field settings 
+		 for the selected Screen/Type and/or Screen Entry. &#160;</p></li>
+		<li><p>New Master File - This is available only for the field type 
+		 'Master File' and when ticked, will allow for creation of new 
+		 Master File.</p></li>
+		<li><p>Data Source - This is available only for the field type 
+		 <span class="hcp4">'<a href="Checklist_Item_-_Field_Type__Master_File.htm">Master 
+		 File</a>', </span><span class="hcp4">and 
+		 '<a href="Checklist_Item_-_Field_Type__User_Defined.htm">User 
+		 Defined</a>'.</span> The field ‘Data Source Attribute’ can be 
+		 specified for field type ‘Master File’ to further filter the list 
+		 of Master Files as Individual or Non Individual. The option <a class="dropspot" href="javascript:TextPopup(this)" id="a2">Show 
+		 Combo List</a> can be ticked/unticked when Data 
+		 Source is defined.</p>
+		<div class="droptext" id="POPUP562164976" style="display: none;">
+			</div>
+		</li>
+		<li><p>Required Step Key - This is available only for field type 
+		 ‘Required’ to specify the key for the workflow step(s). For multiple 
+		 keys, separate each key with a comma symbol.</p></li>
+		<li><p>Required Field Key - This is available only for field type 
+		 ‘Required’ to specify the key for the checklist item(s). For multiple 
+		 keys, separate each key with a comma symbol.</p></li>
+		<li><p>Service Code - This is available only for the field type 
+		 ‘Service’ to specify the list of service codes for selection for 
+		 the invoice.</p></li>
+		<li><p>Quantity Key - This is available only for the field type 
+		 ‘Service’ to specify the key of the checklist item that will contain 
+		 the unit quantity for the service. This checklist item can be 
+		 ‘Amount’, ‘List with Edit’, ‘List without Edit’, ‘Number’ and 
+		 ‘Yes/No’.</p></li>
+		<li><p>Item information - This is available only for the field 
+		 types 
+		 <a class="dropspot" href="javascript:TextPopup(this)" id="a111111131">'</a><a class="dropspot" href="javascript:TextPopup(this)" id="a11111116">Disbursement Entry'</a>, 
+		 <a class="dropspot" href="javascript:TextPopup(this)" id="a11111113">'</a><a class="dropspot" href="javascript:TextPopup(this)" id="a1111111">Task'</a> and 
+		 &#160;<a class="dropspot" href="javascript:TextPopup(this)" id="a11111115">'</a><a class="dropspot" href="javascript:TextPopup(this)" id="a11111112">Time Entry'</a> 
+		 where you will need to enter the relevant information for the 
+		 item.</p>
+		<div class="droptext" id="POPUP4380676971111112" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Master File - This is to select the Master File.</p></li>
+				<li><p>Service - This is to select the Service.</p></li>
+				<li><p>Number of Units - This is to specify the number 
+				 of units.</p></li>
+				<li><p>Description - This is to describe the item.</p></li>
+			</ul>
+  </div>
+		<div class="droptext" id="POPUP4380676971111115" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Task Type - This is to select the type available 
+				 in the drop-down selection.</p></li>
+				<li><p>Task Description - This is to describe the task.</p></li>
+				<li><p>Assigned To - This is to specify the assignee for 
+				 the task. This can be Entity File, Account File, Billing 
+				 File, Supplier File’s Administrator, Manager and Controller, 
+				 or the User. If this is not defined, the logged in user 
+				 will be displayed by default in the workflow.</p></li>
+				<li><p>Date Due - This is to allow you to set the due date.</p></li>
+				<li><p>Note - This is to enter additional information for 
+				 the item.</p></li>
+			</ul>
+  </div>
+		<div class="droptext" id="POPUP438067697111111" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Task Type - This is to select the type available 
+				 in the drop-down selection.</p></li>
+				<li><p>Task Description - This is to describe the task.</p></li>
+				<li><p>Assigned To - This is to specify the assignee for 
+				 the task. This can be Entity File, Account File, Billing 
+				 File, Supplier File’s Administrator, Manager and Controller, 
+				 or the User. If this is not defined, the logged in user 
+				 will be displayed by default in the workflow.</p></li>
+				<li><p>Date Due - This is to allow you to set the due date.</p></li>
+				<li><p>Note - This is to enter additional information for 
+				 the item.</p></li>
+			</ul>
+  </div>
+		<div class="droptext" id="POPUP4380676971111113" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Task Type - This is to select the type available 
+				 in the drop-down selection.</p></li>
+				<li><p>Task Description - This is to describe the task.</p></li>
+				<li><p>Assigned To - This is to specify the assignee for 
+				 the task. This can be Entity File, Account File, Billing 
+				 File, Supplier File’s Administrator, Manager and Controller, 
+				 or the User. If this is not defined, the logged in user 
+				 will be displayed by default in the workflow.</p></li>
+				<li><p>Date Due - This is to allow you to set the due date.</p></li>
+				<li><p>Note - This is to enter additional information for 
+				 the item.</p></li>
+			</ul>
+  </div>
+		<div class="droptext" id="POPUP4380676971111116" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Master File - This is to select the Master File.</p></li>
+				<li><p>Service - This is to select the Service.</p></li>
+				<li><p>Number of Units - This is to specify the number 
+				 of units.</p></li>
+				<li><p>Description - This is to describe the item.</p></li>
+			</ul>
+  </div>
+		<div class="droptext" id="POPUP43806769711111131" style="display: none;">
+			<ul class="hcp1">
+				<li><p>Task Type - This is to select the type available 
+				 in the drop-down selection.</p></li>
+				<li><p>Task Description - This is to describe the task.</p></li>
+				<li><p>Assigned To - This is to specify the assignee for 
+				 the task. This can be Entity File, Account File, Billing 
+				 File, Supplier File’s Administrator, Manager and Controller, 
+				 or the User. If this is not defined, the logged in user 
+				 will be displayed by default in the workflow.</p></li>
+				<li><p>Date Due - This is to allow you to set the due date.</p></li>
+				<li><p>Note - This is to enter additional information for 
+				 the item.</p></li>
+			</ul>
+  </div>
+		</li>
+		<li><p>Holder Settings - This is available only for the field type 
+		 'Document Holder' to specify the filing cabinet and index fields.</p></li>
+		<li><p>Store Action - This is available only for the field type 
+		 'Document Holder' to specify the actions when documents are uploaded. 
+		 Each tag must be separated with a ‘|’ (pipe) symbol.<br>
+		<br>
+		The available tags are:</p></li>
+		<ul class="hcp1">
+			<li><p>EXTRACTXML – This will extract the content of form into 
+			 the clipboard and store it in the database.</p></li>
+			<li><p>REFRESH – This will refresh the workflow content.</p></li>
+			<li><p>AUTOSTORE &#160;– This will store the documents automatically 
+			 when the Document Holder is newly created.</p></li>
+		</ul>
+		<li><p>Maximum Files - This is available only for the field type 
+		 'Document Holder' to specify the maximum number of files that 
+		 is allowed to be stored into the holder. </p></li>
+		<li><p>File Size (MB) - This is available only for the field type 
+		 'Document Holder' to specify the maximum file size of every document 
+		 that can be uploaded. </p></li>
+		<li><p>File Type - This is available only for the field type 'Document 
+		 Holder' to specify the type of files that can be uploaded.</p></li>
+		<li><p>Note Editor - This is available for field types ‘Change 
+		 Link’, ‘Workflow Link’, 'Macro', ‘Word Report’, ‘Excel Statement’, 
+		 ‘File Review’ and 'Standard Report' to enter tags for these field 
+		 types.</p></li>
+		<li><p>Hide on Screen - This is available for most field types 
+		 except field types with Note Editor. When ticked, the item will 
+		 not be displayed in the Workflow screen. For the field types with 
+		 Note Editor, users may enter the [HideOnScreen=1] tag in the Note 
+		 Editor screen to hide the item from the Workflow screen.</p></li>
+		<li><p>Hide on Report - This is available for most field types 
+		 except field types with Note Editor. When ticked, the item will 
+		 not be displayed in the Workflow report. For the field types with 
+		 Note Editor, users may enter the [HideOnReport=1] tag in the Note 
+		 Editor screen to hide the item from the Workflow report.</p></li>
+	</ul></li>
+</ol>
+<h3>Setting Default Value</h3>
+<p>The default value can be a specific value or it can be codes to retrieve 
+ values from another checklist item or from the database. For the codes 
+ to retrieve values, you can use the Workflow Field Wizard. However, if 
+ SQL is used, then the field code will follow this syntax: (+&lt;QueryName&gt;.&lt;Field&gt;+).</p>
+<ol class="hcp5">
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Enter the value or code in Values/Default.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Defining List Options</h3>
+<p>When user is to select options from a list, this can be from a lookup 
+ table, user table, drop-down table or list created using the field type 
+ ‘List without Edit’ or ‘List with Edit’.</p>
+<p>&#160;</p>
+<p class="hcp6">Lookup Table/User Table/Drop-down 
+ Table</p>
+<ol class="hcp5">
+	<li><p>Set the field type accordingly.</p></li>
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Select the table.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p><span class="hcp7">Note</span>: For 
+ Lookup table value and User table value, you can tick Multi Selection 
+ to allow more than one selection.</p>
+<p>&#160;</p>
+<p class="hcp6">List without Edit/List with Edit</p>
+<ol class="hcp5">
+	<li><p>Set the field type accordingly.</p></li>
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Enter the options in Values. Separate each option with a pipe 
+	 symbol '|'.</p></li>
+	<li><p>If you would like to set a default value, enter this in Default.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p><span class="hcp7">Note</span>: The 
+ options can be fixed text options that you enter or it can be references 
+ to checklist items in a previous workflow step. For the latter, use (+WF.&lt;Key&gt;+) 
+ code to refer to the checklist item where &lt;Key&gt; is the key of the 
+ checklist item.</p>
+<p>&#160;</p>
+<p class="hcp6">System User/Administrator Group/Master 
+ File</p>
+<p>This does not require any additional setup apart from setting the field 
+ type appropriately.</p>
+<p>&#160;</p>
+<h3>Defining Yes/No as Options</h3>
+<p>When the field type is 'Yes/No', this will present a checkbox for the 
+ user to tick for 'Yes' or leave blank for 'No'. If you prefer for the 
+ user to select the option Yes or No, then do the following:</p>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Yes/No'.</p></li>
+	<li><p>Click the Browse button.</p></li>
+	<li><p>In Show List, enter Yes|No.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Defining Screen</h3>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Go to Screen'.</p></li>
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Select the screen in Screen/Type.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p><span class="hcp7">Note</span>: Tags 
+ can be added to embed the screen or not. Refer to <a href="../Shared/Checklist_Item_-_Tags.htm">Checklist 
+ Item - Tags</a>.</p>
+<p>&#160;</p>
+<h3>Defining Data Source for Master File</h3>
+<p>This allows for list of Master Files to be filtered based on pre-defined 
+ condition of Components Activated or Roles Allowed for the Master File.</p>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Master File'.</p></li>
+	<li><p>Click the Browse button in the Values/Default column.</p></li>
+	<li><p>Select the option for Data Source.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>If Show Combo List option is not ticked, user can:</p>
+<ul class="hcp1">
+	<li><p>Click on the magnifying glass icon to select the Master File.</p></li>
+	<li><p>Enter the full name of the Master File.</p></li>
+	<li><p>Enter the code of the Master File prefixed with a plus sign 
+	 e.g. +ARCHER.</p></li>
+</ul>
+<p>If Show Combo List option is ticked, then the list of Master Files will 
+ appear as follows:</p>
+<p><img src="../image220.gif" alt="" style="border: none;" border="0"></p>
+<p>&#160;</p>
+<h3>Defining Data Source</h3>
+<p>This is similar to the above except that the list can be filtered based 
+ on condition(s) specified for the data source.</p>
+<ol class="hcp5">
+	<li><p>For the workflow step, click Edit Properties to define the data 
+	 source in the Tag Values field.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Set the field type to 'User Defined' or 'Master File'.</p></li>
+	<li><p>Click on the Browse button in the Values/Default column.</p></li>
+	<li><p>In the Data Source field, enter the name of the Data Source 
+	 as defined in step 1.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<h3>&#160;</h3>
+<h3>Accessing New Master File Wizard</h3>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Master File'.</p></li>
+	<li><p>Click on the Browse button in the Values/Default column.</p></li>
+	<li><p>Tick the option New Master File.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Defining Path for Document</h3>
+<p>If you would like the workflow to open a document file, ensure that 
+ the file is saved to the Viewpoint\Forms folder.</p>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Document Link'.</p></li>
+	<li><p>Click the Browse button in the Values/Default column.</p></li>
+	<li><p>In Values/Default, enter the path for the document. If the document 
+	 is stored in Document Manager, <a href="Checklist_Item_-_Field_Type__Document_Link.htm">use 
+	 tags</a> to specify the document.</p></li>
+	<li><p>In Display Name, enter a meaningful name for the file. Otherwise, 
+	 the path is displayed for the user.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Defining URL for Website</h3>
+<ol class="hcp5">
+	<li><p>Set the field type to 'Document Link'.</p></li>
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Enter the URL for the website in Values/Default.</p></li>
+	<li><p>In Display Name, you can enter the name of the website. Otherwise, 
+	 the URL is displayed for the user.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p class="hcp8"><span style="font-style: italic;">Note</span>: 
+ <span style="font-weight: normal;">The URL must start with 'http' or 'www'.</span></p>
+<p class="hcp8">&#160;</p>
+<h3>Defining Decision</h3>
+<p>If the step is just before a decision step, you can have the input of 
+ an item in the step make the decision automatically.</p>
+<ol class="hcp5">
+	<li><p>Click the Browse button.</p></li>
+	<li><p>Tick Output option.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Select the decision step.</p></li>
+	<li><p>Enter the input for a Yes decision.</p>
+	<ul class="hcp1">
+		<li><p>Input Type - Select if the input is text or number.</p></li>
+		<li><p>If Yes - Set the value for a Yes decision. If the Input 
+		 Type is Text, then the operator is In. If the Input Type is Number, 
+		 then you can select these operators:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>= means the value must be a number equal to the specified 
+			 value to go to Yes branch.</p></li>
+			<li><p>&gt;= &#160;means the value must be a number that is 
+			 equal to or greater than the specified value to go to Yes 
+			 branch.</p></li>
+			<li><p>&lt;= &#160;means the value must be a number that is 
+			 equal to or smaller than the specified value to go to Yes 
+			 branch.</p></li>
+			<li><p>&lt;&gt; means the value must be a number that is not 
+			 equal to the specified value to go to Yes branch.</p></li>
+			<li><p>&gt; means the value must be a number that is greater 
+			 than the specified value to go to Yes branch.</p></li>
+			<li><p>&lt; means the value must be a number that is smaller 
+			 than the specified value to go to Yes branch.</p></li>
+		</ul></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>If the item is of the 'Formula' field type, then the Output option is 
+ not seen but you can still use this item to define the decision. In this 
+ case, add the [OUTPUT=] tag. Refer to <a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+ Step - Tags</a>.</p>
+<p>&#160;</p>
+<h3>Creating Conditional Group</h3>
+<ol class="hcp5">
+	<li><p>Enter a key for the checklist item that will be used as the 
+	 condition.</p></li>
+	<li><p>Create sub-items for the checklist item by indenting these checklist 
+	 items.</p></li>
+	<li><p>Set the field type for the main item to 'Conditional Group'.</p></li>
+	<li><p>Click in Values/Default column.</p></li>
+	<li><p>Enter the condition.</p></li>
+</ol>
+<p><span class="hcp7">Note</span>: The 
+ condition can be based on the value or score of the checklist item. If 
+ it is to be based on the score, specify it as &lt;Key&gt;.Score.</p>
+<p>&#160;</p>
+<h3>Defining Formula</h3>
+<ol class="hcp5">
+	<li><p>Enter a key for all checklist items that will be used in the 
+	 formula.</p></li>
+	<li><p>Set the field type for the checklist item to Formula.</p></li>
+	<li><p>Click in Values/Default column.</p></li>
+	<li><p>Enter the formula.</p></li>
+</ol>
+<h3>&#160;</h3>
+<h3>Assigning Approval Card</h3>
+<ol class="hcp5">
+	<li><p>Set the field type for the checklist item to Approval Card.</p></li>
+	<li><p>Click on the Browse button in the Values/Default column.</p></li>
+	<li><p>Select the Approval Cad in Approval Card.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<h3>&#160;</h3>
+<h3>Defining Linked Workflow</h3>
+<ol class="hcp5">
+	<li><p>Set the field type for the checklist item to Workflow Link.</p></li>
+	<li><p>Click on the Browse button in the Values/Default column.</p></li>
+	<li><p>In the Note Editor, enter details for the other workflow.</p></li>
+	<li><p>Click OK.</p></li>
+</ol>
+<p><span class="hcp7">Note</span>: Refer 
+ to <a href="Checklist_Item_-_Field_Type__Workflow_Link.htm">Workflow Link 
+ - Tags</a>.</p>
+<p>&#160;</p>
+<h3>Defining Macro</h3>
+<ol class="hcp5">
+	<li><p>Set the field type for the checklist item to Macros.</p></li>
+	<li><p>Click on the Browse button in the Values/Default column.</p></li>
+	<li><p>In the Note Editor, enter the tags for the macro(s).</p></li>
+	<li><p>Click OK.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist - Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Document_Link.htm">Checklist 
+	 Item – Field Type: Document Link</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Formula.htm">Checklist 
+	 Item - Field Type: Formula</a></p></li>
+	<li><p><a href="Supported_Screens_for_Macros.htm">Checklist Item - 
+	 Field Type: Macros</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Master_File.htm">Checklist 
+	 Item - Field Type: Master File</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__User_Defined.htm">Checklist 
+	 Item - Field Type: User Defined</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Yes_No.htm">Checklist 
+	 Item - Field Type: Yes/No</a></p></li>
+	<li><p><a href="../Shared/Checklist_Item_-_Tags.htm">Checklist Item 
+	 - Tags</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Workflow_Link.htm">Workflow 
+	 Link - Tags</a></p></li>
+	<li><p><a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+	 Step - Tags</a></p></li>
+	<li><p><a href="Checklist_Item_-_Score_Assignment.htm">Checklist Item 
+	 - Score Assignment</a></p></li>
+	<li><p><a href="Configuring_Checklist_Item.htm">Configuring Checklist 
+	 Item</a></p></li>
+	<li><p><a href="../Shared/Workflow_Field_Wizard.htm">Workflow Field 
+	 Wizard</a></p></li>
+</ul>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Values/Default</p>
+  <p class="hcp9">&#160;</p>
+  <p class="hcp9">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp9">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP575610690');
+	TextPopupInit('a2','POPUP562164976');
+	TextPopupInit('a3','POPUP573139118');
+	TextPopupInit('a111111131','POPUP43806769711111131');
+	TextPopupInit('a11111116','POPUP4380676971111116');
+	TextPopupInit('a11111113','POPUP4380676971111113');
+	TextPopupInit('a1111111','POPUP438067697111111');
+	TextPopupInit('a11111115','POPUP4380676971111115');
+	TextPopupInit('a11111112','POPUP4380676971111112');
+//]]></script>
+ </body>
+</html>

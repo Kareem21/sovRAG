@@ -1,0 +1,479 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+<meta name="MS-HAID" content="User Tables/Values">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>User Tables/Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+li.hcp4 { font-weight:bold; }
+span.hcp5 { font-weight:normal; }
+li.hcp6 { font-weight:normal; }
+td.hcp7 { border:Inset 1px #000000; }
+p.hcp8 { margin-left:6pt;
+margin-right:6pt;
+color:#2d005b; }
+p.hcp9 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>User Tables/Values</h1>
+<p>User tables can be custom-created for these functions:</p>
+<ul class="hcp1">
+	<li><p>Prevent data discrepancy by providing a standard list of accepted 
+	 values for users to select.</p></li>
+	<li><p>For referencing tags.</p></li>
+</ul>
+<p>You can create as many user tables as you need, as opposed to lookup 
+ tables, which are system-defined.</p>
+<p>The upper grid displays the User Tables. When a User Table record is 
+ selected, the bottom grid will load the User Values for the selected User 
+ Table.</p>
+<p>&#160;</p>
+<p class="FldExplain">User Tables / Values Listing</p>
+<p>This shows all the existing user tables in Viewpoint. Click to select 
+ the table you require.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User Table list. Click on the relevant command button 
+ to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a11">add</a> 
+	 a new User Table.</p>
+	<div class="droptext" id="POPUP443050909" style="display: none;">
+		<p>Enter the relevant information and click Update.</p>
+		<p>In the Tag Values field, tags are available to:</p>
+		<ul class="hcp1">
+			<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Control 
+			 whether new values can be added to the User Table</a></p>
+			<div class="droptext" id="POPUP509234597" style="display: none;">
+				<p>[ALLOWNEW=N] prevents users from adding new values to 
+				 the User Table manually by disabling the New button for 
+				 the User Value.</p>
+				<p>For import actions either through <a href="Import_Export_Settings.htm">Import/Export 
+				 Settings</a> or <a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Data 
+				 Replication</a>, this tag is to be entered in the environment 
+				 where the User Table will be exported (Source/Master) 
+				 environment.</p>
+				<p>In Data Replication, the Master environment is used 
+				 to set up the configuration, hence the [ALLOWNEW=N] tag 
+				 does not limit the Master environment to create new User 
+				 Value.</p>
+				<p>The [ALLOWNEW=N] tag and configurations from Master 
+				 environment will then replicated to the Subcribers where 
+				 the tag will take effect and disallow user in creating 
+				 new User Value.</p>
+				<p>In the environment where import is performed (Destination/Subscriber):</p>
+				<ul class="hcp1">
+					<li><p>when the exported .xml file contains value but 
+					 the values do not exist in the destination/subscriber 
+					 environment, these will be added.</p></li>
+					<li><p>when the exported .xml file does not contain 
+					 value but the values exist in the destination/subscriber 
+					 environment, these will be deactivated in the destination/subscriber 
+					 environment.</p></li>
+					<li><p>when the exported .xml file contains the User 
+					 Table but the User Table does not exist in the destination/subscriber 
+					 environment, the User Table will be imported.</p></li>
+					<li><p>when the exported .xml file does not contain 
+					 the User Table but the User Table exists in the destination/subscriber 
+					 environment, the User Table will be deactivated in 
+					 the destination/subscriber environment.</p></li>
+				</ul>
+				<p>&#160;If this tag is not entered, the default value 
+				 is [ALLOWNEW=Y].</p>
+   </div></li>
+			<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Specify 
+			 the subscriber(s) of the User Table</a></p>
+			<div class="droptext" id="POPUP509538206" style="display: none;">
+				<ul class="hcp1">
+					<li><p>[SUBSCRIBER=<span class="hcp3">&lt;Subscriber&gt;</span>] 
+					 is to specify the subscriber group(s) that the User 
+					 Table is for. For multiple groups, use a comma to 
+					 separate e.g. [SUBSCRIBER=GEN,ASA,EUR]</p></li>
+					<li><p>[SUBSCRIBER&lt;&gt;<span class="hcp3">&lt;Subscriber&gt;</span>] 
+					 is to specify subscribers that will be excluded.</p></li>
+				</ul>
+				<p class="SeeAlso">See also:</p>
+				<ul class="hcp1">
+					<li><p><a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Master 
+					 Configuration Environment (MCE) and Data Replication</a></p></li>
+				</ul>
+				<p>&#160;</p>
+				<p>&#160;</p>
+   </div></li>
+		</ul>
+  </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected User Table in terms of the:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Name field</p></li>
+		<li><p>Note field</p></li>
+		<li><p>Tag Values field</p></li>
+		<li><p><a href="Risk_Ratings.htm">Risk Rating</a> - Tick this to 
+		 apply risk scores for the values of the User Table.</p></li>
+		<li><p>Active option</p></li>
+	</ul></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected User Table</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">User Table Values</p>
+<p>This shows the values for the selected User Table.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User Table Value list. Click on the relevant command 
+ button to perform the necessary.</p>
+<ul class="hcp1">
+	<li class="hcp4"><p>New <span class="hcp5">- 
+	 Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a21">add 
+	 a new value</a> to a user table. If the [ALLOWNEW=N] 
+	 tag is specified for the User Table, this will be inactive.</span></p>
+	<div class="droptext" id="POPUP4573358941" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li class="hcp6"><p>Select the user table from 
+			 the User Table list.</p></li>
+			<li class="hcp6"><p>Click New.</p></li>
+			<li class="hcp6"><p>Enter details for the value.</p></li>
+			<li class="hcp6"><p>Click Update.</p></li>
+		</ol>
+		<p>&#160;</p>
+		
+		<ul class="hcp1">
+			
+			
+		</ul>
+ </div></li>
+	<li class="hcp4"><p>Edit <span class="hcp5">- 
+	 Click this to edit a selected table or value. Further parameter configuration 
+	 can be done using Tag Values.</span></p></li>
+	<li class="hcp4"><p>Delete <span class="hcp5">- 
+	 Click to delete a user table or value. You will need to confirm the 
+	 deletion.</span></p></li>
+</ul>
+<p>&#160;</p>
+<h3>User Tables to note</h3>
+<p>The following lists Viewpoint-specific User Tables and where they are 
+ used.</p>
+
+<table class="Table1" style="border: Outset 2px #000000; vertical-align: top;" cellspacing="0px">
+	<col>
+	<col>
+	<col>
+	<tr class="t1st">
+		<td class="hcp7"><p class="hcp8">User 
+		 Table</p></td>
+		<td class="hcp7"><p style="margin-right: -71px; 
+													 color: #2d005b;">Used 
+		 In</p></td>
+		<td class="hcp7"><p class="hcp8">Notes</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Analyses Codes Time Entry [TANALYSES]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Time and Disbursements - Time Entry</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="System_Defaults_-_Practice_Management.htm">System 
+			 Defaults &gt; Practice Management</a></p></li>
+			<li><p class="hcp9"><a href="Service_Master.htm">Service 
+			 Master</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Controlling Person Type [CRSCNP]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Master File Relations - Relation Type 
+		 'CNP'</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Country Matrix [AEOI]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">File Review - AEOI Review</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Tag for this table is for identification 
+		 of countries a particular reporting authority has agreed to exchange 
+		 with.</p>
+		<h6 class="Heading8">[&lt;Regime&gt;.RACREATE.&lt;ReportingAuthorityCountryCode&gt;=&lt;ExchangeCountryCode&gt;]</h6>
+		<p class="hcp9">where:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9">&lt;Regime&gt; 
+			 refers to the reporting regime.</p></li>
+			<li><p class="hcp9">&lt;ReportingAuthorityCountryCode&gt; 
+			 refers to the country of the reporting authority.</p></li>
+			<li><p class="hcp9">&lt;ExchangeCountryCode&gt; 
+			 refers to the country the reporting authority will be exchanging 
+			 information with.</p></li>
+		</ul>
+		<p class="hcp9">Example:</p>
+		<p class="hcp9">[C.RACREATE.BM=AR,BE,BG,CZ,DK,EE,FO,FI,FR,DE,HU,IS,IN,IE,IT,KP,LV,LT,LU,MT,MX,NL 
+		 ,NO,RO,SM,SC,SK,SI,ZA,ES,SE,GB]</p>
+		<p class="hcp9">this defines the 
+		 countries that reporting authority for Bermuda is exchanging information 
+		 with for the CRS Reporting Regime..</p>
+		<p class="hcp9">&#160;</p>
+		<p class="hcp9">[C.RACREATE.BS=NONE]</p>
+		<p class="hcp9">this specifies 
+		 that there is no country for exchange for the reporting authority 
+		 of Bahamas.</p>
+		<p class="hcp9">&#160;</p>
+		<p class="hcp9">[C.RACREATE.BM=]</p>
+		<p class="hcp9">this specifies 
+		 that the reporting authority of Bermuda will exchange information 
+		 with all countries.</p>
+		<p class="hcp9">&#160;</p>
+		<p class="SeeAlso">See also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/File_Review_Function.htm">File 
+			 Review</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">CRS Classification [FCRS]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Classification and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="../Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">FATCA Classification [FCST]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Classification and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="../Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Foreign Financial Institution Category 
+		 [FFIT]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="../Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Geographical Areas [SCAT2]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Security Master</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Industry Classification [SCAT1]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Security Master</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Intercompany [INTERCO]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Practice Manager - Billing/ Supplier</p>
+		<p class="hcp9">Accounting - Journals</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/Unit_Codes.htm">Unit 
+			 Codes</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Organisational Units [ORGUNITS]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Throughout Viewpoint</p>
+		<p class="hcp9">Accounting - Journals</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="System_Defaults_-_Practice_Management.htm">System 
+			 Defaults &gt; Practice Management</a></p></li>
+			<li><p class="hcp9"><a href="../Shared/Unit_Codes.htm">Unit 
+			 Codes</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Organisational Codes [ORGCODES]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Practice Manager - Matters/ Supplier</p>
+		<p class="hcp9">Accounting - Journals</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">&#160;See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/Unit_Codes.htm">Unit 
+			 Codes</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Project Code [PROJECTS]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Practice Manager - Purchase Order</p>
+		<p class="hcp9">Accounting - Journals</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="../Shared/Unit_Codes.htm">Unit 
+			 Codes</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">PSC Status [PSCSTATUS]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Interest 
+		 Types</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Reporting FI Category [FRFICAT]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Reporting FI Filer Category [RFICAT]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Service Line [SERVLINE]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p class="hcp9">Service Master - Service Line</p>
+		<p class="hcp9">Accounting - Unit 
+		 Codes</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">&#160;See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Configuration/Service_Master.htm">Service 
+			 Master</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Unit_Codes.htm">Unit 
+			 Codes</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">Sponsoring Entity Category [SPNCAT]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">TIN Type - Corporate [FICTIN]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="hcp9">TIN Type - Individual [FINTIN]</p></td>
+		<td class="t2Col" style="border: Inset 1px #000000;"><p>Classification 
+		 and Indicia</p></td>
+		<td class="t1Col" style="border: Inset 1px #000000;"><p class="SeeAlso">See 
+		 also:</p>
+		<ul class="hcp1">
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/AEOI_Review_-_Tags.htm">AEOI 
+			 Review - Tags</a></p></li>
+			<li><p class="hcp9"><a href="file://putrajaya/vp_sds/Unit_DocQA/Document Master/Robohelp/ViewPoint7.4.WIN/Shared/Classification_and_Indicia.htm">Classification 
+			 and Indicia</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Inset 1px #000000; border-right: Inset 1px #000000; 
+			 border-bottom: Inset 1px #000000;"><p class="hcp9">Unique 
+		 Entity Number Type [SG_UENTP]</p></td>
+		<td class="t2Col" style="border-left: Inset 1px #000000; border-right: Inset 1px #000000; 
+			 border-bottom: Inset 1px #000000;"><p>Identity Register</p></td>
+		<td class="t1Col" style="border-left: Inset 1px #000000; border-right: Inset 1px #000000; 
+			 border-bottom: Inset 1px #000000;"><p>The tags are used to 
+		 map and match the UEN TIN types with efileConnect. The File Submission 
+		 template in AEOI FIling Management will pick up the tags and efileConnect 
+		 will use the tag values to import the UEN TIN type for the Sending 
+		 Account creation.</p></td>
+	</tr>
+</table>
+
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Localise_Script_-_User_Table_Values.htm">Localise Script 
+	 - User Tables/Values</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Lookup_Values.htm">General</a> &gt; User Tables/Values</p>
+ <p class="hcp10">&#160;</p>
+ <p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp10">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP443050909');
+	TextPopupInit('a1','POPUP509234597');
+	TextPopupInit('a2','POPUP509538206');
+	TextPopupInit('a21','POPUP4573358941');
+//]]></script>
+</body>
+</html>

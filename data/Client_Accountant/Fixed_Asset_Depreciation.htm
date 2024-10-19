@@ -1,0 +1,1167 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Fixed Asset Depreciation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+table.hcp2 { border-collapse:separate; }
+td.hcp3 { border-bottom:Solid 1px #000000; }
+p.hcp4 { text-align:center; }
+span.hcp5 { font-weight:bold; }
+ul.hcp6 { list-style:disc; }
+table.hcp7 { border:Solid 1px #000000;
+border-collapse:separate; }
+p.hcp8 { text-align:center;
+font-weight:bold; }
+span.hcp9 { text-decoration:underline; }
+p.hcp10 { text-decoration:none; }
+ol.hcp11 { list-style:decimal; }
+span.hcp12 { font-weight:bold;
+font-style:italic; }
+p.hcp13 { font-weight:bold; }
+p.hcp14 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Fixed Asset Depreciation</h1>
+<p>The Fixed Asset Depreciation function allows the system to systematically 
+ reduce recorded cost of fixed assets and create the relevant journal entries 
+ for the depreciation. The journal entries created will CREDIT the fixed 
+ asset's sub-ledger account and DEBIT the Expenses account for the Nominal 
+ Account of the Fixed Asset's sub-ledger. If Unit Codes are used, then 
+ the values will follow Unit Code values from last journal entry for the 
+ sub-ledger and nominal account. Other fields will follow default values 
+ but these can be customised using tags.</p>
+<p>At the moment, there is only one depreciation method - Straight Line 
+ which needs to be applied to a Fixed Asset sub-ledger account in order 
+ to work.</p>
+<p>&#160;</p>
+<h2>Journal Entries for Depreciation</h2>
+<p>The journal entries that are created will CREDIT the Sub-ledger account 
+ and DEBIT the Expenses account for the Nominal Account of the Fixed Asset’s 
+ sub-ledger.</p>
+<p><img src="../image200.jpg" alt="" width="684" height="210" border="0" class="hcp1"></p>
+<p><img src="../image201.jpg" alt="" width="670" height="618" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>If Unit Codes are used, the values for all Unit Codes will be based 
+ on Unit Code values from last journal entry for the sub-ledger and nominal 
+ account.</p>
+<p>&#160;</p>
+<h2>Depreciation Calculation</h2>
+<h3>Straight Line Depreciation Method</h3>
+<p>This method depreciates the cost of the fixed asset evenly throughout 
+ its useful life using the following formula:</p>
+<table cellspacing="0" width="550" class="hcp2">
+	<col style="width: 24.618%;">
+	<col style="width: 3.334%;">
+	<col style="width: 3.334%;">
+	<col style="width: 67.083%;">
+	<tr>
+		<td rowspan="2"><p>Depreciation</p></td>
+		<td rowspan="2">=</td>
+		<td rowspan="2">-</td>
+		<td class="hcp3"><p class="hcp4">(Previous 
+		 Balance - Residual Value)</p></td>
+	</tr>
+	<tr>
+		<td><p class="hcp4">(Number of periods - Current 
+		 Depreciation Period + 1)</p></td>
+	</tr>
+	<tr>
+		<td colspan="4">&#160;</td>
+		
+	</tr>
+	<tr>
+		<td><p>Balance</p></td>
+		<td><p>=</p></td>
+		<td colspan="2"><p>Previous Balance + (Fixed Asset Transactions) 
+		 + Depreciation</p></td>
+		
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Transactions with movement codes FA, FD, FE, FO and FV are taken into 
+ account for the calculation (but each asset requires an FA journal). Transactions 
+ with movement codes FX and FU are excluded.</p>
+<p>Once the Balance is less than the Residual Value, then <span class="hcp5">Depreciation 
+ = 0</span></p>
+<p>&#160;</p>
+<p>As for the start date of the depreciation period, this is based on the 
+ Last Year-End date for the Account File:</p>
+<ul class="hcp6">
+	<li><p>If Last Year-End date is the last day of the month, the depreciation 
+	 date is the last day of the month.</p></li>
+	<li><p>If Last Year-End date is not the last day of the month, the 
+	 depreciation date will be the same 'day' as Last Year-End date. For 
+	 example, if the Purchase Date is 15 May 2013 and the Last Year-End 
+	 date is 15 July 2013, the depreciation period will be on the 15th.</p></li>
+</ul>
+<p>However, if there is a depreciation entry that is manually posted in 
+ a period, the depreciation date will now follow the posting date.</p>
+<p>&#160;</p>
+<h6>Purchase Date on Last Year-End Date</h6>
+<p>Example:</p>
+<table cellspacing="0" width="66.882%" class="hcp7">
+	<col style="width: 21.618%;">
+	<col style="width: 4.208%;">
+	<col style="width: 28.238%;">
+	<col style="width: 18.939%;">
+	<col style="width: 3.115%;">
+	<col style="width: 22.86%;">
+	<tr>
+		<td><p>Purchase Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 8,555.00</p></td>
+		<td><p>Purchase Date</p></td>
+		<td><p>=</p></td>
+		<td><p>15/05/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Residual Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 1.00</p></td>
+		<td><p>Last Year-End Date</p></td>
+		<td><p>=</p></td>
+		<td><p>15/07/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Frequency</p></td>
+		<td><p>=</p></td>
+		<td><p>Monthly</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td><p>Number of Periods</p></td>
+		<td><p>=</p></td>
+		<td><p>12</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>The following table lists the depreciation of the fixed asset for all 
+ 12 periods:</p>
+<table cellspacing="0" width="100%" border="1" class="hcp2">
+	<col style="width: 7.674%;">
+	<col style="width: 8.757%;">
+	<col style="width: 16.857%;">
+	<col style="width: 9.338%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<tr>
+		<td><p class="hcp4"><span class="hcp5">Date</span></p></td>
+		<td><p class="hcp8">Depreciation</p>
+		<p class="hcp8">Period</p></td>
+		<td><p class="hcp8">Depreciation 
+		 per period</p>
+		<p class="hcp8">(FE)</p>
+		<p class="hcp8">A</p></td>
+		<td><p class="hcp8">Acquisition</p>
+		<p class="hcp8">(FA or FO)</p>
+		<p class="hcp8">B</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FV)</p>
+		<p class="hcp8">C</p></td>
+		<td><p class="hcp8">Disposal</p>
+		<p class="hcp8">(FD)</p>
+		<p class="hcp8">D</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FX or RU)</p>
+		<p class="hcp8">E</p></td>
+		<td><p class="hcp8">Balance</p>
+		<p class="hcp8">F</p>
+		<p class="hcp8">(A+B+C+D+ Previous 
+		 F)</p></td>
+	</tr>
+	<tr>
+		<td><p>15/05/2013</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+	</tr>
+	<tr>
+		<td><p>15/06/2013</p></td>
+		<td><p class="hcp4">1</p></td>
+		<td><p class="hcp4">-712.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">7,842.17</p></td>
+	</tr>
+	<tr>
+		<td><p>15/07/2013</p></td>
+		<td><p class="hcp4">2</p></td>
+		<td><p class="hcp4">-712.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1,000.00</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,129.33</p></td>
+	</tr>
+	<tr>
+		<td><p>15/08/2015</p></td>
+		<td><p class="hcp4">3</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">7,316.50</p></td>
+	</tr>
+	<tr>
+		<td><p>15/09/2015</p></td>
+		<td><p class="hcp4">4</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,503.67</p></td>
+	</tr>
+	<tr>
+		<td><p>15/10/2013</p></td>
+		<td><p class="hcp4">5</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1,000.00</p></td>
+		<td><p class="hcp4">5,690.83</p></td>
+	</tr>
+	<tr>
+		<td><p>15/11/2013</p></td>
+		<td><p class="hcp4">6</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">4,878.00</p></td>
+	</tr>
+	<tr>
+		<td><p>15/12/2013</p></td>
+		<td><p class="hcp4">7</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">4,065.17</p></td>
+	</tr>
+	<tr>
+		<td><p>15/01/2014</p></td>
+		<td><p class="hcp4">8</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">3,252.33</p></td>
+	</tr>
+	<tr>
+		<td><p>15/02/2014</p></td>
+		<td><p class="hcp4">9</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">2,439.50</p></td>
+	</tr>
+	<tr>
+		<td><p>15/03/2014</p></td>
+		<td><p class="hcp4">10</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1,626.67</p></td>
+	</tr>
+	<tr>
+		<td><p>15/04/2014</p></td>
+		<td><p class="hcp4">11</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">813.83</p></td>
+	</tr>
+	<tr>
+		<td><p>15/05/2014</p></td>
+		<td><p class="hcp4">12</p></td>
+		<td><p class="hcp4">-812.83</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1.00</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Period 1 (15/06/2013):</p>
+<p>Depreciation 1</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)]</p>
+<p>= - [(8,555.00 - 1.00) / (12 - 1 + 1)]</p>
+<p>= <span class="hcp9">- 712.83</span></p>
+<p>&#160;</p>
+<p>Balance 1</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 1</p>
+<p>= 8,555.00 + 0 + (-712.83)</p>
+<p>= <span class="hcp9">7,842.17</span></p>
+<p>&#160;</p>
+<p>Period 2 (15/07/2013):</p>
+<p>Depreciation 2</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)]</p>
+<p>= - [(7,842.17 - 1.00) / (12 - 2 + 1)]</p>
+<p>= <span class="hcp9">- 712.83</span></p>
+<p>&#160;</p>
+<p>Balance 2</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 1</p>
+<p>= 7,842.17 + 1,0000 + (-712.83)</p>
+<p>= <span class="hcp9">8,129.34</span></p>
+<p>&#160;</p>
+<p>Subsequent periods: The calculation for other periods is similar to 
+ period 1 and 2.</p>
+<p>&#160;</p>
+<h6>Purchase Date not on Last Year-End Date</h6>
+<p>When the purchase date is different from the Last Year-End date, then 
+ the first depreciation will be pro-rated on a daily basis using the number 
+ of days between the Purchase Date and the date of the first depreciation 
+ period.</p>
+<table cellspacing="0" width="1080" class="hcp2">
+	<col style="width: 17.514%;">
+	<col style="width: 2.865%;">
+	<col style="width: 2.687%;">
+	<col style="width: 32.549%;">
+	<col style="width: 3.759%;">
+	<col style="width: 40.515%;">
+	<tr>
+		<td><p>Pro-rated depreciation</p></td>
+		<td><p>=</p></td>
+		<td><p>-</p></td>
+		<td colspan="3"><p>(Full depreciation) x (Pro-rated period)</p></td>
+		
+	</tr>
+	<tr>
+		<td><p>&#160;</p></td>
+		<td rowspan="2">=</td>
+		<td rowspan="2">-</td>
+		<td class="hcp3"><p class="hcp4">(Previous 
+		 Balance - Residual Value)</p></td>
+		<td rowspan="2"><p class="hcp4">x</p></td>
+		<td class="hcp3"><p class="hcp4">(Number 
+		 of days between depreciation date and purchase date)</p></td>
+	</tr>
+	<tr>
+		<td><p>&#160;</p></td>
+		<td><p class="hcp4">(Number of periods - Current 
+		 Depreciation Period + 1)</p></td>
+		<td><p class="hcp4">(Number of days in a period)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Example:</p>
+<table cellspacing="0" width="66.882%" class="hcp7">
+	<col style="width: 21.618%;">
+	<col style="width: 4.208%;">
+	<col style="width: 28.238%;">
+	<col style="width: 18.939%;">
+	<col style="width: 3.115%;">
+	<col style="width: 22.86%;">
+	<tr>
+		<td><p>Purchase Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 8,555.00</p></td>
+		<td><p>Purchase Date</p></td>
+		<td><p>=</p></td>
+		<td><p>10/05/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Residual Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 1.00</p></td>
+		<td><p>Last Year-End Date</p></td>
+		<td><p>=</p></td>
+		<td><p>15/07/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Frequency</p></td>
+		<td><p>=</p></td>
+		<td><p>Monthly</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td><p>Number of Periods</p></td>
+		<td><p>=</p></td>
+		<td><p>12</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+		<td><p>&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>The following table lists the depreciation of the fixed asset for all 
+ 12 periods:</p>
+<table cellspacing="0" border="1" class="hcp2">
+	<col style="width: 7.674%;">
+	<col style="width: 8.757%;">
+	<col style="width: 16.857%;">
+	<col style="width: 9.338%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<tr>
+		<td><p class="hcp4"><span class="hcp5">Date</span></p></td>
+		<td><p class="hcp8">Depreciation</p>
+		<p class="hcp8">Period</p></td>
+		<td><p class="hcp8">Depreciation 
+		 per period</p>
+		<p class="hcp8">(FE)</p>
+		<p class="hcp8">A</p></td>
+		<td><p class="hcp8">Acquisition</p>
+		<p class="hcp8">(FA or FO)</p>
+		<p class="hcp8">B</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FV)</p>
+		<p class="hcp8">C</p></td>
+		<td><p class="hcp8">Disposal</p>
+		<p class="hcp8">(FD)</p>
+		<p class="hcp8">D</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FX or RU)</p>
+		<p class="hcp8">E</p></td>
+		<td><p class="hcp8">Balance</p>
+		<p class="hcp8">F</p>
+		<p class="hcp8">(A+B+C+D+ Previous 
+		 F)</p></td>
+	</tr>
+	<tr>
+		<td><p>10/05/2013</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+	</tr>
+	<tr>
+		<td><p>15/05/2013</p></td>
+		<td><p class="hcp4">1</p></td>
+		<td><p class="hcp4">-114.95</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,440.03</p></td>
+	</tr>
+	<tr>
+		<td><p>15/06/2013</p></td>
+		<td><p class="hcp4">2</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">7,672.84</p></td>
+	</tr>
+	<tr>
+		<td><p>15/07/2013</p></td>
+		<td><p class="hcp4">3</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,905.66</p></td>
+	</tr>
+	<tr>
+		<td><p>15/08/2013</p></td>
+		<td><p class="hcp4">4</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,138.47</p></td>
+	</tr>
+	<tr>
+		<td><p>15/09/2013</p></td>
+		<td><p class="hcp4">5</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">5,371.29</p></td>
+	</tr>
+	<tr>
+		<td><p>15/10/2013</p></td>
+		<td><p class="hcp4">6</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">4,604.11</p></td>
+	</tr>
+	<tr>
+		<td><p>15/11/2013</p></td>
+		<td><p class="hcp4">7</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">3,836.92</p></td>
+	</tr>
+	<tr>
+		<td><p>15/12/2013</p></td>
+		<td><p class="hcp4">8</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">3,069.74</p></td>
+	</tr>
+	<tr>
+		<td><p>15/01/2014</p></td>
+		<td><p class="hcp4">9</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">2,302.55</p></td>
+	</tr>
+	<tr>
+		<td><p>15/02/2014</p></td>
+		<td><p class="hcp4">10</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1,535.37</p></td>
+	</tr>
+	<tr>
+		<td><p>15/03/2014</p></td>
+		<td><p class="hcp4">11</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">768.18</p></td>
+	</tr>
+	<tr>
+		<td><p>15/04/2014</p></td>
+		<td><p class="hcp4">12</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1.00</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Period 1 (15/05/2013):</p>
+<p>Depreciation 1</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)] x [(Number of days between depreciation date and purchase 
+ date) / (Number of days in the period)]</p>
+<p>= - [(8,555.00 - 1.00) / (12 - 1 + 1)] x [5 / 31]</p>
+<p>= <span class="hcp9">- 114.97</span></p>
+<p>&#160;</p>
+<p>Balance 1</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 1</p>
+<p>= 8,555.00 + 0 + (-114.97)</p>
+<p>= <span class="hcp9">8,440.03</span></p>
+<p>&#160;</p>
+<p>Period 2 (15/06/2013):</p>
+<p>Depreciation 2</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)]</p>
+<p>= - [(8,440.03 - 1.00) / (12 - 2 + 1)]</p>
+<p>= <span class="hcp9">- 767.18</span></p>
+<p>&#160;</p>
+<p>Balance 2</p>
+<p>= Previous Balance + (Fixed Asset Transactions)+ Depreciation 1</p>
+<p>= 8,440.03 + 0 + (-767.18)</p>
+<p>= <span class="hcp9">7,672.84</span></p>
+<p>&#160;</p>
+<p>Subsequent periods: The calculation for other periods is similar to 
+ period 2.</p>
+<p>&#160;</p>
+<h6>Purchase Date not on Last Year-End Date with Depreciation Entry (posted 
+ manually)</h6>
+<p>When there is a depreciation entry posted manually for the fixed asset 
+ within the depreciation periods, then pro-rated depreciation is applied 
+ for the period of the manual entry minus the manual depreciation value.</p>
+<p>Example:</p>
+<table cellspacing="0" width="72.233%" class="hcp7">
+	<col style="width: 19.959%;">
+	<col style="width: 3.885%;">
+	<col style="width: 26.071%;">
+	<col style="width: 29.009%;">
+	<col style="width: 3.841%;">
+	<col style="width: 17.242%;">
+	<tr>
+		<td><p>Purchase Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 8,555.00</p></td>
+		<td><p>Purchase Date</p></td>
+		<td><p>=</p></td>
+		<td><p>10/05/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Residual Value</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 1.00</p></td>
+		<td><p>Last Year-End Date</p></td>
+		<td><p>=</p></td>
+		<td><p>15/07/2013</p></td>
+	</tr>
+	<tr>
+		<td><p>Frequency</p></td>
+		<td><p>=</p></td>
+		<td><p>Monthly</p></td>
+		<td><p>Date of manual depreciation entry</p></td>
+		<td><p>=</p></td>
+		<td><p>20/09/2014</p></td>
+	</tr>
+	<tr>
+		<td><p>Number of Periods</p></td>
+		<td><p>=</p></td>
+		<td><p>12</p></td>
+		<td><p>Value of manual depreciation entry</p></td>
+		<td><p>=</p></td>
+		<td><p>EUR 10.00</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>The following table lists the depreciation of the fixed asset for all 
+ 12 periods:</p>
+<table cellspacing="0" border="1" class="hcp2">
+	<col style="width: 7.674%;">
+	<col style="width: 8.757%;">
+	<col style="width: 16.857%;">
+	<col style="width: 9.338%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<col style="width: 14.344%;">
+	<tr>
+		<td><p class="hcp4"><span class="hcp5">Date</span></p></td>
+		<td><p class="hcp8">Depreciation</p>
+		<p class="hcp8">Period</p></td>
+		<td><p class="hcp8">Depreciation 
+		 per period</p>
+		<p class="hcp8">(FE)</p>
+		<p class="hcp8">A</p></td>
+		<td><p class="hcp8">Acquisition</p>
+		<p class="hcp8">(FA or FO)</p>
+		<p class="hcp8">B</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FV)</p>
+		<p class="hcp8">C</p></td>
+		<td><p class="hcp8">Disposal</p>
+		<p class="hcp8">(FD)</p>
+		<p class="hcp8">D</p></td>
+		<td><p class="hcp8">Revaluation</p>
+		<p class="hcp8">(FX or RU)</p>
+		<p class="hcp8">E</p></td>
+		<td><p class="hcp8">Balance</p>
+		<p class="hcp8">F</p>
+		<p class="hcp8">(A+B+C+D+ Previous 
+		 F)</p></td>
+	</tr>
+	<tr>
+		<td><p>10/05/2013</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,555.00</p></td>
+	</tr>
+	<tr>
+		<td><p>15/05/2013</p></td>
+		<td><p class="hcp4">1</p></td>
+		<td><p class="hcp4">-114.97</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">8,440.03</p></td>
+	</tr>
+	<tr>
+		<td><p>15/06/2013</p></td>
+		<td><p class="hcp4">2</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">7,672.84</p></td>
+	</tr>
+	<tr>
+		<td><p>15/07/2013</p></td>
+		<td><p class="hcp4">3</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,905.66</p></td>
+	</tr>
+	<tr>
+		<td><p>15/08/2013</p></td>
+		<td><p class="hcp4">4</p></td>
+		<td><p class="hcp4">-767.18</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,138.47</p></td>
+	</tr>
+	<tr>
+		<td><p>15/09/2013</p></td>
+		<td><p class="hcp4">5</p></td>
+		<td><p class="hcp4">-10.00</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,128.47</p></td>
+	</tr>
+	<tr>
+		<td><p>20/09/2013</p></td>
+		<td><p class="hcp4">5</p></td>
+		<td><p class="hcp4">-113.74</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">6,014.73</p></td>
+	</tr>
+	<tr>
+		<td><p>20/10/2013</p></td>
+		<td><p class="hcp4">6</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">5,155.63</p></td>
+	</tr>
+	<tr>
+		<td><p>20/11/2013</p></td>
+		<td><p class="hcp4">7</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">4,296.52</p></td>
+	</tr>
+	<tr>
+		<td><p>20/12/2013</p></td>
+		<td><p class="hcp4">8</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">3,437.42</p></td>
+	</tr>
+	<tr>
+		<td><p>20/01/2014</p></td>
+		<td><p class="hcp4">9</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">2,578.31</p></td>
+	</tr>
+	<tr>
+		<td><p>20/02/2014</p></td>
+		<td><p class="hcp4">10</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1,719.21</p></td>
+	</tr>
+	<tr>
+		<td><p>20/03/2014</p></td>
+		<td><p class="hcp4">11</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">860.10</p></td>
+	</tr>
+	<tr>
+		<td><p>20/03/2014</p></td>
+		<td><p class="hcp4">12</p></td>
+		<td><p class="hcp4">-859.10</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">&#160;</p></td>
+		<td><p class="hcp4">1.00</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Period 1 (15/05/2013):</p>
+<p>Depreciation 1</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)] x [(Number of days between depreciation date and purchase 
+ date)/(Number of days in the period)]</p>
+<p>= - [(8,555.00 - 1.00) / (12 - 1 &#160;+1)] x [5 / 31]</p>
+<p>= <span class="hcp9">- 114.97</span></p>
+<p>&#160;</p>
+<p>Balance 1</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 1</p>
+<p>= 8,555.00 + 0 + (-114.97)</p>
+<p>= <span class="hcp9">8,440.03</span></p>
+<p>&#160;</p>
+<p>Period 2 (15/06/2013):</p>
+<p>Depreciation 2</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)]</p>
+<p>= - [(8,440.03 &#160;- 1.00) / (12 - 2 + 1)]</p>
+<p>= <span class="hcp9">- 767.18</span></p>
+<p>&#160;</p>
+<p>Balance 2</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 2</p>
+<p>= 8,440.03 + 0 + (-767.18)</p>
+<p>= <span class="hcp9">7,672.84</span></p>
+<p>&#160;</p>
+<p>Subsequent periods: The calculation for periods 3 and 4 similar to period 
+ 2.</p>
+<p>&#160;</p>
+<p>On 20 January 2014, there is a depreciation entry of EUR 10.00 posted. 
+ This means, the next depreciation period will now be on the 20th.</p>
+<p>Period 5 (20/01/2014)</p>
+<p>Manual Depreciation = -10.00</p>
+<p>Depreciation 5</p>
+<p>= - [(Balance - Residual Value) / (Number of periods - Current Depreciation 
+ Period + 1)] x [(Number of days between depreciation date and purchase 
+ date)/(Number of days in the period)] - [Manual depreciation]</p>
+<p>= -[(6,128.47 - 1) / (12 - 5 + 1)] x [5 / 31] - (-10.00)</p>
+<p>= <span class="hcp9">-113.74</span></p>
+<p>&#160;</p>
+<p class="hcp10">Balance 5</p>
+<p class="hcp10">= Previous Balance (after manual depreciation) 
+ + (Fixed Asset Transaction) + Depreciation 5</p>
+<p class="hcp10">= 6,128.47 + 0 + (-113.74)</p>
+<p>=<span class="hcp9">6,014.73</span></p>
+<p class="hcp10">&#160;</p>
+<p class="hcp10">Period 6 (20/02/2014)</p>
+<p class="hcp10">Depreciation 6</p>
+<p class="hcp10">= - [(Balance - Residual Value) / (Number 
+ of periods - Current Depreciation Period + 1)]</p>
+<p class="hcp10">= -[6,014.73 - 1.00) / (12 - 6 + 1)]</p>
+<p class="hcp10">= <span class="hcp9">-859.10</span></p>
+<p class="hcp10">&#160;</p>
+<p class="hcp10">Balance 6</p>
+<p>= Previous Balance + (Fixed Asset Transaction) + Depreciation 6</p>
+<p>= 6,014.73 + 0 + (-859.10)</p>
+<p>= <span class="hcp9">5,155.63</span></p>
+<p>&#160;</p>
+<p>Subsequent periods: The calculation is similar to period 6.</p>
+<p>&#160;</p>
+<h3>Pro-rata Depreciation on Disposal of Fixed Asset</h3>
+<p>When there is a disposal date, then the calculation will stop one day 
+ before the disposal date and the depreciation will then be pro-rated on 
+ a daily basis. In this case, it will take into account the following:</p>
+<ul class="hcp6">
+	<li><p>Number of days between Disposal Date and Last Depreciation Date 
+	 (X)</p></li>
+	<li><p>Number of days between Current Depreciation Date and Last Depreciation 
+	 Date (Y)</p></li>
+	<li><p>Depreciation Value as at Current Depreciation Date (C)</p></li>
+</ul>
+<p>Depreciation Value &#160;= (X / Y) * C</p>
+<p>&#160;</p>
+<p>For example:</p>
+<p>Purchase Value = EUR 8,555.00</p>
+<p>Purchase Date = 15/05/2013</p>
+<p>Residual Value = EUR 1.00</p>
+<p>Frequency = Monthly</p>
+<p>Number of Periods = 12</p>
+<p>Current Depreciation = -712.83</p>
+<p>&#160;</p>
+<p>With Disposal Date at 08/05/2014, we will have:</p>
+<p>Last Depreciation Date = 15/04/2014</p>
+<p>Current Depreciation Date = 15/05/2014</p>
+<p>&#160;</p>
+<p>So,</p>
+<p>X = 23 days (Number of days between 08/05/2014 and 15/04/2014)</p>
+<p>Y = 30 days (Number of days between 15/05/2014 and 15/04/2014)</p>
+<p>Depreciation Value up to 07/05/2014</p>
+<p>= (23 / 30) * (-712.83)</p>
+<p>= <span class="hcp9">- 546.50</span></p>
+<p>&#160;</p>
+<h2>Tags</h2>
+<p>Tags are available to allow for:</p>
+<ul class="hcp6">
+	<li><p>Customising the depreciation journal entries</p></li>
+	<li><p>Initiate depreciation when using Depreciation Journal Script</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Customising Depreciation Journals</h3>
+<p>When posted, the journals used the default values for fields like Reference, 
+ Description and Narrative. If you would like to customise, you can do 
+ so by using the tags. The tags are to be entered into the Tag Values field 
+ of the Nominal Account for Fixed Assets.</p>
+<ol class="hcp11">
+	<li><p>In Viewpoint - Home screen, go to Accounting Ribbon button and 
+	 select Chart of Accounts &gt; Nominal Accounts from the navigation 
+	 listing in Accounting Overview.</p></li>
+	<li><p>Select the Chart of Account.</p></li>
+	<li><p>Select the Nominal Account and click Edit.</p></li>
+	<li><p>Enter the <a class="dropspot" href="javascript:TextPopup(this)" id="a1">tags</a> 
+	 in Tag Values.</p>
+	<div class="droptext" id="POPUP415490927" style="display: none;">
+		<p>When defining the tags, use the following syntax:</p>
+		<p>[&lt;Tag&gt;=&lt;Value&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp6">
+			<li><p>&lt;Tag&gt; is the supported tag</p></li>
+			<li><p>&lt;Value&gt; can be normal text or field code such 
+			 as:</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp6">
+				<li><p>(-UFV.JNLREF-) - refers to the User Field 'JNLREF'</p></li>
+				<li><p>(-SL.&lt;FieldName&gt;\&lt;Format&gt;-) - can be 
+				 any field from the sub-ledger with or without formatting</p></li>
+				<li><p>(-JL1.&lt;FieldName&gt;\&lt;Format&gt;-) - can be 
+				 any field from journal line 1 (Sub-ledger) with or without 
+				 formatting</p></li>
+				<li><p>(-JL2.&lt;FieldName&gt;\&lt;Format&gt;-) - can be 
+				 any field from journal line 2 (Nominal Account) with or 
+				 without formatting</p></li>
+			</ul></li>
+		</ul>
+		<p><span class="hcp12">Note</span>: 
+		 If using field code, ensure that &lt;FieldName&gt; and &lt;Format&gt; 
+		 is replaced with the actual field and format option.</p>
+		<p>&#160;</p>
+		<table cellspacing="0" class="hcp2">
+			<col style="width: 12.712%;">
+			<col style="width: 53.955%;">
+			<col style="width: 33.333%;">
+			<tr>
+				<td><p class="hcp13">Tag</p></td>
+				<td><p class="hcp13">Explanation</p></td>
+				<td><p class="hcp13">Example</p></td>
+			</tr>
+			<tr>
+				<td><p>REF</p></td>
+				<td><p>This is to specify the reference for the journal 
+				 line. The default value for this is from the JNLREF User 
+				 Field.</p></td>
+				<td><p>[REF=DEPR~(-UFV.JNLREF-)]</p></td>
+			</tr>
+			<tr>
+				<td><p>NomDepr</p></td>
+				<td><p>This is to specify the Nominal Account for the depreciation 
+				 entry. The default value for this is the Nominal Account 
+				 set for Expenses</p></td>
+				<td><p>[NomDepr=AP: Expenses]</p></td>
+			</tr>
+			<tr>
+				<td><p>Descr_SL</p></td>
+				<td><p>This is to specify the description for the sub-ledger’s 
+				 journal entry. The default for this is ‘Depreciation’.</p></td>
+				<td><p>[Descr_SL=Depreciation]</p></td>
+			</tr>
+			<tr>
+				<td><p>Descr_NA</p></td>
+				<td><p>This is to specify the description for the Nominal 
+				 Account’s journal entry. The default for this is ‘Depreciation 
+				 Fixed Assets’.</p></td>
+				<td><p>[Descr_NA=Depreciation of Fixed Assets]</p></td>
+			</tr>
+			<tr>
+				<td><p>Narr_SL</p></td>
+				<td><p>This is to specify the narrative for the sub-ledger’s 
+				 journal entry. There is no default narrative set.</p></td>
+				<td><p>&#160;</p></td>
+			</tr>
+			<tr>
+				<td><p>Narr_NA</p></td>
+				<td><p>This is to specify the narrative for the Nominal 
+				 Account’s journal entry. The default for this contains 
+				 the sub-ledger name after the text ‘Depreciation of’.</p></td>
+				<td><p>[Narr_NA=Depreciation of (-SL.NAME-)]</p></td>
+			</tr>
+			<tr>
+				<td><p>Residual</p></td>
+				<td><p>This is to update the Residual Value to the specified 
+				 value if the Residual Value was set as ‘0’ in the Fixed 
+				 Asset’s Sub-ledger account.</p></td>
+				<td><p>[Residual=1]</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp6">
+	<li>&#160;<a href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">Nominal 
+	 Account Setup</a>.</li>
+</ul>
+<p>&#160;</p>
+<h3>Initiating Fixed Asset Depreciation</h3>
+<p>This is to open the Depreciation screen when you want to use the Disposal 
+ Journal Script. Doing so will allow you to do the depreciation before 
+ the disposal journal. The tag is [Initiate=FADEPR] and it is to be entered 
+ into Tags field of the Depreciation Journal Script.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp6">
+	<li>&#160;<a href="Journal_Scripts_New.htm">Journal Scripts - New</a></li>
+</ul>
+<p>&#160;</p>
+<h2>Using Fixed Asset Depreciation</h2>
+<p>Fixed Asset sub-ledger account must be using Straight Line depreciation 
+ method with the following information specified:</p>
+<ul class="hcp6">
+	<li><p>Depreciation Method - Set this to Straight Line</p></li>
+	<li><p>Residual Value - Estimated value of the fixed asset at the end 
+	 of its useful life.</p></li>
+	<li><p>Frequency - Interval for the depreciation.</p></li>
+	<li><p>Number of Periods - Length of the fixed asset's useful life. 
+	 This is based on the frequency selected.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Depreciation for a single Fixed Asset</h3>
+<p>This can be done using the Analyses button in Fixed Assets Sub-ledger 
+ screen as well as from Account Enquiry screen.</p>
+<h3>&#160;</h3>
+<h3>Fixed Asset Sub-ledger screen</h3>
+<p>For one fixed asset, use the Analyses button:</p>
+<ol class="hcp11">
+	<li><p>In the Fixed Assets Sub-ledger screen, select the fixed asset 
+	 sub-ledger account.</p></li>
+	<li><p>Click Analyses.</p></li>
+	<li><p>In the Sub-ledger Account Analyses screen, the Date From and 
+	 - to defaults to the Account File's posting window.</p></li>
+	<li><p>Click Depreciation tab.</p></li>
+	<li><p>In Depreciation, you will see the proposed depreciation journal 
+	 entries.</p></li>
+	<li><p>Select the next action:</p>
+	<ul class="hcp6">
+		<li><p>Click Post to post the depreciation journal entries.</p></li>
+		<li><p>Click <a class="dropspot" href="javascript:TextPopup(this)" id="a2">Disposal 
+		 Date</a> to set a disposal date. The depreciation 
+		 calculation will be adjusted accordingly.</p>
+		<div class="droptext" id="POPUP415478060" style="display: none;">
+			<ol class="hcp11">
+				<li><p>Once you clicked Disposal Date, the calendar will 
+				 appear.</p></li>
+				<li><p>Select the disposal date for the fixed asset.</p></li>
+			</ol>
+  </div></li>
+	</ul>
+	<p><span class="hcp12">Note</span>: 
+	 When user posts the depreciation entry, the record will flag as 'Capital' 
+	 if the 'Capital/Income' field for the selected sub-ledger is set to 
+	 'Both Capital and Income [B]'.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Account Enquiry screen</h3>
+<p>In the Account Enquiry screen, select the fixed asset’s sub-ledger first 
+ before you click Analyses.</p>
+<p><img src="../image196.jpg" alt="" width="789" height="518" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p><img src="../image197.jpg" alt="" width="786" height="479" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h3>Depreciation for all Fixed Assets</h3>
+<p>To depreciate for all the Account File's fixed assets, click Depreciate 
+ All in the Fixed Assets Sub-ledger screen.</p>
+<p>&#160;</p>
+<h2>Depreciation Analyses</h2>
+<p>At times when you run the Depreciation, instead of just the depreciation 
+ journals, you may see warnings.</p>
+<p>&#160;</p>
+<h3>Difference in depreciation</h3>
+<p>If there had been earlier depreciation postings with values that do 
+ not correspond to the system calculation, there will be a warning to let 
+ you know:</p>
+<p><img src="../image198.jpg" alt="" width="785" height="455" border="0" class="hcp1"></p>
+<p>In this case, the system will create an entry to correct the value when 
+ you click Post.</p>
+<p>&#160;</p>
+<h3>Depreciation period is outside Posting Window</h3>
+<p>If the depreciation posting falls outside the Account File’s posting 
+ window, there will also be a warning:</p>
+<p><img src="../image199.jpg" alt="" width="840" height="505" border="0" class="hcp1"></p>
+<p>When you click Post, you will be asked if you want to continue. Choosing 
+ yes will result in one depreciation journal entry with the Account File's 
+ Posting Open From date.</p>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Fixed Asset Depreciation</p>
+  <p class="hcp14">&#160;</p>
+  <p class="hcp14">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp14">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP415490927');
+	TextPopupInit('a2','POPUP415478060');
+//]]></script>
+ </body>
+</html>

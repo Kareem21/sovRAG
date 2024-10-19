@@ -1,0 +1,216 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Statutory (Entity)">
+<meta name="MS-HAID" content="Entity Statutory">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statutory - Company</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+span.hcp3 { font-weight:bold; }
+ol.hcp4 { list-style:decimal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1><span class="Bold">Statutory - Company</span></h1>
+<p><span class="Bold" style="font-style: normal;">T</span>he Statutory folder for entity files records the incorporation details and location of the statutory books and common seal.</p>
+<p>&#160;</p>
+<p class="FldExplain">Date of Incorporation</p>
+<p>Enter the date of incorporation for the entity. If you used the Copy From Existing Entity function, the date entered in the Incorporation Date field will be reflected here.</p>
+<p>&#160;</p>
+<p class="FldExplain">Incorporation Number</p>
+<p>Enter the incorporation number for the entity.</p>
+<p>&#160;</p>
+<h3>Statutory Addresses</h3>
+<p class="FldExplain">Address Type</p>
+<p>This allows you to:</p>
+<ul class="hcp1">
+<li>
+<p>View addresses linked to the Master File - Select Master File Addresses.</p>
+</li>
+<li>
+<p>View and add statutory locations links to the Entity File - Select Statutory Address/Location.</p>
+</li>
+<li>
+<p>View both addresses and statutory locations - Select All.</p>
+</li>
+</ul>
+<p><span class="hcp2">Note:</span> New addresses can be added if the one you want to use does not already exist in the system. It is advisable to first check the Address Cards for an address, before you proceed to create a new one.</p>
+<p>&#160;</p>
+<p class="FldExplain">Current / Past / All</p>
+<p>Select if you want to see only current address, past address or all.</p>
+<p>&#160;</p>
+<p class="FldExplain">Addresses List</p>
+<p>This shows the address cards linked to the file.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+<li>
+<p><span class="hcp3">New</span> - Click this to link a <a class="dropspot" href="javascript:TextPopup(this)" id="a3">new</a> address to the Entity File.</p>
+<div class="droptext" id="POPUP383109336" style="display: none;">
+<p>This function is used to create a new address type link. These will be address types where the code starts with 'S'.</p>
+<p>You can only have one address type link per Master File unless the address type code is S*.</p>
+<ol class="hcp4">
+<li>
+<p>Click New.</p>
+</li>
+<li>
+<p>Look for the address you want to link. If it cannot be found or has not been created, then proceed to create the address.</p>
+</li>
+<li>
+<p>Select the address type it is used for.</p>
+</li>
+<li>
+<p>Click OK to link the address.</p>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+</ol>
+<p>&#160;</p>
+<p>For Hong Kong companies, section 14 of the Hong Kong Annual Return will show the following:</p>
+<ul class="hcp1">
+<li>
+<p>N/A - when all address types are the same</p>
+</li>
+<li>
+<p>Error : Please check your inputs in Statutory Location - when there are no other address types apart from 'SR'.</p>
+</li>
+</ul>
+<p>If there are multiple statutory locations and they differ from the 'SR' address, then these addresses will be added in the section 14 of the Hong Kong Annual Return unless the address type is configured to be excluded using the [EXCOMREC=1] tag in the <a href="../Configuration/Lookup_Tables.htm">Address Types [ADRT] lookup table</a>.</p>
+<p>&#160;</p>
+<p><a href="../Shared/Addresses.htm">How do I create a new address?</a></p>
+<p>&#160;</p>
+</div></li>
+<li>
+<p><span class="hcp3">Edit</span> - Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">edit</a> a selected Address Card link. The program will show the address link detail on the Address Card Master screen.</p>
+<div class="droptext" id="POPUP383112769" style="display: none;">
+<p>This function is used only to correct address card links such as the address type and effective date or to amend address details. Use the Change function if the address is being changed.</p>
+<ol class="hcp4">
+<li>
+<p>Select the address to be edited.</p>
+</li>
+<li>
+<p>Click Edit.</p>
+</li>
+<li>
+<p>Amend the details and click OK.</p>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+</ol>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">What is an address type and can I create more types?</a></p>
+ <div class="droptext" id="POPUP383106220" style="display: none;">
+<p>Address types can be used to group or differentiate addresses linked to a Master File. You can create more address types in the Address Types [ADRT] lookup table. Remember the following:</p>
+<ul class="hcp1">
+<li>
+<p>Address types that start with 'S' are meant for use in the Statutory screen.</p>
+</li>
+<li>
+<p>Address types starting with 'R' are reserved for the Master File &gt; Addresses screen.</p>
+</li>
+</ul>
+ </div>
+</div></li>
+<li>
+<p><span class="hcp3">Delete</span> - Click this to delete the address link. The address will remain in the Address Card Master until it is deleted from there.</p>
+</li>
+<li>
+<p><span class="hcp3">Change</span> - Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a4">change</a> the selected address. The Address Card Master screen will appear for you to select a new address card and to complete the effective date. The existing address link record will be deactivated, and the From date will be filled with the effective date of the change. The effective date of the address change will affect the address displayed on forms and reports, i.e., if the date of the address change is after a particular event, the generated form will display the previous address.</p>
+<div class="droptext" id="POPUP383132505" style="display: none;">
+<p>This function is used to record new and archive old address records when a Master File address has changed. For instance, if an individual has changed his place of residence, or if an entity has changed the location of its registered office, using the change function allows for the recording of the effective date of the change, which is used for statutory filing purposes.</p>
+<ol class="hcp4">
+<li>
+<p>Select the address type that is being changed.</p>
+</li>
+<li>
+<p>Click Change.</p>
+</li>
+<li>
+<p>Select the new address from the Address Card Master or create it if it does not already exist in the database.</p>
+</li>
+<li>
+<p>Click OK.</p>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+</ol>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">My office address has changed. How do I change the addresses of ALL Master Files that have been using the old address to the new one?</a></p>
+ <div class="droptext" id="POPUP383113662" style="display: none;">
+<p>To do this, you can use Global Change &gt; Registered Officer Address - Entity.</p>
+ </div>
+<p>&#160;</p>
+</div></li>
+<li>
+<p><span class="hcp3">Undo</span> - Click this to undo ALL changes made to the address card links before you click the Update button.</p>
+</li>
+<li>
+<p><span class="hcp3">Update</span> - Click this to update the information.</p>
+</li>
+<li>
+<p><span class="hcp3">Cancel</span> - Click this to cancel any changes made.</p>
+</li>
+</ul>
+<p><span class="hcp2">Note</span>: If you add or change address types with codes that start with 'R' or 'S' &#160;for a Master File that acts as an officer for an entity, you will be prompted to file the changes. If the option 'Trigger Global Change of Particular for Shareholders' in Configuration &gt; Settings &gt; System Defaults &gt; Entity/Forms is enabled, then this prompt is also seen if the Master File is a shareholder.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="../Shared/Address_Card_Maintenance.htm">Address Card Maintenance</a></p>
+</li>
+<li>
+<p><a href="../Shared/Addresses.htm">Addresses</a></p>
+</li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="../Shared/Entity_Administrator.htm">Entity Administration</a> &gt; <a href="Entity_General.htm">Entity</a> &gt; Statutory - Company</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP383109336');
+	TextPopupInit('a1','POPUP383112769');
+	TextPopupInit('a2','POPUP383106220');
+	TextPopupInit('a4','POPUP383132505');
+	TextPopupInit('a5','POPUP383113662');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Notifications</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Using Notifications</h1>
+<p>User can have messages to inform the changes made or work that have 
+ been assigned. These messages are notification items that are linked to 
+ Change Codes so that as the related change occurs, the notification items 
+ will be created. However, only Change Codes that include File Code detail 
+ will trigger notifications. These notification items are configurable 
+ so that they appear only for certain user/users.</p>
+<p>To use the Notifications function, the following is required:</p>
+<ul class="hcp1">
+	<li><p>Enable Notifications option is ticked in <a href="System_Defaults_-_General_Master_File.htm">System 
+	 Defaults &gt; General/Master File</a></p></li>
+	<li><p>Notification items are linked to the relevant Change Codes. 
+	 Refer to <a href="Change_Codes_-_Link_Type__Notifications.htm">Link 
+	 Type: Notifications</a></p></li>
+</ul>
+<p>When a notification item is created, users will be made aware of it 
+ by the following:</p>
+<ul class="hcp1">
+	<li><p>Windows Action Center</p></li>
+	<li><p>Viewpoint Notification pop-up</p></li>
+	<li><p>Notifications button in Viewpoint Ribbon</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Windows Action Center</h3>
+<p>Viewpoint notification items can be included in the Windows Action Center. 
+ In the Taskbar for Windows 10, the icon for Windows Action Center will 
+ be active when there is a notification item. It will remain as active 
+ for as long as the notification item is not dismissed.</p>
+<p>You can dismiss Viewpoint's notification item the same way as dismissing 
+ Windows Notification.</p>
+<p><span class="hcp2">Note</span>: Display 
+ of Windows Action Center depends on the version of operating system used, 
+ e.g. display seen on a computer running on Windows 10 will be different 
+ from the display seen on a computer running on Windows 7.</p>
+<p>&#160;</p>
+<h3>Viewpoint Notification Pop-up</h3>
+<p>This is seen even if the Viewpoint Connect program has been minimised 
+ but the pop-up is seen only for a moment. the pop-up will appear on the 
+ lower right side of your computer screen.</p>
+<p>&#160;</p>
+<h3>Notifications Button in Viewpoint Ribbon</h3>
+<p>This button is seen in various Viewpoint Ribbon. Where there is no notification 
+ item, the Ribbon will be blue. It will turn red when there is a new or 
+ unread notification item and remain so, as long as there is an unread 
+ notification item. The number of new and unread notifications will be 
+ displayed.</p>
+<p><span class="hcp2">Note</span>: The 
+ change of colour to red does not apply when the selected theme in User 
+ Options is Black. </p>
+<p>&#160;</p>
+<p>Clicking on this button will open the Notifications screen where you 
+ will be able to:</p>
+<ul class="hcp1">
+	<li><p>View and manage all notification items.</p></li>
+	<li><p>View the message for each notification item.</p></li>
+</ul>
+<p><span class="hcp2">Note</span>: Checking 
+ for notification items are done according to the interval set for Refresh/Notification 
+ Interval (Minutes) in <a href="../Shared/User_Options.htm">User Options</a>.</p>
+<p>&#160;</p>
+<h2>Notifications Screen</h2>
+<p>This screen is accessed by clicking on the Notifications button in the 
+ Ribbon in Viewpoint - Home screen, File Maintenance screen or File Enquiry 
+ screen. In the Notifications screen, you have the following:</p>
+<ul class="hcp1">
+	<li><p>Ribbon</p></li>
+	<li><p>Notification Items List</p></li>
+	<li><p>Preview Pane</p></li>
+</ul>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Ribbon</p>
+<p>The following ribbon buttons are available in the Notifications screen.</p>
+<p>&#160;</p>
+<p>Home tab:</p>
+<ul class="hcp1">
+	<li><p>Windows Manager - Click to open Windows Manager.</p></li>
+	<li><p>Go to Home - Click to return to Viewpoint - Home screen.</p></li>
+	<li><p>Close - Click to close the screen.</p></li>
+	<li><p>Select All - Click to select all notification items.</p></li>
+	<li><p>Refresh - Click to refresh the display. This will retrieve the 
+	 latest notifications. </p></li>
+	<li><p>Go To - Click to go to the related screen as defined for the 
+	 notification item. If no value is configured in the event link tag 
+	 values, clicking this will open the Master File.</p></li>
+	<li><p>Read/Unread - Click to mark the selected notification item as 
+	 read or unread. Unread item will appear in bold text.</p></li>
+	<li><p>Follow Up - Click to flag the selected notification item for 
+	 follow up.</p></li>
+	<li><p>Remove - Click to remove the selected notification item. If 
+	 you would like notification items to be removed from the list automatically, 
+	 you can also schedule a '<a href="../Task_Scheduler/Notification_-_Delete_Read_Unflagged_Notifications.htm">Notification 
+	 - Delete Read/Unflagged Notifications [DNOT]</a>' job type to be run 
+	 by Task Scheduler and Notification Agent. This will remove the notification 
+	 item based on the age of the notification item as long as it has been 
+	 read and not flagged for any follow-up.</p></li>
+	<li><p>Unread - Click to show unread items only.</p></li>
+	<li><p>Flagged - Click to show items that have been flagged for follow 
+	 up.</p></li>
+	<li><p>Priority - Click to show items with high priority.</p></li>
+	<li><p>Advanced - Click to use the additional <span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">criteria</a></span>. 
+	 Click OK to save the criteria or Reset to clear all criteria that 
+	 have been entered. This will also untoggle the button.</p>
+	<div class="droptext" id="POPUP417886894" style="display: none;">
+		<ul class="hcp1">
+			<li><p>Master File - This is to show notification items for 
+			 a Master File.</p></li>
+			<li><p>Category - This is to show notification items based 
+			 on the category i.e. Document, Master File or Workflow.</p></li>
+			<li><p>Subject - This is to show notification items containing 
+			 the specified subject.</p></li>
+			<li><p>Date - This is to show notification items for the selected 
+			 date.</p></li>
+		</ul>
+ </div></li>
+	<li><p>Preview Pane - Click to show or hide the preview pane.</p></li>
+	<li><p>Show in Windows Action Center - Click to show or hide notifications 
+	 in the Windows Action Center.</p></li>
+</ul>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a41">[Context Sensitve 
+ Master File]</a> tab</p>
+ <div class="droptext" id="POPUP4247861971" style="display: none;">
+	<h6 class="Heading8">General Group</h6>
+	<ul class="hcp1">
+		<li><p>Windows Manager - Click to open Windows Manager.</p></li>
+		<li><p>Go to Home - Click to return to Viewpoint - Home screen.</p></li>
+		<li><p>Open File - Click to open the File Maintenance screen for 
+		 the selected Master File.</p></li>
+	</ul>
+	<p>&#160;</p>
+	<h6 class="Heading8">Create Group</h6>
+	<ul class="hcp1">
+		<li><p>Workflow - Click to start a new workflow for the selected 
+		 Master File.</p></li>
+		<li><p>File Note - Click to create a file note for the selected 
+		 Master File. See also <a href="../Shared/File_Notes.htm">File 
+		 Notes</a>.</p></li>
+		<li><p>Task - Click to add a task for the selected Master File. 
+		 See also <a href="Tasks_-_Configuration.htm">Tasks</a>.</p></li>
+		<li><p>Time Entry - Click to add a time entry for the selected 
+		 Master File. See also <a href="../Practice_Manager/Time_Entries.htm">Time 
+		 Entries</a>.</p></li>
+		<li><p>Document Holder - Click to create a document holder for 
+		 the selected Master File. See also <a href="../Document_Manager/Document_Holders.htm">Document 
+		 Holder</a>.</p></li>
+		<li><p>Binder - Click to create a binder for the selected Master 
+		 File. See also <a href="../Shared/Binders_-_Create_New_Binder.htm">Create 
+		 New Binder</a>.</p></li>
+		<li><p>Correspondence - Click to create a correspondence document 
+		 for the selected Master File. See also <a href="../Shared/Correspondence.htm">Correspondence</a>.</p></li>
+		<li><p>Journal QE - Click to open the Journal Quick Entry screen 
+		 for the selected Master File. See also <a href="../Client_Accountant/Journal_Quick_entry.htm">Journal 
+		 Quick Entry</a>.</p></li>
+	</ul>
+	<h6 class="Heading8">&#160;</h6>
+	<h6 class="Heading8">Enquiry Group</h6>
+	<ul class="hcp1">
+		<li><p>File - Click to open the File Enquiry screen for the selected 
+		 Master File.</p></li>
+		<li><p>Relations - Click to access the <a href="../Shared/Enquiry_-_Relations_Relation.htm">Relations</a> 
+		 enquiry screen for the selected Master File.</p></li>
+		<li><p>Ownership - Click to access the Ownership enquiry screen 
+		 for the selected Master File.</p></li>
+		<li><p>Billing - Click to access the <a href="../Shared/Billing_Enquiry_screen.htm">Billing</a> 
+		 enquiry screen for the selected Master File.</p></li>
+		<li><p>Accounts - Click to access the <a href="../Client_Accountant/Account_Enquiry.htm">Account</a> 
+		 enquiry screen for the selected Master File.</p></li>
+		<li><p>Documents - Click to view stored documents for the selected 
+		 Master File. This will launch the <a href="../Document_Manager/Documents_-_Enquiry.htm">Documents</a> 
+		 screen.</p></li>
+		<li><p>Changes - Click to access the <a href="../Shared/Changes_Confirmation_Approval.htm">Changes</a> 
+		 screen for the selected Master File.</p></li>
+	</ul>
+	<h6 class="Heading8">Add To Group</h6>
+	<ul class="hcp1">
+		<li><p>Outlook - Click to add the selected Master File to the Outlook 
+		 Correspondence folder.</p></li>
+		<li><p>Favourites - Click to add the Master File to the Favourites 
+		 list. </p></li>
+	</ul>
+ </div>
+<p>&#160;</p>
+<p class="FldExplain">Notification Items List</p>
+<p>The grid lists the details of the available notification items. All 
+ read notification items will disappear after closing the Notification 
+ screen. However, items that are flagged, high priority, and unread will 
+ remain.</p>
+<ul class="hcp1">
+	<li><p>Checkbox - Tick the checkboxes to select or deselect notification 
+	 items.</p></li>
+	<li><p>Priority - This shows the notification items which have been 
+	 marked as priority.</p></li>
+	<li><p>Flag - This shows the notification items which have been flagged 
+	 for follow up.</p></li>
+	<li><p>Category - This shows the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">category</a> 
+	 for the notification items.</p>
+	<div class="droptext" id="POPUP524940943" style="display: none;">
+		<p>Categories available are:</p>
+		<ul class="hcp1">
+			<li>Approval</li>
+			<li>Document</li>
+			<li>Master File</li>
+			<li>Workflow</li>
+		</ul>
+ </div></li>
+	<li><p>Master File - This shows the Master File.</p></li>
+	<li><p>Date Time - This shows the date and time of the change.</p></li>
+	<li><p>Subject - This shows the subject for notification items.</p></li>
+</ul>
+<p>To copy or export the information, right-click within the grid and select 
+ the relevant option.</p>
+<p>&#160;</p>
+<p>&#160;<span class="hcp2">Note</span>: 
+ You can also double-click on a record in the grid to open the screen for 
+ the notification item. This depends on the configuration of the notification 
+ item.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Preview Pane</p>
+<p>This will show the header and message for the selected notification 
+ item. The icon seen will depend on the category of the notification item.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Change_Codes_-_Link_Type__Notifications.htm">Change 
+	 Codes - Link Type: Notifications</a></p></li>
+	<li><p><a href="Localise_Script_-_Link_Type_(Notifications).htm">Localise 
+	 Script - Link Type (Notifications)</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="../Shared/Confidential_Database.htm">General</a> &gt; Notifications</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP417886894');
+	TextPopupInit('a41','POPUP4247861971');
+	TextPopupInit('a2','POPUP524940943');
+//]]></script>
+</body>
+</html>

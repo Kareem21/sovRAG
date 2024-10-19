@@ -1,0 +1,175 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Relationship Type - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Relationship Type - Tags</h1>
+<p>These tags are to be entered in the Tag Values field for the Relationship type.</p>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 50%;">
+<col style="width: 50%;">
+<tr class="t1st">
+<td class="hcp1">
+<p>Tag</p>
+</td>
+<td class="hcp1">
+<p>Explanation and Example</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[OFFICERTEXT=&lt;Text&gt;]</p>
+<p>where &lt;Text&gt; can be just text string or field codes such as:</p>
+<ul class="hcp1">
+<li>
+<p>(-AddrCode-) - The appointed Master File.</p>
+</li>
+<li>
+<p>(-RDescr-) - The description of the relationship type.</p>
+</li>
+<li>
+<p>(-AltDescr-) - The alternative description of the relationship type.</p>
+</li>
+<li>
+<p>(-RelatedAddress-) - This is Additional Relation 1.</p>
+</li>
+<li>
+<p>(-RelatedAddress2-) - This is Additional Relation 2.</p>
+</li>
+<li>
+<p>(-RelatedAddress3-) - This is Additional Relation 3.</p>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is to define the description for the column 'Relation type' in the grid display.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[OFFICERTEXT=(-RelatedAddress1\#AD40-0-) is the Auditor in charge]</p>
+<p>&#160;</p>
+<p><span class="hcp2" style="font-weight: bold; font-style: italic;">Note</span>: With the exception of (-RDescr-) and (-AltDescr-), you can also include format options.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top; border-bottom-width: 1px;">
+<p>[&lt;Component&gt;.&lt;FieldName&gt;]</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;Component&gt; - This refers to the component where the Master File is active:</p>
+<ul class="hcp1">
+<li>
+<p>EA - Entity File in Entity Administration.</p>
+</li>
+<li>
+<p>BF - Billing File in Practice Management &gt; Sales Ledger.</p>
+</li>
+<li>
+<p>SF - Supplier File in Practice Management &gt; Purchase Ledger.</p>
+</li>
+<li>
+<p>CA - Account File in Accounting.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>&lt;FieldName&gt; - This is the field that is to be updated with the relation:</p>
+<ul class="hcp1">
+<li>
+<p>AdminCode - This refers to the Administrator field.</p>
+</li>
+<li>
+<p>Admin2Code - This refers to the Manager field.</p>
+</li>
+<li>
+<p>Admin3Code - This refers to the Controller field.</p>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px;">
+<p>When a relationship type has a User relation, this tag will update the specified user to the Administrator, Manager or Controller field of the Entity File, Billing File, Supplier File or Account File.</p>
+<p>If you want the relation to update more than one field, add all the relevant tags.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[CA.AdminCode]</p>
+<p>will update the Administrator field for the Account File.</p>
+<p>&#160;</p>
+<p><span class="hcp2" style="font-weight: bold; font-style: italic;">Note</span>: The relation type must be a user relation and the update is done when the relation is created or an existing relation is updated.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[SUBSCRIBER=<span class="hcp2">&lt;Subscriber&gt;</span>]</p>
+<p>where &lt;Subscriber&gt; is the subscriber group code.</p>
+</td>
+<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>This is to specify the Subscriber group(s) that will require the relationship type. Use a comma to separate multiple values.</p>
+<p>Example:</p>
+<p>To replicate the relationship type to subscriber groups 'GEN' and 'ASA'</p>
+<p>[Subscriber=GEN,ASA]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[SUBSCRIBER&lt;&gt;<span class="hcp2">&lt;Subscriber&gt;</span>]</p>
+<p>where &lt;Subscriber&gt; is the subscriber group code.</p>
+</td>
+<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>This is to specify the Subscriber group(s) that will be excluded when replicating the relationship type. Use a comma to separate multiple values.</p>
+<p>Example:</p>
+<p>To not replicate the relationship type to subscriber group 'EUR'</p>
+<p>[Subscriber&lt;&gt;EUR]</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+<li>
+<p><a href="Relationship_Types.htm">Relationship Type</a></p>
+</li>
+<li>
+<p><a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Master Configuration Environment (MCE) and Data Replication</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Relationship Type - Tags</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

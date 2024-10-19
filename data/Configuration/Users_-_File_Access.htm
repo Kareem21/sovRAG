@@ -1,0 +1,322 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Users - File Access</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:bold; }
+p.hcp3 { text-align:center;
+margin-left:0px;
+color:#300063; }
+p.hcp4 { text-align:center;
+color:#300063;
+font-weight:bold; }
+p.hcp5 { margin-left:6pt;
+margin-right:6pt;
+color:#000000; }
+li.hcp6 { color:#000000; }
+p.hcp7 { margin-left:12px; }
+span.hcp8 { color:#000000; }
+ul.hcp9 { list-style:disc;
+color:#000000; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Users - File Access</h1>
+<p>The File Access controls two areas:</p>
+<ul class="hcp1">
+	<li><p>Access to Master Files in an Administrator Group and applies 
+	 if your security model is Administrator + User Group Model [2], Access 
+	 Group Model [3], User Relation Links [4], Services Provided Model 
+	 [5] or Service Office Model [8]. With access, you can also view details 
+	 of the Master File through Grid Details tab and the View Details screen. 
+	 Otherwise, you may see only the Master File code and name.</p></li>
+	<li><p>Tabs in the Selection Setup screen which is seen when you click 
+	 Select button.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Authority to Master Files</p>
+<p>The table below explains the different File Access options and shows 
+ the condition for a user to have authority to a Master File, based on 
+ the user's and Master File's Administrator Group:</p>
+<table class="Table1" cellspacing="0px" width="1087">
+	<col style="width: 19.373%;">
+	<col style="width: 20.294%;">
+	<col style="width: 31.831%;">
+	<col style="width: 28.502%;">
+	<tr class="t1st">
+		<td rowspan="2"><p class="hcp3">Security Model</p></td>
+		<td colspan="3"><p style="text-align: center; color: #300063;">File 
+		 Access Option</p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p class="hcp4">No Files [0]</p></td>
+		<td class="t1Col"><p class="hcp4"><span style="font-weight: bold; 
+													 color: #300063;">Administrator 
+		 Groups [2]</span></p></td>
+		<td class="t2Col"><p class="hcp4">Administrator Groups + View-only 
+		 for Others [4]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp5">User Group authority only 
+		 [1]</p></td>
+		<td class="t2Col" rowspan="6"><p class="hcp5">No authority 
+		 to any Master Files.</p></td>
+		<td class="t1Col" colspan="2"><p class="hcp5">All Master Files 
+		 in the same Administrator Groups are accessible to the user, and 
+		 those not in the same Administrator Groups can both open and edit 
+		 them. </p>
+		<p class="hcp5">Authority 
+		 within the Master Files is based on the User Group.</p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">Admin 
+		 + User Group [2]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">User 
+		 can access Master File in their Administrator Group(s). </p>
+		<p class="hcp5">Authority 
+		 within the Master File that can be opened is based on User Group. 
+		 </p>
+		<p class="hcp5">Master 
+		 Files belonging to different Administrator Groups are unable to 
+		 be accessed at all.</p></td>
+		<td class="t2Col" rowspan="5" style="vertical-align: top;"><p class="hcp5">User can access to the 
+		 Master Files that do not belong to their Administrator Group, 
+		 but the authority is limited to View-only based on the User Groups 
+		 authority.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">Access 
+		 + User Group [3]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">The 
+		 user has authority to the Master File if there is an Access Group 
+		 Security that comprises the user's Access Group and the Master 
+		 File's Administrator Group.</p>
+		<p class="hcp5"><span>The 
+		 authority is to be based on the Access Group Security.</span></p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">User 
+		 Relation Links [4]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">The 
+		 user has authority to the Master File and can open the Master 
+		 File if:</p>
+		<ul class="hcp1">
+			<li class="hcp6"><p class="hcp5">the user 
+			 is appointed is an active User Relation of the Master File; 
+			 or</p></li>
+			<li class="hcp6"><p class="hcp5">the Master 
+			 File's Administrator Group is the same as the user's Administrator 
+			 Group</p></li>
+		</ul></td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">Services 
+		 Provided Model [5]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">The 
+		 user has authority and can only access Master Files that are in 
+		 the same Administrator Group.</p>
+		<p class="hcp5">The 
+		 user will NOT be able to see Master Files in another Administrator 
+		 Group. </p>
+		<p class="hcp5">The 
+		 authority to edit is to be based on the Service Provided.</p></td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">Service 
+		 Office Model [8]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">The 
+		 user has authority to the Master File if the Administrator Group 
+		 of the Master File is the same as the user's Administrator Group.</p>
+		<p class="hcp5">Master 
+		 File belonging to different Administrator Groups are unable to 
+		 be accessed at all.</p>
+		<p class="hcp5">The 
+		 authority to edit is to be based on the Service Office and Master 
+		 File owner.</p></td>
+		
+	</tr>
+</table>
+<p>&#160;</p>
+<p>For the following security models. being authorised to a Master File 
+ does not mean the user will be able to open the Master File. The ability 
+ to open a Master File will depend on other configuration of the respective 
+ security models:</p>
+<ul class="hcp1">
+	<li><p>for Access + User Group [3], the ability to open a Master File 
+	 depends on the Access Group Security.</p></li>
+	<li><p>for Service Office Model [8], the ability to open a Master File 
+	 depends on the Service Office Authorisation method.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Screen Filter icon and Selection Setup </p>
+<p>The File Access option set for the user will determine if they are able 
+ to apply filter to the screens. </p>
+<table class="Table1" cellspacing="0px" width="883">
+	<col style="width: 21.226%;">
+	<col style="width: 78.774%;">
+	<tr class="t1st">
+		<td><p class="hcp3">File 
+		 Access Option</p></td>
+		<td><p style="text-align: center;">User Ability</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp7">No 
+		 Files [0]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">User 
+		 is not able to click on the Filter icon.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp7">Administrator 
+		 Groups [2]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5"><span class="hcp8">User is able to click the Filter icon 
+		 and see the following tabs in Selection Setup screen:</span></p>
+		<ul class="hcp9">
+			<li class="hcp6"><p class="hcp5"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Favourites</a></p>
+			<div class="droptext" id="POPUP563813914" style="display: none;">
+				<p>Within this tab, are the following options:</p>
+				<ul class="hcp1">
+					<li><p>Me - will filter the screen to show only for 
+					 the logged-in user</p></li>
+					<li><p>I am the Viewpoint Users' Manager - will filter 
+					 the screen to show for the logged-in user and subordinates. 
+					 This is available only if the logged-in user is specified 
+					 as Manager for other users.</p></li>
+					<li><p>Me and my Workgroups (Unassigned Work) - will 
+					 filter the screen to show for the logged-in user and 
+					 workgroups where the logged-in user is the workgroup 
+					 manager.</p></li>
+					<li><p>My primary Administrator Group - will filter 
+					 the screen to show for the default Administrator Group 
+					 of the logged-in user.</p></li>
+					<li><p>All my Administrator Groups - will filter the 
+					 screen to show for all Administrator Groups of the 
+					 logged in user.</p></li>
+				</ul>
+   </div></li>
+			<li class="hcp6"><p class="hcp5">Users - the 
+			 list includes the logged-in user and subordinates.</p></li>
+			<li class="hcp6"><p class="hcp5">Workgroups 
+			 - the list contains workgroups where the logged-in user is 
+			 the workgroup manager.</p></li>
+			<li class="hcp6"><p class="hcp5">Administrator 
+			 Groups - the list contains all Administrator Groups of the 
+			 logged-in user.</p></li>
+			<li class="hcp6"><p class="hcp5">Organisational 
+			 Units - the list contains the Organisational Unit of the logged-in 
+			 user.</p></li>
+			<li class="hcp6"><p class="hcp5">User Relations 
+			 - the list includes the logged-in user and subordinates.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp7">Administrator 
+		 Groups + View-only for Others [4]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5"><span><span class="hcp8">User is able to click the Filter icon 
+		 and see the following tabs in Selection Setup screen:</span></span></p>
+		<ul class="hcp9">
+			<li class="hcp6"><p class="hcp5"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Favourites</a></p>
+			<div class="droptext" id="POPUP564215558" style="display: none;">
+				<p>Within this tab, are the following options:</p>
+				<ul class="hcp1">
+					<li><p>Me - will filter the screen to show only for 
+					 the logged-in user</p></li>
+					<li><p>I am the Viewpoint Users' Manager - will filter 
+					 the screen to show for the logged-in user and subordinates. 
+					 This is available only if the logged-in user is specified 
+					 as Manager for other users.</p></li>
+					<li><p>Me and my Workgroups (Unassigned Work) - will 
+					 filter the screen to show for the logged-in user and 
+					 workgroups where the logged-in user is the workgroup 
+					 manager.</p></li>
+					<li><p>My primary Administrator Group - will filter 
+					 the screen to show for the default Administrator Group 
+					 of the logged-in user.</p></li>
+					<li><p>All my Administrator Groups - will filter the 
+					 screen to show for all Administrator Groups of the 
+					 logged-in user.</p></li>
+					<li><p>My User Group - will filter the screen to show 
+					 for all users in the same User Group as the logged-in 
+					 user.</p></li>
+					<li><p>All Users - will filter the screen to show for 
+					 all active users.</p></li>
+				</ul>
+   </div></li>
+			<li class="hcp6"><p class="hcp5">Users - the 
+			 list includes all active users.</p></li>
+			<li class="hcp6"><p class="hcp5">Workgroups 
+			 - the list includes all active workgroups.</p></li>
+			<li class="hcp6"><p class="hcp5">Administrator 
+			 Groups - the list includes all active Administrator Groups.</p></li>
+			<li class="hcp6"><p class="hcp5">User Groups 
+			 - the list includes all active User Groups.</p></li>
+			<li class="hcp6"><p class="hcp5">Client/Group 
+			 - the list includes Master Files that are specified as Client/Group 
+			 (in To Do Summary and To Do Dashboard screens).</p></li>
+			<li class="hcp6"><p class="hcp5">Organisational 
+			 Units - the list includes all active Organisational Units.</p></li>
+			<li class="hcp6"><p class="hcp5">User Relations 
+			 - the list includes all active users.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="hcp2">Document Holder Security</p>
+<p>File Access is used in the setup for document holder security. The selection 
+ of File Access and Holder Security option in System Defaults - Document 
+ Management determines the security level for a user's access to document 
+ holders. For more information, go to the <a href="System_Defaults_-_Document_Management.htm">Holder 
+ Security</a> section in the topic.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Users.htm">Users</a></p></li>
+	<li><p><a href="Security_Models.htm">Security Models</a></p></li>
+</ul>
+<p>&#160;</p>
+
+   <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Users - File Access</p>
+   <p class="hcp10">&#160;</p>
+   <p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+   <p class="hcp10">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP563813914');
+	TextPopupInit('a3','POPUP564215558');
+//]]></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Sales Tax">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Sales Tax</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp3 { text-align:center;
+font-weight:bold;
+margin-left:6pt;
+margin-right:6pt; }
+p.hcp4 { text-align:center;
+margin-left:6pt;
+margin-right:6pt; }
+img.hcp5 { border:none; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Sales Tax</h1>
+<p>This section will explain how to configure Viewpoint to manage sales tax (e.g. VAT/GST) amounts in Practice Management.</p>
+<p>Each service or good that you provide to your customers (sales) or obtain from your vendors (purchase) must be set up as services in the Service Master. The sales tax is configured for each item.</p>
+<p>&#160;</p>
+<h3>Setting up Services in the Service Master</h3>
+<p>Each service or good that you provide to your customers (sales) or obtain from your vendors (purchase) must be set up as services in the Service Master. The sales tax is configured for each item. If multiple tax rates apply to a particular good or service, then you need to set up multiple records to cater for the different tax rates. For example, the service may be subject to both a standard and a reduced tax rate. In this case, set up two services in the Service Master, one at the standard rate and one at the reduced rate.</p>
+<p>The configuration of sales and purchase ledger service items are the same.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If you are using the Multi Rate/CCY List feature in Viewpoint, remember to set the sales tax rates on your Rates List for a given service.</p>
+<p>&#160;</p>
+<h3>Setting up the Matter</h3>
+<p>You need to specify the sales tax rate that will apply to each Matter of a Billing File. Do this in the VAT Rate field of the <a href="../Practice_Manager/Matters.htm">Matter</a>. There are three options to choose from.</p>
+<ul class="hcp1">
+<li>
+<p>Applicable Rate [9] - With this option, Viewpoint will add the VAT to invoice lines according to the set up for the selected service in the Service Master.</p>
+</li>
+<li>
+<p>Exempt [1] - With this option, no VAT will be added to the invoice line unless the Always Charge VAT check box for the service in the Service Master is ticked.</p>
+</li>
+<li>
+<p>Not Applicable [0]&#160;- With this option, no VAT will be added to the invoice line unless the Always Charge VAT check box for the service in the Service Master is ticked.</p>
+</li>
+</ul>
+<p>The Matter VAT Rate setting, together with the service setting will determine whether or not a sales tax will be applied to the invoice line.</p>
+<table class="Table1" style="left: 0px; top: 464px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="600">
+<col width="200">
+<col width="200">
+<col width="200">
+<tr class="t1st">
+<td rowspan="2">
+<p class="hcp2">Matter: Vat Rate</p>
+</td>
+<td colspan="2">
+<p class="hcp2">Service: Always Charge VAT</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col">
+<p class="hcp3">Ticked</p>
+</td>
+<td class="t1Col">
+<p class="hcp3">Not Ticked</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp4">Applicable Rate [9]</p>
+</td>
+<td class="t2Col">
+<p class="hcp4">% specified for service</p>
+</td>
+<td class="t1Col">
+<p class="hcp4">% specified for service</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p class="hcp4">Exempt [1]</p>
+</td>
+<td class="t2Col">
+<p class="hcp4">% specified for service</p>
+</td>
+<td class="t1Col">
+<p class="hcp4">0%</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p class="hcp4">Not Applicable [0]</p>
+</td>
+<td class="t2Col">
+<p class="hcp4">% specified for service</p>
+</td>
+<td class="t1Col">
+<p class="hcp4">0%</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>Example</h3>
+<h5>Sales Tax on Sales</h5>
+<ol start="1">
+<li style="font-family: Arial, sans-serif; font-size: 9pt;">
+<p class="Listing">The service Special Service has been set up as follows:</p>
+<p class="Listing"><img src="../image28.gif" alt="" width="600" height="232" border="0" class="hcp5"></p>
+</li>
+</ol>
+<p class="Listing" style="margin-left: 40px;"><img src="../image3.jpg" alt="" width="850" height="535" border="0" class="hcp5"></p>
+<ol start="2" style="list-style: decimal;">
+<li style="font-family: 'MS Reference Sans Serif', sans-serif;">
+<p class="Listing" style="font-family: 'MS Reference Sans Serif', sans-serif;">Select a Billing File and set the VAT Rate for the selected Matter to Applicable Rate.</p>
+</li>
+<li>
+<p class="Listing">Next, create a sales invoice for the Matter. Add Special Service as a Detail Line.</p>
+</li>
+<li>
+<p class="Listing">In the Detail Lines of this Draft Invoice, the VAT % field is automatically filled in with 17.5% and the Tax/VAT is €3.50.</p>
+</li>
+</ol>
+<p class="Listing" style="margin-left: 40px;"><img src="../image23.jpg" alt="" width="542" height="333" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<h3>Sales Tax Reports</h3>
+<p>There are various reports in the Practice Management component to aid you in filling in your sales tax returns.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Sales Tax on Sales</h6>
+<ul class="hcp1">
+<li>
+<p>VAT Details Listing by Journal Date - This provides sales tax information on all invoiced sales transactions.</p>
+</li>
+<li>
+<p>VAT Details Listing on Receipts by Receipt Date - This provides sales tax information on all sales transactions which have been settled , whether partially or in full. It is especially useful if you are using cash accounting on your sales tax, where you would only pay sales tax on those sales transactions for which you have received payment.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">Sales Tax on Purchases</h6>
+<ul class="hcp1">
+<li>
+<p>VAT Details Listing by Journal Date - This provides sales tax information on all invoiced purchase transactions.</p>
+</li>
+<li>
+<p>VAT Details Listing on Receipts by Receipt Date - This provides sales tax information on all purchase transactions which have been settled, whether partially or in full. It is especially useful if you are using cash accounting on your sales tax, in determining the amount of sales tax you can reclaim on purchases.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h3>Accounting Posting</h3>
+<p>If you wish to have automatic posting from Practice Management directly to Accounting, map the Practice Management items, including services from the Service Master, to the Chart of Accounts via Configuration. Once an invoice has been posted in the Practice Management component, an entry will be created automatically in Accounting. The lump sum totals of sales tax will be posted to the two Nominal Accounts defined in the mapping.</p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Sales Tax</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

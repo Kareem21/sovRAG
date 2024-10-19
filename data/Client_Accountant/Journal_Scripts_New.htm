@@ -1,0 +1,552 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Journal Scripts">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Journal Scripts - New</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+li.hcp1 { list-style:disc; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-left:0px; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Journal Scripts - New</h1>
+<ol>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">In the Customise Journal Scripts screen, select 
+	 the sub-ledger account type that you want to create a new journal 
+	 script for. For example, acquisition of a freehold property would 
+	 be a Fixed Assets sub-ledger transaction, a sale of listed securities 
+	 would be a Securities sub-ledger transaction. In the former example, 
+	 the script will appear in the Select folder of the Fixed Assets journal 
+	 screen; in the latter, the Securities journal screen.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Click New.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">A new line will appear in the journal header section 
+	 of the screen. By default, the new line will replicate some details 
+	 from the line above, if applicable. You can also edit these details 
+	 when necessary.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Complete the fields of the journal header accordingly:</p>
+	<ul>
+		<li class="hcp1"><p class="Listing">Group - Enter 
+		 the group caption or description. This is used to group similar 
+		 journal scripts together. If left empty, the program will default 
+		 to the Group caption of the previous row.</p></li>
+		<li class="hcp1"><p class="Listing">Description - 
+		 Enter the description of the transaction. This will be shown on 
+		 the Select folder of the journal screen.</p></li>
+		<li class="hcp1"><p class="Listing">Type - Select 
+		 the journal type. For accrual journals, the program will automatically 
+		 post a reversal journal on (Journal Date + 1 day).</p></li>
+		<li class="hcp1"><p class="Listing">Cap/Inc - This 
+		 field is relevant for Charts of Accounts templates that have been 
+		 enabled for Capital/Income Segregation. When defining scripts 
+		 where the C/I segregation is not required, select B to allow both 
+		 capital and income transactions.</p></li>
+		<li class="hcp1"><p class="Listing">Caption Amount 
+		 - Enter the caption for the Currency/Amount field to precisely 
+		 describe the amount entered. For instance, you may change this 
+		 to Total Debit Note or Gross Proceeds Received.</p></li>
+		<li class="hcp1"><p class="Listing">Default Reference 
+		 - Enter any text and a valid field code in the format &lt;text&gt;{Field_code}&lt;text&gt;. 
+		 See Default Reference in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">Active - Tick 
+		 to ensure that the script can be used. Remove the tick if you 
+		 no longer want it displayed in the Select folder.</p></li>
+		<li class="hcp1"><p class="Listing">Customized - Tick 
+		 to flag a script as customized to prevent it from being overwritten 
+		 on (re)import.</p></li>
+		<li class="hcp1"><p class="Listing">Code - The system 
+		 will assign a unique code for the script. This cannot be changed.</p></li>
+		<li class="hcp1"><p class="Listing">Help Text - Enter 
+		 information to assist users in deciding which script to use. Be 
+		 as concise and precise as possible. If there are certain parameters 
+		 to the journal, for example: &quot;Only complete line 3 if any 
+		 Foreign Exchange is involved”, put this information here.</p></li>
+	</ul></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Once the journal header details are complete, 
+	 enter the individual journal lines to build the complete journal.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">In the journal line section, click Add Line.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Enter the details of the journal line:</p>
+	<ul>
+		<li class="hcp1"><p class="Listing">Number - This 
+		 is an incremental number which is assigned by the system. You 
+		 may use this in field codes for line referrals.</p></li>
+		<li class="hcp1"><p class="Listing">Line Description 
+		 - Enter the description of the line. This will be displayed on 
+		 the Script folder of the sub-ledger journal Accounting - Journals, 
+		 and denotes the purpose of the line. This description is used 
+		 to provide the user with information about the respective journal 
+		 line and can become part of the journal.</p></li>
+		<li class="hcp1"><p class="Listing">A-Type - Select 
+		 the nominal or sub-ledger account type to which the journal line 
+		 is being restricted. This field is always the sub-ledger account 
+		 type for the first line. For instance, if you are creating a script 
+		 in the Creditor sub-ledger, the A-Type is C - Creditor for the 
+		 first journal line. This cannot be changed.</p></li>
+		<li class="hcp1"><p class="Listing">Movement - Select 
+		 the movement code for the journal line. The options available 
+		 for selection depend on the A-Type selected.</p></li>
+		<li class="hcp1"><p class="Listing">DR/CR - Select 
+		 the movements allowed for the journal line.</p></li>
+		<li class="hcp1"><p class="Listing">Account - Specify 
+		 the accounts that are allowed for selection of the journal line. 
+		 The code begins with the selection type (like NT.) with the allowable 
+		 values after the period (.). Multiple values are separated by 
+		 a comma. See Account in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">D-Description 
+		 - Enter any description, reference or narrative field. See D-Description 
+		 and D-Narrative in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">D-Line Date - 
+		 The date field can refer to the journal, line or reconciliation 
+		 date of the header, the system date or dates of preceding rows. 
+		 See D-Line Date and D-Rec Date in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">D-Rec. Date - 
+		 The date field can refer to the journal, line or reconciliation 
+		 date of the header, the system date or dates of preceding rows. 
+		 See D-Line Date and D-Rec Date in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">D-Narrative - 
+		 Enter any description, reference or narrative field. See D-Description 
+		 and D-Narrative in the Examples section below.</p></li>
+		<li class="hcp1"><p class="Listing">Amount - Select 
+		 the appropriate line-related amount. Refer to Amount in the Examples 
+		 section below.</p></li>
+		<li class="hcp1"><p class="Listing">Tags - Find out 
+		 more <a class="dropspot" href="javascript:TextPopup(this)" id="a3">here</a>.</p>
+		<div class="droptext" id="POPUP472817054" style="display: none;">
+			<h6 class="Heading8">[@BC]</h6>
+			<p>This tag forces the posting to nominal account to be in 
+			 base currency instead of the header currency. This code can 
+			 be useful, for example, for the gain/loss on sub-ledger account 
+			 disposal, where you want the gain/loss to be in the base currency 
+			 instead of in the sub-ledger currency.</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[Warning=No]</h6>
+			<p>This is placed in the first line of the script to skip any 
+			 warning message that may&#160;be displayed when posting the 
+			 script.</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[@JNC=&lt;COS option&gt;]</h6>
+			<p>This code is specifically designed for ‘sales invoicing’. 
+			 Place this in journal lines for Products/Services sales to 
+			 automatically generate the ‘stock issue and cost of sales’ 
+			 entries for products/services. The cost of sales amount will 
+			 depend on the options selected:</p>
+			<ul class="hcp2">
+				<li><p>COS.A - Cost of sales/average cost.</p></li>
+				<li><p>COS.F - Cost of sales/FIFO.</p></li>
+				<li><p>COS.S - Cost of sales/following the sub-ledger valuation 
+				 setting.</p></li>
+			</ul>
+			<h6 class="Heading8">[@HEXCH]</h6>
+			<p>Place this code in lines that should use the header exchange 
+			 rate to calculate the amount, instead of the sub-ledger rate 
+			 or the rate from the Exchange Rate Master.</p>
+			<ul class="hcp2">
+				<li><p>If you want to change the header rate, you need 
+				 to first delete the amount on the journal line with this 
+				 code, and then change the rate in the header. If you change 
+				 the header rate without first deleting the amount, the 
+				 line will retain the original header exchange rate.</p></li>
+			</ul>
+			<h6 class="Heading8">[Initiate=FADEPR]</h6>
+			<p>Place this code in the line for Depreciation Journal Script 
+			 in order to open the Depreciation screen for the depreciation 
+			 to be done before the Disposal journal. See also <a href="Fixed_Asset_Depreciation.htm">Fixed 
+			 Asset Depreciation</a></p>
+  </div></li>
+	</ul></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Once all the journal lines have been added, select 
+	 the Chart(s) of Account templates that the script can be used with. 
+	 Tick the checkboxes next to the appropriate templates.</p></li>
+	<li class="p" style="font-family: Arial, sans-serif; font-size: 9pt;"><p 
+		 class="Listing">Click Update.</p></li>
+</ol>
+<p class="Listing">&#160;</p>
+<h3>Examples</h3>
+<h6 class="Heading8">Journal Header</h6>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Default 
+	 Reference</a></p>
+	<div class="droptext" id="POPUP472822206" style="display: none;">
+		<p class="Listing">You may want to use the {UFV.FIELDKEY} code 
+		 for automatic incremental numeric references. This reference will 
+		 be applied to all lines of the journal.</p>
+		<p>This code retrieves the field value from the user defined field 
+		 with the ‘FIELDKEY’ specified. If the field type is a number, 
+		 and the value numeric, the program will automatically increment 
+		 the number.</p>
+		<p>For example, replace</p>
+		<p>&lt;text #&gt;{Field_code}&lt;text&gt;</p>
+		<p>with</p>
+		<p>E#{UFV.JNLREF} - UL</p>
+		<p>and the result will be:</p>
+		<p>E#002 - UL</p>
+		<p>&#160;</p>
+		<p>Refer to <a href="Automatic_Journal_Reference.htm">Automatic 
+		 Journal Reference</a>.</p>
+ </div></li>
+</ul>
+<p class="Listing">&#160;</p>
+<h6 class="Heading8">Journal Line</h6>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a6">Account</a></p>
+	<div class="droptext" id="POPUP472828778" style="display: none;">
+		<p>The following will explain the types of codes that you can use 
+		 in this line:</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#ACODE</h6>
+		<p>This copies the account code from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SL.X</h6>
+		<p>Sub-ledger accounts of the specified type.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">NT.1,2,3</h6>
+		<p>Posting accounts of the listed account type(s). In the above 
+		 example, account types 1, 2 and 3.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">NM.1,2,3</h6>
+		<p>Posting accounts of the listed main group(s). In the above example, 
+		 main groups 1, 2 and 3.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">NS.12,23</h6>
+		<p>Posting accounts of the listed sub group(s). In the above example, 
+		 sub-groups 1, 2 and 3.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">NA.4567,6789</h6>
+		<p>The specified posting accounts. In the above example, accounts 
+		 4567 and 6789.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">AS.ABCDE,BDEF</h6>
+		<p>Specify the sub-ledger accounts that can be selected. In the 
+		 above example, sub-ledger accounts ABCDE and BDEF.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">DV</h6>
+		<p>Enter a divider line. The program will create an empty line 
+		 and ignore any values on this line except for the line description. 
+		 This is useful for separating line groups in large journals.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#H#CP.{CODE}</h6>
+		<p>This retrieves the {CODE} account as specified in the properties 
+		 of the nominal control account linked to the sub-ledger account 
+		 selected in the journal header. The accepted values are:</p>
+		<ul class="hcp2">
+			<li><p>EXCHGL - Both exchange gain and loss accounts*</p></li>
+			<li><p>VALUEGL - Both value gain and loss accounts*</p></li>
+			<li><p>INCEXP - Both income and expense accounts*</p></li>
+			<li><p>EXCHGAIN - Exchange gain</p></li>
+			<li><p>EXCHLOSS - Exchange loss</p></li>
+			<li><p>CAPGAIN - Capital gain</p></li>
+			<li><p>CAPLOSS - Capital loss</p></li>
+			<li><p>INCOME - Income</p></li>
+			<li><p>EXPENSES - Expenses</p></li>
+			<li><p>UNREALREVAL - Unrealised value revaluation</p></li>
+			<li><p>UNREALEXCH - Unrealised exchange revaluation</p></li>
+			<li><p>UNREALREVALGAIN - Unrealised value revaluation - Gains</p></li>
+			<li><p>UNREALREVALLOSS - Unrealised value revaluation - Losses</p></li>
+			<li><p>UNREALEXCHGAIN - Unrealised exchange revaluation - Gains</p></li>
+			<li><p>UNREALEXCHLOSS - Unrealised exchange revaluation - Losses</p></li>
+		</ul>
+		<p class="hcp3">*The program will automatically switch 
+		 between the accounts based on the amount value (debit/credit).</p>
+		<p class="hcp3">For instance:</p>
+		<p class="hcp3">#H#CP.EXCHGAIN = Exchange gain posting 
+		 account as specified in the properties of the nominal control 
+		 account linked to the sub-ledger.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SN.X.{CODE}</h6>
+		<p>This retrieves the sub-ledger accounts of the specified type 
+		 and posts the line amount to the <a class="dropspot" href="javascript:TextPopup(this)" id="a4">{CODE}</a> 
+		 account as specified in the properties of the nominal control 
+		 account linked to the sub-ledger account selected in this journal 
+		 line. The accepted values are:</p>
+		<div class="droptext" id="POPUP472828635" style="display: none;">
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">EXCHGAIN</span> = Exchange gain</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">EXCHLOSS</span> = Exchange loss</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">CAPGAIN</span> = Capital gain</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">CAPLOSS</span> = Capital loss</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">INCOME</span> = Income</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">EXPENSES</span> = Expenses</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">UNREALREVAL</span> = Unrealised value 
+			 revaluation</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">UNREALEXCH</span> = Unrealised exchange 
+			 revaluation</p>
+			<p class="FldExplain" style="margin-left: 72px;"><span class="hcp4">456</span> = The <span style="font-weight: bold;">listed 
+			 (specified)</span> posting account</p>
+			<p class="FldExplain" style="margin-left: 72px;">Example:</p>
+			<p class="FldExplain" style="margin-left: 72px;">SN.B.EXCHGAIN 
+			 = Exchange gain posting account as specified in the properties 
+			 of the nominal control account linked to the Bank sub-ledger 
+			 selected in this journal line.</p>
+  </div>
+		<ul class="hcp2">
+			<li><p>EXCHGAIN - Exchange gain</p></li>
+			<li><p>EXCHLOSS - Exchange loss</p></li>
+			<li><p>CAPGAIN - Capital gain</p></li>
+			<li><p>CAPLOSS - Capital loss</p></li>
+			<li><p>INCOME - Income</p></li>
+			<li><p>EXPENSES - Expenses</p></li>
+			<li><p>UNREALREVAL - Unrealized value revaluation</p></li>
+			<li><p>UNREALEXCH - Unrealized exchange revaluation</p></li>
+			<li><p>456 - The listed posting account 456.</p></li>
+		</ul>
+		<p>For instance:</p>
+		<p>SN.B.EXCHGAIN = Exchange gain posting account as specified in 
+		 the properties of the nominal control account linked to the Bank 
+		 sub-ledger selected in this journal line.</p>
+		<p class="Listing">&#160;</p>
+		<p class="Listing">&#160;</p>
+		<p class="SeeAlso">See also: </p>
+		<ul class="hcp2">
+			<li><p><a href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">Chart 
+			 of Accounts - Nominal Accounts</a></p></li>
+		</ul>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a7">D-Description 
+	 and D-Narrative</a></p>
+	<div class="droptext" id="POPUP472827273" style="display: none;">
+		<p>This can be a combination of text and field codes in the format 
+		 &lt;text&gt;{Field_code}&lt;text&gt;. The field codes can refer 
+		 to another field in the journal header, or a preceding journal 
+		 line. For example, {#2#LINED} will pull in the Line description 
+		 from journal line 2.</p>
+		<p>Multiple field code values can be used at one time.</p>
+		<p>For instance, the narrative for securities purchased might be:</p>
+		<p>Purchase of {#H#QNT} {#H#ACCT}</p>
+		<p>which will result in</p>
+		<p>Purchase of 1000 Google.com.</p>
+		<p>&#160;</p>
+		<p>The following explains the variables that can be used:</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{REF}</h6>
+		<p>This picks up the journal reference.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#LINED}</h6>
+		<p>This copies the line description from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#DESCR}</h6>
+		<p>This picks up the description from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#NARR}</h6>
+		<p>This picks up the narrative from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#QNT}</h6>
+		<p>This picks up the quantity from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#CCY}</h6>
+		<p>This picks up the currency from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#CAMT}</h6>
+		<p>This picks up the amount in the currency of the transaction 
+		 from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#BAMT}</h6>
+		<p>This picks up the amount in the base currency from the row specified 
+		 by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#EXCH}</h6>
+		<p>This picks up the exchange rate from the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#ACCT}</h6>
+		<p>This picks up the account name from the row specified by x.</p>
+		<p>&#160;</p>
+		<p>For Bank Accounts journal scripts, the following code can be 
+		 used to pick up value for cheque reference:</p>
+		<h6 class="Heading7">{UFV.CHQREF}</h6>
+		<p>This picks up the value for the user field 'CHQREF'. Refer to 
+		 <a href="../Configuration/Automatic_Cheque_Reference.htm">Automatic 
+		 Cheque Reference</a>.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">D-Line 
+	 Date and D-Rec.Date</a></p>
+	<div class="droptext" id="POPUP472841557" style="display: none;">
+		<p>The following are the variables that can be used in this field:</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{NOW}</h6>
+		<p>This will pick up the system date.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{NOW+0}</h6>
+		<p>This will pick up the system date plus or minus a number of 
+		 days. For example: {NOW+10} or {NOW-10}.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{JND+0}</h6>
+		<p>This will pick up the journal date plus or minus a number of 
+		 days. For example: {JND+10} or {JND-10}.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#LND+0}</h6>
+		<p>This will pick up the line date from the row specified by x, 
+		 plus or minus a number of days. For example: {#H#LND+10} or {#H#LND-10}.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">{#x#RCD+0}</h6>
+		<p>This will pick up the reconciliation date from the row specified 
+		 by x, plus or minus a number of days. For example: {#H#RCD+10} 
+		 or {#H#RCD-10}.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">HIDE</h6>
+		<p>Use this to hide (disable) the date. This code can only be specified 
+		 in the header (1st) line of the script.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Amount</a></p>
+	<div class="droptext" id="POPUP473062434" style="display: none;">
+		<p>The following describes the variables that can be used in this 
+		 field:</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">BAL</h6>
+		<p>This is used to show the offset of the running total of the 
+		 preceding script lines, including the header.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">BLS</h6>
+		<p>This behaves in the same manner as BAL if the preceding lines 
+		 and the current line are in different currencies. However, if 
+		 the preceding lines and the current line are in the same currency, 
+		 the program will complete for the current amount, the offset of 
+		 the total of the preceding lines i.e. balance the journal up to 
+		 the line in the currency amount. The base amount is calculated 
+		 using the exchange rate of the line.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#</h6>
+		<p class="Heading7">This is used in field codes as {#x#FIELDCODE}. 
+		 The line referral codes cannot be used for all codes and it cannot 
+		 refer to journal lines below itself - only to the header or lines 
+		 above. If this code is omitted, e.g. {FIELDCODE}, the codes will 
+		 refer to the fields in the same line. The codes that can be used 
+		 are:</p>
+		<ul class="hcp2">
+			<li><p>#H# = Header (#1# = also refers to header)</p></li>
+			<li><p>#P# = Previous line</p></li>
+			<li><p>#3# = Line number 3. Note that the first journal line 
+			 number is 1.</p></li>
+		</ul>
+		<h6 class="Heading7">&#160;</h6>
+		<h6 class="Heading7">#x#EXS</h6>
+		<p>This will show the exchange difference between the sub-ledger 
+		 exchange rate and the exchange rate of the row specified by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#EXR</h6>
+		<p>This is the same as #H#EXS with the amount reversed.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#EXH</h6>
+		<p>This will show the exchange difference between sub-ledger rate 
+		 and the exchange rate at the journal date as retrieved from the 
+		 daily rate table.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#EXG</h6>
+		<p>This is the same as #x#EXH with the amount reversed.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">999</h6>
+		<p>The script will default to this amount when it is used. Amend 
+		 the figure to correctly represent the amount you want to use.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#9%</h6>
+		<p>This is the percentage of the amount entered in the row referred 
+		 by x. In the above example, the rate used is 9%.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#AMT</h6>
+		<p>This will show the amount of the row referred to by x.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">#x#AMR</h6>
+		<p>This is the same as #x#AMT with the amount reversed.</p>
+		<p>&#160;</p>
+		<p>The following codes can only be used on the first (header) line:</p>
+		<h6 class="Heading7">TOT+N</h6>
+		<p>Total of underlying lines.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">BSL+N</h6>
+		<p>Total book value of the sub-ledger account.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SBS+N</h6>
+		<p>Book value as per the valuation method set for the Account File.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SBA+N</h6>
+		<p>Book value average cost.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SBF+N</h6>
+		<p>Book value FIFO.</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">TZA+N</h6>
+		<p>Zero CCY+Base Amount Line</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">TZV+N</h6>
+		<p>Zero CCY Amount Line</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">TZX+N</h6>
+		<p>Exchange difference (zero CCY amount)</p>
+		<p>&#160;</p>
+		<p>The following code is applicable where the first (header) line 
+		 refers to a sub-ledger with control quantity only:</p>
+		<p>&#160;</p>
+		<h6 class="Heading7">SSP+N</h6>
+		<p>Security Unit Price x Quantity.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 +N indicates that the currency value CANNOT be edited by the user. 
+		 This directive is optional, can be used for all codes and is recommended 
+		 for the SBx codes.</p>
+		<p>For non-base currency (header and journal) lines, the exchange 
+		 rate and base currency fields are editable, except for lines involving 
+		 sub-ledgers. For TOT the non-base currency is editable, except 
+		 where the line refers to sub-ledgers.</p>
+ </div></li>
+</ul>
+<p class="Listing">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Capital_Income_Segregation.htm">Capital/Income Segregation</a></p></li>
+	<li><p><a href="Journals_Section.htm">Journals</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Journal Scripts - New</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP472817054');
+	TextPopupInit('a5','POPUP472822206');
+	TextPopupInit('a6','POPUP472828778');
+	TextPopupInit('a4','POPUP472828635');
+	TextPopupInit('a7','POPUP472827273');
+	TextPopupInit('a1','POPUP472841557');
+	TextPopupInit('a2','POPUP473062434');
+//]]></script>
+</body>
+</html>

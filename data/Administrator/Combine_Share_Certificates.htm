@@ -1,0 +1,189 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Combine Share Certificates</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Combine Share Certificates</h1>
+<p>Share certificates can be combined if they are of &#160;the same share class and owned by the same shareholder. You can combine certificates when you are allotting shares and when you are transferring shares. In both instances, you need to know the share certificate number you want to add the shares to.</p>
+<ul class="hcp1">
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Combining during share issuance</a></p>
+<div class="droptext" id="POPUP400846399" style="display: none;">
+<ol class="hcp2">
+<li>
+<p>Enter the information for the issuance:</p>
+<ul class="hcp1">
+<li>
+<p>Description - This defaults to Authorization [AU] but you can change the <a class="dropspot" href="javascript:TextPopup(this)" id="a18">description</a>.</p>
+ <div class="droptext" id="POPUP400825835" style="display: none;">
+<p>More descriptions can be added in Share:Allotment/Issue Types [S_AL] lookup value table.</p>
+ </div></li>
+<li>
+<p>Allottee - Select the Master File of the person or entity the shares are allotted to.</p>
+</li>
+<li>
+<p>Transaction Date - This defaults to today's date and is effectively the date the transaction was entered.</p>
+</li>
+<li>
+<p>Effective Date - Enter the date the shareholders pass a resolution authorising the increase in share capital. If this is left blank, the transaction must be posted at a later date in Posting.</p>
+</li>
+<li>
+<p>Number of Shares - Enter the number of shares to be authorised.</p>
+</li>
+<li>
+<p>Subscriber Shareholder? - Tick this to indicate the shareholder is a subscriber shareholder</p>
+</li>
+<li>
+<p>Consideration/Share - Enter the consideration paid &#160;per share. If this is higher than the nominal value, the system will indicate that the shares are issued at a premium. If it is lower than the nominal value, the system will indicate the shares are issued at a discount.</p>
+</li>
+<li>
+<p>Paid-up/Share - Enter the actual amount paid per share. If the paid value per share is equal to the consideration, the system will indicate that the shares are 'Fully paid'. If the paid-up value is lower, the system will indicate the shares are only 'Partly paid'.</p>
+</li>
+<li>
+<p>Paid - Select the means of payment. If it is not by cash, give details in the Note field. There can only be one payment method for a share transaction.</p>
+</li>
+<li>
+<p>Distinctive Numbers - Enter the distinctive numbers that will be shown on the share certificate. For range of share numbers, it &#160;should be entered as 1-25; 55-100 which indicates a range of 1 to 25 and 55 to 100 for a total of 70 shares. Note the use of dash [-] and semi-colon [;].</p>
+</li>
+<li>
+<p>Certificate No. - Delete the default share certificate number and enter the number of the existing certificate you want to add the shares to.</p>
+</li>
+<li>
+<p>Location - Enter the location of the share certificate, if applicable.</p>
+</li>
+<li>
+<p>Note - Enter additional information for the share transaction.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+<li>
+<p>Tick the form(s) you want to generate.</p>
+</li>
+<li>
+<p>Click OK.</p>
+</li>
+</ol>
+<p>&#160;</p>
+</div></li>
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Combining during share transfer</a></p>
+<div class="droptext" id="POPUP400837288" style="display: none;">
+<ol class="hcp2">
+<li>
+<p>Enter the relevant information for the share transfer:</p>
+<ul class="hcp1">
+<li>
+<p>Description - This defaults to Transfer [TR] but you can change the <a class="dropspot" href="javascript:TextPopup(this)" id="a5">description</a>.</p>
+ <div class="droptext" id="POPUP400822384" style="display: none;">
+<p>More descriptions can be added in Share:Transfer Types [S_TR] lookup value table.</p>
+ </div></li>
+<li>
+<p>Transferee - Select the individual or entity to whom the shares are being transferred.</p>
+</li>
+<li>
+<p>Transaction Date - This defaults to today's date but can be changed. It is essentially the date the transaction was agreed upon between the shareholders or the date the transaction was entered.</p>
+</li>
+<li>
+<p>Effective Date - Enter the date the transfer was actually registered and (where appropriate) the Stamp Duty was paid.</p>
+</li>
+<li>
+<p>Number of Shares - Enter the number of shares being transferred. This cannot be higher than the total shares. If the number of shares transferred is lower than the total shares, the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">New Certificate</a> section will be enabled.</p>
+ <div class="droptext" id="POPUP400852081" style="display: none;">
+<p>This section is enabled if there are shares left after the transfer. Enter the following information:</p>
+<ul class="hcp1">
+<li>
+<p>Description - This defaults to New Certificate [NC] but you can change the <a class="dropspot" href="javascript:TextPopup(this)" id="a3">description</a>.</p>
+  <div class="droptext" id="POPUP400834041" style="display: none;">
+<p>More descriptions can be added in Share:New Certificate Types [S_NC] lookup value table in System Manager.</p>
+  </div></li>
+<li>
+<p>Distinctive Numbers - Enter the distinctive numbers that will be shown on the share certificate. For range of share numbers, it &#160;should be entered as 1-25; 55-100 which indicates a range of 1 to 25 and 55 to 100 for a total of 70 shares. Note the use of dash [-] and semi-colon [;].</p>
+</li>
+<li>
+<p>Certificate No. - This defaults to the first available number but can be changed. The initials following the words 'Certificate no.' indicate the certificate prefix. If you have set the certificate prefix as 'OR' it will appear as 'Certificate No. OR'. Enter zero if you do not require a certificate.</p>
+</li>
+<li>
+<p>Location - Enter the location where the share certificate is kept, if applicable.</p>
+</li>
+</ul>
+<p>&#160;</p>
+ </div></li>
+<li>
+<p>Total Consideration - Enter the total consideration for the shares being transferred. The system will divide that amount by the number of shares and display the consideration per share.</p>
+</li>
+<li>
+<p>Distinctive Numbers - Enter the distinctive numbers that will be shown on the share certificate. For range of share numbers, it &#160;should be entered as 1-25; 55-100 which indicates a range of 1 to 25 and 55 to 100 for a total of 70 shares. Note the use of dash [-] and semi-colon [;].</p>
+</li>
+<li>
+<p>Certificate No. - Delete the default share certificate number and enter the number of the existing certificate you want to add the shares to.</p>
+</li>
+<li>
+<p>Location - Enter the location where the share certificate is kept.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click Update.</p>
+</li>
+<li>
+<p>Tick the form(s) you want to generate.</p>
+</li>
+<li>
+<p>Click OK.</p>
+</li>
+</ol>
+<p>&#160;</p>
+</div></li>
+</ul>
+<p>Note that when share certificates are combined, the shares held by each certificate will be listed separately but will have the same certificate number.</p>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Change_Ownership_Structure.htm">Entity Administration</a> &gt; Combine Share Certificates</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP400846399');
+	TextPopupInit('a18','POPUP400825835');
+	TextPopupInit('a4','POPUP400837288');
+	TextPopupInit('a5','POPUP400822384');
+	TextPopupInit('a2','POPUP400852081');
+	TextPopupInit('a3','POPUP400834041');
+//]]></script>
+</body>
+</html>

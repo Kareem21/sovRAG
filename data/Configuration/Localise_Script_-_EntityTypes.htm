@@ -1,0 +1,211 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - EntityTypes</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:bold;
+text-decoration:underline; }
+p.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold; }
+td.hcp5 { vertical-align:top; }
+p.hcp6 { font-weight:normal; }
+li.hcp7 { text-decoration:none; }
+p.hcp8 { font-weight:normal;
+text-decoration:none; }
+li.hcp9 { font-weight:normal; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Entity Types</h1>
+<p>For Entity Types, tags are available for Localise Scripts to be used 
+ to:</p>
+<ul class="hcp1">
+	<li><p>Deactivate existing entity types</p></li>
+	<li><p>Add new entity types</p></li>
+	<li><p>Edit existing entity types</p></li>
+</ul>
+<p>For new entity types, the entity types will have the Customised and 
+ Active checkboxes ticked by default.</p>
+<p>&#160;</p>
+<h3>Deactivating Entity Types</h3>
+<p>The tag below will deactivate entity types within a specified jurisdiction:</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp3">ETYPE:&lt;JurisdictionCode&gt;+&lt;EntityTypeCode&gt;=InUse=0</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">&lt;JurisdictionCode&gt;</span> 
+	 refers to the code of the jurisdiction for the entity type.</p></li>
+	<li><p><span class="hcp4">&lt;EntityTypeCode&gt;</span> 
+	 refers to the reference code of the entity type.</p></li>
+</ul>
+<p>To deactivate multiple entity types from the same jurisdiction, separate 
+ each &lt;EntityTypeCode&gt; with a comma.</p>
+<p>Note: Entity types that are configured as Viewpoint standard will be 
+ reinserted on the next upgrade if they have been deleted.</p>
+<p>&#160;</p>
+<p class="hcp2">Example</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="80.467%" border="1">
+	<col style="width: 15.017%;">
+	<col style="width: 74.007%;">
+	<tr class="t1st">
+		<td class="hcp5"><p>Tag</p></td>
+		<td class="hcp5"><p><span class="hcp4">Explanation</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ETYPE:VG+PL=InUse=0</p></td>
+		<td class="t2Col" style="vertical-align: top;">This will deactivate 
+		 the Limited Partnership [PL] entity type from the British Virgin 
+		 Islands jurisdiction.</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ETYPE:VG+PA,PL=InUse=0</p></td>
+		<td class="t2Col" style="vertical-align: top;">This will deactivate 
+		 the International Limited Partnership [PA] and Limited Partnership 
+		 [PL] entity types from the British Virgin Islands jurisdiction.</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ETYPE:VG+PL,PL|KY+PA,PL=InUse=0</p></td>
+		<td class="t2Col" style="vertical-align: top;">This will deactivate 
+		 the International Limited Partnership [PA] and Limited Partnership 
+		 [PL] entity types from both the British Virgin Islands and Cayman 
+		 Islands jurisdictions.</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3>Adding and Updating Entity Types</h3>
+<p>The following is used to add a new entity type as well as to update 
+ an existing one. If the specified jurisdiction and entity type does not 
+ exist, then the localise script will create a new entity type. However, 
+ if it already exist, then the current configuration will be replaced by 
+ the configuration of the localise script.</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp3">ETYPE:&lt;JurisdictionCode&gt;+&lt;EntityTypeCode&gt;=&lt;DBField&gt;=&lt;Value&gt;|&lt;DBField&gt;=&lt;Value&gt;|...|<span class="hcp4">InUse=1|NavIDs=&lt;NavigationID&gt;</span></p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p class="hcp3">&lt;JurisdictionCode&gt; <span style="font-weight: normal;">refers 
+	 to the code of the jurisdiction for the entity type.</span></p></li>
+	<li><p class="hcp6"><span class="hcp4">&lt;EntityTypeCode&gt;</span> 
+	 refers to the reference code of the entity type.</p></li>
+	<li><p class="hcp6"><span class="hcp4">&lt;DBField&gt;</span> 
+	 refers to the database field for the entity type and they are:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p class="hcp6">ShortName - Short Name field</p></li>
+		<li><p class="hcp6">LongDescr - Full Name field</p></li>
+		<li><p class="hcp6">Ownership - Ownership Structure 
+		 field</p></li>
+		<li><p class="hcp6">ST_ReqSec - Secretary field</p></li>
+		<li><p class="hcp6">ST_ReqAud - Auditor field</p></li>
+		<li><p class="hcp6">ST_ReqAR - Annual Return field</p></li>
+		<li><p class="hcp6">ST_ReqAGM - AGM field</p></li>
+		<li><p class="hcp6">ST_MinShareHolders - Minimum 
+		 Shareholders or Partners field</p></li>
+		<li><p class="hcp6">ST_MinDirs - Minimum Directors 
+		 field</p></li>
+		<li><p class="hcp6">TagValues - Tag Values field</p></li>
+		<li><p class="hcp6">EtNote - Note field</p></li>
+	</ul></li>
+	<li class="hcp7"><p class="hcp8"><span class="hcp4">&lt;Value&gt;</span> refers to the value 
+	 for the <span class="hcp4">&lt;DBField&gt;</span>. Use 
+	 1 to tick a checkbox and 0 to untick the checkbox. </p></li>
+	<li class="hcp7"><p class="hcp8"><span class="hcp4">&lt;NavigationID&gt;</span> refers to the 
+	 screen menu navigation ID to include for the entity type. </p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Example</p>
+<p>ETYPE:VG+PG=ShortName=General Partnership|LongDescr=General Partnership| 
+ Ownership=PA|ST_ReqSec=-|ST_ReqAud=-|ST_ReqAR=-|ST_ReqAGM=-|ST_MinDirs=1|ST_MinShareHolders=1|TagValues=[FILTER:INT.TYPE=PLE,UBO]|InUse=1|NavIds=FSECOPYE,FSEGENER,FSERELAT,FSESTATC,FSEUSRFC,FSEPARTN,FSEPARPT,FSEPAPOS,FSEPAMEM,FSEPATRA,FSEOPINT,FSEREGIS,FSEFRREG,FSEBKACC,FSECHARG,FSENAMES,FSEDIVID,FSEACCTS,FSEACTCR,FSEAMEET,FSEAFILG,FSEAREVW</p>
+<p>&#160;</p>
+<p>This will create a new entity type in the Entity Types screen where:</p>
+<ul class="hcp1">
+	<li><p class="hcp6">Jurisdiction: British Virgin Islands</p></li>
+	<li><p class="hcp6">Type Code: PG</p></li>
+	<li><p class="hcp6">Short Name: General Partnership</p></li>
+	<li><p class="hcp6">Full Name: General Partnership</p></li>
+	<li><p class="hcp6">Ownership Structure: Partnership 
+	 [PA]</p></li>
+	<li><p class="hcp6">Secretary: Not required [-]</p></li>
+	<li><p class="hcp6">Auditor: Not required [-]</p></li>
+	<li class="hcp9"><p class="hcp6">Annual 
+	 Return: Not required [-]</p></li>
+	<li class="hcp9"><p class="hcp6">AGM: 
+	 Not required [-]</p></li>
+	<li class="hcp9"><p class="hcp6">Minimum 
+	 Shareholders or Partners:1</p></li>
+	<li class="hcp9"><p class="hcp6">Minimum 
+	 Directors: 1</p></li>
+	<li class="hcp9"><p class="hcp6">Tag 
+	 Values: [FILTER:INT.TYPE=PLE,UBO]</p></li>
+</ul>
+<p class="hcp6">The navigation screen menu for this entity 
+ type includes:</p>
+<ul class="hcp1">
+	<li><p class="hcp6">Copy From Existing Screen [FSECOPYE]</p></li>
+	<li><p class="hcp6">General [FSEGENER]</p></li>
+	<li><p class="hcp6">Relations [FSERELAT]</p></li>
+	<li><p class="hcp6">Statutory [FSESTATC]</p></li>
+	<li><p class="hcp6">User Fields - Company [FSEUSRFC]</p></li>
+	<li><p class="hcp6">Partners [FSEPARTN]</p></li>
+	<li><p class="hcp6">Posting [FSEPARPT]</p></li>
+	<li><p class="hcp6">Classes [FSEPAPOS]</p></li>
+	<li><p class="hcp6">Members [FSEPAMEM]</p></li>
+	<li><p class="hcp6">Transactions [FSEPATRA]</p></li>
+	<li><p class="hcp6">Interests [FSEOPINT]</p></li>
+	<li><p class="hcp6">Registration [FSEREGIS]</p></li>
+	<li><p class="hcp6">Foreign Registrations [FSEFRREG]</p></li>
+	<li><p class="hcp6">Bank Accounts [FSEBKACC]</p></li>
+	<li><p class="hcp6">Charges [FSECHARG]</p></li>
+	<li><p class="hcp6">Name Changes [FSENAMES]</p></li>
+	<li><p class="hcp6">Dividends [FSEDIVID]</p></li>
+	<li><p class="hcp6">Accounts [FSEACCTS]</p></li>
+	<li><p class="hcp6">Activities - Company [FSEACTCR]</p></li>
+	<li><p class="hcp6">Meetings [FSEAMEET]</p></li>
+	<li><p class="hcp6">Filings [FFSEAFILG]</p></li>
+	<li><p class="hcp6">Reviews [FSEAREVW]</p></li>
+</ul>
+<p class="hcp6">&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Entity_Types.htm">Entity Types</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - EntityTypes</p>
+<p class="hcp10">&#160;</p>
+<p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp10">Version: 8.0.2022.09.20</p>
+</body>
+</html>

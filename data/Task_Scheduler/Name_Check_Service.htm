@@ -1,0 +1,225 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Name Check Service</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+p.hcp3 { font-weight:bold; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Name Check Service</h1>
+<p>To be able to use <a href="Viewpoint_Name_Check_Services.htm">Viewpoint 
+ Name Check Services</a>, the following job types must be set up:</p>
+<ul class="hcp1">
+	<li><p>Name Check Service – Check Status/Change Status [NCCS]</p></li>
+	<li><p>Name Check Service – Submit Name [NCCN]</p></li>
+</ul>
+<p>However, note that the Name Check Service - Check Status/Change Status 
+ [NCCS] job type is only required if the service provider is RDC or World-Check.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler: Name Check Service - Submit Name [NCCN]</h2>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Name Check 
+	 Service - Submit Name [NCCN]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>Enter the details in the <span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a411">Criteria</a>.</span></p>
+	<div class="droptext" id="POPUP64503287911" style="display: none;">
+		<table class="Table1" cellspacing="0px" width="85.013%">
+			<col style="width: 24.9%;">
+			<col style="width: 75.1%;">
+			<tr class="t1st">
+				<td><p>Field</p></td>
+				<td><p>Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Service URL</p></td>
+				<td class="t2Col"><p>Enter the URL to connect to the service 
+				 provider.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>http://&lt;ServiceAddress&gt;:&lt;ServicePort&gt;/api/NameServices/SubmitName</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Username</p></td>
+				<td class="t2Col"><p>Enter the username used for Viewpoint 
+				 Services.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Password</p></td>
+				<td class="t2Col"><p>Enter the password used for Viewpoint 
+				 Services.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Review Scope</p></td>
+				<td class="t2Col"><p>When ‘All’ is selected, it will retrieve 
+				 Master Files based on the criteria set in the Condition 
+				 field.</p>
+				<p>When ‘Since Last Checked’ is selected, it will match 
+				 the condition and based on the Change Code entered in 
+				 the Change Code field.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Condition</p></td>
+				<td class="t2Col"><p>Enter the condition that will determine 
+				 the Master Files that will be retrieved for submission. 
+				 The condition can only be based on fields in the RefMaster 
+				 table.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>To retrieve non-managed entities with Master File Status 
+				 'Active [0]' and CDD selected</p>
+				<p class="hcp3">KY=1 AND Status = 0</p>
+				<p>&#160;</p>
+				<p>To retrieve Master files with RDCC Identity Register 
+				 Type created</p>
+				<p class="hcp3">RefCode IN (SELECT id.RefCode 
+				 from IdentityRegister id WHERE IdType='RDCC')</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Change Code</p></td>
+				<td class="t2Col"><p>Enter Change Code(s) that are used 
+				 to retrieve Master Files. This is only applicable when 
+				 Review Code is ‘Since Last Checked’.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>ADN for New Master File</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Changes Since</p></td>
+				<td class="t2Col"><p>Enter the start date of the change 
+				 code. This is only applicable when Review Code is ‘Since 
+				 Last Checked’.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Document Code</p></td>
+				<td class="t2Col"><p>Enter the template code. Currently, 
+				 there is only one template - NCXML.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>NCXML</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Provider Type</p></td>
+				<td class="t2Col"><p>Select the service provider that you 
+				 would like to connect to. Currently, the following providers 
+				 are available:</p>
+				<ul class="hcp1">
+					<li><p>Accuity for Automated Screening Manager (ASM)</p></li>
+					<li><p>ComplyAdvantage</p></li>
+					<li><p>CDDS for AML Risk</p></li>
+					<li><p>RDC</p></li>
+					<li><p>World-Check</p></li>
+				</ul></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="dropspot">Click Next&gt;.</span></p></li>
+	<li><p><span class="dropspot">In the Schedule tab, enter the job frequency.</span></p></li>
+	<li><p><span class="dropspot">Click Done.</span></p></li>
+</ol>
+<p>For Name Check result,</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint Home, go to Configuration &gt; Business Parameters 
+	 &gt; Task Scheduler &gt; Agent Job Log.</p></li>
+	<li><p>Enter ‘Name Check*’ in the Description and click Apply.</p></li>
+	<li><p>Double-click on the record to view full details.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler: Name Check Service – Check Status/Change 
+ Status [NCCS]</h2>
+<p>This is not necessary if the service provider is not RDC or World-Check.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Business Parameters 
+	 &gt; Task Scheduler &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to ‘Name Check 
+	 Service – Check Status/Change Status [NCCS]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>Enter the details in the <a class="dropspot" href="javascript:TextPopup(this)" id="a5">Criteria</a>.</p>
+	<div class="droptext" id="POPUP645368333" style="display: none;">
+		<table class="Table1" cellspacing="0px" width="82.228%">
+			<col style="width: 24.505%;">
+			<col style="width: 75.495%;">
+			<tr class="t1st">
+				<td><p>Field</p></td>
+				<td><p>Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Service URL</p></td>
+				<td class="t2Col"><p>Enter the URL to connect to the service 
+				 provider.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>http://&lt;ServiceAddress&gt;:&lt;ServicePort&gt;/api/NameServices/CheckStatus</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Username</p></td>
+				<td class="t2Col"><p>Enter the username used for Viewpoint 
+				 Services.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Password</p></td>
+				<td class="t2Col"><p>Enter the password used for Viewpoint 
+				 Services.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Provider Type</p></td>
+				<td class="t2Col"><p>Select the service provider that you 
+				 used for name submission.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Schedule tab, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Name Check Service</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a411','POPUP64503287911');
+	TextPopupInit('a5','POPUP645368333');
+//]]></script>
+</body>
+</html>

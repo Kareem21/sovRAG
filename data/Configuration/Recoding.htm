@@ -1,0 +1,120 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Recoding">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Recoding</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ol.hcp2 { list-style:decimal; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Recoding</h1>
+<p>This function is used to re-code Master Files. Always backup your database 
+ and ensure you are the only user logged in before starting the process.</p>
+<p><span class="hcp1">Important Note</span>: 
+ Re-coding Master Files can lead to forms being lost from the form queue. 
+ If this happens, re-trigger them from the Change Confirmation/Approval 
+ screen (in Viewpoint - Home screen, click To Do &gt; Jobs &gt; Change 
+ Confirmation/Approval, in File Maintenance screen, click General &gt; 
+ To Do &gt; Jobs &gt; Change Confirmation/Approval).</p>
+<p>&#160;</p>
+<p class="FldExplain">Recode Selected</p>
+<p>Click to change the Master File code for a single Master File.</p>
+<ol class="hcp2">
+	<li><p>Ensure you have made a backup of your database, and that no 
+	 other user is logged in, before clicking OK to proceed.</p></li>
+	<li><p>Select the Existing File Code.</p></li>
+	<li><p>Enter the New File Code.</p></li>
+	<li><p>Click Start.</p></li>
+	<li><p>Confirm the re-coding by clicking Yes.</p></li>
+	<li><p>Click OK when the process is complete.</p></li>
+</ol>
+<p>If the new code already exists, then information for the Master File 
+ specified as the Existing File Code will be lost, and the Master File 
+ status will be updated as Marked for Removal [9]. A RecodeMasterFiles_&lt;yyyyMMddhhmm&gt; 
+ log file will be generated and placed in the program's Export folder to 
+ show fields that will be updated due to the recoding, as well as records 
+ that are deleted. </p>
+<p>For example, if you have the following Master Files in your database:</p>
+<ul style="list-style: disc;">
+	<li><p>Viewpoint Ltd [VP0001] </p></li>
+	<li><p>Viewpoint Limited [VP0002]</p></li>
+</ul>
+<p>when you specify VP0001 in the Existing File Code and VP0002 in the 
+ New File Code, the current Viewpoint Ltd [VP0001] will have its Master 
+ File status updated to Marked for Removal [9] and instances of Viewpoint 
+ Ltd [VP0001] recorded in other Master Files will be replaced with Viewpoint 
+ Limited [VP0002].</p>
+<p>&#160;</p>
+<p><span class="hcp1">Note:</span> After 
+ recoding, if you are using Document Management, navigate to Configuration 
+ &gt; Database Archiving &gt; Troubleshooting and select 'Document Management 
+ Master File Field' to rebuild the Master File details in the Document 
+ Holders.</p>
+<p>&#160;</p>
+<p class="FldExplain">Recode Using 'RecodeBatch'</p>
+<p>Click to re-code all the Master Files listed in the RecodeBatch table. 
+ This feature is used when you want to re-code multiple Master Files at 
+ one time and requires some knowledge of SQL database &#160;and the use 
+ of a database table. Make sure your database has been backed up and that 
+ no one else is logged into the system before you start the recoding. This 
+ function CANNOT be used to merge Master Files.</p>
+<ol class="hcp2">
+	<li><p>Access the database using Enterprise Manager or SQL Server Management 
+	 Studio Express where appropriate.</p></li>
+	<li><p>Locate the 'RecodeBatch' table. This table will be used to identify 
+	 the Master Files codes to be changed.</p></li>
+	<li><p>RecodeBatch consists of four columns. Specify the current Master 
+	 File codes in the 'OldCode' column and their related new codes in 
+	 the 'NewCode' column. The 'Is Done' column will be 0 (zero) indicating 
+	 that no change has been made yet. This value will change to -1 when 
+	 a successful re-code has been done.</p></li>
+	<li><p>In Viewpoint – Home screen, go to Configuration &gt; Database 
+	 Archiving, and then select 'Recoding'.</p></li>
+	<li><p>Click the 'Recode using 'RecodeBatch’' button.</p></li>
+	<li><p>Type in 'YES DO RECODE' in the text box of the window that pops 
+	 up, and then click 'OK'.</p></li>
+	<li><p>The system will automatically change the codes as specified 
+	 in the 'RecodeBatch' table.</p></li>
+	<li><p>Click 'OK' when the process is complete.</p></li>
+</ol>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Database_Archiving.htm">Database Archiving</a> &gt; Recoding</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

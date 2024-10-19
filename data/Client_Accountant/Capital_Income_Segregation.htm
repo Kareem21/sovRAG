@@ -1,0 +1,120 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Capital/Income Segregation">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Capital/Income Segregation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-left:0px; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Capital/Income Segregation</h1>
+<p>This section will show how you can use Viewpoint to do Capital/Income 
+ (C/I) segregation in your Client Accounts. C/I is used primarily for Trust 
+ Accounts. You need to ensure that the Chart of Accounts template used 
+ in the Client Accounts has been marked for C/I segregation; the individual 
+ accounts in the Chart of Accounts have been allocated to income, to capital, 
+ or to both income and capital; and the transactions entered have been 
+ allocated to income or to capital.</p>
+<p>&#160;</p>
+<h3>C/I Segregation - Chart of Accounts Template</h3>
+<p>In defining the Chart of Accounts template to be used in your Client 
+ Accounts, you need to specify whether the C/I segregation will be activated 
+ for that Chart of Accounts template.</p>
+<p><img src="../segregation1.png" alt="" border="0" class="hcp1"></p>
+<p><span style="font-weight: bold; font-style: italic;">Note:</span> Once 
+ you have activated the C/I segregation in a given Chart of Accounts template, 
+ you will not be able to deactivate it.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also: </p>
+<ul class="hcp2">
+	<li><a href="Chart_of_Accounts_-_Templates_Setup.htm">Chart of Accounts 
+	 - Templates Setup</a>.</li>
+</ul>
+<p>&#160;</p>
+<h3>C/I Segregation - Nominal Accounts</h3>
+<p>Next you will need to set up the accounts to be used in the Chart of 
+ Accounts template you have defined above. In setting up the accounts, 
+ you need to decide whether a given account is allocated to income, to 
+ capital, or to both income and capital. By default, all posting from Practice 
+ Management module will be allocated to Income [I] posting.</p>
+<p>If the Account Type is control account, Capital/Income field will default 
+ as Both Capital and Income [B].</p>
+<p><img src="../segregation2.png" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p class="SeeAlso">See also: </p>
+<ul class="hcp2">
+	<li><a href="Chart_of_Accounts_Nominal_Accounts_Setup.htm">Chart of 
+	 Accounts - Nominal Accounts Setup</a>.</li>
+</ul>
+<p>&#160;</p>
+<h3>C/I Segregation - Accounting Transactions</h3>
+<p>If the Account File is using a Chart of Accounts template with C/I segregation, 
+ individual accounting transactions created in Viewpoint will need to be 
+ allocated to either income or capital. If the transaction involves an 
+ allocation to both income and capital, you will need to break down this 
+ transaction to the income and capital elements and enter these elements 
+ in two separate journal entries.</p>
+<p class="hcp3">Once the journal entry is allocated to income 
+ or to capital, the accounts used in that journal must follow that allocation. 
+ For example, a journal entry allocated to Capital (shown below) can only 
+ contain accounts which are allocated to Capital. For such, there is a 
+ filtering in the journal:</p>
+<ul class="hcp2">
+	<li><p class="hcp3">when the selected journal header is 
+	 Capital, the Account Code will only show accounts where C/I/B is C 
+	 or B. I is not shown.</p></li>
+	<li><p class="hcp3">when the selected journal header is 
+	 Income, the Account Code will only show accounts where C/I/B is I 
+	 or B. C is not shown.</p></li>
+</ul>
+<p class="hcp3"><img src="../segregation3.png" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h3>C/I Segregation - Enquiry</h3>
+<p>The C/I segregation can be easily seen when you do an Account Enquiry:</p>
+<p><img src="../segregation4.png" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>The C/I segregation is also present in the Trial Balance enquiry, which 
+ includes a C/I filter:</p>
+<p><img src="../segregation5.png" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h3>C/I Segregation – Reports</h3>
+<p>The Excel Statements include a Balance Sheet, and Profit and Loss Statement 
+ showing this C/I segregation. In addition, you can further customise other 
+ Excel Statements to show this C/I segregation. Please refer to the Statement 
+ Tutorial on how to customise Excel Statements reports for details.</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Capital/Income Segregation</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

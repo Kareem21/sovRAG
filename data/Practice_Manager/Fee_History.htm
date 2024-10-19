@@ -1,0 +1,131 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Fee History</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+img.hcp3 { border:none; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Fee History</h1>
+<p>The Fee History screen shows the list of invoiced fees based on the 
+ selected Service.</p>
+<p><span class="hcp1">Note</span>: This 
+ screen is inaccessible by default. User is required to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">grant 
+ authorisation</a> before accessing this screen.</p>
+<div class="droptext" id="POPUP506646482" style="display: none;">
+	<p>To grant authorisation, go to Configuration &gt; Users &amp; Security 
+	 &gt; Security Setup &gt; User Roles, click on Authorities button.</p>
+	<p>Click File &gt; Sales Ledger &gt; Fee History, change the authority.</p>
+</div>
+<p>&#160;</p>
+<p>You can click on the following to minimise or expand the sections in 
+ this screen:</p>
+<ul class="hcp2">
+	<li><p><img src="../image307.gif" alt="" border="0" class="hcp3"> 
+	 - To minimise this section and hide the command buttons. In the grid, 
+	 only the selected row will be seen.</p></li>
+	<li><p><img src="../image308.gif" alt="" border="0" class="hcp3"> 
+	 - To expand the section and show the command buttons.</p></li>
+</ul>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Service Search Box</p>
+<p>The ‘Service’ search box will search all Services found in the ‘Transaction 
+ Charging’ and ‘Recurring Fees’ screen. The available Services for selection 
+ will be based on the user’s authorisation to both screens.</p>
+<p>For example, if the user has authorisation to both ‘Recurring Fees’ 
+ and ‘Transaction Charging’ screens, the system will show all the Services 
+ belonging to these screens. Whereas, if user has authorisation to only 
+ the ‘Recurring Fees’ screen, the Service search box will only list Services 
+ in the ‘Recurring Fees’ screen.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Upper Grid</p>
+<p>The upper grid shows all the invoices that are linked to the selected 
+ Service.</p>
+<p>&#160;</p>
+<p class="FldExplain">Bottom Grid</p>
+<p>The bottom grid shows the following based on selection of the radio 
+ button:</p>
+<ul class="hcp2">
+	<li><p><span class="hcp4">Line Source</span> - It will 
+	 show the source of the invoice line.</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp2">
+		<li><p>If the selected upper grid record is Time entry, it will 
+		 show all the Time entry that belongs to the selected invoice.</p></li>
+		<li><p>If the selected upper grid record is Disbursements entry, 
+		 it will show all the Disbursements entry that belongs to the selected 
+		 invoice.</p></li>
+		<li><p>If the selected record in upper grid is a Recurring Fee, 
+		 nothing will show.</p></li>
+	</ul></li>
+	<li><p><span class="hcp4">Service Date</span> - System 
+	 will list all the Time/Disbursements entry/post where the Time/Disbursements 
+	 entry 'Service Date' is between 'From Date' and 'To Date' of the selected 
+	 record in the upper grid.</p></li>
+	<li><p><span class="hcp4">Not Invoiced</span> - It will 
+	 show the Time/Disbursements entries that have not been invoiced. It 
+	 displays records regardless of whether the top grid is with or without 
+	 record. The top grid shows all the invoices that are linked to the 
+	 selected Service whereas the bottom grid shows Time/Disbursements 
+	 Entries that are yet to be invoiced for the selected Service.</p></li>
+</ul>
+<p>Available button):</p>
+<ul class="hcp2">
+	<li><p><span class="hcp4">Recalculate button</span> - 
+	 This button is only available when the selected Service is of Service 
+	 Class 'TW’ or 'DW'. System will recalculate Time/Disbursements entries 
+	 linked to the invoices. Recalculate will be based on FIFO (Date entered 
+	 and Sequence Number) and is only applicable for Time/Disbursements 
+	 entries that have not been approved. A validation message will be 
+	 prompted after the recalculation when there are approved entries which 
+	 require adjustment. When adjustment is needed, users are required 
+	 to un-approve and run the Recalculate button again. <span class="hcp1">Note</span>: The shortcut key 'Alt + R' can also 
+	 be used to trigger the recalculate function.</p></li>
+</ul>
+<p><span class="hcp1">Note</span>: Alternatively, 
+ user can also access this screen by clicking on Fee History button from 
+ the <a href="Recurring_Fees.htm">Recurring Fees</a> screen or <a href="Transaction_Charging.htm">Transaction 
+ Charging</a> screen.</p>
+<p>&#160;</p>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Sales_Ledger.htm">Sales Ledger</a> &gt; <a href="Billing_File_General.htm">Billing File</a> &gt; Fee History</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP506646482');
+//]]></script>
+</body>
+</html>

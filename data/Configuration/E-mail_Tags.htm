@@ -1,0 +1,140 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="E-mail Tags">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>E-mail Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>E-mail Tags</h1>
+<p>E-mail tags can be added to word reports templates before the wording of the actual report. These tags are recognised (and removed) when you select the Convert e-mail formats and &lt;option&gt; during the generation of the report.</p>
+<p>&#160;</p>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+<col style="width: 25%;">
+<col style="width: 75%;">
+<tr class="t1st">
+<td>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">Code</p>
+</td>
+<td>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Mail]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">Place this code at the beginning of the document. Any text before this code is ignored when the document is converted to e-mail.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Subject:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">This is the subject line of the e-mail after it is prepared. You can use any variable in the subject line, such as (+HD.EntClient\#AD-1-0+), provided this is returned by the header statement i.e., the [/HD-SQL=SELECT.../] line, found in the Key Information field of the template.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Subject: Account Statement (+HD.EntClient\#AD-1-0+)]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Sender:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">This is to set the e-mail address of the sender and it only accepts the e-mail address which must also be an account already set up in Outlook.Otherwise, it will still default to the current selected e-mail account in Outlook.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Recipient_to:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">This is the recipient e-mail address that will appear in 'To' field. You can use code to retrieve e-mail address&#160;as it is recorded in Master File - Addresses - Contacts.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Recipient_to:(+HD.EntClient\#CT-EB-1+)]</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1"><span class="hcp2">Note</span>: It is possible to have multiple recipients.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Recipient_cc:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">If copies are to be sent, you can enter the recipients here. This will appear in 'cc' field.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Recipient_cc:(+DF.USER.MailID+)]</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1"><span class="hcp2">Note</span>: It is possible to have multiple recipients.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Recipient_bcc:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">If there are blind copies to be sent, you can enter the recipients here. This will appear in the 'bcc' field.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Recipient_bcc:admin@manford.com]</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1"><span class="hcp2">Note</span>: It is possible to have multiple recipients.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Attach_DOC:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">Any text, together with its formatting, below this code, will be generated as a separate document file and attached to the e-mail.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Attach_DOC:(+HD.EntClient+) Client Statement (+HD.RevEntity+) (+HD.CurCode+)]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">[$Attach_PDF:]</p>
+</td>
+<td class="t2Col">
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">Any text, together with its formatting, below this code will be generated as a separate PDF file and attached to the e-mail.</p>
+<p lang="en-UK" xml:lang="en-UK" class="hcp1">For example: [$Attach_PDF:(+HD.EntClient+) Client Statement (+HD.RevEntity+) (+HD.CurCode+)]</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+<li>
+<p><a href="Correspondence_Library.htm">Correspondence</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Document_Libraries.htm">Document Libraries</a> &gt; <a href="Coding_a_Word_Template.htm">Coding a Word Template</a> &gt; E-mail Tags</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

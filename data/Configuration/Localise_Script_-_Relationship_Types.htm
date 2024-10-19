@@ -1,0 +1,197 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Relationship Types</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-weight:normal; }
+span.hcp6 { font-weight:bold; }
+li.hcp7 { list-style:none;
+display:inline; }
+li.hcp8 { text-decoration:none; }
+p.hcp9 { font-weight:normal;
+text-decoration:none; }
+p.hcp10 { background-color:Transparent; }
+p.hcp11 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Relationship Types</h1>
+<p>For Relationship Types, tags are available for Localise Scripts to be 
+ used to deactivate existing relationship types and to add new relationship 
+ types. For new relationship types, the relationship types will have the 
+ Customised and Active checkboxes ticked by default.</p>
+<p>&#160;</p>
+<h3>Deactivating Relationship Types</h3>
+<p>The tag below will deactivate all relationship types in the specified 
+ class.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">RELTYPEINAC:TYPE+'&lt;ClassCode&gt;'</p>
+<p>&#160;</p>
+<p>where:</p>
+<p>&lt;ClassCode&gt; is the relationship class code:</p>
+<ul class="hcp3">
+	<li><p>E – Entity Relations</p></li>
+	<li style="background-color: Transparent;"><p>I – Internal Relations</p></li>
+	<li><p>M – Master File Relations</p></li>
+	<li><p>O – Statutory Officers</p></li>
+	<li><p>T – Trust Officers</p></li>
+</ul>
+<p>To deactivate relationship types from multiple relation classes, separate 
+ the &lt;ClassCode&gt; with a comma.</p>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To deactivate all Master File Relations and Entity Relations:RELTYPEINAC:TYPE+‘E’,‘M’</p>
+<p>&#160;</p>
+<p><span class="hcp4">Note:</span> Relationship 
+ Types are generally not deleted as Viewpoint standard types will be reinserted 
+ on the next upgrade if they have been deleted.</p>
+<p>&#160;</p>
+<h3>Editing and Adding New Relationship Types</h3>
+<p>When adding a new type, you need to specify the required fields and 
+ values for the type. Each field will be separated with the pipe '|'. You 
+ can use the same tag to edit and make changes to existing relationship 
+ types. </p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">RELTYPEADD:&lt;RelCode&gt;+&lt;ClassCode&gt;=&lt;DBField&gt;=&lt;Value&gt;|...</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p class="hcp5"><span class="hcp6">&lt;RelCode&gt;</span> 
+	 is the relationship type code.</p></li>
+	<li><p class="hcp5"><span class="hcp6">&lt;ClassCode&gt;</span> 
+	 is the relationship class for the relationship type.</p></li>
+	<li><p class="hcp5"><span class="hcp6">&lt;DBField&gt;</span> 
+	 is the database field referring to the field for the relationship 
+	 type</p></li>
+	<li class="hcp7"><ul class="hcp3">
+		<li><p class="hcp5">RDescr - Description field</p></li>
+		<li><p class="hcp5">DisplayText - Display Caption 
+		 field</p></li>
+		<li><p class="hcp5">Reciprocal - Reciprocal Relation 
+		 field</p></li>
+		<li><p class="hcp5">AltDescr - Alternative Description 
+		 field</p></li>
+		<li><p class="hcp5">PrincipleRel - Principal Relation 
+		 field</p></li>
+		<li><p class="hcp5">CaptionPrincipleRel - Caption 
+		 for Principal Relation field</p></li>
+		<li><p class="hcp5">RelType1 - Additional Relation 
+		 1 field</p></li>
+		<li><p class="hcp5">RelType2 - Additional Relation 
+		 2 field</p></li>
+		<li><p class="hcp5">RelType3 - Additional Relation 
+		 3 field</p></li>
+		<li><p class="hcp5">RelCaption1 - Caption for Additional 
+		 Relation 1 field</p></li>
+		<li><p class="hcp5">RelCaption2 - Caption for Additional 
+		 Relation 2 field</p></li>
+		<li><p class="hcp5">RelCaption3 - Caption for Additional 
+		 Relation 3 field</p></li>
+		<li><p class="hcp5">CaptionUserRel - Caption for 
+		 User Relation field, when this is specified, User Relation checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp5">CaptionFrom1 - Caption for 
+		 'From' Date 1 field; when this is specified, the date checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp5">CaptionFrom2 - Caption for 
+		 'From' Date 2 field; when this is specified, the date checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp5">CaptionFrom3 - Caption for 
+		 'From' Date 3 field; when this is specified, the date checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp5">CaptionTo1 - Caption for 'To' 
+		 Date 1 field; when this is specified, the date checkbox will be 
+		 ticked</p></li>
+		<li><p class="hcp5">CaptionTo2 - Caption for 'To' 
+		 Date 2 field; when this is specified, the date checkbox will be 
+		 ticked</p></li>
+		<li><p class="hcp5">CaptionTo3 - Caption for 'To' 
+		 Date 3 field; when this is specified, the date checkbox will be 
+		 ticked</p></li>
+		<li><p class="hcp5">UdCode1Table - Code for User 
+		 Table 1 field; when this is specified, User Table 1 checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp5">UdCode2Table - Code for User 
+		 Table 2 field; when this is specified, User Table 2 checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp5">With_Reelect - Re-election 
+		 field</p></li>
+		<li><p class="hcp5">With_Position - Position Text 
+		 field</p></li>
+		<li><p class="hcp5">With_Powers - Describe Powers 
+		 field</p></li>
+		<li><p class="hcp5">With_Reason - Reason Resignation 
+		 field</p></li>
+		<li><p class="hcp5">TagValues - Tag Values field</p></li>
+		<li><p class="hcp5">RelNote - Note field</p></li>
+		<li><p class="hcp5">WithRating - Risk Rating field</p></li>
+	</ul></li>
+	<li class="hcp8"><p class="hcp9"><span class="hcp6">&lt;Value&gt;</span> is the value for &lt;DBField&gt;. 
+	 Use 1 to tick a checkbox field and 0 to untick the checkbox. For Note 
+	 and Tag Values fields, the &lt;Value&gt; can include</p></li>
+	<li class="hcp7"><ul class="hcp3">
+		<li class="hcp8"><p class="hcp9">&lt;br&gt; 
+		 for a line break</p></li>
+		<li class="hcp8"><p class="hcp9">&lt;pipe&gt; 
+		 for a | symbol</p></li>
+	</ul></li>
+</ul>
+<p class="hcp9">&#160;</p>
+<p class="hcp1">Example</p>
+<p class="hcp10">To edit an existing relationship 
+ type: RELTYPEADD:AGT+E=RDescr=Agent|DisplayText=Agent|PrincipleRel=1|CaptionPrincipleRel=Relation|With_Reelect=0|With_Powers=0|With_Position=1|With_Reason=1|</p>
+<p class="hcp10">To add a new relationship type: 
+ RELTYPEADD:AGT+E=RDescr=Agent|DisplayText=Agent|PrincipleRel=1|CaptionPrincipleRel=Relation|CaptionFrom1=Date 
+ Appointed|CaptionTo1=Date Resigned|</p>
+<p>&#160;</p>
+<p><span class="hcp4">Note</span>: Active 
+ and Customised options will be ticked by default so there is no need to 
+ specify these in the script.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Relationship_Types.htm">Relationship Types</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Relationship Types</p>
+<p class="hcp11">&#160;</p>
+<p class="hcp11">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp11">Version: 8.0.2022.09.20</p>
+</body>
+</html>

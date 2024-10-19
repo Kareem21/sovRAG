@@ -1,0 +1,378 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Data Validation Review - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+ul.hcp4 { list-style:disc; }
+p.hcp5 { margin-left:36px; }
+span.hcp6 { font-family:Arial, sans-serif; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Data Validation Review - Tags</h1>
+<p>For Data Validation reviews, tags are available to specify checking 
+ on standard Viewpoint fields and User Fields. These tags are to be entered 
+ in the Tag Values field of the relevant Data Validation review rule which 
+ must be active. For example, if the field is in Master File - Setup screen, 
+ then the tag to check on this field is to be defined in Master File &gt; 
+ Setup - Data Validation [R_FMMSETUP] review rule.</p>
+<p>&#160;</p>
+<h2>Checking on Standard Viewpoint Fields</h2>
+<p>Standard Viewpoint fields refer to fields available in Viewpoint Connect 
+ program. The tag allows you to check on whether the field is completed 
+ and if the field value is a specific value.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 15%;">
+	<col style="width: 26.577%;">
+	<col style="width: 55.056%;">
+	<tr class="t1st">
+		<td class="hcp1"><p class="hcp2">Purpose</p></td>
+		<td class="hcp1"><p class="hcp2">Syntax</p></td>
+		<td class="hcp1"><p class="hcp2">Example 
+		 and Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Specify whether 
+		 the field is required to be completed.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;DBField&gt;.Required=Y]</p>
+		<p>&#160;</p>
+		<p>where &lt;DBField&gt; is the Database Field name for the field.</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.KYC_Officer.Required=Y]</p>
+		<p>This tag will check on CDD Officer field. If the field is empty, 
+		 it will show up in the File Review results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The tag is to be defined in the Master File &gt; Compliance &gt; 
+		 CDD - Data Validation [R_FMMKYCVV] review rule as the field is 
+		 in the CDD screen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Compare the field 
+		 value against specified value(s).</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;DBField&gt;.ValueList=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where:</p>
+		<ul class="hcp4">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field.</p></li>
+			<li><p>&lt;Value&gt; is the acceptable value or values. For 
+			 multiple values, separate each value with a comma.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.KYC_Officer.ValueList=DD]</p>
+		<p>This tag will compare the CDD Officer field with the specified 
+		 value of 'DD'. If the value is not 'DD', it will show up in the 
+		 File Review results.</p>
+		<p>&#160;</p>
+		<p>[FV.KYC_Officer.ValueList=DD,ET]</p>
+		<p>This tag will compare the CDD Officer field with the specified 
+		 values of 'DD' and 'ET'. If the value is not 'DD' or 'ET', it 
+		 will show up in the File Review results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The tag is to be defined in the Master File &gt; Compliance &gt; 
+		 CDD - Data Validation [R_FMMKYCVV] review rule as the field is 
+		 in the CDD screen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Compare date 
+		 fields with specified date.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;DBField&gt;.DateValue=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where:</p>
+		<ul class="hcp4">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field.</p></li>
+			<li><p>&lt;Value&gt; can be:</p></li>
+			<li><p class="hcp5">Actual date in the format 
+			 of dd/MM/yyyy.</p></li>
+			<li><p class="hcp5">#NOW for today's date.</p></li>
+			<li><p class="hcp5">referring to a date field 
+			 such as @EN.IncorpDate for the incorporation date</p></li>
+		</ul>
+		<p>&#160;The '=' can also be replaced by:</p>
+		<ul class="hcp4">
+			<li><p>&gt; to check that the date is after the specified date.</p></li>
+			<li><p>&lt; to check that the date is before the specified 
+			 date.</p></li>
+			<li><p>&gt;= to check that the date is on or after the specified 
+			 date.</p></li>
+			<li><p>&lt;= to check that the date is on or before the specified 
+			 date<span class="hcp6">.</span></p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.KYC_Obtained.DateValue&gt;=#NOW]</p>
+		<p>This tag will check the Date CDD Status and compare with today's 
+		 date. If the value is before today's date, it will show up in 
+		 the File Review results.</p>
+		<p>&#160;</p>
+		<p>[FV.KYC_Obtained.DateValue&gt;=@EN.IncorpDate]</p>
+		<p>This tag will check the Date CDD Status and compare with the 
+		 date of incorporation. If the value is before the incorporation 
+		 date, it will show up in the File Review results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The tag is to be defined in the Master File &gt; Compliance &gt; 
+		 CDD - Data Validation [R_FMMKYCVV] review rule as the field is 
+		 in the CDD screen.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p><span class="hcp3">Note</span>: To 
+ check on the field 'Surname' or 'Entity Name', the tag must be entered 
+ in the Master File &gt; Setup - Data Validation [R_FMMSETUP] review rule.</p>
+<p>&#160;</p>
+<h2>Checking on User Fields</h2>
+<p>User Fields in Viewpoint are found in the User Field screens as well 
+ as in separate pop-up window accessed through screens like Shares &gt; 
+ Capital. Tags are also available to check if the user field is completed 
+ and if the value is a specific value.</p>
+<p>For user fields in User Field screens, the tags are as follows:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 15%;">
+	<col style="width: 26.577%;">
+	<col style="width: 55.056%;">
+	<tr class="t1st">
+		<td class="hcp1"><p class="hcp2">Purpose</p></td>
+		<td class="hcp1"><p class="hcp2">Syntax</p></td>
+		<td class="hcp1"><p class="hcp2">Example 
+		 and Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Specify if the 
+		 user field is required to be completed.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;FieldKey&gt;.&lt;DBField&gt;.Required=Y]</p>
+		<p>&#160;</p>
+		<p>where</p>
+		<ul class="hcp4">
+			<li><p>&lt;FieldKey&gt; refers to the key of the user field.</p></li>
+			<li><p>&lt;DBField&gt; can be</p></li>
+			<li><p class="hcp5">FldValue refers to the value 
+			 of the user field</p></li>
+			<li><p class="hcp5">FldNote refers to the Note 
+			 part of the user field</p></li>
+			<li><p class="hcp5">FldVCode refers to the Lookup 
+			 Table or User Table value when the field type is 'Master File/Dates/Lookup 
+			 [82]' or &#160;'Master File/Dates/User TV [83]'</p></li>
+			<li><p class="hcp5">DateFrom refers to the Date 
+			 - From part of the user field</p></li>
+			<li><p class="hcp5">DateTo refers to the Date 
+			 - To part of the user field</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.REA_ID.FldValue.Required=Y]</p>
+		<p>This tag will check on the user field with the key 'REA_ID'. 
+		 &#160;If the field is empty, it will show up in the File Review 
+		 results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The tag is to be defined in the Master File &gt; General &gt; 
+		 User Fields - Master File - Data Validation [R_FMMUSRFM] review 
+		 rule as the user field is in the User Fields - Master File screen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Compare the value 
+		 of the user field against specified value(s).</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;FieldKey&gt;.&lt;DBField&gt;.ValueList=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where</p>
+		<ul class="hcp4">
+			<li><p>&lt;FieldKey&gt; refers to the key of the user field.</p></li>
+			<li><p>&lt;DBField&gt; can be:</p></li>
+			<li><p class="hcp5">FldValue refers to the value 
+			 of the user field.</p></li>
+			<li><p class="hcp5">FldNote refers to the Note 
+			 part of the user field</p></li>
+			<li><p class="hcp5">FldVCode refers to the Lookup 
+			 Table or User Table value when the field type is 'Master File/Dates/Lookup 
+			 [82]' or 'Master File/Dates/User TV [83]'.</p></li>
+			<li><p class="hcp5">DateFrom refers to the Date 
+			 - From part of the user field.</p></li>
+			<li><p class="hcp5">DateTo refers to the Date 
+			 - To part of the user field.</p></li>
+			<li><p>&lt;Value&gt; is the acceptable value or values. For 
+			 multiple values, separate each value with a comma.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.REA_ID.FldValue.ValueList=10004]</p>
+		<p>This tag will compare the value of the user field with the key 
+		 'REA_ID' against the specified value of '10004'. If the value 
+		 is not '10004', it will show up in the File Review results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The tag is to be defined in the Master File &gt; General &gt; 
+		 User Fields - Master File - Data Validation [R_FMMUSRFM] review 
+		 rule as the user field is in the User Fields - Master File screen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Compare &#160;date 
+		 value for user field against the specified date.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[FV.&lt;FieldKey&gt;.&lt;DBField&gt;.DateValue=&lt;Value&gt;]</p>
+		<p>where</p>
+		<ul class="hcp4">
+			<li><p>&lt;FieldKey&gt; refers to the key of the user field.</p></li>
+			<li><p>&lt;DBField&gt; is:</p></li>
+			<li><p class="hcp5">FldValue when the field type 
+			 is Date [12].</p></li>
+			<li><p class="hcp5">DateFrom or DateTo when the 
+			 field type is Lookup Value/Dates [70], Master File/Dates [81], 
+			 Master File/Dates/Lookup [82], Master File/Dates, User TV 
+			 [83]or User Table Value/Dates [71].</p></li>
+			<li><p>&lt;Value&gt; can be:</p></li>
+			<li><p class="hcp5">Actual date in the format 
+			 of dd/MM/yyyy.</p></li>
+			<li><p class="hcp5">#NOW for today's date.</p></li>
+			<li><p class="hcp5">#INCORP for the incorporation 
+			 date</p></li>
+		</ul>
+		<p>&#160;The '=' can also be replaced by:</p>
+		<ul class="hcp4">
+			<li><p>&gt; to check that the date is after the specified date.</p></li>
+			<li><p>&lt; to check that the date is before the specified 
+			 date.</p></li>
+			<li><p>&gt;= to check that the date is on or after the specified 
+			 date.</p></li>
+			<li><p>&lt;= to check that the date is on or before the specified 
+			 date<span class="hcp6">.</span></p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[FV.KYC202.FldValue.DateValue&lt;=#NOW]</p>
+		<p>This tag will check the user field with the key 'KYC202' and 
+		 compare the date with today's date. The field type for KYC202 
+		 is date [12]. If the value is after today's date, it will show 
+		 up in the File Review results.</p>
+		<p>&#160;</p>
+		<p>[FV.KYC303.DateFrom.DateValue&lt;=#NOW]</p>
+		<p>[FV.KYC303.DateTo.DateValue&gt;#NOW]</p>
+		<p>These tags will check the user field with the key 'KYC303' and 
+		 compare the Date - From and Date - To with today's date. The field 
+		 type for KYC303 is Master File/Dates [81]. If DateFrom is after 
+		 today's date and/or DateTo is on or before today's date, it will 
+		 show up in the File Review results.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 &#160;The tag is to be defined in the Master File &gt; General 
+		 &gt; User Fields - Master File - Data Validation [R_FMMUSRFM] 
+		 review rule as the user field is &#160;in the User Fields - Master 
+		 File screen.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>For user fields that are in separate pop-up window, you need to also 
+ add the &lt;Category&gt; so that the syntax are as follows:</p>
+<ul class="hcp4">
+	<li><p>[FV.&lt;FieldKey&gt;.&lt;Category&gt;.&lt;DBField&gt;.Required=&lt;Value&gt;]</p></li>
+	<li><p>[FV.&lt;FieldKey&gt;.&lt;Category&gt;.&lt;DBField&gt;.ValueList=&lt;Value&gt;]</p></li>
+	<li><p>[FV.&lt;FieldKey&gt;.&lt;Category&gt;.&lt;DBField&gt;.DateValue=&lt;Value&gt;]</p></li>
+</ul>
+<p>The &lt;Category&gt; depends on the location of the user field.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="69.628%" border="1">
+	<col style="width: 21.368%;">
+	<col style="width: 78.632%;">
+	<tr class="t1st">
+		<td class="hcp1"><p class="hcp2">Category</p></td>
+		<td class="hcp1"><p class="hcp2">Location 
+		 of User Fields</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ShareClass</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp4">
+			<li><p>File Maintenance &gt; Entity Administration &gt; Shares 
+			 &gt; Capital.</p></li>
+			<li><p>File Maintenance &gt; Entity Administration &gt; Partners 
+			 &gt; Classes.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Reference</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp4">
+			<li><p>File Maintenance &gt; Entity Administration &gt; Assets 
+			 &gt; Fixed Assets.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>MatterCode</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp4">
+			<li><p>File Maintenance &gt; Sales Ledger &gt; Billing File 
+			 &gt; Matters.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PortId</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp4">
+			<li><p>File Maintenance &gt; Accounting &gt; Account File &gt; 
+			 Portfolios.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>AcctKey</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp4">
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Debtor.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Creditor.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Bank Account.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Fixed Assets.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Securities.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Investments.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Share/Unit Holder.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Products/Services.</p></li>
+			<li><p>File Maintenance &gt; Accounting &gt; Journals &gt; 
+			 Tax Account.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Examples:</p>
+<p>[FV.UF01.TS.FldValue.Required=Y]</p>
+<p>&lt;Category&gt; is the value for the field Reference (can be text or 
+ code) i.e.'TS'. This tag is to be entered in the Entity Administration 
+ &gt; Assets &gt; Fixed Assets – Data Validation [R_FSAFIXED] review rule 
+ to check for user field with the key 'UF01'.</p>
+<p>&#160;</p>
+<p>[FV.SELISTCO.OR01.FldValue.Required=Y]</p>
+<p>&lt;Category&gt; is the value for the field Share Class Code i.e. 'OR01'. 
+ This tag is to be entered in the Entity Administration &gt; Shares &gt; 
+ Capital &gt; User Fields - Data Validation [R_FSESHCAP] review rule to 
+ check for user field with the key 'SELISTCO'.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp4">
+	<li><p><a href="../Shared/File_Review_Function.htm">File Review</a></p></li>
+	<li><p><a href="Review_Rules.htm">Review Rules</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Data Validation Review - Tags</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+</body>
+</html>

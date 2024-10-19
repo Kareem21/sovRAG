@@ -1,0 +1,479 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Ad Valorem</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { text-align:center; }
+p.hcp3 { text-align:center;
+font-weight:bold;
+color:#000000; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+ol.hcp5 { list-style:decimal; }
+li.hcp6 { margin-left:-20px; }
+img.hcp7 { border:none; }
+p.hcp8 { mso-ansi-language:EN-MY; }
+span.hcp9 { mso-ansi-language:EN-MY; }
+p.hcp10 { mso-ansi-language:EN-MY;
+mso-fareast-language:EN-MY; }
+span.hcp11 { mso-ansi-language:EN-MY;
+mso-fareast-language:EN-MY;
+mso-no-proof:yes;
+font-weight:bold;
+font-style:italic; }
+p.hcp12 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Ad Valorem Fee</h1>
+<p>The Ad Valorem Fee [RV] service class is used to calculate fees to be 
+ charged based on the asset value. This value can be taken from either:</p>
+<ul class="hcp1">
+	<li><p>Bank Accounts, Securities, Open items, Fixed Assets in the Entity 
+	 Administration or</p></li>
+	<li><p>Account File Valuation in Accounting</p></li>
+</ul>
+<p>To use this, you need to add it as a service in <a href="../Configuration/Service_Master.htm">Service 
+ Master</a> and then set it up as a recurring fee in the <a href="Recurring_Fees.htm">Recurring 
+ Fees</a> screen. Then when you perform <a href="Posting_of_Work_in_Progress.htm">Posting 
+ of WIP</a>, the fee will be calculated based on the tags used for the 
+ service setup. It will also:</p>
+<ul class="hcp1">
+	<li><p>Update the Recurring Fee description according to what has been 
+	 defined using [CHARGETEXT] tag.</p></li>
+	<li><p>For Account File Valuation in Accounting, the Recurring Fee 
+	 currency will be set to be the same as Account File's base currency 
+	 after perform Posting of WIP.</p></li>
+</ul>
+<p>Viewpoint supports different pricing models combining different asset 
+ classes on a single Ad Valorem, which is known as Multiple Pricing Model. 
+ The following table lists the Asset type and the pricing model that supports 
+ it.</p>
+<table class="Table1" cellspacing="0px">
+	<col width="185">
+	<col width="215">
+	<col width="279">
+	<col width="279">
+	<tr class="t1st" style="height: 26px;">
+		<td rowspan="2"><p class="hcp2">Asset Type</p></td>
+		<td rowspan="2"><p class="hcp2">Prefix</p></td>
+		<td colspan="2"><p class="hcp2">Pricing Model</p></td>
+		
+	</tr>
+	<tr class="t2Row" style="height: 22px;">
+		<td class="t1Col"><p class="hcp3">Single Pricing Model</p></td>
+		<td class="t2Col" style="border-right-width: 1px;"><p class="hcp3">Multiple Pricing Model</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 28px;">
+		<td class="t1Col"><p class="hcp2">Bank Accounts</p></td>
+		<td class="t2Col"><p class="hcp2">A</p></td>
+		<td class="t1Col"><p class="hcp2">Not Supported</p></td>
+		<td class="t2Col"><p class="hcp2">Supported</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 26px;">
+		<td class="t1Col"><p class="hcp2">Securities</p></td>
+		<td class="t2Col"><p class="hcp2">S</p></td>
+		<td class="t1Col"><p class="hcp2">Not Supported</p></td>
+		<td class="t2Col"><p class="hcp2">Supported</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 28px;">
+		<td class="t1Col"><p class="hcp2">Open Items</p></td>
+		<td class="t2Col"><p class="hcp2">O</p></td>
+		<td class="t1Col"><p class="hcp2">Supported</p></td>
+		<td class="t2Col"><p class="hcp2">Supported</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 26px;">
+		<td class="t1Col"><p class="hcp2">Fixed Assets</p></td>
+		<td class="t2Col"><p class="hcp2">F</p></td>
+		<td class="t1Col"><p class="hcp2">Not Supported</p></td>
+		<td class="t2Col"><p class="hcp2">Supported</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 28px;">
+		<td class="t1Col"><p class="hcp2">Client Accounting</p></td>
+		<td class="t2Col"><p class="hcp2">CANAV</p></td>
+		<td class="t1Col"><p class="hcp2">Supported</p></td>
+		<td class="t2Col"><p class="hcp2">Not Supported</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Configuration of Service in Service Master</h2>
+<p>When setting up the service in Service Master, the following needs to 
+ be defined using tags in the Tag Values field:</p>
+<ul class="hcp1">
+	<li><p>Value – Specify where to derive the value from e.g. Bank Accounts, 
+	 Securities, Open items, Fixed Assets from Entity Administration or 
+	 Account File Valuation in Accounting.</p></li>
+	<li><p>Method – The method to define the percentage for the fee calculation.</p></li>
+	<li><p>Minimum/Maximum Fee – If applicable, it is possible to set a 
+	 minimum or maximum fee.</p></li>
+	<li><p>Description – Specify how the invoice line description should 
+	 be.</p></li>
+</ul>
+<p>For Accounting, user can define which NAV to use for calculation by 
+ using tags in the Tag Values field:</p>
+<ul class="hcp1">
+	<li><p>NAV for calculation – applicable for Account File Valuation 
+	 where it can be:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Highest NAV value in the period specified.</p></li>
+		<li><p>Average NAV value in the period specified.</p></li>
+		<li><p>Last NAV value in the period specified.</p></li>
+	</ul></li>
+</ul>
+<p><span class="hcp4">Note</span>: For 
+ explanation of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<h3>&#160;</h3>
+<h3>Single Pricing Model</h3>
+<h4>Example 1</h4>
+<p>This is to calculate fee based on value from Open Items with a scaled 
+ percentage.</p>
+<h6 class="Heading8">Tag Configuration in Service Master</h6>
+<ol class="hcp5">
+	<li class="hcp6"><p>In Service Master, enter the code 
+	 and description for the service.</p></li>
+	<li class="hcp6"><p>In Tag Values, enter the following 
+	 tags:<br>
+	<br>
+	[VALUE=EAOI:Open Item 1-USD]<br>
+	[METHOD=S]<br>
+	[PSCALE=<br>
+	1,000,000 ~ 1.5<br>
+	5,000,000 ~ 1.0<br>
+	999,000,000 ~ 0.5]<br>
+	[CHARGETEXT=Asset Value: (-VALUE-); Annual Fee: (-FEEANNUAL-); Fee 
+	 for the period from (-DATEFROM-) to (-DATETO-) is (-FEECHARGE-)]<br>
+	<br>
+	<img src="../ex1-1.png" alt="" border="0" class="hcp7"></p></li>
+	<li>Click Update.</li>
+</ol>
+<p><span class="hcp4">Note</span>: For 
+ explanation of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<p>&#160;</p>
+<p>In Recurring Fees screen, add the service as a Recurring Fee:</p>
+<p><img src="../ex1-2.png" alt="" border="0" class="hcp7"></p>
+<p class="hcp8">When WIP posting is run, the fee will 
+ be calculated from the total values for Open Item transactions within 
+ 1-Jan-2016 to 1-Jan-2017.</p>
+<p><img src="../ex1-3.png" alt="" border="0" class="hcp7"></p>
+<p>The Recurring Fee will be updated to as follows:</p>
+<p><img src="../ex1-4.png" alt="" border="0" class="hcp7"></p>
+<p>In the draft invoice, the detail line is as follow:</p>
+<p><img src="../ex1-5.png" alt="" border="0" class="hcp7"></p>
+<p>&#160;</p>
+<p style="font-style: normal; font-weight: normal;">How the calculation 
+ works:</p>
+<p>First 1,000,000, total fee is 1.5% of the asset value:</p>
+<p>1,000,000 * 0.015 = 15,000</p>
+<p>The remaining 2,600,000, total fee is 1.0% of the asset value:</p>
+<p>(3,600,000 - 1,000,000) * 0.01 = 26,000</p>
+<p>Hence, total Fee Charge (in USD) = 15,000 + 26,000 = 41,000.00</p>
+<p>&#160;</p>
+<p><span class="hcp4">Note</span>: The 
+ Charge Per period should not be longer than a year. For period less than 
+ a year e.g. quarterly, calculation is on a daily basis where Fee Charge 
+ is calculated as (Number of days in the specified period/Number of days 
+ in the year) x Annual Fee charge.</p>
+<p>For example: First quarter of 2016 (1-Jan-2016 to 31-Mar-2016)</p>
+<p>Annual Fee = 41,000</p>
+<p>Number of days in the period = 31 (in January) + 28 (in February) + 
+ 31 (in March) = 90</p>
+<p>Number of days in 2016 = 366 (2016 is a leap year, the number of days 
+ is 366)</p>
+<p>Fee Charge = (90 / 366) * 41,000 = 10,081.97</p>
+<p>&#160;</p>
+<h4>Example 2</h4>
+<p><span class="hcp9">This is to calculate the fee 
+ based on NAV value with a scaled percentage. The given</span> Net <span class="hcp9">Asset Value is 7,000,000.00.</span></p>
+<h6 class="Heading8"><span class="hcp9">T</span>ag 
+ Configuration in Service Master</h6>
+<ol class="hcp5">
+	<li><p><span style="mso-list: l0 level1 lfo1;">In Service Master, enter 
+	 the code and description for the service.</span></p></li>
+	<li><p class="hcp10">In 
+	 Tag Values, enter the following tags:<br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US" style="font-family: 'Microsoft Sans Serif', sans-serif;">[VALUE=CANAV]</span><br>
+	<span lang="EN-US" xml:lang="EN-US" style="line-height: normal; mso-layout-grid-align: none; 
+			 text-autospace: none; font-family: 'Microsoft Sans Serif', sans-serif;">[CALC=H]<br>
+	[Method=S]<br>
+	[PSCALE=<br>
+	1,000,000~1.5<br>
+	55,000,000~1.0<br>
+	999,000,000~0.5]<br>
+	[FEE.MIN=10,000]<br>
+	[FEE.MAX=4,000,000]</span><br>
+	<span lang="EN-US" xml:lang="EN-US" style="line-height: 115%; font-family: 'Microsoft Sans Serif', sans-serif;">[CHARGETEXT=Asset 
+	 Value: (-VALUE-); Annual Fee: (-FEEANNUAL-); Fee for the period from 
+	 (-DATEFROM-) to (-DATETO-) is (-FEECHARGE-)]</span><br>
+	<img src="../ex2-1.png" alt="" border="0" class="hcp7"></p></li>
+	<li><p><span class="hcp9">Click Update.</span></p></li>
+</ol>
+<p><span class="hcp4"><span style="mso-ansi-language: EN-MY; 
+	 mso-fareast-language: EN-MY; mso-no-proof: yes;">N</span>ote</span>: 
+ For explanation of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<p class="hcp10">&#160;</p>
+<p style="mso-ansi-language: EN-MY; mso-fareast-language: EN-MY; mso-no-proof: yes;">In 
+ Recurring Fees screen, add the service as a Recurring Fee.</p>
+<p style="mso-no-proof: yes;"><img src="../ex2-2.png" alt="" border="0" class="hcp7"></p>
+<p>Let the system calculate the NAV value in the Account File Valuation:</p>
+<p><img src="../ex2-4.png" alt="" border="0" class="hcp7"></p>
+<p><span class="hcp9">When WIP posting is run, the 
+ fee will be calculated from account valuations within 1-Jan-2016 to 1-Jan-2017.</span></p>
+<p><img src="../ex2-5.png" alt="" border="0" class="hcp7"></p>
+<p class="MsoNormal" style="mso-ansi-language: EN-MY;">Recurring Fee calculation 
+ will be updated in the Description box with the code ‘()’ set earlier:</p>
+<p class="MsoNormal"><img src="../ex2-6.png" alt="" border="0" class="hcp7"></p>
+<p class="hcp8">How the calculation works:</p>
+<p><span class="hcp9">Total Value for Valuation: 7,000,000.00</span></p>
+<p>First 1,000,000, total fee is 1.5% of the asset value:</p>
+<p>1,000,000 * 0.015 = 15,000</p>
+<p>The remaining 6,000,000, total fee is 1.0% of the asset value:</p>
+<p>(7,000,000 - 1,000,000) * 0.01 = 60,000</p>
+<p>Hence, total Fee Charge (in GBP) = 15,000 + 60,000 = 75,000.00</p>
+<p class="hcp8"><span class="hcp4">Note</span>: 
+ For Account File Valuation in Accounting, the Recurring Fee currency will 
+ be set to be the same as Account File's base currency after perform Posting 
+ of WIP.</p>
+<p>&#160;</p>
+<h4>Example 3</h4>
+<p>This is to calculate fee based on highest NAV value in the preceding 
+ period using a flat percentage.</p>
+<h6 class="Heading8">Tag Configuration in Service Master</h6>
+<ol class="hcp5">
+	<li><p>In Service Master, enter the code and description for the service.</p></li>
+	<li><p>In Tag Values, enter the following tags:<br>
+	<br>
+	[VALUE=CANAV]<br>
+	[CALC=H]<br>
+	[METHOD=F]<br>
+	[PERC=2]<br>
+	[CHARGETEXT=Asset Value: (-VALUE-); Annual Fee: (-FEEANNUAL-); Fee 
+	 for the period from (-DATEFROM-) to (-DATETO-) is (-FEECHARGE-)]<br>
+	<img src="../ex3-1.png" alt="" border="0" class="hcp7"><br>
+	</p></li>
+	<li>Click Update.</li>
+</ol>
+<p><span class="hcp11">N</span><span class="hcp4">ote</span>: For explanation 
+ of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<p>&#160;</p>
+<p>In Recurring Fees screen, add the service as a Recurring Fee.</p>
+<p><span class="hcp4">Note</span>: The 
+ Charge Per period should not be longer than a year.</p>
+<p>&#160;</p>
+<p>When WIP posting is run, the fee will be calculated based on the highest 
+ Net Asset Value in Accounting:</p>
+<p><img src="../ex3-5.png" alt="" border="0" class="hcp7"></p>
+<p>The Recurring Fee will be updated to as follows:</p>
+<p><img src="../ex3%20-4.png" alt="" border="0" class="hcp7"></p>
+<p>In the draft invoice, the detail line is as follows:</p>
+<p><img src="../ex3-4.png" alt="" border="0" class="hcp7"></p>
+<p>How the calculation works:</p>
+<p>Total Value for Valuation: 9,000,000.00 (based on highest NAV in Accounting)</p>
+<p>Flat percentage of 2% is applied to the value</p>
+<p>Hence, total Fee Charge (in GBP) = &#160;9,000,000.00 * 0.02 = 180,000.00</p>
+<p>&#160;</p>
+<h3>Multiple Pricing Model</h3>
+<h4>Example 1</h4>
+<p>This is to calculate Asset under Management (AuM) where Matter Currency 
+ is used.</p>
+<p><span lang="EN-US" xml:lang="EN-US">These tags are defined in the Service 
+ Master:</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[AuMValue=A]</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[CHARGECUR=M]</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[M01.VALUE=EAASSET:A.BAType&lt;&gt;ST;F.AssetType&lt;&gt;'';S.SECTYPE&lt;&gt;'';O.OITYPE&lt;&gt;'']</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[M01.METHOD=S]</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[M01.PSCALE=</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">450,000~1.0</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">900,000~0.5</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">999,000,000~0.25]</span></p>
+<p class="MsoNormal">&#160;</p>
+<p><span class="hcp11">N</span><span class="hcp4">ote</span>: For explanation 
+ of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<p>&#160;</p>
+<p>In the EA Assets, let say the following assets met the criteria of the 
+ Asset Type in the above tag:</p>
+<ul class="hcp1">
+	<li><p>Bank Account with transaction value GBP25,000.</p></li>
+	<li><p>Fixed Asset with transaction value EUR15,000,000.</p></li>
+	<li><p>Securities with transaction value USD350,000</p></li>
+</ul>
+<p>Posting of WIP is then run from date 1-Jan-2018 to 31-Dec-2018. The 
+ calculated total fee is EUR42,804.84.</p>
+<p class="SeeAlso">&#160;</p>
+<p>How the calculation works:</p>
+<p>When [AuMValue=A] with Matter currency is used, the exchange rate will 
+ be based on the logic as explained in [AuMValue=A] in <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>. For this example, the system retrieves all the previous 
+ AuM transactions until the last day of the month in the Recurring Fee’s 
+ ‘Fee Period From Date’.</p>
+<p>The Recurring Fee's ‘Fee Period From Date’ = 24-Sep-2018, hence the 
+ exchange rate will take the rate on 30-Sep-2018.</p>
+<p>On 30-Sep-2018, the exchange rates from the Exchange Rate Master table 
+ are:</p>
+<table class="Table1" cellspacing="0px" width="58.724%">
+	<col style="width: 32.763%;">
+	<col style="width: 34.654%;">
+	<col style="width: 32.583%;">
+	<tr class="t1st">
+		<td><p>Base Currency</p></td>
+		<td><p>To Currency</p></td>
+		<td><p>Exchange Rate</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>GBP</p></td>
+		<td class="t2Col"><p>EUR</p></td>
+		<td class="t1Col"><p>1.091999147</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>USD</p></td>
+		<td class="t2Col"><p>EUR</p></td>
+		<td class="t1Col"><p>0.8418126756</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Total Asset Value (in EUR)</p>
+<p>= (25,000 * 1.091999147) + 15,000,000 + (350,000.00 * 0.8418126756)</p>
+<p>= 15,321,934.42</p>
+<p>&#160;</p>
+<p>Total Fee Calculation (in EUR)</p>
+<p>First 450,000, total fee is 0.1% of the asset value:</p>
+<p>450,000 * 0.01 = 4,500</p>
+<p>Up to 900,000, total fee is 0.5% of the asset value:</p>
+<p>(900,000 - 450,000) * 0.005 = 2,250</p>
+<p>Up to 999,000,000, total fee is 0.25% of the asset value:</p>
+<p>(15,321,934.42 - 900,000) * 0.0025 = 36,054.84</p>
+<p>Hence, total fee (in EUR) = 4,500 + 2,250 + 36,054.84 = 42,804.84</p>
+<p class="SeeAlso">&#160;</p>
+<h4>Example 2</h4>
+<p>This is to calculate Asset under Management (AuM) where Reporting Currency 
+ is used.</p>
+<p><span lang="EN-US" xml:lang="EN-US">These tags are defined in the Service 
+ Master:</span></p>
+<p>[AuMValue=A]</p>
+<p>[CHARGECUR=R]</p>
+<p>[M01.VALUE=EAASSET:A.BAType&lt;&gt;ST;F.AssetType&lt;&gt;'';S.SECTYPE&lt;&gt;'';O.OITYPE&lt;&gt;'']</p>
+<p>[M01.METHOD=S]</p>
+<p>[M01.PSCALE=</p>
+<p>450,000~1.0</p>
+<p>900,000~0.5</p>
+<p>999,000,000~0.25]</p>
+<p>&#160;</p>
+<p><span class="hcp11">N</span><span class="hcp4">ote</span>: For explanation 
+ of the tags, refer to <a href="../Configuration/Service_Master_-_Tags.htm">Service 
+ Master - Tags</a>.</p>
+<p>&#160;</p>
+<p>In the EA Assets, let say the following assets met the criteria of the 
+ Asset Type in the above tag:</p>
+<ul class="hcp1">
+	<li><p>Bank Account with transaction value GBP25,000.</p></li>
+	<li><p>Fixed Asset with transaction value EUR15,000,000. The Transaction 
+	 Exchange to GBP is 0.879781.</p></li>
+	<li><p>Securities with transaction value USD350,000. The Transaction 
+	 Exchange to GBP is 0.716608.</p></li>
+</ul>
+<p>Posting of WIP is then run from date 1-Jan-2018 to 31-Dec-2018. The 
+ calculated total fee is GBP38,181.32.</p>
+<p>&#160;</p>
+<p>How the calculation works:</p>
+<p>When [AuMValue=A] with Reporting currency is used, the exchange rate 
+ will be based on the Transaction Date’s rate.</p>
+<p>&#160;</p>
+<p>Total Asset Value (in GBP)</p>
+<p>= 25,000 + (15,000,000.00 * 0.879781) + (350,000.00 * 0.716608)</p>
+<p>=13,472,527.80</p>
+<p>&#160;</p>
+<p>Total Fee Calculation (in GBP)</p>
+<p>First 450,000, total fee is 0.1% of the asset value:</p>
+<p>450,000 * 0.01 = 4,500</p>
+<p>Up to 900,000, total fee is 0.5% of the asset value:</p>
+<p>(900,000 - 450,000) * 0.005 = 2,250</p>
+<p>Up to 999,000,000, total fee is 0.25% of the asset value:</p>
+<p>(13,472,527.80 - 900,000) * 0.0025 = 31,431.3195</p>
+<p>Hence, total fee (in GBP) = 4,500 + 2,250 + 31,431.3195 = 38,181.32</p>
+<p>&#160;</p>
+<h4>Example 3</h4>
+<p>This is to calculate Asset under Management (AuM) where minimum fee 
+ is defined based on various currencies.</p>
+<p><span lang="EN-US" xml:lang="EN-US">These tags are defined in the Service 
+ Master:</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">[</span>M01.VALUE=EAASSET:A.BAType&lt;&gt;'';F.AssetType&lt;&gt;'']</p>
+<p>[M01.Method=S]</p>
+<p>[M01.PSCALE=</p>
+<p>1,000,000~0.0</p>
+<p>3,000,000~0.171</p>
+<p>10,000,000~0.114</p>
+<p>20,000,000~0.086</p>
+<p>999,000,000~0.05]</p>
+<p>[M01.Fee.Min.CHF=1,000]</p>
+<p>[M01.Fee.Min.USD=1,500]</p>
+<p>[M01.Fee.Min=500]</p>
+<p>[CHARGECUR=M]</p>
+<p>&#160;</p>
+<p>Explanation on the tag: For pricing model ‘M01’, the system retrieves 
+ bank accounts of any type and fixed assets of any type to calculate the 
+ Ad Valorem fees based on asset value measured by scale.</p>
+<p>The calculation is based on the Matter currency. The minimum fee has 
+ been defined at CHF1,000 or USD1,500 depending on the currency used. If 
+ the Matter currency is not CHF or USD, the minimum fee is fixed at 500 
+ based on the currency used.</p>
+<p>&#160;</p>
+<p>Example Scenario 1:</p>
+<p>Matter Currency = USD</p>
+<p>Total Asset Value in Matter Currency = USD60,000</p>
+<p>Explanation: The asset value is USD60,000 (which is below the value 
+ of 1,000,000), and therefore the Ad Valorem fee is fixed at 0% of the 
+ asset value. However, the minimum fee has been defined at USD1,500. Hence, 
+ for this scenario, the Ad Valorem Fee is USD1,500.</p>
+<p>&#160;</p>
+<p>Example Scenario 2:</p>
+<p>Matter Currency = GBP</p>
+<p>Total Asset Value in Matter Currency = GBP60,000</p>
+<p>Explanation: The asset value is GBP60,000 (which is below the value 
+ of 1,000,000), and therefore the Ad Valorem fee is fixed at 0% of the 
+ asset value. However, the minimum fee has been defined at 500 if using 
+ other types of currency than USD or CHF. Hence, for this scenario, the 
+ Ad Valorem Fee is GBP500.</p>
+<p class="SeeAlso">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Posting_of_Work_in_Progress.htm">Posting of WIP</a></p></li>
+	<li><p><a href="Recurring_Fees.htm">Recurring Fees</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Ad Valorem</p>
+<p class="hcp12">&#160;</p>
+<p class="hcp12">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp12">Version: 8.0.2022.09.20</p>
+</body>
+</html>

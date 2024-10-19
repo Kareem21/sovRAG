@@ -1,0 +1,436 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Formula</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+span.hcp3 { font-weight:bold; }
+li.hcp4 { list-style:none;
+display:inline; }
+p.hcp5 { font-weight:normal;
+text-decoration:none; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Field Type: Formula</h1>
+<p>The Formula field type is used for calculation of values and assigned 
+ scores. It includes:</p>
+<ul class="hcp1">
+	<li><p>Predefined formula.</p></li>
+	<li><p>User-defined formula.</p></li>
+</ul>
+<p>When specifying the formula, the syntax will depend on the following:</p>
+<ul class="hcp1">
+	<li><p>Whether the formula is predefined or user-defined.</p></li>
+	<li><p>What is being calculated and the location of the result.</p></li>
+	<li><p>If the formula is being applied to checklist items that are 
+	 duplicated or not.</p></li>
+</ul>
+<p>For checklist items that are duplicated, this means that there can be 
+ more than one instance of the checklist item e.g. by enabling the Duplicate 
+ option for the checklist item or for the group that the checklist item 
+ belongs to.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: When 
+ calculating values, this refers to checklist items where field type is 
+ Number or Amount.</p>
+<p>&#160;</p>
+<h2>Predefined Formulas</h2>
+<p>These include:</p>
+<ul class="hcp1">
+	<li><p>Excel functions such as SUM, AVERAGE, COUNT, MAX, MIN, etc. 
+	 and apply to a range of items.</p></li>
+	<li><p>Viewpoint Lookup Formula is a formula that will assign a text 
+	 or score to a checklist item based on score calculated by the formula.</p></li>
+</ul>
+<p>&#160;</p>
+<h3><span>Excel Functions</span></h3>
+<p>The syntax is: <span class="hcp3">&lt;Location&gt;=&lt;Function&gt;(&lt;ItemKey&gt;)</span></p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p>&lt;Location&gt; is where you want the result of the calculation 
+	 and can be:</p></li>
+	<li class="hcp4"><ul class="hcp1">
+		<li><p>S in the Score Column.</p></li>
+		<li><p>V in the Complete Field column.</p></li>
+	</ul></li>
+	<li><p>&lt;Function&gt; is the name of the function.</p></li>
+	<li><p>&lt;ItemKey&gt; is the Key of checklist items for the formula 
+	 and should include V for Value and S for Score. &lt;ItemKey&gt; can 
+	 be defined as:</p></li>
+	<li class="hcp4"><ul class="hcp1">
+		<li><p>&lt;Key&gt; if the formula applies to items with the same 
+		 key.</p></li>
+		<li><p>&lt;FirstKey&gt;:&lt;LastKey&gt; if applying to a range 
+		 of items that are in order starting with &lt;FirstKey&gt; until 
+		 &lt;LastKey&gt;.</p></li>
+		<li><p>&lt;Key1&gt;,&lt;Key2&gt;,&lt;Key3&gt;... if applying to 
+		 multiple items that may not be in order.</p></li>
+	</ul></li>
+</ul>
+<p>When the formula is applied to checklist items in a duplicated group, 
+ then the &lt;ItemKey&gt; must be enclosed within [...].</p>
+<p>Excel functions can also be used together with User-Defined formulas.</p>
+<p>&#160;</p>
+<p>Examples:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 12.165%;">
+	<col style="width: 43.917%;">
+	<col style="width: 43.917%;">
+	<tr class="t1st">
+		<td><p>Formula</p></td>
+		<td><p>Explanation</p></td>
+		<td><p>Location of Result</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=MAX(C1.S,C2.S)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Get the maximum 
+		 score from checklist items C1 and C2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=SUM(A1.S:A5.S)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Total up the 
+		 score for checklist items A1 to A5.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=SUM(A1,A2,C1,C2)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Total up the 
+		 score for checklist items A1, A2, C1 and C2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=SUM([D1.S])</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Total up the 
+		 score for all instances of checklist item D1.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=AVERAGE([B1.V])</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Get the average 
+		 for values of all instances of checklist item.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=MIN([B1.V])</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Get the minimum 
+		 value for all instances of checklist item B1.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=SUM(A1.S:A5.S)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Total up the 
+		 score for checklist items A1 to A5.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+</table>
+<p class="hcp5"><span class="hcp2">Note</span>: Other Excel functions are also supported 
+ apart from the ones listed here.</p>
+<p class="hcp5">&#160;</p>
+<h3>Viewpoint Lookup Formulas</h3>
+<p class="hcp5">There are four 
+ types of lookup formula and the syntax varies depending on the formula.</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5"><span class="hcp2">Note</span>: This type of formula does not apply 
+ to items in duplicated group.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 53.031%;">
+	<col style="width: 46.969%;">
+	<tr class="t1st">
+		<td><p>Formula</p></td>
+		<td><p>Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>L(&lt;Formula&gt;-L,LV:&lt;TableCode&gt;)</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Formula&gt; is the formula for the calculation.</p></li>
+			<li><p>-L means to get the lower number, can be changed to 
+			 -H to get higher number.</p></li>
+			<li><p>LV means Lookup Table.</p></li>
+			<li><p>&lt;TableCode&gt; refers to the code for the Lookup 
+			 Table.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This will display 
+		 text from the specified Lookup Table based on the score as calculated 
+		 by the defined formula. The calculated score will be compared 
+		 against the score assigned to the Lookup Table values in the Lookup 
+		 Table. Refer to <a href="Checklist_Item_-_Score_Assignment.htm">Checklist 
+		 Item - Score Assignment</a> to learn how to assign score.</p>
+		<p>&#160;If your score falls between two numbers, the lower number 
+		 is selected due to '-L' being specified. Change to '-H' to pick 
+		 the higher number.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>L(&lt;Formula&gt;-L,UT:&lt;TableCode&gt;)</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Formula&gt; is the formula for the calculation.</p></li>
+			<li><p>-L means to get the lower number, can be changed to 
+			 -H to get higher number.</p></li>
+			<li><p>UT means User Table.</p></li>
+			<li><p>&lt;TableCode&gt; refers to the code for the User Table.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This will display 
+		 text from the specified User Table based on the score as calculated 
+		 by the defined formula. The calculated score will be compared 
+		 against the score assigned to the values in the User Table. Refer 
+		 to <a href="Checklist_Item_-_Score_Assignment.htm">Checklist Item 
+		 - Score Assignment</a> to learn how to assign score.</p>
+		<p>If your score falls between two numbers, the lower number is 
+		 selected due to '-L' being specified. Change to '-H' to pick the 
+		 higher number.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>L(&lt;Formula&gt;-L,UC:&lt;Text&gt;(&lt;Score&gt;)|&lt;Text&gt;(&lt;Score&gt;)|...)</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Formula&gt; is the formula for the calculation.</p></li>
+			<li><p>-L means to get the lower number, can be changed to 
+			 -H to get higher number.</p></li>
+			<li><p>&lt;Text&gt; refers to the value to be assigned.</p></li>
+			<li><p>&lt;Score&gt; refers to the calculated score.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This will display 
+		 the specified text based on the score as calculated by the defined 
+		 formula. If your score falls between two numbers, the lower number 
+		 is selected due to '-L' being specified. Change to '-H' to pick 
+		 the higher number.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>L(SUM(C1:C3)-L,UC:High Risk(5)|Medium Risk(3)|Low Risk(1))</p>
+		<p>will set the text of 'Medium Risk' if the total score for items 
+		 C1 to C3 is '4' since it will pick the lower score.</p>
+		<p>&#160;</p>
+		<p>L(SUM(C1:C3)-H,UC:High Risk(5)|Medium Risk(3)|Low Risk(1))</p>
+		<p>will set the text of 'High Risk'&#160;if the total score for 
+		 items C1 to C3 is '4' since it will pick the higher score.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>L(&lt;Formula&gt;-L,UC:&lt;NewScore&gt;(&lt;Score&gt;)|&lt;NewScore&gt;(&lt;Score&gt;)|...,S)</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Formula&gt; is the formula for the calculation.</p></li>
+			<li><p>-L means to get the lower number, can be changed to 
+			 -H to get higher number.</p></li>
+			<li><p>&lt;NewScore&gt; refers to the new score to be assigned.</p></li>
+			<li><p>&lt;Score&gt; refers to the calculated score.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This will assign 
+		 a new score based on the score as calculated by the defined formula. 
+		 If your score falls between two numbers, the lower number is selected 
+		 due to '-L' being specified. Change to '-H' to pick the higher 
+		 number.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>L(SUM(C1:C3)-L,UC:1(5)|2(10)|3(15),S)</p>
+		<p>if the total score for items C1 to C3 is 5, the new score is 
+		 1.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2 style="font-weight: normal;"><span class="hcp3">User-Defined</span> 
+ <span class="hcp3">Formulas</span></h2>
+<p>User-Defined Formulas are defined using operators, Key of the items 
+ and number to do the following:</p>
+<ul class="hcp1">
+	<li><p>Add, subtract, multiply or divide.</p></li>
+	<li><p>Retrieve values or scores of other checklist items.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Add, Subtract, Multiple or Divide</h3>
+<p>The syntax is: <span class="hcp3">&lt;Location&gt;=&lt;Formula&gt;</span></p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p>&lt;Location&gt; is where you want the result of the calculation 
+	 and can be:</p></li>
+	<li class="hcp4"><ul class="hcp1">
+		<li><p>S in the Score column.</p></li>
+		<li><p>V in the Complete Field column.</p></li>
+	</ul></li>
+	<li><p>&lt;Formula&gt; can include:</p></li>
+	<li class="hcp4"><ul class="hcp1">
+		<li><p>Operands which can be a number of the Key of the items with 
+		 V for Value and S for Score.</p></li>
+		<li><p>Operator such as + to add, - to subtract, * to multiply 
+		 and / to divide.</p></li>
+		<li><p>Excel functions.</p></li>
+	</ul></li>
+</ul>
+<p>When the formula is applied to checklist items that can be duplicated, 
+ the Key of the items must be enclosed within [...].</p>
+<p><br>
+Examples:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 12.165%;">
+	<col style="width: 43.917%;">
+	<col style="width: 43.917%;">
+	<tr class="t1st">
+		<td><p>Formula</p></td>
+		<td><p>Explanation</p></td>
+		<td><p>Location of Result</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=A1.S+A2.S</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Add score for 
+		 checklist items A1 and A2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=A1.S*5</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Multiply the 
+		 score for checklist items A1 by 5.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=B1.V*5</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Multiply the 
+		 value for checklist items B1 by 5.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=[A1.S]+[A2.S]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Add score for 
+		 all instances of checklist items A1 and A2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>S=A1.S+SUM([C1.S])</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Add the score 
+		 of checklist item A1 and all instances of C1.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Score column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=B1.V+B2.V+B3.V</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Add the value 
+		 for checklist items B1, B2 and B3.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=B1.V*B2.V</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Multiply value 
+		 for checklist items B1 with value for B2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=B1.V-B2.V</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Subtract value 
+		 for checklist items B1 with value for B2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=B1.V*10</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Multiply the 
+		 value for checklist item B1 by 10.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=A1.S/2</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Divide the score 
+		 for checklist item A1 by 2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: bottom;"><p>V=B1.V+SUM[D1.V]+SUM[D2.V]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Add the value 
+		 for checklist item B1 and values for all instances &#160;of checklist 
+		 items D1 and D2.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Complete Field 
+		 column</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3>Retrieve Values or Scores</h3>
+<p class="hcp5">The result will 
+ always be placed in the Complete Field column. When defining the formula, 
+ it must include the Key of the item or items as (+&lt;Key&gt;+), and if 
+ required, additional text.</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5"><span class="hcp2">Note</span>: This type of formula does not apply 
+ to items in duplicated group.</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">Example:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 18.895%;">
+	<col style="width: 81.105%;">
+	<tr class="t1st">
+		<td><p>Formula</p></td>
+		<td><p>Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+A1+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Retrieve the 
+		 value for A1.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+A1.Score+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Retrieve the 
+		 score for A1.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+A1+) &amp; 
+		 (+A2+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Retrieve the 
+		 value for A1 and A2 with an ampersand in between.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist/Workflow 
+	 Step Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+	<li><p><a href="Configuring_Checklist_Item.htm">Configuring Checklist 
+	 Item</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Formula</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

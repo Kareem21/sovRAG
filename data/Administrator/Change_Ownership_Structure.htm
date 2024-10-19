@@ -1,0 +1,160 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Change Ownership Structure</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+p.hcp3 { mso-list:none; }
+b.hcp4 { font-weight:normal; }
+b.hcp5 { mso-bidi-font-weight:normal;
+font-weight:normal; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Change of Ownership Structure</h1>
+<p class="MsoNormal">Change of Ownership Structure may occur due to change 
+ in legislation or the company is converted to another entity type. For 
+ either scenario, this will affect the ownership structure of its existing 
+ share classes as the entity type determines the available structure resulting 
+ in:</p>
+<ul class="hcp1">
+	<li><p>only one ownership structure for all share classes (when ownership 
+	 structure for the entity type is set to SA, SB, SN or SS)</p></li>
+	<li><p>a choice of two ownership structure for each share class (when 
+	 ownership structure for the entity type is set to XA, XB, XN or XS)</p></li>
+	<li><p>a choice of four ownership structure for each share class (when 
+	 ownership structure for the entity type is set to XC)</p></li>
+</ul>
+<p class="MsoNormal">When the legislation is changed for an entity type, 
+ then you need to update the ownership structure value for the entity type. 
+ If the company is converted to another entity type with a different ownership 
+ structure, then you need to change the entity type accordingly in the 
+ company’s File Maintenance screen.</p>
+<p class="MsoNormal">Once that is done, use the Capital Change function 
+ and the Share Structure Explorer to update the existing share class(es) 
+ for the affected company or companies.</p>
+<p class="MsoNormal">&#160;</p>
+<h2>In Configuration</h2>
+<p class="MsoNormal">&#160;</p>
+<h3>Update Ownership Structure for Entity Type</h3>
+<ol class="hcp2">
+	<li><p class="hcp3">In Viewpoint – Home, go to <span style="font-weight: bold;"><b class="hcp4">Configuration &gt; Business Parameters 
+	 &gt; Entity Administration &gt;<a href="../Configuration/Entity_Types.htm"> 
+	 Entity Types</a></b>.</span></p></li>
+	<li><p>Select the affected entity type.</p></li>
+	<li><p>Click <b class="hcp4">Edit</b>.</p></li>
+	<li><p>Update the Ownership Structure accordingly.</p></li>
+	<li><p>Click <b class="hcp4">Update</b>.</p></li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note:</span> If 
+ the change is from an ownership structure that starts with 'S' to another 
+ one that starts with 'S', in step 4, select an ownership structure that 
+ allows both ownership structures first. Once you have performed the changes 
+ in File Maintenance for the affected companies, then set the ownership 
+ structure correctly. </p>
+<p>For example, ownership structure change from 'SA' to 'SB' - select 'XC' 
+ in step 4 to allow the changes to be updated to existing share class of 
+ affected companies. After that is completed, set the ownership structure 
+ to 'SB'.</p>
+<p>&#160;</p>
+<h2>In File Maintenance</h2>
+<h3>Update Company’s Entity Type</h3>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, open the company’s File Maintenance screen.</p></li>
+	<li><p>Go to Entity Administration and select the General screen.</p></li>
+	<li><p>Change the Entity Type.</p></li>
+	<li><p>Click <b class="hcp4">Update</b>.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Perform Capital Change</h3>
+<p>This is used to correct the Ownership Structure of existing share class(es) 
+ and also Nominal Value if migrating from Par Value to No Par Value regime.</p>
+<p>For the affected companies, you must perform a capital change for all 
+ relevant share class.</p>
+<ol class="hcp2">
+	<li><p>Open the File Maintenance screen of the company.</p></li>
+	<li><p>Go to <b class="hcp5"><a 
+	 href="Shares_-_Capital.htm">Shares &gt; Capital</a></b> screen.</p></li>
+	<li><p>Select the share class and click <b class="hcp5">Capital 
+	 Change</b>.</p></li>
+	<li><p>In the Options tab in the Capital Change screen:</p></li>
+	<ol style="list-style: lower-alpha;">
+		<li><p>Select the Create new share class, cancel existing shares 
+		 and issue new shares ('Capital Change') options.</p></li>
+		<li><p>Select the new ownership structure for the New Ownership 
+		 Structure field.</p></li>
+		<li><p>Update details for Nominal Value where, if moving to No 
+		 Par Value, set Nominal Value to 0. Note that this will update 
+		 the Consideration/Share and Paid-up/Share value for all share 
+		 transactions.</p></li>
+	</ol>
+	<li><p>Click Next.</p></li>
+	<li><p>In the Transactions tab, check the values in white cells and 
+	 correct them if required. For example, updating Nominal Value to 0 
+	 earlier will also result in Consideration/Share and Paid-up/Share 
+	 columns being set to 0.</p></li>
+	<li><p>Click Next.</p></li>
+	<li><p>In the Summary tab, under 'After Change', you will see the existing 
+	 share class which will be cancelled and the new share class that will 
+	 be created with the relevant details.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Click Yes when prompted.</p></li>
+	<li><p>Click OK.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Using Share Structure Explorer</h3>
+<p class="MsoNormal">For entity types where Authorised Capital has been 
+ abolished, you can remove the existing Number of Shares entered for the 
+ Share Class using <a href="Share_Structure_Explorer.htm">Share Structure 
+ Explorer</a>. This requires access to the Explore command button in Shares 
+ &gt; Transactions screen.</p>
+<ol class="hcp2">
+	<li><p class="hcp3">In <b class="hcp4">Shares 
+	 &gt; Transactions</b> screen, select the affected share class.</p></li>
+	<li><p>Click <b class="hcp4">Explore</b>.</p></li>
+	<li><p>In the Structure Explorer screen, select the Authorisation record 
+	 for the share class and click <b class="hcp4">Edit</b>.</p></li>
+	<li><p>Change the values for the following to 0:</p></li>
+	<ul class="hcp1">
+		<li><p>Number of Shares</p></li>
+		<li><p>Balance of Shares</p></li>
+	</ul>
+	<li><p>Enter the reason for the change in the Note field to have it 
+	 appear in the Conditions field for the share class. Alternatively, 
+	 you may also add this at a later time by selecting the share class 
+	 in Shares &gt; Capital and clicking Edit Class.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Click Rebuild.</p></li>
+</ol>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Change_Ownership_Structure.htm">Entity Administration</a> &gt; Change Ownership Structure</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

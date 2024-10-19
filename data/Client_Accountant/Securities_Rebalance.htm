@@ -1,0 +1,216 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Securities Rebalance</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+ul.hcp2 { list-style:disc; }
+ol.hcp3 { list-style:decimal; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Securities Rebalance</h1>
+<p>This feature automatically recalculates the capital and exchange gains/ 
+ losses on disposal of securities. This is especially useful when you do 
+ not enter securities transactions consecutively. The Securities Rebalance 
+ feature proposes the correcting entries as if the securities transactions 
+ were entered following the right date sequence.</p>
+<p>Once users have verified the calculations, the corrections can be posted 
+ with the click of a button.&#160;Journal entries are created automatically 
+ to reflect these corrections and update the account balances.</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: This 
+ feature can only correct draft journals – permanent journals can no longer 
+ be corrected.</p>
+<p>&#160;</p>
+<h3>Prerequisite</h3>
+<p>Account Files must be set up with the following options to enable the 
+ Securities Rebalance feature to work:</p>
+<p><img src="../securities%20rebalance.png" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h3>Securities Rebalance - Individual Securities</h3>
+<p>The Securities Rebalance appears as a separate tab in the Analyses of 
+ Securities sub-ledgers. Thus, it can be accessed from any of the three 
+ screens below:</p>
+<ul class="hcp2">
+	<li><p>Securities sub-ledger screen in the Account File</p></li>
+	<li><p>Accounts Enquiry</p></li>
+	<li><p>Trial Balance Enquiry</p></li>
+</ul>
+<h4>Securities sub-ledger screen in the Account File</h4>
+<ol class="hcp3">
+	<li><p>In File Maintenance screen, click Accounting Ribbon button and 
+	 select Journals &gt; Journal Quick Entry from the navigation listing 
+	 in Accounting Overview.</p></li>
+	<li><p>Click the Securities tab at the bottom panel and select the 
+	 relevant Securities sub-ledger. </p></li>
+	<li><p>Once done, click on the Analyses button.</p></li>
+	<li><p>In the screen that appears, click Security Rebalance tab. This 
+	 lists the proposed correcting entries for your verification.</p></li>
+	<li><p>Once you have verified the calculations, click Post to automatically 
+	 create the correcting entries.</p></li>
+</ol>
+<h4>Accounts Enquiry</h4>
+<ol class="hcp3">
+	<li><p>In File Maintenance screen, click Accounts Ribbon button in 
+	 the Opened Master File tab.</p></li>
+	<li><p>Click Account.</p></li>
+	<li><p>Select the relevant Securities sub-ledger and click the Analyses 
+	 button.</p></li>
+	<li><p>In the screen that appears, click Security Rebalance tab. This 
+	 lists the proposed correcting entries for your verification.</p></li>
+	<li><p>Once you have verified the calculations, click Post to automatically 
+	 create the correcting entries.</p></li>
+</ol>
+<h4>Trial Balance Enquiry</h4>
+<ol class="hcp3">
+	<li><p>In File Maintenance screen, click Accounts Ribbon button in 
+	 the Opened Master File tab.</p></li>
+	<li><p>Click Trial Balance.</p></li>
+	<li><p>Build the Trial Balance.</p></li>
+	<li><p>Select the relevant Securities sub-ledger and click the Analyses 
+	 - SL button.</p></li>
+	<li><p>In the screen that appears, click Security Rebalance tab. This 
+	 lists the proposed correcting entries for your verification.</p></li>
+	<li><p>Once you have verified the calculations, click Post to automatically 
+	 create the correcting entries.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Securities Rebalance - All Securities</h3>
+<p>There is also an option to Rebalance All Securities sub-ledgers in the 
+ Account File. This option summarises the proposed correcting entries across 
+ all Securities sub-ledgers for your verification.</p>
+<ol class="hcp3">
+	<li><p>Select the Account File.</p></li>
+	<li><p>In File Maintenance screen, click Accounting Ribbon button and 
+	 select Journals &gt; Journal Quick Entry from the navigation listing 
+	 in Accounting Overview.</p></li>
+	<li><p>Click the Securities tab at the bottom panel and click Rebalance 
+	 All.</p></li>
+	<li><p>Once you have verified the calculations, click Post to automatically 
+	 create the correcting entries.</p></li>
+</ol>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">What do I do 
+ if I see a warning message?</a></p>
+<div class="droptext" id="POPUP413353953" style="display: none;">
+	<p>The following Warning messages will result in no action taken by 
+	 the system:</p>
+	<ul class="hcp2">
+		<li><p>Journal#[Draft/ Permanent Journal No.] outside posting window 
+		 &gt; : The journals listed are outside the posting window.</p></li>
+	</ul>
+	<p style="margin-left: 40px;">Please open the posting window by modifying 
+	 the Posting Open From and To dates.</p>
+	<p>&#160;</p>
+	<ul class="hcp2">
+		<li><p>Journal#[Permanent Journal No.] unable to correct permanent 
+		 journals &gt; : These are permanent journals which can no longer 
+		 be corrected. No action should be taken by users.</p></li>
+	</ul>
+</div>
+<p>&#160;</p>
+<h3>Triggering Securities Rebalance via Journal Scripts</h3>
+<p>The Securities Rebalance calculations can also be triggered via Journal 
+ Scripts. Add 1 of the following Tags to the first line of the Securities 
+ Journal Scripts:</p>
+<ul class="hcp2">
+	<li><p>[Initiate=REBAL] – When you click the Post &#160;button to use 
+	 this Journal Script, the Security Rebalance window will prompt if 
+	 there are any unposted corrections. This might be included in a Securities 
+	 acquisition Journal Script.</p></li>
+	<li><p>[After_Post=REBAL] – When you click the Post &#160;button to 
+	 post the Journal Script entry, the Security Rebalance window will 
+	 prompt if there are any unposted corrections.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Calculations - No Exchange Gain/ Loss</h3>
+<p>The Securities sub-ledger currency is the same as the Account File’s 
+ base currency (USD), in this case USD. Hence, there will be no exchange 
+ gains/ losses on disposal.</p>
+<p>The following corrections have been proposed:</p>
+<p><img src="../image158.jpg" alt="" width="606" height="199" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h4>Proposed Corrections</h4>
+<p>The proposed corrections are based on the following calculations:</p>
+<p><img src="../image159.jpg" alt="" width="700" height="204" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>All transactions in the Securities sub-ledger before the disposal transaction 
+ are taken into account in calculating the disposal cost except for the 
+ unrealised revaluation transaction.</p>
+<p>In addition, subsequent disposals are calculated as if you had posted 
+ the proposed corrections on previous disposals. This in calculating the 
+ disposal cost of the second disposal, the corrected disposal cost of the 
+ first disposal in used; and in calculating the disposal cost of the third 
+ disposal, the corrected disposal costs of the first two disposals are 
+ used.</p>
+<p>&#160;</p>
+<h4>Capital Gain/ Loss</h4>
+<p>The corrected capital gain/ loss amount is based on the following calculations:</p>
+<p><img src="../image114.gif" alt="" width="601" height="265" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h3>Calculations – Exchange Gain/ Loss</h3>
+<p>The Securities sub-ledger currency is different (EUR) from the Account 
+ File’s base currency (USD).</p>
+<p>The following corrections have been proposed:</p>
+<p><img src="../image160.jpg" alt="" width="614" height="204" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h4>Proposed Corrections</h4>
+<p>The proposed corrections are based on the following calculations:</p>
+<p><img src="../image161.jpg" alt="" width="697" height="179" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>All transactions in the Securities sub-ledger before the disposal transaction 
+ are taken into account in calculating the disposal cost except for the 
+ unrealised revaluation transaction.</p>
+<p>In addition, subsequent disposals are calculated as if you had posted 
+ the proposed corrections on previous disposals. This in calculating the 
+ disposal cost of the second disposal, the corrected disposal cost of the 
+ first disposal in used; and in calculating the disposal cost of the third 
+ disposal, the corrected disposal costs of the first two disposals are 
+ used.</p>
+<p>&#160;</p>
+<h4>Capital Gain/ Loss</h4>
+<p>The corrected capital gain/ loss amount is based on the following calculations:</p>
+<p><img src="../image162.jpg" alt="" width="609" height="263" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<h4>Exchange Gain/ Loss</h4>
+<p>The corrected exchange gain/ loss amount is based on the following calculations:</p>
+<p><img src="../image163.jpg" alt="" width="617" height="164" border="0" class="hcp1"></p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Securities Rebalance</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP413353953');
+//]]></script>
+</body>
+</html>

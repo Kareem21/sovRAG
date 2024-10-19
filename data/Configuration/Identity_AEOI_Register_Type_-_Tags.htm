@@ -1,0 +1,306 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Identity/AEOI Register Type - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { color:#2d005b; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-left:48px; }
+p.hcp4 { margin-left:36px; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Identity Register Type - Tags</h1>
+<p>These tags are to be added to the Tag Values field of the Identity Register 
+ Type:</p>
+<table class="Table1" cellspacing="0px" width="99.202%">
+	<col style="width: 50%;">
+	<col style="width: 38.547%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Tag</p></td>
+		<td><p class="hcp1">Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[On_Update|From_Field=&lt;FromField&gt;|To_Field=&lt;Prefix&gt;.&lt;ToField&gt;|DESCR=&lt;Descr&gt;]</p>
+		<p>where</p>
+		<ul class="hcp2">
+			<li><p>&lt;FromField&gt; can be:</p></li>
+			<li><p class="hcp3">IdCode - Value entered in 
+			 Identity Text and can be passed to a text field.</p></li>
+			<li><p class="hcp3">FromDate - Value entered 
+			 in From Date and can be passed to a date field.</p></li>
+			<li><p class="hcp3">ToDate - Value entered in 
+			 To Date and can be passed to a date field.</p></li>
+			<li><p class="hcp3">Country - Value entered in 
+			 Country/Jurisdiction and can be passed to a text field.</p></li>
+			<li><p class="hcp3">Country_Code - Value entered 
+			 in Country/Jurisdiction and can be passed only to a lookup 
+			 value field.</p></li>
+			<li><p class="hcp3">LookupValue - Value entered 
+			 in Lookup Value 1 and can be passed only to a lookup value 
+			 field.</p></li>
+			<li><p class="hcp3">LookupValue2 - Value entered 
+			 in Lookup Value 2 and can be passed only to a lookup value 
+			 field.</p></li>
+			<li><p>&lt;Prefix&gt; can be C for Compliance table, R for 
+			 RefMaster table.</p></li>
+			<li><p>&lt;ToField&gt; would be field codes for fields in CDD 
+			 screen or Identity Details screen.</p></li>
+			<li><p>&lt;Descr&gt; this would be the text that appears for 
+			 the option.</p></li>
+		</ul>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to allow 
+		 the information entered for the Identity Register Type to be updated 
+		 to fields in other screens such as:</p>
+		<ul class="hcp2">
+			<li><p>Identity Details </p></li>
+			<li><p>CDD</p></li>
+			<li><p>Entity File - General (when Identity Register Type is 
+			 not for Individual Master File)</p></li>
+			<li><p>Statutory - Company (when Identity Register Type is 
+			 not for Individual Master File)</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>Update Passport Number field in Identity Details screen - for 
+		 Individual Master File</p>
+		<p>[On_Update|From_Field=IdCode|To_Field=C.PassportNr|DESCR=Update 
+		 Passport No.]</p>
+		<p>&#160;</p>
+		<p>Update the Gender in Identity Details screen for Individual 
+		 Master File</p>
+		<p>[On_Update|From_Field=LookupValue|To_Field=C.Gender|DESCR=Gender]</p>
+		<p>&#160;</p>
+		<p>Update the Marital Status in Identity Details screen for Individual 
+		 Master File</p>
+		<p>[On_Update|From_Field=LookupValue2|To_Field=C.MaritalStatus|DESCR=Marital 
+		 Status]</p>
+		<p>&#160;</p>
+		<p>Update Place of Incorporation in Identity Details screen&#160;- 
+		 for Non-Individual Master File</p>
+		<p>[On_Update|From_Field=Country|To_Field=C.PasPlaceIssue|DESCR=Update 
+		 Place of Incorporation]</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Update Incorporation Number in Identity Details 
+		 screen</span> <span class="hcp2">- for Non-Individual Master File</span></p>
+		<p><span class="hcp2">[</span>On_Update|From_Field=IdCode|To_Field=C.PassportNr|DESCR=Update 
+		 Incorporation Number]</p>
+		<p>&#160;</p>
+		<p>Update Date of Incorporation in Identity Details screen - for 
+		 Non-Individual Master File</p>
+		<p>[On_Update|From_Field=FromDate|To_Field=C.PasDateIssue|DESCR=Date 
+		 of Incorporation]</p>
+		<p>&#160;</p>
+		<p style="font-weight: bold; font-style: italic;">Note: <span style="font-weight: normal; 
+		 font-style: normal;">When you do use this tag, set the authority 
+		 level for the fields in the other screens e.g. Identity Details 
+		 or CDD screen to authority level 9 so information is only entered 
+		 in the Identity Register screen.</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[UKey=&lt;Field&gt;+&lt;Field&gt;+...]</p>
+		<p>where &lt;Field&gt; can be:</p>
+		<ul class="hcp1">
+			<li><p>IdType - Identity register type</p></li>
+			<li><p>Country - Country/Jurisdiction</p></li>
+			<li><p>UdCode - User Defined Table</p></li>
+			<li><p>LookupValue - Lookup Table</p></li>
+			<li><p>MasterFileLink - Master File Link</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>If the tag is 
+		 used, when the user creates a new record, the program will check 
+		 on value entered for the defined field(s) with existing records. 
+		 The record will not be accepted if the information is similar 
+		 to an existing record.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To only allow one instance of the identity type 'Birth Certificate' 
+		 - enter this tag in Tag Values field for the identity register 
+		 type 'Birth Certificate':</p>
+		<p>[UKey=IdType]</p>
+		<p>&#160;</p>
+		<p>To only allow one instance of passport per country - enter this 
+		 tag in Tag Values field for the identity register type 'Passport':</p>
+		<p>[UKey=Country]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[&lt;DBField&gt;.Mandatory=&lt;Value&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp2">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field. 
+			 You can obtain this from Configuration &gt; Settings &gt; 
+			 Field Settings for the Identity Register [FMMCOMPR] screen 
+			 or the Classification and Indicia [FMMREVIC] screen.</p></li>
+			<li><p>&lt;Value&gt; can be 'Y' or 'N' which sets the field 
+			 to be mandatory or not mandatory.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 if the field is mandatory or not.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To set the field 'Country/Jurisdiction' to mandatory:</p>
+		<p>[Country.Mandatory=Y]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[&lt;DBField&gt;.Caption=&lt;Value&gt;]</p>
+		<p>where</p>
+		<ul class="hcp2">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field. 
+			 You can obtain this from Configuration &gt; Settings &gt; 
+			 Field Settings for the Identity Register [FMMCOMPR] screen 
+			 or the Classification and Indicia [FMMREVIC] screen.</p></li>
+			<li><p>&lt;Value&gt; is the caption for the field.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 a caption for the following fields:</p>
+		<ul class="hcp2">
+			<li><p>Lookup Value 1 - default caption is the name of the 
+			 specified lookup table</p></li>
+			<li><p>Lookup Value 2 - default caption is the name of the 
+			 specified lookup table</p></li>
+			<li><p>User Table 1 - default caption is the name of the specified 
+			 user table</p></li>
+			<li><p>User Table 2 - default caption is &#160;the name of 
+			 the specified user table</p></li>
+			<li><p>Country/Jurisdiction - default caption is Country/Jurisdiction</p></li>
+			<li><p>User/Account Name and Password - default caption is 
+			 User/Account Name and Password</p></li>
+			<li><p>From Date - default caption is From Date</p></li>
+			<li><p>To Date - default caption is To Date</p></li>
+			<li><p>Reminder - default caption is Reminder Date</p></li>
+		</ul>
+		<p>Example:</p>
+		<p>To set the caption for 'Country/Jurisdiction' to Country Issuing 
+		 Passport:</p>
+		<p>[Country.Caption=Country Issuing Passport]</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[&lt;DBField&gt;.Authority=&lt;Value&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp2">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field. 
+			 You can obtain this from Configuration &gt; Settings &gt; 
+			 Field Settings for the Identity Register [FMMCOMPR] screen 
+			 or the Classification and Indicia [FMMREVIC] screen.</p></li>
+			<li><p>&lt;Value&gt; can be '1','6','8','9' which sets the 
+			 field authority. It does not include the following values 
+			 '0' and '99' as control of whether the field is available 
+			 or not is by ticking or unticking the field for the Identity 
+			 Register type.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to&#160;specify 
+		 the authority required for the field.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To set the authority for the 'Country/Jurisdiction' to [8]:</p>
+		<p>[Country.Authority=8]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-bottom-width: 1px;"><p>[&lt;DBField&gt;.Default=&lt;Value&gt;]</p>
+		<p>where</p>
+		<ul class="hcp2">
+			<li><p>&lt;DBField&gt; is the Database Field name for the field. 
+			 You can obtain this from Configuration &gt; Settings &gt; 
+			 Field Settings for the Identity Register [FMMCOMPR] screen.</p></li>
+			<li><p>&lt;Value&gt; varies depending on the field:</p></li>
+			<li><p class="hcp4">List fields - Code for the 
+			 lookup value or user table value e.g. 'FCST'.</p></li>
+			<li><p class="hcp4">Checkbox field - 'Y' for 
+			 checked or 'N' unchecked.</p></li>
+			<li><p class="hcp4">Text field - Default text, 
+			 e.g. 'Identity Type'.</p></li>
+			<li><p class="hcp4">Date field - Date, e.g '12/12/2016', 
+			 'NOW'</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px;"><p>This 
+		 is to set the default value for the field.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To set the 'From Date' as today's date.</p>
+		<p>[FromDate.Default=NOW]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[SUBSCRIBER=<span class="hcp5">&lt;Subscriber&gt;</span>]</p>
+		<p>where &lt;Subscriber&gt; is the subscriber group code.</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to specify the Subscriber 
+		 group(s) that will require the Identity Register type. Use a comma 
+		 to separate multiple values.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To replicate the Identity Register type to subscriber groups 
+		 'GEN' and 'ASA'</p>
+		<p>[Subscriber=GEN,ASA]</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is applicable if you have Master Configuration Environment 
+		 (MCE).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[SUBSCRIBER&lt;&gt;<span class="hcp5">&lt;Subscriber&gt;</span>]</p>
+		<p>where &lt;Subscriber&gt; is the subscriber group code.</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to specify the Subscriber 
+		 group(s) that will be excluded when replicating the Identity Register 
+		 type.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To not replicate the Identity Register type to subscriber group 
+		 'EUR'</p>
+		<p>[Subscriber&lt;&gt;EUR]</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is applicable if you have Master Configuration Environment 
+		 (MCE).</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Identity_AEOI_Register_Types.htm">Identity/AEOI Register 
+	 Types</a></p></li>
+	<li><p><a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Master 
+	 Configuration Environment (MCE) and Data Replication</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Identity/AEOI Register Type - Tags</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

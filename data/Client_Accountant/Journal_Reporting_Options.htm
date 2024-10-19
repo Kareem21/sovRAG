@@ -1,0 +1,195 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Journal Reporting Options</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+img.hcp3 { border:none; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Journal Reporting Options</h1>
+<p>This screen allows user to customise the Report option for Journal reporting. 
+ The option(s) will be available when editing the Journal Line and serves 
+ as filter in the Account Trial Balance, Excel Statements and Standard 
+ Reports.</p>
+<p>The Journal Reporting Options screen is Active by default, but users 
+ need to grant authority to the screen through the User Roles.</p>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 28.621%;">
+	<col style="width: 71.379%;">
+	<tr class="t1st">
+		<td><p>Field</p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Caption(0x)</p>
+		<p>where:</p>
+		<p>x is either 2,4,8,16,32</p></td>
+		<td class="t2Col"><p>Tick this to enable the option. The enabled 
+		 option will have its caption visible for selection in the Journal, 
+		 Journal Line or filter (in Account Trial Balance, Excel Statements 
+		 and Standard Reports).</p>
+		<p><span class="hcp1">Note</span>: 
+		 Caption(64) is reserved for future use.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Text box (with pre-defined caption)</p></td>
+		<td class="t2Col"><p>The caption in the text box is pre-defined 
+		 and user is not encouraged to change this.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Allow at Journal Line</p></td>
+		<td class="t2Col"><p>Tick this to enable the Journal Reporting 
+		 option to be selected and updated only at the selected Journal 
+		 Line.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Include by Default</p></td>
+		<td class="t2Col"><p>Tick this to set the option as default for 
+		 filtering and included in Sub-ledger and Nominal Account Balance. 
+		 The ‘Include by Default’ option will be enabled automatically 
+		 when the ‘Allow at Journal Line’ option is ticked.</p></td>
+	</tr>
+</table>
+<p><span class="hcp1">Note</span>: When 
+ any of the checkbox is updated in the Journal Reporting Options screen, 
+ you will need to run the ‘Update &amp; Recalculate’ function in File Maintenance 
+ &gt; Accounting &gt; Functions &gt; Recalculate/Calendar to recalculate 
+ the account balance.</p>
+<p>&#160;</p>
+<p>When the caption option is enabled, it will show in the Flags field 
+ in File Maintenance &gt; Accounting &gt; Journals screen as follows:</p>
+<ul class="hcp2">
+	<li><p>In Journals &gt; Script tab - User can select the option(s) 
+	 from the checkbox in the Flags field. When the option is selected, 
+	 it will be shown in the column ‘Flags’ at Journal line.</p></li>
+	<li><p>In Journals &gt; Journal tab - User can select the option(s) 
+	 from the checkbox in the Flags field.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>‘Allow at Journal Line’ Option</h2>
+<p>The ‘Allow at Journal Line’ option controls the flags behaviour at journal 
+ line level.</p>
+<p>&#160;</p>
+<h3>System Behaviour when the ‘Allow at Journal Line’ Option is Enabled/Disabled</h3>
+<p>The following example shows three Journal Reporting options that have 
+ been enabled in the setting screen. They are:</p>
+<ul class="hcp2">
+	<li><p>Caption(02) Hide on Client Statement</p></li>
+	<li><p>Caption(04) Correction Bookings</p></li>
+	<li><p>Caption(08) Audit Adjustments</p></li>
+</ul>
+<p>The option ‘Allow at Journal Line’ is only enabled for Journal Reporting 
+ option ‘Hide on Client Statement’. This would mean that the option ‘Hide 
+ on Client Statement’ will only apply to the selected line and will not 
+ apply to the other journal lines.</p>
+<p>&#160;</p>
+<h4>Example scenario</h4>
+<p>In the Journals, let’s say the first journal line is created with all 
+ three Journal Reporting options flagged. When the journal is updated, 
+ it will have the Flags value ‘14’ which indicates that Caption(02), Caption(04) 
+ and Caption(08) are selected. (Value 14 = 02+04+08).</p>
+<p>When a new journal line is created, only the options ‘Correction Bookings’ 
+ and ‘Audit Adjustments’ are seen. This is because ‘Allow at Journal Line’ 
+ option is disabled for ‘Correction Bookings’ and ‘Audit Adjustments’ in 
+ the setting screen, resulting in both options being available for all 
+ the journal lines.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Journal Reporting Options in Journal Quick Entry</h2>
+<p>In Journal Quick Entry, the Journal Reporting options are shown in the 
+ Flags column at the Entries tab.</p>
+<p>User can select the Journal Reporting option(s) at the Journal line 
+ by clicking on Edit Line button at Journals tab (top grid) &gt; Journal 
+ Lines tab (bottom grid).</p>
+<p>The option(s) will be visible in the ‘Edit Journal Line’ window:</p>
+<p><img src="../edit%20line.png" alt="" width="640" height="505" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3>System Behaviour when the ‘Allow at Journal Line’ Option is Enabled/Disabled 
+ for Journal Quick Entry</h3>
+<p>The following example shows three Journal Reporting options that have 
+ been enabled in the setting screen. They are:</p>
+<ul class="hcp2">
+	<li><p>Caption(02) Hide on Client Statement</p></li>
+	<li><p>Caption(04) Correction Bookings</p></li>
+	<li><p>Caption(08) Audit Adjustments</p></li>
+</ul>
+<p>The option ‘Allow at Journal Line’ is only enabled for Journal Reporting 
+ option ‘Hide on Client Statement’. This would mean that the Journal Reporting 
+ option ‘Hide on Client Statement’ will only apply to the selected line 
+ and will not apply to the other journal lines.</p>
+<p>&#160;</p>
+<h4>Example scenario</h4>
+<p>In the Journal Quick Entry, select all three Journal Reporting options 
+ in the first line. When the second line is entered, only the Journal Reporting 
+ options ‘Correction Bookings’ and ‘Audit Adjustments’ are seen as both 
+ have ‘Allow at Journal Line’ option disabled in the setting, hence allowing 
+ them to be applied to other journal lines.</p>
+<p>When the Journal Reporting option ‘Hide on Client Statement’ is flagged 
+ or unflagged on the existing line, it will only apply to that particular 
+ line.</p>
+<p>Whereas when the Journal Reporting option ‘Correction Bookings’ or ‘Audit 
+ Adjustments’ is flagged or unflagged at any line, it will apply to all 
+ the journal lines.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>‘Include by Default’ Option</h2>
+<p>The selected Journal Reporting option(s) will be available for filtering 
+ in the following screens when the option ‘Include by Default’ is ticked:</p>
+<ul class="hcp2">
+	<li><p>In Billing/CA Enquiry &gt; Accounting &gt; Trial Balance.</p></li>
+	<li><p>When generating Excel Statements in File Maintenance &gt; Enquiry 
+	 &amp; Reporting &gt; Excel Statements.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>System Behaviour when ‘Included by Default’ Option is Enabled/Disabled</h3>
+<p>The following example shows three Journal Reporting options that have 
+ been enabled in the Account File. They are:</p>
+<ul class="hcp2">
+	<li><p>Caption(02) Hide on Client Statement</p></li>
+	<li><p>Caption(04) Correction Bookings</p></li>
+	<li><p>Caption(08) Audit Adjustments</p></li>
+</ul>
+<p>The option ‘Include by Default’ is only enabled for Journal Reporting 
+ options ‘Hide on Client Statement’ and ‘Correction Bookings’.</p>
+<p>With this setting, the Journal Reporting options ‘Hide on Client Statement’ 
+ and ‘Correction Bookings’ will be selected by default in the Trial Balance 
+ or when generating an Excel Statement.</p>
+<p><img src="../trial%20balance.png" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Account_File_-_Setup.htm">Account File</a> &gt; Journal Reporting Options</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

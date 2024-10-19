@@ -1,0 +1,291 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Using Change Codes for Invoice Generation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Using Change Codes for (Invoice) Document Generation</h1>
+<p>This option allows for billing documents such as invoices to be generated 
+ using change codes by linking &#160;the template to the relevant change 
+ code(s) instead of specifying the template in Configuration &gt; Business 
+ Parameters &gt; Practice Management &gt; Setup &gt; Document Templates.</p>
+<p>When using this method, you need to have separate template for draft 
+ invoice and posted invoice; and ensure that each template is then linked 
+ to the correct change codes.</p>
+<p>If you currently have one single template used for both draft and posted 
+ invoice, this must now be separated so that:</p>
+<ul class="hcp1">
+	<li><p>Template for draft sales invoice has SQL queries to ProformaHeader 
+	 and ProformaItems tables.</p></li>
+	<li><p>Template for posted sales invoice has SQL queries to InvoiceHeader 
+	 and InvoiceItems tables.</p></li>
+	<li><p>Template for draft purchase invoice has SQL queries to PurchaseHeader 
+	 and PurchaseItems tables.</p></li>
+	<li><p>Template for posted purchase invoice has SQL queries to InvSupHeader 
+	 and InvSupItems tables.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Configuration Required</h2>
+<p>For Viewpoint Connect program, you need to enable the option 'Using 
+ Change Codes for (Invoice) Document Generation' in <a href="System_Defaults_-_Practice_Management.htm">System 
+ Defaults &gt; Practice Management</a>. For the templates, you need to 
+ add the change code as Change Links for the template. This can be done 
+ through Change Codes or Document Libraries.</p>
+<p>&#160;</p>
+<h3>Link through Change Codes</h3>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Business Parameters 
+	 &gt; Change Codes.</p></li>
+	<li><p>Select Practice Management [2].</p></li>
+	<li><p>Select the Change Code.</p></li>
+	<li><p>Click New.</p></li>
+	<li><p>In the Change Link screen, specify the following:</p>
+	<ul class="hcp1">
+		<li><p>Link Type - Select Word Reports.</p></li>
+		<li><p>Word Reports - Select the relevant template.</p></li>
+		<li><p>Tag Values - Add [HD-SEL=] tag e.g. <span class="hcp3">[HD-SEL=ProformaNr=(+CC.ProformaNr+)]</span>.</p></li>
+		<li><p>Additional change parameters if applicable.</p></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3>Link through Document Libraries</h3>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Document Libraries 
+	 &gt; Billing Templates.</p></li>
+	<li><p>Select the Document Type containing the template.</p></li>
+	<li><p>Select the template.</p></li>
+	<li><p>Click New Change.</p></li>
+	<li><p>In the Change Link screen, specify the following:</p>
+	<ul class="hcp1">
+		<li><p>Change Code - &#160;Select the relevant change code.</p></li>
+		<li><p>Tag Values - Add [HD-SEL=] tag e.g. <span class="hcp3">[HD-SEL=ProformaNr=(+CC.ProformaNr+)]</span>.</p></li>
+		<li><p>Additional change parameters if applicable.</p></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Generating the Template</h2>
+<p>Once the template has been linked, you will be able to see it in the 
+ Change Processing screen when the linked change occurs. To select, ensure 
+ it is ticked and click Queue.</p>
+<p>In Document Queue, select the item and click Generate.</p>
+<p>&#160;</p>
+<h2>Change Codes</h2>
+<p>Change Codes that have been added for use with this feature are as follows:</p>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 26.203%;">
+	<col style="width: 73.797%;">
+	<tr class="t1st">
+		<td><p>Change Code</p></td>
+		<td><p>Occurs when you click...</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PCDI – Print 
+		 Draft Sales Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Recurring Fees screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Prepare Draft(s)</span> 
+			 - In Posting of WIP screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Draft 
+			 Invoices screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Create/Edit 
+			 Invoice screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Drafts tab (Sales Ledger).</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 In Recurring Fees and Posting of WIP, the option ‘Print Document 
+		 (to document queue)’ must be ticked.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PCOI – Post Sales 
+		 Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Draft Invoices screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Create/Edit Invoice screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Settlements – Drafts tab (Sales Ledger).</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 In all screens, the option ‘Print Document (to document queue)’ 
+		 must be ticked.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PCSI – Print 
+		 Sales Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Reprint Invoice</span> 
+			 - In Receivables screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Invoice tab (Sales Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PMPR – Post Receipt</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Enter Receipt</span> 
+			 - In Receivables screen (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Receipt/Payment</span> 
+			 <span class="hcp4">-</span> In Settlements – 
+			 Invoice tab (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Settle to Matter</span> 
+			 - In Settlements – Invoice tab (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Receipt/Paymen</span>t 
+			 - In Settlements – Drafts tab (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Settle to Matter</span> 
+			 - In Settlements – Drafts tab (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Receipt</span> - In 
+			 Settlements – Matters tab (Sales Ledger).</p></li>
+			<li><p><span class="hcp4">Cancel</span> - In 
+			 Settlements – Transactions tab (Sales Ledger).</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 In all screens except Settlements – Transactions tab, the option 
+		 ‘Print Voucher’ must be ticked.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PMPP – Print 
+		 Receipt</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Transactions tab (Sales Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PPDS – Print 
+		 Debtors Statements</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> <span class="hcp4">Statement</span> - In Receivables 
+			 screen (Sales Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PPMS – Print 
+		 Matter Statements</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Matters tab (Sales Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PSDI – Print 
+		 Draft Supplier Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> - In Purchase 
+			 Orders screen (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Print Order</span> 
+			 - In Create/Edit Purchase Orders screen (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Purchase Orders tab (Purchase Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PSOI – Post Supplier 
+		 Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Purchase Orders screen (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Create/Edit Purchase Orders screen (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Invoice</span> - In 
+			 Settlements – Purchase Orders tab (Purchase Ledger).</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 In all screens, the option ‘Print Document (to document queue)’ 
+		 must be ticked.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PSSI – Print 
+		 Supplier Invoice</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Reprint</span> <span class="hcp4">Invoice</span> - In Payables screen 
+			 (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Invoice tab (Purchase Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PMPS – Post Payment</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Settlement</span> - 
+			 In Payables screen (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Payment/Receipt</span> 
+			 - In Settlements – Invoice tab (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Payment/Receipt</span> 
+			 - In Settlements – Purchase Orders tab (Purchase Ledger).</p></li>
+			<li><p><span class="hcp4">Payment</span> - In 
+			 Settlements – Matters tab (Sales Ledger).</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 In all screens except Settlements - Matters, the option ‘Print 
+		 Voucher’’ must be ticked.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PMPQ – Print 
+		 Payment</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> - In Settlements 
+			 – Transactions tab (Purchase Ledger).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>PPCS – Print 
+		 Creditor Statements</p></td>
+		<td class="t2Col"><ul class="hcp1">
+			<li><p><span class="hcp4">Print</span> Statement 
+			 - In Payables screen (Purchase Ledger).</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Shared/Changes_Codes.htm">Change Codes</a></p></li>
+	<li><p><a href="Billing_Templates_Library.htm">Billing Templates Libraries</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="../Client_Accountant/Approval_Cards_for_Payees_and_Payments.htm">Practice Management</a> &gt; Using Change Codes for Invoice Generation</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

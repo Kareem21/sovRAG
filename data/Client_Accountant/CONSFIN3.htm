@@ -1,0 +1,87 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="CONSFIN3">
+<meta name="MS-HAID" content="Consolidated Statements">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>CONSFIN3</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+li.hcp1 { list-style:disc; }
+ul.hcp2 { list-style:disc; }
+li.hcp3 { font-size:9pt; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>CONSFIN3 - Consolidated Statements (Investment Sub-ledgers)</h1>
+<p>You must set up Viewpoint in the following manner in order to generate 
+ this standard statement:</p>
+<ol>
+	<ol>
+		<li><p class="Listing">Select the Account File of the holding company.</p></li>
+		<li><p class="Listing">Set up Investment sub-ledgers to represent 
+		 each of the subsidiaries. For example, if you have three subsidiaries, 
+		 you would have three Investment sub-ledgers.</p></li>
+		<li><p class="Listing">Ensure the following fields are completed:</p></li>
+	</ol>
+	<ul>
+		<ul>
+			<li class="hcp1"><p class="Listing">Master File 
+			 - Select the subsidiary Master File.</p></li>
+			<li class="hcp1"><p class="Listing">Currency Code 
+			 - Enter the Base Currency of the subsidiary Master File in 
+			 this field.</p></li>
+			<li class="hcp1"><p class="Listing">Interest % 
+			 - Enter the percentage ownership in this field.</p></li>
+		</ul>
+	</ul>
+</ol>
+<p>In the generated report (see sample <a href="../AST2019.xls">here</a>*), 
+ the trial balances of all related Account Files (the holding company plus 
+ any subsidiary) will appear as follows:</p>
+<ul class="hcp2">
+	<li class="hcp3"><p>Consolidation sheet - Trial Balances 
+	 are converted to the Base Currency of the holding company. The exchange 
+	 rates are taken from the Exchange Rate Master as at the Report End 
+	 date. Note that the same rate is used for both Balance Sheet and the 
+	 P&amp;L figures; therefore, amend the rate in the generated report, 
+	 if necessary.</p></li>
+</ul>
+<p style="margin-left: 0px;">If intercompany loans are logged to the same 
+ Nominal Account, the amounts will automatically knock off on consolidation. 
+ This sheet may be used as a consolidation worksheet. Enter any adjustments 
+ in column AD.</p>
+<ul class="hcp2">
+	<li class="hcp3"><p>BaseCCY sheet - Trial Balances appear 
+	 in the Base Currency of the individual Account File.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; CONSFIN3</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

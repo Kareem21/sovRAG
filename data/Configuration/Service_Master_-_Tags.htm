@@ -1,0 +1,1012 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Service Master - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+td.hcp2 { vertical-align:top; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { mso-bidi-font-size:11.0pt; }
+p.hcp5 { text-align:justify; }
+span.hcp6 { mso-bidi-font-size:11.0pt; }
+p.hcp7 { mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Arial; }
+p.hcp8 { mso-bidi-font-size:10.0pt; }
+span.hcp9 { mso-bidi-font-family:Arial; }
+span.hcp10 { mso-margin-top-alt:auto;
+line-height:11.05pt;
+mso-bidi-font-family:Arial; }
+li.hcp11 { color:#000000; }
+p.hcp12 { font-weight:bold;
+font-style:italic; }
+span.hcp13 { font-weight:normal;
+font-style:normal; }
+a.hcp14 { color:#000000; }
+p.hcp15 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Service Master - Tags</h1>
+<p>For the Service Master, there are tags that:</p>
+<ul class="hcp1">
+	<li><p>Apply to the service classes</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Ad 
+		 Valorem Fee [RV]</a></p>
+		<div class="droptext" id="POPUP416029891" style="display: none;">
+			<p>When you set up a service as an Ad Valorem fee, you need 
+			 to add the following tags. Each service will have its own 
+			 tags:</p>
+			<table class="Table1" cellspacing="0px" width="100%">
+				<col style="width: 18.388%;">
+				<col style="width: 38.095%;">
+				<col style="width: 43.516%;">
+				<tr class="t1st">
+					<td class="hcp2"><p>Tag</p></td>
+					<td class="hcp2"><p>Single Pricing 
+					 Model</p></td>
+					<td><p>Multiple Pricing Model</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[VALUE=X]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>This 
+					 determines where the value is to be calculated from 
+					 and X can be:</p>
+					<ul class="hcp1">
+						<li><p>CANAV - Accounting NAV Valuation (default).</p></li>
+						<li><p>EAOI:&lt;Reference&gt; - Open Items from 
+						 Entity Administrator for Open Item with the specified 
+						 'Reference'.</p></li>
+					</ul></td>
+					<td class="t1Col"><p>Multiple sets of Ad Valorem structures 
+					 on a single Ad Valorem is supported in the tag. This 
+					 would cater for different pricing models while also 
+					 combining different asset classes. It can be done 
+					 by defining the initial tag ‘M0x’, where x starts 
+					 from 1.</p>
+					<p>The value includes Open Items, Bank Accounts, Securities 
+					 and Fixed Assets from Entity Administrator.</p>
+					<table class="Table1" cellspacing="0px" width="100%">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<tr class="t1st">
+							<td><p>Asset Items</p></td>
+							<td><p>Prefix</p></td>
+							<td><p>Type</p></td>
+							<td><p>Example tag</p></td>
+						</tr>
+						<tr class="t2Row">
+							<td class="t1Col"><p>Bank Accounts</p></td>
+							<td class="t2Col"><p>A</p></td>
+							<td class="t1Col"><p>BAType</p></td>
+							<td class="t2Col"><p>[M01.VALUE=EAASSET:A.BATYPE=CA]</p>
+							<p>Explanation: This tag will retrieve bank 
+							 accounts with the type ‘CA’ for ad valorem 
+							 calculation.</p>
+							<p><span class="hcp3">Note</span>: 
+							 Bank Account Type is retrieved from Lookup 
+							 Values - Bank Account Types [BATP].</p></td>
+						</tr>
+						<tr class="t1Row">
+							<td class="t1Col"><p>Securities</p></td>
+							<td class="t2Col"><p>S</p></td>
+							<td class="t1Col"><p>SECType</p></td>
+							<td class="t2Col"><p>[M01.VALUE=EAASSET:S.SECTYPE=SL]</p>
+							<p>Explanation: This tag will retrieve securities 
+							 with the type ‘SL’ for ad valorem calculation.</p>
+							<p><span class="hcp3">Note</span>: 
+							 Security Type is retrieved from Lookup Values 
+							 - Security Types [SECT].</p>
+							<p>Security Type can be seen in the Home &gt; 
+							 Accounting &gt; Securities &gt; Master screen 
+							 - New/Edit - Security Type field.</p></td>
+						</tr>
+						<tr class="t2Row">
+							<td class="t1Col"><p>Open Items</p></td>
+							<td class="t2Col"><p>O</p></td>
+							<td class="t1Col"><p>OIType</p></td>
+							<td class="t2Col"><p>[M01.VALUE=EAASSET:O.OITYPE=LD]</p>
+							<p>Explanation: This tag will retrieve open 
+							 items with the type ‘LD’ for ad valorem calculation.</p>
+							<p><span class="hcp3">Note</span>: 
+							 Open Item Type is retrieved from Lookup Values 
+							 - Open Item Type [OITP].</p></td>
+						</tr>
+						<tr class="t1Row">
+							<td class="t1Col"><p>Fixed Assets</p></td>
+							<td class="t2Col"><p>F</p></td>
+							<td class="t1Col"><p>ASSETType</p></td>
+							<td class="t2Col"><p>[M01.VALUE=EAASSET:F.ASSETYPE=OT]</p>
+							<p>Explanation: This tag will retrieve fixed 
+							 assets with the type ‘OT’ for ad valorem calculation.</p>
+							<p><span class="hcp3">Note</span>: 
+							 Fixed Asset Type is retrieved from Lookup 
+							 Values - Fixed Asset Types [FATP].</p></td>
+						</tr>
+					</table>
+					<p>&#160;</p>
+					<p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[CALC=X]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>This 
+					 determines which NAV is used and X can be one of the 
+					 following (except for [VALUE=EAOI:&lt;Reference&gt;] 
+					 which will always use last NAV):</p>
+					<ul class="hcp1">
+						<li><p>H - Highest NAV value in the period specified 
+						 (default).</p></li>
+						<li><p>A - Average NAV value in the period specified.</p></li>
+						<li><p>L - Last NAV value in the period specified.</p></li>
+					</ul></td>
+					<td class="t1Col"><p>Not supported in Multiple Pricing 
+					 Model.</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[METHOD=X]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>Specify 
+					 the method of calculation and X can be any of the 
+					 following:</p>
+					<ul class="hcp1">
+						<li><p>F - Flat percentage (default). This should 
+						 be followed by [PERC=&lt;Percentage&gt;] e.g.<br>
+						<br>
+						[METHOD=F]<br>
+						[PERC=9]</p></li>
+					</ul>
+					<ul class="hcp1">
+						<li><p>S - Scaled percentage. This should be follows 
+						 by [PSCALE=&lt;AssetValue&gt; ~&lt;Percentage&gt;] 
+						 e.g.<br>
+						<br>
+						[METHOD=S]<br>
+						[PSCALE=<br>
+						1,000,000 ~ 1.5<br>
+						5,000,000 ~ 1.0<br>
+						999,000,000 ~ 0.5]</p></li>
+					</ul>
+					<ul class="hcp1">
+						<li><p>U - Percentage used for the NAV calculation 
+						 to be specified using User Field. This should 
+						 then be followed by <a id="a351" class="dropspot" href="javascript:TextPopup(this)" name="a351">[UFIELD]</a> 
+						 tags to define the User Field e.g.<br>
+						<br>
+						[METHOD=U]<br>
+						[UFIELD.Type=R]<br>
+						[UFIELD.Code=AVP1]</p>
+						<div class="droptext" id="POPUP4996733761" style="display: none;">
+							<p>[UFIELD.Type=R]</p>
+							<p>The user field type used for the percentage 
+							 (R = Matter User Field)</p>
+							<p>&#160;</p>
+							<p>[UFIELD.Code=&lt;UserFieldKey&gt;]</p>
+							<p>The Key of the User Field.</p>
+							<p>&#160;</p>
+							<p>[UFIELD.Default=0]</p>
+							<p>If a default value is specified, and the 
+							 user field doesn't exist, the program will 
+							 automatically create the field with the default 
+							 value. Otherwise it will create the user field 
+							 without any value.</p>
+      </div></li>
+					</ul>
+					<p class="hcp3">To perform validation on the percentage 
+					 value of the User Field, you can use the following 
+					 tags:</p>
+					<p class="hcp3">[VALIDATE.MINPERC=&lt;Value&gt;] - 
+					 User Field value must be bigger than the specified 
+					 &lt;Value&gt; for this tag.</p>
+					<p class="hcp3">[VALIDATE.MAXPERC=&lt;Value&gt;] - 
+					 User Field value must be smaller than the specified 
+					 &lt;Value&gt; for this tag.</p>
+					<p class="hcp3">&#160;</p></td>
+					<td class="t1Col"><p>Supports all the methods in Single 
+					 Pricing Model. For Multiple Pricing Model, the tag 
+					 shall start with M0x, e.g.:</p>
+					<p>&#160;</p>
+					<p>[M01.METHOD=F]<br>
+					[PERC=9]</p>
+					<p>&#160;</p>
+					<p>[M01.METHOD=S]<br>
+					[PSCALE=<br>
+					1,000,000 ~ 1.5<br>
+					5,000,000 ~ 1.0<br>
+					999,000,000 ~ 0.5]</p>
+					<p>&#160;</p>
+					<p>[M0x.METHOD=U]<br>
+					[UFIELD.Type=R]<br>
+					[UFIELD.Code=AVP1]</p>
+					<p>&#160;</p>
+					<p>Additionally, Multiple Pricing Model also supports:</p>
+					<ul class="hcp1">
+						<li><p>F- Flat percentage. This should be followed 
+						 by [M0x.FSCALE=&lt;AssetValue&gt; ~&lt;Percentage&gt;] 
+						 e.g. [M01.METHOD=F]<br>
+						[M01.FSCALE=<br>
+						10,000 ~ 0.2<br>
+						100,000 ~ 0.15<br>
+						999,000,000 ~ 0.1]</p></li>
+					</ul>
+					<p>Explanation:</p>
+					<ul class="hcp1">
+						<li><p>If the total asset value &lt; 10,000, it 
+						 shall apply 0.2% of the total asset value.</p></li>
+						<li><p>If the total asset value &gt; 10,000 and 
+						 &lt; 100,000, it shall apply 0.15% of the total 
+						 asset value.</p></li>
+						<li><p>If the total asset value &gt; 100,000 and 
+						 &lt; 999,000,000, it shall apply 0.1% of the total 
+						 asset value.</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[FEE.MIN=&lt;Amount&gt;]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>To 
+					 set a minimum fee amount that can be charged on annual 
+					 basis.</p>
+					<p>e.g.</p>
+					<p>[FEE.MIN=100]</p>
+					<p>&#160;</p></td>
+					<td class="t1Col"><p>For Multiple Pricing Model, the 
+					 tag shall start with M0x.</p>
+					<p>e.g.</p>
+					<p>[M01.FEE.MIN=100]</p>
+					<p class="hcp4">&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[FEE.MIN=U]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>To 
+					 set a minimum fee amount based on the User Field. 
+					 This is applicable for [METHOD=U] only. See [UFMIN] 
+					 tags below:</p>
+					<p>&#160;</p>
+					<p>[FEE.MIN=U]</p>
+					<p>[UFMIN.Type=R]</p>
+					<p>[UFMIN.Code=&lt;Code&gt;]</p>
+					<p>[UFMIN.Default=&lt;Amount&gt;]</p>
+					<p>&#160;</p>
+					<p>where:</p>
+					<ul class="hcp1">
+						<li><p>U refers to the value defined in the User 
+						 Field.</p></li>
+						<li><p>R refers to the User Field from Matter Account.</p></li>
+					</ul>
+					<p>&#160;</p></td>
+					<td class="t1Col"><p class="hcp5">To 
+					 set a minimum fee amount based on the User Field. 
+					 This is applicable for [METHOD=U] only. See [M0x.UFMIN] 
+					 tags below:</p>
+					<p class="hcp5">&#160;</p>
+					<p class="hcp4"><span lang="EN-US" xml:lang="EN-US" class="hcp6">[M01.FEE.MIN=U]</span></p>
+					<p><span lang="EN-US" xml:lang="EN-US">[M01.</span>UFMIN.Type=R]</p>
+					<p>[<span lang="EN-US" xml:lang="EN-US">M01.</span>UFMIN.Code=&lt;Code&gt;]</p>
+					<p>[<span lang="EN-US" xml:lang="EN-US">M01.</span>UFMIN.Default=&lt;Amount&gt;]</p>
+					<p>&#160;</p>
+					<p>where:</p>
+					<ul class="hcp1">
+						<li><p>U refers to the value defined in the User 
+						 Field.</p></li>
+						<li><p>R refers to the User Field from Matter Account.</p></li>
+					</ul>
+					<p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[FEE.MAX=&lt;Amount&gt;]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>To 
+					 set a maximum fee amount that can be charged on annual 
+					 basis.</p>
+					<p>e.g.</p>
+					<p>[FEE.MAX=100]</p>
+					<p>&#160;</p></td>
+					<td class="t1Col"><p>For Multiple Pricing Model, the 
+					 tag shall start with M0x.</p>
+					<p>e.g.</p>
+					<p>[M01.FEE.MAX=100]</p>
+					<p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[FEE.MAX=U]</p>
+					<p>&#160;</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>To 
+					 set a maximum fee amount based on the User Field. 
+					 This is applicable for [METHOD=U] only. See [UFMAX] 
+					 tags below:</p>
+					<p>&#160;</p>
+					<p>[FEE.MAX=U]</p>
+					<p>[UFMAX.Type=R]</p>
+					<p>[UFMAX.Code=&lt;Code&gt;]</p>
+					<p>[UFMAX.Default=&lt;Amount&gt;]</p>
+					<p>&#160;</p>
+					<p>where:</p>
+					<ul class="hcp1">
+						<li><p>U refers to the value defined in the User 
+						 Field.</p></li>
+						<li><p>R refers to the User Field from Matter Account.</p></li>
+					</ul></td>
+					<td class="t1Col"><p class="hcp5">To 
+					 set a maximum fee amount based on the User Field. 
+					 This is applicable for [METHOD=U] only. See [M0x.UFMAX] 
+					 tags below:</p>
+					<p class="hcp5">&#160;</p>
+					<p class="hcp4"><span lang="EN-US" xml:lang="EN-US" class="hcp6">[M01.FEE.MAX=U]</span></p>
+					<p><span lang="EN-US" xml:lang="EN-US">[M01.</span>UFMAX.Type=R]</p>
+					<p>[<span lang="EN-US" xml:lang="EN-US">M01.</span>UFMAX.Code=&lt;Code&gt;]</p>
+					<p>[<span lang="EN-US" xml:lang="EN-US">M01.</span>UFMAX.Default=&lt;Amount&gt;]</p>
+					<p>&#160;</p>
+					<p>where:</p>
+					<ul class="hcp1">
+						<li><p>U refers to the value defined in the User 
+						 Field.</p></li>
+						<li><p>R refers to the User Field from Matter Account.</p></li>
+					</ul></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p><span 
+					 lang="EN-US" xml:lang="EN-US">[M01.Fee.Min.&lt;CurCode&gt;=&lt;Minimum 
+					 Amount in CurCode&gt;]</span></p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>Not 
+					 supported in Single Pricing Model.</p></td>
+					<td class="t1Col"><p class="hcp7"><span 
+					 lang="EN-US" xml:lang="EN-US">This tag supports minimum 
+					 amount based on the defined currency code.</span></p>
+					<p class="hcp8"><span lang="EN-US" xml:lang="EN-US" class="hcp9">I</span><span lang="EN-US" xml:lang="EN-US" class="hcp10">f 
+					 there is no currency specified tag, the amount will 
+					 be charged based on a generic minimum tag</span> <span 
+					 lang="EN-US" xml:lang="EN-US">[M01.FEE.MIN=&lt;Amount&gt;]</span></p>
+					<p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p><span 
+					 lang="EN-US" xml:lang="EN-US">[M01.Fee.Max.&lt;CurCode&gt;=&lt;Maximum 
+					 Amount in CurCode&gt;]</span></p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>Not 
+					 supported in Single Pricing Model.</p></td>
+					<td class="t1Col"><p class="hcp7"><span 
+					 lang="EN-US" xml:lang="EN-US">This tag supports maximum 
+					 amount based on the defined currency code.</span></p>
+					<p class="hcp8"><span lang="EN-US" xml:lang="EN-US" class="hcp9">I</span><span lang="EN-US" xml:lang="EN-US" class="hcp10">f 
+					 there is no currency specified tag, the amount will 
+					 be charged based on a generic maximum tag</span> <span 
+					 lang="EN-US" xml:lang="EN-US">[M01.FEE.MAX=</span><span class="hcp6">&lt;Amount&gt;]</span></p>
+					<p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[AuMValue=A]</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>Not 
+					 supported in Single Pricing Model.</p>
+					<p>&#160;</p></td>
+					<td class="t1Col"><p class="hcp7"><span 
+					 style="mso-bidi-font-size: 10.0pt; mso-bidi-font-family: Arial;">This 
+					 tag value allows user to specify the transactions 
+					 retrieved for AuM calculation as well as to determine 
+					 which exchange rate date to be taken for the calculation.</span></p>
+					<p class="hcp7">For 
+					 the exchange rate date, it is only applicable when 
+					 the Matter currency is used. When the Reporting currency 
+					 is used, the exchange rate will be based on the Transaction 
+					 Date's rate.</p>
+					<p class="hcp7"><span class="hcp3">Note</span>: 
+					 M0x prefix is not required for this tag</p>
+					<p class="hcp7">When 
+					 the tag [AuMValue=A] is used, the system will first 
+					 check if it is an existing client or new client.</p>
+					<p class="hcp7"><span class="hcp3">Note</span>: 
+					 If it is an existing client, the Recurring Fee’s Last 
+					 Invoiced date shall have a value.</p>
+					<p>When it is an existing client, the system will retrieve 
+					 all the previous AuM transactions until the Recurring 
+					 Fee’s ‘Fee Period From Date’ minus one (1) day.</p>
+					<ul class="hcp1">
+						<li class="hcp11">Example: Recurring 
+						 Fee’s Fee Period From Date = 1-Jan-2018. The AuM 
+						 Transactions will retrieve AuM transactions until 
+						 31-Dec-2017. The foreign exchange date will also 
+						 be 31-Dec-2017 if the Matter currency is used.</li>
+					</ul>
+					<p class="hcp7">When 
+					 it is a new client, the system will retrieve all the 
+					 previous AuM transactions until the last day of the 
+					 month in the Recurring Fee’s ‘Fee Period From Date’.</p>
+					<ul class="hcp1">
+						<li><p class="hcp7">Example 
+						 1: Recurring Fee’s Fee Period From Date = 15-Mar-2018. 
+						 The AuM Transactions will retrieve AuM transactions 
+						 until 31-Mar-2018.</p></li>
+						<li><p class="hcp7">Example 
+						 2: Recurring Fee’s Fee Period From Date = 1-Mar-2018. 
+						 The AuM Transactions will retrieve AuM transactions 
+						 until 31-Mar-2018.</p></li>
+					</ul>
+					<p class="hcp7">The 
+					 foreign exchange date will also be 31-Mar-2018 for 
+					 both the examples above if the Matter currency is 
+					 used.</p>
+					<p class="hcp7">&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p><span 
+					 lang="EN-US" xml:lang="EN-US">[CHARGECUR=&lt;Option&gt;]</span></p></td>
+					<td class="t2Col" style="vertical-align: top;"><p>Not 
+					 supported in Single Pricing Model.</p></td>
+					<td class="t1Col"><p class="NormalNumberingCxSpFirst"><span 
+					 lang="EN-US" xml:lang="EN-US">This tag allows users 
+					 to select the currency used for calculation.</span></p>
+					<p class="NormalNumberingCxSpMiddle"><span lang="EN-US" 
+					 xml:lang="EN-US">The currency option can be either 
+					 Matter currency or Reporting currency. If there is 
+					 no tag defined, the default currency will be Reporting 
+					 currency.</span></p>
+					<p class="NormalNumberingCxSpMiddle"><span lang="EN-US" 
+					 xml:lang="EN-US">[CHARGECUR=&lt;Option&gt;]</span></p>
+					<p class="NormalNumberingCxSpMiddle"><span lang="EN-US" 
+					 xml:lang="EN-US">where &lt;option&gt; can be:</span></p>
+					<ul class="hcp1">
+						<li><p class="NormalNumberingCxSpMiddle"><span 
+						 lang="EN-US" xml:lang="EN-US">M = Matter currency</span></p></li>
+						<li><p class="NormalNumberingCxSpLast"><span lang="EN-US" 
+						 xml:lang="EN-US">R = Reporting currency</span></p></li>
+					</ul>
+					<p class="Note"><span lang="EN-US" xml:lang="EN-US" class="hcp3">Note</span><span 
+					 lang="EN-US" xml:lang="EN-US">: M0x prefix is not 
+					 required for this tag</span></p>
+					<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">Example: 
+					 [CHARGECUR=M]</span></p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p>[CHARGETEXT=&lt;Text 
+					 to include/elaborate&gt;]</p></td>
+					<td class="t2Col" colspan="2" style="vertical-align: top;"><p>A 
+					 default text can be used in the invoice line description. 
+					 In order to do this, you need to add the round brackets 
+					 ( ) to the Description field of the recurring fee. 
+					 The default text will be placed between the brackets. 
+					 The text can include the following fields that will 
+					 be replaced with actual information on generation:</p>
+					<ul class="hcp1">
+						<li><p>Asset Value: (-VALUE-)</p></li>
+						<li><p>Asset Currency: (-CCY-)</p></li>
+						<li><p>Annual Fee: (-FEEANNUAL-)</p></li>
+						<li><p>Period from: (-DATEFROM-)</p></li>
+						<li><p>Period to: (-DATETO-)</p></li>
+						<li><p>Fee charged (pro-rated): (-FEECHARGE-)</p></li>
+					</ul>
+					<p class="hcp3">The information for the field are as 
+					 follows:</p>
+					<ul class="hcp1">
+						<li><p>(-VALUE-) will retrieve the total value 
+						 of the Open Item as at the Recurring Fee Due Date</p></li>
+						<li><p>(-FEEANNUAL-) will calculate the annual 
+						 fee based on (-VALUE-). It will take into account 
+						 the use of User Fields and tags specifying maximum 
+						 or minimum fee amount.</p></li>
+						<li><p>(-DATEFROM-) will retrieve the (Recurring 
+						 Fee Due Date - Number of Days of Recurring)</p></li>
+						<li><p>(-DATETO-) will retrieve the (Recurring 
+						 Fee Due Date</p></li>
+						<li><p>(-FEECHARGE-) will be calculated as (Pro-rate) 
+						 * (-FEEANNUAL-)</p></li>
+					</ul></td>
+					
+				</tr>
+			</table>
+			<p>&#160;</p>
+     </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Minimum 
+		 Time Fee [RM] and [RN]</a></p>
+		<div class="droptext" id="POPUP416448878" style="display: none;">
+			<p>The time entries created for this service class will carry 
+			 the recurring fee description, but you can customise it using 
+			 the below:</p>
+			<h6 class="Heading8">&#160;</h6>
+			<h6 class="Heading8">[MINFEECHARGE_DESCR=&lt;Text for the minimum 
+			 fee - charge entry&gt;]</h6>
+			<p>Enter the above for the entry that is created for any shortfall.</p>
+			<p class="hcp12"><span>Note:</span> 
+			 <span class="hcp13">This 
+			 tag applies to both Service Classes RM and RN.</span></p>
+			<p style="font-weight: bold;">&#160;</p>
+			<h6 class="Heading8">[MINFEEREVERSE_DESCR=&lt;Text for the 
+			 minimum fee - carry forward of charge entry&gt;]</h6>
+			<p>Enter the above for the reversal entry that is created for 
+			 the carry forward entry.</p>
+			<p class="hcp12">Note: <span class="hcp13">This tag 
+			 only applies to Service Class RM.</span></p>
+			<p>&#160;</p>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Transaction 
+		 Fee [RT]</a></p>
+		<div class="droptext" id="POPUP416465500" style="display: none;">
+			<p>Transaction Fee [RT] services are used when you want to 
+			 charge a client for journals entered in Accounting, or for 
+			 the documents stored on their behalf in Document Management.</p>
+			<p class="hcp4" style="font-weight: bold; text-decoration: underline; ">Journal 
+			 Transactions</p>
+			<p>The following are used when you want to charge a client 
+			 for journals entered on their behalf.</p>
+			<h6 class="Heading8">[TFTYPE=CATRANS]</h6>
+			<p>CATRANS identifies the transaction fee type, i.e. Accounting 
+			 Transactions.</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[JournalCharge=&lt;Option&gt;]</h6>
+			<p>Specify how the charging is done:</p>
+			<p>JOURNAL - Use this tag if you are charging the client based 
+			 on journal entry.</p>
+			<p>LINE - Use this tag if you are charging the client by individual 
+			 journal lines.</p>
+			<p>Eg: [JournalCharge=LINE]</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[ExcludeNominal=&lt;Account&gt;]</h6>
+			<p>Add this tag to exclude the named accounts from the journal 
+			 charge calculation. If the journal charge type is by line, 
+			 then the debit or credit of the line will also be excluded 
+			 from the calculation. If no nominal accounts are excluded, 
+			 then use NONE.</p>
+			<p>Eg: [ExcludeNominal=1234|5678|1111], [ExcludeNominal=NONE]</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[UseDate=INPUT]</h6>
+			<p>Add this tag to calculate the journals based on the date 
+			 of input. Leave this blank to calculate by journal date.</p>
+			<p><span class="hcp5" style="font-weight: bold; font-style: italic;">Note</span>: 
+			 The Billing Event for this service should be set as Standard 
+			 [STD].</p>
+			<p>&#160;</p>
+			<p class="hcp4" style="font-weight: bold; text-decoration: underline; ">Document 
+			 Management Storage</p>
+			<p>The following are used when you want to charge the client 
+			 for storing documents on their behalf:</p>
+			<h6 class="Heading8">[TFTYPE=DMDOCS]</h6>
+			<p>DMDOCS identifies the transaction fee type, i.e., Document 
+			 Management Documents.</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[DOCCOUNT=&lt;Option&gt;]</h6>
+			<p>Specify how the charging is done:</p>
+			<p>FILES - Use this tag if you are charging the client based 
+			 on the number of files stored.</p>
+			<p>HOLDERS - Use this tag if you are charging the client based 
+			 on the number of holders created.</p>
+			<p>Eg: [DOCCOUNT=FILES]</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[INDEXFIELD=&lt;IndexField&gt;]</h6>
+			<p>Enter the Key Tag of the index field(s) that will be included 
+			 when calculating the number of holders/files. Multiple index 
+			 fields are separated by a pipe &quot;|&quot; symbol. The index 
+			 fields entered must be of the field type Master File [40]. 
+			 Use ALL for all index fields of the field type Master File 
+			 [40].</p>
+			<p>Eg: [INDEXFIELD=INDEX|CORRES|SIGNATORY]</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[DOCDATE=&lt;Method&gt;]</h6>
+			<p>Specify the calculation method:</p>
+			<p>NEW - Use this to count only new files/holders in the date 
+			 range. Note that the date referred to is the date the document 
+			 was created, not the date the document is stored. This is 
+			 to avoid charging the client multiple times for the same document.</p>
+			<p>ALL - Use this to count all files/holders created before 
+			 the Next Due Date of the fee.</p>
+			<p>Eg: [DOCDATE=ALL]</p>
+			<p>&#160;</p>
+			<h6 class="Heading8">[CABINET=&lt;CabinetCode&gt;]</h6>
+			<p>Enter the Key Tag of the Cabinet(s) that are to be included 
+			 in when calculating the number of holders/files. Multiple 
+			 cabinets are separated by a pipe &quot;|&quot; symbol. Use 
+			 ALL for all cabinets.</p>
+			<p>Eg: [CABINET=CORGEN|LEGMINRES]</p>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a9">Time 
+		 billed in advance with carry forward [TW] / Disbursement billed 
+		 in advance with carry forward [DW]</a></p>
+		<div class="droptext" id="POPUP591690943" style="display: none;">
+			<p>'Time billed in advance with carry forward [TW]' is used 
+			 for invoicing the Fixed Fee in advance and later, to invoice 
+			 in arrears any Time exceeding the Fixed Fee. It does the following:</p>
+			<ul class="hcp1">
+				<li><p>invoicing Fixed Fee in advance.</p></li>
+				<li><p>track excess Time recorded against the Fixed Fee.</p></li>
+				<li><p>invoicing in arrears any Time exceeding the Fixed 
+				 Fee.</p></li>
+			</ul>
+			<p>'Disbursement billed in advance with carry forward [DW]' 
+			 is used for invoicing the Fixed Fee in advance and later, 
+			 to invoice in arrears any Disbursement exceeding the Fixed 
+			 Fee. It does the following:</p>
+			<ul class="hcp1">
+				<li><p>invoicing Fixed Fee in advance.</p></li>
+				<li><p>track excess Disbursement recorded against the Fixed 
+				 Fee.</p></li>
+				<li><p>invoicing in arrears any Disbursement exceeding 
+				 the Fixed Fee.</p></li>
+			</ul>
+			<p>To enable the Service Class [TW] or [DW], the following 
+			 tags need to be included:</p>
+			<ul class="hcp1">
+				<li><p>[SRVDATE.Visible] is set to 'Y' to enable the ‘Service 
+				 Date’ field in the Time/Disbursement Entry screen.</p></li>
+				<li><p>[SRVDATE.Mandatory] is set to 'Y' to set the ‘Service 
+				 Date’ field as mandatory in the Time/Disbursement Entry 
+				 screen.</p></li>
+				<li><p>[CHARGETIME_ACCT=&lt;Account No&gt;] is defined 
+				 to bill the additional Time charged to the specified Account 
+				 code. Similarly, [CHARGEDISB_ACCT=&lt;Account No&gt;] 
+				 is defined to bill the additional Disbursements charged 
+				 to the specified Account code. This is for <a class="dropspot" href="javascript:TextPopup(this)" id="a10">posting to Client Accounting</a>.</p>
+				<div class="droptext" id="POPUP585053251" style="display: none;">
+					<p>Time/Disbursements billed in advance journal will 
+					 be posted to the Client Accounting. Posting rule must 
+					 be set up to ensure that source account feeds the 
+					 correct release account. When Reconcile is run, the 
+					 journal will get posted to the Release Account as 
+					 defined in [CHARGETIME_ACCT=&lt;Account No&gt;] tag 
+					 or [CHARGEDISB_ACCT=&lt;Account No&gt;] tag in the 
+					 Service Master.</p>
+					<p><span class="hcp3">Note</span>: 
+					 If the account defined is not active/not found, system 
+					 will prompt a warning message that the account code 
+					 defined in the tag is invalid.</p>
+    </div></li>
+				<li><p>[CHARGETIME_DESCR=&lt;text description&gt;] can 
+				 be defined to provide the description of the additional 
+				 Time charged in the invoice line. Similarly, [CHARGEDISB_DESCR=&lt;text 
+				 description&gt;] can be defined to provide the description 
+				 of the additional Disbursements charged in the invoice 
+				 line.</p></li>
+			</ul>
+			<p><span class="hcp3">Note</span>: 
+			 When Service Class is 'TW' or 'DW', the tags [SRVDATE.Visible=Y] 
+			 and [SRVDATE.Mandatory=Y] will be added by default. For other 
+			 Service Class, [SRVDATE.Visible=N] will be added by default, 
+			 meaning the 'Service Date' field will be disabled.</p>
+			<p>&#160;</p>
+			<p>User may proceed to <a class="dropspot" href="javascript:TextPopup(this)" id="a111">invoice 
+			 Time/Disbursements exceeding the fixed fee</a> 
+			 once completed the settings above and <a class="dropspot" href="javascript:TextPopup(this)" id="a12">created the recurring fees under 
+			 this service class</a>.</p>
+			<div class="droptext" id="POPUP560730225" style="display: none;">
+				<p><span class="hcp3">Note</span>: 
+				 Avoid using the same Service Code within the same Matter 
+				 when creating Recurring Fees. If the same Service Code 
+				 is used in the same Matter, the system will not be able 
+				 to track the amount to be invoiced exceeding the fixed 
+				 fee.</p>
+   </div>
+			<div class="droptext" id="POPUP5851938131" style="display: none;">
+				<p>To invoice Time/Disbursements exceeding the Fixed Fee,</p>
+				<ol style="list-style: decimal; color: #000000;">
+					<li class="hcp11"><p><span>Go to the <a href="../../ViewPoint7.5.WIN - NEW/Practice_Manager/Time_Entries.htm" class="hcp14">Time/Disbursements</a> entry 
+					 screen, create Time/Disbursements entry(ies) for Time/Disbursements 
+					 exceeding the <a href="../../ViewPoint7.5.WIN - NEW/Practice_Manager/Recurring_Fees.htm" class="hcp14">Fixed 
+					 Fee</a>. If the Fixed Fee has not been invoiced before, 
+					 user will not be able to set the ‘Service Date’ for 
+					 the Time/Disbursements exceeding the Fixed Fee. Besides, 
+					 the 'Service Date' must be in the range of previously 
+					 invoiced or current 'Fee Period From Date' and 'Fee 
+					 Period To Date' of the Recurring Fee, otherwise a 
+					 warning message will be prompted.</span></p></li>
+					<li class="hcp11"><p><span>After created 
+					 the Time/Disbursements entries, proceed to <a href="../../ViewPoint7.5.WIN - NEW/Practice_Manager/Posting_of_Work_in_Progress.htm" class="hcp14">post WIP</a> on the additional 
+					 Time/Disbursements and invoice them. <span class="hcp3">Note</span>: Time will be charged 
+					 at Administrator rates based on the Rate Level set 
+					 in File Maintenance &gt; Sales Ledger &gt; Billing 
+					 File &gt; General.</span></p></li>
+				</ol>
+				<p>Note: The Fixed Fee has to be invoiced first before 
+				 the draft invoice for Time/Disbursements exceeding the 
+				 Fixed Fee can be prepared.</p>
+				<p>&#160;</p>
+				<p>The invoiced Time/Disbursements exceeding the Fixed 
+				 Fee can be seen in File Maintenance &gt; Sales Ledger 
+				 &gt; Accounts Receivable &gt; Receivables screen.</p>
+   </div>
+			<p><span lang="EN-US" xml:lang="EN-US">Recurring Fees dates 
+			 are automatically rolled forward to new dates when draft invoice 
+			 of the Fixed Fee is invoiced.</span></p>
+			<p>&#160;</p>
+			<p class="SeeAlso">See also:</p>
+			<ul class="hcp1">
+				<li><p><a href="../Practice_Manager/Fee_History.htm">Fee 
+				 History</a></p></li>
+				<li><p><a href="../Practice_Manager/Time_Entries.htm">Time 
+				 Entries</a></p></li>
+				<li><p><a href="../Practice_Manager/Recurring_Fees.htm">Recurring 
+				 Fees</a></p></li>
+				<li><p><a href="../Practice_Manager/Transaction_Charging.htm">Transaction 
+				 Charging</a></p></li>
+			</ul>
+  </div></li>
+	</ul></li>
+	<li><p>Are used for <a class="dropspot" href="javascript:TextPopup(this)" id="a4">calculation 
+	 for Fees Payable such as corporate fee calculations, due dates and 
+	 others</a></p>
+	<div class="droptext" id="POPUP416519471" style="display: none;">
+		<h6 class="Heading8">[FEEDUE-MM=dd/MM]</h6>
+		<p>The fee due table determines the due date of the fee for payment 
+		 to the registrar. Note the program will use the year of the recurring 
+		 fees 'from date' to determine for which year the fee is payable.</p>
+		<p>For example, if the incorporation month is January - June, and 
+		 the fee is due on 31 May; and if the incorporation month is July 
+		 - December, and the fee is due on 30 November, the tags would 
+		 look like this:</p>
+		<p>[FEEDUE-01=31/05]</p>
+		<p>[FEEDUE-02=31/05]</p>
+		<p>[FEEDUE-03=31/05]</p>
+		<p>[FEEDUE-04=31/05]</p>
+		<p>[FEEDUE-05=31/05]</p>
+		<p>[FEEDUE-06=31/05]</p>
+		<p>[FEEDUE-07=30/11]</p>
+		<p>[FEEDUE-08=30/11]</p>
+		<p>[FEEDUE-09=30/11]</p>
+		<p>[FEEDUE-10=30/11]</p>
+		<p>[FEEDUE-11=30/11]</p>
+		<p>[FEEDUE-12=30/11]</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PENALTY_MONTHS_x=y]</h6>
+		<p>There is a maximum of three penalty brackets, based on the number 
+		 of months after the due date of the [FEEDUE]. x determines the 
+		 penalty bracket and y determines the number of months after the 
+		 due date of [FEEDUE].</p>
+		<p>[PENALTY_MONTHS_1=2] - specifies that the first bracket is 2 
+		 months after the due date of the [FEEDUE].</p>
+		<p>[PENALTY_MONTHS_2=5] - specifies that the second bracket is 
+		 5 months after the due date of the [FEEDUE].</p>
+		<p>[PENALTY_MONTHS_3=0] - specifies that the third bracket is not 
+		 used.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PENALTY_PERC_x=y]</h6>
+		<p>Use this tag to calculate the amount to be charged as penalty. 
+		 x determines the penalty bracket and y is the percentage of the 
+		 fee that will be charged. If you use this tag, do not use the 
+		 [PENALTY_AMOUNT] tag. See also [FEETABLE] below.</p>
+		<p>[PENALTY_PERC_1=10] - specifies that the first bracket penalty 
+		 is 10% of the fee.</p>
+		<p>[PENALTY_PERC_2=50] - specifies that the second bracket penalty 
+		 is 50% of the fee.</p>
+		<p>[PENALTY_PERC_3=0]&#160;- specifies that the third bracket penalty 
+		 is not used.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PENALTY_AMOUNT_x=y]</h6>
+		<p>Use this tag to specify an absolute amount if you are not using 
+		 the [PENALTY_PERC] tag above. x determines the penalty bracket 
+		 and y is the absolute amount that will be charged. See also [FEECALC_CUR] 
+		 below.</p>
+		<p>For example:</p>
+		<p>[PENALTY_AMOUNT_1=100] - specifies that the first bracket penalty 
+		 is 100.00.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PENALTY_DESCR=x]</h6>
+		<p>Use this to define the description that will appear on the penalty 
+		 invoice. x can be normal text and codes to retrieve information 
+		 such as:</p>
+		<ul class="hcp1">
+			<li><p>(-INVNR-) - refers to the invoice number</p></li>
+			<li><p>(-DRAFTNR-) - refers to the draft invoice number</p></li>
+			<li><p>(-DESCR-) - refers to the Service description</p></li>
+			<li><p>(-PERCENT-) - refers to the percentage of penalty being 
+			 invoiced</p></li>
+			<li><p>(-PENALTYDATE-) – refers to the date the penalty being 
+			 invoiced</p></li>
+			<li><p>(-STRIKEDATE-) – refers to the strike date</p></li>
+		</ul>
+		<p>For example:</p>
+		<p>[PENALTY_DESCR=(-PERCENT-) Penalty on (-DESCR-) (Invoice# (-INVNR-)) 
+		 (PENALTY_DATE (-PENALTYDATE-)) (STRIKEDATE (-STRIKEDATE-))]</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[STRIKE_MONTHS=5]</h6>
+		<p>This is the number of months after the [FEEDUE] date when the 
+		 entity is struck off. Refer to <a href="../Practice_Manager/Fees_Payable_Strike_Off.htm">Fees 
+		 Payable - Strike Off</a> .</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEECALC_BASIS=x]</h6>
+		<p>You can calculate the fee based on the following:</p>
+		<p>[FEECALC_BASIS=AUTHCAP] - the fee is calculated based on the 
+		 authorised capital and it will only be calculated when the authorisation 
+		 type is AU.</p>
+		<p>[FEECALC_BASIS=AUTHNUMBER] - the fee is calculated based on 
+		 the authorised number of shares and it will only be calculated 
+		 when the authorisation type is AU.</p>
+		<p>[FEECALC_BASIS=AUTHCAPPREM] - the fee is calculated based on 
+		 the total authorised capital plus the share premium.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEECALC_METHOD=TABLE]</h6>
+		<p>This tag indicates to the Viewpoint that a scaled table is used 
+		 for the fee calculation. See [FEETABLE] below.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEECALC_CUR=USD]</h6>
+		<p>This tag specifies the currency for fee calculation. If the 
+		 capital of the entity is in a currency other then this currency, 
+		 Viewpoint will first look if there is an exchange rate entered 
+		 with the share class and use this if there is. Otherwise, the 
+		 capital is converted using the rate from the Exchange Rate Master.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEETABLE]</h6>
+		<p>The following is an example of the fee table. The number left 
+		 of the tilde (~) is the upper band of the fee scale, and the number 
+		 right of the ~ the fee. The table can have as many lines as required. 
+		 If the number of shares is 0 or if the entity has no authorised 
+		 capital, then the lowest fee band will be used.</p>
+		<p>[FEETABLE=</p>
+		<p>50,000 ~ 450</p>
+		<p>99999999 ~ 1200]</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEECALC_PIT_DATE_DD/MM]</h6>
+		<p>This tag is for Point-In-Time Date. This is the day/month for 
+		 the Point-In-Time calculation.</p>
+		<p><span class="hcp3">Note:</span> 
+		 This is also valid for existing fee calculation basis. If specified, 
+		 it will do Point-In-Time, otherwise means it is not Point-In-Time.</p>
+		<p>For example: [FEECALC_PIT_DATE=31/08], [FEECALC_PIT_DATE=01/02]</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[FEECALC_PIT_YEAR=XXYY]</h6>
+		<p>This tag is for Point-In-Time calculation. XX can be either 
+		 one of the following:</p>
+		<p>DF - Fee Period From Date of the Recurring Fee</p>
+		<p>DT - Fee Period To Date of the Recurring Fee</p>
+		<p>+Y or -Y is the number of years to add/subtract. The number 
+		 of years must be around value and it should not be in 0.5 year.</p>
+		<p>For example:</p>
+		<p>Recurring Fee Period From Date = 01 Jan 2020</p>
+		<p>Recurring Fee Period To Date = 31 Dec 2020</p>
+		<p>[FEECALC_PIT_YEAR=DT-2], this means the year will be retrieved 
+		 as 2018.</p>
+		<p>[FEECALC_PIT_YEAR=DF+10], this means the year will be retrieved 
+		 as 2030.</p>
+ </div></li>
+	<li><p>Will <a class="dropspot" href="javascript:TextPopup(this)" id="a5">set 
+	 applicable analysis code</a></p>
+	<div class="droptext" id="POPUP416541116" style="display: none;">
+		<p>If you are using the Analysis Code feature, you can set certain 
+		 analysis codes to be available for the service for users to select 
+		 when entering time:</p>
+		<h6 class="Heading8">[ANALCODES=&lt;AnalysisCode1&gt;,&lt;AnalysisCode2&gt;,...]</h6>
+		<p>Ensure that the codes have been set up in the Analyses Codes 
+		 Time Entry [TANALYSES] user table, in Business Parameters &gt; 
+		 General &gt; User Tables/Values. Wildcard is possible for this 
+		 tag. For example, [ANALCODES=T01*] will allow all analysis codes 
+		 starting with 'T01'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp5" style="font-weight: bold; font-style: italic;">Note</span>: 
+		 If this tag is not entered for the service, all active analysis 
+		 codes will be shown. The analysis code is case sensitive, please 
+		 ensure it is entered in the correct case.</p>
+ </div></li>
+	<li><p>Will <a class="dropspot" href="javascript:TextPopup(this)" id="a7">set 
+	 default analysis code</a></p>
+	<div class="droptext" id="POPUP456609810" style="display: none;">
+		<p>If you are using the Analysis Code feature, you can set default 
+		 analysis code for the service:</p>
+		<h6 class="Heading8">[DEFAULTANALCODE=&lt;AnalysisCode&gt;]</h6>
+		<p>Ensure that the codes have been set up in the Analyses Codes 
+		 Time Entry [TANALYSES] user table, in Business Parameters &gt; 
+		 General &gt; User Tables/Values.</p>
+ </div></li>
+	<li><p>Will <a class="dropspot" href="javascript:TextPopup(this)" id="a11">enable 
+	 Service Date field</a></p>
+	<div class="droptext" id="POPUP632600371" style="display: none;">
+		<p>When using the 'Service Date' field with other Service Class 
+		 (i.e. not TW/DW), this field will only function to record the 
+		 date of the service in a Time/Disbursement entry. If you wish 
+		 to enable this field, you can set the tags below:</p>
+		<h6 class="Heading8">[SRVDATE.Visible=Y]</h6>
+		<p>This will enable the 'Service Date' field in Time/Disbursement 
+		 Entry screen.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[SRVDATE.Mandatory=Y]</h6>
+		<p>This will set the 'Service Date' field as mandatory in Time/Disbursement 
+		 Entry screen.</p>
+		<p>&#160;</p>
+		<p><span class="hcp5" style="font-weight: bold; font-style: italic;">Note</span>: 
+		 By default, [SRVDATE.Visible=N] will be added for Service Class 
+		 that is not [TW] or [DW], meaning the 'Service Date' field will 
+		 be disabled. For Service Class [TW] or [DW], please refer to the 
+		 section above - 'Time billed in advance with carry forward [TW] 
+		 / Disbursement billed in advance with carry forward [DW]'.</p>
+ </div></li>
+	<li><p>Are used for <a class="dropspot" href="javascript:TextPopup(this)" id="a6">batch 
+	 maintenance of payable fees</a></p>
+	<div class="droptext" id="POPUP416568171" style="display: none;">
+		<p>If you would like purchase orders to be generated for batch 
+		 payment, you can use the following tags to define details for 
+		 the purchase order as well as when the purchase order is to be 
+		 generated.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PO_SUPPLIER=&lt;SupplierFileCode&gt;]</h6>
+		<p>This is to set the default supplier for the purchase order. 
+		 The value set here will be seen in the Supplier field in the Government 
+		 Fees screen.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PO_FEES=&lt;ServiceCode&gt;]</h6>
+		<p>This is to set the default fee or service for the purchase order. 
+		 The value set here will be seen in the Supplier field in the Government 
+		 Fees screen.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[PO_PENALTY=&lt;ServiceCode&gt;]</h6>
+		<p>This is to set the default penalty fee or service for the purchase 
+		 order. The value set here will be seen in the Supplier field in 
+		 the Government Fees screen.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[Max_Amount=&lt;Amount&gt;]</h6>
+		<p>This tag is used to set the maximum total amount of fees in 
+		 a payment batch. A purchase order will be created only if the 
+		 maximum total amount is not exceeded. </p>
+		<p>Example [Max_Amount=12345] </p>
+		<p>&#160;</p>
+		<h6 class="Heading8">[Max_Lines=&lt;Number&gt;]</h6>
+		<p>This&#160;tag is used to set the maximum number of payment in 
+		 an active payment batch. A purchase order will be created only 
+		 if the maximum number of lines is not exceeded. </p>
+		<p>Example [Max_Lines=100]</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a8">Excludes 
+	 column(s) update during import from the master configuration</a></p>
+	<div class="droptext" id="POPUP456610809" style="display: none;">
+		<h6 class="Heading8">[NOUPDATE=&lt;DBField&gt;,&lt;DBField&gt;]</h6>
+		<p>&lt;DBField&gt; refers to the database field in service master 
+		 screen. Client can put multiple &lt;DBField&gt; by adding the 
+		 ',' in between the database field.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Service_Master.htm">Service Master</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Service Master - Tags</p>
+ <p class="hcp15">&#160;</p>
+ <p class="hcp15">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp15">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP416029891');
+	TextPopupInit('a351','POPUP4996733761');
+	TextPopupInit('a2','POPUP416448878');
+	TextPopupInit('a3','POPUP416465500');
+	TextPopupInit('a9','POPUP591690943');
+	TextPopupInit('a10','POPUP585053251');
+	TextPopupInit('a111','POPUP5851938131');
+	TextPopupInit('a12','POPUP560730225');
+	TextPopupInit('a4','POPUP416519471');
+	TextPopupInit('a5','POPUP416541116');
+	TextPopupInit('a7','POPUP456609810');
+	TextPopupInit('a11','POPUP632600371');
+	TextPopupInit('a6','POPUP416568171');
+	TextPopupInit('a8','POPUP456610809');
+//]]></script>
+</body>
+</html>

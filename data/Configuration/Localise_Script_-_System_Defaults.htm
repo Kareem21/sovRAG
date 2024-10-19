@@ -1,0 +1,103 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - System Defaults</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+span.hcp4 { font-weight:bold; }
+img.hcp5 { border:none; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - System Defaults</h1>
+<p>The tags below are to set values for settings and options in System Defaults.</p>
+<p>&#160;</p>
+<h3>Setting up Non-checkbox Fields</h3>
+<p>This refers to settings in System Defaults that require a value to be selected or entered.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">SETTS:&lt;Application&gt;.&lt;Key&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+<li>
+<p><span class="hcp4">&lt;Application&gt;.&lt;Key&gt;</span> can be retrieved from the Table field in Configuration &gt; Settings &gt; Customise &gt; Field Settings.</p>
+</li>
+<li>
+<p><span class="hcp4">&lt;Value&gt;</span> can be any value that is accepted by the field in the actual screen. This may be a Currency code EUR, a Country code IM, an e-mail address like support@goviewpoint.com or a value like 6, depending on the field that you are setting up. In cases like these the Database Field will display SetStr:</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p><img src="../image102.jpg" alt="" width="1019" height="265" border="0" class="hcp5"></p>
+<p class="hcp1">Example</p>
+<p>For instance, to set the Coding Method for Master File to Manual – 6 Characters [6], the tag would be: VPCROSS.CDADDR=6</p>
+<p>&#160;</p>
+<h3>Setting up Checkbox Fields</h3>
+<p>This refers to options in System Defaults where the checkbox is ticked to enable the option and unticked to disable the option.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">SETNR:&lt;Application&gt;.&lt;Key&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+<li>
+<p><span class="hcp4">&lt;Application&gt;.&lt;Key&gt;</span> can be retrieved from the Table field in Configuration &gt; Settings &gt; Customise &gt; Field Settings.</p>
+</li>
+<li>
+<p><span class="hcp4">&lt;Value&gt;</span> is the value next to the text SetNos in the Database Field. Use a dash ‘-’ to untick a field.</p>
+</li>
+</ul>
+<p><img src="../image103.jpg" alt="" width="955" height="253" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To tick the checkbox for Enable detailed ‘Relationship Roles’, the tag would be: VPCROSS.GENOPT=131072</p>
+<p>&#160;</p>
+<p>To untick the checkbox, the code would be: VPCROSS.GENOPT=-131072</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+<li>
+<p><a href="System_Defaults.htm">System Defaults</a></p>
+</li>
+<li>
+<p><a href="Localise.htm">Localise</a></p>
+</li>
+<li>
+<p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom Script for Localise Function</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - System Defaults</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

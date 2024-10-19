@@ -1,0 +1,104 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Macros</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Field Type: Macros</h1>
+<p>The Macros field type is used to automate certain actions. In workflow 
+ steps, a checklist item configured as a macro will have the following:</p>
+<ul class="hcp1">
+	<li><p>Macro caption - Which the user can click to run the macro(s). 
+	 This will result in the macro message prompt where user needs to select 
+	 Yes to continue. Clicking No will not run macro.</p></li>
+	<li><p>Icon - Which the user can click to go to the screen of the action, 
+	 similar to Go to Screen field type.</p></li>
+</ul>
+<p>The actions can be for:</p>
+<ul class="hcp1">
+	<li><p>Updating of existing records or adding new records.</p></li>
+	<li><p>Triggering items linked to User Defined Change Codes.</p></li>
+	<li><p>Storing documents that are created within the workflow.</p></li>
+</ul>
+<p>When setting up a macro, the following are required:</p>
+<ul class="hcp1">
+	<li><p>Item field type is 'Macros'.</p></li>
+	<li><p>Macro tag is added in the Values/Default column the Note Editor.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Add or Update Records</h2>
+<p>When using the macros field type, instead of requiring the user to manually 
+ perform the actions, user can just click to run the macro and have the 
+ actions performed. These actions could be:</p>
+<ul class="hcp1">
+	<li><p>Updates that should be done when closing a file e.g. resign 
+	 all statutory officer. If performing the resignation manually, users 
+	 would select a record in the Statutory Officers screen and click Resign 
+	 button to enter resignation details. Using a macro, the action of 
+	 clicking Resign button and entering the resignation details will be 
+	 performed automatically.</p></li>
+	<li><p>New information such as appointment of a statutory officer. 
+	 If performing the appointment manually, users would need to click 
+	 on Appoint and enter the details. Using a macro, the action of clicking 
+	 Appoint button and entering the appointment details will be performed 
+	 automatically. However, these require the appointment details to be 
+	 available in the workflow step containing the macro.</p></li>
+	<li><p>To print the executed workflow and store the document in a document 
+	 holder. If performing the printing manually, users would need to click 
+	 Print Workflow in the workflow’s Ribbon and save the document in their 
+	 machine. Users would need to manually store the document in a document 
+	 holder. Using a macro, the action of printing and storing of document 
+	 will be performed automatically.</p></li>
+</ul>
+<p>To configure a macro for this, you need to specify the following:</p>
+<ul class="hcp1">
+	<li><p>The screen where the action will take place.</p></li>
+	<li><p>The command button for the action.</p></li>
+	<li><p>The details for fields related to the action.</p></li>
+</ul>
+<p>This is done by entering the tags in the Values/Default column. For 
+ further information on the tags, you can refer to <a href="../Macros_-_Tags.htm">Macros 
+ - Tags</a>.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Supported_Screens_for_Macros.htm">Supported Screens 
+	 for Macros</a></p></li>
+	<li><p><a href="../Shared/Changes_Codes.htm">Change Codes</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Macros</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

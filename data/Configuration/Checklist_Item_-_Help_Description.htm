@@ -1,0 +1,122 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Help/Description</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+img.hcp2 { border:none; }
+p.hcp3 { mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+font-weight:bold; }
+p.hcp4 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+span.hcp5 { font-weight:bold; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Help/Description</h1>
+<p>This is where you can provide information for the checklist item in 
+ the Help column and it can be:</p>
+<ul class="hcp1">
+	<li><p>Plain text including letters, numbers, symbols and special characters.</p></li>
+	<li><p>A tag to retrieve existing help texts.</p></li>
+	<li><p>HTML tag.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Plain Text in Help/Description</h2>
+<p>In the Workflow Step Editor screen, enter the text as follows:</p>
+<p><img src="../image462.gif" alt="" border="0" class="hcp2"></p>
+<p>In the workflow, the Help column will display the help text as configured.</p>
+<p><img src="../image453.gif" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<h2>Tag to Retrieve Help Text</h2>
+<p>Help texts corresponding to standard Viewpoint fields can be retrieved 
+ to show in the Help column by adding the following tag:</p>
+<p class="hcp3">[SHOWHELP=&lt;ScreenID&gt;.&lt;DBField&gt;]</p>
+<p style="mso-ansi-language: EN-US; mso-bidi-language: TH; font-weight: normal;">where</p>
+<ul class="hcp1">
+	<li><p>&lt;ScreenID&gt; refers to the screen where the help text exists.</p></li>
+	<li><p>&lt;DBField&gt; refers to the field of the help text.</p></li>
+</ul>
+<p>To obtain the ScreenID,</p>
+<ol style="list-style: decimal;">
+	<li><p>Go to the screen containing the field. If the screen contains 
+	 a grid, click New.</p></li>
+	<li><p>Right-click and select Copy.</p></li>
+	<li><p>Right-click again and select Paste.</p></li>
+	<li><p>The Viewpoint Clipboard appears to show the ScreenID.</p></li>
+</ol>
+<p>To obtain the DBField, go to Configuration &gt; Settings &gt; Customise 
+ &gt; Field Settings.</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp4"><span class="hcp5">Example</span> 
+ - Step to retrieve the Help Text for 'Use Name Format' field</p>
+<p class="hcp4">Enter the tag 
+ in the Help/Description column of the checklist item and the help text 
+ for the item will be seen in workflow as configured.</p>
+<p class="hcp4"><img src="../image454.gif" alt="" border="0" class="hcp2"></p>
+<p><img src="../image455.gif" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<h2>HTML Tag</h2>
+<p>HTML tags can be added to allow for the following:</p>
+<ul class="hcp1">
+	<li><p>Formatting the Help Text such as bolding/italicising/underlining 
+	 the text:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Bold - By including the syntax &lt;strong&gt;...&lt;/strong&gt;.</p></li>
+		<li><p>Italic - By including the syntax &lt;em&gt;...&lt;/em&gt;.</p></li>
+		<li><p>Underline - By including the syntax &lt;u&gt;...&lt;/u&gt;.</p></li>
+	</ul></li>
+	<li><p>Including a website link in the Help Text by adding the &lt;a&gt; 
+	 tag with the href attribute and the website link within &quot;…&quot;.</p></li>
+</ul>
+<p>&#160;</p>
+<p><span class="hcp5">Example</span> – To configure shortcut 
+ link to Viewpoint webpage in workflow</p>
+<p>Enter the syntax in the Help/Description column of the checklist item.</p>
+<p><img src="../image371.gif" alt="" border="0" class="hcp2"></p>
+<p>&#160;In the workflow, the Help column will display the shortcut link 
+ as configured.</p>
+<p><img src="../image375.gif" alt="" border="0" class="hcp2"></p>
+<p><span style="font-weight: bold; font-style: italic;">Note:</span> Other 
+ HTML syntax are also supported apart from the ones listed here.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist - Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Help/Description</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

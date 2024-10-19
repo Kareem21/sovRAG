@@ -1,0 +1,296 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Archiving">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Archiving</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Archiving</h1>
+<p>All forms and correspondence generated from Viewpoint are stored in 
+ the Archive folder. The benefit of this archiving process is that if you 
+ manually edit a document via your word processing software after it has 
+ been generated, the changes are saved in the documents that are stored 
+ in the Archive folder. This means that if you need to reprint the document 
+ you will not have to redo the changes. However, although the Archive is 
+ a useful time-saving tool for users, it will obviously grow as the system 
+ is used. This means that it will gradually require more and more storage 
+ space. For this reason we advise that you delete old documents from the 
+ Archive after a certain period of time.</p>
+<p>The path to the location of the General Archive folder, is set up in 
+ Configuration &gt; Settings &gt; <a href="System_Defaults_-_Folders.htm">System 
+ Defaults &gt; Folders</a>. When you archive an item for the first time, 
+ the folder is automatically created by Viewpoint. You may use the Browse 
+ button to browse to the location of the Export folder.</p>
+<p>&#160;</p>
+<p class="FldExplain">General</p>
+<p>The General section of the Archiving screen is where you archive the 
+ following:</p>
+<ul class="hcp1">
+	<li><p>Change Log entries, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a>.</p>
+	<div class="droptext" id="POPUP424297959" style="display: none;">
+		<p>Archiving Change Log entries will move the records in the ChangeLog 
+		 database table to VpArchive_ChangeLog.mdb and delete the records 
+		 displayed in the Change Log of the various Viewpoint modules.</p>
+		<ol>
+			<li><p>Tick Change Log.</p></li>
+			<li><p>Select the period from the Change Date older than drop 
+			 down list. Viewpoint will delete records older than this.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p>Correspondence, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a2">here</a>.</p>
+	<div class="droptext" id="POPUP424292829" style="display: none;">
+		<p>Archiving correspondence will move information VpArchive_Administrator.mdb 
+		 and the soft-copy of the documents to the Correspondence_Documents 
+		 sub-folder under the Export folder.</p>
+		<ol>
+			<li><p>Tick Correspondence.</p></li>
+			<li><p>Select the period from the Document Date older than 
+			 drop down list.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p>Activity &amp; Exception Log, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a5">here</a>.</p>
+	<div class="droptext" id="POPUP494332052" style="display: none;">
+		<p>This will delete all activity and exception log entries from 
+		 Viewpoint. The deleted activities and exception log will be archived 
+		 in \VpArchive_ActivityLog.xml</p>
+		<ol class="hcp2">
+			<li><p>Tick Activity &amp; Exception Log.</p></li>
+			<li><p>Select the period for items you want to archive.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+ </div></li>
+	<li><p>Agent Job Log, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a10">here</a>.</p>
+	<div class="droptext" id="POPUP568045542" style="display: none;">
+		<p>This will delete the Job Scheduler log from Viewpoint. The deleted 
+		 activities and exception log will be archived in \VpArchive_AgentJobLog.xml</p>
+		<ol class="hcp2">
+			<li><p>Tick Agent Job Log.</p></li>
+			<li><p>Select the period for items you want to archive.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+ </div></li>
+</ul>
+<p><span class="hcp3">Note</span>: The 'Web Document Generation 
+ Folder' option is obsolete starting from Viewpoint version 7.4.</p>
+<p>&#160;</p>
+<p class="FldExplain">Entity Administration</p>
+<p>The Administrator section of the Archiving screen is where you archive 
+ the following items.</p>
+<ul class="hcp1">
+	<li><p>Form Queue entries, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a4">here</a>.</p>
+	<div class="droptext" id="POPUP424307068" style="display: none;">
+		<p>The archiving function will delete entries in the Form Queue 
+		 and any corresponding document, if they have already been generated. 
+		 Form Queue entries are archived in VpArchive_Administrator.xml 
+		 while generated documents are placed in the FormQueue_Documents 
+		 sub-folder under the Export folder.</p>
+		<p><span class="hcp4">Note</span>: 
+		 If you are Archiving by Master File, the physical documents will 
+		 not be transferred to the FormQueue_Documents folder.</p>
+		<ol>
+			<li><p>Tick Form Queue.</p></li>
+			<li><p>Select the period for items you want to delete.</p></li>
+			<li><p>'Documents generated older than' will delete items in 
+			 the Pending and Completed lists.</p></li>
+			<li><p>'Documents not generated older than' will delete items 
+			 in the New list. This includes items that encountered an error 
+			 during generation.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p class="Listing">&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Practice Management</p>
+<p>The Practice Management section of the Archiving screen is where you 
+ archive the following items. Archived items are stored in VpArchive_Billing.mdb.</p>
+<ul class="hcp1">
+	<li><p>Time Posting, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a6">here</a>; 
+	 and</p>
+	<div class="droptext" id="POPUP424320461" style="display: none;">
+		<p>Use this feature to archive posted, un-posted, chargeable and 
+		 un-chargeable time entries.</p>
+		<p>Note: This will not affect your invoice history.</p>
+		<ol>
+			<li><p>Tick Time Posting.</p></li>
+			<li><p>Select the period for items you want to delete:</p>
+			<ul class="hcp1">
+				<li><p>Non-chargeable older than - This will delete non-chargeable 
+				 time entries that have been posted.</p></li>
+				<li><p>Chargeable older than - This will delete chargeable 
+				 time, including un-posted time.</p></li>
+				<li><p>Un-posted/non-chargeable older than - This will 
+				 delete all non-chargeable time entries that have not yet 
+				 been posted to an invoice. This includes all entries that 
+				 have not yet been approved.</p></li>
+			</ul></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p>Disbursements, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a7">here</a>.</p>
+	<div class="droptext" id="POPUP424328669" style="display: none;">
+		<p>Select this option to delete posted disbursement entries.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This will not affect your invoice history.</p>
+		<ol>
+			<li><p>Tick Disbursements.</p></li>
+			<li><p>Select the period for the items to be deleted.</p></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Document Management</p>
+<p>This section is used to archive items in Document Management. Archiving 
+ of document management items involve deleting and archiving the following:</p>
+<ul class="hcp1">
+	<li><p>Document Holders &amp; Tasks, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a8">here</a>; 
+	 and</p>
+	<div class="droptext" id="POPUP424300656" style="display: none;">
+		<p>Select this option to delete document holders and tasks according 
+		 to the retention policy set for each Filing Cabinet. Items are 
+		 archived in VpArchive_Documents.mdb and the physical documents 
+		 are moved to the DocMgr_Holders sub-folder under the Export folder.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This is only applicable where the DocStore is located in the file 
+		 structure (e.g., \\&lt;server&gt;\Viewpoint\DocStore) and has 
+		 not been converted into a SQL database.</p>
+		<ol>
+			<li><p>Tick Document Holders &amp; Tasks.</p></li>
+			<li><p>Select the items you want to delete:</p>
+			<ul class="hcp1">
+				<li><p>Delete documents according to the retention policy 
+				 setting will delete items older than what was set for 
+				 the Filing Cabinet. This is based on the month value of 
+				 the date set in the Document Date index field.</p></li>
+				<li><p>'Master File tasks older than' will delete Master 
+				 File tasks older than the selected period.</p></li>
+			</ul></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p>Audit Log, find out more <a class="dropspot" href="javascript:TextPopup(this)" id="a9">here</a>.</p>
+	<div class="droptext" id="POPUP424306459" style="display: none;">
+		<p>Deleting the audit log will also delete any images that could 
+		 be retrieved if they were inadvertently deleted from a document 
+		 holder. Images that were deleted in the following processes are 
+		 moved to the DocMgr_Audit subfolder:</p>
+		<ul class="hcp1">
+			<li><p>Holder - Remove File</p></li>
+			<li><p>In-tray - Remove File</p></li>
+			<li><p>Batch - Delete Scan Page</p></li>
+		</ul>
+		<p>Deleted entries are archived in VpArchive_DocAudit.mdb.</p>
+		<ol>
+			<li><p>Tick Audit Log.</p></li>
+			<li><p>Select the items you want to delete:</p>
+			<ul class="hcp1">
+				<li><p>In-tray audit trail older than - This will delete 
+				 items the In-tray audit trail that are older than the 
+				 selected period.</p></li>
+				<li><p>Batch audit trail older than - This will delete 
+				 items in the Batch audit trail that are older than the 
+				 selected period.</p></li>
+				<li><p>Task audit trail older than - This will delete items 
+				 in the Task audit trail that are older than the selected 
+				 period.</p></li>
+				<li><p>Holder audit trail older than - This will delete 
+				 items in the Holder audit trail that are older than the 
+				 selected period.</p></li>
+			</ul></li>
+			<li><p>Click Archive.</p></li>
+			<li><p>Click OK to exit when the process is complete.</p></li>
+		</ol>
+		<p>See also <a href="Audit_Trail_Setup.htm">Audit Trail Setup</a>.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Engage Servicing Portal</p>
+<p>This section allows you to archive the ESP Audit Trail.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp3">Archive</span> - Click to start 
+	 the archiving process.</p></li>
+	<li><p><span class="hcp3">Browse</span> - Click to open 
+	 the location of the Export folder.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="System_Defaults_-_Folders.htm">System Defaults - Folders</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Database_Archiving.htm">Database Archiving</a> &gt; Archiving</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP424297959');
+	TextPopupInit('a2','POPUP424292829');
+	TextPopupInit('a5','POPUP494332052');
+	TextPopupInit('a10','POPUP568045542');
+	TextPopupInit('a4','POPUP424307068');
+	TextPopupInit('a6','POPUP424320461');
+	TextPopupInit('a7','POPUP424328669');
+	TextPopupInit('a8','POPUP424300656');
+	TextPopupInit('a9','POPUP424306459');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Products/Services">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Products/Services</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-left:40px; }
+li.hcp4 { list-style:none;
+display:inline; }
+ol.hcp5 { list-style:decimal; }
+li.hcp6 { list-style:disc; }
+p.hcp7 { margin-left:80px; }
+p.hcp8 { margin-left:0px; }
+p.hcp9 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Using Accounting for Products/Services</h1>
+<p>This document details how you can use Viewpoint to account for Products 
+ and Services in Accounting. This feature makes bookkeeping for trading 
+ and reselling-focussed entities more efficient and accurate.</p>
+<p>&#160;</p>
+<h3>Products/Services Sub-ledgers</h3>
+<p>Create separate sub-ledgers for each stock product. For services, create 
+ the sub-ledger with zero stock quantity on hand.</p>
+<p><img src="../image33.jpg" alt="" width="627" height="526" border="0" class="hcp1"></p>
+<p>Ensure the following:</p>
+<ul class="hcp2">
+	<li><p>You have selected the correct Nominal Account where stock product 
+	 totals will be posted. Note the properties of the nominal account 
+	 linked to this sub-ledger account:</p></li>
+</ul>
+<p class="hcp3"><img src="../image65.gif" alt="" width="662" height="272" border="0" class="hcp1"></p>
+<ul class="hcp2">
+	<li><p>You have ticked the Control Quantity checkbox so that you can 
+	 enter the stock quantity when creating or editing transactions.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also: </p>
+<ul class="hcp2">
+	<li><p class="SeeAlso"><a href="Sub-Ledger_Accounts_Setup.htm">Sub-ledger 
+	 Accounts - Setup</a>.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Stock Products Received</h3>
+<p>When stock products are received, record them at cost. Do this by using 
+ a script, or else create the journal manually.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also: </p>
+<ul class="hcp2">
+	<li><p class="SeeAlso"><a href="Journals_Section.htm">Journals</a>.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Stock Product Sales: Journal Scripts with Auto-calculating Cost of 
+ Sales</h3>
+<p>Accounting can automatically calculate the Cost of Sales on stock product 
+ sales when the sales transactions are recorded. A series of journal scripts 
+ have been configured with auto-calculating Cost of Sales on stock product 
+ sales. There are three options for calculating Cost of Sales in the journal 
+ scripts:</p>
+<ul class="hcp2">
+	<li><p>Average Cost, which ignores the sub-ledger Valuation setting;</p></li>
+	<li><p>First-In-First-Out (FIFO), which also ignores the sub-ledger 
+	 Valuation setting; and</p></li>
+	<li><p>Following the sub-ledger Valuation setting.</p></li>
+</ul>
+<p>These journal scripts are designed so that users only need to enter 
+ the Sales component of the transactions, ensuring more accurate and efficient 
+ transaction recording of repetitive sales transactions. The Cost of Sales 
+ component of the transactions will be automatically added as additional 
+ journal lines when the user posts the journal or saves it as a pending 
+ journal.</p>
+<p>Select the applicable journal script when entering transactions. In 
+ the following example, a sales transaction is created in the Debtors sub-ledger.</p>
+<ol>
+	<li><p class="Listing">In the Debtors sub-ledger screen, select the 
+	 Debit Note - Product Sales journal script.</p></li>
+	<li><p class="Listing">Click &gt; Script.</p></li>
+	<li><p class="Listing">Complete the journal details:</p></li>
+</ol>
+<p class="Listing" style="margin-left: 40px;"><img src="../image35.jpg" alt="" width="905" height="561" border="0" class="hcp1"></p>
+<p class="Listing" style="margin-left: 40px;">&#160;</p>
+<ol style="list-style: disc;">
+	<li class="hcp4"><ul class="hcp2">
+		<li><p>Select Product/ Service line - Select a Product/Service 
+		 sub-ledger from the list. This will create a sales journal entry 
+		 in the Income account set up in the properties of the nominal 
+		 control account linked to the selected sub-ledger.</p></li>
+		<li><p>Quantity - Enter the quantity in the same line to auto-calculate 
+		 the Cost of Sales for this transaction.</p></li>
+	</ul></li>
+</ol>
+<ol start="4" class="hcp5">
+	<li><p>Click Post to post the journal or else click Save Pending to 
+	 save it as a pending journal. If you want to view the entry before 
+	 posting or saving it as a pending journal, click Journal &gt;.</p></li>
+	<li><p>The journal line entered above will result in the following 
+	 journal entries:</p>
+	<ul>
+		<li class="hcp6"><p>Sales entry - The Income account 
+		 set up in the properties of the nominal account 2200 - Product 
+		 Stock, which was linked to the product/service sub-ledger PROD2, 
+		 is automatically selected. (See Products/Services Sub-ledgers, 
+		 above.)</p></li>
+	</ul></li>
+</ol>
+<p class="hcp7"><img src="../image38.jpg" alt="" width="968" height="548" border="0" class="hcp1"></p>
+<p class="hcp7">&#160;</p>
+<ol start="4" class="hcp5">
+	<li class="hcp4"><ul>
+		<li class="hcp6"><p>Product issue entry - The Products/Services 
+		 sub-ledger PROD2 is automatically selected, and 1,000 units issued 
+		 at cost.</p></li>
+	</ul></li>
+</ol>
+<p class="hcp7"><img src="../image39.jpg" alt="" width="968" height="550" border="0" class="hcp1"></p>
+<p class="hcp7">&#160;</p>
+<ol start="4" class="hcp5">
+	<li class="hcp4"><ul>
+		<li class="hcp6"><p>Cost of Sales entry - The Expenses 
+		 account set up in the properties of the nominal account 2200 - 
+		 Product Stock, which was linked to sub-ledger PROD2, is automatically 
+		 selected, and 1,000 units recorded at cost price.</p></li>
+	</ul></li>
+</ol>
+<p class="hcp7"><img src="../image41.jpg" alt="" width="970" height="548" border="0" class="hcp1"></p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">You may raise the above as a manual journal 
+ entry rather than using journal scripts.</p>
+<p class="hcp8">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p class="hcp8"><a href="Journal_Tab.htm">Journal 
+	 Folder</a></p></li>
+	<li><p class="hcp8"><a href="Journal_Scripts.htm">Journal 
+	 Scripts</a></p></li>
+	<li><p class="hcp8"><a href="Journal_Scripts_New.htm">Journal 
+	 Scripts - New</a></p></li>
+</ul>
+<p class="hcp8">&#160;</p>
+<h3>Products/Services Reports</h3>
+<p class="hcp8">The Products/Services Report - Account Movement 
+ and Journals report can be generated to analyse the product/service transactions 
+ of these sub-ledgers. The report is found in Reporting - Excel Statements 
+ - Sub-ledger Statements and comprises two spreadsheets:</p>
+<ul class="hcp2">
+	<li><p class="hcp8">Products/Services Movements - This 
+	 lists the transactions in the Products/Services sub-ledgers in the 
+	 sub-ledger currency and the base currency:</p></li>
+</ul>
+<p class="hcp3"><img src="../image29.png" alt="" width="769" height="308" border="0" class="hcp1"></p>
+<ul class="hcp2">
+	<li><p class="hcp8">Products/Services Transaction Listing 
+	 &#160;- This calculates the gross margin on sales as a percentage 
+	 of the sales revenue:</p></li>
+</ul>
+<p class="hcp3"><img src="../image30.png" alt="" width="769" height="212" border="0" class="hcp1"></p>
+<p class="hcp8">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Products/Services</p>
+<p class="hcp9">&#160;</p>
+<p class="hcp9">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp9">Version: 8.0.2022.09.20</p>
+</body>
+</html>

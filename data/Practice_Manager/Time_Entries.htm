@@ -1,0 +1,415 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Time Entry">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Time Entries</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Time Entries</h1>
+<p>You can create Time Entries through multiple ways:</p>
+<ul class="hcp1">
+	<li><p>Selecting Timesheets from the listing in To Do Summary and clicking 
+	 on the Time Entries tab.</p></li>
+	<li><p>Clicking on Time Ribbon button and selecting the Time Entries 
+	 tab.</p></li>
+	<li><p>In Section Menu, click Home &gt; To Do &gt; Overview &gt; Time 
+	 &gt; Timesheet &gt; Time Entries tab.</p></li>
+</ul>
+<p>This screen opens as a separate window and is divided into two - on 
+ the left is for data entry while the right is the Details window. You 
+ may find that some fields are pre-completed if you have switched on the 
+ context sensitivity option in the <a href="Timesheet_-_Selection_&amp;_Options.htm">Selection 
+ &amp; Options</a> folder or there is a <a href="../Configuration/Users_-_Tags.htm">default 
+ service code</a> defined in your User record.</p>
+<p>In the Details window, you will see information relating to the Billing 
+ File, matter, rate, service and work in progress. If there is a limit 
+ set for the selected <a href="Matters.htm">matter</a>, you will be notified 
+ via colour highlights in the Details window:</p>
+<ul class="hcp1">
+	<li><p>Orange colour if 75% of the limit has been reached.</p></li>
+	<li><p>Red colour if 100% of the limit or exceeding the limit.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Administrator</p>
+<p>The administrator defaults to the user who is logged on to the system. 
+ If you are authorised to do so, you can select another user.</p>
+<p>&#160;</p>
+<p class="FldExplain">Date</p>
+<p>The date field defaults to today's date and should be the date the task 
+ was performed.</p>
+<p>&#160;</p>
+<p class="FldExplain">Billing File</p>
+<p>Select the Billing File for the time entry. If you want to enter a time 
+ entry such as sick leave or a public holiday without assigning it to a 
+ Billing File, create a Master File for your own company to which you can 
+ assign in-house time entries.</p>
+<p>&#160;</p>
+<p class="FldExplain">Matter</p>
+<p>Select the matter for the time entry. A matter can be compared with 
+ projects your company is managing for clients. Different invoices will 
+ be created for different matters.</p>
+<p>&#160;</p>
+<p class="FldExplain">Activity</p>
+<p>Select the activity for the time entry. This activity selection option 
+ is being set up in the Activities screen and is linked to the Matter account.</p>
+<p><span class="hcp2">Note: </span>This 
+ will only be available if the 'All Time/Disbursement Entries Link to an 
+ Activity' option is enabled and will replace the 'Matter' field. The selection 
+ options for Activity will only be available for Activities status which 
+ is not in New, Cancelled or Completed.</p>
+<p>&#160;</p>
+<p class="FldExplain">Rate List</p>
+<p>The rate list defaults to the rate list selected for the Matter in Matters 
+ screen. If you are authorised to do so, you can select a different rate 
+ list.</p>
+<p><span class="hcp2">Note</span>: When 
+ edit time entry, the rate list value will not be displayed. </p>
+<h6 class="Heading8">&#160;</h6>
+<p class="FldExplain">Service</p>
+<p>Enter the service for the time entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Service Date</p>
+<p>The 'Service Date' field is seen when the Tag Value on the Service in 
+ the Service Master is [SRVDATE.Visible=Y]. For Time Entry with Service 
+ Class ‘TW’, this field will validate against the Recurring Fees’ ‘Fee 
+ Period From Date’ and ‘Fee Period To Date’ when creating invoice in arrears 
+ for Time exceeding the Fixed Fee. When this field is enabled, the Time 
+ Entries grid will also show how much chargeable/non-chargeable for the 
+ 'Service Date - Fee Details'. Note that for Service Class that is not 
+ 'TW', this field will only function to record the date of the service.</p>
+<p>&#160;</p>
+<p class="FldExplain">Fee History</p>
+<p>The Fee History button is seen when the Tag Value on the Service in 
+ the Service Master is [SRVDATE.Visible=Y] and there is an existing Recurring 
+ Fee record for the Service.</p>
+<p>Clicking on the Fee History button will launch the Fee History window. 
+ The Fee History window shows the list of the invoiced fees for the selected 
+ Service.</p>
+<p>When user highlights an entry and clicks Select button, it will set 
+ 'Fee Period - To Date' as ‘Service Date’ for the Time entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Currency</p>
+<p>This field is completed automatically when you select the Matter or 
+ service. If you are using multi-currency rate lists, then the currency 
+ follows the Matter currency. If you are not, the currency follows the 
+ service currency.</p>
+<p>&#160;</p>
+<p class="FldExplain">No. &lt;unit of measure&gt;</p>
+<p>Enter the number of units spent on the service. The unit of measure 
+ is predefined in Configuration. You can enter the number of units here 
+ or you can use the timer function to keep track of the time you spend 
+ on the client. Note that this cannot exceed 24 hours.</p>
+<p>Regardless of the unit of measure, you can enter the time using hours 
+ and minutes while the program will convert it to the right number of units 
+ according to the unit of measure set. The format is: &lt;Hours&gt; * &lt;Minutes&gt;</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="91.853%" border="1">
+	<col style="width: 19.865%;">
+	<col style="width: 7.328%;">
+	<col style="width: 36.952%;">
+	<col style="width: 35.855%;">
+	<tr class="t1st">
+		<td><p><span class="hcp3">Time to be recorded</span></p></td>
+		<td><p><span class="hcp3">Enter as</span></p></td>
+		<td><p><span class="hcp3">Example 1 - Unit of Measure: 
+		 6 Minutes</span></p></td>
+		<td><p><span class="hcp3">Example 2 - Unit of Measure: 
+		 15 Minutes</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>One hour and thirty minutes</p>
+		<p>&#160;</p></td>
+		<td class="t2Col"><p>1*30</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p>Converted to 15</p></td>
+		<td class="t2Col"><p>Converted to 6</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>One hour and twenty minutes</p>
+		<p>&#160;</p></td>
+		<td class="t2Col"><p>1*20</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p>Converted to 13.33 (if decimal places are 
+		 allowed)</p>
+		<p>Converted to 14 (if decimal places are not allowed)</p></td>
+		<td class="t2Col"><p>Converted to 5.33 (if decimal places are allowed)</p>
+		<p>converted to 6 (if decimal places are not allowed)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>One hour</p>
+		<p>&#160;</p></td>
+		<td class="t2Col"><p>1*0</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p>Converted to 10</p></td>
+		<td class="t2Col"><p>Converted to 4</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Thirty minutes</p></td>
+		<td class="t2Col"><p>*30</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p>Converted to 5</p></td>
+		<td class="t2Col"><p>Converted to 2</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="FldExplain">Exchange</p>
+<p>The exchange rate is taken from the Exchange Rate Master. If you are 
+ not using multi-currency rate lists, the rate is used to convert the Time 
+ Entry total from the service currency to the Matter currency.</p>
+<p>&#160;</p>
+<p class="FldExplain">Charge/&lt;unit of measure&gt;</p>
+<p>This value defaults from the rates set up for the service.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">I got a 'No 
+ rate available' message when I entered time for a particular service. 
+ Why is this?</a></p>
+<div class="droptext" id="POPUP419277415" style="display: none;">
+	<p>It is possible that no rate was set up for the administrator. In 
+	 Viewpoint - Home screen, click Configuration &gt; Business Parameters 
+	 &gt; Practice Management &gt; Setup &gt; Service Rates and check if 
+	 the rate has been entered for the administrator.</p>
+	<p>If the rates are there, check the service currency. For services 
+	 with a different currency from the base currency, you need to enable 
+	 the Multi Rate/CCY List option in System Defaults.</p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Non-charged</p>
+<p>This field displays the amount written off, if any. You can update this 
+ field by amending the Total &lt;currency&gt; field to the amount you want 
+ to charge. Any difference in the actual value and this amount will be 
+ written off.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: For 
+ Time/Disbursements entry with Service Class ‘TW’/ 'DW', the Time/Disbursements 
+ entry details window will show the amount 'Charged' and 'Non-charged' 
+ based on the following scenarios:</p>
+<ul class="hcp1">
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a6">Scenario 
+	 1: When No Available Fixed Fee AND current Time/Disbursements Entry 
+	 Fully Chargeable.</a><span class="expandtext" id="POPUP588872042" style="display: none;"><span lang="EN-US" xml:lang="EN-US">Example:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 3,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 1,000</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount = 0</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field) = 500</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 3000 - 2000 + 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= Fixed Fee</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 2,000</span></span></p></li>
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a7">Scenario 
+	 2: When Current Time/Disbursements Entry Amount &lt; Available Fixed 
+	 Fee.</a><span class="expandtext" id="POPUP588937868" style="display: none;"><span lang="EN-US" xml:lang="EN-US">Example:<br>
+	Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 1,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 0</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field) = 0</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,000 – 2,000 + 0</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= -1,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">This yields a negative value, hence 
+	 ‘Charged’ amount is zero.</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Fixed Fee) - (Time/Disbursement 
+	 by Service Date excluding current entry) + (current Time/Disbursement 
+	 entry non-charged amount<br>
+	= 2,000 – 1,000 + 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500</span></span></p></li>
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a8">Scenario 
+	 3: When Current Time/Disbursements Entry Amount &gt; Available Fixed 
+	 Fee AND Current Time/Disbursements Entry Partial Chargeable.</a><span class="expandtext" id="POPUP588964876" style="display: none;"><span 
+	 lang="EN-US" xml:lang="EN-US">Example:<br>
+	Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 1,500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 1,000</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 800</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount<br>
+	= (Fixed Fee) - (Time/Disbursement by Service Date excluding current 
+	 entry)<br>
+	= 2,000 -1,500<br>
+	= 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field)<br>
+	= (Current Time/Disbursement entry amount) - (Current Time/Disbursement 
+	 entry non-charged amount)<br>
+	= 800 – 500<br>
+	= 300</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500 - 2,000 + 800</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 300</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= Fixed Fee</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 2,000</span></span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Total &lt;Currency&gt;</p>
+<p>This is calculated based on the time spent on the task and the charge 
+ per unit of measure.</p>
+<p>&#160;</p>
+<p class="FldExplain">Unit Cost</p>
+<p><span lang="EN-GB" xml:lang="EN-GB">Unit cost value for Entry for administrator 
+ rate will be based on the ‘Unit Cost’ defined for the administrator. </span><span 
+	 style="mso-list: l0 level1 lfo1;">Unit cost value for Entry for Non-Administrator 
+ rate is sum of ‘Cost – Time’ and ‘Cost – Expenses’ for the service.</span></p>
+<p><span class="hcp2">Note: </span><span 
+	 lang="EN-GB" xml:lang="EN-GB">When both the 'Multi Rate/CCY List' 
+ and 'Multi Rate/CCY List Cost of Services' options are enabled and the 
+ Reporting currency differs from the Entry currency, the unit cost is calculated 
+ by adding the 'Cost – Time' and 'Cost – Expenses' together and multiplying 
+ the latest exchange rate from the entry currency to the Reporting currency.</span></p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Why am I not 
+ able to see this?</a></p>
+<div class="droptext" id="POPUP522120885" style="display: none;">
+	<p>This may have been turned off by ticking the Hide Unit/Total Cost 
+	 on Time Entry option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a>.</p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Total Cost</p>
+<p>The total cost of the administrator’s time is displayed here. </p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Why am I not 
+ able to see this?</a></p>
+<div class="droptext" id="POPUP5221208851" style="display: none;">
+	<p>This may have been turned off by ticking the Hide Unit/Total Cost 
+	 on Time Entry option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements.</a></p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Analyses Code</p>
+<p>If this field is enabled, select the analyses code for the service, 
+ or specify the default analysis codes for a service in Service Master.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">How do I enable/disable 
+ the field?</a></p>
+<div class="droptext" id="POPUP419272194" style="display: none;">
+	<p>This is done in Viewpoint - Home screen. Go to Configuration &gt; 
+	 Settings &gt; <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a> and tick/untick the Enable 
+	 Analysis Code on Time Entries option.</p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Description</p>
+<p>The service description defaults to this field. If the Default Description 
+ with Analysis Code option is turned on, then the description for the analysis 
+ code is used instead. This may be overwritten.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Where do I enable 
+ the Default Description with Analysis Code?</a></p>
+<div class="droptext" id="POPUP419260405" style="display: none;">
+	<p>This is done in Viewpoint - Home screen. Go to Configuration &gt; 
+	 Settings &gt; <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements.</a></p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Update</p>
+<p>Click this to save the entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Cancel</p>
+<p>Click this to delete your entry.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Timesheet_-_Timesheet.htm">Timesheet - Timesheet</a></p></li>
+	<li><p><a href="Timesheet_-_Time_Entries_.htm">Timesheet - Time Entries</a></p></li>
+	<li><p><a href="Time_Charges.htm">Time Charges</a></p></li>
+	<li><p><a href="../Configuration/Service_Master.htm">Service Master</a></p></li>
+	<li><p><a href="../Configuration/Service_Master_-_Tags.htm">Service 
+	 Master - Tags</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Time Entries</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP419277415');
+	TextPopupInit('a6','POPUP588872042');
+	TextPopupInit('a7','POPUP588937868');
+	TextPopupInit('a8','POPUP588964876');
+	TextPopupInit('a4','POPUP522120885');
+	TextPopupInit('a5','POPUP5221208851');
+	TextPopupInit('a1','POPUP419272194');
+	TextPopupInit('a2','POPUP419260405');
+//]]></script>
+</body>
+</html>

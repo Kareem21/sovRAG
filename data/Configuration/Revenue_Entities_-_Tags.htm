@@ -1,0 +1,182 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Revenue Entities - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Revenue Entities - Tags</h1>
+<p>For a revenue entity, sometimes there is a need to impose extra charge for its invoices and this is done by using the tags below in the Tag Values field of the Revenue Entity record. You can have up a maximum of nine charges.</p>
+<p><span class="hcp1">Note</span>: Replace X with a number e.g. [Charge1_ Service=...].</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Service=&lt;ServiceCode&gt;]</h6>
+<p>This sets the service as an additional charge and will create an additional invoice line for the service.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Percent=&lt;Percentage&gt;]</h6>
+<p>This specifies the percentage for the additional charge. If a negative percentage is specified, this will be subtracted instead.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Amount=&lt;Amount&gt;]</h6>
+<p>This sets a fixed amount for the additional charge. If a negative amount is specified, this will be subtracted instead.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Descr=&lt;Text&gt;]</h6>
+<p>Use this tag to have an alternative description for the charge. Without this tag, the description will follow the description in the Service Master.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Cur=&lt;CurrencyCode&gt;]</h6>
+<p>Use this tag to define the currency of the charge. Values for &lt;CurrencyCode&gt; can be actual currency code e.g. EUR or the following:</p>
+<ul class="hcp2">
+<li>
+<p>IC - Invoice currency.</p>
+</li>
+<li>
+<p>BC - PM base currency.</p>
+</li>
+<li>
+<p>AC - Currency defined for the Account File of the Revenue Entity.</p>
+</li>
+</ul>
+<p>Without this tag, the currency will follow the invoice currency.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_AllowChange=&lt;Value&gt;]</h6>
+<p>This tag controls whether or not users can delete the charge or edit the Discount % and Total Line fields. &lt;Value&gt; can be:</p>
+<ul class="hcp2">
+<li>
+<p>Y - Yes</p>
+</li>
+<li>
+<p>N - No</p>
+</li>
+</ul>
+<p>Without this tag, the charge cannot be deleted.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Exempt=&lt;TaxChargeType&gt;]</h6>
+<p>This tag exempts the charge for Matters with the Tax Charge Type specified.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Excl_ServCode=&lt;ServiceCode&gt;]</h6>
+<p>This tag excludes the specified service code from the additional charge.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Excl_Class=&lt;ServiceClass&gt;]</h6>
+<p>This tag excludes service(s) belonging to the specified service class from the additional charge.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Exclude=&lt;ServiceType&gt;]</h6>
+<p>This tag excludes service(s) belonging to the specified service type from the additional charge.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Incl_ServCode=&lt;ServiceCode&gt;]</h6>
+<p>This tag includes the specified service code for the additional charge.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Incl_Class=&lt;ServiceClass&gt;]</h6>
+<p>This tag includes service(s) belonging to the specified service class for the additional charge.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_InclTax=&lt;Value&gt;]</h6>
+<p>&lt;Value&gt; can be:</p>
+<ul class="hcp2">
+<li>
+<p>Y - Yes</p>
+</li>
+<li>
+<p>N - No</p>
+</li>
+</ul>
+<p>This tag will include the VAT tax and the service's total for calculation of the additional charge if value is Y. By default, the value is Y.</p>
+<p>If this tag is not defined, the VAT will be included by default.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_TaxOnly=&lt;Value&gt;]</h6>
+<p>&lt;Value&gt; can be:</p>
+<ul class="hcp2">
+<li>
+<p>Y - Yes</p>
+</li>
+<li>
+<p>N - No</p>
+</li>
+</ul>
+<p>This tag will take only the VAT tax amount for the calculation of the additional charge if value is Y.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Rounding=&lt;Method&gt;]</h6>
+<p>This tags is to specify if the calculated charge should be round up or down. Values for &lt;Method&gt; can be:</p>
+<ul class="hcp2">
+<li>
+<p>N - Normal rounding according to the currency and whether or not 'Round VAT Down to 5 cents Multiples' is enabled.</p>
+</li>
+<li>
+<p>U2 - Round up to nearest cent.</p>
+</li>
+<li>
+<p>D2 - Round down to nearest cent.</p>
+</li>
+<li>
+<p>N0 - Normal rounding to whole number.</p>
+</li>
+<li>
+<p>U0 - Round up to whole number.</p>
+</li>
+<li>
+<p>D0 - Round down to whole number.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Min=&lt;Amount&gt;]</h6>
+<p>This tag allows you to specify a minimum amount for the additional charge. To fix the charge in a currency, add the currency code e.g. [Charge1_Min_EUR=50]. If a negative percentage is specified, this will be subtracted instead.</p>
+<p>&#160;</p>
+<h6 class="Heading8">[ChargeX_Max=&lt;Amount&gt;]</h6>
+<p>This tag allows you to specify a maximum amount for the additional charge. To fix the charge in a currency, add the currency code e.g. [Charge1_Max_EUR=500]. If a negative percentage is specified, this will be subtracted instead.</p>
+<p>&#160;</p>
+<p><span class="hcp1">Note:</span> For Purchase Invoice, include prefix 'P' for the tag, example:</p>
+<p>[PChargeX_Service=&lt;ServiceCode&gt;]</p>
+<p>[PChargeX_Percent=&lt;Percentage&gt;]</p>
+<p>[PChargeX_Amount=&lt;Amount&gt;]</p>
+<p>[PChargeX_Descr=&lt;Text&gt;]</p>
+<p>[PChargeX_Cur=&lt;CurrencyCode&gt;]</p>
+<p>[PChargeX_AllowChange=&lt;Value&gt;]</p>
+<p>[PChargeX_Exempt=&lt;TaxChargeType&gt;]</p>
+<p>[PChargeX_Excl_Class=&lt;ServiceClass&gt;]</p>
+<p>[PChargeX_Excl_ServCode=&lt;ServiceCode&gt;]</p>
+<p>[PChargeX_Incl_Class=&lt;ServiceClass&gt;]</p>
+<p>[PChargeX_Incl_ServCode=&lt;ServiceCode&gt;]</p>
+<p>[PChargeX_Exclude=&lt;ServiceType&gt;]</p>
+<p>[PChargeX_InclTax=&lt;Value&gt;]</p>
+<p>[PChargeX_TaxOnly=&lt;Value&gt;]</p>
+<p>[PChargeX_Rounding=&lt;Method&gt;]</p>
+<p>[PChargeX_Min=&lt;Amount&gt;]</p>
+<p>[PChargeX_Max=&lt;Amount&gt;]</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+<li>
+<p><a href="Revenue_Entities.htm">Revenue Entities</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Revenue Entities - Tags</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

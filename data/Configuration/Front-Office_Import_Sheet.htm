@@ -1,0 +1,249 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Front-Office Import Sheet</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+img.hcp2 { border:none; }
+p.hcp3 { color:#2d005b; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Front-Office Import Sheet </h1>
+<p>Excel Import Sheets are available for use in CP-AD (Front-office) for 
+ updating records in:</p>
+<ul class="hcp1">
+	<li><p>Configuration &gt; Engage Servicing Portal &gt; Configuration 
+	 &gt; Organisations screen:</p></li>
+	<ul class="hcp1">
+		<li><p>Organisations grid</p></li>
+		<li><p>File Configuration grid</p></li>
+	</ul>
+	<li><p>Configuration &gt; Engage Servicing Portal &gt; Configuration 
+	 &gt; Users screen:</p></li>
+	<ul class="hcp1">
+		<li><p>Users grid</p></li>
+		<li><p>User - Organisation grid</p></li>
+	</ul>
+</ul>
+<p>Prior to importing the records, the import sheet must be completed with 
+ the relevant details before they are imported through Viewpoint Connect 
+ Add-ins in Microsoft Excel.</p>
+<p>It is mandatory to define the ‘record type’, ‘import action’ and ‘Configuration 
+ refresh’ to ensure that the data import works as desired.</p>
+<p>There are two types of import sheet provided where you can define the 
+ ‘record type’ globally or individually.</p>
+<p>When you define the ‘record type’ globally, the record type will apply 
+ to all the records in the import sheet.</p>
+<p><img src="../Helpfile%20import%20setting.PNG" alt="" border="0" class="hcp2"></p>
+<p>When you define the ‘record type’ individually or per row basis, the 
+ record type will apply only for that row and each row would require to 
+ define its own ‘record type’.</p>
+<p><img src="../Helpfile%20import%20setting2.PNG" alt="" border="0" class="hcp2"></p>
+<p>The ‘record type’, ‘import action’ and ‘Configuration refresh’ are as 
+ explained below:</p>
+<p>&#160;</p>
+<h4>Record Type</h4>
+<p>The ‘record type’ defines which setting is being updated. It can be 
+ User, Organisation, User Authority, or combination of two or more settings.</p>
+<p><span>There are seven record types available and each of these would 
+ require mandatory fields and optional fields to be entered into the sheet 
+ prior to the import:</span></p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 14.495%;">
+	<col style="width: 26.815%;">
+	<col style="width: 58.69%;">
+	<tr class="t1st">
+		<td><p class="hcp3">Record Type</p></td>
+		<td><p class="hcp3">What Setting is Being Updated?</p></td>
+		<td><p class="hcp3">Mandatory (M) and Optional (O) Fields 
+		 to Fill up in the Import Sheet</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ORG</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Organisation</p></td>
+		<td class="t1Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>OrgCode (M)</p></li>
+			<li><p>OrgName (M)</p></li>
+			<li><p>OrgType (O)</p></li>
+			<li><p>OrgNote (O)</p></li>
+			<li><p>GroupCode (O)</p></li>
+			<li><p>OrgDbId (O)</p></li>
+		</ul>
+		<p>All the above fields will update the records into the ClpOrganisations 
+		 database table.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>COF</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Configuration</p></td>
+		<td class="t1Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>DbId (M)</p></li>
+			<li><p>FileCode (M)</p></li>
+			<li><p>SearchType (O)</p></li>
+			<li><p>Note (O)</p></li>
+		</ul>
+		<p>All the above fields will update the records into the ClpFileConfig 
+		 database table.</p>
+		<p><span class="hcp4">Note</span>: 
+		 Please ensure that the ‘DbId’ is set correctly in the import sheet 
+		 and is registered as a valid code in Configuration &gt; Engage 
+		 Servicing Portal &gt; Global &gt; Databases.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>USR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>User</p></td>
+		<td class="t1Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>UserCode (M)</p></li>
+			<li><p>UserName (M)</p></li>
+			<li><p>Email (M)</p></li>
+			<li><p>Telephone (O)</p></li>
+			<li><p>Company (O)</p></li>
+			<li><p>JobTitle (O)</p></li>
+			<li><p>TimeZone (O)</p></li>
+		</ul>
+		<p>All the above fields will update the records into the ClpUsers 
+		 database table.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>OUA</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>User Authority</p></td>
+		<td class="t1Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>UserRole (M)</p></li>
+		</ul>
+		<p>This field will update the records into the ClpOrganisationsUser 
+		 database table.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>OCF</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Organisation 
+		 and Configuration</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Refer to the 
+		 above for ORG and COF.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This is not applicable for OrgType = 2</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>OCU</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Organisation, 
+		 Configuration, User and User Authority</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Refer to the 
+		 above for ORG, COF, USR and OUA.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This is not applicable for OrgType = 2</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>UOA</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>User and User 
+		 Authority</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Refer to the 
+		 above for USR and OUA.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h4>Import Action</h4>
+<p>The ‘import action’ defines how the values are updated for the existing 
+ record:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 22.505%;">
+	<col style="width: 77.495%;">
+	<tr class="t1st">
+		<td><p class="hcp3">Abbreviation</p></td>
+		<td><p class="hcp3">Action</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>AO</p></td>
+		<td class="t2Col"><p>Add or overwrite value if code exists.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>AI</p></td>
+		<td class="t2Col"><p>Add or ignore value if code exists.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>IN</p></td>
+		<td class="t2Col"><p>Inactivate the record.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>DL</p></td>
+		<td class="t2Col"><p>Delete the record if it has no other relations, 
+		 else inactivate the record.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This is not applicable for RecType = OCF/OCU/UOA)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h4>Configuration Refresh</h4>
+<p>The ‘configuration refresh’ defines how the File Configurations are 
+ refreshed for the existing record:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 22.607%;">
+	<col style="width: 77.393%;">
+	<tr class="t1st">
+		<td><p class="hcp3">Abbreviation</p></td>
+		<td><p class="hcp3">Action</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>REF</p></td>
+		<td class="t2Col"><p>Refresh the entire File Configuration. This 
+		 will not remove the File Configuration.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>RXL</p></td>
+		<td class="t2Col"><p>Refresh the entire File Configuration but 
+		 retain the excluded Master File(s). This will not remove the File 
+		 Configuration.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>RDL</p></td>
+		<td class="t2Col"><p>Remove the entire File Configuration and import 
+		 new File Configuration according to the import sheet.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Performing Import in Microsoft Excel</h2>
+<p>Upon completing the relevant details, you may proceed to do the import:</p>
+<ol style="list-style: decimal;">
+	<li><p>Open the Import Sheet and enter the required information.</p></li>
+	<li><p>In Microsoft Excel, select the Viewpoint add-in menu.</p></li>
+	<li><p>Click Import Sheet. The Import Sheet screen will appear.</p></li>
+	<li><p>Click Import.</p></li>
+	<li><p><span>Click Close to exit the Import Sheet screen when the import 
+	 is complete. &#160;</span></p></li>
+</ol>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="ESP_Organisations_(Configuration).htm">Organisation 
+	 (Configuration)</a></p></li>
+	<li><p><a href="ESP_Users_(Configuration).htm">Users (Configuration)</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Front-Office Import Sheet</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

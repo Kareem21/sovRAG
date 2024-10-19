@@ -1,0 +1,181 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist/Workflow Step Creation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+ol.hcp3 { list-style:decimal; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Checklist/Workflow Step Creation</h1>
+<p>Each checklist or workflow step is made up of:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Checklist/workflow 
+	 step record</a></p>
+	<div class="droptext" id="POPUP373752659" style="display: none;">
+		<p>For the checklist/workflow step record, define the following 
+		 items:</p>
+		<ul class="hcp1">
+			<li><p>Key – This is automatically assigned. You can set a 
+			 different prefix in Configuration &gt; Settings &gt; Settings 
+			 &gt; Document Numbers for the Workflow Step Key Prefix ID 
+			 [WFS] document type.</p></li>
+			<li><p>Caption – Enter the caption for the step. This will 
+			 be seen only in the workflow diagram. When user updates the 
+			 caption in the Edit Step Properties screen, it will be automatically 
+			 reflected in the diagram.</p></li>
+			<li><p>Description – Enter a description for the step. This 
+			 is not seen in the workflow diagram.</p></li>
+			<li><p>Category – Select the category to be used to classify 
+			 the step. New categories can be set up in Workflow Categories 
+			 [WFCA] lookup table. This is only for recording purposes.</p></li>
+			<li><p>Type – Select the type classification for the step. 
+			 New types can be set up in Workflow Step Type [WFPT] lookup 
+			 table. This is only for recording purposes.</p></li>
+			<li><p>ESP Publish Option – Select the option to indicate whether 
+			 or not the step is to be seen in Engage Servicing Portal (ESP):</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp1">
+				<li><p>Set to 'Show [1]' to allow the step to be visible 
+				 in Engage Servicing Portal for status tracking. ESP users 
+				 will not be able to make any changes to the step.</p></li>
+				<li><p>Set to ‘Action [2]’ to allow step to be actioned 
+				 in Engage Servicing Portal.</p></li>
+				<li><p>Set to 'Don't Show [4]' to hide the step from Engage 
+				 Servicing Portal.</p></li>
+			</ul></li>
+			<li><p>Administrator Assign – &#160;Specify the assignee of 
+			 this step. Refer to <a href="Assign_To_Codes.htm">Assign To 
+			 Codes</a>.</p></li>
+			<li><p>Time Days – Enter the number of days to be allocated 
+			 for the step. This will be used to calculate the Date Due 
+			 for the step.</p></li>
+			<li><p>Tag Values – Enter the applicable <a href="Checklist_Workflow_Step_-_Tags.htm">tag 
+			 values</a>. These are additional instructions for the step.</p></li>
+			<li><p>File Note Linking - This is to set up the step as a 
+			 File Note checklist which can be selected by clicking the 
+			 File Note button from the Ribbon. <span lang="EN-US" xml:lang="EN-US" class="hcp2">This 
+			 requires ticking the option Show in File Note Selection and 
+			 selecting the category of the File Note. If no category is 
+			 selected, it will be displayed under the heading ‘No Group’.</span></p></li>
+			<li><p>Menu Linking – This is to set up the step as a Menu 
+			 Checklist which is seen in the Checklist tab in Tools section 
+			 when the linked menu is selected. <span lang="EN-US" xml:lang="EN-US" class="hcp2">This 
+			 requires you to specify the Menu Id by specifying the Menu 
+			 Group and Section and then clicking Find to select the menu.</span></p></li>
+		</ul>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Checklist 
+	 items</a></p>
+	<div class="droptext" id="POPUP373856828" style="display: none;">
+		<p>These refer to items for the checklist or workflow step and 
+		 are to be added in the Workflow Step Editor screen or Edit Checklist 
+		 screen.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h2>Create New Checklist/Workflow Step in Step Library Screen</h2>
+<p>This method can be used when creating checklist or workflow steps. For 
+ workflow steps, this is when you choose to first set up all the workflow 
+ steps before you add them to the workflow template.</p>
+<ol class="hcp3">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Business Parameters 
+	 &gt; Workflow &gt; Step Library.</p></li>
+	<li><p>Click New.</p></li>
+	<li><p>Enter information for the checklist/workflow step record.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Proceed to add items for the checklist/workflow step by clicking 
+	 <a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit with Workflow 
+	 Step Editor</a>.</p></li>
+	<li><p>Click Update when you are done. This is to save the changes 
+	 and close the Workflow Step Editor screen. If you choose to close 
+	 the screen without clicking Update, you will be prompted with a message.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Create New Workflow Step from Workflow Designer Screen</h2>
+<p>This method can be used if you prefer to the create the workflow step 
+ as you work on your workflow template. Use this method once you can created 
+ your workflow record.</p>
+<ol class="hcp3">
+	<li><p>In Configuration &gt; Business Parameters &gt; Workflow, select 
+	 the workflow record and click Edit with Workflow Designer.</p></li>
+	<li><p>Click Add Step.</p></li>
+	<li><p>Click New Step.</p></li>
+	<li><p>Enter information for the workflow step record.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>The new step is seen in the list and ticked by default. Click 
+	 Select.</p></li>
+	<li><p>Click <a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit 
+	 with Editor</a> to add items for the workflow step.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Create Checklist using Right-click</h2>
+<p>This method will create checklists that are linked to a screen in the 
+ Section Menu (usually in File Maintenance). To do this, the User Group 
+ authority 'Allow Toolbar/Grid Customisation' is required.</p>
+<ol class="hcp3">
+	<li><p>Right-click on the screen the checklist is for.</p></li>
+	<li><p>Click Customise Tasks and Checklists.</p></li>
+	<li><p>Right-click on the screen again. This time, click Add new Checklist.</p></li>
+	<li><p>In the Edit Checklist screen, enter the following:</p>
+	<ul class="hcp1">
+		<li><p>Title - Enter a title for the checklist.</p></li>
+		<li><p>Category - Select the category for the checklist.</p></li>
+		<li><p>Type - This defaults to Menu Checklists.</p></li>
+	</ul></li>
+	<li><p>Add the checklist items.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Shared/Checklist.htm">Checklist</a></p></li>
+	<li><p><a href="Assign_To_Codes.htm">Assign To Codes</a></p></li>
+	<li><p><a href="../Shared/Step_Library.htm">Step Library</a></p></li>
+	<li><p><a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+	 Step - Tags</a></p></li>
+	<li><p><a href="../Shared/Workflow_Library.htm">Workflow Library</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist/Workflow Step Creation</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP373752659');
+	TextPopupInit('a4','POPUP373856828');
+//]]></script>
+</body>
+</html>

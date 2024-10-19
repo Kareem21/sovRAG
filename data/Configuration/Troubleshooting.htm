@@ -1,0 +1,303 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Troubleshooting">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Troubleshooting</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:disc; }
+li.hcp4 { list-style:none;
+display:inline; }
+p.hcp5 { margin-left:40px; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Troubleshooting</h1>
+<p>The Troubleshooting folder should be used to verify and maintain the 
+ integrity of the data in your database.</p>
+<p>&#160;</p>
+<h3>Error Analyses of the Viewpoint Database</h3>
+<p>The Error Analysis function checks if the links between data are correct 
+ and if any mandatory fields have not been completed. Due to the complexity 
+ of this analysis, this process can take several hours to complete on a 
+ large database. For this reason we recommend that you run the analysis 
+ at the end of the day or at the weekend and make sure that no one else 
+ is logged on to any of Viewpoint programs.</p>
+<ol style="list-style: decimal;">
+	<li><p>Select Database Archiving - Troubleshooting.</p></li>
+	<li><p>Click Start Check.</p></li>
+	<li><p>When the process is complete, the results of the test will be 
+	 displayed in a text box.</p></li>
+	<li><p>Click OK to exit the screen.</p></li>
+</ol>
+<p class="Listing">&#160;</p>
+<h3>Verify and Correct Database Tables</h3>
+<p>The tables of the database are a central key to the system. However, 
+ inconsistencies can develop in the tables, and they need to be tested 
+ and maintained in order to ensure data integrity. Viewpoint recommends 
+ that you perform this task on a regular basis, such as after running an 
+ upgrade. Depending on the size of your database, the process can take 
+ up to several hours, therefore, it is recommended that these functions 
+ be done at the end of the day, when no one is logged on to any of the 
+ Viewpoint modules.</p>
+<p>The Verify and Correct function in the Troubleshooting folder enables 
+ you to test and fix all the tables by simply clicking on each of the following 
+ buttons:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Master File Labels</span> - 
+	 This rebuilds the Master File names that are displayed for selection 
+	 throughout Viewpoint.</p></li>
+	<li><p><span class="hcp2">Shareholding Transactions</span> 
+	 - This rebuilds the share register.</p></li>
+	<li><p><span class="hcp2">Relation Type Descriptions</span> 
+	 - Use this function to update relation type descriptions throughout 
+	 the system.</p></li>
+	<li><p><span class="hcp2">Verify Unconfirmed Changes</span> 
+	 - This function is used to remove changes that have already been confirmed 
+	 from the Change Confirmation/Approval screen.</p></li>
+	<li><p><span class="hcp2">Full Address Card Descriptions</span> 
+	 - Run this to rebuild Address Card descriptions. This is also used 
+	 to separate addresses into different lines after upgrading from earlier 
+	 versions of Viewpoint.</p></li>
+	<li><p><span class="hcp2">Locale (Region/City) from Address 
+	 Cards</span> - Use this to update the Regions and Cities tables. See 
+	 also <a href="Regions_and_Cities.htm">Regions and Cities</a>.</p></li>
+	<li><p><span class="hcp2">Client Files V6.0 Upgrade Fix</span> 
+	 - Use this to rebuild the list of clients if you find that this information 
+	 is missing after you upgrade from earlier versions of Viewpoint.</p></li>
+	<li><p><span class="hcp2">Menu Authority Checking</span> 
+	 - Use this to verify the consistency of menu authorities.</p></li>
+	<li><p><span class="hcp2">Deactivated Lookup Value Checking</span> 
+	 - Use this to re-activate lookup values that are in use.</p></li>
+	<li><p><span class="hcp2">Change Log Description</span> 
+	 - Use this to update the descriptions for Changes. Do this if you 
+	 are converting old Change Log.</p></li>
+	<li><p><span class="hcp2">Document Management Master 
+	 File Field</span> - Use this to rebuild the information for Master 
+	 File index fields in existing document holders so that the Master 
+	 File code is included as well.</p></li>
+	<li><p><span class="hcp2">Confidential Master File Changes</span> 
+	 – Use this to encrypt new values in Change Log for Change Codes ADC, 
+	 CPC and ACDU. This button is available only when Confidential Database 
+	 is set up.</p></li>
+	<li><p><span class="hcp2">Service Security Checking</span> 
+	 - Use this to check if the current 'Administration Group' exists in 
+	 the 'ServiceSecurity' table. The current 'Administration Group' will 
+	 be added into the 'ServiceSecurity' table if not found.</p></li>
+	
+	<li><p><span class="hcp2">Anonymise Orphan Master File 
+	 Codes</span> - Use this to anonymise the Orphan Master File. Clicking 
+	 this will display all the Master File Codes that have been deleted 
+	 but with related information embedded in the eventLog table. To anonymise, 
+	 select the orphan Master File Code from the list and click Anonymise.</p></li>
+	<li><p><span class="hcp2">Master File Details Report 
+	 Templates</span> - Use this to create the <a href="../Shared/Reports_for_EU_GDPR.htm">EU 
+	 GDPR report templates</a> to import into your environment. The design 
+	 of the reports are specified in the VPCROSS Application ‘MFDETR’ Key 
+	 in Configuration &gt; Settings &gt; Customise &gt; <a href="System_Settings.htm">System 
+	 Settings</a>.</p></li>
+	<li><p><span class="hcp2">User Field Values</span> - 
+	 Use this to verify <a class="dropspot" href="javascript:TextPopup(this)" id="a3">user 
+	 fields</a> and update with the latest values.</p>
+	<div class="droptext" id="POPUP514992458" style="display: none;">
+		<p>This feature rebuilds name changes of User Fields for the following 
+		 field types:</p>
+		<ul class="hcp1">
+			<li>53 - Administrator Group</li>
+			<li>30 - Lookup Values</li>
+			<li>70 - Lookup Values/Dates</li>
+			<li>80 - Master File</li>
+			<li>81 - Master File/Dates</li>
+			<li>82 - Master File/Dates/Lookup</li>
+			<li>83 - Master File/Dates/User TV</li>
+			<li>52 - System User</li>
+			<li>31 - User Table Value</li>
+			<li>71 - User Table Value/Dates</li>
+		</ul>
+ </div></li>
+	<li><p><span class="hcp2">Mark Existing Stored Documents 
+	 as Safe</span> - Use this to <a class="dropspot" href="javascript:TextPopup(this)" id="a4">mark 
+	 unscanned documents</a> as Virus Safe. This is part 
+	 of the <a href="../Document_Manager/Document_Virus_Scanning.htm">Document 
+	 Virus Scanning</a> feature.</p>
+	<div class="droptext" id="POPUP512067697" style="display: none;">
+		<p><span lang="EN-GB" xml:lang="EN-GB">This process will only apply 
+		 to unscanned documents. Documents are marked based on a batch 
+		 size. Documents that have already been scanned, marked as safe, 
+		 or contain virus will not be processed.</span></p>
+		<p>To mark existing stored documents as Virus Safe, </p>
+		<ol>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">In the&#160;Mark 
+			 Existing Stored Documents as Safe window, key in the number 
+			 of documents to mark as safe in the Batch Size field. The 
+			 default batch size value is 20000. Documents will be marked 
+			 as Virus Safe starting from the newest stored to the oldest. 
+			 </p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 Start. A green progress bar will appear. </p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">After 
+			 the progress bar is filled, a message is prompted indicating 
+			 that all documents within the batch size have been marked 
+			 as safe. </p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 OK to close the message. </p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Rebuild Relations</span> - 
+	 Use this to prebuild the <a href="../Shared/MF_-_Relations.htm">Relations</a> 
+	 in advance for it to be retrieved when loading <a href="Relations_Relation_Enquiry_Configuration.htm">Relations 
+	 Enquiry</a> screen.<br class="Apple-interchange-newline">
+	</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Global Review</h3>
+<p>There are three global reviews which, when run, will refresh data for 
+ Reminder, user records and Master File records.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Global Review - Reminders</span> 
+	 - This will review the Reminders for all users.</p></li>
+	<li><p><span class="hcp2">Global Review - Users</span> 
+	 - This will review all existing user records.</p></li>
+	<li><p><span class="hcp2">Global Review - Master Files</span> 
+	 - This will review all existing Master File records.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Conversion</h3>
+<p>When upgrading to Viewpoint 8.0 from an earlier Viewpoint version, there 
+ may be a need to do the following due to database changes:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Convert Checklists to Workflow 
+	 Step</span> - Do this if you have existing checklists that you want 
+	 to continue using. This will convert checklists created in the earlier 
+	 version to workflow step in Viewpoint 8.0. Doing this will take records 
+	 of the existing checklists from the database table 'MenuChecklist' 
+	 and insert them to the database table 'WflowStepLibrary'.</p></li>
+	<li><p><span class="hcp2">Convert Old Change Log</span> 
+	 - This will move the records in the database table 'ChangeLog' to 
+	 the 'EventLog' table.</p></li>
+	<li><p><span class="hcp2">Create Header for Draft/Posted 
+	 Journal(s)</span> - This will create headers for draft and posted 
+	 journals to allow related journals to be grouped by assigning a transaction 
+	 revision number and transaction number to each journal. This should 
+	 be performed when you first upgrade to Viewpoint 8.0.</p></li>
+	<li><p><span class="hcp2">Create Header for Archived 
+	 Journal(s)</span> - This will create headers for archived journals 
+	 to allow related journals to be grouped. This should be performed 
+	 when you first upgrade to Viewpoint 8.0.</p></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1" style="font-weight: bold;">Change 
+	 Excel Statements to use OpenXML</a> - This is to use 
+	 OpenXML technology for generation of Excel statements. For Viewpoint 
+	 on the Cloud, do this on the server.</p>
+	<div class="droptext" id="POPUP402313385" style="display: none;">
+		<p>Use this option to set multiple Excel statement templates to 
+		 generate using OpenXML technology. Note that OpenXML technology 
+		 has the following limitations:</p>
+		<ol class="hcp3">
+			<li class="hcp4"><ul class="hcp1">
+				<li><p>Excel Statements that has cell dependency cannot 
+				 be converted.</p></li>
+				<li><p>Pivot table is not working if the Excel Statement 
+				 generates using OpenXML</p></li>
+				<li><p>Excel Statements that has macro cannot be converted.</p></li>
+			</ul></li>
+		</ol>
+		<p class="FldExplain" style="margin-left: 40px;">Excel Statements 
+		 Selection</p>
+		<p class="hcp5">The list shows all the available 
+		 Excel Statements.</p>
+		<p class="FldExplain" style="margin-left: 40px;">&#160;</p>
+		<p class="FldExplain" style="margin-left: 40px;">Validate Cell 
+		 Dependency in Excel Document</p>
+		<p class="FldExplain" style="margin-left: 40px;"><span style="font-weight: normal; 
+		 font-style: normal; color: #000000;">Click this to check the Cell 
+		 Dependency in the Excel Document. Conversion would not aborted 
+		 if found.</span></p>
+		<p class="FldExplain" style="margin-left: 40px;">&#160;</p>
+		<p class="FldExplain" style="margin-left: 40px;">Command buttons</p>
+		<p class="hcp5">Click on the relevant command button 
+		 to perform the necessary.</p>
+		<ol class="hcp3">
+			<li class="hcp4"><ul class="hcp1">
+				<li><p><span class="hcp2">Save Log</span> 
+				 - Click this to save the result of the Excel Statements 
+				 conversion. This button will be enabled after the conversion.</p></li>
+				<li><p><span class="hcp2">Select All</span>- 
+				 Click this to select all listed Excel Statements.</p></li>
+				<li><p><span class="hcp2">Deselect All</span> 
+				 - Click this deselect all listed Excel Statements.</p></li>
+				<li><p><span class="hcp2">Convert</span> 
+				 - Click this to convert the selected Excel Statements. 
+				 The result of the conversion will be display in 'Change 
+				 Excel Statement to use OpenXML' grid.</p></li>
+				<li><p><span class="hcp2">Close</span> - 
+				 Click this to exit the screen.</p></li>
+			</ul></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Upgrade Risk Ratings</span> 
+	 - This is to retrieve scores assigned using score tags and update 
+	 to Risk Ratings screen. Refer to <a href="Risk_Ratings.htm">Risk Ratings</a>.</p></li>
+	<li><p><span class="hcp2">Update Workflow</span> - This 
+	 will populate/update the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">columns 
+	 in the database tables</a> or delink the selected 
+	 workflows from their workflow templates. This should be performed 
+	 when you upgrade to Viewpoint 8.0 to populate the columns or delink 
+	 from the workflow template for existing workflow records. </p>
+	<div class="droptext" id="POPUP568053585" style="display: none;">
+		<p>The columns and database tables are as follows:</p>
+		<ul class="hcp1">
+			<li><p>'FldShowValue' column in WflowFields database table</p></li>
+			<li><p>'LinkShowValue' column in WflowLinks database table</p></li>
+		</ul>
+		<p>Both of the above columns show the workflow field value descriptions 
+		 which can be retrieved for reports. </p>
+ </div></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Database_Archiving.htm">Database Archiving</a> &gt; Troubleshooting</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP514992458');
+	TextPopupInit('a4','POPUP512067697');
+	TextPopupInit('a1','POPUP402313385');
+	TextPopupInit('a2','POPUP568053585');
+//]]></script>
+</body>
+</html>

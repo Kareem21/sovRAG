@@ -1,0 +1,110 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Risk Rating</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:bold;
+text-decoration:underline; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Risk Ratings</h1>
+<p>Localise Script for Risk Ratings is to add records to the <a href="Risk_Ratings.htm">Risk Ratings</a> screen where:</p>
+<ul class="hcp1">
+<li>
+<p>If the table or type does not have the Risk Rating option ticked initially, running the script will tick this.</p>
+</li>
+<li>
+<p>Effective date will be the date of when the localise script is run.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p style="font-weight: bold;">RRATE: SET=RateGroup=&lt;RateGroup&gt;|TableType=&lt;TableTypeCode&gt;|KeyCode=&lt;KeyCode&gt;|KeyValue=&lt;KeyValue&gt;|Values=&lt;Values&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+<li>
+<p><span class="hcp3">&lt;RateGroup&gt;</span> refers to the code of the Rating Group. Rating Groups are maintained in the Risk Rating Group [RRGR] lookup table.</p>
+</li>
+<li>
+<p><span class="hcp3">&lt;TableTypeCode&gt;</span> refers to the code that is made up of the item and the rating type with the first character denoting the item and the second one denoting the type.<br>
+<br>
+For item, the code can be L - for Lookup Table, U - for User Table, R - for Relationship Type, I - for Identity Register Type, S - for Service Master.<br>
+<br>
+For type, the code can be C - for Current, R - for Prepare Revision, S - for Scenario Evaluation.</p>
+</li>
+<li>
+<p><span class="hcp3">&lt;KeyCode&gt;</span> refers to the code for the item but does not apply to Identity Register Type and Service Master. This is required for:</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul class="hcp1">
+<li>
+<p>Lookup Tables - Enter the Lookup Table code.</p>
+</li>
+<li>
+<p>User Tables - Enter the User Table code.</p>
+</li>
+<li>
+<p>Relationship Type - Enter the code of the Relation Class.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="hcp3">&lt;KeyValue&gt;</span> is the code of the value.</p>
+</li>
+<li>
+<p><span class="hcp3">&lt;Values&gt;</span> is the score to be set for the value.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Example</p>
+<p>To set a score of 10 for the Female [F] value in the Gender [GEND] Lookup Table under Current type for Standard Rating Group [STDR]: RRATE:SET=RateGroup=STDR|TableType=LC|KeyCode=GEND|KeyValue=F|Values=10</p>
+<p>&#160;</p>
+<p>To set a score of 20 for the Male [M] value in the Gender [GEND] Lookup Table under Current type for Standard Rating Group [STDR]: RRATE:SET=RateGroup=STDR|TableType=LC|KeyCode=GEND|KeyValue=M|Values=20</p>
+<p>&#160;</p>
+<p>To set a score of 30 for the Unknown [U] value in the Gender [GEND] Lookup Table under Current type for Standard Rating Group [STDR]: RRATE:SET=RateGroup=STDR|TableType=LC|KeyCode=GEND|KeyValue=U|Values=30</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="Localise.htm">Localise</a></p>
+</li>
+<li>
+<p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom Script for Localise Function</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Risk Rating</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

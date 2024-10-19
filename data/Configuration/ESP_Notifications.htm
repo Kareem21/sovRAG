@@ -1,0 +1,248 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Notifications</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Notifications</h1>
+<p>The ESP Notifications settings screen consists of a list of standard 
+ notifications that the Front-office administrator can activate for ESP.</p>
+<p>The Notifications feature keeps the ESP users informed of the changes 
+ and updates to the following:</p>
+<ul class="hcp1">
+	<li><p>Document generation status</p></li>
+	<li><p>Status of requests</p></li>
+	<li><p>Messages relating to requests</p></li>
+	<li><p>Online payment status</p></li>
+	<li><p>Updates to the followed items</p></li>
+</ul>
+<p>There are two types of notifications:</p>
+<ul class="hcp1">
+	<li><p>Instant Notification - The notifications will be seen in the 
+	 Notifications panel as well as at the bottom right corner of the ESP 
+	 screen. This is a standard feature and cannot be turned off unless 
+	 all the notifications are deactivated in the Front-office (CP-AD).</p></li>
+	<li><p>E-mail Notification - This is applicable when the 'Send Report 
+	 on Notifications Pending Overnight' and/or 'Send Weekly Summary of 
+	 Calendar Reminders and Notifications' are activated in the Front-office 
+	 Notifications settings screen. When the notification is activated 
+	 in the Front-office Notifications settings screen, the ESP users can 
+	 see the option to turn on/off the subscription of the e-mail notification 
+	 in ESP Home &gt; Profile &gt; Notification tab. Users will be receiving 
+	 e-mail notification as per their subscribed option.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The filters apply to the Notification list. You can select either Active, 
+ Inactive or All.</p>
+<p>&#160;</p>
+<p class="FldExplain">Notification list</p>
+<p>The list shows the Notifications available in the ESP:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 24.566%;">
+	<col style="width: 75.434%;">
+	<tr class="t1st">
+		<td><p>Notification Name</p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Document Generation - Success</p></td>
+		<td class="t2Col"><p>When activated, user will receive instant 
+		 notification in the ESP when a document (registry) is generated 
+		 successfully.</p>
+		<p>This requires a running task scheduler job 'Engage Servicing 
+		 Portal - Register Printing [CPPR]' to retrieve the document generation 
+		 status and prompts a notification.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Document Generation - Fail</p></td>
+		<td class="t2Col"><p>When activated, user will receive instant 
+		 notification in the ESP when a document (registry) has failed 
+		 to generate.</p>
+		<p>This requires a running task scheduler job 'Engage Servicing 
+		 Portal - Register Printing [CPPR]' to retrieve the document generation 
+		 status and prompts a notification.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>My Request - Message Received</p></td>
+		<td class="t2Col"><p>When activated, user will receive instant 
+		 notification in the ESP when there is any message received from 
+		 the Back-office on the user's Request (workflow).</p>
+		<p>This requires a running task scheduler job 'Engage Servicing 
+		 Portal - Get Notification [CPGN]' to retrieve the My Request message 
+		 and prompts a notification.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>My Request - Status Update</p></td>
+		<td class="t2Col"><p>When activated, user will receive instant 
+		 notification in the ESP when there is any status update on the 
+		 user's Request (workflow).</p>
+		<p>This requires a running task scheduler job 'Engage Servicing 
+		 Portal - Get Notification [CPGN]' to retrieve the My Request status 
+		 update and prompts a notification.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Online Payment Completed</p></td>
+		<td class="t2Col"><p>When activated, user will receive instant 
+		 notification in the ESP and e-mail notification to notify them 
+		 that the payment is completed.</p>
+		<p>This requires a running task scheduler job 'Engage Servicing 
+		 Portal - Get Notification [CPGN]' to check the payment status 
+		 and prompts a notification.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Send Report on Notifications Pending Overnight</p></td>
+		<td class="t2Col"><p>When activated, it will show the option in 
+		 the ESP Home &gt; Profile &gt; Notification tab for user to subscribe 
+		 to the e-mail notification. When the users subscribe to this, 
+		 they will receive an e-mail that consists of a report on <a class="dropspot" href="javascript:TextPopup(this)" id="a3">pending 
+		 (unread) notifications</a>. It will only send 
+		 out the e-mail if the user did not log in to the ESP overnight.</p>
+		<div class="droptext" id="POPUP564192733" style="display: none;">
+			<p>It sends the report on the following pending (unread) notifications:</p>
+			<ul class="hcp1">
+				<li><p>Documents that the user generated (both successful 
+				 and failed).</p></li>
+				<li><p>User ‘Requests’ status updates.</p></li>
+				<li><p>User ‘Requests’ messages received.</p></li>
+				<li><p>All items that the user followed, which include:</p></li>
+				<li class="hcp2"><ul class="hcp1">
+					<li><p>Entity Information</p></li>
+					<li><p>Documents</p></li>
+					<li><p>Filings</p></li>
+					<li><p>Meetings</p></li>
+					<li><p>Requests</p></li>
+				</ul></li>
+			</ul>
+  </div>
+		<p>This requires a running task scheduler job ‘Engage Servicing 
+		 Portal – Daily Report [CPDR]’ to retrieve the pending notifications 
+		 and send out the e-mail.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Send Weekly Summary of Calendar Reminders 
+		 and Notifications</p></td>
+		<td class="t2Col"><p>When activated, it will show the option in 
+		 the ESP Home &gt; Profile &gt; Notification tab for user to subscribe 
+		 to the e-mail notification. When the users subscribe to this, 
+		 they will receive an e-mail that consists of a report that summarises 
+		 <a class="dropspot" href="javascript:TextPopup(this)" id="a4">all notifications</a> 
+		 on a weekly basis.</p>
+		<div class="droptext" id="POPUP564287021" style="display: none;">
+			<p>It sends the report on the following:</p>
+			<ul class="hcp1">
+				<li><p>Calendar items that are ‘Overdue’ and ‘Due Soon’.</p></li>
+				<li><p>Documents that the user generated (both successful 
+				 and failed).</p></li>
+				<li><p>User ‘Requests’ status updates.</p></li>
+				<li><p>User ‘Requests’ messages received.</p></li>
+				<li><p>All items that the user followed, which include:</p></li>
+				<li class="hcp2"><ul class="hcp1">
+					<li><p>Entity Information</p></li>
+					<li><p>Documents</p></li>
+					<li><p>Filings</p></li>
+					<li><p>Meetings</p></li>
+					<li><p>Requests</p></li>
+				</ul></li>
+			</ul>
+  </div>
+		<p>This requires a running task scheduler job ‘Engage Servicing 
+		 Portal – Weekly Report [CPWR]’ to retrieve all the notifications 
+		 during the week and send out the e-mail.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="FldExplain">Command button</p>
+<p>As the Front-office administrator, you can only edit the Notifications. 
+ Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span style="font-weight: bold;">Edit</span> - Click this to 
+	 edit the selected Notification. You can edit and customise the <a class="dropspot" href="javascript:TextPopup(this)" id="a1">Instant 
+	 Content</a> and <a class="dropspot" href="javascript:TextPopup(this)" id="a2">E-mail 
+	 Body/ E-mail Template</a>.</p>
+	<div class="droptext" id="POPUP597905935" style="display: none;">
+		<p>Applicable only to 'Online Payment Completed' notification. 
+		 Upon completion of an online payment, an e-mail will be sent to 
+		 the users to notify them of the successful transaction.</p>
+		<p>To use an e-mail template, tick the option 'Use E-mail Template' 
+		 and select the template from the drop down list. The e-mail templates 
+		 are maintained in Configuration &gt; Document Libraries &gt; Other 
+		 Document Templates, under Document Type 'Email Notification Templates 
+		 [D03]'.</p>
+		<p>Alternatively, you may opt not to use e-mail template but instead 
+		 construct the e-mail content in the E-mail Body. To do so, untick 
+		 the option 'Use E-mail Template' to activate the 'E-mail Body' 
+		 field box. Clicking on the browse button will open the parameter 
+		 wizard to select the tag for the parameter that you would like 
+		 to show in the e-mail.</p>
+ </div>
+	<div class="droptext" id="POPUP597836971" style="display: none;">
+		<p>The Instant Content refers to the content that will be displayed 
+		 in the ESP notifications panel as well as at the bottom right 
+		 corner of the ESP screen. You can configure the Instant Content 
+		 for the following notifications:</p>
+		<ul class="hcp1">
+			<li><p>Document Generation - Success</p></li>
+			<li><p>Document Generation - Fail</p></li>
+			<li><p>My Request - Message Received</p></li>
+			<li><p>My Request - Status Update</p></li>
+		</ul>
+		<p>Clicking on the browse button will open the parameter wizard 
+		 to select the tag for the parameter that you would like to show 
+		 in the notification.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Task_Scheduler/Engage_Servicing_Portal_Jobs.htm">Engage 
+	 Servicing Portal Jobs</a></p></li>
+	<li><p><a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Viewpoint 
+	 Engage Servicing Portal</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; <a href="ESP_Databases.htm">Global</a> &gt; Notifications</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP564192733');
+	TextPopupInit('a4','POPUP564287021');
+	TextPopupInit('a1','POPUP597836971');
+	TextPopupInit('a2','POPUP597905935');
+//]]></script>
+</body>
+</html>

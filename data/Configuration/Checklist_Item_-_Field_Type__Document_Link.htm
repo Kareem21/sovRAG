@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Document Link</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item – Field Type: Document Link</h1>
+<p><span lang="EN-US" xml:lang="EN-US">Document allows for linking to a file or a website. For file, this can be a file that is stored in Document Manager or a file in a network path.</span></p>
+<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">If the file is stored in Document Manager, then the following tags are available:</span></p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 44.601%;">
+<col style="width: 55.399%;">
+<tr class="t1st">
+<td class="hcp1">
+<p>Code</p>
+</td>
+<td class="hcp1">
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>@VPFILE:&lt;DocumentId&gt;</p>
+<p>where &lt;DocumentId&gt; is the number assigned to the document in the holder. This will be in the format of HolderNr.SequenceNr.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will link the item to the specified document within the holder. Clicking on the icon will open the document file.</p>
+<p>e.g. @VPFILE:358.1 means the first document stored in holder number 358.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>@VPHOLDER:&lt;HolderNr&gt;</p>
+<p>where &lt;HolderNr&gt; is the number of the holder.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will link the item to the specified document holder. Clicking on the icon will open the document holder.</p>
+<p>e.g. @VPHOLDER:357 means holder number 357.</p>
+</td>
+</tr>
+</table>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">I</span>f the file is not stored in Document Manager, then specify the location of the file in Values/Default.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 18.048%;">
+<col style="width: 81.952%;">
+<tr class="t1st">
+<td>
+<p>Method</p>
+</td>
+<td>
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>UNC Path</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is the path to where the file is located.</p>
+<p>e.g. \\VPMYN171\Checklists\Compliance Info.pdf</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>$FORMS$</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is used if the file is in Viewpoint’s Forms folder.</p>
+<p>e.g. $FORMS$\Compliance\Compliance Questionnaire.pdf</p>
+</td>
+</tr>
+</table>
+<p class="MsoNormal">For linking to a website, you need to specify the website’s URL in the Values/Default column where it must start with ‘http’ or ‘www’.</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Document Link</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

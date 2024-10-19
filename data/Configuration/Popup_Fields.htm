@@ -1,0 +1,553 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Popup Fields">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Popup Fields</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+p.hcp2 { margin-left:6pt;
+margin-right:6pt; }
+span.hcp3 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp4 { margin-right:6pt;
+margin-left:48px; }
+p.hcp5 { margin-right:6pt;
+margin-left:8px; }
+p.hcp6 { margin-left:12px; }
+span.hcp7 { -webkit-font-smoothing:antialiased;
+box-sizing:border-box;
+font-weight:inherit; }
+span.hcp8 { mso-fareast-language:X-NONE; }
+p.hcp9 { margin-left:6pt;
+margin-right:6pt;
+mso-fareast-language:X-NONE; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Popup Fields</h1>
+<p>Popup fields prompt the user to select information when generating a 
+ form, and are stored with the change information. These fields are especially 
+ useful for information that (a) is not applicable to a certain change, 
+ and (b) is only known when the form is prepared.</p>
+<p><span class="hcp1">Note</span>: Popup 
+ fields can only be used in change-linked forms.</p>
+<p>&#160;</p>
+<h3>Document Fields</h3>
+<p>These are individual fields where the user can complete or edit the 
+ text or value. Document fields appear in the first folder of the popup 
+ screen.</p>
+<p>&#160;</p>
+<h5>Syntax</h5>
+<p>(+POP.Caption|Type&amp;Default literal\format+)</p>
+<p>or</p>
+<p>(+POP.Caption|Type#Operator\format+)</p>
+<p>&#160;</p>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Field</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">Caption</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is a mandatory field and is used to identify the field in the 
+		 popup screen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">Type</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional field and can be omitted for the default TEXT field 
+		 type. See Field Type and Description, below, for the available 
+		 options.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">&amp;Default 
+		 literal</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional field. the text after the ampersand (&amp;) is 
+		 used for the default value.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">Format</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional field. Any valid change field formatting code can 
+		 be used.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">#Operator</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional field. The default value will be completed per 
+		 the operator code. See Operator and Result, below.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h5>Field Type and Description</h5>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Field 
+		 Type</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">TEXT</p></td>
+		<td class="t2Col"><p class="hcp2">Single 
+		 line text entry</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">To prompt to enter 
+		 some text: (+POP.The caption to show|TEXT+)</p>
+		<p class="hcp2">or to add a default: 
+		 (+POP.Field with default|TEXT&amp;Text default+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">NOTE</p></td>
+		<td class="t2Col"><p class="hcp2">Multi-line 
+		 text entry.</p>
+		<p class="hcp2">For example, see 
+		 #UT-CODE below.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">DATE</p>
+		<p class="hcp2">TIME</p></td>
+		<td class="t2Col"><p class="hcp2">Date 
+		 entry</p>
+		<p class="hcp2">Time entry</p>
+		<p class="hcp2">Values are validated 
+		 and displayed using the field format setting configured in the 
+		 Defaults screen.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2"><span class="hcp3">The meeting was held on (+POP.Date of meeting|DATE+) 
+		 at (+POP.Time of meeting|TIME+).</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">&#160;</p>
+		<p class="hcp2">AMNT</p>
+		<p class="hcp2">AM4D</p>
+		<p class="hcp2">NR0D</p>
+		<p class="hcp2">NR4D</p>
+		<p class="hcp2">NR6D</p>
+		<p class="hcp2">PERC</p></td>
+		<td class="t2Col"><p class="hcp2">Values 
+		 are validated and displayed using the field format settings configured 
+		 in the Defaults screen. The fields are as follow:</p>
+		<p class="hcp2">Amounts (2 d.p.)</p>
+		<p class="hcp2">Amounts (more than 
+		 2 d.p.)</p>
+		<p class="hcp2">Number without 
+		 d.p.</p>
+		<p class="hcp2">Number - shares 
+		 with d.p.</p>
+		<p class="hcp2">Number - others 
+		 with d.p.</p>
+		<p class="hcp2">Percentages</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">CBE</p></td>
+		<td class="t2Col"><p class="hcp2">Combo 
+		 list where the user is allowed to edit the text. This code must 
+		 be following with a hash (#) and items separated by a pipel ( 
+		 | ).</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.Select an 
+		 item to edit|CBE#First item|Another one|and one more+)</p>
+		<p class="hcp2">Use the ampersand 
+		 (&amp;) as the first letter of the item to indicate this is the 
+		 default item on loading of the screen.</p>
+		<p class="hcp2">For example: <span class="hcp3">#Item 1|&amp;Item 
+		 2|Item 3</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">CBF</p></td>
+		<td class="t2Col"><p class="hcp2">Combo 
+		 list where the user is NOT allowed to edit a selected item. (See 
+		 CBE for more details.)</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.Select an 
+		 item|CBF#First item|&amp;Another one|and one more+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">YESNO</p></td>
+		<td class="t2Col"><p class="hcp2">Yes 
+		 or No value</p></td>
+	</tr>
+</table>
+<p>See also <a href="System_Defaults.htm">Defaults</a>.</p>
+<p>&#160;</p>
+<h5>Operator and Result</h5>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Operator</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Result</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">#UV-CODE</p></td>
+		<td class="t2Col"><p class="hcp2">System 
+		 will default with the value of the user defined field specified 
+		 by CODE.</p>
+		<p class="hcp2">For example: #UV-SCAT2</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">#UT-CODE</p></td>
+		<td class="t2Col"><p class="hcp2">As 
+		 above, except that system defaults with the note of the user defined 
+		 field specified by CODE.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.Key incorporation 
+		 note|NOTE#UT-INCORPBY+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">#NOW</p></td>
+		<td class="t2Col"><p class="hcp2">The 
+		 system will default to today's date or time.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Selection Fields</h3>
+<p>This is a listing of specific Master Files, such as officers, shareholders 
+ or interest holders, and the user is required to select one or more of 
+ these files for the generated document. The displayed text (name) may 
+ be edited so that they appear as edited in the generated document. Each 
+ selection field appears in its own folder in the pop up screen.</p>
+<p>&#160;</p>
+<h5>Syntax</h5>
+<p>(+POP.Caption|Type|Preformat\PostFormat+)</p>
+<p>&#160;</p>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Field</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">Caption</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is a mandatory field and is used to identify the field in the 
+		 popup screen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">Type</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is a mandatory field, see Field Type and Description, below, for 
+		 the available options.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">Preformat</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional format for the Master File selection on the screen. 
+		 Any valid Master File formatting option (the #AD-9-1 codes) can 
+		 be used. If omitted, the list is formatted using names as displayed 
+		 on the Master File selection screens (Last Name followed by the 
+		 Initials).</p>
+		<p class="hcp2">When #AD formats 
+		 are used, the program will save the selected Master File codes, 
+		 separated by TAB, so that the formatted values will list through 
+		 table cell (use the #LS formatting option to make it a list). 
+		 In the following example, the names are shown on the selection 
+		 screen, but the address is printed, not the names.</p>
+		<p class="hcp2">(+POP.Mail document 
+		 to|L_OFN_D_0\#AD-5-0+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">PostFormat</p></td>
+		<td class="t2Col"><p class="hcp2">This 
+		 is an optional format applied on the selected Master File (codes) 
+		 after the completion of the selection during the generation of 
+		 the form. Any valid Master File code formatting option can be 
+		 used.</p>
+		<p class="hcp2">If a post-format 
+		 is used, the selection is stored for post-format processing as 
+		 Master File codes, separated by TAB. If no post-format code is 
+		 used, the selection is stored for processing as a list of the 
+		 displayed (edited) values separated by line feeds.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h5>Field Type and Description</h5>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Field 
+		 Type</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">L_OFx_yyy_9</p></td>
+		<td class="t2Col"><p class="hcp2">Lists 
+		 Officers of the entity per the following parameters.</p>
+		<p class="hcp2">x - specifies current, 
+		 resigned or all officers. Valid options are:</p>
+		<p class="hcp4">A = Current BEFORE 
+		 Date Document</p>
+		<p class="hcp4">B = Current ON 
+		 Date Document</p>
+		<p class="hcp4">C = All Current 
+		 from database</p>
+		<p class="hcp4">N = All (both 
+		 current and resigned)</p>
+		<p class="hcp4">R = Resigned ON 
+		 or before Date Document</p>
+		<p class="hcp4">Q = Resigned ON 
+		 or after Date Document</p>
+		<p class="hcp5">yyy - Officer type 
+		 code (or part of it) to be selected. Use D for Directors, S for 
+		 Secretary or D:S for both Directors and Secretaries. You may also 
+		 use M for all officer types starting with M.</p>
+		<p class="hcp2">9 - the number 
+		 of Master Files required to be selected. Valid options are:</p>
+		<p class="hcp4">0 = one or more</p>
+		<p class="hcp4">1 = exactly one</p>
+		<p class="hcp4">2 = two or more</p>
+		<p class="hcp4">3 etc = three 
+		 or more</p>
+		<p class="hcp4">Q = directors 
+		 quorum as entered in the M&amp;A fields</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Example 1: To list 
+		 the directors and secretary present at a meeting, you may place 
+		 the popup field in a table:</p>
+		<table style="border-collapse: separate; border-collapse: separate;" 
+				 cellspacing="0" width="100%" border="1">
+			<col style="width: 31.839%;">
+			<col style="width: 68.161%;">
+			<tr>
+				<td style="border-left-style: Solid; border-top-style: Solid; 
+					 border-right-style: Solid; border-bottom-style: Solid; 
+					 border-bottom-width: 1px; border-right-width: 1px; 
+					 border-left-width: 1px; border-top-width: 1px;"><p class="hcp6">Present at meeting:</p></td>
+				<td style="border-top-style: Solid; border-right-style: Solid; 
+					 border-bottom-style: Solid; border-bottom-width: 1px; 
+					 border-top-width: 1px; border-right-width: 1px;"><p class="hcp6"><span>(+POP.Directors present|L_OFA_D_Q+)</span></p></td>
+			</tr>
+			<tr>
+				<td style="border-left-style: Solid; border-right-style: Solid; 
+					 border-bottom-style: Solid; border-right-width: 1px; 
+					 border-left-width: 1px; border-bottom-width: 1px;"><p class="hcp6">In attendance</p></td>
+				<td style="border-right-style: Solid; border-bottom-style: Solid; 
+					 border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp6">(+POP.Secretary|L_OFA_S_1+), 
+				 Secretary</p></td>
+			</tr>
+		</table>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Example 2: To list 
+		 the directors in a paragraph:</p>
+		<p class="hcp5">(+POP.List Directors 
+		 in paragraph|L_OFC_D_0\#LP-#AD-40-0+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">L_SHx_9</p></td>
+		<td class="t2Col"><p class="hcp2">Lists 
+		 shareholders of the entity per the following parameters.</p>
+		<p class="hcp2">x - specifies current 
+		 shareholders. Valid options are:</p>
+		<p class="hcp4">A = Current BEFORE 
+		 Date Document</p>
+		<p class="hcp4">B = Current ON 
+		 Date Document</p>
+		<p class="hcp4">C = All Current 
+		 from database</p>
+		<p class="hcp4">N = All from database</p>
+		<p class="hcp5">9 - the number 
+		 of Master Files required to be selected. See L_OFx_yyy_9, above, 
+		 for more information. The option Q is not valid for this field 
+		 type.</p>
+		<p class="hcp5">For example:</p>
+		<p class="hcp5">(+POP.Shareholders 
+		 List|L_SHA_0+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">L_INx_yyy_9</p></td>
+		<td class="t2Col"><p class="hcp2">Lists 
+		 interest holders of the entity. See L_OFx_yyy_9, above, for more 
+		 information, replacing the interest type for the officer type.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.Beneficial 
+		 Owners List|L_INA_B_0+)</p>
+		<p class="hcp2">(+POP.Ultimate 
+		 Owners List|L_INA_U_0+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">L</p></td>
+		<td class="t2Col"><p class="hcp2">Lists 
+		 selection made for the popup field in another area of the form. 
+		 The caption has to be the same as the popup field used for the 
+		 selection.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.Chairman|L_OFA_D_1\#AD-40-0+) 
+		 - displays the list of directors for user to select one of them 
+		 as the Chairman.</p>
+		<p class="hcp2">(+POP.Chairman|L\#AD-40-0+) 
+		 - user's selection for Chairman will be placed here.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">L*</p></td>
+		<td class="t2Col"><p class="hcp2">Display 
+		 the selected values from the previous popup field in the same 
+		 format:</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+POP.SelectDirector|L*+) 
+		 </p></td>
+	</tr>
+</table>
+<p><span style="font-weight: bold;">Note: </span>F can be placed in front 
+ of the L_. If F is present, the values in the popup screen can be formatted 
+ and edited. If there is no F, the values in the popup screen will be displayed 
+ as default and cannot be changed if having the format option. For example, 
+ <span class="hcp7">(+POP.Select any Director|</span><span 
+	 style="-webkit-font-smoothing: antialiased; box-sizing: border-box; 
+	 font-weight: bold;">FL_</span><span class="hcp7">OFC_D_1\#AD-40-0+).</span></p>
+<p>See also <a href="Format_Options.htm">Format Options</a>.</p>
+<p>&#160;</p>
+<h3>Optional Paragraphs</h3>
+<p>Optional paragraphs require the user to keep or discard paragraphs as 
+ required, and are useful for documents with multiple different clauses. 
+ If there are document fields within the paragraph, they will appear together 
+ with other document fields in the first folder of the popup screen.</p>
+<p>&#160;</p>
+<h5>Syntax</h5>
+<p>At the beginning of the optional paragraph text:</p>
+<p>(+BM.BMNAME=Category name|Paragraph name\FORMAT+)</p>
+<p>&#160;</p>
+<p>and at the end:</p>
+<p>(+BM.BMNAME=END+)</p>
+<p class="MsoNormal" style="margin-left: 40px;">&#160;</p>
+<p>&#160;</p>
+<table class="Table1" style="vertical-align: top; border-left-width: 2px; 
+		 border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="95%">
+	<col style="width: 20%;">
+	<col style="width: 75%;">
+	<tr class="t1st">
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Field</p></td>
+		<td><p lang="en-UK" xml:lang="en-UK" class="hcp2">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">BMNAME</p></td>
+		<td class="t2Col"><p class="hcp2">Unique 
+		 name given to the paragraph, used as the bookmark name.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">Category 
+		 name</p></td>
+		<td class="t2Col"><p class="hcp2">Enables 
+		 grouping of multiple paragraph under this heading.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp2">Paragraph 
+		 name</p></td>
+		<td class="t2Col"><p class="hcp2">Description 
+		 to be shown on the popup screen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp2">Format</p></td>
+		<td class="t2Col"><p class="hcp2">When 
+		 a optional paragraphs is loaded on document generation, all options 
+		 are selected. Add NOCHECK to de-select non-default paragraphs.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">(+BM.NNOTE=Paragraph|Item 
+		 description\NOCHECK+)</p>
+		<p class="hcp2">&#160;</p>
+		<p class="hcp2">Additional option 
+		 in the template allowing you to define the number of options are 
+		 allowed to be selected in the optional paragraph.</p>
+		<p class="hcp2">(<span class="hcp8">+BM.IndName=Individual|Select 
+		 this signatory is indvidual\NOCHECK\GRP1_1+)</span></p>
+		<p class="hcp9">(+BM.EntName=Entity|Select 
+		 this if signatory is Entity\GRP1_1+)</p>
+		<p class="hcp9">(+BM.CorpName=Company|Select 
+		 this if the paragraph is described on Company\GRP2_1+)</p>
+		<p class="hcp9">(+BM.TrustName=Trust| 
+		 Select this if the paragraph is described on Trust\NOCHECK\GRP2_1+)</p>
+		<p class="hcp9">(+BM.PartnershipName=Partnership| 
+		 Select this if the paragraph is described on Partnership\NOCHECK\GRP2_1+)</p>
+		<p class="hcp9">&#160;</p>
+		<p class="hcp9">GRP1 
+		 is the example of grouping on the optional paragraph.</p>
+		<p class="hcp9">XXX_y 
+		 where XXX is the grouping name and &#160;y is indicating number 
+		 of selections as the below:</p>
+		<p class="MsoNormal" style="margin-left: 40px; mso-fareast-language: X-NONE;"><span class="hcp8">0 = one or more</span></p>
+		<p class="MsoNormal" style="margin-left: 40px; mso-fareast-language: X-NONE;">1 
+		 = exactly one</p>
+		<p class="MsoNormal" style="margin-left: 40px; mso-fareast-language: X-NONE;">2 
+		 = two or more</p>
+		<p class="MsoNormal" style="margin-left: 40px;"><span class="hcp8">3 
+		 etc = three or more</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>When refreshing, bookmarks are set around the start code and the END 
+ marker.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Examples</h6>
+<p>(+BM.NNOTE=Notes|Entitled to proxy form+)</p>
+<p>NOTE: Any Member entitled to attend and vote at the Meeting is entitled 
+ to appoint a proxy to attend and (on a poll), vote on &#160;his behalf; 
+ a proxy need not be a Member. The instrument appointing a proxy should 
+ be deposited at the Registered Office of the Company not less than 24/48 
+ hours before the time fixed for holding the Meeting or adjourned Meeting. 
+ (+BM.NNOTE=END+)</p>
+<p>(+BM.NTEXT=Notes|Notice text+) NOTICE IS HEREBY GIVEN that an Extraordinary 
+ General Meeting of the Company will be held on (+EVT.TransDate\DLB+) at 
+ (+DF.PRESEN\#AD-2-1+) for the purpose of considering and, if thought fit, 
+ passing the following resolution as an Special Resolution: (+BM.NTEXT=END+)</p>
+<p>(+BM.FACCT=Accounts|Do file accounts+) It is decided to file accounts 
+ and to present them to the shareholders when the time is appropriate. 
+ (+BM.FACCT=END+)</p>
+<p>(+BM.NOACCT=Accounts|Accounts presented at a later date+) It is decided 
+ not to file any accounts as they are not ready. (+BM.NOACCT=END+)</p>
+<p>&#160;</p>
+<p><span class="hcp1">Tip</span>: To 
+ review how Word has set the bookmarks during the form 'Refresh', go to 
+ Tools - Options - View and tick 'Show Bookmark'. You will see square brackets 
+ around the book-marked text. This function is implemented for Word 97/2000 
+ and above.</p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Document_Libraries.htm">Document Libraries</a> &gt; <a href="Coding_a_Word_Template.htm">Coding a Word Template</a> &gt; Popup Fields</p>
+<p class="hcp10">&#160;</p>
+<p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp10">Version: 8.0.2022.09.20</p>
+</body>
+</html>

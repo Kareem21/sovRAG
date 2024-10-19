@@ -1,0 +1,229 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="robots" content="NOODP">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Approval</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Approval</h1>
+<p>If the 'No Approval Required for Configuration Change' option is not 
+ ticked in System Default &gt; Engage Servicing Portal, then configurations 
+ of organisations and users require approvals which can be performed via 
+ these screens:</p>
+<ul class="hcp1">
+	<li><p>Viewpoint Connect - Home &gt; Configuration &gt; Engage Servicing 
+	 Portal &gt; Approval &gt; Organisations Approval.</p></li>
+	<li><p>Viewpoint Connect - Home &gt; Configuration &gt; Engage Servicing 
+	 Portal &gt; Approval &gt; Users Approval.</p></li>
+</ul>
+<p>In both screens, you will find list of items relating to organisations 
+ or users that require approval. Note that an approver can only approve 
+ items created by another user.</p>
+<p>&#160;</p>
+<h2>Organisations Approval</h2>
+<p>This screen allows for approval of organisations and file configurations.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The filters apply to the organisation list.</p>
+<ul class="hcp1">
+	<li><p>Organisation status - You can choose to view organisations that 
+	 have been approved, pending approval or all.</p></li>
+	<li><p>Organisation Type &#160;- You can choose to view a specific 
+	 type or all.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Organisation list</p>
+<p>The list shows all organisations that have been set up.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the Organisation list. Click on the relevant command 
+ buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Select All</span> - Click this 
+	 to select all listed organisations.</p></li>
+	<li><p><span class="hcp2">De-select All</span> - Click 
+	 this to de-select all selection.</p></li>
+	<li><p><span class="hcp2">Approve Organisation</span> 
+	 - Click to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">approve</a> 
+	 selected organisation item.</p>
+	<div class="droptext" id="POPUP411378745" style="display: none;">
+		<p>Click Yes to confirm the approval.</p>
+		<p>The Master File screen will appear with a list of Master File(s) 
+		 pending approval associated with the organisation. If there is 
+		 no Master File to be approved, the list will be empty.</p>
+		<p>Once approved, it will not be seen in the list any more.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 The deletion of an organisation will not be approved if there 
+		 are:</p>
+		<ul class="hcp1">
+			<li><p>users belonging to the organisation</p></li>
+			<li><p>users linked to the organisation via the User - Organisation 
+			 authority setting</p></li>
+			<li><p>file configurations linked to the organisation</p></li>
+			<li><p>Master Files relating to the organisation</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">File Configuration list</p>
+<p>This shows the files for the selected organisation.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the File Configuration list. Click on the relevant command 
+ buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Select All</span> - Click this 
+	 to select all listed file configuration.</p></li>
+	<li><p><span class="hcp2">De-select All</span> - Click 
+	 this to de-select all selection.</p></li>
+	<li><p><span class="hcp2">Approve File Configuration</span> 
+	 - Click to <a class="dropspot" href="javascript:TextPopup(this)" id="a11">approve</a> 
+	 selected file configuration item.</p>
+	<div class="droptext" id="POPUP4113787451" style="display: none;">
+		<p>The Master File screen will appear with a list of related Master 
+		 File(s) that are included, excluded or deleted.</p>
+		<p>Click Approve.</p>
+		<ul class="hcp1">
+			<li><p>If the Master File's record status was 'Included', it 
+			 will be updated to 'Approved'.</p></li>
+			<li><p>If the Master File's record status was 'Excluded', it 
+			 will be updated to 'Approved Excluded'.</p></li>
+			<li><p>If the Master File's record status was 'Deleted', the 
+			 Master File will be removed from the list.</p></li>
+		</ul>
+		<p>A Files Approval Summary message will be displayed to show the 
+		 following:</p>
+		<ul class="hcp1">
+			<li><p>The number of Master File now Approved.</p></li>
+			<li><p>The number of Master File now Approved Excluded.</p></li>
+			<li><p>The number of Master File now deleted from the list.</p></li>
+			<li><p>The number of Master File that failed to be approved.</p></li>
+			<li><p>The number of Master File still pending approval.</p></li>
+			<li><p>The list of organisations pending approval with no related 
+			 Master Files.</p></li>
+		</ul>
+		<p><span class="hcp2" style="font-weight: bold; font-style: italic;">Note</span>: 
+		 The deletion of a Master File will not be approved if there are:</p>
+		<ul class="hcp1">
+			<li><p>relations associated to the Master File.</p></li>
+			<li><p>document shares related to the Master File.</p></li>
+			<li><p>summary pages linked to the Master File.</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h2>Users Approval</h2>
+<p>This screen allows for approval of users and User - Organisations.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The filters apply to the user list.</p>
+<ul class="hcp1">
+	<li><p>User status - You can choose to view users that have been approved, 
+	 pending approval or all.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Select button</p>
+<p>This allows for additional criteria to be applied to the user list.</p>
+<p>&#160;</p>
+<p class="FldExplain">User list</p>
+<p>The list shows all users that have been set up.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User list. Click on the relevant command button to 
+ perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Select All</span> - Click this 
+	 to select all listed users.</p></li>
+	<li><p><span class="hcp2">De-select All</span> - Click 
+	 this to de-select all selection.</p></li>
+	<li><p><span class="hcp2">Approve User</span> - Click 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">approve</a> 
+	 selected user item.</p>
+	<div class="droptext" id="POPUP411376455" style="display: none;">
+		<p>Click Yes to confirm the approval.</p>
+		<p>Once approved, it will not be seen in the list any more. All 
+		 User - Organisations relating to the user will be automatically 
+		 approved as long as the user listed in the Change by column is 
+		 not the approver.</p>
+		<p>&#160;</p>
+		<p><span class="hcp3">Note</span>: 
+		 If approving a deletion, the record will be removed permanently.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">User - Organisation list</p>
+<p>This shows the organisations that the selected user is in.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User &#160;- Organisation list. Click on the relevant 
+ command buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Select All</span> - Click this 
+	 to select all listed user - organisations.</p></li>
+	<li><p><span class="hcp2">De-select All</span> - Click 
+	 this to de-select all selection.</p></li>
+	<li><p><span class="hcp2">Approve User - Organisation</span> 
+	 - Click to <a class="dropspot" href="javascript:TextPopup(this)" id="a4">approve</a> 
+	 selected User - Organisation item. If all the User - Organisation 
+	 for a particular user have been approved, the associated user will 
+	 also be approved.</p>
+	<div class="droptext" id="POPUP411383442" style="display: none;">
+		<p>Click Yes to confirm the approval. This will set the record 
+		 status to Approved.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Viewpoint 
+	 Engage Servicing Portal</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; Approval</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP411378745');
+	TextPopupInit('a11','POPUP4113787451');
+	TextPopupInit('a3','POPUP411376455');
+	TextPopupInit('a4','POPUP411383442');
+//]]></script>
+</body>
+</html>

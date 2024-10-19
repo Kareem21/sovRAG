@@ -1,0 +1,235 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="MS-HAID" content="Archive CoA or BC">
+<meta name="MS-HAID" content="Change CoA or BC">
+<meta name="MS-HAID" content="Chart of Accounts">
+<meta name="MS-HAID" content="Base Currency">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Archive/Change CoA or BC</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Archive/Change CoA or BC</h1>
+<p>The functions here provide for the archiving of old journals and the 
+ changing of the Chart of Accounts and/or base currency. The CoA and base 
+ currency can be changed if you did not make an appropriate choice of either 
+ during the <a href="Account_File_-_Setup.htm">setup</a> process or if 
+ the requirements of the Account File have since changed. This should only 
+ be done if necessary, since it is a complex process of carrying forward 
+ account balances, account mapping and currency conversions.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">How do I view 
+ archived journals?</a></p>
+<div class="droptext" id="POPUP379473571" style="display: none;">
+	<p>The list of all available archives for an Account File can be seen 
+	 in the Archives section. Follow the steps below to access the Archive 
+	 section:</p>
+	<ol class="hcp1">
+		<li><p>In File Maintenance screen, click the Accounts Ribbon button.</p></li>
+		<li><p>Select Account tab.</p></li>
+		<li><p>Click the Browse button for Select Ledger.</p></li>
+		<li><p>Select the archive from the Archive section.</p></li>
+		<li><p>Click OK.</p></li>
+		<li><p>The journals will be loaded for viewing.</p></li>
+	</ol>
+	<p><img src="../ArchiveChange1.png" alt="" style="border: none;" border="0"></p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Archive journals and create a summary journal for 
+ the opening balance</p>
+<p>This option is used to archive existing journals and create a new opening 
+ balance for all accounts accept Account Type 3 (Expense Posting) and Account 
+ Type 4 (Income Posting). </p>
+<p>Opening balance for Retained Earnings (Account Type 9 - System Control 
+ Account) will be transferred to the System Suspense Account defined in 
+ the Nominal Account Template. Refer to <a href="Chart_of_Accounts_-_Templates_Edit.htm">Chart 
+ of Accounts - Templates - Edit</a>.</p>
+<p>Selecting this will activate the Change of 'Base Currency' of account 
+ file option and the Change the 'Chart of Account' template - allow to 
+ change (map) of the nominal account option (see below). This option can 
+ be used in conjunction with any of the other options.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">How do I use 
+ this option?</a></p>
+<div class="droptext" id="POPUP379453463" style="display: none;">
+	<ol class="hcp1">
+		<li><p>Click Next - Set new details &gt;.</p></li>
+		<li><p>Enter the required information:</p>
+		<ul class="hcp2">
+			<li><p>Base Currency - This field displays the existing base 
+			 currency for the Account File, and is disabled for the archiving 
+			 process.</p></li>
+			<li><p>Conversion Rate - This exchange rate field is disabled 
+			 for this process.</p></li>
+			<li><p>Chart of Accounts - This field displays the Chart of 
+			 Accounts currently used for the Account File, and is disabled 
+			 for this process.</p></li>
+			<li><p>Calendar - This shows the calendar used for the Account 
+			 File and is disabled for this process.</p></li>
+			<li><p>Archive 'cut-off' Date - Enter the cut-off date. The 
+			 date entered must be greater than or equal to the journal 
+			 date of the last draft journal or final journal. All journals 
+			 entered on or before this date will be archived.</p></li>
+		</ul></li>
+		<li><p>Click Next - Archive and perform changes &gt;.</p></li>
+		<li><p>As the process cannot be reversed, you will need to confirm 
+		 the action in order to proceed. Click Yes.</p></li>
+		<li><p>Click Close to exit the screen when the process is completed.</p></li>
+	</ol>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Change the 'Base Currency' of the account file</p>
+<p>Select this to change the base currency of the Account File. This option 
+ is only possible if the Archive journals and create a summary journal 
+ for the opening balance option (see above) has been selected as well.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">How do I use 
+ this option?</a></p>
+<div class="droptext" id="POPUP379447166" style="display: none;">
+	<ol class="hcp1">
+		<li><p>Click Next - Set new details &gt;.</p></li>
+		<li><p>Enter the required information:</p>
+		<ul class="hcp2">
+			<li><p>Base Currency - Enter the new base currency.</p></li>
+			<li><p>Conversion Rate - Enter the conversion rate from the 
+			 existing base currency to the new base currency.</p></li>
+			<li><p>Chart of Accounts - This field displays the Chart of 
+			 Accounts currently used for the Account File, and is disabled 
+			 for this process.</p></li>
+			<li><p>Calendar - This shows the calendar used for the Account 
+			 File and is disabled for this process.</p></li>
+			<li><p>Archive 'cut-off' Date - Enter the cut-off date. All 
+			 journals entered on or before this date will be archived.</p></li>
+		</ul></li>
+		<li><p>Click Next - Archive and perform changes &gt;.</p></li>
+		<li><p>As the process cannot be reversed, you will need to confirm 
+		 the action in order to proceed. Click Yes.</p></li>
+		<li><p>Click Close to exit the screen when the process is completed.</p></li>
+	</ol>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Change the 'Chart of Account' template - all the 
+ existing (used) accounts exist in the new template</p>
+<p>This option is used to change the Chart of Accounts template currently 
+ used for the Account File without changing any of the existing accounts. 
+ The system will map the existing accounts to the accounts in the new template 
+ and flag the ones that do not match. This option cannot be selected together 
+ with the Change the 'Chart of Account' template - allow to change (map) 
+ of the nominal account option (see below).</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">How do I use 
+ this option?</a></p>
+<div class="droptext" id="POPUP379459447" style="display: none;">
+	<ol class="hcp1">
+		<li><p>Click Next - Set new details &gt;.</p></li>
+		<li><p>Enter the required information:</p>
+		<ul class="hcp2">
+			<li><p>Base Currency - This field displays the existing base 
+			 currency for the Account File, and is disabled for this process.</p></li>
+			<li><p>Conversion Rate - This exchange rate field is disabled 
+			 for this process.</p></li>
+			<li><p>Chart of Accounts - Select the new Chart of Accounts.</p></li>
+			<li><p>Calendar - This shows the calendar used for the Account 
+			 File and is disabled for this process.</p></li>
+			<li><p>Archive 'cut-off' Date - This field is disabled for 
+			 this process.</p></li>
+		</ul></li>
+		<li><p>Click Next - Validate Account Mapping &gt;.</p></li>
+		<li><p>If any of the accounts are mapped to a red code, it means 
+		 that the new Chart of Accounts does not have this account listed. 
+		 You must set it up before you can proceed. Alternatively, use 
+		 the Change the 'Chart of Account' template - allow to change (map) 
+		 of the nominal account option (see below).</p></li>
+		<li><p>If all codes have been correctly mapped, click Next - Perform 
+		 changes &gt;.</p></li>
+		<li><p>As the process cannot be reversed, you will need to confirm 
+		 the action in order to proceed. Click Yes.</p></li>
+		<li><p>Click Close to exit the screen when the process is completed.</p></li>
+	</ol>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Change the 'Chart of Account' template - allow to 
+ change (map) of the nominal account</p>
+<p>This option is used to change the Chart of Accounts template currently 
+ used for the Account File, with the added flexibility of allowing you 
+ to map the existing accounts to the accounts in the new template. This 
+ option is only possible if you choose to Archive journals and create a 
+ summary journal for the opening balance (see above) as well.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">How do I use 
+ this option?</a></p>
+<div class="droptext" id="POPUP379459294" style="display: none;">
+	<ol class="hcp1">
+		<li><p>Click Next - Set new details &gt;.</p></li>
+		<li><p>Enter the required information:</p>
+		<ul class="hcp2">
+			<li><p>Base Currency - This field displays the existing base 
+			 currency for the Account File, and is disabled for this process.</p></li>
+			<li><p>Conversion Rate - This exchange rate field is disabled 
+			 for this process.</p></li>
+			<li><p>Chart of Accounts - Select the new Chart of Accounts.</p></li>
+			<li><p>Calendar - This shows the calendar used for the Account 
+			 File and is disabled for this process.</p></li>
+			<li><p>Archive 'cut-off' Date - Enter the cut-off date. All 
+			 journals entered on or before this date will be archived.</p></li>
+		</ul></li>
+		<li><p>Click Next - Validate Account Mapping &gt;.</p></li>
+		<li><p>Viewpoint will automatically map the old accounts to the 
+		 new accounts, with unmapped accounts displayed in red. Select 
+		 the appropriate accounts from the list for the unmapped accounts 
+		 and do the same if you want to change the automatically mapped 
+		 ones.</p></li>
+		<li><p>Once all the codes have been correctly mapped, click Next 
+		 - Perform changes &gt;.</p></li>
+		<li><p>As the process cannot be reversed, you will need to confirm 
+		 the action in order to proceed. Click Yes.</p></li>
+		<li><p>Click Close to exit the screen when the process is completed.</p></li>
+	</ol>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Archives.htm">Archives</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Account_File_-_Setup.htm">Account File</a> &gt; <a href="Recalculate_Calendar.htm">Functions</a> &gt; Archive/Change CoA or BC</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP379473571');
+	TextPopupInit('a1','POPUP379453463');
+	TextPopupInit('a3','POPUP379447166');
+	TextPopupInit('a4','POPUP379459447');
+	TextPopupInit('a5','POPUP379459294');
+//]]></script>
+</body>
+</html>

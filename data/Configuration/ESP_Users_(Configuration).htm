@@ -1,0 +1,254 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="robots" content="NOODP">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Users (Configuration)</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Users (Configuration)</h1>
+<p>This is where you configure users for CP-WP but approvals are to be 
+ performed in <a href="ESP_Organisations_(Approval).htm">Configuration 
+ &gt; Engage Servicing Portal &gt; Approval &gt; Users</a>.</p>
+<ul class="hcp1">
+	<li><p>a user can be assigned to an Organisation(s) and/or Group(s).</p></li>
+	<li><p>a user will be able to see all Master Files belonging to their 
+	 Organisation in ESP Web portal under Home &gt; Entities. If the user 
+	 is assigned to a Group with more than one Organisation, the user will 
+	 be able to view all Master Files within those Organisations.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The following filters apply to the user list:</p>
+<ul class="hcp1">
+	<li><p>User status - Select to view only active, inactive or all users.</p></li>
+	<li><p>Organisation Type - Select to view users that are assigned to 
+	 a specific Organisation Type.</p></li>
+	<li><p>Organisation - Select to view users that are in a specific Organisation.</p></li>
+</ul>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">User list</p>
+<p>The list shows all users that have been set up manually, added through 
+ the Enable Auto Load Profile option in <a href="System_Defaults_-_Engage_Servicing_Portal.htm">System 
+ Defaults &gt; Engage Servicing Portal</a>, or through the &#160;<a href="Front-Office_Import_Sheet.htm">Excel 
+ Import Sheet for ESP</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User list. Click on the relevant command button to 
+ perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click&#160;this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">add</a> 
+	 a user. The record status will be set to 'New' until the record is 
+	 approved.</p>
+	<div class="droptext" id="POPUP419766458" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the details.</p></li>
+			<li><p>Click Update.</p></li>
+			<li><p>In the Assign/Reset Password screen, specify the password 
+			 settings. The password must follow the password requirements 
+			 as set in Configuration &gt; Settings &gt; System Defaults 
+			 &gt; Engage Servicing Portal in CP-AD.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>: 
+		 A new User - Organisation record will be automatically created 
+		 for this user. See User - Organisation for more details.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected user record. The user record status will be set 
+	 to 'Edited' until the change is approved.<br>
+	<br>
+	<span class="hcp4">Note</span>: If 
+	 you choose to edit a user record set to be deleted, a message will 
+	 appear asking for confirmation to proceed. Clicking 'Yes' allows you 
+	 to edit the record and change the record status from 'Deleted' to 
+	 'Edited'. Otherwise, the record status remains as 'Deleted'.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected user. The record status will be set to 'Deleted'.</p></li>
+	<li><p><span class="hcp2">Password -</span> Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a13" style="font-weight: normal;">reset</a> 
+	 the password. This button is disabled for Auto Load Profile users.</p>
+	<div class="droptext" id="POPUP417972076" style="display: none;">
+		<ol class="hcp3">
+			<li><p>In the Assign/Reset Password screen, tick the Change 
+			 password option.</p></li>
+			<li><p>Enter the new password in New Password and Confirm Password 
+			 field.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>: 
+		 This will not send a notification e-mail to the user after the 
+		 password reset/change.</p>
+		<p>&#160;</p>
+		<p style="font-weight: bold;">Other Options</p>
+		<ul class="hcp1">
+			<li><p>Auto generate password and e-mail user login link - 
+			 This will send a password reset e-mail to the ESP user.</p></li>
+			<li><p>Require password change on next login - Tick this to 
+			 prompt the user to change the password on the next login session.</p></li>
+			<li><p>User login active - Tick this to set the user account 
+			 as active. If this is not ticked, the user account becomes 
+			 inactive.</p></li>
+			<li><p>Allow Select - This is not applicable for ESP.</p></li>
+			<li><p>Administrator Rate - This is not applicable for ESP.</p></li>
+			<li><p>Reset secret key - Tick this to reset the secret key 
+			 for the ESP user. This option is applicable only when the 
+			 'Enable Two-Step Verification' option is enabled in the Configuration 
+			 &gt; Settings &gt; System Defaults &gt; Engage Servicing Portal. 
+			 A reset on secret key is required when the user needs a new 
+			 unique secret key to register him/her into the mobile authenticator 
+			 app. This could happen when the user switches to another mobile 
+			 device or has reinstalled the authenticator app. </p></li>
+			<li><p>Reset login attempt - Tick this to reset the user's 
+			 password attempts to zero.</p></li>
+		</ul>
+ </div></li>
+	<li><p><span class="hcp2">Import Users</span> - Click 
+	 this to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">import 
+	 users</a> from VP-BO. This will copy the User Code, 
+	 User Name, E-mail address and Telephone number. This is not available 
+	 when the Enable Auto Load Profile option is ticked.</p>
+	<div class="droptext" id="POPUP419907316" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Select the VP-DB database where the user records are 
+			 to be imported from.</p></li>
+			<li><p>Select the user group. Note that only active user groups 
+			 will be displayed.</p></li>
+			<li><p>Select the user record(s) to import:</p>
+			<ul class="hcp1">
+				<li><p>Tick the checkbox for the user record(s) to import; 
+				 or</p></li>
+				<li><p>Click Select All to select all displayed user records. 
+				 Note that if the user already exists in CP-AD, this will 
+				 not be selected.</p></li>
+			</ul></li>
+			<li><p>In ‘Assign Users to Organisation’ field, select an Organisation 
+			 to which the imported users would be assigned to. <span class="hcp4">Note</span>: As 'Import Users' function 
+			 is used to import existing Viewpoint users from the Back-Office 
+			 (internal users), only 'Internal' type Organisations will 
+			 be listed in the 'Assign Users to Organisation' drop-down 
+			 list.</p></li>
+			<li><p>Click Import.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: The 
+ Edit, Delete and Password command buttons are deactivated if the selected 
+ user was added through Enable Auto Load Profile.</p>
+<p>&#160;</p>
+<p class="FldExplain">User - Organisation list</p>
+<p>This lists the 'User - Organisation' records that define the <a href="ESP_User_Roles.htm">User 
+ Roles</a> on CP-WP. These may have been added manually, through the Enable 
+ Auto Load Profile option or the Excel Import Sheet for ESP. </p>
+<p>For user that belongs to multiple Organisation (internal/external) and 
+ Groups, the User Role that is assigned for 'Group' supersedes all the 
+ other User Roles that are assigned to 'Internal' or 'External' Organisations 
+ where the user is assigned to. For example, User A is assigned to a 'Group' 
+ with User Role 'Normal User'. At the same time, the User is also assigned 
+ to an 'Organisation' that is part of the Group with the User Role 'Web 
+ Portal Manager'. The User Role for the 'Group' will supersede the 'Organisation'. 
+ Hence, User A will have User Role 'Normal User' authority for that Organisation.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the User - Organisation list. Click on the relevant command 
+ buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a2">add</a> 
+	 a User to the Organisation. The 'Record Status' will be set to 'New' 
+	 until the record is approved. The New button is disabled if the user 
+	 belongs to an External organisation.<br>
+	<span class="hcp4">Note</span>: The 
+	 approval is only applicable if 'No Approval Required for Configuration 
+	 Change' option is disabled in the Engage Servicing Portal settings 
+	 screen.</p>
+	<div class="droptext" id="POPUP419751835" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the required details.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 make changes to the User record. The 'Record Status' will also be 
+	 set to 'Edited' until the change is approved. If you choose to edit 
+	 a user record set to be deleted, a message will appear asking for 
+	 confirmation to proceed. Clicking 'Yes' allows you to edit the record 
+	 and change the 'Record Status' from 'Deleted' to 'Edited'. Otherwise, 
+	 the 'Record Status' remains as 'Deleted'.<br>
+	<span class="hcp4">Note</span>: The 
+	 approval is only applicable if 'No Approval Required for Configuration 
+	 Change' option is disabled in the Engage Servicing Portal settings 
+	 screen.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected User from the Organisation. The 'Record Status' 
+	 will be set to 'Deleted'. This button is disabled if the selected 
+	 Organisation is the User's default Organisation.</p></li>
+</ul>
+<p><span class="hcp4">Note</span>: All 
+ command buttons are deactivated if the selected user is added through 
+ Enable Auto Load Profile option. </p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Viewpoint 
+	 Engage Servicing Portal</a></p></li>
+	<li><p><a href="ESP_User_Roles.htm">ESP User Roles</a></p></li>
+	<li><p><a href="Lookup_Tables.htm">Lookup Tables</a></p></li>
+	<li><p><a href="System_Defaults_-_Engage_Servicing_Portal.htm">System 
+	 Defaults - Engage Servicing Portal</a></p></li>
+	<li><p><a href="Front-Office_Import_Sheet.htm">Front-office Import 
+	 Sheet</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; <a href="ESP_Organisations_(Configuration).htm">Configuration</a> &gt; Users (Configuration)</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP419766458');
+	TextPopupInit('a13','POPUP417972076');
+	TextPopupInit('a3','POPUP419907316');
+	TextPopupInit('a2','POPUP419751835');
+//]]></script>
+</body>
+</html>

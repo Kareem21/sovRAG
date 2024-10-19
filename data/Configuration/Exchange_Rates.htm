@@ -1,0 +1,180 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Exchange Rates">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Exchange Rates</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+span.hcp3 { font-weight:bold; }
+ol.hcp4 { list-style:decimal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Exchange Rates (AD/PM)</h1>
+<p>The Exchange Rates screen contains frequently used conversion rates 
+ in the form of a table. The rate is picked up when you are working in 
+ Entity Administration, Practice Management or Accounting. &#160;It is 
+ available in Viewpoint - Home screen. To access it:</p>
+<ul class="hcp1">
+	<li><p>Using Ribbon - Click EA Global Ribbon button, select Global 
+	 Change &gt; Exchange Rates (AD/PM)</p></li>
+	<li><p>Using Section Menu - Click Home &gt; Entity Administration &gt; 
+	 &#160;Exchange Rates (AD/PM)</p></li>
+</ul>
+<p>There are two different exchange rate tables:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Exchange 
+	 Rates (AD/PM)</a> - This is used for Entity Administration 
+	 and Practice Management.</p>
+	<div class="droptext" id="POPUP383216516" style="display: none;">
+		<p>To access:</p>
+		<ul class="hcp1">
+			<li><p>In Viewpoint - Home screen, click Home &gt; Entity Administration 
+			 &gt; Exchange Rates (AD/PM); or</p></li>
+			<li><p>In Viewpoint - Home screen, click Home &gt; Practice 
+			 Management &gt; Exchange Rates (AD/PM)</p></li>
+		</ul>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Exchange 
+	 Rates (CA)</a> - This is used for Accounting.</p>
+	<div class="droptext" id="POPUP383233457" style="display: none;">
+		<p>To access, in Viewpoint - Home screen, click Home &gt; Client 
+		 Accountant &gt; Exchange Rates (CA).</p>
+		<p>The most recent rate entered on (if available), or before the 
+		 journal date is then picked up when entering journals or when 
+		 reconciling them. You can manually update the exchange rates, 
+		 or use an Excel spreadsheet to <a href="../Client_Accountant/Import_Excel_Spreadsheet.htm">import</a> 
+		 the latest rates.</p>
+ </div></li>
+</ul>
+<p>If you wish to use the same exchange rate table for Practice Management 
+ and Accounting, tick the Use Accounting Exchange Rates option in Configuration 
+ &gt; Settings &gt; <a href="System_Defaults_-_General_Master_File.htm">System 
+ Defaults &gt; General/Master File.</a></p>
+<p>&#160;</p>
+<p class="FldExplain">Rate Type</p>
+<p>Click to switch the rate type. This is seen in both Exchange Rates (AD/PM) 
+ and Exchange Rate (CA) screens if the option 'Use Accounting Exchange 
+ Rates' is enabled in System Defaults. Otherwise, you will see this ONLY 
+ in Exchange Rates (CA) screen. The rate types are set up in Account Exchange 
+ Rate Types [AEXT] lookup table.</p>
+<p><span class="hcp2">Note</span>: Different 
+ rate type is only applicable for Accounting component where you can set 
+ different rate type for different Account File. In Entity Administration 
+ and Practice Management components, the rate type will always be Default 
+ Rates [0] even if you choose to use Exchange Rates (CA) throughout Viewpoint.</p>
+<p>&#160;</p>
+<p class="FldExplain">Exchange Rate table</p>
+<p>This lists the rates that you have set up.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp3">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">create</a> 
+	 a new exchange rate.</p>
+	<div class="droptext" id="POPUP383218114" style="display: none;">
+		<ol class="hcp4">
+			<li><p>Enter the details for the new exchange rate:</p>
+			<ul class="hcp1">
+				<li><p>Base Code - Select the base currency.</p></li>
+				<li><p>To Code - Select the conversion currency.</p></li>
+				<li><p>Rate - Enter the rate of conversion.</p></li>
+				<li><p>Date of Rate - Enter the date for the rate.</p></li>
+			</ul></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p><span class="hcp2">Note</span>: 
+		 Once you have created an exchange rate, when you click on it, 
+		 the top of the table will show you the reverse rate.</p>
+		<p>If you are using multi-currency rate list, you need to ensure 
+		 that the reverse rate for each currency exchange is set up. This 
+		 is because the system cannot utilize the reverse rate displayed 
+		 at the top.</p>
+ </div></li>
+	<li><p><span class="hcp3">Delete</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a2">delete</a> 
+	 the selected exchange rate.</p>
+	<div class="droptext" id="POPUP383230388" style="display: none;">
+		<p>Click Yes to confirm the deletion.</p>
+ </div></li>
+	<li><p><span class="hcp3">Update</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">update</a> 
+	 changes made to exchange rate(s).</p>
+	<div class="droptext" id="POPUP383216560" style="display: none;">
+		<ol class="hcp4">
+			<li><p>In Exchange Rate Update screen, click in the Rate column 
+			 of the exchange rate that you want to update.</p></li>
+			<li><p>Enter the new rate.</p></li>
+			<li><p>The Date of Rate will default to today's date but you 
+			 can change this if necessary.</p></li>
+			<li><p>Repeat steps 1 - 3 for all other exchange rates you 
+			 want to update.</p></li>
+			<li><p>Click Update.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+		<p><span class="hcp2">Note</span>: 
+		 If the difference between the old rate and the new rate is more 
+		 than ten percent, a prompt will appear. Click Yes to continue 
+		 with the change. If you click No, the new rate will not be saved.</p>
+		<p>This is due to Exchange Rate reasonableness check that will 
+		 compare the new exchange rate with the existing one.</p>
+ </div></li>
+	<li><p><span class="hcp3">Cancel</span> - Click this 
+	 to cancel changes made.</p></li>
+	<li><p><span class="hcp3">History</span> - Click this 
+	 to view previous rates for the selected exchange rate.</p></li>
+</ul>
+
+ <p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 2)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"../Client_Accountant/Draft_Journals.htm\">Accounting</a> &gt; Exchange Rates (CA)</p>");
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"../Practice_Manager/Posting_control_settings.htm\">Practice Management</a> &gt; Exchange Rates (AD/PM)</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"../Shared/Address_Card_Maintenance.htm\">Entity Administration</a> &gt; Exchange Rates (AD/PM)</p>");
+</script>
+
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a4','POPUP383216516');
+	TextPopupInit('a5','POPUP383233457');
+	TextPopupInit('a1','POPUP383218114');
+	TextPopupInit('a2','POPUP383230388');
+	TextPopupInit('a3','POPUP383216560');
+//]]></script>
+</body>
+</html>

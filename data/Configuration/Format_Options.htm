@@ -1,0 +1,1061 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Format Options">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Format Options</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<style type="text/css">
+<!--
+td ol { margin-top:0;
+margin-bottom:0; }
+td ul { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-right:6pt;
+margin-left:48px; }
+p.hcp4 { margin-right:6pt;
+margin-left:8px; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+p.hcp6 { margin-right:6pt;
+margin-left:36px; }
+p.hcp7 { margin-top:5pt;
+margin-bottom:0pt;
+margin-right:6pt;
+margin-left:6px; }
+p.hcp8 { margin-left:6pt;
+margin-right:6pt;
+margin-bottom:0pt; }
+span.hcp9 { line-height:normal; }
+span.hcp10 { box-sizing:border-box; }
+span.hcp11 { font-weight:normal; }
+span.hcp12 { font-weight:bold; }
+span.hcp13 { text-indent:12px; }
+p.hcp14 { margin-right:6pt;
+margin-bottom:0pt;
+margin-left:48px; }
+p.hcp15 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Format Options</h1>
+<p>Format codes are used to convert the information retrieved by a field 
+ code to useful information. For example, (+EVT.EntCode+) will only display 
+ the Master File code of the Entity File, such as ASIA-P. If you add the 
+ format option to the field code (+EVT.EntCode\#AD-0-0+) you will get Asia-Pac 
+ (HK) Ltd. </p>
+<p>&#160;</p>
+<h3>General Codes</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 17%;">
+	<col style="width: 83%;">
+	<tr class="t1st" style="height: 31px;">
+		<td><p>Format Option</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 315px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#AD-X-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a Master File code to produce a specific result.</p>
+		<p class="hcp1">In the format option 
+		 #AD-X-Y:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">X = the 
+			 main format option, used to retrieve the name or address of 
+			 the field code. See the Field Wizard for a listing of all 
+			 options.</p></li>
+			<li><p class="hcp1">Y = indicates 
+			 additional formatting and may be:</p></li>
+			<li><p class="hcp3">0 = No 
+			 additional formatting.</p></li>
+			<li><p class="hcp3">1 = Format 
+			 multiple (name and address) lines as one line, with each line 
+			 separated by a comma.</p></li>
+			<li><p class="hcp3">2 = Format 
+			 multiple (name and address) lines, add a comma at the end 
+			 of each line except the last, and a period at the end.</p></li>
+			<li><p class="hcp3">3 =&#160;Format 
+			 multiple (name and address) lines as one line without commas 
+			 or period.</p></li>
+			<li><p class="hcp3">8 = Add 
+			 a line before the retrieved information. This is useful for 
+			 signature lines.</p></li>
+		</ul>
+		<p class="hcp4">For example: (+EVT.EntCode\#AD-0-0+) 
+		 or (+HD.AddrCode\#AD-40-8+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 1360px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#MF&amp;TP-X-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a Master File code with the address card information specified 
+		 by the address type code TP, format option X and additional formatting 
+		 Y.</p>
+		<p class="hcp1">In the format option 
+		 #MF&amp;TP-X-Y:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">TP = the 
+			 address type required. Address types are defined in the Address 
+			 Types [ADRT] lookup value table. Standard address types are:</p></li>
+			<li><p class="hcp3">BA = Business 
+			 Address</p></li>
+			<li><p class="hcp3">MA = Mailing 
+			 Address</p></li>
+			<li><p class="hcp3">RO = Registered 
+			 Office Master File</p></li>
+			<li><p class="hcp3">RA = Residential 
+			 Address</p></li>
+			<li><p class="hcp3">SR = Statutory 
+			 Registered Office</p></li>
+			<li><p class="hcp3">SM = Register 
+			 of Members</p></li>
+			<li><p class="hcp3">SO = Register 
+			 of Dir/Sec</p></li>
+			<li><p class="hcp3">SD = Register 
+			 of Debentures</p></li>
+			<li><p class="hcp3">SC = Register 
+			 of Charges</p></li>
+			<li><p class="hcp3">SI = Location 
+			 of Minute Book</p></li>
+			<li><p class="hcp3">SA = Instrument 
+			 Creating Charges</p></li>
+			<li><p class="hcp3">SS = Location 
+			 of Common Seal</p></li>
+			<li><p class="hcp3">ST = Location 
+			 of Duplicate Seal<br>
+			<br>
+			<span class="hcp5">Note</span>: 
+			 You can have multiple values for TP to have the system look 
+			 for and retrieve a single address based on the Address Types 
+			 specified. If unable to find the first Address Type, it will 
+			 look for the next one. The different Address Types are to 
+			 be separated with a plus '+' sign and the order of retrieval 
+			 depends on the order specified. For example, MA+RA+BA will 
+			 first look for Mailing Address. &#160;If there is a Mailing 
+			 Address, it will return the Mailing Address, else it will 
+			 look for Residential Address followed by Business Address.</p></li>
+			<li><p class="hcp1">X = the 
+			 main format option, used to retrieve a specific portion of 
+			 the address specified by the address code:</p></li>
+			<li><p class="hcp3">1 = Full 
+			 address as displayed by the system with the address card</p></li>
+			<li><p class="hcp3">2 = Address 
+			 card number</p></li>
+			<li><p class="hcp3">12 = Address 
+			 without country</p></li>
+			<li><p class="hcp3">20 = Address 
+			 lines</p></li>
+			<li><p class="hcp3">21 = City</p></li>
+			<li><p class="hcp3">22 = State</p></li>
+			<li><p class="hcp3">23 = Country 
+			 code</p></li>
+			<li><p class="hcp3">24 = Country 
+			 description</p></li>
+			<li><p class="hcp3">25 = Postal 
+			 code</p></li>
+			<li><p class="hcp3">26 = Postal 
+			 code position (number)</p></li>
+			<li><p class="hcp3">27 = Confidential 
+			 (Yes/No)</p></li>
+			<li><p class="hcp3">28 = Statutory 
+			 (Yes/No)</p></li>
+			<li><p class="hcp3">29 = Active 
+			 (Yes/No)</p></li>
+			<li><p class="hcp3">31 = Address 
+			 line 1</p></li>
+			<li><p class="hcp3">32 = Address 
+			 line 2</p></li>
+			<li><p class="hcp3">33 = Address 
+			 line 3</p></li>
+			<li><p class="hcp3">34 = Address 
+			 line 4</p></li>
+			<li><p class="hcp3">35 = Address 
+			 line 5</p></li>
+			<li style="list-style-type: none;"><p class="hcp3"><span class="hcp5">Note</span>: 
+			 If you utilise the <a href="../Shared/Local_Address_Card.htm">Local 
+			 Address Card</a> feature, add 100 to the code to retrieve 
+			 the local address. For example, 21 retrieves City, so 121 
+			 will retrieve the local City. This applies to values 1 to 
+			 35. The exception is 102 which will retrieve both the main 
+			 and local addresses.</p></li>
+			<li><p class="hcp3">36 = Address 
+			 lines 3 - 5 followed by City, State and Postal Code in one 
+			 line with commas. Note that the position of the Postal Code 
+			 depends on the Postal Code position. This format option is 
+			 for Hong Kong forms. When using this format option, Y value 
+			 of 0, 1 and 2 will have the same result.</p></li>
+			<li><p class="hcp3">42 = Address 
+			 lines with city.</p></li>
+			<li><p class="hcp3">50 = Address 
+			 card format code.</p></li>
+			<li><p class="hcp1">Y = indicates 
+			 additional formatting. Refer to #AD-X-Y (above) for more information.</p></li>
+		</ul>
+		<p class="hcp1">For example: (+EVT.EntCode\#MF&amp;SR-20-1+) 
+		 or (+HD.EntCode\#MF&amp;BA-42-1+) or (+HD.RefCode\#MF&amp;MA+RA+BA-42-1+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 674px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#MF&amp;TP~CC-X-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a Master File code with the address card information specified 
+		 by the address type code TP, with formatting specified by country 
+		 code CC, format option X and additional formatting Y.</p>
+		<p class="hcp1">In the format option 
+		 #MF&amp;TP~CC-X-Y:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">TP = the 
+			 address type required. Address types are defined in the Address 
+			 Types [ADRT] lookup table. Refer to #MF&amp;TP-X-Y for address 
+			 type codes.</p></li>
+			<li><p class="hcp1">CC = country 
+			 code of the address format. Acceptable values are obtained 
+			 from the Country Codes [CNTR] lookup value table.</p></li>
+			<li><p class="hcp1">X = indicates 
+			 the format option. See #MF&amp;TP-X-Y for valid codes.</p></li>
+			<li><p class="hcp1">Y = indicates 
+			 additional formatting and may be:</p></li>
+			<li><p class="hcp6">0 = No 
+			 additional format. If the country code has been formatted, 
+			 this is the default format.</p></li>
+			<li><p class="hcp6">1 = In 
+			 one line, separated by commas. If there are commas in the 
+			 country code format, these are retained.</p></li>
+			<li><p class="hcp6">2 = Line 
+			 feed with commas.</p></li>
+			<li><p class="hcp6">3 = In 
+			 one line without commas.</p></li>
+			<li><p class="hcp6">11 = Returns 
+			 empty if the country code does not match the address format. 
+			 This code is only used with ~CC, and X=31-35, 131-135 (see 
+			 above).</p></li>
+			<li><p class="hcp6">12 = Returns 
+			 address lines 1 - 5 if the country code does not match the 
+			 address format. This code is only used with ~CC, and X=31-35, 
+			 131-135 (see above). The lines will be separated with line 
+			 feeds, similar to format code 0.</p></li>
+			<li><p class="hcp6">13 = Returns 
+			 address lines 1 - 5, if the country code does not match the 
+			 address format.&#160;This code is only used with ~CC, and 
+			 X=31-35, 131-135 (see above). The lines are separated by commas, 
+			 similar to format code 1. </p></li>
+			<li><p class="hcp6">30 = Returns 
+			 two dashes '--' if the name, address or other requested value 
+			 is empty. This code is for Hong Kong electronic forms.</p></li>
+		</ul>
+		<p class="hcp7">For example: (+EVT.EntCode\#MF&amp;SR~CY-31-12+)</p>
+		<p class="hcp7">&#160;</p>
+		<p class="SeeAlso">See also:</p>
+		<ul class="hcp2">
+			<li><p class="hcp7"><a href="Lookup_Tables.htm">Lookup 
+			 Tables - Country Codes [CNTR]</a></p></li>
+			<li><p class="hcp7"><a href="../Shared/Local_Address_Card.htm">Local 
+			 Address Card</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#AC-X-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 an address card number according to the formatting specified. 
+		 Refer to #MF&amp;TP-X-Y for details.</p>
+		<p class="hcp1">For example: (+BankAdd.AddrNr\#AC-1-0+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#AC~CC-X-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 an address card number according to the format specified for the 
+		 country code CC, format option X and additional formatting Y. 
+		 Refer to #MF&amp;TP~CC-X-Y for valid details.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 381px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#CT&amp;TP-1</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a Master File code to produce the contact information specified 
+		 by the contact type code TP.</p>
+		<p class="hcp1">In the format code 
+		 #CT&amp;TP-1:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">TP = the 
+			 contact type required. Contact types are defined in the Contact 
+			 Types [ADRC] lookup value table. Standard contact types are:</p></li>
+			<li><p class="hcp3">EB = E-mail 
+			 &#160;- Business</p></li>
+			<li><p class="hcp3">EP = E-mail 
+			 - Private</p></li>
+			<li><p class="hcp3">FB = Fax 
+			 - Office</p></li>
+			<li><p class="hcp3">FD = Fax 
+			 - Office Direct</p></li>
+			<li><p class="hcp3">FH = Fax 
+			 - Home</p></li>
+			<li><p class="hcp3">TB = Telephone 
+			 - Office</p></li>
+			<li><p class="hcp3">TD = Telephone 
+			 - Office Direct</p></li>
+			<li><p class="hcp3">TH = Telephone 
+			 - Home</p></li>
+			<li><p class="hcp3">TM = Telephone 
+			 - Mobile</p></li>
+		</ul>
+		<p class="hcp4">For example: (+EVT.AddrCode\#CT&amp;TD-1+) 
+		 or (+HD.EntCode\#CT&amp;EB-1+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 62px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LT-X</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a lookup value code with its description where X is the code of 
+		 the lookup table.</p>
+		<p class="hcp1">For example: (+EVT.ChargeType\#LT-CHAI+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 326px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LT-X:Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Defines 
+		 the detail to retrieve for the lookup value code where:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">X is the 
+			 code of the lookup table</p></li>
+			<li><p class="hcp1">Y indicates 
+			 what to retrieve and can refer to:</p></li>
+			<li><p class="hcp6">database 
+			 field name - this will retrieve the information for the field</p></li>
+			<li><p class="hcp6">tag for 
+			 the lookup table value - this will retrieve the content of 
+			 the tag after the first '=' that is within the square brackets</p></li>
+		</ul>
+		<p class="hcp1">For example:</p>
+		<p class="hcp1">(+EVT.IncorpPlace\#LT-CNTR:ConvertValues+)</p>
+		<p class="hcp1">The above will 
+		 retrieve the information for ConvertValues (Tag Values field). 
+		 If the value is 'SG', then this will retrieve '[ISO=SGP][VPO=SIN][TELPREFIX=+65]' 
+		 which has been entered in the Tag Values field.</p>
+		<p class="hcp1">&#160;</p>
+		<p class="hcp1">(+EVT.IncorpPlace\#LT-CNTR:ISO+)</p>
+		<p class="hcp1">The above wil</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 36px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#UT-X:Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Similar 
+		 to #LT:X-Y above, except that this applies to user table values.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 200px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LD-X</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the value for Nationality Individual Codes [NATI] drop-down table 
+		 to value from corresponding Country Codes [CNTR] lookup table 
+		 where X can be:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">CODE = 
+			 Element code of the Country Codes [CNTR] lookup table value</p></li>
+			<li><p class="hcp1">NAME = 
+			 Name of the Country Codes [CNTR] lookup table value</p></li>
+			<li><p class="hcp1">LONG = 
+			 Long Name of the Country Codes [CNTR] lookup table value</p></li>
+		</ul>
+		<p class="hcp1">For example: (+HD.Nationality+) 
+		 retrieves the value from the Nationality Individual Codes [NATI] 
+		 drop-down table. If the value is 'Malaysian' and this is mapped 
+		 to 'Malaysia', applying the code (+HD.Nationality\#LD-CODE+) will 
+		 retrieve the code 'MY'.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">W</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a number to full wording, with decimal places specified as xx/100.</p>
+		<p class="hcp1">For example: 6,551.34 
+		 is Six Thousand Five Hundred Fifty One 34/100.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 139px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">W:XX</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a number to word with additional formatting for decimal places 
+		 as indicated by XX:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">W:DP&#160;- 
+			 This will format decimal places as words. For example: 6,551.34 
+			 is Six Thousand Five Hundred Fifty One point Three Four.</p></li>
+			<li><p class="hcp1">W:DW - 
+			 This will format the decimal places as words and specify the 
+			 decimal as cent. For example: 6,551.34 is Six Thousand Five 
+			 Hundred Fifty One and Thirty Four cent.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">DXY</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a date value, whereby XY indicate the format type. See the Field 
+		 Wizard for the various date formats.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 109px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">C2/C4</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a number with the field format defined in Configuration &gt; Settings 
+		 &gt; System Defaults &gt; Field Formats where:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">C2 - Will 
+			 take on the format set in Amounts (2 d.p.).</p></li>
+			<li><p class="hcp1">C4 - Will 
+			 take on the format set in Amounts (more than 2 d.p.).</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row" style="height: 136px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">N0/N4/N6</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 a number with the field format defined in Configuration &gt; Settings 
+		 &gt; System Defaults &gt; Field Formats where:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">N0 - Will 
+			 take on the format set in Numbers without d.p.</p></li>
+			<li><p class="hcp1">N4 - Will 
+			 take on the format set in Numbers - shares with d.p.</p></li>
+			<li><p class="hcp1">N6 - Will 
+			 take on the format set in Numbers - others with d.p.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">N</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the number as per the 'General Number' format set at the control 
+		 panel.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">C</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the number as a currency. You can also use a variation of #,##0.00### 
+		 to format amounts with more than two decimal places.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">B99</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Inserts 
+		 99 spaces if the value of the field is empty, so that an empty 
+		 space if created in the form for manual completion.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">BHYP</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Inserts 
+		 a hyphen (-) if there is no result returned by the field code.</p>
+		<p class="hcp1">For example: &#160;(+EVT.AddrNumber\#AD-15-0\BHYP+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">BHY2</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Inserts 
+		 a hyphen (-) if the field code returns no result. It is only used 
+		 on the 2014 Hong Kong forms.</p>
+		<p class="hcp1">For example: (+EVT.AddrNumber\BHY2+) 
+		 or (+EVT.AddrNumber\#AC-31-1\BHY2+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*NS</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will hide the field from the report.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*H</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">If 
+		 [/HYPHENFIELDS/] is placed in the Key Information, i.e to place 
+		 hyphens in all empty fields, this option will suppress hyphenation 
+		 for the formatted field, i.e. will NOT place hyphens in the fields 
+		 if the field is empty.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 69px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*N</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Updates 
+		 value for a change field that was changed in the transaction that 
+		 generated the change. This format code can be immediately followed 
+		 with a second format code. See also *O below.</p>
+		<p class="hcp1">For example: (+EVT.Field\*N#AD-1-0+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*O</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Old 
+		 value for a change field that was changed in the transaction that 
+		 generated the change. See also *N above.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 69px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*L</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Used 
+		 in tables to place the next field in the same cell as this field, 
+		 but in a new line. This option is placed BEHIND any other format 
+		 option.</p>
+		<p class="hcp1">For example: (+DIRS.ALL-TAB\1:#AD-40-0*L\2:#AD-42-1+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*A</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Used 
+		 in tables to place the next field in the same cell as this field. 
+		 This option is placed BEHIND any other format option.</p>
+		<p class="hcp1">For example: (+DIRS.ALL-TAB\1:#AD-40-8*A+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 175px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LP</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">List 
+		 in paragraph format. This format code can be used for forms with 
+		 multiple changes linked, or SQL statements that (might) retrieve 
+		 multiple records. The multiple values will be listed as a paragraph, 
+		 example: Value A, Value B and Value C.</p>
+		<p class="hcp1">For multiple linked 
+		 changes, this code will find the selected field in the related 
+		 changes, and format accordingly. For SQL statements, this code 
+		 will pick the selected field (that must be a return field of the 
+		 statement) for all rows returned by the statement, and format 
+		 accordingly.</p>
+		<p class="hcp1">The #LP code can 
+		 be followed by a second format code separated by a dash. The system 
+		 will first apply the second format code before the #LP List paragraph.</p>
+		<p class="hcp1">For example: (+EVT.EntCode\#LP-#AD-40-0+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 84px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LS</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 is similar to #LP except that the multiple values are separated 
+		 by a line feed so the values are listed on separate lines. In 
+		 addition, the #LS code can be followed by a second format code 
+		 separated by a dash only for fields linked to a change code. For 
+		 example: (+EVT.AddrCode\#LP-#AD-40-0+)</p>
+		<p class="hcp1">For SQL statements, 
+		 a second format code is not supported.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 84px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#TC</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Same 
+		 as #LP except that the multiple values are placed in separate 
+		 table cells: i.e. the first value is placed in the table cell 
+		 where the code is placed, and each subsequent value in the next 
+		 cell (note that new cells are automatically added to the table 
+		 'as if' you press 'Tab' in a word document).</p>
+		<p class="hcp1">This format option 
+		 is valid only if placed in a table cell.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 139px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#CV-11-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the Master File code to show the following:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">For individual 
+			 Master Files: Title, Initials/First Name and Surname.</p></li>
+			<li><p class="hcp1">For non-individual 
+			 Master Files: Current and Former Name. The former name is 
+			 displayed as (formerly known as &lt;Former Name&gt;), and 
+			 centred on the&#160;page for one year from the effective date 
+			 of the name change.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#CV-11-8</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Similar 
+		 to #CV-11-0, however there will be a signature line before the 
+		 retrieved information.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#US</p>
+		<p class="hcp1">&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the User code to show the User name.</p>
+		<p class="hcp1">For example: (+HD.AdminCode\#US+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#US-2-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Formats 
+		 the User code to show the E-mail ID.</p>
+		<p class="hcp1">For example: (+UCode\#US-2-0+)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 360px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">BTXT:&lt;Text&gt;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will display the specified text if the information is not available. 
+		 It can be used on its own or with other format options.</p>
+		<p class="hcp8">For 
+		 example:</p>
+		<p class="hcp8">(+DC.IncorpNr\BTXT:Information 
+		 is missing+)</p>
+		<ul class="hcp2">
+			<li><p class="hcp8">If 
+			 there is no incorporation number entered for the Master File, 
+			 the generated document will show 'Information is missing'.</p></li>
+			<li><p class="hcp8">If 
+			 the incorporation number has been entered as WH1234, the generated 
+			 document will show 'WH-1234'.</p></li>
+		</ul>
+		<p class="hcp8">&#160;</p>
+		<p class="hcp8">(+HD.AuditReq\#LT-AUDR\BTXT:Information 
+		 is missing+)</p>
+		<ul class="hcp2">
+			<li><p class="hcp8">If 
+			 there is no option selected for Audit Requirement, the generated 
+			 document will show 'Information is missing'.</p></li>
+			<li><p class="hcp8">If 
+			 the value is Arrange Audit [F], the generated document will 
+			 show 'Arrange Audit'.</p></li>
+		</ul>
+		<p class="hcp8">&#160;</p>
+		<p class="hcp8"><span class="hcp5">Note</span>: This 
+		 format option does not apply to Change fields i.e. those with 
+		 EVT prefix such as (+EVT.DateResolution+). For Excel templates, 
+		 if the query returns an empty record set, this will remain empty 
+		 instead of returning the text.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 217px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#FV-X-Y-Z</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will retrieve a specific record from the database table name and 
+		 column.</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">X refers 
+			 to the Database Table Name.</p></li>
+			<li><p class="hcp1">Y refers 
+			 to the Column Name of the Database Table.</p></li>
+			<li><p class="hcp1">Z indicates 
+			 the filtering.</p></li>
+		</ul>
+		<p class="hcp1">For example: (+BF.RefCode\#FV-RefMaster-Name-RefCode+)</p>
+		<p class="hcp1">where in SQL Query, 
+		 this is equivalent to:</p>
+		<p class="hcp1">SELECT Name FROM 
+		 RefMaster WHERE RefCode = ‘ABC’</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 196px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">*SUBSTR=N:N</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Defines 
+		 a character limit for a retrieved value. 'N' will be a number 
+		 that refers to the position of a character (including space) in 
+		 a sequence of text with</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">the first 
+			 N - limit begins at this character</p></li>
+			<li><p class="hcp1">the second 
+			 N - limit ends at this character</p></li>
+		</ul>
+		<p class="hcp1">For example: (+HD.AdminCode\#US+) 
+		 retrieves the user name of the administrator - 'International 
+		 Corporate Services (Hong Kong) Ltd'.</p>
+		<p class="hcp1">Applying the format 
+		 option (+HD.AdminCode\#US*SUBSTR=1:25+) will retrieve the value 
+		 starting from the first character 'I' and end at the twenty-fifth 
+		 character 'S'. Hence, the value will be 'International Corporate 
+		 S'.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">Any 
+		 other format string</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Any 
+		 valid Microsoft for Application format string can be used.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#ET-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will retrieved the values from Entity Type and Incorporation Place 
+		 table based on the passed entity file code using a Master File 
+		 code.</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">Y refers 
+			 to the Database Field name or Tag</p></li>
+		</ul>
+		<p class="hcp1">When Y is a tag, 
+		 then the content of the tag after the first '=' sign and within 
+		 the square brackets will be retrieved.</p>
+		<p class="hcp1">Example:</p>
+		<p class="hcp1">Form</p>
+		<p class="hcp1">(+<span class="hcp9">EVT.EntCode\#ET-Ownership+</span>)</p>
+		<p class="hcp1">(+<span class="hcp9">EVT.EntCode\#ET-JETAG+</span>)</p>
+		<p class="hcp1">&#160;</p>
+		<p class="hcp1">Word Report</p>
+		<p class="hcp1">(+HD.EntCode\#ET-Ownership+)</p>
+		<p class="hcp1">(+<span lang="FR" 
+		 xml:lang="FR" style="font-size: 10.5pt; line-height: 107%; font-family: 'Segoe UI', sans-serif; 
+		 mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: FR; 
+		 mso-fareast-language: EN-MY; mso-bidi-language: AR-SA;">HD.EntCode\#ET-JETAG</span> 
+		 )</p>
+		<p class="hcp1">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#ER-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will retrieve the values defined in the Relationship Type's tag 
+		 value which is required for the Jersey API submission.</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">ER refers 
+			 to indicates the tag will retrieve value from the MfRelationType 
+			 table.</p></li>
+		</ul>
+		<ul class="hcp2">
+			<li><p class="hcp1">Y refers 
+			 to:</p></li>
+			<ul class="hcp2">
+				<li><p class="hcp1">Any 
+				 column of the MfRelationType</p></li>
+				<li><p class="hcp1">Tag 
+				 defined at 'TagValues', e.g: [JE_ROLE=BeneficialOwner]</p></li>
+			</ul>
+		</ul>
+		<p class="hcp1">Example:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">(+EVT.OfficerType\#<span class="hcp10">ER</span>-JE_ROLE+): Retrieve 
+			 the value that defined with the tag at<span class="hcp10">&#160;</span><b 
+			 style="box-sizing: border-box;"><span class="hcp11">Tag</span><span class="hcp12"> </span><span class="hcp11">Value</span></b><span class="hcp12">.</span></p></li>
+			<li><p class="hcp1">(+EVT.OfficerType\#<span class="hcp10">ER</span>-RDescr+): Retrieve 
+			 the value in the column<span class="hcp12"> </span>‘<b 
+			 style="box-sizing: border-box; font-weight: normal;">RDescr</b>’</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#ES-Y</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 will retrieve the information from Share Capital.</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">Y refers 
+			 to Any Column from Share_Capital</p></li>
+		</ul>
+		<p class="hcp1">Example:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">(+EVT.EntCode+EVT.ShareClass\#ES-ShareClassName+): 
+			 To get the share class name.</p></li>
+		</ul>
+		<p class="hcp1">To get the value 
+		 from Share Capital, the field must be a combination of Entity 
+		 and Share Class, where EntCode is followed by ShareCalss</p>
+		<p class="hcp1">Example: (+EVT.EntCode+EVT.ShareClass+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col">&#160;!CODE</td>
+		<td class="t2Col">&#160;&#160;This code is used to retrieve information 
+		 from the fields in PDF XFA form that consist of both code and 
+		 name. 
+		<br>&#160; 
+		<br>&#160;&#160;Example: 
+		<br><span class="hcp13">&#160;&#160;When 
+		 a field contains 'Euro [EUR]' &#160;value and 'cbb_1c_currency' 
+		 field key, use the following format code to &#160;</span>&#160; 
+		 
+		<br><span class="hcp13">&#160;&#160;retrieve 
+		 the value inside the bracket (Code).</span> 
+		<ul class="hcp2">
+			<li>cbb_1c_currency\!CODE - This will retrieve 'EUR'</li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col">&#160;!NAME</td>
+		<td class="t2Col">&#160;&#160;This code is used to retrieve information 
+		 from the fields in PDF XFA form that consist of both code and 
+		 name. 
+		<br>&#160; 
+		<br>&#160;&#160;Example: 
+		<br>&#160;&#160;When a field contains 'Euro [EUR]' 
+		 &#160;value and 'cbb_1c_currency' field key, use the following 
+		 format code to &#160;&#160; 
+		<br>&#160;&#160;retrieve the value outside the bracket 
+		 (Name). 
+		<ul class="hcp2">
+			<li>cbb_1c_currency\!NAME - This will retrieve 'Euro'</li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>!MFNRTOCODE</p></td>
+		<td class="t2Col"><p class="hcp1">This 
+		 code will retrieve the list of address codes from the Address 
+		 field of the Master File. </p>
+		<p class="hcp1">For example, (-KEY:DCode\!MFNRTOCODE-).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>*MASK</p></td>
+		<td class="t2Col"><p>This code is used to hide a specific amount 
+		 of retrieved data's alphanumeric characters. It can be hidden 
+		 from either the first or the last alphanumeric character.</p>
+		<p>*MASK=W-X-Y-Z</p>
+		<p>W = 1 or 0, to mask alphanumeric only or to mask entire characters 
+		 including special characters.</p>
+		<ul class="hcp2">
+			<li><p>0 - Mask alphanumeric only. All characters that are 
+			 not alphanumeric will be filtered out.</p></li>
+			<li><p>1 - Mask entire characters including special characters.</p></li>
+		</ul>
+		<p>X = 1 or 0, to define the masking position, starting of the 
+		 character and ending from the character.</p>
+		<ul class="hcp2">
+			<li><p>0 - Mask from the last character of the string.</p></li>
+			<li><p>1 - Mask from the first character of the string.</p></li>
+		</ul>
+		<p>Y = 0...n, &#160;to specify how many characters will be masked.</p>
+		<ul class="hcp2">
+			<li><p>If even number, it will be divided by 2.</p></li>
+			<li><p>If odd number:</p></li>
+			<ul class="hcp2">
+				<li><p><span style="text-indent: -36px;">&#160;</span>If 
+				 00, it will be length +1 divided by 2. Total length = 
+				 7 + 1 = 8. 8/2 = 4 is the number of masked characters. 
+				 For example, 1234567 will be written as 123****.</p></li>
+				<li><p>&#160;If 0, it will be length -1 and then divided 
+				 by 2. Total length = 7 - 1 = 6. 6/2 = 3. 3 is the number 
+				 of masked characters. For example, 1234567 will be written 
+				 as 1234***.</p></li>
+			</ul>
+			<li><p>Any number other than 0, for example, 4, will mask four 
+			 characters.</p></li>
+		</ul>
+		<p>Z = If nothing is defined, it will be replaced with a string 
+		 of blank characters. Otherwise will be replaced with the defined 
+		 symbol.</p>
+		<p>&#160;</p>
+		<p>Only W, X, and Y are required to be defined. If Z is not specified, 
+		 the string is cut without masking. </p>
+		<p>&#160;</p>
+		<p>In the case of invalid input, W, X, and Y will remain as original 
+		 value. For Z, any character can be used.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>BIDN-X</p></td>
+		<td class="t2Col">This code is used to hide or show certain length 
+		 of alphanumeric characters.
+		<br>&#160;
+		<br>X is an integer.
+		<br>&#160;
+		<br>Example: BIDN-3, it will only show the first 
+		 3 of the characters. e.g. ABCDEFGH will be shown as ABC.
+		<br><span class="hcp5">Note:</span> 
+		 This only use on Hong Kong forms.</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>BIDC</p></td>
+		<td class="t2Col">This code is used to get the check digit inside 
+		 the bracket. Format is like A123456(9) where 9 is the check digit 
+		 inside the brackets. Output = 9.
+		<br><span class="hcp5">Note:</span> 
+		 This only use on Hong Kong forms.</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>BIDF</p></td>
+		<td class="t2Col">This code is used to get the output from BID2 
+		 and BIDN except the check digit inside the bracket. Format is 
+		 like A123456(9). Output = A123456
+		<br><span class="hcp5">Note:</span> 
+		 This only use on Hong Kong forms.</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>BID2</p></td>
+		<td class="t2Col">This code is used to get the first or two alphabet 
+		 characters. Format is like A123456(9) where A is the first or 
+		 two alphabet character. Output = A
+		<br><span class="hcp5">Note:</span> 
+		 This only use on Hong Kong forms.</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>BIDN</p></td>
+		<td class="t2Col">This code is used to get the middle characters 
+		 between the first alphabet characters and the check digit. Should 
+		 consists of numbers only. Format is like A123456(9) where 123456 
+		 are the middle characters. Output = 123456
+		<br><span class="hcp5">Note:</span> 
+		 This only use on Hong Kong forms.</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Special Codes for Share Option Holders</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 17%;">
+	<col style="width: 83%;">
+	<tr class="t1st">
+		<td><p>Format Option</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LH-9-1</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">This 
+		 code function is exactly the same as #AD-9-1 with the following 
+		 enhancements:</p>
+		<ul class="hcp2">
+			<li><p class="hcp1">If the 
+			 Option Holder is linked to the Master File, the program will 
+			 retrieve the information from the Master File record, except 
+			 for department and staff category.</p></li>
+			<li><p class="hcp8">If 
+			 the Option Holder is 'local' to the Company, all corresponding 
+			 information is retrieved from the local Option Holder record.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LH-95-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Department</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LH-96-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Staff 
+		 category</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LH-97-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Company 
+		 name</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">#LH-98-0</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp1">Occupation</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Word Reports, Correspondence and Billing Templates Only</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 17%;">
+	<col style="width: 83%;">
+	<tr class="t1st" style="height: 26px;">
+		<td><p>Format Option</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 66px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">@SubTotal</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Calculates 
+		 the sub total for the column. Add -N or -C to format the results 
+		 as a number or as currency. If there is no additional format option, 
+		 the result defaults to C (amount).</p>
+		<p class="hcp8">For 
+		 example: \2:@SubTotal-N\3:...</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 68px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">@RUNTOTAL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Calculates 
+		 the running total in the column. Add -N or -C to format the results 
+		 as a number or as currency. If there is no additional format option, 
+		 the result defaults to N (number).</p>
+		<p class="hcp8">For 
+		 example: \6:@RUNTOTAL-C</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 770px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">Dx.ABC</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Formats 
+		 the date in the language specified by ABC, where x determines 
+		 whether the long date or medium date is returned:</p>
+		<ul class="hcp2">
+			<li><p class="hcp8">ABC 
+			 = supported language:</p></li>
+			<li><p class="hcp14">ENG 
+			 = English</p></li>
+			<li><p class="hcp14">FRE 
+			 = French</p></li>
+			<li><p class="hcp14">GER 
+			 = German</p></li>
+			<li><p class="hcp14">DUT 
+			 = Dutch</p></li>
+			<li><p class="hcp14">ITA 
+			 = Italian</p></li>
+			<li><p style="margin-right: 6pt; margin-bottom: 0pt; margin-left: 8px;">x 
+			 = date format:</p></li>
+			<li><p class="hcp14">F 
+			 = Long format</p></li>
+			<li><p class="hcp14">H 
+			 = Medium format</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 The dates use Word 2007 defaults for the capitalization of the 
+		 month and the dots/separators in the medium date format.</p>
+		<p class="hcp1">&#160;</p>
+		<h6 class="Heading8" style="margin-left: 6px; margin-right: 6pt;">Long 
+		 format:</h6>
+		<p class="hcp8">(+DF.DateField\DF.ABC+)</p>
+		<p class="hcp8">For 
+		 example:</p>
+		<ul class="hcp2">
+			<li><p class="hcp8">(+DF.Now\DF.ENG+) 
+			 = 18 August 2011</p></li>
+			<li><p class="hcp8">(+DF.Now\DF.FRE+) 
+			 = 18 aout 2011</p></li>
+			<li><p class="hcp8">(+DF.Now\DF.GER+) 
+			 = 18. August 2011</p></li>
+			<li><p class="hcp8">(+DF.Now\DF.DUT+) 
+			 = 18 augustus 2011</p></li>
+			<li><p class="hcp8">(+DF.Now\DF.ITA+) 
+			 = 18 agosto 2011</p></li>
+		</ul>
+		<p class="hcp8">&#160;</p>
+		<h6 class="Heading8" style="margin-left: 6px; margin-right: 6pt;">Medium 
+		 format:</h6>
+		<p class="hcp8">(+DF.DateField\DH.ABC+)</p>
+		<p class="hcp8">For 
+		 example:</p>
+		<ul class="hcp2">
+			<li><p class="hcp8">(+DF.Now\DH.ENG+) 
+			 = 18-Aug-11</p></li>
+			<li><p class="hcp8">(+DF.Now\DH.FRE+) 
+			 = 18-aout.-11</p></li>
+			<li><p class="hcp8">(+DF.Now\DH.GER+) 
+			 = 18. Aug. 11</p></li>
+			<li><p class="hcp8">(+DF.Now\DH.DUT+) 
+			 = 18 aug. 11</p></li>
+			<li><p class="hcp8">(+DF.Now\DH.ITA+) 
+			 = 18 ago. 11</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>HTML Templates Only</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 22.938%;">
+	<col style="width: 77.062%;">
+	<tr class="t1st">
+		<td><p>Format Option</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp1">?FC=FORMCODE&amp;MF=(-QF1-)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp8">FC 
+		 is the reserved word for the form code.</p>
+		<p class="hcp1">FORMCODE is the 
+		 form to link to.</p>
+		<p class="hcp1">MF is the reserved 
+		 word for the Master File Code.</p>
+		<p class="hcp1">QF1 is the query.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Coding_a_Word_Template.htm">Coding a Word Template</a></p></li>
+	<li><p><a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a></p></li>
+	<li><p><a href="Key_Information.htm">Key Information</a></p></li>
+	<li><p><a href="Field_Wizard.htm">Field Wizard</a></p></li>
+	<li><p><a href="User_Field_Codes.htm">User Field Codes</a></p></li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_HTML_Template.htm\">Coding a HTML Template</a> &gt; Format Options</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_Word_Template.htm\">Coding a Word Template</a> &gt; Format Options</p>");
+</script>
+
+<p class="hcp15">&#160;</p>
+<p class="hcp15">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp15">Version: 8.0.2022.09.20</p>
+</body>
+</html>

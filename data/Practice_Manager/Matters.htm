@@ -1,0 +1,310 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Matters">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Matters</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:normal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Matters</h1>
+<p>A Matter can be regarded as a project or job defined for a particular 
+ Billing File. It can be used as a definition for the type of work done 
+ for a client, for example company secretarial work, or it could be a specific 
+ project, for example finalisation of accounts for a certain period or 
+ to hold funds on behalf of the client.</p>
+<p>Separate invoices are issued for different Matters, these can be settled 
+ directly with a receipt or payment from the client or can be offset against 
+ advance payments already entered for the Matter. Payments to third parties 
+ can also be recorded and a running balance of the Matter will be maintained. 
+ Matters can be revalued to handle exchange rate differences.</p>
+<p>The usage of Matters is enabled by ticking 'Use Matters' option in <a 
+	 href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+ Defaults &gt; Practice Management</a>. If you opt not to use Matters, 
+ you must still create a general Matter for your Billing Files.</p>
+<p>You can set up the Billing File's Matter(s) in the Matters screen.</p>
+<p>&#160;</p>
+<h2>Matters Screen</h2>
+<p>This screen is used to manage the Matters for Billing File in the File 
+ Maintenance.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>You can choose to filter Matters by:</p>
+<ul class="hcp1">
+	<li><p>Matter Status</p></li>
+	<li><p>Matter Type</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Matter List</p>
+<p>This lists all the Matters that you have set up for the Billing File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the Matter list. Click the relevant command button to 
+ perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a4">add</a> 
+	 a Matter manually. You can also add a Matter using the Copy Fees command 
+	 button.</p>
+	<div class="droptext" id="POPUP419335190" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Enter details for the new Matter.</p>
+			<ul class="hcp1">
+				<li><p><span class="hcp2">Matter Type</span> 
+				 - Select the Matter type. The selections available are 
+				 set up in the Matter Type Codes [MTTR] lookup table.</p></li>
+				<li><p><span class="hcp2">Extension</span> 
+				 - Enter an extension of up to ten characters if you are 
+				 using the same Matter type more than once. For example, 
+				 you might want to use a general Matter for different departments 
+				 and add the department abbreviation to the Matter type, 
+				 for instance General CS for General Matter for the Company 
+				 Secretarial department.</p></li>
+				<li><p><span class="hcp2">Matter User Combo</span> 
+				 - This is a user-definable field that can be used as necessary. 
+				 Customise the caption and add items for selection in the 
+				 Matter User Defined Combo [MTUC] lookup table.</p></li>
+				<li><p><span class="hcp2">Description</span> 
+				 - The description field defaults to the Matter type and 
+				 extension. Change this if necessary and enter a suitable 
+				 description for the Matter you are creating. This is the 
+				 description that is seen by users entering time against 
+				 the Matter, so it should be as concise and accurate as 
+				 possible.</p></li>
+				<li><p><span class="hcp2">Billing Currency</span> 
+				 - Select the invoice currency for the Matter. This is 
+				 the default currency for invoices raised against this 
+				 Matter. If your environment is enabled for multi-currency 
+				 rates, then all time and disbursement entries against 
+				 the Matter will follow this currency.</p></li>
+				<li><p><span class="hcp2">Revenue Entity</span> 
+				 - Select a Revenue Entity for the Matter. Revenue Entities 
+				 must be set up in advance.<br>
+				<br>
+				<a class="dropspot" href="javascript:TextPopup(this)" id="a11">Where 
+				 do I set up Revenue Entities?</a></p>
+				<div class="droptext" id="POPUP373478869" style="display: none;">
+					<p>This is done in Configuration &gt; Business Parameters 
+					 &gt; Practice Management &gt; Setup &gt; Revenue Entities.</p>
+    </div></li>
+				<li><p><span class="hcp2">Tax Charge Type</span> 
+				 - Select the tax applicable to services charged to that 
+				 Matter. This will be applied during Billing Run and ad 
+				 hoc invoicing. Options are to be set up in the Tax (VAT/GST 
+				 etc) Charge Types [TCHT] lookup table.</p></li>
+				<li><p><span class="hcp2">Invoice Dispatch</span> 
+				 - This field can be used to record how the Billing File 
+				 prefers to receive the invoice. The options are to be 
+				 set up in the Matter Invoice Despatch [MTCL] lookup table. 
+				 Note that the field is turned off by default.</p></li>
+				<li><p><span class="hcp2">Remit from</span> 
+				 - This field is for recording purposes only and options 
+				 are bank accounts that have been set up and approved in 
+				 the Billing File's <a href="Payer_Bank_Accounts.htm">Payer 
+				 Bank Accounts</a> screen. The field is inactive by default.</p></li>
+				<li><p><span class="hcp2">Remit to</span> 
+				 - This field is for recording purposes only and options 
+				 are bank accounts that have been set up and approved in 
+				 the <a href="Payer_Bank_Accounts.htm">Payer Bank Accounts</a> 
+				 screen for the Revenue Entity linked to the Matter.</p></li>
+				<li><p><span class="hcp2">Organisational 
+				 Unit</span> - Select the organisational unit for the Matter. 
+				 The options available for selection are maintained in 
+				 the Organisational Units [ORGUNITS] user table. If you 
+				 are using WIP Accrual Accounting, then it should be noted 
+				 that you may link more than one Matter to the same Revenue 
+				 Entity, but each Matter may have a different organisational 
+				 unit. Find out more about this in the Accounting help 
+				 file under the topic Posting Rules - WIP Accrual Posting.</p></li>
+				<li><p><span class="hcp2">Rate List</span> 
+				 - Select the Rate List for the Matter. This will determine 
+				 the rate that is used for every service charged to this 
+				 Matter.</p></li>
+				<li><p><span class="hcp2">Bill WIP at &lt;base 
+				 currency&gt;</span> - Enter the minimum amount works in 
+				 progress must reach before they can be posted to an invoice. 
+				 You can see how this amount affects the invoicing process 
+				 when you propose drafts of works in progress.</p></li>
+				<li><p><span class="hcp2">Time Charge Limit</span> 
+				 - Enter the maximum amount that can be charged to the 
+				 Matter based on the Client Fee Agreement. This amount 
+				 is reflected in the Time Entries screen within Time and 
+				 Disbursements component. When creating time entries, the 
+				 system will warn the user if the total value has exceeded 
+				 the available amount by highlighting the available value 
+				 in red. Note that this is not a cumulative limit: once 
+				 works in progress have been posted to an invoice, the 
+				 available limit is reset to the maximum amount.</p></li>
+				<li><p><span class="hcp2">Created</span> 
+				 - Enter the creation date of the Matter. This defaults 
+				 to today's date.</p></li>
+				<li><p><span class="hcp2">(Expected) Completion</span> 
+				 - You can enter a completion date for the Matter if it 
+				 is used for a special project.</p></li>
+				<li><p><span class="hcp2">Administrator</span> 
+				 - Select the Administrator who created or is in charge 
+				 of the Matter, if required.</p></li>
+				<li><p><span class="hcp2">Settle Invoices 
+				 Automatically</span> - Check this box to indicate that 
+				 if there are funds in hand, you may settle any outstanding 
+				 invoices. Note that the settlement process must still 
+				 be done in the usual manner, as Viewpoint will not automatically 
+				 settle any outstanding invoices.</p></li>
+				<li><p><span class="hcp2">Disbursements are 
+				 NOT Chargeable</span> - Check this box if you want to 
+				 record disbursements, but you do not want to charge it 
+				 to your client.</p></li>
+				<li><p><span class="hcp2">Time is NOT Chargeable</span> 
+				 - Check this box if you want to record time spent, but 
+				 you do not want to charge it to your client.</p></li>
+				<li><p><span class="hcp2">Invoice through 
+				 other</span> - Tick this option if you want invoices for 
+				 this Matter to be raised under a different Billing File 
+				 and/or Matter.</p></li>
+				<li><p><span class="hcp2">Invoice Billing 
+				 File</span> - Specify the Billing File for raising of 
+				 invoice when the option 'Invoice through other' is used. 
+				 This field is only enabled and mandatory when the option 
+				 'Invoice through other' is ticked.</p></li>
+				<li><p><span class="hcp2">Invoice Matter</span> 
+				 - Specify the Matter for raising of invoice when the option 
+				 'Invoice through other' is used. This field is only enabled 
+				 and mandatory when the option 'Invoice through other' 
+				 is ticked.</p></li>
+				<li><p><span class="hcp2">Status</span> - 
+				 The Matter status enables you to stop using the Matter. 
+				 If the Matter is on hold, suspended or closed, no draft 
+				 invoices can be created and existing drafts cannot be 
+				 posted.</p></li>
+				<li><p><span class="hcp2">Closed</span> - 
+				 Enter the date that the Matter is closed.</p></li>
+				<li><p><span class="hcp2">Manager</span> 
+				 - Select the Manager in charge of the Matter, if required.</p></li>
+				<li><p><span class="hcp2">Responsible</span> 
+				 - Use this field to record persons or entities responsible 
+				 for the Matter. You can, for example, use this field to 
+				 record the bank account to which payments for the Matter 
+				 are made. This field can be used to filter the display 
+				 results in Settlements - Invoice.</p></li>
+				<li><p><span class="hcp2">Approval/Account 
+				 Code</span> - Enter the approval or account code for the 
+				 Matter, if applicable.</p></li>
+				<li><p><span class="hcp2">Unit Code 4</span> 
+				 - This field can be turned on to record the organisational 
+				 code. The options are maintained in the Organisational 
+				 Codes [ORGCODES] user table which must be defined in Table 
+				 Code for Unit Code 4 in Accounting &gt; Account File &gt; 
+				 Unit Codes.</p></li>
+				<li><p><span class="hcp2">Note</span> - Enter 
+				 any additional notes.</p></li>
+			</ul></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<p><span style="font-weight: bold; font-style: italic;">Note</span>: 
+		 Matter status can also be updated by updating the Billing File 
+		 status through <a href="../Shared/Status.htm">Status</a> &gt; 
+		 Billing File screen.</p>
+   </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit a selected Matter.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected Matter from the table. If the Matter is in 
+	 use by services, or has time or disbursements charged to it, or if 
+	 there are draft invoices linked to it, you will have to delete them 
+	 before you can delete the Matter. Once an invoice has been posted 
+	 to a Matter, you will not be able to delete it. If you want to prevent 
+	 further charges being made to the Matter, change the Matter status 
+	 from Open to Closed, Suspended or On Hold.</p></li>
+	<li><p><span class="hcp2">Set as Default</span> - Click 
+	 this to set the selected Matter as the default. This means every time 
+	 you create an invoice manually, this Matter will default to the Matter 
+	 field.</p></li>
+	<li><p><span class="hcp2">Statement</span> - Click this 
+	 to generate the Matter statement.</p></li>
+	<li><p><span class="hcp2">Copy Fees</span> - Click this 
+	 to copy Recurring Fees from an existing Billing File. This will open 
+	 the <a href="Copy_Fees.htm">Copy Fees</a> screen. By default, this 
+	 command button is inactive.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">User Fields - Matter Account</p>
+<p>This lists user fields for the selected Matter to record additional 
+ information.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 create a new Activity record</p></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 redirect the user to the Activities screen to edit any information</p></li>
+	<li><p class="hcp3">Delete - <span class="hcp4">Click 
+	 this to delete Activity record. </span><span style="font-style: italic;">Note:</span><span class="hcp4"> The deleted record can be viewed in 
+	 the Changes log screen.</span></p></li>
+	<li><p style="font-weight: normal;"><span class="hcp2">Assign</span> 
+	 - Click this assign the activity to the matter.</p></li>
+	<li><p class="hcp3">Explore<span class="hcp4"> 
+	 - Click this to redirect to the Activity Explore screen.</span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also</p>
+<ul class="hcp1">
+	<li><p><a href="../Shared/Entity_Administrator.htm">Entity Administration</a></p></li>
+	<li><p><a href="Review_Settings.htm">Review Settings - First Bill Cloning</a></p></li>
+	<li><p><a href="Payer_Bank_Accounts.htm">Payer Bank Accounts</a></p></li>
+	<li><p><a href="../Shared/Handling_Cash_Advances.htm">Handling Cash 
+	 Advances Using Matters</a></p></li>
+	<li><p><a href="../Configuration/Sales_Tax.htm">Sales Tax</a></p></li>
+	<li><p><a href="../Shared/Intercompany_Invoicing.htm">Intercompany 
+	 Invoicing and Settlements</a></p></li>
+</ul>
+
+   <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Sales_Ledger.htm">Sales Ledger</a> &gt; <a href="Billing_File_General.htm">Billing File</a> &gt; Matters</p>
+   <p class="hcp5">&#160;</p>
+   <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+   <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a4','POPUP419335190');
+	TextPopupInit('a11','POPUP373478869');
+//]]></script>
+  </body>
+</html>

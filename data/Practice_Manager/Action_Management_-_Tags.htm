@@ -1,0 +1,132 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Action Management - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold; }
+ul.hcp2 { list-style:disc; }
+li.hcp3 { list-style:none;
+display:inline; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Action Management - Tags</h1>
+<p>These tags are to be added to the Billing template in the template properties 
+ in the Key Information field. With the tags in place, when the billing 
+ document is generated, action(s) specified using the tags will be created.</p>
+<p>For example, you can have the action 'Debit Note e-mailed' to be created 
+ for each invoice that you generate by adding the tag to the invoice template.</p>
+<p>&#160;</p>
+<h3>Create New Action Tag</h3>
+<p>This tag will create a new action when you generate the billing document 
+ and the syntax is:</p>
+<p class="hcp1">[/DMW.Action|&lt;Field&gt;=&lt;Value&gt;|&lt;Field&gt;=&lt;Value&gt;|.../]</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp2">
+	<li>&lt;Field&gt; refers to field of an action and can be:</li>
+	<li class="hcp3"><ul class="hcp2">
+		<li><p>RefCode - This is to specify the File Code.</p></li>
+		<li><p>MatterCode - This is to specify the Matter Code.</p></li>
+		<li><p>ProformaNr - This is to specify the draft invoice number.</p></li>
+		<li><p>ReceiptNr - This is to specify the receipt/payment transaction 
+		 number.</p></li>
+		<li><p>ActionCategory - This is to specify the action category 
+		 and follows the values in the Practice Management Action Categories 
+		 [PACT] lookup table.</p></li>
+		<li><p>ActionType - This is to specify the action type and is according 
+		 to the values in the Practice Management Action Types [PMAC] lookup 
+		 table.</p></li>
+		<li><p>AcDescription - This is to specify the action description.</p></li>
+		<li><p>AcNote - This is to specify additional notes.</p></li>
+		<li><p>AdminAssign - This is to specify the assignee for the action.</p></li>
+		<li><p>DateDue - This is to specify the due date. You can also 
+		 use:</p></li>
+		<li class="hcp3"><ul class="hcp2">
+			<li><p>(-APP.NOW-) for today's date.</p></li>
+			<li><p>(-APP.NOW-)+&lt;Number of days&gt; for future date e.g. 
+			 (-APP.NOW-)+30 will give you 30 days from today.</p></li>
+		</ul></li>
+		<li><p>AcComplete - This is to specify status for the action. Enter 
+		 0 to indicate it if not yet complete.</p></li>
+		<li><p>AcCur - This is to specify the currency code.</p></li>
+		<li><p>AcAmountCur - This is to specify the amount.</p></li>
+		<li><p>AcAmountBase - This is to specify the base currency code.</p></li>
+	</ul></li>
+	<li>&lt;Value&gt; can be:</li>
+	<li class="hcp3"><ul class="hcp2">
+		<li><p>Specified value e.g. ActionCategory=D</p></li>
+		<li><p>field code to retrieve details from the invoice e.g. RefCode=(-HDF.RefCode-)</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[/DMW.Action|RefCode=(-HDF.RefCode-)|MatterCode=(-HDF.MatterCode-)|ProformaNr=(-HDF.ProformaNr-)|ReceiptNr=0|ActionCategory=D|ActionType=DD|AcDescription=E-mail 
+ of debit note (-HDF.ProformaNr-)|AcNote=-|AdminAssign=(-HDF.UCode-)|DateDue=(-APP.NOW-)+2|AcComplete=0|AcCur=(-HDF.CurCode-)|AcAmountCur=(-HDF.InvoiceTotal-)|AcAmountBase=(-HDF.InvoiceBase-)|/]</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If 
+ the action has been created and remains incomplete, generating the same 
+ document will not create the same action again. However, if the action 
+ has been completed, then a duplicate action can be created for the document.</p>
+<p>&#160;</p>
+<h3>Create Duplicate Action</h3>
+<p>This is to allow creation of duplicate action even if the existing action 
+ is not yet complete. However, this is based on the specified flag and 
+ the syntax is:</p>
+<p class="hcp1">[/DMW.Action.Duplicate=&lt;Flag&gt;/]</p>
+<p>&#160;</p>
+<p>where &lt;Flag&gt; can be:</p>
+<ul class="hcp2">
+	<li><p>D - To allow duplicate action to be created for the same draft 
+	 number.</p></li>
+	<li><p>M - To allow duplicate action to be created for the same Matter 
+	 code.</p></li>
+	<li><p>R - To allow duplicate action to be created for the same receipt 
+	 number.</p></li>
+</ul>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[/DMW.Action|RefCode=(-HDF.RefCode-)|MatterCode=(-HDF.MatterCode-)|ProformaNr=(-HDF.ProformaNr-)|ReceiptNr=0|ActionCategory=D|ActionType=DD|AcDescription=E-mail 
+ of debit note (-HDF.ProformaNr-)|AcNote=-|AdminAssign=(-HDF.UCode-)|DateDue=(-APP.NOW-)+2|AcComplete=0|AcCur=(-HDF.CurCode-)|AcAmountCur=(-HDF.InvoiceTotal-)|AcAmountBase=(-HDF.InvoiceBase-)|/]</p>
+<p>&#160;</p>
+<p>[/DMW.Action.Duplicate=D/]</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Action_Management.htm">Action Management</a></p></li>
+	<li><p><a href="../Configuration/Key_Information.htm">Key Information</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Action Management - Tags</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

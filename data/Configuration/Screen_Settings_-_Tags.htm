@@ -1,0 +1,177 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Screen Settings - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Screen Settings - Tags</h1>
+<p>The display on a summary screen is based on the template assigned to the summary screen. The assignment is done using this tag:</p>
+<p style="font-weight: bold;">[&lt;CmdType&gt;=&lt;FormCode&gt;]</p>
+<p style="font-weight: normal;">where</p>
+<ul class="hcp1">
+<li><span style="font-weight: normal;">&lt;</span>CmdType&gt; can be:</li>
+<li style="list-style: none; display: inline;">
+<ul class="hcp1">
+<li>
+<p>MF.&lt;TypeCode&gt; to set condition based Master File type e.g. MF.I, MF.C.</p>
+</li>
+<li>
+<p>ET.&lt;JurisdictionCode&gt;-&lt;EntityTypeCode&gt; to set condition based on Entity's jurisdiction and type e.g. ET.HK-CG.</p>
+</li>
+<li>
+<p>OS.&lt;OwnershipStructureCode&gt; to set condition based on Entity's ownership structure e.g. OS.SA.</p>
+</li>
+<li>
+<p>JU.&lt;CountryCode&gt; to set condition based on jurisdiction e.g. JU.HK.</p>
+</li>
+<li>
+<p>DF to set as default template for the summary screen.</p>
+</li>
+</ul>
+</li>
+<li>&lt;FormCode&gt; refers to the form code of the template.</li>
+</ul>
+<table class="Table1" cellspacing="0px" width="69.891%">
+<colgroup>
+<col width="120">
+<col width="202">
+<col width="383"></colgroup>
+<tr class="t1st">
+<td>
+<p><span class="hcp1">CmdType</span></p>
+</td>
+<td>
+<p style="margin-right: -16px;"><span class="hcp1">Description</span></p>
+</td>
+<td>
+<p><span class="hcp1">Example</span></p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>MF</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Template is based on Master File Type.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<ul class="hcp1">
+<li>
+<p>[MF.I=WNMFSSI] - WNFMSSI template is used for Individual [I] Master Files.</p>
+</li>
+<li>
+<p>[MF.C=WNMFSSC] - WNMFSSC template is used for Company [C] Master Files.</p>
+</li>
+<li>
+<p>[DF=WNMFSS] - Default template. See DF, below.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>ET</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Template is based on the Entity File's Jurisdiction and Entity Type.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<ul class="hcp1">
+<li>
+<p>[ET.HK-CG=WNCSSSCG] - WNCSSSCG template is used if the Entity is incorporated in Hong Kong [HK] and the Entity Type is Company Limited by Guarantee [CG].</p>
+</li>
+<li>
+<p>[ET.HK-CL=WNCSSSCL] - WNCSSSCL template is used if the Entity is incorporated in Hong Kong [HK] and the Entity Type is Private Company Limited by Shares [CL].</p>
+</li>
+<li>
+<p>[DF=WNCSSS] - Default template. See DF, below.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>OS</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Template is based on the Entity's ownership structure.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<ul class="hcp1">
+<li>
+<p>[OS.SA=WNCSSSSA] - WNCSSSSA template is used for entities using the Shares – authorised capital [SA] structure.</p>
+</li>
+<li>
+<p>[OS.TR=WNCSSSTR] - WNCSSSTR template is used for entities set up as Trust [TR].</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>JU</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Template is based on jurisdiction.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[JU.HK=WNCSSSCL]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>DF</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Default template, used when none of the tags match.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[DF=WNMFSSS]</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="Settings_-_Screen_Settings.htm">Screen Settings</a></p>
+</li>
+<li>
+<p><a href="../Shared/Summary_Screen.htm">Summary Screen</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Screen Settings - Tags</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

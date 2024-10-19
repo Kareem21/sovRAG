@@ -1,0 +1,201 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+<meta name="robots" content="NOODP">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>SQL Selection</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { text-decoration:underline; }
+p.hcp2 { margin-left:160px; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>SQL Selection</h1>
+<p>eView profiles can be customized to display information that is required by a particular User Group.</p>
+<p>&#160;</p>
+<h2>Customizing Reports</h2>
+<p>The number of reports a User can view or access in the eView Home Category can be customised so that reports that are not applicable to a particular User or User Group can be removed from the menu box. The eView profile type MUST be H (Home). Reports can only be listed in your Home page.</p>
+<p>&#160;</p>
+<h4>Configuring URL Query String</h4>
+<p>The URL query string tells the system which report it should be redirected to.</p>
+<p><span class="hcp1">Minimum information</span> - The minimum information required in the query string is the form code, which indicates the HTML template to be linked to the report:</p>
+<p class="hcp2">fc=&lt;form code&gt;</p>
+<p><span class="hcp1">Database table keys</span> - If database table keys are required to select a particular record, supply the key information. Multiple keys are delimited by a pipe:</p>
+<p class="hcp2">keys=&lt;field name&gt;:&lt;field value&gt;</p>
+<p class="hcp2">keys=&lt;field 1 name&gt;:&lt;field 1 value&gt;|&lt;field 2 name&gt;:&lt;field 2 value&gt;...</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>A complete query string can contain just the form code, or the form code and the key information:</p>
+<p>fc=SRH_NOTE</p>
+<p>fc=SRH_NOTE&amp;KEYS=Ucode:(-UCode-)</p>
+<p>In the following query string,</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="31.482%" border="1">
+<col style="width: 100%;">
+<tr>
+<td>
+<p>'Master File Menu box</p>
+<p>Master File\?BOX</p>
+<p>Addresses and Contacts\?fc=MSADCT</p>
+<p>Master File Acts as Officer for\?fc=MSOFFR</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="84.028%">
+<col style="width: 32.045%;">
+<col style="width: 67.955%;">
+<tr class="t1st">
+<td>
+<p>Code</p>
+</td>
+<td>
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p>'Master File Menu box</p>
+</td>
+<td class="t2Col">
+<p>This is a remark which starts with an apostrophe</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p>Master File\?BOX</p>
+</td>
+<td class="t2Col">
+<p>This is the menu header name and always ends with \?BOX.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p>Addresses and Contacts</p>
+<p>and</p>
+<p>Master File Acts as Officer for</p>
+</td>
+<td class="t2Col">
+<p>This is the report caption or title and always ends with \?.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p>\?</p>
+</td>
+<td class="t2Col">
+<p>This is the delimiter that separates the report caption and query string.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p>fc=MSADCT</p>
+<p>and</p>
+<p>fc=MSOFFR</p>
+</td>
+<td class="t2Col">
+<p>This is the query string and comes after the delimiter (\?).</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Customizing Other Profiles</h2>
+<p>Other profiles in eView may have specific search parameters in order to retrieve specific files. These parameters can be used to limit the files a user can access. There are currently four search parameters that can be used:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 24.825%;">
+<col style="width: 15.501%;">
+<col style="width: 59.674%;">
+<tr class="t1st">
+<td>
+<p>Search Criteria</p>
+</td>
+<td>
+<p>Query format</p>
+</td>
+<td>
+<p>Example of resulting search result</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p>Administration Group</p>
+</td>
+<td class="t2Col">
+<p>...IN (-AGROUP-)...</p>
+</td>
+<td class="t1Col">
+<p>where Administrator has access to Admin Group1, Admin Group2 and Admin Group3 files:</p>
+<p>Files from 'GROUP1', 'GROUP2' and 'GROUP3'.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p>User Code</p>
+</td>
+<td class="t2Col">
+<p>...=(-UCODE-)...</p>
+</td>
+<td class="t1Col">
+<p>where Administrator's User Code is DD (Donald Daly):</p>
+<p>Files where Administrator is Donald Daly.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col">
+<p>User Group</p>
+</td>
+<td class="t2Col">
+<p>...=(-UGROUP-)...</p>
+</td>
+<td class="t1Col">
+<p>where Administrator's User Group is SYSMGR:</p>
+<p>Files that can be accessed by System Managers.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col">
+<p>First Administration Group (i.e. the default Administrator Group for the Administrator}</p>
+</td>
+<td class="t2Col">
+<p>...=(-FAGROUP-)...</p>
+</td>
+<td class="t1Col">
+<p>&#160;where Administrator's default Admin Group is Group1:</p>
+<p>Files from 'GROUP1'.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>Each profile can have more than one search parameter, separated by the pipe symbol '|', as shown below:</p>
+<p>fc=RepMenu&amp;KEYS=Ucode:(-UCODE-)|AGROUP:(-AGROUP-)</p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; SQL Selection</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

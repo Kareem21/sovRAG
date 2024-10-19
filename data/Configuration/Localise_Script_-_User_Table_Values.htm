@@ -1,0 +1,153 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - User Table Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold;
+text-decoration:none; }
+span.hcp3 { font-weight:bold; }
+ul.hcp4 { list-style:disc; }
+li.hcp5 { font-weight:bold; }
+span.hcp6 { font-weight:normal; }
+img.hcp7 { border:none; }
+p.hcp8 { font-weight:normal;
+text-decoration:none; }
+p.hcp9 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - User Table Values</h1>
+<p>Similar to lookup tables, there are also tags which can be used in Localise 
+ Scripts for user tables. In this case, tags are available to create new 
+ tables and add values to the table.</p>
+<p>&#160;</p>
+<h3>Adding a Table</h3>
+<p>The tag below is to create a new user table using Localise Script.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">UTADD: &lt;TCode&gt;=&lt;TName&gt;</p>
+<p>Or</p>
+<p><span class="hcp3">UTADD:&lt;TCode&gt;=Name=&lt;TName&gt;|ElNote=&lt;TNote&gt;|TagValues=&lt;TTag&gt;|WithRating=&lt;Value&gt; 
+ &#160;</span></p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p><span class="hcp3">&lt;TCode&gt;</span> is the 
+	 code for the table.</p></li>
+	<li><p><span class="hcp3">&lt;TName&gt;</span> is the 
+	 name for the table.</p></li>
+	<li><p><span class="hcp3">&lt;TNote&gt;</span> is the 
+	 note for the table. </p></li>
+	<li class="hcp5"><p>&lt;TTag&gt; <span class="hcp6">is 
+	 the tag value for the table.</span> </p></li>
+	<li><p><span class="hcp3">&lt;Value&gt;</span> is to 
+	 indicate the risk rating option for the table.</p></li>
+</ul>
+<p><img src="../Screenshot%202022-05-30%20103308.png" alt="" width="728" height="271" border="0" class="hcp7"></p>
+<p class="hcp8">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To add the table FATCA Classification: &#160;UTADD:FCST=FATCA Classification 
+ or UTADD:FCST=Name=FATCA Classification|ElNote=For FARCA Classification||TagValues=[SUBSCRIBER=GEN.ASA.EUR]|WithRating=1 
+ </p>
+<p>&#160;</p>
+<p><span style="font-style: italic; font-weight: bold;">Note</span>: Part 
+ of the Value will be missing in the result if fields value contain the 
+ pipe symbol (|)<span style="box-sizing: border-box; font-variant-ligatures: normal; 
+						 font-variant-caps: normal; orphans: 2; widows: 2; 
+						 -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+						 text-decoration-thickness: initial; text-decoration-style: initial; 
+						 text-decoration-color: initial; color: rgb(36, 36, 36); 
+						 font-family: 'Segoe UI', system-ui, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; 
+						 display: inline	 ! important ;">.</span> &#160;</p>
+<p>&#160;</p>
+<h3>Adding a User Table Value</h3>
+<p>Once the user table has been created, then the tag below can be used 
+ to add values to the user table.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p style="font-weight: bold;">UVADD: &lt;TCode&gt;+&lt;VCode&gt;=&lt;VName&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p><span class="hcp3">&lt;TCode&gt;</span> is the 
+	 user table code obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; User Tables/Values.</p></li>
+	<li><p><span class="hcp3">&lt;VCode&gt;</span> is the 
+	 code of the User Table value to be added. There should not be duplicates 
+	 of any (existing) code.</p></li>
+	<li><p><span class="hcp3">&lt;VName&gt;</span> is the 
+	 name of the User Table value.</p></li>
+</ul>
+<p class="hcp1"><img src="../image199.gif" alt="" border="0" class="hcp7"></p>
+<p class="hcp8">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To add the value shown above: UVADD:FCST+0001=Reporting Model 1 FFI</p>
+<p class="hcp8">&#160;</p>
+<h3>Adding a User Table Value with Note and Tag Values</h3>
+<p class="hcp8">If the User Table 
+ value is to contain note or tags, then the syntax is:</p>
+<p class="hcp2">UVADD:&lt;TCode&gt;+&lt;VCode&gt;=Name=&lt;VName&gt;|ElNote=&lt;VNote&gt;|TagValues=&lt;VTag&gt;<span 
+	 style="color: rgba(0, 0, 0, 0.9); font-family: Calibri, sans-serif; 
+	 font-size: 14.6667px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: 700; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+	 background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none;"> &#160;&#160;&#160;</span></p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p><span class="hcp3">&lt;TCode&gt;</span> is the 
+	 user table code obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; User Tables/Values.</p></li>
+	<li><p><span class="hcp3">&lt;VCode&gt;</span> is the 
+	 code of the User Table value to be added. There should not be duplicates 
+	 of any (existing) code.</p></li>
+	<li><p><span class="hcp3">&lt;VName&gt;</span> is the 
+	 name of the User Table value.</p></li>
+	<li><p><span class="hcp3">&lt;VNote&gt;</span> is the 
+	 note for the User Table value.</p></li>
+	<li class="hcp5"><p>&lt;VTag&gt; <span class="hcp6">is 
+	 the tag value for the User Table value.</span></p></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp4">
+	<li><p><a href="User_Tables.htm">User Tables/Values</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - User Table Values</p>
+<p class="hcp9">&#160;</p>
+<p class="hcp9">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp9">Version: 8.0.2022.09.20</p>
+</body>
+</html>

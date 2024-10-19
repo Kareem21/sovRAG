@@ -1,0 +1,396 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Create/Edit Invoice">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Create/Edit Invoice</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+li.hcp5 { margin-left:-20px; }
+p.hcp6 { text-align:center; }
+p.hcp7 { text-align:center;
+color:#000000; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Create/Edit Invoice</h1>
+<p>This is only available in File Maintenance screen and allows you to:</p>
+<ul class="hcp1">
+	<li><p>Manually create ad hoc invoices.</p></li>
+	<li><p>Edit or delete draft invoices that have not been approved as 
+	 they have not yet been posted to the invoice ledger so the changes 
+	 will not affect the ledger.</p></li>
+</ul>
+<p>Once a draft invoice has been posted, you will not be able to edit or 
+ delete them; you would need to create a credit note to offset the amount 
+ of the invoice you want to edit or delete.</p>
+<p>&#160;</p>
+<p class="FldExplain">Draft invoice list</p>
+<p>Lists all draft invoices created for the selected Billing File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">create</a> 
+	 an ad hoc invoice.</p>
+	<div class="droptext" id="POPUP383575079" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the details for the invoice.</p></li>
+			<li><p>Click Update.</p></li>
+			<li><p>Enter the lines by clicking New in Details table.</p></li>
+		</ol>
+		<p><span class="hcp4">Note: </span>When 
+		 manually creating a Credit Note to cancel the existing invoice, 
+		 you can define the draft number of the invoice to cancel in the 
+		 field 'Original Draft No.'. Any invoice line with an outstanding 
+		 amount will be copied to the newly created draft invoice.</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected draft invoice.</p></li>
+	<li><p><span class="hcp2">Reopen</span> - Click this 
+	 to reopen a locked/closed draft invoice. Draft invoices are locked 
+	 when you click Print button.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a6">delete</a> 
+	 the selected draft invoice.</p>
+	<div class="droptext" id="POPUP383557898" style="display: none;">
+		<p>Click Yes to confirm the deletion.</p>
+ </div></li>
+	<li><p><span class="hcp2">Print</span> - Click this to 
+	 print the selected draft invoice. Once a draft has been printed, it 
+	 will be locked for editing. You need to reopen the draft to make further 
+	 changes.</p></li>
+	<li><p><span class="hcp2">Invoice</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">invoice</a> 
+	 the selected draft invoices.</p>
+	<div class="droptext" id="POPUP383562955" style="display: none;">
+		<ol class="hcp3">
+			<li class="hcp5"><p class="Bullet">&#160;In 
+			 the Invoice Posting window that appears, complete the following 
+			 information:</p></li>
+		</ol>
+		<ul class="hcp1">
+			<li><p class="Bullet">Invoice Date, Journal Date and Overwrite 
+			 for (existing) Draft Invoices - When you post an invoice, 
+			 the invoice and journal dates default to the date when the 
+			 draft was created. You may overwrite these dates by entering 
+			 the date you want in the Invoice Date and Journal Date fields, 
+			 and tick the corresponding Overwrite for (existing) Draft 
+			 Invoices checkboxes.</p></li>
+			<li><p class="Bullet">Print Document (to document queue) - 
+			 Tick this checkbox to send a copy of the invoice to the Document 
+			 Queue for printing or editing.</p></li>
+		</ul>
+		<ol start="2" class="hcp3">
+			<li class="hcp5"><p class="Bullet">Click Start 
+			 to begin the process.</p></li>
+		</ol>
+		<p><span class="hcp4">Note:</span> 
+		 When 'Use Recurring Services for T&amp;D Postings' option is enabled 
+		 in Home &gt; Configuration &gt; System Defaults &gt; Time and 
+		 Disbursements, the invoice will be created with the following 
+		 type:</p>
+		<ul class="hcp1">
+			<li><p>If Entity Administration component is activated - an 
+			 invoice with document type 'Recurring Fee Invoice Entity [A_CS]' 
+			 will be created.</p></li>
+			<li><p><span>If Entity Administration component is not activated 
+			 - &#160;an invoice with document type 'Recurring Fee Invoice 
+			 Non-Entity [A_GE]' will be created.</span></p></li>
+		</ul>
+		<p>When 'Use Recurring Services for T&amp;D Postings' option is 
+		 disabled in Home &gt; Configuration &gt; System Defaults &gt; 
+		 Time and Disbursements, the invoice will be created with the type 
+		 'Debit Note [DR_N]'. </p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Invoice lines</p>
+<p>Lists all individual lines of the selected draft invoice.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a2">add</a> 
+	 a new line for the selected draft. You may repeat this step as many 
+	 times as necessary.</p>
+	<div class="droptext" id="POPUP384089033" style="display: none;">
+		<p>Enter the details for the detail line. Click Update when done.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 For VAT % involving different currency, VAT will be calculated 
+		 in the original currency and then rounding is applied after the 
+		 currency conversion. </p>
+		<p>The example below shows the VAT calculation in USD first.</p>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="65.16%">
+			<col style="width: 23.939%;">
+			<col style="width: 9.814%;">
+			<col style="width: 12.316%;">
+			<col style="width: 21.258%;">
+			<col style="width: 13.886%;">
+			<col style="width: 18.786%;">
+			<tr class="t1st">
+				<td><p>Service</p></td>
+				<td><p class="hcp6">Unit </p>
+				<p class="hcp6">[U]</p></td>
+				<td><p class="hcp6">Price in USD </p>
+				<p class="hcp6">[P]</p></td>
+				<td><p class="hcp6">Line amount in USD </p>
+				<p class="hcp6">[LP] = [U]*[P]</p></td>
+				<td><p class="hcp6">VAT %</p>
+				<p class="hcp6">[VR]</p></td>
+				<td><p class="hcp6">VAT in USD</p>
+				<p class="hcp6">[VL]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Admin Fee</p></td>
+				<td class="t2Col"><p class="hcp6">123</p></td>
+				<td class="t1Col"><p class="hcp6">6.91</p></td>
+				<td class="t2Col"><p class="hcp6">849.93</p></td>
+				<td class="t1Col"><p class="hcp6">0.1</p></td>
+				<td class="t2Col"><p class="hcp6">84.99</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Accounting</p></td>
+				<td class="t2Col"><p class="hcp6">142</p></td>
+				<td class="t1Col"><p class="hcp6">7.21</p></td>
+				<td class="t2Col"><p class="hcp6">1,023.82</p></td>
+				<td class="t1Col"><p class="hcp6">0.12</p></td>
+				<td class="t2Col"><p class="hcp6">122.86</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>With an exchange rate of 16,697.33 for USD to IDR, the table 
+		 below shows the rounding to 2 decimal places being applied for 
+		 VAT after the currency conversion.</p>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="100%">
+			<col style="width: 15.944%;">
+			<col style="width: 6.033%;">
+			<col style="width: 8.045%;">
+			<col style="width: 13.893%;">
+			<col style="width: 8.888%;">
+			<col style="width: 12.628%;">
+			<col style="width: 17.285%;">
+			<col style="width: 17.285%;">
+			<tr class="t1st">
+				<td><p>Service</p></td>
+				<td><p class="hcp6">Unit </p>
+				<p class="hcp6">[U]</p></td>
+				<td><p class="hcp6">Price in USD </p>
+				<p class="hcp6">[P]</p></td>
+				<td><p class="hcp6">Line amount in USD </p>
+				<p class="hcp6">[LP] = [U]*[P]</p></td>
+				<td><p class="hcp6">VAT %</p>
+				<p class="hcp6">[VR]</p></td>
+				<td><p class="hcp6">VAT in USD</p>
+				<p class="hcp6">[VL]</p></td>
+				<td style="border-right-width: 1px;"><p class="hcp6">Exchange 
+				 Rate for USD to IDR</p>
+				<p class="hcp6">[X]</p></td>
+				<td style="border-top-width: 1px; border-bottom-width: 1px; 
+					 border-right-width: 1px;" bgcolor="#BAD8FC"><p class="hcp7">VAT in IDR</p>
+				<p class="hcp7">[VAT] = 
+				 ROUND([VL]*[X],2)</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Admin Fee</p></td>
+				<td class="t2Col"><p class="hcp6">123</p></td>
+				<td class="t1Col"><p class="hcp6">6.91</p></td>
+				<td class="t2Col"><p class="hcp6">849.93</p></td>
+				<td class="t1Col"><p class="hcp6">0.1</p></td>
+				<td class="t2Col"><p class="hcp6">84.99</p></td>
+				<td class="t1Col"><p class="hcp6">16,697.33</p></td>
+				<td class="t2Col"><p class="hcp6">1,419,106.08</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Accounting</p></td>
+				<td class="t2Col"><p class="hcp6">142</p></td>
+				<td class="t1Col"><p class="hcp6">7.21</p></td>
+				<td class="t2Col"><p class="hcp6">1,023.82</p></td>
+				<td class="t1Col"><p class="hcp6">0.12</p></td>
+				<td class="t2Col"><p class="hcp6">122.86</p></td>
+				<td class="t1Col"><p class="hcp6">16,697.33</p></td>
+				<td class="t2Col"><p class="hcp6">2,051,433.96</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<ul class="hcp1">
+			<li>Cost - Time - The value in this field is being retrieved 
+			 from the Service Master and will be converted from Service 
+			 Currency to Reporting Currency.</li>
+			<li>Cost - Material - The value in this field is being retrieved 
+			 from the Service Master and will be converted from Service 
+			 Currency to Reporting Currency.</li>
+		</ul>
+		<p>If both options 'Multi Rate/CCY List' and 'Multi Rate/CCY List 
+		 Cost of Services' are ticked:</p>
+		<ul class="hcp1">
+			<li>Cost - Time - The value in this field is being retrieved 
+			 from the Service Rates and will be converted from Invoice 
+			 Line Currency to Reporting Currency.</li>
+			<li>Cost - Material - The value in this field is being retrieved 
+			 from the Service Rates and will be converted from Invoice 
+			 Line Currency to Reporting Currency.</li>
+		</ul>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected line for the draft.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected line for the draft.</p></li>
+	<li><p><span class="hcp2">Line Source</span> - Click 
+	 this to <a class="dropspot" href="javascript:TextPopup(this)" id="a4">view</a> 
+	 lines pulled from Time and Disbursements. This is only available if 
+	 the draft invoice contains such lines.</p>
+	<div class="droptext" id="POPUP383552745" style="display: none;">
+		<p>The Source screen will be displayed separately to show the lines. 
+		 These detail lines that originate from Time and Disbursements 
+		 can still be edited when they are in the draft invoice stage.</p>
+		<p>Note that certain fields such as number of units and unit price 
+		 are disabled and cannot be changed.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Add</p>
+		<p>Click to <a class="dropspot" href="javascript:TextPopup(this)" id="a8">add</a> 
+		 another entry into the selected draft invoice. This is useful 
+		 if the entry was only approved after the draft invoice has been 
+		 created. Note that the entries must be from the same Billing File, 
+		 Matter and is of the same Service Code as the draft invoice line.</p>
+		<div class="droptext" id="POPUP383556227" style="display: none;">
+			<p>This displays approved entries that were not included in 
+			 the draft invoice. Tick the entry or entries to include and 
+			 click Select.</p>
+  </div>
+		
+		<p>&#160;</p>
+		<p class="FldExplain">Edit</p>
+		<p>Click to edit the selected line.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Remove</p>
+		<p>Click to remove the selected item.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Close</p>
+		<p>Click to close the Source screen</p>
+ </div></li>
+	<li><p><span class="hcp2">Non Chargeable</span> - Click 
+	 this to view all <a class="dropspot" href="javascript:TextPopup(this)" id="a71">non-chargeable</a>&#160;time 
+	 entries in this invoice. This button will be enabled when there is 
+	 'Date-To' value assigned for this invoice line. You can add or remove 
+	 the <a class="dropspot" href="javascript:TextPopup(this)" id="a711">non-chargeable</a> 
+	 time entries linked to this invoice line through <a class="dropspot" href="javascript:TextPopup(this)" id="a911">Non 
+	 Chargeable</a> prompt screen. In the <a class="dropspot" href="javascript:TextPopup(this)" id="a912">Non 
+	 Chargeable</a> prompt screen, you can add approved 
+	 non-chargeable time entries when the date is earlier or same as the 
+	 'Date - To' of this invoice line. This is only applicable for time 
+	 entries.</p>
+	<div class="droptext" id="POPUP54520656012" style="display: none;">
+		<p>In Non Chargeable screen, you will be able to filter the list 
+		 of non-chargeable time entries by service and perform the following:</p>
+		<ul class="hcp1">
+			<li><p>Add non-chargeable time entries</p></li>
+			<li><p>Remove non-chargeable time entries</p></li>
+		</ul>
+		<p>However, the Edit command button is disabled so you will not 
+		 be able to edit these time entries.</p>
+ </div>
+	<div class="droptext" id="POPUP54520656011" style="display: none;">
+		<p>In Non Chargeable screen, you will be able to filter the list 
+		 of non-chargeable time entries by service and perform the following:</p>
+		<ul class="hcp1">
+			<li><p>Add non-chargeable time entries</p></li>
+			<li><p>Remove non-chargeable time entries</p></li>
+		</ul>
+		<p>However, the Edit command button is disabled so you will not 
+		 be able to edit these time entries.</p>
+ </div>
+	<div class="droptext" id="POPUP55807785711" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Click Add.</p></li>
+			<li><p>Select the time entry by ticking the checkbox.</p></li>
+			<li><p>Click Select.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div>
+	<div class="droptext" id="POPUP5580778571" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Click Add.</p></li>
+			<li><p>Select the time entry by ticking the checkbox.</p></li>
+			<li><p>Click Select.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Checkbox</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Add Administrative Mark-up</span> 
+	 - Tick this to include Administrative Mark-up to the invoice line. 
+	 Enabling this option will create Administrative Mark-up as a separate 
+	 invoice line. This checkbox is available when the ‘Add Administrative 
+	 Markup’ is checked in the Practice Management settings.</p></li>
+</ul>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Draft_Invoices.htm">Draft Invoices</a></p></li>
+	<li><p><a href="Draft_Invoices_Creation.htm">Draft Invoices - Creation</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Sales_Ledger.htm">Sales Ledger</a> &gt; <a href="Payer_Bank_Accounts.htm">Invoicing</a> &gt; Create/Edit Invoice</p>
+ <p class="hcp8">&#160;</p>
+ <p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP383575079');
+	TextPopupInit('a6','POPUP383557898');
+	TextPopupInit('a3','POPUP383562955');
+	TextPopupInit('a2','POPUP384089033');
+	TextPopupInit('a4','POPUP383552745');
+	TextPopupInit('a8','POPUP383556227');
+	TextPopupInit('a5','POPUP383525944');
+	TextPopupInit('a71','POPUP5580778571');
+	TextPopupInit('a711','POPUP55807785711');
+	TextPopupInit('a911','POPUP54520656011');
+	TextPopupInit('a912','POPUP54520656012');
+//]]></script>
+</body>
+</html>

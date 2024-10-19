@@ -1,0 +1,146 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Score Assignment</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { color:#2d005b; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist Item - Score Assignment</h1>
+<p>If necessary, scores can be assigned to the value of checklist item 
+ for calculation but how this is done depends on the checklist item's field 
+ type. The following are the available methods:</p>
+<ul class="hcp1">
+	<li><p>Using [WSCORE=] tag</p></li>
+	<li><p>Through Risk Ratings screen</p></li>
+	<li><p>Using Lookup Formula</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Using [WSCORE=] Tag</h3>
+<p>The [WSCORE=] tag is used to assign scores when the checklist item's 
+ field type is not 'Lookup Table' or 'User Table'. The tag is to be added 
+ to the Values/Default column of the checklist item.</p>
+<table class="Table1" cellspacing="0px" width="93.785%">
+	<col style="width: 10.088%;">
+	<col style="width: 45.407%;">
+	<col style="width: 44.504%;">
+	<tr class="t1st">
+		<td><p class="hcp2">Field Type</p></td>
+		<td><p class="hcp2">Location of Score Tag</p></td>
+		<td><p class="hcp2">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Yes/No</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Enter the tag 
+		 in Tag Values field after you click the Browse button in the Values/Default 
+		 column.&#160;Note that the first score is for 'Yes' and the second 
+		 is for 'No'.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WSCORE=5|0]</p>
+		<p>means a score a of 5 is assigned to a Yes value and a score 
+		 of 0 is assigned to a No value.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>List without 
+		 Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Enter the tag 
+		 in Tag Values field after you click Browse button in the Values/Default 
+		 column. Note that the scores should follow the order of the list 
+		 values.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>List options 
+		 are specified as Advertising|Agriculture|Aviation|Finance</p>
+		<p>&#160;</p>
+		<p>[WSCORE=5|10|5|10]</p>
+		<p>means a score a of 5 is assigned to Advertising and Aviation 
+		 and a score of 10 is assigned to Agriculture and Finance.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>List with Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Enter the tag 
+		 in Tag Values field after you click Browse button in the Values/Default 
+		 column. Note that the scores assigned are for the list values. 
+		 All user input will be assigned a score of zero (0).</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Refer to the 
+		 above.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Risk Ratings Screen</h3>
+<p>This is to be used for assigning scores when the checklist item's field 
+ type is:</p>
+<ul class="hcp1">
+	<li><p>Lookup Value</p></li>
+	<li><p>User Table Value</p></li>
+	
+	
+	
+</ul>
+<p>The scores are to be entered in the Value column of the Risk Ratings 
+ screen. Refer to <a href="Risk_Ratings.htm">Risk Ratings</a>.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If 
+ scores have been assigned for Lookup Values and User Table Values &#160;using 
+ [WSCORE=] and [&lt;ScoreSystem&gt;=] tag earlier, this can be converted 
+ to Risk Ratings screen.</p>
+<p>&#160;</p>
+<h3>Lookup Formula</h3>
+<p>This is a type of formula that can be used to assign a score based on 
+ calculation of scores for other checklist items. This requires a checklist 
+ item with the field type 'Formula'. Refer to <a href="Checklist_Item_-_Field_Type__Formula.htm">Checklist 
+ Item - Field Type: Formula</a> for more information.</p>
+<p>&#160;</p>
+<h2>Score Assignment for Viewpoint Engage Workflow</h2>
+<p>System has been enhanced to automate the scores and formulas recalculation 
+ once a Viewpoint Engage request (Workflow) is submitted to the Back-office. 
+ To enable the automatic recalculation, the tag '[ON_SUBMIT=DORATING]' 
+ is required to be inserted into the Workflow Step properties. When this 
+ tag is configured, the Back-office will run the 'Refresh Rating' function 
+ to recalculate the scores and formulas once user clicks the 'Submit' button 
+ in the Viewpoint Engage Workflow step.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Shared/Checklist.htm">Checklist</a></p></li>
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist/Workflow 
+	 Step Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Score Assignment</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

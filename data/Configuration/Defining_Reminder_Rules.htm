@@ -1,0 +1,244 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Defining To Do Rules">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Defining Reminder Rules</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt; }
+td.hcp2 { border-top:Inset 1px #000000;
+border-right:Inset 1px #000000;
+border-bottom:Inset 1px #000000;
+vertical-align:top;
+padding-left:1px;
+padding-right:1px; }
+p.hcp3 { font-weight:bold;
+margin-left:6pt;
+margin-right:6pt;
+text-decoration:underline; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Defining Reminder Rules</h1>
+<p>New Reminder Rules are added directly to the ToDoCodes database table. The definitions used are described below.</p>
+<table class="Table1" style="border: Solid 2px #000000;" cellspacing="0px" width="900">
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 30%;">
+<tr class="t1st" style="height: 38px;">
+<td style="border: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Field Name</p>
+</td>
+<td class="hcp2">
+<p class="hcp1">Description</p>
+</td>
+<td class="hcp2">
+<p class="hcp1">Example TodoCode (Alert)</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 166px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TodoCode</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">To do code</p>
+<p class="hcp1">Ensure that the hash (#) symbol is used as the first character of the ToDoCode to prevent the rule being overwritten during an upgrade.</p>
+<p class="hcp1"><span style="font-weight: bold; font-style: italic;">Note:</span> If you modify any of the database fields related to standard Viewpoint Reminder Rules, ticking the Customised checkbox does not prevent the rule from being overwritten during an upgrade. In such an instance, deactivate the standard Viewpoint Reminder Rule and create a new Reminder Rules with a ToDoCode starting with hash (#).</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">#ART</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 134px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Apnr</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Application Number, where:</p>
+<p>0 - shared between applications</p>
+<p>1 - Entity Administration</p>
+<p>2 - Billing (Practice Management)</p>
+<p>4 - Accounting</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">0</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 182px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TodoType</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp3">TodoType</p>
+<p>0 - default</p>
+<p>99 - hardcode (not applicable)</p>
+<p>&#160;</p>
+<p class="hcp3">For Billing</p>
+<p>2 - Client (RmClients table)</p>
+<p>3 - Supplier (RmSupplier table)</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">0</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Description</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Brief description of the TodoCode.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Alert - Reminder</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 54px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">HowTo</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">How to perform the To Do task.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Go to Master File - Alert and review the alert set up.</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdTable</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Table</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">RefAlerts</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 166px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdField</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<ul style="list-style: disc;">
+<li class="p">
+<p class="hcp1">Field from the TdTable. Please specify TdField with table name as prefix if TdFields found in RefMaster Table.</p>
+</li>
+<li class="p">
+<p class="hcp1">This field is used to match the review horizon when performing review, i.e., if the date for a transaction falls within the review horizon, it will be included in the Reminders.</p>
+</li>
+</ul>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">DateReview</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdFieldExtra</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Additional fields, which must begin with “,” followed by additional fields.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">, Alertnote</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 54px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdwhereExtra</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Additional clause, which must begin with “AND”, followed by the additional clause.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">AND Reminder&lt;&gt;0</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdRCode</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Field from TdTable that matches the RefMaster table.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">RefCode</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 86px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">TdRemark</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Remark. The value in this field can be customized to display the specific transaction that needs action. The value is taken from the appropriate field in the appropriate database table. You must include prefix with “(+” and suffix “+)”.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">(+AlertNote+)</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Active</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Active rule.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">1</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Customize</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Customized rule.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">1</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 38px;">
+<td class="t1Col" style="border-left: inset 1px #000000; border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">RecordKey</p>
+</td>
+<td class="t2Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">Used where the Apnr=0, which is the key to related records.</p>
+</td>
+<td class="t1Col" style="border-right: Inset 1px #000000; border-bottom: Inset 1px #000000; vertical-align: top; padding-left: 1px; padding-right: 1px;">
+<p class="hcp1">SetByUser</p>
+</td>
+</tr>
+</table>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Lookup_Values.htm">General</a> &gt; <a href="Reminder_Rules.htm">Reminder Rules</a> &gt; Defining To Do Rules</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

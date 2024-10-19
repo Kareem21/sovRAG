@@ -1,0 +1,103 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Automatic Journal Reference">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Automatic Journal Reference</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Automatic Journal Reference</h1>
+<p>It is possible to automate the Journal Reference so that it can be used 
+ in journal scripts or as the default reference when creating a journal 
+ in the Journal folder. This is done by creating a user field with the 
+ key 'JNLREF'. The setting up of the user field is done in Configuration.</p>
+<ol style="list-style: decimal;">
+	<li><p>In Viewpoint - Home screen, go to Configuration Ribbon button 
+	 &gt; Business Parameters &gt; User Fields &gt; Account File.</p></li>
+	<li><p>Click New.</p></li>
+	<li><p>Enter the following information:</p>
+	<ul class="hcp1">
+		<li><p>Key - Type JNLREF.</p></li>
+		<li><p>Field Type - Select Number [13].</p></li>
+		<li><p>Caption - Enter a suitable caption.</p></li>
+		<li><p>Default Value - This is the starting number of the field. 
+		 If the default value is 100, the first number assigned will be 
+		 101 followed by 102, 103, etc.</p></li>
+		<li><p>Default Note - This is used to add text and/or other information 
+		 to the reference. You may use a mixture of text and the following 
+		 codes to pick up and display specific information:</p>
+		<ul class="hcp1">
+			<li><p>(-EC) will be replaced by the Account File code.</p></li>
+			<li><p>(-NR-) will be replaces by the sequence number generated. 
+			 If this code is not included in the Default Note field, the 
+			 sequence number will be suffixed.</p></li>
+			<li><p>(-NOW\format-) will be replaced by today's date following 
+			 the specified format string. For example:</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp1">
+				<li><p>(-NOW\yyy-) returns the year e.g. 2015.</p></li>
+				<li><p>(-NOW\yyyy.MM-) returns the year and month e.g. 
+				 2015.02.</p></li>
+			</ul></li>
+		</ul></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>After you have defined the user field, Viewpoint will automatically 
+ add it to every Account File on the first occasion the file's Journal 
+ folder is opened.</p>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Example of how 
+ the Default Note field can be used</a></p>
+<div class="droptext" id="POPUP473090863" style="display: none;">
+	<p>If you enter the following in this field:</p>
+	<p>AF:(-EC-)~(-NOW\yyyy.MM-)`(-NR-)</p>
+	<p>when you create a new journal, the Reference field will return:</p>
+	<p>AF:INVEST~2011.02`655</p>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Journal_Scripts_New.htm">Journal Scripts - New</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Automatic Journal Reference</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP473090863');
+//]]></script>
+</body>
+</html>

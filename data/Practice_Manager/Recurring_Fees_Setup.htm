@@ -1,0 +1,172 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Recurring Fees">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="robots" content="NOODP">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Recurring Fees - Setup</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:normal; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Recurring Fees - Setup</h1>
+<p>Recurring fees can be set up manually or added during the cloning process 
+ when setting up the Billing File. The following shows you how to set up 
+ a fee manually.</p>
+<ol style="font-size: 9pt;">
+	<li class="p" style="font-size: 9pt;"><p>Click New.</p></li>
+	<li class="p" style="font-size: 9pt;"><p>Enter the <a class="dropspot" href="javascript:TextPopup(this)" id="a1">details</a> 
+	 of the recurring fee.</p>
+	<div class="droptext" id="POPUP581351810" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Enter details for the new Recurring Fee.</p>
+			<ul class="hcp1">
+				<li><p><span style="font-weight: bold;">Matter</span> - 
+				 Select the Matter type. The selections available are set 
+				 up in the Matter Type Codes [MTTR] lookup table.</p></li>
+				<li><p class="hcp2">Service <span class="hcp3">- 
+				 Select the recurring fee from the list of available services.</span></p></li>
+				<li><p class="hcp2">Description<span class="hcp3"> 
+				 - This is default to the service description. Edit if 
+				 necessary.</span></p></li>
+				<li><p class="hcp2">Currency<span class="hcp3"> 
+				 - Enter the billing currency.</span></p></li>
+				<li><p class="hcp2">Number of Units <span class="hcp3">- Specify the number of units 
+				 to be billed.</span></p></li>
+				<li><p class="hcp2">Unit Price <span class="hcp3">- 
+				 This information is filled based on the rate list level 
+				 defined in the Matters screen. </span></p></li>
+				<li><p class="hcp2">Total Fee<span class="hcp3"> 
+				 - This field shows the total fee that will be charged 
+				 for the service.</span></p></li>
+				<li><p class="hcp2">Discount %<span class="hcp3"> 
+				 - If you are giving a discount on the service, specify 
+				 the percentage here.</span></p></li>
+				<li><p class="hcp2">Charge Per<span class="hcp3"> 
+				 - Specify how frequently the service is billed. If you 
+				 select 'One Off [T]', this service can only be invoiced 
+				 once. There is no pro-rate calculation and will not be 
+				 included in Posting Rule for 'Recurring Fees in Arrears 
+				 Accrual' Posting Type. The Lookup Values in this field 
+				 is not editable. &#160;</span></p></li>
+				<li><p class="hcp2">Effective<span class="hcp3"> 
+				 - Enter the effective date of the invoice. If the effective 
+				 date is later than the Next Due Date the system will bill 
+				 this service on a pro rata basis. For example, if a service 
+				 is charged annually in arrears, and the service was effective 
+				 from 01/07/2011 but the next bill due is on 01/01/2011, 
+				 the system will calculate the amount due for six months.</span></p></li>
+				<li><p class="hcp2">Next Invoicing Due<span class="hcp3"> - This is the date the fee 
+				 is next due.</span></p></li>
+				<li><p class="hcp2">Fee Period From Date<span class="hcp3"> - This is a read only field. 
+				 This will be set when 'Fee Period To Date' is entered 
+				 and is based in the 'Charge Per' setting. For example, 
+				 if 'Charge Per' is set to 'Monthly', the date will backdate 
+				 to one month before the 'Fee Period To Date'.</span></p></li>
+				<li><p class="hcp2">Fee Period To Date<span class="hcp3"> - Enter the fee period to 
+				 date.</span></p></li>
+				<li><p class="hcp2">Last Invoiced<span class="hcp3"> 
+				 - This is the date fee was last invoiced. This field is 
+				 automatically updated when a service is posted to an invoice.</span></p></li>
+				<li><p class="hcp2">Date Terminated<span class="hcp3"> - Enter the date when the 
+				 recurring fee is being terminated. If the recurring service 
+				 is used in Time and Disbursement entry, the system will 
+				 not allow user to create of edit the time/disbursement 
+				 entry with the date later than this termination date. 
+				 The system will deactivate the recurring fee via Posting 
+				 of WIP function when the conditions are met as below:</span></p></li>
+				<ul class="hcp1">
+					<li><p style="font-weight: normal;">'One Off' recurring 
+					 fee - will deactivate when 'Date Terminated' &lt;= 
+					 'Today's Date'</p></li>
+					<li><p class="hcp2"><span class="hcp3">'Normal' 
+					 recurring fee - will deactivate when 'Date Terminated'</span></p></li>
+				</ul>
+				<li><p class="hcp2">Reason for Termination<span class="hcp3"> - Enter the reason of the 
+				 fee being terminated.</span></p></li>
+				<li><p class="hcp2">Time Charge Units<span class="hcp3"> - This field controls the 
+				 total number of units that can be entered at WIP stage. 
+				 The field is inactive by default and can be activated 
+				 when the option 'Use Recurring Services for Time Entries' 
+				 is enabled. See <a href="../Configuration/Field_Settings.htm">Field 
+				 Settings</a>.</span></p></li>
+				<li><p class="hcp2">Time Charge Amount at<span class="hcp3"> - This field controls the 
+				 charge amount that can be entered in WIP stage. The charge 
+				 amount will be in Matter Currency if the option 'Multi 
+				 Rate/CCY List' is enabled, otherwise it will be in Service 
+				 Currency. This field is inactive by default and can be 
+				 activated when the option 'Use Recurring Services for 
+				 Time Entries' is enabled.&#160;See <a href="../Configuration/Field_Settings.htm">Field 
+				 Settings</a>.</span></p></li>
+			</ul></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+	<li class="p" style="font-size: 9pt;"><p>Click Update to save the entry.</p></li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: The 
+ system will deactivate the recurring fee via Posting of WIP function when 
+ the conditions are met as below:</p>
+<ul class="hcp1">
+	<li><p>&#160;'One Off' recurring fee - will deactivate when 'Date Terminated' 
+	 &lt;= 'Today's Date'</p></li>
+	<li><p>&#160;'Normal' recurring fee - will deactivate when 'Date Terminated' 
+	 &lt;= 'Next Invoicing Due'</p></li>
+</ul>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Recurring_Fees_Pro-rated_Billing.htm">Recurring Fees 
+	 - Pro-rated Billing</a></p></li>
+	<li><p><a href="Recurring_Fees_Transaction_Fee.htm">Recurring Fees 
+	 - Transaction Fee</a></p></li>
+	<li><p><a href="Recurring_Fees_-_Time_and_Disbursement_Services.htm">Recurring 
+	 Fee - Time and Disbursement Services</a></p></li>
+	<li><p><a href="Recurring_Fees_-_Time_Credit.htm">Recurring Fee - Time 
+	 Credit</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Recurring Fees - Setup</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP581351810');
+//]]></script>
+</body>
+</html>

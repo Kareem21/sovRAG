@@ -1,0 +1,427 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Security Models">
+<meta name="MS-HAID" content="Security Setup">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Security Models</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { margin-left:6pt;
+margin-right:6pt;
+color:#ffffff; }
+p.hcp6 { margin-left:6pt;
+margin-right:6pt;
+color:#000000; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Security Models</h1>
+<p>Viewpoint uses highly customisable role-based security settings which 
+ are defined by a combination of User Roles, User Group Roles, Administrator 
+ Groups and, where applicable, Access Groups. It is recommended that you 
+ understand how the different models work and select the most suitable 
+ one before you proceed to customise and use Viewpoint.</p>
+<p>&#160;</p>
+<h2>Security Elements</h2>
+<p>The following are the parts that make up Viewpoint's security setup.</p>
+<p>&#160;</p>
+<p class="FldExplain">User Roles</p>
+<p>User Roles define the roles and authorities of a user. A User Role is 
+ similar to a job responsibility while the authority determines how high 
+ a level of responsibility a user has. You can create as many or as few 
+ User Roles as you need, and each role is then assigned to one or more 
+ User Groups.</p>
+<p>&#160;</p>
+<p class="FldExplain">User Groups</p>
+<p>Users Groups are groups of users who are defined by the jobs they do 
+ and the responsibilities that they have. You need to assign at least one 
+ User Role to a User Group, or the users would have no access to Viewpoint. 
+ Depending on how you have set up your User Roles, you can assign just 
+ one role to a group, or you can assign multiple roles. If the roles that 
+ you assign to the group have overlapping authorities, then the highest 
+ of the authorities will be taken as the group's authority level. A user 
+ can only be assigned to one User Group, so you need to set up as many 
+ User Groups as required to cater for this.</p>
+<p>&#160;</p>
+<p class="FldExplain">Administrator Groups</p>
+<p>Administrator Groups can be used to represent departments or, in cases 
+ where an organisation has offices in various jurisdictions, it can also 
+ represent jurisdictions. Master Files can be assigned to only one Administrator 
+ Group, but a user can be assigned to more than one group if he needs to 
+ be able to access the files of more than one group. However, the functions 
+ he can perform on the Master Files are determined by his User Group.</p>
+<p>&#160;</p>
+<p class="FldExplain">Access Groups and Access Group Security</p>
+<p>Access Groups are used only if you implement the Access + User Group 
+ Security Model [3]&#160;as your security model. Access Groups can be combined 
+ with any number of Administrator Groups and User Groups so that a user 
+ who is assigned an Access Group will be able to access the Master Files 
+ in the associated Administrator Group and perform the functions that have 
+ been given to the associated User Group. This forms the Access Group Security.</p>
+<p>The user's own Administrator Group and User Group are ignored for all 
+ Master File-related screens, such as the Statutory screens and the Sales 
+ Ledger screens, but are used for access to non-Master File related screens 
+ such as the Reporting screens.</p>
+<p>&#160;</p>
+<h2>Security Models</h2>
+<p>The six models are described below.</p>
+<p>&#160;</p>
+<h4>User Group Authority Only [1]</h4>
+<p>This is the default security model where you can only control access 
+ to the screens and functions in Viewpoint. This means that a user will 
+ be able to access all Master Files and perform the same functions for 
+ all files. To implement this model, do the following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = User Group authority only [1].</p></li>
+	<li><p>In Configuration &gt; Users &amp; Security, set up the following:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups - Although this does not affect Viewpoint 
+		 security, you will still need to link this when setting up a user</p></li>
+		<li><p>Users - File Access option is to be set to 'Administrator 
+		 Groups + View-only for Others [4]'</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<h4>Administrator + User Group Model [2]</h4>
+<p>This model allows for the following control:</p>
+<ul class="hcp1">
+	<li><p>Access to the screens and functions in Viewpoint.</p></li>
+	<li><p>Access to Master Files.</p></li>
+</ul>
+<p>This means that you can restrict a user from accessing certain Master 
+ Files so they will not be able to open the Master Files or view details 
+ of the file. However, if the user is allowed to access a Master File, 
+ then the screens and functions that they can perform depend on the user's 
+ User Group.</p>
+<p>The restriction will be based on the Administrator Group and the File 
+ Access option set for the user account. To implement this model, do the 
+ following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = Administrator + User Group model [2].</p></li>
+	<li><p>In Configuration &gt; Users &amp; Security, set up the following:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups</p></li>
+		<li><p>Users - ensure that the right File Access option is selected</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<h4>Access + User Group Model [3]</h4>
+<p>This model also allows for the following control:</p>
+<ul class="hcp1">
+	<li><p>Access to the screens and functions in Viewpoint.</p></li>
+	<li><p>Access to Master Files.</p></li>
+</ul>
+<p>It is similar to the Administrator + User Group Model [2] except that 
+ access to the screens and functions for a user can differ based on the 
+ Master File. This means that the same user can have different access rights 
+ for different Master Files.</p>
+<p>For this model, access to screens that are Master File-independent will 
+ depend on the user's User Group but access to Master File and screens 
+ for the Master File will depend on the Access Group Security which will 
+ take into account the Access Group of the user and the Administrator Group 
+ of the Master File.</p>
+<p>To implement this model, do the following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = Access+ User Group model [3].</p></li>
+	<li><p>In Configuration &gt; Users &amp; Security, set up the following:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups</p></li>
+		<li><p>Access Groups</p></li>
+		<li><p>Access Group Security</p></li>
+		<li><p>Users - ensure that the right File Access option is selected</p></li>
+	</ul></li>
+</ul>
+<p><span class="hcp3">Note</span>: For 
+ this model, although the user may have authority to the Master File, the 
+ Access Group Security will determine whether or not the user will be able 
+ to open the Master File.</p>
+<p>&#160;</p>
+<h4>User Relation Links [4]</h4>
+<p>This model works in the same way as the Administrator + User Group Model 
+ [2] except that the system will check on User Relations for the Master 
+ File to control access to the Master File. To implement this model, do 
+ the following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = User Relation Links [4].</p></li>
+	<li><p>In Configuration &gt; Users &amp; Security, set up the following:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups</p></li>
+		<li><p>Users - ensure that the right File Access option is selected</p></li>
+	</ul></li>
+	<li><p>In Configuration &gt; Business Parameters &gt; Entity Administration 
+	 &gt; Relationship Types, set up the relevant User Relations.</p></li>
+</ul>
+<p>For the Master File, ensure that the required User Relations are added.</p>
+<h4>&#160;</h4>
+<h4>Services Provided Model [5]</h4>
+<p>This model allows for two types of control:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">Restriction of Master Files 
+	 to users</span> - Users can access a Master File i.e. open the Master 
+	 File if the user belongs to the same Administrator Group as the Master 
+	 File. </p></li>
+	<li><p><span class="hcp4">Different authorities for different 
+	 Master Files</span> - Users can have different authority rights for 
+	 the different Master Files that the user can access via the Services 
+	 Provided screen.</p></li>
+	<li><p><span class="hcp4">Restriction to view Administrator 
+	 Groups</span> - Users can view other Administrator Groups if the user 
+	 belongs to the same Administrator Group. </p></li>
+	<li><p><span class="hcp4">Restriction to view other Administrator 
+	 Groups Users</span> - Users can view other Administrator Group users 
+	 if the user belongs to the&#160;same Administrator Group.</p></li>
+</ul>
+<p>&#160;</p>
+<p>Regardless of the control type, you can also choose to prevent a user 
+ from being able to see a Master File that the user cannot access. This 
+ means that if the user does not have access to a Master File, the user 
+ will not be able to see the Master File at all e.g. performing a Search 
+ Master File using the Master File name will not turn up any result. </p>
+<p>To implement this model, do the following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = Services Provided Model [5].</p></li>
+	<li><p>In Configuration &gt; Settings &gt; Tools &amp; Utilities &gt; 
+	 Localise, run the Enable Services Provided Security Model to:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>Set the Services Provided screen to active.</p></li>
+	</ul></li>
+	<li><p>In Configuration &gt; Users &amp; Security, set up:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles (and Services Provided if you want to have different 
+		 authorities for different Master Files)</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups</p></li>
+		<li><p>Users - ensure that the right <a class="dropspot" href="javascript:TextPopup(this)" id="a1">File 
+		 Access option</a> is selected</p>
+		<div class="droptext" id="POPUP414439251" style="display: none;">
+			<table class="Table1" cellspacing="0px" width="750">
+				<col style="width: 20.753%;">
+				<col style="width: 39.624%;">
+				<tr class="t1st">
+					<td><p class="hcp5">Access Level</p></td>
+					<td><p class="hcp5">Access to Master File</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p class="hcp6">0 - No Files</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p class="hcp6">No access 
+					 to any Master File.</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col" style="vertical-align: top;"><p class="hcp6">2 - Administrator 
+					 Groups</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p class="hcp6"><span style="color: #000000;">The 
+					 user has authority and can only access Master Files 
+					 that are in the same Administrator Group.</span></p>
+					<p class="hcp6">The 
+					 user will NOT be able to see Master Files in another 
+					 Administrator Group. </p>
+					<p class="hcp6">The 
+					 authority to edit is to be based on the Service Provided.</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col" style="vertical-align: top;"><p class="hcp6">4 - Administrator 
+					 Groups + View-only for Others</p></td>
+					<td class="t2Col" style="vertical-align: top;"><p class="hcp6">User can access 
+					 to the Master Files that do not belong to their Administrator 
+					 Group, but the authority is limited to View-only based 
+					 on the User Groups authority.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+	</ul></li>
+</ul>
+<p>For the Master File, the following must be done to ensure access rights 
+ are granted:</p>
+<ul class="hcp1">
+	<li><p>Set the Administrator Group in the Setup screen.</p></li>
+	<li><p>Add the relevant services provided to the Master File in the 
+	 Services Provided screen for each Administrator Group.</p></li>
+</ul>
+<p><span class="hcp3">Note</span>: A 
+ record will be added automatically to the Services Provided screen when 
+ the Administrator Group is assigned in Setup. The record created will 
+ have a default service where the default service is retrieved from the 
+ 'Primary Office Default Service' field in Configuration &gt; Settings 
+ &gt; System Default &gt; Security screen. The similar applies when changing 
+ the Administrator Group for the Master File. </p>
+<p>&#160;</p>
+<h4><a name="Service_Office_Model__8_" id="Service_Office_Model__8_"></a>Service 
+ Office Model [8]</h4>
+<p>This model allows for access to a Master File and the screens within 
+ the Master File to be controlled based on the services provided to the 
+ Master File from a service office. This means that a user:</p>
+<ul class="hcp1">
+	<li><p>May not be able to access a Master File if the Master File does 
+	 not have any services provided by the service office of the user.</p></li>
+	<li><p>Can access a Master File but see only screens based on the services 
+	 provided to the Master File by the user's service office.</p></li>
+</ul>
+<p>However, even if the user does not have access to a Master File, if 
+ the user performs a search for the Master File, the user will be able 
+ to see the Master File if it exists.</p>
+<p>This model takes into account the following concepts:</p>
+<ul class="hcp1">
+	<li><p>Service Office - This is the Administrator Group and in this 
+	 model, a Master File can belong to more than one Administrator Group. 
+	 The Administrator Group in the Master File's Setup screen is known 
+	 as the primary service office. Other service offices assigned to the 
+	 Master File in the Service Office screen are the secondary service 
+	 offices.</p></li>
+	<li><p>Master File Owner - This refers to users who belong to the same 
+	 Administrator Group as the Master File's primary service office. This 
+	 can be the user's default Administrator Group or any other Administrator 
+	 Group of the user.</p></li>
+	<li><p>Services Provided - This refers to User Roles that are tagged 
+	 with 'SP' in the Electronic Filing Code field in the User Roles [URLS] 
+	 lookup table so that it appears in the Service Office screen for selection.</p></li>
+</ul>
+<p>To implement this model, you need to do the following:</p>
+<ul class="hcp1">
+	<li><p>In Viewpoint Management, Database &gt; Settings &gt; Application, 
+	 set Security Model = Services Office Model [8].</p></li>
+	<li><p>Set up the following in Configuration &gt; Users &amp; Security:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>User Roles and Services Provided</p></li>
+		<li><p>User Groups</p></li>
+		<li><p>Administrator Groups</p></li>
+		<li><p>Users - ensure that the right File Access option is selected</p></li>
+	</ul></li>
+	<li><p>Set the appropriate <a class="dropspot" href="javascript:TextPopup(this)" id="a2">Service 
+	 Office Authorisation method</a> for screens in Configuration 
+	 &gt; Settings &gt; Customise &gt; Windows Menu.</p>
+	<div class="droptext" id="POPUP414220410" style="display: none;">
+		<table class="Table1" cellspacing="0px" width="99.736%">
+			<col style="width: 22.786%;">
+			<col style="width: 77.214%;">
+			<tr class="t1st">
+				<td><p>Service Office Authorisation Method</p></td>
+				<td><p>Then..</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;" bgcolor="#FFFFFF"><p>User 
+				 Group Role [0]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>Users 
+				 can access the screen if their User Group has authority 
+				 to access the screen.</p>
+				<p>This is the default screen setting.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>Combined 
+				 UGR+SP [1]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>User 
+				 can access the screen if his/her User Group's Roles coincides 
+				 with the service provided to his/her Service Office. If 
+				 the user's Group roles do not provide him with access 
+				 to the screen in his own service office, he will not be 
+				 able to access the screen in the secondary service office 
+				 even though the Services Provided allow for access to 
+				 the screen.</p>
+				<p>If the user's Group roles provide him access to the 
+				 screen in his own service office, and the Services Provided 
+				 allow for access to the screen in the secondary office, 
+				 the lower of the access authorisation will be granted 
+				 to the user.</p>
+				<p>This screen authorisation level does not take into account 
+				 the user's Administrator Group/Service Office.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;" bgcolor="#FFFFFF"><p>MF 
+				 Owner+UGR [2]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>If the 
+				 user belongs to the same Administrator Group/Service Office 
+				 as the Master File, he will be given access to the screen 
+				 per his/her User Group Roles.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>MF Owner+UGR 
+				 else UGR+SP [3]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>If the 
+				 user is of the same Administrator Group/Service Office 
+				 as the Master File, his/her screen access will follow 
+				 his User Group Roles (MF Owner+UGR [2]), otherwise, it 
+				 will check for a combination of the Services Provided 
+				 and user's Group roles (Combined UGR+SP [1]).</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>For the Master File, the following must be done to ensure access rights 
+ are granted:</p>
+<ul class="hcp1">
+	<li><p>Set the primary service office in the Setup screen.</p></li>
+	<li><p>Add the relevant services provided to the Master File in the 
+	 Service Office screen.</p></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Access_Groups.htm">Access Groups</a></p></li>
+	<li><p><a href="Access_Group_Security.htm">Access Group Security</a></p></li>
+	<li><p><a href="Administrator_Groups.htm">Administrator Groups</a></p></li>
+	<li><p><a href="../Shared/service_office.htm">Service Office</a></p></li>
+	<li><p><a href="User_Groups.htm">User Groups</a></p></li>
+	<li><p><a href="User_Roles.htm">User Roles</a></p></li>
+	<li><p><a href="Users.htm">Users</a></p></li>
+	<li><p><a href="Lookup_Values.htm">Lookup Values</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Security Models</p>
+ <p class="hcp7">&#160;</p>
+ <p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp7">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP414439251');
+	TextPopupInit('a2','POPUP414220410');
+//]]></script>
+</body>
+</html>

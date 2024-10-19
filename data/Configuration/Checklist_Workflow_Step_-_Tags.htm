@@ -1,0 +1,953 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist/Workflow Step - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { color:#300063; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+ul.hcp3 { list-style:disc; }
+p.hcp4 { font-weight:bold;
+font-style:italic; }
+span.hcp5 { text-indent:-.25in;
+mso-list:l1 level1 lfo2; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Checklist/Workflow Step - Tags</h1>
+<p>These tags are to be entered in the Tag Values field of the checklist/workflow 
+ steps. </p>
+<table class="Table1" cellspacing="0px" width="86.512%">
+	<col style="width: 16.249%;">
+	<col style="width: 25.882%;">
+	<col style="width: 57.869%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Purpose</p></td>
+		<td><p class="hcp1">Tag</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td rowspan="2" class="t1Col" style="vertical-align: top;"><p>Updates 
+		 User Fields with checklist item's value or score</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 Updating User Fields from workflows will also perform the tags 
+		 added in the User Field configuration. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_NEW=UPDATE.UFIELD|KEY=&lt;UFKey&gt;|VALUE=&lt;ItemKey&gt;|FILECODE=&lt;MasterFileItem&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;UFieldKey&gt; refers to the key of the User Field.</p></li>
+			<li><p>&lt;ItemKey&gt; refers to the key of the checklist item.</p></li>
+			<li><p>&lt;MasterFileItem&gt; refers to the key of the checklist 
+			 item that will specify the Master File. This is optional.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the specified User Field with the checklist item's value or score 
+		 once you start the checklist and save your input.</p>
+		<p>Example:</p>
+		<p>[ON_NEW=UPDATE.UFIELD|KEY=JERSK1|VALUE=RSK1|FILECODE=MFile]</p>
+		<p>will take the value from the checklist item 'RSK1' and update 
+		 it to the User Field of the Master File specified in a checklist 
+		 item with value ‘MFile’ with the key 'JERSK1'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 If the &lt;MasterFileItem&gt; is not defined, the User Field will 
+		 be updated for the workflow’s Master File by default.</p>
+		<p>&#160;</p>
+		<p>[ON_NEW=UPDATE.UFIELD|KEY=JERSK1|VALUE=RSK1.SCORE]</p>
+		<p>will take the score for the checklist item 'RSK1' and update 
+		 it to the User Field with the key 'JERSK1'.</p>
+		<p>&#160;</p>
+		<p class="hcp4">Note: This does 
+		 not apply to workflow steps, only File Note checklists.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_EDIT=UPDATE.UFIELD|SOURCE=&lt;StepKey&gt;|KEY=&lt;UFKey&gt;|VALUE=&lt;ItemKey&gt;|VCODE=&lt;ItemKey&gt;|DATEFROM=&lt;ItemKey&gt;|DATETO=&lt;ItemKey&gt;|FILECODE=&lt;MasterFileItem&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;StepKey&gt; refers to the key of the workflow step.</p></li>
+			<li><p>&lt;UFKey&gt; refers to the key of the User Field.</p></li>
+			<li><p>&lt;ItemKey&gt; refers to the key of the checklist item.</p></li>
+			<li><p>&lt;MasterFileItem&gt; refers to the key of the checklist 
+			 item where the value for the item is a Master File. This is 
+			 optional.</p></li>
+		</ul>
+		<p class="Tablecontentbullet" style="mso-list: none; tab-stops: .5in;"><span 
+		 lang="EN-GB" xml:lang="EN-GB">Additional tag parameters are available 
+		 to update the Lookup/User Table, Date From, and Date To fields 
+		 upon step completion:</span></p>
+		<ul class="hcp3">
+			<li><p class="Tablecontentbullet" style="mso-list: none; tab-stops: .5in;"><span lang="EN-GB" xml:lang="EN-GB" class="hcp5">VCODE refers to the Lookup/User 
+			 Table field available based on the Field Type selection. VCODE 
+			 is only applicable for </span>Master File/Dates/Lookup [82] 
+			 and Master File/Dates, User TV [83] field types. Use VALUE 
+			 for all other field types. </p></li>
+			<li><p class="Tablecontentbullet" style="tab-stops: .5in; text-indent: -.25in; 
+					 mso-list: l1 level1 lfo2;"><span lang="EN-GB" xml:lang="EN-GB">DATEFROM 
+			 refers to the Date From field.</span></p></li>
+			<li>DATETO refers to the Date To field. </li>
+		</ul>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the specified User Field with the checklist item's value or score 
+		 when the workflow step is completed.</p>
+		<p>Example:</p>
+		<p>[ON_EDIT=UPDATE.UFIELD|SOURCE=VPWS002|KEY=JERSK1|VALUE=RSK1|VCODE=ADDRTYPE|DATEFROM=DA1|DATETO=DA2|FILECODE=MFile]</p>
+		<p>will take the value from the checklist item 'RSK1' in workflow 
+		 step ‘VPEWS002’ and update it to the User Field 'JERSK1' of the 
+		 Master File specified in a checklist item with value ‘MFile’. 
+		 The value for ‘ADDRTYPE’ key updates the Address Type field. The 
+		 values for Date From and Date To fields are taken from ‘DA1’ and 
+		 ‘DA2’ values. </p>
+		<p class="hcp4">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td rowspan="2" class="t1Col" style="vertical-align: top;"><p>Update 
+		 Matter Account User Fields with checklist item's value</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 Updating User Fields from workflows will also perform the tags 
+		 added in the User Field configuration. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_NEW=UPDATE.UFIELD|KEY=&lt;UFKey&gt;|CATEGORY=&lt;MatterCodeItem&gt;|VALUE=&lt;ItemKey&gt;| 
+		 FILECODE=&lt;MasterFileItem&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;UFKey&gt; refers to the key of the User Field.</p></li>
+			<li><p>&lt;MatterCodeItem&gt; refers to the key of the checklist 
+			 item that will specify the Matter code. This is optional.</p></li>
+			<li><p>&lt;ItemKey&gt; refers to the key of the checklist item.</p></li>
+			<li><p>&lt;MasterFileItem&gt; refers to the key of the checklist 
+			 item that will specify the Master File. This is optional.</p></li>
+		</ul>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the specified Matter User Field with the checklist item's value 
+		 or score once you start the checklist and save your input.</p>
+		<p>Example:</p>
+		<p>[ON_NEW=UPDATE.UFIELD|KEY=MUF01|CATEGORY=MC|VALUE=A|FILECODE=MFile]</p>
+		<p>will take the value from the checklist item 'A' and update it 
+		 to the User Field of the Master File specified in a checklist 
+		 item with value ‘MFile’ with the key 'MUF01' for the Matter specified 
+		 in checklist item 'MC'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 If the &lt;MasterFileItem&gt; is not defined, the User Field will 
+		 be updated for the workflow’s Master by default.</p>
+		<p>&#160;</p>
+		<p>[ON_NEW=UPDATE.UFIELD|KEY=MUF01|CATEGORY=MC|VALUE=A.SCORE]</p>
+		<p>will take the score for the checklist item 'A' and update it 
+		 to the User Field with the key 'MUF01' for the Matter specified 
+		 in checklist item 'MC'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 This does not apply to workflow steps, only File Note checklists.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_EDIT=UPDATE.UFIELD|SOURCE=&lt;StepKey&gt;|KEY=&lt;UFKey&gt;|CATEGORY=&lt;MatterCodeItem&gt;|VALUE=&lt;ItemKey&gt;|VCODE=&lt;ItemKey&gt;|DATEFROM=&lt;ItemKey&gt;|DATETO=&lt;ItemKey&gt;|FILECODE=&lt;MasterFileItem&gt;] 
+		 </p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;StepKey&gt; refers to the key of the workflow step.</p></li>
+			<li><p>&lt;UFKey&gt; refers to the key of the User Field.</p></li>
+			<li><p>&lt;MatterCodeItem&gt; refers to the key of the checklist 
+			 item that will specify the Matter code. This is optional.</p></li>
+			<li><p>&lt;ItemKey&gt; refers to the key of the checklist item.</p></li>
+			<li><p>&lt;MasterFileItem&gt; refers to the key of the checklist 
+			 item where the value for the item is a Master File. This is 
+			 optional.</p></li>
+		</ul>
+		<p class="Tablecontentbullet" style="mso-list: none; tab-stops: .5in;"><span 
+		 lang="EN-GB" xml:lang="EN-GB">Additional tag parameters are available 
+		 to update the Lookup/User Table, Date From, and Date To fields 
+		 upon step completion:</span></p>
+		<ul class="hcp3">
+			<li><p class="Tablecontentbullet" style="mso-list: none; tab-stops: .5in;"><span lang="EN-GB" xml:lang="EN-GB" class="hcp5">VCODE refers to the Lookup/User 
+			 Table field available based on the Field Type selection. VCODE 
+			 is only applicable for </span>Master File/Dates/Lookup [82] 
+			 and Master File/Dates, User TV [83] field types. Use VALUE 
+			 for all other field types. </p></li>
+			<li><p class="Tablecontentbullet" style="tab-stops: .5in; text-indent: -.25in; 
+					 mso-list: l1 level1 lfo2;"><span lang="EN-GB" xml:lang="EN-GB">DATEFROM 
+			 refers to the Date From field.</span></p></li>
+			<li>DATETO refers to the Date To field. </li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the specified Matter User Field with the checklist item's value 
+		 or score when the workflow step is completed.</p>
+		<p>Example:</p>
+		<p>[ON_EDIT=UPDATE.UFIELD|SOURCE=VPWS002|KEY=MUF01|CATEGORY=MC|VALUE=A|VCODE=ADDRTYPE|DATEFROM=DA1|DATETO=DA2|FILECODE=MFile] 
+		 </p>
+		<p>will take the value from the checklist item 'A' from the workflow 
+		 step ‘VPWS002’ and update it to the User Field ‘MUF01’ of the 
+		 Master File specified in a checklist item with value ‘MFile’ for 
+		 the Matter specified in checklist item 'MC'. The value for ‘ADDRTYPE’ 
+		 key updates the Address Type field. The values for Date From and 
+		 Date To fields are taken from ‘DA1’ and ‘DA2’ values. </p>
+		<p class="hcp4">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" rowspan="2" style="vertical-align: top;"><p>Specify 
+		 Rating Group to use</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[SCORETAG=&lt;Code&gt;.&lt;Type&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;Code&gt; is the code for the rating group and can 
+			 be obtained from Risk Ratings screen or the Risk Rating Groups 
+			 [RRGR] lookup table.</p></li>
+			<li><p>&lt;Type&gt; can be:</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp3">
+				<li><p>C - Current</p></li>
+				<li><p>R - Prepare Revision</p></li>
+				<li><p>S - Scenario Evaluation</p></li>
+			</ul></li>
+		</ul>
+		<p>Note: &lt;Type&gt; is optional. If the &lt;Type&gt; is not specified, 
+		 the default is Current [C].</p>
+		<p>This tag can be added in the following Tag Values field in:</p>
+		<ul class="hcp3">
+			<li><p>‘Edit Step Properties’ screen</p></li>
+			<li><p>'Lookup Value' field type</p></li>
+			<li><p>'User Table Value' field type</p></li>
+			<li><p>'Entity Type' field type</p></li>
+			<li><p>'Service' field type</p></li>
+			<li><p>'User Defined' field type</p></li>
+		</ul>
+		<p>If the same tag is applied in different locations, the program 
+		 will take precedence over the field types. &#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This specifies 
+		 the Rating Group to use for the checklist/workflow step's score 
+		 assignment. It applies to field types 'User Table' and 'Lookup 
+		 Table'.</p>
+		<p>Example:</p>
+		<p>[SCORETAG=IMSS.C] will take the scores for Rating Group 'IMSS' 
+		 for the type 'Current [C]'.</p>
+		<p>[SCORETAG=IMSS.R] will take the scores for Rating Group 'IMSS' 
+		 for the type 'Prepare Revision [R]'.</p>
+		<p>[SCORETAG=IMSS.S] will take the scores for Rating Group 'IMSS' 
+		 for the type 'Scenario Evaluation [S]'.</p>
+		<p>Refer to <a href="Checklist_Item_-_Score_Assignment.htm">Checklist 
+		 Item - Score Assignment</a> and <a href="Risk_Ratings.htm">Risk 
+		 Ratings</a> for more information.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 For field types ‘Yes/No’, ‘List with Edit’ and ‘List without Edit’, 
+		 scores can be assigned to the values using [WSCORE=] tag in the 
+		 Values/Default column for the field type.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[SCORETAG =#&lt;Key&gt;] 
+		 </p>
+		<p>where &lt;Key&gt; refers to the current step field key.</p>
+		<p>&#160;</p>
+		<p>or</p>
+		<p>&#160;</p>
+		<p>[SCORETAG=#WF.&lt;Key&gt;] </p>
+		<p>where &lt;Key&gt; refers to the previous step field key.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin-bottom: 8.0pt; 
+															 line-height: 107%;">This 
+		 allows multiple Risk Rating Groups to be configured in a checklist 
+		 item as selection.</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">The 
+		 score assignment can then be referred to the Risk Rating Group 
+		 selected.</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">Example: 
+		 </p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">[SCORETAG=#RRAGR]</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">Risk 
+		 Rating Group is selected according to the value of current step 
+		 field key ‘RRARG’.</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">or</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">[SCORETAG=#WF.RRAGR]</p>
+		<p class="MsoNormal" style="margin-bottom: 8.0pt; line-height: 107%;">Risk 
+		 Rating Group is selected according to the value of previous step 
+		 field key ‘RRARG’. &#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Allow scores 
+		 to be displayed</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[SHOWSCORE=&lt;Value&gt;]</p>
+		<p>where &lt;Value&gt; can be:</p>
+		<ul class="hcp3">
+			<li><p>F - To load and show scores assigned only if the checklist/workflow 
+			 step contains a formula.</p></li>
+			<li><p>S - To load and show scores assigned even if the checklist/workflow 
+			 step does not contain any formula.</p></li>
+			<li><p>M - To allow score to be seen only in the Score column.</p></li>
+			<li><p>H - To hide all scores assigned and disable the Show 
+			 Score option.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to control 
+		 if user can view the scores assigned when they are completing 
+		 the a checklist/workflow step.</p>
+		<p>If the score is not relevant for the checklist/workflow step; 
+		 or the score is sensitive and should not be visible to the user, 
+		 then it can be hidden using this tag.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Allow Score column 
+		 to be displayed</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[SCORECOLUMN=Y]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to display 
+		 the Score column in the workflow. By default, the column is hidden 
+		 and user can also right-click on the step and choose Show Score 
+		 in the workflow.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Define the SQL 
+		 query for the checklist/workflow step</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[/&lt;QueryName&gt;=&lt;Query&gt;/]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;QueryName&gt; is a name for the SQL and this must 
+			 be referenced for checklist items that will be displaying 
+			 the retrieved information.</p></li>
+			<li><p>&lt;Query&gt; is the SELECT query that will be retrieving 
+			 the required information.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>The query is 
+		 a standard SQL SELECT query where you specify the fields to retrieve, 
+		 the table/view and condition(s), if applicable.</p>
+		<p>When specifying the condition, you can use the following variables:</p>
+		<ul class="hcp3">
+			<li><p>(-MF-) to refer to the Master File the checklist/workflow 
+			 is for.</p></li>
+			<li><p>(-KEY:&lt;Key&gt;-) to refer to value for the specified 
+			 key e.g. (-KEY:DR-) means refer to value for the checklist 
+			 item with the key 'DR'.</p></li>
+			<li><p>(-AGROUP-) to refer to the user's Administrator Groups.</p></li>
+			<li><p>(-UCODE-) to refer to the user.</p></li>
+			<li><p>(-UGROUP-) to refer to the user's User Group.</p></li>
+			<li><p>(-FAGROUP-) to refer to the user's default Administrator 
+			 Group.</p></li>
+			<li><p>(-WflowNr-) to refer to the workflow number. This is 
+			 applicable only to workflow steps.</p></li>
+		</ul>
+		<p><span class="hcp2">Note: </span>The 
+		 user is the user who started/reloaded the checklist or workflow 
+		 step.<span class="hcp2"> </span></p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/AOfficers=SELECT AddrCode, OfficerType FROM Officers WHERE 
+		 EntCode='(-MF-)' AND Status='A' AND RelClass='O'/]</p>
+		<p>will retrieve active statutory officers of the Master File the 
+		 checklist/workflow is for.</p>
+		<p>&#160;</p>
+		<p>The checklist items to list the retrieved information must have 
+		 the CCODE and COPY tags. Refer to <a href="../Shared/Checklist_Item_-_Tags.htm">Checklist 
+		 Item - Tags</a>.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Specify Data 
+		 Source</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[/&lt;DataSource&gt;=|0:&lt;Field1&gt;|1:&lt;Field2&gt;|2:&lt;Table&gt;|3:&lt;Condition&gt;|4:&lt;AdditionalField&gt;|5:&lt;ActiveCondition&gt;|/]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;DataSource&gt; is the name of the data source.</p></li>
+			<li><p>&lt;Field1&gt; refers to the field containing the code 
+			 and is mandatory.</p></li>
+			<li><p>&lt;Field2&gt; refers to the field containing the name/description 
+			 and is mandatory.</p></li>
+			<li><p>&lt;Table&gt; refers to the table or tables containing 
+			 the fields for the Master File and is mandatory.</p></li>
+			<li><p>&lt;Condition&gt; refers to the condition for filtering 
+			 the selection and is based on fields of the specified &lt;Table&gt;.</p></li>
+			<ul class="hcp3">
+				<li><p>(-RECLINK.&lt;GridCode&gt;.&lt;Column&gt;-) can 
+				 be used to retrieve the column value of the grid that 
+				 is linked to the workflow.</p></li>
+			</ul>
+			<li><p>&lt;AdditionalField&gt; refers to additional field to 
+			 be displayed for the selection of the Master File and is optional.</p></li>
+			<li><p>&lt;ActiveCondition&gt; refers to the Master File status 
+			 and is optional. If not specified, the list will only return 
+			 active Master Files and users will not be able to untick the 
+			 ‘Active only’ option. If specified, users can choose to tick 
+			 or untick the ‘Active only’ option.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to define 
+		 the data source and filter it accordingly for selection in the 
+		 workflow and is for checklist items where field type is '<a href="Checklist_Item_-_Field_Type__Master_File.htm">Master 
+		 File</a>' or '<a href="Checklist_Item_-_Field_Type__User_Defined.htm">User 
+		 Defined</a>'.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/MT=|0:MtNr|1:MtDescription|2:q_Meetings|3:MeetCode='(-RECLINK.MTNGENT.MeetCode-)'|/]</p>
+		<p>The data source ‘MT’ will retrieve the value from the column 
+		 ‘MeetCode’ of the ‘MTNGENT’ grid that is linked to the workflow.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage 
+		 for Master File field type.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Set the calculated 
+		 score as output for decision step</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[OUTPUT=&lt;Key&gt;.SCORE] 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This defines 
+		 the score for the checklist items with the specified key as the 
+		 source for upcoming decision step. This way, users do not need 
+		 to manually select the Yes or No branch. Refer to <a href="Decision_Step.htm">Decision 
+		 Step</a>.</p>
+		<p>This tag works for calculated checklist item i.e. where the 
+		 checklist item's field type is 'Formula'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Set the value 
+		 as output for decision step</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[OUTPUT=&lt;Key&gt;.VALUE] 
+		 or [OUTPUT=&lt;Key&gt;]</p>
+		<p>where &lt;Key&gt; refers to the checklist item's key. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This defines 
+		 the value for the checklist items with the specified key as the 
+		 source for upcoming decision step. This way, users do not need 
+		 to manually select the Yes or No branch. Refer to <a href="Decision_Step.htm">Decision 
+		 Step</a>.</p>
+		<p>This tag works for calculated checklist item i.e. where the 
+		 checklist item's field type is 'Formula'.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Hide the checklist 
+		 item</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ROW.Hide=&lt;Key&gt;]</p>
+		<p>where &lt;Key&gt; refers to the checklist item's key.</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will not 
+		 display the checklist item in the workflow step.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Update workflow 
+		 step caption with information from step item</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[Update.Step_Descr=&lt;NewCaption&gt;]</p>
+		<p>where &lt;NewCaption&gt; should include the Key of a checklist 
+		 item along with formatting option like:</p>
+		<ul class="hcp3">
+			<li><p>VALSHOW – For values that contains code and description/name 
+			 such as a Master File, VALSHOW will display the Master File 
+			 name; otherwise, only the code is displayed.</p></li>
+			<li><p>SCORE – This will show the score of the checklist item.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This applies 
+		 only to workflows. It will update caption of the step with information 
+		 from a checklist item in the workflow step. The change is made 
+		 once the checklist item contains a value that has been saved.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[Update.Step_Descr= Appointment of (+OMF.VALSHOW+)]</p>
+		<p>will update the caption for the step to include the description/name 
+		 of the value for the checklist item with the key 'OMF'. If the 
+		 field type is Master File, adding VALSHOW will display the Master 
+		 File name.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Update workflow 
+		 description with information from step item</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[Update.Header_Descr=&lt;NewDescr&gt;]</p>
+		<p>where &lt;NewDescr&gt; should include the Key of a checklist 
+		 item along with formatting option like:</p>
+		<ul class="hcp3">
+			<li><p>VALSHOW – For values that contains code and description/name 
+			 such as a Master File, VALSHOW will display the Master File 
+			 name; otherwise, only the code is displayed</p></li>
+			<li><p>SCORE – This will show the score of the checklist item.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This applies 
+		 only to workflows. It will update the workflow with information 
+		 from a checklist item in the workflow step. The change is made 
+		 once the checklist item contains a value that has been saved.</p>
+		<p>Example:</p>
+		<p>[Update.Header_Descr= Appointment of (+OMF.VALSHOW+)]</p>
+		<p>will update the description of the workflow to include the description/name 
+		 of the value for the checklist item with the key 'OMF'. If the 
+		 field type is Master File, adding VALSHOW will display the Master 
+		 File name.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Update workflow 
+		 header administrator and workflow step administrator with information 
+		 from step item</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>To update workflow 
+		 header administrator:</p>
+		<p>[Update.Header_AdminCode=(+&lt;FLDKEY&gt;+)] </p>
+		<p>&#160;</p>
+		<p>To update workflow step administrator:</p>
+		<p>[Update.Step_AdminCode=(+&lt;FLDKEY&gt;+)]</p>
+		<p>&#160;</p>
+		<p>where &lt;FLDKEY&gt; refers to the key of the checklist item.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This applies 
+		 only to workflows. It will update the administrator of the workflow 
+		 header or step with information from a checklist item in the workflow 
+		 step. The change is made upon saving the workflow.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Show an item 
+		 if condition(s) is/are met</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ROW.Condition.&lt;Key&gt;=&lt;Condition&gt;]</p>
+		<p>where:</p>
+		<ul class="hcp3">
+			<li><p>&lt;Key&gt; - refers to the Key of the item that is 
+			 to be hidden/shown</p></li>
+			<li><p>&lt;Condition&gt; - refers to the condition or conditions 
+			 and must include the Key of the checklist item containing 
+			 the value to be used for evaluation against the condition(s). 
+			 For multiple conditions, specify this using ‘AND’ or ‘OR’.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This applies 
+		 only to workflows. It is to control whether or not an item is 
+		 seen in the workflow based on specified condition(s).</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Create invoice 
+		 through workflow</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_SUBMIT=CREATEINV]</p>
+		<p>This tag is mandatory.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to be 
+		 included to ensure an invoice is created when the workflow is 
+		 completed.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" rowspan="7" style="vertical-align: top;"><p>Specify 
+		 invoice details</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.SERVCODE=&lt;Key&gt;]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item.</p>
+		<p>This tag is mandatory if the service line(s) for the invoice 
+		 is to be specified by checklist items of the field type ‘Lookup 
+		 Table’, ‘User Table Value’ or ‘Yes/No’.</p>
+		<p>If only one service line is required and this is specified by 
+		 a checklist item of the field type ‘Service’, then this tag is 
+		 not required.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to define 
+		 the service lines based on checklist items configured with the 
+		 specified keys.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.SERVCODE=S1,S2,S3]</p>
+		<p>will create an invoice where the service lines will be specified 
+		 by checklist items with the keys S1, S2 and S3.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.MatterType=&lt;Value&gt;]</p>
+		<p>where &lt;Value&gt; is the matter code from the Matter Type 
+		 Code [MTTR] lookup table.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to define 
+		 the matter type for the invoice.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.MatterType=AC]</p>
+		<p>will filter the matter type according to ‘AC’ (Accounting).</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.PostAsFinal=&lt;Value&gt;]</p>
+		<p>where &lt;Value&gt; can be:</p>
+		<ul class="hcp3">
+			<li><p>Y to post the created invoice.</p></li>
+			<li><p>N to retain as draft invoice.</p></li>
+		</ul>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to specify 
+		 if the invoice created will be a draft invoice or posted as final 
+		 invoice.</p>
+		<p>If not specified, the default is N.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.PostAsFinal=Y]</p>
+		<p>will create and post the invoice.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.Reference=(+&lt;Key&gt;+)]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to retrieve 
+		 value from a checklist item for the Reference field of the invoice.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.Reference=(+REFE+)]</p>
+		<p>will insert the value for checklist item with the key ‘REFE’ 
+		 as the invoice reference.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.HeaderNote=(+&lt;Key&gt;+)]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to retrieve 
+		 value from a checklist item for the Header Note field of the invoice.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.HeaderNote=(+HEAD+)]</p>
+		<p>will insert the value for checklist item with the key ‘HEAD’ 
+		 as the invoice header note.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.FooterNote=(+&lt;Key&gt;+)]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to retrieve 
+		 value from a checklist item for the Footer Note field of the invoice.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.FooterNote=(+FOOT+)]</p>
+		<p>will insert the value for checklist item with the key ‘FOOT’ 
+		 as the invoice footer note.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[CREATEINV.Note=(+&lt;Key&gt;+)]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to retrieve 
+		 value from a checklist item for the Note field of the invoice.</p>
+		<p>Example:</p>
+		<p>[CREATEINV.Note=(+NOTE+)]</p>
+		<p>will insert the value for checklist item with the key ‘NOTE’ 
+		 as the invoice note.</p>
+		<p><span class="hcp2">Note</span>: 
+		 This tag is supported on workflows published to Viewpoint Engage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td rowspan="3" class="t1Col" style="vertical-align: top;"><p>Prompt 
+		 the eView page upon creating an invoice via the Workflow in Viewpoint 
+		 Engage</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[CSP_SUBMIT=SHOWEVIEW]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to prompt 
+		 the eView page upon creating an invoice via the Workflow.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[SHOWEVIEW.EVIEW=&lt;Template 
+		 Code&gt;]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This defines 
+		 the eView template to be used to display the posted invoice details.</p>
+		<p><span class="hcp2">Note</span>: 
+		 The eView template for Viewpoint Engageis maintained in the Back-office 
+		 Configuration &gt; Document Libraries &gt; Engage Servicing Portal 
+		 Templates.</p>
+		<p>Example:</p>
+		<p>[SHOWEVIEW.EVIEW=CPSERVC]</p>
+		<p>will use the eView template ‘CPSERVC’ to display the posted 
+		 invoice details.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[SHOWEVIEW.LINKCODE=&lt;Link 
+		 Code&gt;]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This defines 
+		 the link code (grid code in Back-office Viewpoint Connect) where 
+		 the invoice details are retrieved. It is the code for the grid 
+		 containing the record that you wish to link the eView to.</p>
+		<p>Example:</p>
+		<p>[SHOWEVIEW.LINKCODE=RCSALESU]</p>
+		<p>will display the invoice details as retrieved from the link 
+		 code 'RCSALESU'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Automate the 
+		 scores and formulas recalculation for Viewpoint Engage Workflow</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_SUBMIT=DORATING]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will run 
+		 the 'Refresh Rating' function in the Back-office Workflow to recalculate 
+		 the scores and formulas once user clicks the 'Submit' button in 
+		 the Viewpoint Engage Workflow step.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Transfer linked 
+		 items to new Master file</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_SUBMIT=TRANSFERMF]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to be 
+		 included to ensure that relevant linked items are transferred 
+		 from the parent workflow to the new Master File created by the 
+		 linked or child workflow when the workflow is completed.</p>
+		<p> </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" rowspan="2" style="vertical-align: top;"><p>Specify 
+		 Master File and linked items to be transferred </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[TRANSFERMF.MFKEY=&lt;Key&gt;]</p>
+		<p>where &lt;Key&gt; refers to the key of the checklist item that 
+		 will specify the Master File.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to define 
+		 the Master File where the linked items will be transferred to.</p>
+		<p>Example:</p>
+		<p>[TRANSFERMF.MFKEY=MFile]</p>
+		<p>will transfer the linked items to a new Master File where the 
+		 value is specified in a checklist item with key ‘MFile’.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[TRANSFERMF.TYPE=&lt;Code&gt;]</p>
+		<p>where &lt;Code&gt; can be:</p>
+		<ul class="hcp3">
+			<li><p>BI – Binder</p></li>
+			<li><p>DM – Task</p></li>
+			<li><p>DH – Document holder</p></li>
+			<li><p>TM – Time entry</p></li>
+			<li><p>DI – Disbursement entry</p></li>
+			<li><p>WM – Main workflow</p></li>
+		</ul>
+		<p>To include multiple codes, separate each code with a comma symbol. 
+		 If &lt;Code&gt; is not specified, all linked items will be transferred. 
+		 </p>
+		<p><span class="hcp2">Note:</span> 
+		 For TM and DI, the linked items will not be transferred if the 
+		 entry has been posted as draft invoice or if the Sales Ledger 
+		 module is not active.</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This is to define 
+		 the relevant linked items that will be transferred to the new 
+		 Master File.</p>
+		<p>Example:</p>
+		<p>[TRANSFERMF.TYPE=DH,TM,DI]</p>
+		<p>will transfer linked items including document holder, time entry 
+		 and disbursement entry to the new Master File.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td rowspan="2" class="t1Col" style="vertical-align: top;"><p>Update 
+		 linked Filings, Meetings and Reviews record upon complete and 
+		 undo step</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_SUBMIT=UPDATE.&lt;Macro1&gt;|UPDATE.&lt;Macro2&gt;] 
+		 </p>
+		<p>where each macro has to be defined separately:</p>
+		<p>[&lt;Macro1&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;] </p>
+		<p>[&lt;Macro1&gt;.FLD=&lt;Column1&gt;=(+KEY+)|&lt;Column2&gt;=’X’]</p>
+		<p>[&lt;Macro1&gt;.Condition= &lt;SQL Condition&gt;]</p>
+		<p>[&lt;Macro1&gt;.UpdateLimit=X]</p>
+		<p>&#160;</p>
+		<p>[&lt;Macro2&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;]</p>
+		<p>[&lt;Macro2&gt;.FLD=&lt;Column1&gt;=(+KEY+)|&lt;Column2&gt;=’X’]</p>
+		<p>[&lt;Macro2&gt;.Condition= &lt;SQL Condition&gt;]</p>
+		<p>[&lt;Macro2&gt;.UpdateLimit=X]</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 </p>
+		<ul class="hcp3">
+			<li><p>The macro code tag [&lt;Macro&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;] 
+			 is used to replace the existing tag [&lt;Macro&gt;=&lt;Screen&gt;|&lt;Button&gt;].</p></li>
+			<li><p>It is mandatory to define &lt;Macro&gt;.DEF, &lt;Macro&gt;.FLD 
+			 and &lt;Macro&gt;.Condition for each macro.</p></li>
+			<li><p>If &lt;Macro&gt;.UpdateLimit is not defined, it will 
+			 update only one record whereas if &lt;Macro&gt;.UpdateLimit=0, 
+			 it will update all records.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the linked records when user completed a step.</p>
+		<p>Example:</p>
+		<p>[ON_SUBMIT=UPDATE.FILEACT|UPDATE.FILING|]</p>
+		<p>will update the linked record in FILEACT macro, followed by 
+		 the FILING macro.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_UNDO=UPDATE.&lt;Macro1&gt;|UPDATE.&lt;Macro2&gt;]</p>
+		<p>where each macro has to be defined separately:</p>
+		<p>[&lt;Macro1&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;] </p>
+		<p>[&lt;Macro1&gt;.FLD=&lt;Column1&gt;=(+KEY+)|&lt;Column2&gt;=’X’]</p>
+		<p>[&lt;Macro1&gt;.Condition= &lt;SQL Condition&gt;]</p>
+		<p>[&lt;Macro1&gt;.UpdateLimit=X]</p>
+		<p>&#160;</p>
+		<p>[&lt;Macro2&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;]</p>
+		<p>[&lt;Macro2&gt;.FLD=&lt;Column1&gt;=(+KEY+)|&lt;Column2&gt;=’X’]</p>
+		<p>[&lt;Macro2&gt;.Condition= &lt;SQL Condition&gt;]</p>
+		<p>[&lt;Macro2&gt;.UpdateLimit=X]</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note:</span> 
+		 </p>
+		<ul class="hcp3">
+			<li><p>The macro code tag [&lt;Macro&gt;.DEF=&lt;Screen&gt;|&lt;Button&gt;] 
+			 is used to replace the existing tag [&lt;Macro&gt;=&lt;Screen&gt;|&lt;Button&gt;].</p></li>
+			<li><p>It is mandatory to define &lt;Macro&gt;.DEF, &lt;Macro&gt;.FLD 
+			 and &lt;Macro&gt;.Condition for each macro.</p></li>
+			<li><p>If &lt;Macro&gt;.UpdateLimit is not defined, it will 
+			 update only one record whereas if &lt;Macro&gt;.UpdateLimit=0, 
+			 it will update all records.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will update 
+		 the linked records when user undo a step.</p>
+		<p>Example:</p>
+		<p>[ON_UNDO=UPDATE.FILEACT2|UPDATE.FILING2]</p>
+		<p>will update the linked record in FILEACT2 macro, followed by 
+		 the FILING2 macro.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">To filter new Master 
+		 File properties according to a desired criteria instead of displaying 
+		 the properties of the Master File which is used to launch the 
+		 workflow. This is applicable for checklist items under parent 
+		 item with ‘Input Field’ field type.</td>
+		<td class="t2Col" style="vertical-align: top;"><p>[/InputField.MFPROP=MFPROPERTIES/] 
+		 </p>
+		<p>(for all “Input Field”) </p>
+		<p>&#160;</p>
+		<p>OR</p>
+		<p>[/InputField.MFPROP=MFPROPERTIES|&lt;KEY&gt;/] &#160;</p>
+		<p>(for specific “Input Field”)</p>
+		<p>&#160;</p>
+		<p>where &lt;KEY&gt; refers to the key for ‘Input Field’ field 
+		 type </p>
+		<p>&#160;</p>
+		<p>AND </p>
+		<p>[/MFPROPERTIES=MF.RefType=(+&lt;KEY&gt;+)|EN.IncorpPlace=(+&lt;KEY&gt;+)|EN.EntType=(+&lt;KEY&gt;+)/]</p>
+		<p>&#160;</p>
+		<p>where (+&lt;KEY&gt;+) refers to the key for related checklist 
+		 items in the workflow.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>This will filter 
+		 the selection of properties of new Master File based on Master 
+		 File Type, Jurisdiction and Entity Type.</p>
+		<p>&#160;</p>
+		<p><span class="hcp2">Note</span><span 
+		 style="font-weight: bold;">:</span> Ensure to configure the Tag 
+		 Values in either of the following as well.</p>
+		<ul class="hcp3">
+			<li>Configuration &gt; Business Parameters &gt; Entity Administration 
+			 &gt; Entity Types</li>
+			<li>Configuration &gt; Business Parameters &gt; General &gt; 
+			 Lookup Values (ADTP)</li>
+		</ul>
+		<p>Example of tag:</p>
+		<p>[FILTER:SOF.TYPE=DIR]</p>
+		<p>This will display ‘DIR’ (Director) only in the selection of 
+		 Officer Type checklist item for the selected Entity Type or Master 
+		 File Type.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>To filter the type of Officer Type to only ‘Director’ and ‘Secretary’ 
+		 for new Incorporation, configure the tag values for step properties 
+		 of the checklist item with ‘Input Field’ field type as follows:</p>
+		<p>[/InputField.MFPROP=MFPROPERTIES|DUPSO/]</p>
+		<p>[/MFPROPERTIES=</p>
+		<p>MF.RefType=(+RefType+)|</p>
+		<p>EN.IncorpPlace=(+IncorpPlace+)|</p>
+		<p>EN.EntType=(+EntType+)/]</p>
+		<p>&#160;</p>
+		<p>Configure [FILTER:SOF.TYPE=DIR,SEC] in the related Entity Type 
+		 and/or Master File Type. </p>
+		<p>&#160;</p>
+		<p>In the workflow, users will only see ‘DIR’ and ‘SEC’ as selection 
+		 for Officer Type after they select the related Entity Type and 
+		 Incorporation Place.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">Support multiple 
+		 field keys configuration in one Tag Values field.</td>
+		<td class="t2Col" style="vertical-align: top;"><p>(+&lt;Key1&gt;##&lt;Key2&gt;+)</p>
+		<p>where &lt;Key&gt; refers to the key for related checklist items 
+		 in the workflow.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>The syntax ‘##’ 
+		 allows multiple keys to be configured in one Tag Values field 
+		 or in one Macro tag. By using this format, the first key that 
+		 contains a value will be retrieved as the default value or when 
+		 users execute updates through Macro.</p>
+		<p>Example:</p>
+		<p>AlertNote=(+AlertNoteO##AlertNoteL+)</p>
+		<p>If ‘AlertNoteO’ contains value, it will be used. If it does 
+		 not contain value, the value for ‘AlertNoteL’ will be used instead.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">Retrieve values 
+		 as default from a specified workflow. 
+		<br>&#160; 
+		<p class="hcp4">Note:</p>
+		<p>The values retrieved will appear as read-only.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>[ON_ LOAD=COPYWFTOCLIPBOARD]</p>
+		<p>&#160;</p>
+		<p>[COPYWFTOCLIPBOARD.WFTK=&lt;TemplateKey&gt;] </p>
+		<p>where &lt;TemplateKey&gt; refers to the Workflow Template Key.</p>
+		<p>&#160;</p>
+		<p>OR</p>
+		<p>[COPYWFTOCLIPBOARD.WFTN=&lt;FieldKey&gt;] where &lt;FieldKey&gt; 
+		 refers to the key of the checklist item with Workflow Link Field 
+		 Type.</p>
+		<p>&#160;</p>
+		<p>[COPYWFTOCLIPBOARD.WFSK=&lt;StepKey&gt;] where &lt;Step key&gt; 
+		 refers to Workflow Step key.</p>
+		<p>This tag is optional.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Aside for the 
+		 tags, configure &quot;#&quot; in ‘Clipboard Mapping’. The checklist 
+		 item will retrieve value from the exact same key in the clipboard 
+		 field. To refer values from Duplicate Group, use ‘+&lt;Key&gt;’.</p>
+		<p>&#160;</p>
+		<p>When the workflow template is open for the first time, fill 
+		 in and complete the workflow as per normal practice. The next 
+		 time you use the same workflow template, all the values with ‘Clipboard 
+		 Mapping’ configured will be auto filled.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">To configure an 
+		 item with Workflow Link Field Type so that it can only link with 
+		 an existing workflow.</td>
+		<td class="t2Col" style="vertical-align: top;"><p>[WF.ExistingHistory=Y]</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>The linked workflow 
+		 will not be deleted if the main workflow is deleted as it only 
+		 serves as reference.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="../Shared/Step_Library.htm">Step Library</a></p></li>
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist/Workflow 
+	 Step Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="../Shared/Checklist.htm">Checklist</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist/Workflow Step - Tags</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

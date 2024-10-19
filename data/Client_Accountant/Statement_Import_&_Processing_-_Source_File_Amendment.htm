@@ -1,0 +1,786 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statement Import &amp; Processing - Source File Amendment</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-no-proof:yes; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-weight:normal; }
+b.hcp4 { font-weight:normal; }
+span.hcp5 { font-weight:normal; }
+li.hcp6 { margin-left:-20px; }
+p.hcp7 { margin-left:36px; }
+p.hcp8 { margin-left:0px; }
+li.hcp9 { font-weight:normal; }
+img.hcp10 { border:none; }
+span.hcp11 { color:#4472C4;
+mso-themecolor:accent1; }
+tr.hcp12 { mso-yfti-irow:0;
+mso-yfti-firstrow:yes;
+mso-yfti-lastrow:yes; }
+td.hcp13 { vertical-align:top;
+border:solid #000000 1.0pt;
+mso-border-alt:solid windowtext .5pt;
+padding:0cm 5.4pt 0cm 5.4pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+p.hcp14 { font-size:10pt; }
+p.hcp15 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1 style="font-size: 36px;"><span style="font-size: 36px;">Statement Import 
+ &amp; Processing - Source File Amendment</span></h1>
+<h3>Introduction - Amendment of the Source File</h3>
+<p>Statement Import &amp; Processing allows you to amend the source file 
+ that are provided by Viewpoint. However, there are some conditions and 
+ guideline that you need to follow to amend the source file.</p>
+<p>You need to have a basic knowledge on the formatting or syntax and be 
+ familiar with the process tags of the source file in order for you to 
+ amend the source file.</p>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">How do I amend 
+ the Source File?</a></p>
+<div class="droptext" id="POPUP608550754" style="display: none;">
+	<p>It is recommended that you configure and amend the source file with 
+	 the supervision of Viewpoint support representative. However, you 
+	 can amend the source file by yourself under several circumstances. 
+	 For example, changing the format date or currency is permissible without 
+	 Viewpoint supervision.</p>
+</div>
+<p class="hcp4" style="line-height: 115%;">&#160;</p>
+<h3>Steps to Amend the Source File</h3>
+<p class="MsoNormal">Follow the steps below to configure the source file:</p>
+<ol style="list-style: decimal;">
+	<li><p>Ensure that you have the source file in your system.</p></li>
+	<li><p>Right click on the source file and click ‘Edit’ button.</p></li>
+	<li><p>The source file will open using the WordPad / Text Editor or 
+	 any other application depending on which has been installed in your 
+	 system.</p></li>
+	<li><p>Please refer to the configurable fields of the source file section 
+	 in order to understand area of fields in the source file that is configurable 
+	 or amendable.</p></li>
+	<li><p>After amending the source file, you need to import the newly 
+	 edited source file into Viewpoint Connect again. Please refer to the 
+	 ‘Statement Import and Processing’ topics on how to import the source 
+	 file.</p></li>
+</ol>
+<h3>Content of Source File</h3>
+<p>The contents that are included in the source file are Statement Type, 
+ Mapping Fields for Processing File Type, etc. Refer to the configurable 
+ fields table.</p>
+<p>&#160;</p>
+<h3>Configurable Fields of the Source File</h3>
+<p>The following table shows the configurable fields in the source file 
+ with the descriptions and examples<span style="line-height: 115%;">.</span></p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 16.14%;">
+	<col style="width: 50.526%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td>Field Name</td>
+		<td>Description</td>
+		<td>Example</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>FormatID</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the statement type specific format code. This code is the <span class="hcp1">unique</span> identifier – particularly 
+		 used when statement format is imported into client environment 
+		 where the statement type with the same code will be overwritten.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;FormatID&gt;CitiBankNYTRAN&lt;/FormatID&gt;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>ValidateBankMF</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 that this is flagged to validate the bank Master File on recognition.</p>
+		<p>Example of value can be assigned will be ‘Yes/No’.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>RecField</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the recognised account code based on the field below:</p>
+		<ul class="hcp2">
+			<li><p>SL - Subledger code (AcctItems.SlCode).</p></li>
+			<li><p>SE - External/IBAN code (AcctItems.ExtAcctNo).</p></li>
+			<li><p>U1 - User Defined Subledger Code - ACODER_2.</p></li>
+			<li><p>U2 - User Defined Subledger Code - ACODER_2.</p></li>
+			<li><p>BA - Bank Account Code (AcctItems.LinkStatRec).</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;RecField&gt;SE&lt;/RecField&gt;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>SourceDescr</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the description of the source.</p>
+		<p>Example: CitiBank NY Business Statement 1.0.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;SourceDescr&gt;CitiBankNYXML&lt;/SourceDescr&gt;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>SourceNote</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the source note.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;SourceNote&gt;ABC&lt;/SourceNote&gt;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>StatType</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicated 
+		 the status type of the transaction. It is represented as below:</p>
+		<ul class="hcp2">
+			<li><p>T – Transactions</p></li>
+			<li><p>B – Account Balances</p></li>
+			<li><p>M – Transaction and Balances</p></li>
+			<li><p>S – Statement Source Configuration</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;StatType&gt;T&lt;/StatType&gt;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>FileType</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the Source File Format which can be:</p>
+		<ul class="hcp2">
+			<li><p>CSV/F - CSV file with fixed length fields</p></li>
+			<li><p>CSV or CSV/V - CSV file with variable length fields</p></li>
+			<li><p>XML - XML file </p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;FileType&gt;XML&lt;/FileType&gt;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>IsActive</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the statement type activity status. </p>
+		<ul class="hcp2">
+			<li><p>Yes – Indicates statement type is Active.</p></li>
+			<li><p>No – Indicates statement type is Inactive</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;IsActive&gt;True&lt;/IsActive&gt;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>RecDate</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This field indicates 
+		 the Reconciliation Date such as (TransDate, ValueDate, SettleDate). 
+		 The default is TransDate.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>&lt;RecDate&gt;TransDate&lt;/RecDate&gt;</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="line-height: 115%;">&#160;</p>
+<p>&#160;</p>
+<h3>AstatSource.ProcessTags</h3>
+<p class="MsoNormal">&#160;</p>
+<p>Tags for processing <span class="hcp1">recognised</span> 
+ transaction for mapping of the transaction to journal header fields.</p>
+<p>The following table is the AstatSource process tags along with the descriptions 
+ and examples. You can refer to the table below for each of the process 
+ tags.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 20.842%;">
+	<col style="width: 39.203%;">
+	<col style="width: 31.509%;">
+	<tr class="t1st">
+		<td>Process Tags</td>
+		<td>Description</td>
+		<td>Example</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/FORMAT-DATE=/]</b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the date format used.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[FORMAT-DATE=yyyymmdd]</span></b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The above means the format date 
+		 is year, month and day.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/FORMAT-CULTUREINFO=/]</span></b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This tag will 
+		 follow the statement format date.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[FORMAT-CULTUREINFO=en-UK]</span></b></p>
+		<p>en-UK will recognise date format as used in the United Kingdom 
+		 which is Day-Month-Year.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/AMOUNT_NO_REVERSE=1/]</span></b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Do not reverse 
+		 the amount.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/AMOUNT_NO_REVERSE=1/]</span></b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The value 1 above means YES which 
+		 will not reverse the amount. If the value is 0, the amount will 
+		 be reversed.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/SUPPRESSZERO=1/]</b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 if you do not wish to import transactions with zero amount.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/SUPPRESSZERO=1/]</b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The above using the value 1, which 
+		 means YES and it will not import the transaction with a zero amount. 
+		 If the value is 0, means the user wants to import the transaction 
+		 with zero amount.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/DefaultCurrency=&lt;CurrencyCode/]</span></b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where &lt;CurrencyCode&gt; is the 
+		 ISO currency code</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Default currency. 
+		 This is used when the transaction line does not contain a currency 
+		 code.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/DefaultCurrency=EUR/]</b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The above means the default currency 
+		 used will be Euro.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/HEADER.1.VAL=/]</span></b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 to detect the header that contains column names.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/HEADER.1.VAL=0,Sort Code,Account 
+		 Number,Currency Code,Amount,Entry Type,Transaction Description,Cheque 
+		 Number,Narrative/]</span></b></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[</span>/<span class="hcp5">HEADER.1.VAL-LINE=/]</span></b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 if the header is not in row 1.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/HEADER.1.VAL-LINE=2/]</b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The above means the header starts 
+		 in row 2.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[TRLINE-LINE=&lt;X&gt;/]</p>
+		<p class="hcp3">[TRLINE-LINE=&lt;X&gt;~&lt;Y&gt;/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where &lt;X&gt; is the starting 
+		 line number and &lt;Y&gt; is the last line number.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 to define the starting point for the import and applies only to 
+		 CSV files.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/TRLINE-LINE=2~100/]</p>
+		<p>&#160;</p>
+		<p>The above means the import will apply only to the second line 
+		 to the 100th line of the file.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td rowspan="5" class="t1Col" style="vertical-align: top;"><span><b class="hcp4">[/TRLINE=/]</b></span></td>
+		<td rowspan="2" class="t2Col" style="vertical-align: top;"><p>This 
+		 tag is used to define the column position or column name.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">CSV - [/TRLINE=TR.AccountNumber=P_33:46;TR.StatDate=P_2:12; 
+		 /]</b></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">XML - [/TRLINE=TR.AccountNumber=AccountNumber;/]</b></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 to define the Debit Credit Handling.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">TR.&lt;ColName&gt;=$_DCR_+P_00:00~-P_00:00</b></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 for Returns Specified Characters</p>
+		<p>Returns specified <span class="hcp1">numbers</span> 
+		 of characters from a string. X = Start, Y = Length.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">TR.&lt;ColName&gt;=F_0|$_POS_X~Y</b></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="vertical-align: top;"><p>This tag is used 
+		 to define the Negative Value Handling.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">TR.&lt;ColName&gt;=P_XX:XX|$_NEG_P_XX:XX=CR</b></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/TRLINE-GEN_&lt;Field&gt;=&lt;Position&gt;/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where</p>
+		<ul class="hcp2">
+			<li class="hcp6"><p class="hcp3">&lt;Field&gt; 
+			 can TransDate, AccountNumber or TransCur</p></li>
+			<li class="hcp6"><p class="hcp3">&lt;Position&gt; 
+			 is defined as L_X|F_Y with X being the line number and Y being 
+			 the field number</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is used 
+		 to specify the position of the following fields if these are available 
+		 in the header but not in the details line:</p>
+		<ul class="hcp2">
+			<li><p>TransDate</p></li>
+			<li><p>AccountNumber</p></li>
+			<li><p>TransCur</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/TRLINE-GEN_TransDate=L_1|F_4/]</p>
+		<p>&#160;</p>
+		<p>The above means the TransDate field is in the first line and 
+		 at the fourth column.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/TRLINE=&lt;VpField&gt;=&lt;SourceFileLocation&gt;;...;/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where</p>
+		<ul class="hcp2">
+			<li class="hcp6"><p class="hcp3">&lt;VpField&gt; 
+			 refers to the field name in Viewpoint</p></li>
+			<li class="hcp6"><p class="hcp3">&lt;SourceFileLocation&gt; 
+			 refers to the location of the information in the source file 
+			 from the bank and it can be by:</p></li>
+			<li class="hcp6"><p class="hcp7">specifying 
+			 the position as P_X:P_Y with X being the starting position 
+			 value and Y being the ending position value if the source 
+			 file is a fixed length CSV file</p></li>
+			<li class="hcp6"><p class="hcp7">specifying 
+			 the position of the information as the field number if the 
+			 source file is a variable length CSV file</p></li>
+			<li class="hcp6"><p class="hcp7">specifying 
+			 the column name if the source file is XML</p></li>
+		</ul>
+		<p class="hcp8">If there is a need to specify a debit 
+		 and credit fields, then the following is added:</p>
+		<ul class="hcp2">
+			<li class="hcp6"><p class="hcp8">$_DCR_-&lt;FieldPosition&gt;~+&lt;FieldPosition&gt; 
+			 where &lt;FieldPosition&gt; is defined for both credit and 
+			 debit fields using the field number</p></li>
+			<li class="hcp6"><p class="hcp8">&#160;$_DCR_P&lt;PositionX&gt;:&lt;PositionY&gt;~+&lt;PositionY&gt; 
+			 where &lt;PositionX&gt; is the starting position and &lt;PositionY&gt; 
+			 is the ending position for the credit and debit fields</p></li>
+		</ul>
+		<p class="hcp8">&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is used 
+		 to map Viewpoint field to the information in the source file. 
+		 </p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/TRLINE=TR.AccountNumber=P_33:46;TR.StatDate=P_2:12; 
+		 /]</p>
+		<p>&#160;</p>
+		<p>The above maps the following fields to fields in the CSV bank 
+		 file:</p>
+		<ul class="hcp2">
+			<li><p>AccountNumber to the information in position 33 to 46</p></li>
+			<li><p>StatDate to the information in position 2 to 12</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>[/TRLINE=TR.AccountNumber=AccountNumber;/]</p>
+		<p>&#160;</p>
+		<p>The above maps the AccountNumber field to the column named AccountNumber 
+		 in the XML source file.</p>
+		<p>&#160;</p>
+		<p>[/TRLINE=TR.TransDate=F_1;TR.AmountTrans=$_DCR_-F_5~+F_4;TR.ALineDescr=F_3;TR.AlineText=F_2;/]</p>
+		<p>&#160;</p>
+		<p>The above maps the following fields to fields in the CSV bank 
+		 file:</p>
+		<ul class="hcp2">
+			<li><p>TranDate to the first field </p></li>
+			<li><p>AmountTrans to the fifth field if it is a credit amount 
+			 and the fourth field if it is a debit amount</p></li>
+			<li><p>LineDesr to the third field</p></li>
+			<li><p>AlineText to the second field</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b><span class="hcp5">[/TRLINE-GEN=/] – CSV</span></b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 tag is used to get the last string of general tag.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/TRLINE-GEN_AccountNumber=L_3|F_1|$_POS_LASTSTRING/]</b></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/DELIMETER=/] – CSV</b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Delimiter 
+		 uses for CSV.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/DELIMETER=;/]</b></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/IMPORT_ OPTION=/] – CSV</b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Functions 
+		 of this tag as below:</p>
+		<ul style="list-style: disc; font-weight: normal;">
+			<li class="hcp9"><p>Use TextFieldParser to 
+			 split file. This option is used when cell data contain Line 
+			 Feed.</p></li>
+			<li class="hcp9"><p>Use to ignore closing statement.</p></li>
+			<li class="hcp9"><p>Use to ignore opening statement.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/IMPORT_ OPTION=1/]</b></p></td>
+	</tr>
+	
+		
+		
+	
+	
+		
+		
+	
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/NUMSEP=/]</b></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 tag is used to define decimal type for the amount.</p>
+		<p class="hcp3"><u>Available type:</u></p>
+		<p class="hcp3">1 = Comma (,)</p>
+		<p class="hcp3">2 = Dot (.)</p>
+		<p class="hcp3">3 = Single Quote (‘)</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3"><b class="hcp4">[/NUMSEP=2/]</b></p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">The above means it is using Dot 
+		 (.) as a decimal point for the amount.</p></td>
+	</tr>
+</table>
+<p class="MsoNormal">&#160;</p>
+<p>&#160;</p>
+<h3>Process Tags (Mapping Fields for Processing)</h3>
+<h3>Transaction</h3>
+<p class="MsoNormal">The following table shows the process tags mapping 
+ fields in the source file along with the caption.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="31.325%" border="1">
+	<col style="width: 45.309%;">
+	<col style="width: 54.691%;">
+	<tr class="t1st">
+		<td>Field</td>
+		<td>Caption</td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AccountNumber</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Account 
+		 Number</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">TransDate</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Transaction 
+		 Date</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">ValueDate</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Value 
+		 Date</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">SettleDate</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Settlement 
+		 Date</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">TransCur</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Transaction 
+		 Currency</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AmountTrans</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Amount 
+		 Transaction</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AcctCur</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Account 
+		 Currency</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AmountAcct</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Amount 
+		 Account</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">LineQuantity</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Line 
+		 Quantity</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">ALineType</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Line 
+		 Type</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">BankReference</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Bank 
+		 Reference</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">ALineDescr</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Line 
+		 Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AlineText</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Line 
+		 Text</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;">&#160;</p>
+<p class="MsoNormal">The following shows the example of the field in the 
+ source file and the caption that you will see in the ‘Electronic Statement 
+ Import &amp; Reconciliation’ screen.</p>
+<p class="MsoNormal">For example, the field ‘AccountNumber’ in the source 
+ file referring to the ‘Account Number’ column in the screenshot.</p>
+<p class="MsoNormal"><img src="../image35.png" alt="" border="0" class="hcp10"></p>
+<p class="MsoNormal">&#160;</p>
+<h3>CSV and XML Configuration Differences</h3>
+<p>CSV and XML file format have different types of configuration within 
+ the transaction and balance. Below shows the differences between CSV and 
+ XML transaction format.</p>
+<p>For example, take note that the format of the process tags for CSV to 
+ define the account number is '<span class="hcp11">[TRLINE=TR.AccountNumber=F_2;TR.TransDate=F_3;/]</span>' 
+ while the format to define an account number in XML format is <span style="font-size: 10.0pt; 
+	 line-height: 107%; font-family: 'Times New Roman', serif; mso-fareast-language: EN-MY;">‘</span><span class="hcp11">[/TRLINE=TR.AccountNumber=AccountNumber;TR.TransDate=TransactionDate]</span>’. 
+ Refer to more examples below.</p>
+<p class="MsoNormal" style="font-size: 10.0pt; line-height: 107%; font-family: 'Times New Roman', serif; 
+	 mso-fareast-language: EN-MY;">&#160;</p>
+<h4 class="MsoNormal">CSV – Transaction</h4>
+<table class="MsoTableGrid" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; 
+		 border-collapse: separate;" cellspacing="0" width="652">
+	<tr class="hcp12">
+		<td width="652" class="hcp13"><p class="MsoNormal" 
+			 style="margin-bottom: .0001pt; line-height: normal;">&lt;?xml 
+		 version='1.0' ?&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ViewPointReconcilationSource&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FormatID&gt;EQRBCT&lt;/FormatID&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecField&gt;SE&lt;/RecField&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;SourceDescr&gt;RBSI 
+		 Transaction-CSV&lt;/SourceDescr&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;StatType&gt;T&lt;/StatType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FileType&gt;CSV/V&lt;/FileType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/RecTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/TRLINE=TR.AccountNumber=F_2;TR.TransDate=F_3; 
+		 /]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/FORMAT-DATE=dd/mm/yyyy/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/DELIMETER=,/] 
+		 &lt;!--this require inside ProcessTags element--&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;IsActive&gt;True&lt;/IsActive&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecDate&gt;TransDate&lt;/RecDate&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ViewPointReconcilationSource&gt;</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;">&#160;</p>
+<h4>CSV – Fixed - Transaction</h4>
+<table class="MsoTableGrid" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; 
+		 border-collapse: separate;" cellspacing="0" width="652">
+	<tr class="hcp12">
+		<td width="652" class="hcp13"><p class="MsoNormal" 
+			 style="margin-bottom: .0001pt; line-height: normal;">&lt;?xml 
+		 version='1.0' ?&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ViewPointReconcilationSource&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FormatID&gt;EQRBST&lt;/FormatID&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecField&gt;SE&lt;/RecField&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;SourceDescr&gt;RBSI 
+		 Transaction&lt;/SourceDescr&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;StatType&gt;T&lt;/StatType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FileType&gt;CSV/F&lt;/FileType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecTags&gt;[/FILELIKE=RBSI*TRN.atr/]&lt;/RecTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/TRLINE=TR.AccountNumber=P_20:33;TR.TransDate=P_36:46; 
+		 /]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/FORMAT-DATE=yyyy/mm/dd/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;IsActive&gt;True&lt;/IsActive&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecDate&gt;TransDate&lt;/RecDate&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ViewPointReconcilationSource&gt;</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;">&#160;</p>
+<h4>XML – Transaction</h4>
+<table class="MsoTableGrid" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; 
+		 border-collapse: separate;" cellspacing="0" width="652">
+	<tr class="hcp12">
+		<td width="652" class="hcp13"><p class="MsoNormal" 
+			 style="margin-bottom: .0001pt; line-height: normal;">&lt;?xml 
+		 version='1.0' ?&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ViewPointReconcilationSource&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FormatID&gt;RBSIXMLT&lt;/FormatID&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecField&gt;SE&lt;/RecField&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;SourceDescr&gt;RBSI 
+		 XML Transaction&lt;/SourceDescr&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;StatType&gt;T&lt;/StatType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FileType&gt;XML&lt;/FileType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;[/TRLINE=TR.AccountNumber=AccountNumber;TR.TransDate=TransactionDate; 
+		 /]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;[/SUPPRESSZERO=1/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;[/FORMAT-DATE=yyyy/mm/dd/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;[/TRLINE-XML=StatementEntry/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;IsActive&gt;True&lt;/IsActive&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecDate&gt;TransDate&lt;/RecDate&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ViewPointReconcilationSource&gt;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2 style="font-family: 'Times New Roman', serif;">Balance</h2>
+<p class="MsoNormal">The following table shows the process tags mapping 
+ fields in the source file along with the caption.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="30.904%" border="1">
+	<col style="width: 45.026%;">
+	<col style="width: 54.974%;">
+	<tr class="t1st">
+		<td>Field</td>
+		<td>Caption</td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AccountNumber</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Account 
+		 Number</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">RecStatus</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Recognition 
+		 Status</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">EntCode</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Account 
+		 File Code</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">SlCode</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Sub-ledger 
+		 Code</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">StatDate</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Statement 
+		 Date</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AcctCur</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">CCY</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AmntCleared</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Cleared</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AmntBalance</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">Account</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AcctRecBal</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">SL 
+		 Reconciled</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td nowrap="nowrap" class="t1Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">AcctJnlBal</p></td>
+		<td nowrap="nowrap" class="t2Col"><p class="MsoNormal" style="margin-bottom: .0001pt;">SL 
+		 Journal</p></td>
+	</tr>
+</table>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal">The following shows the example of the field in the 
+ source file and the caption that you will see in the ‘Electronic Statement 
+ Import &amp; Reconciliation’ screen.</p>
+<p class="MsoNormal">For example, the field ‘AccountNumber’ in the source 
+ file referring to the ‘Account Number’ column in the screenshot.</p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;"><span 
+	 style="font-family: 'Times New Roman', serif;"><img src="../image62.png" alt="" border="0" class="hcp10"></span></p>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;">&#160;</p>
+<p class="MsoNormal">Below show the differences between CSV and XML balance 
+ format. For example, take note that the format of the process tags for 
+ CSV to define the account number is ‘<span class="hcp11">[/TRLINE=TR.AccountNumber=P_33:46;TR.StatDate+P_2:12;/]</span>’ 
+ while the format to define an account number in XML format is ‘<span class="hcp11">[/TRLINE=TR.AccountNumber=AccountNumber; 
+ /]</span>’.</p>
+<p class="MsoNormal">&#160;</p>
+<h4>CSV – Fixed - Balance</h4>
+<table class="MsoTableGrid" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; 
+		 border-collapse: separate;" cellspacing="0" width="633">
+	<tr class="hcp12">
+		<td width="633" class="hcp13"><p class="MsoNormal" 
+			 style="margin-bottom: .0001pt; line-height: normal;">&lt;?xml 
+		 version='1.0' ?&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ViewPointReconcilationSource&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FormatID&gt;EQRBSB&lt;/FormatID&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecField&gt;SE&lt;/RecField&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;SourceDescr&gt;RBSI 
+		 Balance&lt;/SourceDescr&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;StatType&gt;B&lt;/StatType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FileType&gt;CSV/F&lt;/FileType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/FORMAT-DATE=yyyy/mm/dd/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/TRLINE=TR.AccountNumber=P_33:46;TR.StatDate=P_2:12; 
+		 /]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;IsActive&gt;True&lt;/IsActive&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ViewPointReconcilationSource&gt;</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="font-family: 'Times New Roman', serif;">&#160;</p>
+<h4>XML – Balance</h4>
+<table class="MsoTableGrid" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; 
+		 border-collapse: separate;" cellspacing="0">
+	<tr class="hcp12">
+		<td width="697" class="hcp13"><p class="MsoNormal" 
+			 style="margin-bottom: .0001pt; line-height: normal;">&lt;?xml 
+		 version='1.0' ?&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ViewPointReconcilationSource&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FormatID&gt;EQRBXB&lt;/FormatID&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ValidateBankMF&gt;False&lt;/ValidateBankMF&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;RecField&gt;SE&lt;/RecField&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;SourceDescr&gt;RBSI 
+		 Balance Xml&lt;/SourceDescr&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;StatType&gt;B&lt;/StatType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;FileType&gt;XML&lt;/FileType&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/FORMAT-DATE=yyyy/mm/dd/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/TRLINE=TR.AccountNumber=AccountNumber; 
+		 /]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[/TRLINE-XML=Balance/]</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ProcessTags&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;IsActive&gt;True&lt;/IsActive&gt;</p>
+		<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">&lt;/ViewPointReconcilationSource&gt;</p></td>
+	</tr>
+</table>
+&#160;&#160; 
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p class="hcp14"><a href="Statement_Import_Defining_Rules.htm">Statement 
+	 Import &amp; Processing - Defining Rules</a></p></li>
+	<li><p class="hcp14"><a href="Statement_Import_Process_Diagram.htm">Statement 
+	 Import &amp; Processing - Process Diagram</a></p></li>
+	<li><p class="hcp14"><a href="Journal_Scripts.htm">Journal 
+	 Scripts</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Statement Import & Processing - Source File Amendment</p>
+<p class="hcp15">&#160;</p>
+<p class="hcp15">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp15">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP608550754');
+//]]></script>
+</body>
+</html>

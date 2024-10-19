@@ -1,0 +1,1680 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Configuring Checklist Item</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+p.hcp2 { mso-ansi-language:EN-US; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:none; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+ul.hcp6 { list-style:disc; }
+span.hcp7 { mso-bidi-language:TH; }
+span.hcp8 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+p.hcp9 { mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+font-weight:bold; }
+span.hcp10 { font-family:Symbol;
+mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;
+mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+mso-list:Ignore; }
+span.hcp11 { font-family:Symbol;
+mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;
+mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+mso-list:Ignore;
+font:7.0pt 'Times New Roman'; }
+h2.hcp12 { mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+p.hcp13 { mso-ansi-language:EN-US;
+mso-bidi-language:TH;
+font-weight:bold;
+font-style:italic; }
+span.hcp14 { font-weight:normal;
+font-style:normal; }
+span.hcp15 { text-indent:-18.0pt;
+mso-list:l0 level1 lfo1;
+mso-ansi-language:EN-US;
+mso-bidi-language:TH; }
+td.hcp16 { vertical-align:top; }
+li.hcp17 { list-style:none;
+display:inline; }
+span.hcp18 { mso-ansi-language:EN-MY; }
+p.hcp19 { mso-bidi-language:TH; }
+span.hcp20 { font-size:11.0pt;
+mso-bidi-font-size:12.0pt;
+line-height:115%;
+font-family:Calibri, sans-serif;
+mso-fareast-font-family:SimSun;
+mso-fareast-theme-font:minor-fareast;
+mso-bidi-font-family:Times New Roman;
+mso-bidi-theme-font:minor-bidi;
+color:#27434B;
+mso-ansi-language:EN-GB;
+mso-fareast-language:EN-US;
+mso-bidi-language:TH; }
+span.hcp21 { mso-bidi-language:TH;
+mso-bidi-font-weight:bold; }
+p.hcp22 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Configuring Checklist Item</h1>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">What you require the items to do will determine the 
+ configuration of the items in terms of the field type to use and whether 
+ or not you need to enter information in the Values/Default column.</span></p>
+<p class="hcp2">&#160;</p>
+<h2>Configuring Item as Instructions or Headings</h2>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">If the item is only to provide information to user, 
+ then you can set the field type as ‘Not Applicable’.</span></p>
+<p class="hcp1"><span lang="EN-US" xml:lang="EN-US" class="hcp3">E</span><span class="hcp3">xample</span> 
+ – Step to instruct user to provide information.</p>
+<p class="hcp1"><img src="../image165.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Accept User Input</h2>
+<p><span lang="EN-US" xml:lang="EN-US">For item to accept and store user 
+ input, you must ensure that the right field type is set. The field type 
+ depends on the expected input value e.g. set field type to Date if you 
+ want user to enter a date. The field type MUST NOT be ‘Not Applicable’ 
+ if it is to accept input.</span></p>
+<p class="hcp1"><span lang="EN-US" xml:lang="EN-US" class="hcp3">E</span><span class="hcp3">xample</span> 
+ – Step to get information for a process.</p>
+<p class="hcp1"><img src="../image94.png" alt="" border="0" class="hcp4"></p>
+<h2>Configuring Item to Retrieve Information</h2>
+<p class="hcp1">It may be required 
+ for the step to display information that is already in the database. This 
+ can be part of the item’s caption or item’s value and uses field codes. 
+ If part of the item's caption, then field code is to be entered in the 
+ Checklist item column as (-&lt;Field&gt;-); or (-&lt;Query&gt;.&lt;Field&gt;-) 
+ if SQL query is used.</p>
+<p class="hcp1">If information 
+ is to be retrieved as value for the item, then ensure that the field type 
+ matches the information to be retrieved and the field code is entered 
+ in the Values/Default column.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Step to get information from Accounts screen.</p>
+<p class="hcp1"><img src="../image95.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><span class="hcp5">Note:</span> For checklist items with the (+HD.&lt;Key&gt;+) 
+ code, duplicating them will remove the default value and you can then 
+ enter a new value.</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">If information 
+ is to be retrieved based on another checklist item that is completed by 
+ the user, ensure that a key is assigned to the item that is to be referred 
+ and enter the tag [+WF.&lt;Field Key&gt;\&lt;Format&gt;+] in the Values/Default 
+ column.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Step to get information based on another checklist item that is completed 
+ by the user.</p>
+<p class="hcp1"><img src="../image199.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><span class="hcp5">Note:</span> Refer to <a href="Format_Options.htm">Format 
+ Options</a> for more information.</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">If the information 
+ required is not in the Workflow Field Wizard, use SQL query to retrieve 
+ the information and insert field code that refers to the SQL query.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Step to get the Registered Agent of the company.</p>
+<p class="hcp1"><img src="../image166.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">If there is 
+ more than one instance of the information to be retrieved, then you can 
+ add COPY tag so that you only define one item. This item will be repeated 
+ if more than one record is returned.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Step to get the name of the active Directors for the company.</p>
+<p class="hcp1"><img src="../image97.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">When there 
+ is more than one type of information, the above can also be used but you 
+ can define different items and group them.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Step to get name, date of appointment and date of resignation of past 
+ Directors for the company.</p>
+<p class="hcp1"><img src="../image98.png" alt="" border="0" class="hcp4"></p>
+<h3>Retrieve Information from PDF XFA Form</h3>
+<p>Information in a PDF XFA form can be retrieved and automatically populated 
+ into the workflow.</p>
+<p>&#160;</p>
+<p>The configuration required is as follows:</p>
+<p>Have a checklist item with ‘Document Holder’ field type to store the 
+ form. In the ‘Store Action’ field, enter ‘EXTRACTXML|REFRESH’. </p>
+<ul class="hcp6">
+	<li>'EXTRACTXML’ is for extracting the content of form into the clipboard 
+	 and store it in the database.</li>
+	<li>'REFRESH’ will take effect after ‘EXTRACTXML’ process where it 
+	 will refresh the workflow content.</li>
+</ul>
+<p>The items which values are to be retrieved from the form must be mapped 
+ accordingly by entering the field key from the form into the ‘Clipboard 
+ Mapping’ field. If the checklist item in the workflow is having the same 
+ key as the item in the form, you can use ‘#’. Field type for the items 
+ is according to the detail to be retrieved.</p>
+<p><img src="../PDF%20XFA.JPG" alt="" width="700" height="332" border="0" class="hcp4"></p>
+<h2>Configuring Item to Retrieved Required Items</h2>
+<p class="MsoNormal"><span class="hcp7">If the workflow 
+ contains required items that you would like user to complete in another 
+ workflow step, a checklist item with the field type ‘Required’ must be 
+ set up with the key of the workflow step containing the required items 
+ and the key of the required items.</span></p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">Example – Workflow 
+ to set up a Billing File where the first step is to get details for the 
+ Billing File and the second step retrieves required items from the first 
+ step.</p>
+<p class="MsoNormal"><span class="hcp7"><span class="hcp7">F</span>or 
+ the first step, all the required items must be assigned a key and have 
+ the Required checkbox ticked. </span></p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">For the second step, 
+ to have the checklist item retrieve the required items from the first 
+ step, the field type must be set to ‘Required’ and refer to the required 
+ items.</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;"><img src="../image214.png" alt="" border="0" class="hcp4"></p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<h2>Configuring Item to Retrieve Assignee Information</h2>
+<p>Details of assignee entered in Viewpoint such as telephone number and 
+ e-mail can be retrieved for the workflow by adding these prefixes to the 
+ field code of the detail to be retrieved:</p>
+<ul class="hcp6">
+	<li><p>DF.USERWF – If the assignee is the assignee of the workflow.</p></li>
+	<li><p>DF.USERWS – If the assignee is the assignee of the workflow 
+	 step.</p></li>
+</ul>
+<p>You can refer to the Field Wizard in Document Library for field codes 
+ of user details that can be retrieved.</p>
+<p><span class="hcp5">Note</span>: For 
+ assignee of the workflow step, this must be the same workflow step i.e. 
+ you cannot retrieve details of assignee for previous workflow step.</p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> <span class="hcp8">–</span> 
+ Step to get name and telephone number of the assigned user of the workflow 
+ step.</p>
+<p><img src="../image99.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Item to Retrieve Activities Related Information</h2>
+<p>Details of activities and their linked records can be retrieved for 
+ the workflow by adding these prefixes to the field code of the detail 
+ to be retrieved:</p>
+<ul class="hcp6">
+	<li><p>AT – If the information is regarding the activity record.</p></li>
+	<li><p>AL – If the information is regarding the linked record of the 
+	 selected activity record.</p></li>
+</ul>
+<p>Format options are applicable to the field codes to retrieve the information 
+ in a specific format.</p>
+<p><span class="hcp3">Example</span> – Retrieve Master File 
+ of the activity record in company name format and the name of the user 
+ who set the alert that is linked to the activity record.</p>
+<p><img src="../image230.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Item for Viewpoint Clipboard</h2>
+<p>If the user input in the workflow is to be updated to a Viewpoint screen, 
+ then you can set it up so the values entered can be copied and pasted 
+ using <span class="hcp8"><a 
+	 href="../Shared/Viewpoint_Clipboard.htm">Viewpoint Clipboard</a></span>. 
+ This removes the need to re-enter the information. The configuration requires:</p>
+<ul class="hcp6">
+	<li><p>Items containing the information to have field type that follows 
+	 the input value and mapped using the database field.</p></li>
+	<li><p>Item of the field type 'Go to Screen' or 'Master File (with 
+	 New Master File option ticked)' to contain CLIP tags that will perform 
+	 the copy and paste. Refer to <a href="../Shared/Checklist_Item_-_Tags.htm">Checklist 
+	 Item - Tags</a> for more information on CLIP tags.</p></li>
+</ul>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Workflow with step to update information to Accounts screen using Viewpoint 
+ Clipboard to copy and paste information from the workflow.</p>
+<p class="hcp1"><img src="../image100.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ - Workflow with step to add new appointment in Statutory Office screen 
+ with appointment details from workflow.</p>
+<p class="hcp1">For this example, 
+ it is possible to have the item open the Statutory Officers with the appointment 
+ details automatically pasted. This requires the following:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Items 
+	 containing the information to have field type that follows the input 
+	 value and mapped using the database field.</p></li>
+	<li><p class="hcp1">Item 
+	 of the field type 'Go to Screen' with CLIP tag added and Screen Entry 
+	 specified.</p></li>
+</ul>
+<p class="hcp1"><img src="../image101.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">If the information 
+ to be copied is from an earlier workflow step, then add the following:</p>
+<p class="hcp9">(CLIP.Source=&lt;StepKey&gt;)</p>
+<p class="hcp1">where &lt;StepKey&gt; 
+ refers to the key of the earlier workflow step. If the information is 
+ from multiple items in the earlier workflow step and the step is a repeatable 
+ step, then add {REF} to ensure the information copied is according to 
+ its group.</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Workflow for adding new bank signatories with a repeatable step for 
+ details of bank signatories and a step to show information from the earlier 
+ step and create Master File for new signatories with information copied 
+ and pasted using Viewpoint Clipboard.</p>
+<p class="hcp1">Step for getting 
+ details of bank signatory to:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Have 
+	 the option ‘Allow Copy Step’ ticked.</p></li>
+	<li><p class="hcp1">Contain 
+	 items configured with the items mapped using the database field.</p></li>
+	<li><p class="hcp1">Field 
+	 type for the items to depend on expected input value.</p></li>
+</ul>
+<p class="hcp1"><img src="../image103.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">Step to create 
+ new Master File(s) to:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Contain 
+	 items showing values from earlier step using CCODE and COPY tag.</p></li>
+	<li><p class="hcp1">Contain 
+	 item with field type ‘Master File’ with CLIP tags to specify earlier 
+	 workflow step and {REF}. &#160;</p></li>
+</ul>
+<p class="hcp1"><img src="../image104.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h3 style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US" class="hcp7">Same 
+ Database Field</span></h3>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US" class="hcp7">If 
+ the database field name is the same e.g. NrShare for number of shares 
+ for a share class and number of shares to be issued, add the Change Code 
+ as part of the key to differentiate them.</span> The syntax will be as 
+ follows:</p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US; font-weight: bold;">&lt;ChangeCode&gt;.&lt;DBField&gt;</p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;">For example, NrShare 
+ is the field name for number of shares for a share class and number of 
+ shares to be issued. As such, to differentiate them, the Key will be:</p>
+<p class="MsoNormal" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;"><span lang="EN-US" xml:lang="EN-US" class="hcp10">·</span><span lang="EN-US" xml:lang="EN-US" class="hcp11">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span lang="EN-US" xml:lang="EN-US" class="hcp8">SHH.NrShare 
+ – refers to number of shares for a share class</span></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;"><span lang="EN-US" xml:lang="EN-US" class="hcp10">·</span><span lang="EN-US" xml:lang="EN-US" class="hcp11">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span lang="EN-US" xml:lang="EN-US" class="hcp8">SHA.NrShare 
+ – refers to number of shares for share issue</span></p>
+<p class="hcp1"><span class="hcp5">Note</span>: You can get the Change Code from 
+ Viewpoint - Home &gt; Configuration &gt; Business Parameters &gt; General 
+ &gt; <a href="../Shared/Changes_Codes.htm">Change Codes</a>.</p>
+<p class="hcp1">&#160;</p>
+<h3>Contact Information</h3>
+<p class="hcp1">For copying 
+ information to the Contact Details grid in Addresses screen, add the below 
+ to Clipboard Field:</p>
+<p class="hcp9">$CONTACT.&lt;ContactType&gt;</p>
+<p class="hcp1">where &lt;ContactType&gt; 
+ refers to the code of the contact information type.</p>
+<p class="hcp1">&#160;</p>
+<h2 style="mso-ansi-language: EN-US;"><span class="hcp7">C</span>onfiguring 
+ Item as Entity Type</h2>
+<p class="hcp2">This is to provide list of entity 
+ types for user to select based on a country specified in another item. 
+ It requires the item containing the country value to have a Key and this 
+ must be ‘linked’ to the Entity Type item.</p>
+<p class="hcp2"><span class="hcp3">Example</span> 
+ – Workflow for a new incorporation with step to get information for the 
+ new structure including country of incorporation and the entity type.</p>
+<p class="hcp2">The configuration is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp2">Field type for the item is 
+	 Entity Type</p></li>
+	<li><p class="hcp2">In the Values/Default column, 
+	 the Key for the item with the country value is specified in Jurisdiction 
+	 Key</p></li>
+</ul>
+<p><img src="../image105.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2 class="hcp12">Configuring 
+ Master File List Using Predefined Option</h2>
+<p class="hcp1">This allows 
+ you to specify the list of Master File for selection by selecting the 
+ option for the data source or by customising it. The available options 
+ are based on the component activated or role allowed for the Master File.</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Workflow for opening a new bank account with step to get information 
+ for new bank account including the Master File of the bank.</p>
+<p class="hcp1"><img src="../image106.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h2 class="hcp12">Configuring 
+ Item as User-Defined Data Source</h2>
+<p class="hcp2">Similar to Master File list, this 
+ is also a customised list for selection and applies to item of the field 
+ type &#160;'<a href="Checklist_Item_-_Field_Type__Master_File.htm">Master 
+ File</a>' and '<a href="Checklist_Item_-_Field_Type__User_Defined.htm">User 
+ Defined</a>'.</p>
+<p>&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ – Workflow for resigning officer with step to select the resigning officer.</p>
+<p class="hcp1">This requires:</p>
+<ul class="hcp6">
+	<li><p class="hcp1"><a 
+	 href="Checklist_Workflow_Step_-_Tags.htm">Tag</a> is added in the 
+	 workflow step properties to define the data source</p></li>
+	<li><p class="hcp1">In 
+	 the Values/Default column for the item, DataSource refers to the defined 
+	 data source</p></li>
+</ul>
+<p class="hcp1"><img src="../image183.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><img src="../image108.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Items as Conditional Group</h2>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">If you want different items to be shown depending 
+ on value or score for an item, you can group the items and use Conditional 
+ Group field type.</span> The checklist items must be grouped with:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Sub-items 
+	 created by adding indentation.</p></li>
+	<li><p class="hcp1">First 
+	 item becomes the parent item which must be set as ‘Conditional Group’ 
+	 and contain a condition in the Values/Default column.</p></li>
+</ul>
+<p class="hcp1">The condition 
+ would be another checklist item which is identified using the Key.</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ - Different instructions to apply depending on user input.</p>
+<p class="hcp1"><img src="../image110.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item as Formula</h2>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">The formula field type is used when the item is supposed 
+ to return value based on other items. It is very useful for compliance 
+ checklist where scoring is assigned as formula can be used to sum up the 
+ scores.</span></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ - Calculate total scores of other items.</p>
+<p class="hcp1">To calculate 
+ the scores, you need to have:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">The 
+	 item set as ‘Formula’ field type and define the formula.</p></li>
+	<li><p class="hcp1">Ensure 
+	 that scores have been assigned for the relevant items which also need 
+	 to be identified using the Key column.</p></li>
+</ul>
+<p class="hcp1"><img src="../image111.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">In the workflow, 
+ the Score column will be hidden by default. To display it, right-click 
+ on any checklist item and choose Show Score:</p>
+<p class="hcp1"><img src="../image475.gif" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">Now, as you 
+ complete the items, the score will be shown.</p>
+<p class="hcp13">Note: <span class="hcp14">Scores 
+ will only be displayed for field types Yes/No, User Table Value, Drop 
+ Down Value, Formula, List with Edit, List without Edit, and Lookup Value. 
+ Other field types will be blank by default. To show the scores for other 
+ field types (except for Approval Card, Macro and Go to Screen), the [SCORE_GET] 
+ tag needs to be applied and the score of the item must be greater than 
+ 0.</span> </p>
+<p class="hcp13">&#160;</p>
+<p class="hcp1">The total will 
+ be calculated as per the formula:</p>
+<p class="hcp1"><img src="../image476.gif" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item as Screen Shortcut</h2>
+<p class="hcp1"><span class="hcp8"><span lang="EN-US" xml:lang="EN-US">If it 
+ is required for you to access screens from the workflow, you can have 
+ items to act as shortcut to the screen. The field type will be ‘Go to 
+ Screen’ and the screen will be specified in Values/Default column by selecting 
+ from the list of screens. </span></span></p>
+<p class="hcp1"><span lang="EN-GB" 
+	 xml:lang="EN-GB">Apart from just going to the screen, it is also possible 
+ to apply an action in the screen. In a screen with grid, it is as if you 
+ have just clicked on a command button within the screen.</span></p>
+<p class="hcp1"><span class="hcp8"><span lang="EN-GB" xml:lang="EN-GB"><span class="hcp5">N</span>ote:</span> 
+ List options that start with a ‘+’ is a screen heading (for example, to 
+ indicate report type) and not a valid screen. It serves as a guide for 
+ the screen selection.</span></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp3">Example</span> 
+ - Process to check that information has been entered in CDD screen.</p>
+<p class="hcp1">The field type 
+ will be ‘Go to Screen’ and the screen will be specified in Values/Default 
+ column by selecting the screen from the list.</p>
+<p class="hcp13"><img src="../image107.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><img src="../image130.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">When you click 
+ on the icon for the checklist item, this will open the screen in File 
+ Maintenance.</p>
+<p class="hcp1">&#160;</p>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp3">Example</span><span 
+	 lang="EN-GB" xml:lang="EN-GB"> – Step to resign selected officer.</span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB"><span lang="EN-GB" xml:lang="EN-GB">C</span>hecklist 
+ items for the step include items that will contain details for the resigning 
+ officer and a checklist item to go to the Statutory Officers screen.</span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB">For the details, these will have 
+ the relevant field type, and assigned a key as well as mapped to the relevant 
+ field. For the checklist item that will bring you to the screen, the field 
+ type is ‘Go to Screen’ and the following must also be defined in the Value/Default 
+ column:</span></p>
+<ul class="hcp6">
+	<li><p><span lang="EN-GB" xml:lang="EN-GB">S</span>creen Entry – select 
+	 the action to perform by selecting the relevant command button </p></li>
+	<li><p>Criteria – specify the details of the record for the action 
+	 using the Database Field and pipe symbol ‘|’ to separate the fields</p></li>
+</ul>
+<p class="hcp1"><img src="../image242.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1"><span class="hcp5">Note</span>: The Criteria should contain details 
+ that will allow the program to identify the record correctly. If there 
+ is no existing record matching the Criteria, the action will not be performed. 
+ If there is no Criteria specified, then the action will apply to the first 
+ record in the screen.</p>
+<p class="hcp1">&#160;</p>
+<h3>Additional Tags</h3>
+<p>There are also tags that can be added for the screen shortcut.</p>
+<p>&#160;</p>
+<h4>[Embed=Y] Tag</h4>
+<p class="hcp1">If you would 
+ like the screen to be embedded in the workflow, add the tag [Embed=Y]:</p>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US"><img src="../image109.png" alt="" border="0" class="hcp4"></span></p>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">With the tag, clicking on the icon will open the 
+ screen in the workflow:</span></p>
+<p class="hcp1"><img src="../image110.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">You can work 
+ on the embedded screen normally i.e. enter and update information.</p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US; mso-bidi-language: TH;"><span 
+	 lang="EN-US" xml:lang="EN-US">With the above, the screen would be 
+ for the same Master File as the workflow e.g. if the workflow is started 
+ for the Master File ‘Jones – Sally’, the screen will also be for ‘Jones 
+ – Sally’. If you want the screen to be for another Master File:</span></p>
+<ul class="hcp6">
+	<li><p><span lang="EN-US" xml:lang="EN-US" class="hcp15">The 
+	 other Master File must be selected in the workflow step e.g. there 
+	 is an item with a Key containing the Master File</span></p></li>
+	<li><p><span lang="EN-US" xml:lang="EN-US" class="hcp15">Add 
+	 the tag [FileCode=&lt;Key&gt;] where &lt;Key&gt; refers to the key 
+	 for the item containing the Master File</span></p></li>
+</ul>
+<p class="hcp1"><img src="../image111.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h4>[CLIP.Set=Y] and [CLIP.Clear=Y] Tags</h4>
+<p class="hcp1">These tags 
+ can be added for Viewpoint &#160;Clipboard’s copy function to be performed 
+ automatically once user clicks on the icon to go to the screen.</p>
+<p class="hcp1"><img src="../image373.gif" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><img src="../image112.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">If you would 
+ like the information copied to also be automatically pasted without the 
+ user manually clicking on a command button e.g. Appoint, select the option 
+ '&amp;Appoint[SOF.APPT]' &#160;in Screen Entry. This means that once user 
+ click on the icon to go to the screen, it will be as if the user have 
+ also clicked on the Appoint command button.</p>
+<p class="hcp1">If the information 
+ is to be copied and pasted to an existing record, then you can also define 
+ the record using the Criteria field. For this, define the record as follows:</p>
+<p class="hcp9">&lt;DBField&gt;=(+WF.&lt;Key&gt;+)</p>
+<p class="hcp1"><span class="hcp8"><span class="hcp8">w</span>here</span></p>
+<ul class="hcp6">
+	<li><p class="hcp1">&lt;DBField&gt; 
+	 refer to the database field containing the value</p></li>
+	<li><p class="hcp1">&lt;Key&gt; 
+	 refers to the Key of the item where the value is retrieved</p></li>
+</ul>
+<p class="hcp1"><span class="hcp8">Example:</span></p>
+<p class="hcp9">AddrCode=(+WF.MF1+)</p>
+<p class="hcp1">will look for 
+ the record where the AddrCode is the same as the Master File specified 
+ in the item with the Key ‘MF1’.</p>
+<p class="hcp1">If required, 
+ you can have multiple criteria by separating each with a ‘|’ (pipe) symbol 
+ e.g. <span class="hcp3">AddrCode=(+WF.MF1+)|OfficerType=(+WF.OType+)</span></p>
+<p class="hcp1">&#160;</p>
+<h4>[LinkChanges=] Tag</h4>
+<p class="hcp1">By default, 
+ changes performed in the embedded screen will be linked automatically 
+ and appear as items in the workflow step along with selected linked items 
+ such as forms.</p>
+<p class="hcp1">In the workflow, 
+ clicking on the icon will open the Form Queue screen with the corresponding 
+ form highlighted. </p>
+<p class="hcp1"><img src="../image113.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">If the items 
+ are not required or you would like the item to be shown under certain 
+ condition, add the tag with the appropriate value:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">[LinkChanges=N] 
+	 will hide the change link in the workflow step</p></li>
+	<li><p class="hcp1">[LinkChanges=F] 
+	 will show the change link only if linked forms have been selected 
+	 and queued. If no forms were selected and queued, the change link 
+	 will not be seen in the workflow step</p></li>
+	<li><p class="hcp1">[LinkChanges=L] 
+	 will show the change only but hide the '+' sign for the change link 
+	 item if no linked forms were selected and queued.</p></li>
+</ul>
+<p class="hcp1"><span class="hcp5">Note:</span><span> These tags are also applicable 
+ for checklist item where field type is ‘Macros’ to show or hide the relevant 
+ link changes.</span></p>
+<p class="hcp1">&#160;</p>
+<h4>[LinkHolders=N] Tag</h4>
+<p class="hcp1">If documents 
+ are generated and stored within the workflow, the resulting document holder 
+ will be automatically linked to the workflow and added as an item in the 
+ workflow step.If this is not required, you can add the [LinkHolders=N] 
+ tag.</p>
+<p class="hcp1">&#160;<img src="../wf_gotoscreen_linkholder=n.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h3>Generating Correspondence Document</h3>
+<p>This allows a correspondence document containing workflow information 
+ such as workflow details and step details to be generated from within 
+ the workflow. The workflow field tag configuration for the letters template 
+ of the correspondence must be defined.</p>
+<p>&#160;</p>
+<p>Step to generate Correspondence document:</p>
+<p>Set the field type as ‘Go to Screen’ and select ‘Correspondence – Creation 
+ [$CORRES]’ as the screen type in the Values/Default.</p>
+<p><img src="../Cor1.JPG" alt="" width="700" height="396" border="0" class="hcp4"></p>
+<p>In the workflow step, click on the icon to generate the correspondence.</p>
+<p><img src="../Cor2.JPG" alt="" width="500" height="173" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item as Command Button in Addresses/Statutory Screen</h2>
+<p>This allows for a checklist item to act as a shortcut to the command 
+ buttons to add, edit, delete or change the address card link in the Addresses 
+ [FMMADDRS] and Statutory – Company [FSESTATC] screens. The configuration 
+ requires the field type as ‘Go to Screen’ with Screen/Type and Screen 
+ Entry to be <span>defined, and the [EMBED=Y] tag.</span></p>
+<p>Depending on the action, you may need to have:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Checklist 
+	 item containing the address or address type</p></li>
+	<li><p class="hcp1">Criteria 
+	 to define the address record for screen shortcut by referring to the 
+	 checklist item as AddrNr=(+WF.&lt;Key&gt;+) or AddrType=(+WF.&lt;Key&gt;+)</p></li>
+</ul>
+<p style="font-weight: bold; font-style: italic;">Note:<span class="hcp14"> 
+ If the Criteria requires both the address and address type, separate the 
+ value with a pipe ‘|’ symbol e.g. AddrNr=(+WF.AddrNr+)|(AddrType=(+WF.AddrType+).</span></p>
+<table class="Table1" cellspacing="0px" width="99.948%">
+	<col style="width: 12.672%;">
+	<col style="width: 87.328%;">
+	<tr class="t1st">
+		<td class="hcp16"><p>Screen Entry</p></td>
+		<td class="hcp16"><p>Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>New Address</p>
+		<p>&#160;[ADD.NEWA / STA.NEWA]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to add a new Address Card link.</p>
+		<p>Clicking on the icon:</p>
+		<ul class="hcp6">
+			<li><p class="hcp1">Is 
+			 the same as clicking the New command button in the Addresses/Statutory 
+			 screen.</p></li>
+			<li><p class="hcp1">Will 
+			 show the Find Address tab in the Address Card Master screen 
+			 for you to search for the new address.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>New Address and 
+		 Find </p>
+		<p>[ADD.NEWF / STA.NEWF]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to add a new Address Card link for the address selected 
+		 in the workflow step.</p>
+		<p>Clicking on the icon:</p>
+		<ul class="hcp6">
+			<li><p class="hcp1">Is 
+			 the same as clicking the New command button in the Addresses/Statutory 
+			 screen.</p></li>
+			<li><p class="hcp1">Will 
+			 perform the search for the selected address and show the List/Link 
+			 tab in the Address Card Master screen for you to select the 
+			 Address Type and add the Effective Date and/or Remark.</p></li>
+		</ul>
+		<p class="hcp1">This 
+		 requires the workflow step to contain a checklist item for the 
+		 address and the Criteria must refer to this checklist item.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Edit Address 
+		 </p>
+		<p>[ADD.EDIT / STA.EDIT]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to edit an existing Address Card link for an address 
+		 selected in the workflow step.</p>
+		<p>Clicking on the icon:</p>
+		<ul class="hcp6">
+			<li><p class="hcp1">Is 
+			 the same as selecting the Address Card link and clicking the 
+			 Edit command button.</p></li>
+			<li><p class="hcp1">Will 
+			 show the List/Link Address tab in the Address Card Master 
+			 screen for you to update the Address Type, Effective Date 
+			 or Remark.</p></li>
+		</ul>
+		<p class="hcp1">This 
+		 requires the workflow step to contain a checklist item for the 
+		 address and the Criteria must refer to this checklist item.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Delete Address 
+		 </p>
+		<p>[ADD.DELET / STA.DELE]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to delete an existing Address Card link for an address 
+		 selected in the workflow step.</p>
+		<p>Clicking on the icon is the same as selecting the Address Card 
+		 link and clicking the Delete command button.</p>
+		<p>This requires the workflow step to contain a checklist item 
+		 for the address and the Criteria must refer to this checklist 
+		 item.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Change Address 
+		 </p>
+		<p>[ADD.CHANG / STA.CHANG]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to change the address card for an existing Address Card 
+		 link.</p>
+		<p>Clicking on the icon:</p>
+		<ul class="hcp6">
+			<li><p class="hcp1">Is 
+			 the same as selecting the Address Card link and clicking the 
+			 Change command button.</p></li>
+			<li><p class="hcp1">Will 
+			 show the Find Address tab of the Address Card Master screen 
+			 for you to search for the new address.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Change Address 
+		 and Find </p>
+		<p>[ADD.CHANF / STA.CHANF]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Select this when 
+		 you want to change the address card for an existing Address Card 
+		 link to the address selected in the workflow step.</p>
+		<p>Clicking on the icon:</p>
+		<ul class="hcp6">
+			<li><p class="hcp1">Is 
+			 the same as clicking the Change command button in the Addresses/Statutory 
+			 screen.</p></li>
+			<li><p class="hcp1">Will 
+			 perform the search for the selected address and show the List/Link 
+			 tab in the Address Card Master screen for you to add the Effective 
+			 Date and/or Remark.</p></li>
+		</ul>
+		<p class="hcp1">This 
+		 requires the workflow step to contain a checklist item for the 
+		 address and the Criteria must refer to this checklist item.</p></td>
+	</tr>
+</table>
+<p style="font-weight: normal; font-style: normal;">&#160;</p>
+<p>&#160;</p>
+<p><span class="hcp3">Example -</span> Workflow step to add 
+ new address card link.</p>
+<p>The configuration required is a checklist item with field type ‘Go to 
+ Screen’ where:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Screen/Type 
+	 is Addresses [FMMADDRS].</p></li>
+	<li><p class="hcp1">Screen 
+	 Entry is New Address [ADD.NEWA].</p></li>
+</ul>
+<p>&#160;<img src="../image250.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example -</span> Workflow step to find 
+ and add new address card link.</p>
+<p class="hcp1"><span lang="EN-GB" 
+	 xml:lang="EN-GB">This allows for selection of an address card that 
+ is to be linked to the Master File. The configuration required is as follows:</span></p>
+<ul class="hcp6">
+	<li><p class="hcp1"><span 
+	 lang="EN-GB" xml:lang="EN-GB">A checklist item for selection for the 
+	 address card with the field type ‘Address Card’</span></p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen/Type 
+		 is Addresses [FMMADDRS]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is New Address [ADD.NEWF]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p class="hcp1"><img src="../image251.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> - Workflow step to edit 
+ address card link.</p>
+<p>This allows for the selection of an address in the workflow step which 
+ will be the selected Address Card link for update.</p>
+<p class="hcp1">The configuration 
+ to set up this function is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">A checklist 
+	 item for selection of the current address with the field type ‘Address 
+	 Card’ and a key e.g. EditAC.</p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen/Type 
+		 is Addresses [FMMADDRS]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is Edit Address [ADD.EDIT]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p><img src="../image253.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> - Workflow step to perform 
+ deletion of address card link.</p>
+<p>This allows for the selection of an address in the workflow step which 
+ will be the selected Address Card link for deletion.</p>
+<p class="hcp1">The configuration 
+ to set up this function is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">A checklist 
+	 item for selection of the current address with the field type ‘Address 
+	 Card’ and a key e.g. CAddrNr.</p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen/Type 
+		 is Addresses [FMMADDRS]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is Delete Address [ADD.DELT]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p><img src="../image254.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> - Workflow step to change 
+ address card link.</p>
+<p>This allows for the selection of an address in the workflow step which 
+ will be the selected Address Card link for change.</p>
+<p>The configuration to set up this function is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">A checklist 
+	 item for selection of the current address with the field type ‘Address 
+	 Card’ and a key e.g. CAddrNr.</p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen/Type 
+		 is Addresses [FMMADDRS]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is Change Address [ADD.CHANG]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p><img src="../image255.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> - Workflow step to find 
+ and change address card link.</p>
+<p>This allows the selection of two different address cards to specify 
+ the existing Address Card link to change and the new Address Card for 
+ the Address Card link.</p>
+<p>The configuration to set up this function is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">A checklist 
+	 item for selection of the current address with the field type ‘Address 
+	 Card’ and a key e.g. CAddrNr.</p></li>
+	<li><p class="hcp1">A checklist 
+	 item for selection of the new address with the field type ‘Address 
+	 Card’ and mapped to AddrNr.</p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen/Type 
+		 is Addresses [FMMADDRS]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is Change Address and Find [ADD.CHANF]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p>:<img src="../image256.png" alt="" border="0" class="hcp4"></p>
+<p>The ‘Go to Screen’ field type will automate the ‘Change’ command button 
+ in the Addresses screen using the ‘Current Address’, followed by the ‘Find’ 
+ button using the ‘New Address’.</p>
+<p><img src="../image257.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<h3>Configuring Item to Perform Shareholder Transactions</h3>
+<p>This is to have the checklist item perform transactions in the Shareholders 
+ [FSESHMEM] screen and requires the checklist item’s field type as ‘Go 
+ to Screen’ with the Screen/Type, Screen Entry, Criteria and tags.</p>
+<h3>&#160;</h3>
+<p><span class="hcp3">Example</span> – Workflow step to perform 
+ ‘Transfer’ in Shareholders screen.</p>
+<p>This allows for the selection of a shareholder from a defined Share 
+ Class to perform a share transfer.</p>
+<p>The configuration required is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">A checklist 
+	 item for selection of the share class with a key e.g. SC</p></li>
+	<li><p class="hcp1">A checklist 
+	 item for selection of the shareholder with a key e.g. SH</p></li>
+	<li><p class="hcp1">A checklist 
+	 item with the field type ‘Go to Screen’ where:</p></li>
+	<li class="hcp17"><ul class="hcp6">
+		<li><p class="hcp1">Screen 
+		 Type is Shareholders [FSESHMEM]</p></li>
+		<li><p class="hcp1">Screen 
+		 Entry is &amp;Transfer [SHM.TRFR]</p></li>
+		<li><p class="hcp1">[Embed=Y] 
+		 and [CLIP.SET=Y] tags are added</p></li>
+	</ul></li>
+</ul>
+<p>&#160;<img src="../image180.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">The ‘Go to 
+ Screen’ field type will automate the ‘Transfer’ command button in the 
+ Shareholders screen using the value of the share class and shareholder 
+ specified in the Criteria field.</p>
+<p class="hcp1"><img src="../image129.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1"><img src="../image130.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Display Previous Step</h2>
+<p class="hcp1">This allows 
+ for an item to display completed steps for review only. The item that 
+ is to display the previous step(s) is set to field type ‘Go to Screen’ 
+ and Screen/Type must be set to ‘Review Step(s) [$REVIEW]’. The key for 
+ the previous step is defined in Tag Values using the tag [StepKeys=&lt;Key&gt;]. 
+ For multiple steps, separate each step key with a pipe symbol ‘|’.</p>
+<p class="hcp1"><img src="../image131.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp1">In the workflow 
+ step, the item will have the Go to Screen icon and clicking on it will 
+ display the defined previous step.</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Display Document Holder from Previous Step</h2>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">This allows users 
+ to store documents in the same document holder that has been linked to 
+ the same workflow in the previous step.</span></p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Example – Workflow 
+ step to display previously linked document holder.</span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">First, the user 
+ will need to have an item with field type ‘Document Holder’ that is configured 
+ with a valid field key.</span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB"><img src="../image188.png" alt="" border="0" class="hcp4"></span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">T</span>he item 
+ in the next step that is to display the linked document holder is set 
+ to field type 'Document Holder' and the Values/Default field is configured 
+ as [+WF.&lt;Field Key&gt;+].</p>
+<p class="MsoNormal"><img src="../image189.png" alt="" border="0" class="hcp4"></p>
+<p class="MsoNormal">&#160;</p>
+<h2>Configuring Item to Access New Master File Wizard</h2>
+<p>If you require new Master File to be created within the course of the 
+ workflow, this can be done by configuring the item to access the New Master 
+ File wizard by setting the field type as 'Master File' and ticking the 
+ option 'New Master File' in Values/Default column:</p>
+<p><img src="../image132.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Item as Link to Document</h2>
+<p class="hcp2"><span lang="EN-US" xml:lang="EN-US" class="hcp7">Items 
+ can also function as a link to documents. You need to confirm the location 
+ of the document and specify the path.</span> The item that is to function 
+ as the link to the document is set to the field type ‘Document Link’. 
+ The path is then to be specified in Values/Default column using either 
+ method:</p>
+<ul class="hcp6">
+	<li><p class="hcp2">UNC path - \\&lt;Server&gt;\Checklists\Compliance 
+	 Info.pdf</p></li>
+	<li><p class="hcp2">$FORMS$ - $FORMS$\Checklists\Compliance 
+	 Info.pdf</p></li>
+</ul>
+<p class="hcp1"><span class="hcp5">Note</span>: Use $FORMS$ if the document is in 
+ Viewpoint’s Forms folder.</p>
+<p><img src="../image168.png" alt="" border="0" class="hcp4"></p>
+<p>In the workflow step, clicking on the icon for the item will open the 
+ document:</p>
+<h2><img src="../dc%20link2.png" alt="" border="0" class="hcp4"></h2>
+<p>&#160;</p>
+<p>If the document has been stored in Document Manager, specify the file’s 
+ Viewpoint Id or the holder number.</p>
+<p><img src="../image169.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Item as Link to Website</h2>
+<p>This allows the item to go to a website. The website's URL is to be 
+ specified in Values/Default column and must start with 'http' or 'www'.</p>
+<p>&#160;</p>
+<h2>Configuring Item as Link to Time Entry/Disbursement Entry Screen</h2>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US" class="hcp7">This 
+ allows user to create new time/disbursement entry without exiting the 
+ Workflow screen.</span></p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US; mso-bidi-language: TH;"><span 
+	 lang="EN-US" xml:lang="EN-US">To do this, you only need to set the 
+ field type to ‘Time Entry’ or ‘Disbursement Entry’. However, you can set 
+ certain default values for the time/disbursement entry such as Service, 
+ Number of Units, Description and Matter in the Values/Default column.</span></p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US; mso-bidi-language: TH;"><span 
+	 lang="EN-US" xml:lang="EN-US">I</span>f the workflow has a linked 
+ activity, the activity number of the workflow will be passed into the 
+ time/disbursement entry. This is only applicable when the All Time/Disbursement 
+ Entries Link to an Activity option is ticked. Refer to <a href="System_Defaults_-_Time_and_Disbursements.htm">System 
+ Defaults - Time and Disbursements</a>.</p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US; mso-bidi-language: TH;">&#160;</p>
+<h3>Specify Billing File</h3>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US" class="hcp7">T</span>he 
+ Billing File for the time/disbursement entry will be the Master File of 
+ the workflow. However, it is also possible to have the Billing File be 
+ a Master File that is selected within the workflow. This requires an item 
+ with an assigned key and set as ‘Master File’ field type. This key will 
+ then be defined in the time entry details.</p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;"><img src="../Matter1.JPG" alt="" width="703" height="342" border="0" class="hcp4"></p>
+<p class="MsoNormal">&#160;</p>
+<h3>Specify 'Description' of entry</h3>
+<p class="MsoNormal">The description of the Time Entry/Disbursement Entry 
+ can be specified in Values/Default. You will need to have an item with 
+ an assigned key and configure the checklist item as ‘Text’ field type.</p>
+<p class="MsoNormal"><img src="../Matter2.JPG" alt="" width="703" height="347" border="0" class="hcp4"></p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal">It is possible to have the Description retrieved from:</p>
+<ul class="hcp6">
+	<li><p class="hcp2">Items in the same workflow 
+	 step using the (+&lt;Key&gt;+) tag.</p></li>
+	<li><p class="hcp2">Items in previous workflow 
+	 step using the (+WF.&lt;Key&gt;+) tag.</p></li>
+</ul>
+<h3>Specify 'Matter' of entry</h3>
+<p>The Matter of the Time Entry/Disbursement Entry can be specified in 
+ Values/Default. You will need to have an item with an assigned key.</p>
+<p><img src="../TIME_MATTER.PNG" alt="" width="695" height="367" border="0" class="hcp4"></p>
+<h2>&#160;</h2>
+<h2>Configuring Item to Initiate or Link to Another Workflow</h2>
+<p>This allows user to start a new workflow (linked workflow) without exiting 
+ the current workflow (main workflow).</p>
+<p>To do this, you only need to set the field type to ‘Workflow Link’ and 
+ specify details for the new workflow such as:</p>
+<ul class="hcp6">
+	<li><p>The key for the new workflow.</p></li>
+	<li><p>The Master File the new workflow is for.</p></li>
+	<li><p>Values for the new workflow from the current workflow.</p></li>
+</ul>
+<p><img src="../image135.png" alt="" border="0" class="hcp4"></p>
+<p>To enter the details, click on the Browse button in Values/Default and 
+ add the necessary <a href="Checklist_Item_-_Field_Type__Workflow_Link.htm">tags</a> 
+ in the Note Editor.</p>
+<p>In the workflow step, when there is a workflow link item, the following 
+ options will be seen:</p>
+<ul class="hcp6">
+	<li><p>Initiate new workflow - This is to start a new workflow from 
+	 the current workflow.</p></li>
+	<li><p>Link to existing - This is to link the current workflow to a 
+	 workflow that has been started.</p></li>
+</ul>
+<p><img src="../image136.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h3>Initiate New Workflow</h3>
+<p>To initiate a new workflow, click to select the step item and click 
+ Initiate new workflow.</p>
+<p>Once the workflow is linked, the workflow icon will appear in the grid.</p>
+<h3>&#160;</h3>
+<h3>Link to Existing Workflow</h3>
+<p>When link to an existing workflow, the Select Workflow screen will be 
+ displayed. Depending on the workflow that you require, select the workflow 
+ status from Status drop-down list and apply the necessary filter.</p>
+<p>You can also restrict the Status filter by adding the [WF.LinkStatus=] 
+ tag. For more information, refer to <a href="Checklist_Item_-_Field_Type__Workflow_Link.htm">Checklist 
+ Item - Field Type: Workflow Link - Tags</a>.</p>
+<p>Once the workflow is linked, the workflow icon will appear in the grid.</p>
+<p>&#160;</p>
+<h3>Removing Workflow Link</h3>
+<p>If a workflow was incorrectly linked, this link can be removed by selecting 
+ the step item and clicking the Remove Link button. </p>
+<p>When prompted, click Yes to confirm the removal. The workflow step will 
+ be blank so that another workflow can be linked instead.</p>
+<p>&#160;</p>
+<h2>Linking Approval Card to Workflow Step</h2>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">To do this, ensure that the approval card has been 
+ set up first.</span> <span lang="EN-US" xml:lang="EN-US">Refer to <a href="Approval_Cards.htm">Approval 
+ Cards</a>.</span></p>
+<p class="hcp1"><span lang="EN-US" 
+	 xml:lang="EN-US">Then set the field type to ‘Approval Card’ and in 
+ Values/Default, select the relevant Approval Card. If the workflow step 
+ contains more than one Approval Card, the required approvals for the first 
+ Approval Card must be completed before the approver(s) of the second Approval 
+ Card will be able to approve.</span></p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item as Macros</h2>
+<p>Macro will perform defined actions when users choose to run it from 
+ the workflow step. The action must be defined in terms of what is to be 
+ done using Macro tags. At the moment, these actions relate to closing 
+ of a file such as closing of bank account, resignation of officers and 
+ relations or deletion of pending actions. For more information, refer 
+ to: <a href="Checklist_Item_-_Field_Type__Macros.htm">Checklist Item - 
+ Field Type: Macros</a>.</p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> – Workflow to close 
+ an Entity File.</p>
+<p>The item must be set to ‘Macros’ field type and information for the 
+ macro to be defined using macro tags.</p>
+<p><img src="../image137.png" alt="" border="0" class="hcp4"></p>
+<p>In the workflow step, will see default macro caption:</p>
+<p><img src="../image138.png" alt="" border="0" class="hcp4"></p>
+<p><span class="hcp5">Note:</span> Clicking 
+ on the icon will display the screen specified in the macro.</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Generate Word Report/Excel Statement/Standard Report</h2>
+<p class="hcp1">This allows 
+ for a Word report or Excel Statement to be generated from within the workflow. 
+ However, the item must be configured as 'Word Report' or 'Excel Statement' 
+ or 'Standard Report' field type and the code for the report template must 
+ be specified in the Values/Default column using the [FC=] tag.</p>
+<p class="hcp1">Note that the 
+ report will be generated for the Master File of the workflow but if you 
+ require this for another Master File, you must ensure that:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">The 
+	 Master File is specified in the workflow using an item with the field 
+	 type 'Master File' and a Key is assigned.</p></li>
+	<li><p class="hcp1">The 
+	 Key of the item above is specified using the [FileCode=] tag.</p></li>
+</ul>
+<p class="hcp1">For Standard 
+ Report, optional [/Parameters=/] tag can be added to specify the selection 
+ criteria for the report.</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Run File Review</h2>
+<p class="hcp1">This allows 
+ for File Review to be run from within the workflow. The item must be configured 
+ as 'File Review' field type and the scope of the review specified using 
+ the [Selection=] tag in Values/Default column with the relevant value 
+ - refer to <a href="../Shared/Checklist_Item_-_Tags.htm">Checklist Item 
+ - Tags</a>. A change link will be appended under the item after the file 
+ review is run and the record will be linked to the workflow.</p>
+<p class="hcp1">&#160;</p>
+<h2>Configuring Item to Enable Duplication</h2>
+<p>In certain workflow steps, it may be required to have multiple instances 
+ of an item or a group of items. In this case, the option ‘Duplicate’ can 
+ be ticked to allow users to copy the item(s) in the workflow.</p>
+<p>For a single item that is to be duplicated, you can click the Browse 
+ button in Values/Default column and tick the Duplicate option.</p>
+<p>To allow a group of items to be duplicated, ensure that the items are 
+ grouped by:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Indenting 
+	 the sub-items.</p></li>
+	<li><p class="hcp1">Ticking 
+	 the Duplicate option for the first item which is now the parent item.</p></li>
+</ul>
+<p>If you have previously ticked the Duplicate option for any of the sub-item, 
+ ensure that you untick it.</p>
+<p>Once ticked, [Duplicate=1] is seen in Values/Default column.</p>
+<p><span class="hcp3">Example</span> – Step to get information 
+ for proposed new structure where user can enter multiple proposed names 
+ and statutory officers.</p>
+<p>The configuration for the step requires:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">Item 
+	 to get the proposed name to have Duplicate option ticked.</p></li>
+	<li><p class="hcp1">Items 
+	 related to statutory officers to be grouped with Duplicate option 
+	 ticked for the parent item.</p></li>
+</ul>
+<p><img src="../image139.png" alt="" border="0" class="hcp4"></p>
+<p>In the workflow step, user can click on the + icon to get another instance 
+ of the item or group:</p>
+<p><img src="../image140.png" alt="" border="0" class="hcp4"></p>
+<p>When the Duplication option is ticked multiple times in a grouped item, 
+ a warning message will be prompted to prevent the workflow from being 
+ updated.</p>
+<p><img src="../Duplicate%20prompt.png" alt="" border="0" class="hcp4"></p>
+<p>You are required to untick the option from the specified item.</p>
+<p>Additionally, grouped items can be retrieved from the previous workflow 
+ step by using the <span class="hcp3">[COPY.GROUP:&lt;StepKey&gt;.&lt;HeaderKey&gt;]</span> 
+ tag. See <a title="Checklist Item - Tags" href="../Shared/Checklist_Item_-_Tags.htm">Checklist 
+ Item - Tags</a>.</p>
+<p>&#160;</p>
+<h2 class="paragraph"><span lang="EN-GB" xml:lang="EN-GB">Configuring Maximum 
+ Duplication</span></h2>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">Duplications can be limited to a specific 
+ maximum number when needed. Click on the Browse button in Values/Default 
+ column in the Workflow Step Editor screen and specify the maximum number 
+ of duplicates that is appropriate for the item in the Duplicate Maximum 
+ field.</p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">Ensure that the maximum number is set to 
+ more than 1 to allow duplication. The maximum number is inclusive of the 
+ original item(s). If the maximum number is set as 2, the item can only 
+ be duplicated once. As a result, there will be an original item and a 
+ duplicated item.</p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">Configuration will be invalid if the following 
+ is being input:</p>
+<ul class="hcp6">
+	<li><p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; 
+			 margin-bottom: 4.8pt; margin-left: 0in; mso-para-margin-top: .4gd; 
+			 mso-para-margin-right: 0in; mso-para-margin-bottom: .4gd; 
+			 mso-para-margin-left: 0in; line-height: 115%; vertical-align: baseline;">Non-numeric(E.g.: 
+	 ABC, One)</p></li>
+	<li><p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; 
+			 margin-bottom: 4.8pt; margin-left: 0in; mso-para-margin-top: .4gd; 
+			 mso-para-margin-right: 0in; mso-para-margin-bottom: .4gd; 
+			 mso-para-margin-left: 0in; line-height: 115%; vertical-align: baseline;">Less 
+	 than or equal to 1</p></li>
+</ul>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">Invalid configuration will lead to unlimited 
+ duplication being allowed. </p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">&#160;</p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;"><span class="hcp3">Example</span> 
+ - If 2 names are to be proposed, configuration would be as follows:</p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">&#160;<img src="../image187.png" alt="" border="0" class="hcp4"></p>
+<p class="paragraph" style="margin-top: 4.8pt; margin-right: 0in; margin-bottom: 4.8pt; 
+	 margin-left: 0in; mso-para-margin-top: .4gd; mso-para-margin-right: 0in; 
+	 mso-para-margin-bottom: .4gd; mso-para-margin-left: 0in; line-height: 115%; 
+	 vertical-align: baseline;">&#160;</p>
+<h2><span lang="EN-GB" xml:lang="EN-GB">Configuring Item as Output for 
+ Automatic Decision</span></h2>
+<p><span lang="EN-GB" xml:lang="EN-GB">If the workflow contains decision 
+ steps, value of a checklist item can be used to automate the decision 
+ step. The checklist item is to be defined as an output for the decision.</span></p>
+<p>&#160;</p>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp3">Example</span><span 
+	 lang="EN-GB" xml:lang="EN-GB"> – Workflow to perform file closure 
+ according to the selected Master File Type.</span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB">The configuration required is as 
+ follows:</span></p>
+<ul class="hcp6">
+	<li><p><span lang="EN-GB" xml:lang="EN-GB">The item that will be used 
+	 as output for the decision must have the Output option ticked</span></p></li>
+	<li><p><span lang="EN-GB" xml:lang="EN-GB">The decision step must have 
+	 the input details for the Yes branch in terms of the Input Type and 
+	 Value for the Yes branch</span></p></li>
+</ul>
+<p><span lang="EN-GB" xml:lang="EN-GB"><img src="../image258.png" alt="" border="0" class="hcp4"></span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB"><img src="../image259.png" alt="" border="0" class="hcp4"></span></p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> – Decision based on 
+ items in conditional groups.</p>
+<p>If the workflow step contains conditional groups and the automatic decision 
+ is based on items within these conditional groups, the required configuration 
+ is required:</p>
+<ul class="hcp6">
+	<li><p>Create the conditional groups and for the output items - assign 
+	 the same Key e.g. MFExist</p></li>
+	<li><p>Use the [OUTPUT=] tag referring to the Key of the items in the 
+	 workflow step properties</p></li>
+</ul>
+<p>For the decision step, specify the input details for the Yes branch. 
+ </p>
+<p><img src="../image260.png" alt="" border="0" class="hcp4"></p>
+<p><img src="../image261.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p><img src="../image262.png" alt="" border="0" class="hcp4"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>&#160;</p>
+<h2>Configuring Item to Define Step Owner for Next Workflow Step</h2>
+<p>The owner of a workflow step within the same workflow can be defined 
+ using the 'System User' field type. The configuration is as follows:</p>
+<ul class="hcp6">
+	<li><p class="hcp1">The 
+	 current workflow step must have the 'System User' field type set with 
+	 a Key.</p></li>
+	<li><p class="hcp1">The 
+	 'Assign To' field in the 'Edit Step Properties' screen of another 
+	 workflow step must be configured with the (-KEY.&lt;ItemKey&gt;-) 
+	 code where &lt;ItemKey&gt; refers to the Key of the checklist item 
+	 with the 'System User' field type.</p></li>
+</ul>
+<p>If the key does not match, the workflow step will automatically be assigned 
+ to the workflow owner.</p>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> – To define the step 
+ owner for the subsequent workflow step for confirmation.</p>
+<p>In the initial workflow step, set up a checklist item with the ‘System 
+ User’ field type and with a key.</p>
+<p><img src="../image146.png" alt="" border="0" class="hcp4"></p>
+<p>For the workflow step where the owner is defined using the ‘System User’ 
+ field type, specify the ‘Assign To’ field with the (-KEY.User1-) code. 
+ </p>
+<p><img src="../image147.png" alt="" border="0" class="hcp4"></p>
+<p>In the workflow, select a user to confirm the appointment.</p>
+<p><img src="../image171.png" alt="" border="0" class="hcp4"></p>
+<p><img src="../image170.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Item to Create Invoices</h2>
+<p class="MsoNormal"><span class="hcp7">This allows for 
+ an invoice to be created by the workflow in Viewpoint Connect and Engage 
+ with details from checklist items with the following field types:</span></p>
+<ul class="hcp6">
+	<li><p>Service</p></li>
+	<li><p>Lookup Value</p></li>
+	<li><p>User Table Value</p></li>
+	<li><p>Yes/No</p></li>
+</ul>
+<p class="MsoNormal"><span class="hcp7">Invoices created 
+ by workflow will be linked to the workflow and seen in the ‘Other Records’ 
+ tab. Depending on configuration, the invoice can either be draft or posted, 
+ and users will need to go to the corresponding screens to view the invoice.<span 
+	 style="mso-spacerun: yes;">&#160;</span></span></p>
+<p class="MsoNormal"><span class="hcp7">In the workflow 
+ step properties, the</span> <span lang="EN-MY" xml:lang="EN-MY" class="hcp18">tag 
+ [ON_SUBMIT=CREATEINV] must be added as well. For all other field types 
+ EXCEPT ‘Service’ an additional tag – [CREATEINV.SERVCODE=&lt;ItemKey&gt;] 
+ is also required where &lt;ItemKey&gt; refers to the checklist item that 
+ will have the service(s) to be invoiced.</span></p>
+<p class="MsoNormal" style="mso-ansi-language: EN-MY;"><span lang="EN-MY" 
+															 xml:lang="EN-MY">To 
+ define details for the invoice header, additional CREATEINV tag can be 
+ added. Refer to </span><a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+ Step - Tags.</a></p>
+<p class="MsoNormal"><span class="hcp5">Note</span>: 
+ Using workflow to create invoice is only applicable for Master Files that 
+ have been set up as Billing Files with Matter(s). The services to be invoice 
+ must also exist in the Service Master.</p>
+<p>&#160;</p>
+<h3>Invoice Creation using ‘Service’ Field Type</h3>
+<p class="hcp19">This field type will create an invoice 
+ containing the service selected in the checklist item. The configuration 
+ requires the checklist item to be of the ‘Service’ field type with the 
+ following specified in Values/Default column:</p>
+<ul class="hcp6">
+	<li><p><span class="hcp7">Service Code – this can 
+	 contain a single service code that will be invoiced, or multiple service 
+	 codes for the user to select for invoicing.</span></p></li>
+	<li><p><span class="hcp7">Quantity Key – this is 
+	 to contain the key of a checklist item that will contain the value 
+	 for the number of units.</span></p></li>
+</ul>
+<p class="hcp19">For the checklist item specified in Quantity 
+ Key, the field type can be either ‘Number’ or ‘Amount’ but the value entered 
+ must be a round number bigger than zero.</p>
+<p class="hcp19"><img src="../image207.png" alt="" border="0" class="hcp4"></p>
+<p class="hcp19"><span class="hcp5">Note</span>: 
+ If there is nothing set for Quantity Key, the system will look for a checklist 
+ item in the workflow step where the field type is ‘Number’ and it appears 
+ after the ‘Service’ item. The value entered for this checklist item will 
+ be the number of units for the service to be invoiced. If this is not 
+ available, then the number of units defaults to one.</p>
+<p>&#160;</p>
+<h3><span class="hcp7">Invoice Creation using ‘Lookup 
+ Value’ Field Type</span></h3>
+<p class="MsoNormal" style="mso-bidi-language: TH;">For Lookup Value field 
+ type, this allows for creation of an invoice containing services that 
+ have been predefined in the lookup table value selected by the user. The 
+ workflow step requires a checklist item of the ‘Lookup Value’ field type 
+ with a key assigned and the lookup table specified through Values/Default.</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;"><img src="../image208.png" alt="" border="0" class="hcp4"></p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">In the Lookup Table, 
+ the service(s) is to be defined using the [SERVCODES=] tag.</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;"><img src="../image209.png" alt="" border="0" class="hcp4"></p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<h3><span class="hcp7">Invoice Creation using ‘User Table 
+ Value’ Field Type</span></h3>
+<p class="MsoNormal"><span class="hcp7">This is the same 
+ as Lookup Value field type except that the user is now selecting a user 
+ table value instead of a Lookup Table value.</span> <span lang="EN-MY" xml:lang="EN-MY" class="hcp18">The 
+ service(s) to be invoiced must be defined using [SERVCODES=] tag for the 
+ user table value.</span></p>
+<p class="MsoNormal">&#160;</p>
+<h3><span class="hcp7">Invoice Creation using ‘Yes/No’ 
+ Field Type</span></h3>
+<p class="MsoNormal" style="mso-bidi-language: TH;">This is used if the 
+ invoice is to be created when a user selects a Yes value. The checklist 
+ item must be set as ‘Yes/No’ field type and assigned a Key with [SERVCODES=] 
+ tag used to specify the service(s) to be invoiced in the Tag Values field 
+ for the checklist item.</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;"><img src="../image210.png" alt="" border="0" class="hcp4"></p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<p class="MsoNormal" style="mso-bidi-language: TH;">&#160;</p>
+<h4>[SERVCODES=] Tag</h4>
+<p class="hcp19">This tag is added when the field types 
+ are Lookup Value, User Table Value or Yes/No. The value for this tag can 
+ be just the service code(s) but it can also include the number of units.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td class="hcp16">Value</td>
+		<td class="hcp16">Explanation</td>
+		<td class="hcp16">Examples</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p><span class="hcp7">&lt;ServiceCode&gt;</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp7">where &lt;ServiceCode&gt; 
+		 refers to the service to be invoiced.</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 For multiple services, separate with comma. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span class="hcp7">This 
+		 defines the service(s) to be invoiced when the user selects:</span></p>
+		<ul class="hcp6">
+			<li><p><span class="hcp7">The Lookup Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">The User Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">Yes value</span></p></li>
+		</ul>
+		<p>The number of unit defaults to 1. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p><b><span class="hcp7">[SERVCODES=RROFF]</span></b></p>
+		<p><span class="hcp7">One unit of ‘RROFF’ service 
+		 will be invoiced.</span></p>
+		<p>&#160;</p>
+		<p><b><span class="hcp7">[SERVCODES=RROFF,RDIR]</span></b></p>
+		<p><span class="hcp20">One 
+		 unit of ‘RROFF’ service and one unit of ‘RDIR’ service will be 
+		 invoiced.</span> </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p><span class="hcp7">&lt;ServiceCode&gt;!&lt;Number&gt;</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp7">where !&lt;Number&gt; is 
+		 the number of unit for the service. This must be bigger than zero 
+		 without any decimal places.</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 For multiple services, separate the values with comma. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span class="hcp7">This 
+		 defines the service(s) to be invoiced when the user selects:</span></p>
+		<ul class="hcp6">
+			<li><p><span class="hcp7">The Lookup Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">The User Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">Yes value</span></p></li>
+		</ul>
+		<p>The number of unit depends on the value for &lt;Number&gt;. 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p><b><span class="hcp7">[SERVCODES=RROFF!2]</span></b></p>
+		<p><span class="hcp7">Two units of ‘RROFF’ service 
+		 will be invoiced.</span></p>
+		<p>&#160;</p>
+		<p><b><span class="hcp7">[SERVCODES=RROFF!1,RDIR!2]</span></b></p>
+		<p><span class="hcp20">One 
+		 unit of ‘RROFF’ service and two units of ‘RDIR’ service will be 
+		 invoiced.</span> </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p><span class="hcp7">&lt;ServiceCode&gt;!S</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 For multiple services, separate the values with comma. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span class="hcp7">This 
+		 defines the service(s) to be invoiced when the user selects:</span></p>
+		<ul class="hcp6">
+			<li><p><span class="hcp7">The Lookup Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">The User Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">Yes value</span></p></li>
+		</ul>
+		<p><span class="hcp7">The number of unit defaults 
+		 to 1.</span></p>
+		<p>However, if the service has been selected on another checklist 
+		 item, then it will be excluded. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p><b><span class="hcp7">[SERVCODES=RROFF!S]</span></b></p>
+		<p><span class="hcp21">One 
+		 unit of ‘RROFF’ service will be invoiced if this service is not 
+		 included by other checklist item in the workflow step.</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p><span class="hcp7">&lt;ServiceCode&gt;!Q:&lt;ItemKey&gt;</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp7">where &lt;ItemKey&gt; refers 
+		 to the key of the checklist item containing a number or amount 
+		 value for the number of unit. If the key does not exist, this 
+		 will show up as an error when performing a Verify on the workflow 
+		 template.</span></p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 For multiple services, separate the values with comma. </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span class="hcp7">This 
+		 defines the service(s) to be invoiced when the user selects:</span></p>
+		<ul class="hcp6">
+			<li><p><span class="hcp7">The Lookup Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">The User Table 
+			 value</span></p></li>
+			<li><p><span class="hcp7">Yes value</span></p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>The number of units depends on the value for the checklist item 
+		 defined. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p><b><span class="hcp7">[SERVCODES=RDIR!Q:N1]</span></b></p>
+		<p><span class="hcp21">The 
+		 ‘RDIR’ service will be invoiced and the number of units depend 
+		 on the value entered in the checklist item with the key ‘N1’.</span></p>
+		<p>&#160;</p>
+		<p><b><span class="hcp7">[SERVCODES=RSHARE!Q:N1,RDIR!Q:N2]</span></b></p>
+		<p><span class="hcp7">The invoice will include:</span></p>
+		<ul class="hcp6">
+			<li><p><span class="hcp7">‘RSHARE’ service 
+			 with the number of units being the value entered in the checklist 
+			 item with the key ‘N1’; and</span></p></li>
+			<li><p>‘RDIR’ service with the number of units being the value 
+			 entered in the checklist item with the key ‘N2’ </p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Configuring Item Value as Running Number</h2>
+<p>This allows a checklist item’s value to be automated instead of requiring 
+ user input. For example, instead of having to enter the value ‘1’ for 
+ the first time, and then ‘2’ the next time, the item can be configured 
+ so that the value will be a running number. This requires the following 
+ configuration: </p>
+<ul class="hcp6">
+	<li><p>Set up a new lookup value in the Document Number Codes [DOCT] 
+	 lookup table.</p></li>
+	<li><p>Add the new lookup value to System Running Numbers.</p></li>
+	<li><p>Specify the lookup value in the Values/Default field for the 
+	 checklist item as (+SYS:DOCNUM.&lt;Code&gt;+) with the &lt;Code&gt; 
+	 being the code of the new lookup table value.</p></li>
+</ul>
+<p>&#160;</p>
+<p><span class="hcp3">Example</span> – To populate running 
+ number for Matter Extension in workflow</p>
+<p>In Configuration &gt; Business Parameters &gt; General &gt; Lookup Values, 
+ add a new value to the Document Number Codes [DOCT] lookup table e.g. 
+ Matter Sequence Number [MTR].</p>
+<p><img src="../image160.png" alt="" border="0" class="hcp4"></p>
+<p>In Configuration &gt; Settings &gt; Customise &gt; System Running Numbers, 
+ add the new lookup value 'MTR' as a new document type. If you would like 
+ to include a prefix and/or set a format for the running number, specify 
+ this in the Prefix &amp; Format field.</p>
+<p><img src="../image161.png" alt="" border="0" class="hcp4"></p>
+<p>For the workflow checklist item, ensure to add the (+SYS:DOCNUM.&lt;Code&gt;+) 
+ code in the Values/Default.</p>
+<p><img src="../image162.png" alt="" border="0" class="hcp4"></p>
+<p>In workflow, the running number for Extension will be populated automatically 
+ using the defined format.</p>
+<p><img src="../image73.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h2>Configuring Step or Item to Retrieve Rating Group </h2>
+<p>This allows for a workflow to utilise scores from different Rating Groups 
+ where the Rating Group can apply to the workflow step, or specific checklist 
+ items. The pre-requisites include:</p>
+<ul class="hcp6">
+	<li><p>Enabling the ‘Risk Rating’ option for the lookup value table 
+	 or user table.</p></li>
+	<li><p>Assigning scores to the lookup table or user table values in 
+	 the Risk Ratings screen for the correct Rating Group and Type.</p></li>
+</ul>
+<p><span class="hcp5">Note:</span> Ensure 
+ the correct Rating Group and Type are selected. </p>
+<p>&#160;</p>
+<p>Once the risk rating has been set up for the lookup value table or user 
+ table, you can now include the [SCORETAG=&lt;Code&gt;.&lt;Type&gt;] tag 
+ in the Tag Values field of:</p>
+<ul class="hcp6">
+	<li><p>‘Edit Step Properties’ screen</p></li>
+	<li><p>Items configured with Lookup Value or User Table Value field 
+	 types</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Configuring Tag in ‘Edit Step Properties’</h3>
+<p>If the workflow step requires only one rating group, add the tag to 
+ the workflow step’s properties in ‘Edit Step Properties’ screen. </p>
+<p><img src="../image163.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h3>Configuring Tag in Item with ‘Lookup Value’ or ‘User Table Value’ Field 
+ Type</h3>
+<p>When there are multiple checklist items within a workflow step that 
+ are included for risk rating, you can insert the tag in the Tag Values 
+ field and specify the Field/Mask field with the lookup table or user table 
+ where the risk rating is configured.</p>
+<p><img src="../image164.png" alt="" border="0" class="hcp4"></p>
+<p><span class="hcp5">Note:</span> If 
+ the same tag is applied for the field type as well as in Edit Step Properties 
+ screen, the program will take precedence over the field type. &#160;</p>
+<p>&#160;</p>
+<p>When there are multiple risk rating groups involve, configure the checklist 
+ items as follows:</p>
+<p>&#160;</p>
+<p>Create a checklist item with a field key.</p>
+<p><img src="../RATING%203.JPG" alt="" width="700" height="436" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p>Configure the checklist items for score assignment with the Tag Values 
+ referring to the item with the above field key and specify the Field/Mask 
+ field.</p>
+<p><img src="../RATING%202.JPG" alt="" width="710" height="426" border="0" class="hcp4"></p>
+<p class="SeeAlso">&#160;</p>
+<h3><span lang="EN-GB" xml:lang="EN-GB">Configuring Tag in Item with ‘Entity 
+ Type’ Field Type</span></h3>
+<p><span lang="EN-GB" xml:lang="EN-GB">C</span>reate a checklist item with 
+ a field key and set the field type of the item to ‘Lookup Value’. Then, 
+ select ‘Country Codes’ in the Field/Mask field.</p>
+<p><img src="../image193.png" alt="" border="0" class="hcp4"></p>
+<p><span lang="EN-GB" xml:lang="EN-GB">C</span>reate an ‘Entity Type’ checklist 
+ item for score assignment with the Tag Values referring to the Rating 
+ Group and specify the key of the checklist item in (a) in the Jurisdiction 
+ Key field.</p>
+<p><img src="../image192.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h3><span lang="EN-GB" xml:lang="EN-GB">Configuring Tag in Item with ‘Service’ 
+ Field Type</span></h3>
+<p>Add the tag in the Tag Values field of the checklist item with ‘Service’ 
+ field type.</p>
+<p><img src="../image194.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<h3><span lang="EN-GB" xml:lang="EN-GB">Configuring Item with ‘User Defined’ 
+ Field Type</span></h3>
+<ol style="list-style: decimal;">
+	<li>Add the tag in the Tag Values field of the checklist item with 
+	 ‘User Defined’ field type.</li>
+	<li>Select the appropriate predefined options in the drop-down list 
+	 of the Data Source field. </li>
+	<li>Tick the checkbox in the Show Combo List field to view the data 
+	 in a drop-down list when working with the workflow.</li>
+</ol>
+<p><img src="../image195.png" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p class="SeeAlso">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp6">
+	<li><p><a href="Checklist_Workflow_Step_Creation.htm">Checklist - Creation</a></p></li>
+	<li><p><a href="Edit_Checklist_Workflow_Step_Editor.htm">Edit Checklist/Workflow 
+	 Step Editor</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Document_Link.htm">Checklist 
+	 Item – Field Type: Document Link</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Formula.htm">Checklist 
+	 Item - Field Type: Formula</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Macros.htm">Checklist 
+	 Item - Field Type: Macros</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__Master_File.htm">Checklist 
+	 Item - Field Type: Master File</a></p></li>
+	<li><p><a href="Checklist_Item_-_Field_Type__User_Defined.htm">Checklist 
+	 Item - Field Type: User Defined</a></p></li>
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+	<li><p><a href="../Shared/Checklist_Item_-_Tags.htm">Checklist Item 
+	 - Tags</a></p></li>
+	<li><p><a href="Checklist_Item_-_Score_Assignment.htm">Score Assignment</a></p></li>
+	<li><p><a href="../Shared/Step_Library.htm">Step Library</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Configuring Checklist Item</p>
+<p class="hcp22">&#160;</p>
+<p class="hcp22">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp22">Version: 8.0.2022.09.20</p>
+</body>
+</html>

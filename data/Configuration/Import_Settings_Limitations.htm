@@ -1,0 +1,1143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Import Settings Limitations">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Import Settings - Limitations</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt;
+color:#2d005b; }
+p.hcp2 { color:#2d005b; }
+p.hcp3 { margin-left:6pt;
+margin-right:6pt; }
+ol.hcp4 { list-style:decimal; }
+td.hcp5 { border-bottom:Solid 1px #000000;
+vertical-align:top; }
+td.hcp6 { border-left-width:1px;
+border-left-style:solid;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Import Settings - Limitations</h1>
+<h3>System Settings</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Lookup 
+		 Values</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_LUVAL.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">LookTables,</p>
+		<p class="hcp3">LookValues</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Name, 
+		 Tag, KeyLength, ValueTab, NewRecWarning,</p>
+		<p class="hcp3">WhereUse,TagValues,</p>
+		<p class="hcp3">WithRating,Customized</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Name, InUse, Customized, 
+		 eFile, ElValue, ConvertValues, ElCode</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, these fields are overwritten.</p></li>
+			<li><p class="hcp3">If no record 
+			 exists, a new record will be added.</p></li>
+			<li><p class="hcp3">Tag and 
+			 ValueControl fields are not added nor overwritten.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Drop-Down 
+		 Values</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_DDVAL.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">LookComboSave</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">SeqNr, 
+		 TabCode, SaveName</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If “Name” 
+			 exists, the record is ignored.</p></li>
+			<li><p class="hcp3">If “Name” 
+			 does not exist, new record added.</p></li>
+			<li><p class="hcp3">Not allowed 
+			 to edit existing records.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">User 
+		 Tables</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_USRTB.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">UserTables</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Name, 
+		 ElNote, InUse,</p>
+		<p class="hcp3">TagValues, WithRating</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">Allowed 
+			 to add new/edit record.</p></li>
+			<li><p class="hcp3">If “Code” 
+			 exists, these fields are overwritten.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Reminder 
+		 Rules</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_TDRLS.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">TodoCodes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Description, 
+		 HowTo, TdRemark, Active, Customized</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">Only allowed 
+			 to edit existing records.</p></li>
+			<li><p class="hcp3">Only for 
+			 Reminder Rules where Customized=True</p></li>
+			<li><p class="hcp3">Options 
+			 not imported.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Risk 
+		 Ratings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_RISKRA.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">RiskRatings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">RateGroup, 
+		 TableType, KeyCode, KeyValue, DateFrom, Value</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, these fields are overwritten.</p></li>
+			<li><p>If no record exists, a new record will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Windows/Web 
+		 Menu</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_MENUS.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">WebNavigation</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Caption, 
+		 Description, ServiceOfficeCheck, UseMfAuthority, DefaultRoles, 
+		 Customized, Active</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, these fields are overwritten.</p></li>
+			<li><p class="hcp3">New records 
+			 will be seen in the Windows Menu screen.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Screen 
+		 Settings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_SCRNST.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">VpSysScreens</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">ScreenId, 
+		 ScreenType, RenderOption, Caption, Description, Keys, Tag, Control, 
+		 TabNr_OBS, FormNr_OBS, TabStatus_OBS, VpStandard, Customized</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Field 
+		 Settings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_FLDST.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">TabFields</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">FormNr, 
+		 TabNr, fldOrder, Caption, Mandatory, Authority, AuthNew, Mask, 
+		 fldDefault, Customized</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">Only allowed 
+			 to edit.</p></li>
+			<li><p class="hcp3">If FormNr, 
+			 TabNr and fldOrder do not exist, then the record is ignored 
+			 during import.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Grid 
+		 Fields</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_GRDFD.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">GridHeader</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">GridCode, 
+		 SeqNr Caption, Width, eWidth, Default, Customized, NotUsed</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Only 
+		 allowed to edit.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Relation 
+		 Enquiry</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_RELEQ.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">RefRelEnquiry</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">RelId, 
+		 OwnerCaption, ChildCaption, RecCaption, InUse, Customized</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">The 
+			 record will be exported to the .xml file and will be displayed 
+			 in Configuration &gt; Settings &gt; Customise &gt; Relation 
+			 Enquiry screen.</p></li>
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">Records 
+			 are updated into the RefRelEnquiry table and existing records 
+			 will be overwritten if RelID exists.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Review 
+		 Rules</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_RVWRL.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">revMessages</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">MsgTag, 
+		 MsgType, Severity, MsgDescrp, MsgAction, MsgTags, Inactived, Customized, 
+		 SortOrder, IndentLevel, AllowSelect, ApprNr, ComplyScore</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If records exists, fields are overwritten.</p></li>
+			<li><p>Category and Review Code will not be overwritten.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Ribbon 
+		 Settings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_RIBBST</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">VpSysRibButtons</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">BtnCaption</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li>Only allowed to edit existing records </li>
+			<li>Only Ribbon Settings where Customised=True</li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">To 
+		 Do Summary Settings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_TODOST</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">VpHomeTodo</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Name</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li>Only allowed to edit existing records </li>
+			<li>Only To Do Summary Settings where Customised=True</li>
+		</ol>
+		&#160;</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">User 
+		 Fields</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_USFLD.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">UserFieldSetup</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">FldKey, 
+		 FldType, MfType, Jurisdiction, AllowDup, AutoAdd, FldCaption, 
+		 DefValue, DefNote, KeyValues</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>Allow to add new/edit existing record.</p></li>
+			<li><p>For existing records, if the field type is not the same, 
+			 then the record is ignored during the import process.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">User 
+		 Field Templates</p>
+		<p class="hcp3">&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_UFTEM.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">MenuCheckList</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Only allowed 
+		 to add new records.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Change Code Link</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_SS_CHGCD</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">EventLinks</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Security</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">User 
+		 Role Authority</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_AUURL.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">LookValues, 
+		 WebNavAccess</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">LookValues: 
+		 TabCode, ElCode, Name, InUse, Customized, eFile, Tag, ValueControl, 
+		 VpStandard, ElValue, ConvertValues</p>
+		<p class="hcp3">WebNavAccess: All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Access 
+		 Group Security</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_AGSEC.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">VpAccessGroups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>For new records, the related Access Groups, User Groups 
+			 and Administrator Groups must also be exported; otherwise 
+			 the record will not appear in VpAccessGroups.</p></li>
+			<li><p>Records are updated into VpAccessGroups.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Access 
+		 Groups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_ACGRP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">AccessGroups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">GroupType, 
+		 GroupCode, Name, IsActive</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">New 
+		 records will be added to UserGroups.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">User 
+		 Groups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_USGRP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">UserGroups</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">GroupType, 
+		 GroupCode, Name, Admin, Billing, TimeDisb, Account, SysMgr, DocMgr, 
+		 Enquiry, Eview, IsActive, AllowCust, DmConf, DmAuth, AllowExport, 
+		 AgVwBO, AgVwCP, AuthLevel1.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, these fields are overwritten.</p></li>
+			<li><p>If records do not exist, they will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Administrator 
+		 Groups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_ADGRP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">AdministratorGroups</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">GroupType, 
+		 GroupCode, Name, IsActive</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">New 
+		 records will be added to UserGroups.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Business Parameters - Entity Administration</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="93">
+	<col width="157">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td class="hcp5"><p class="hcp1">Settings</p></td>
+		<td class="hcp5"><p class="hcp2">File Code</p></td>
+		<td class="hcp5"><p class="hcp1">Database 
+		 Table</p></td>
+		<td class="hcp5"><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td class="hcp5"><p class="hcp1">Allow</p></td>
+		<td class="hcp5"><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Entity 
+		 Types (includes Navigation)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_AD_ENTYP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">EntityTypes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Jurisdic, 
+		 Etype, ShortName, ST_ReqAR, ST_ReqAGM, ST_MinDirs, ST_MinShareHolders, 
+		 InUse, Customized, TagValues, EtNote, LongDescr, Ownership, ST_ReqSec, 
+		 ST_ReqAud</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Relationship 
+		 Types</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_AD_RLTYP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">MfRelationType</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">RelCode, 
+		 RelClass, Rdescr, DisplayText, Reciprocal, With_ApRe, With_Reelect, 
+		 With_Powers, With_Alternate, With_Position, With_Reason, InUse, 
+		 Customized, RelNote</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Identity/AEOI 
+		 Register Types</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_AD_IRTYP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>MfIdentityType</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>IdCode, Individual, 
+		 Description, With_IdCode, IdCaption, With_Ud1Table, UdCode1Table, 
+		 With_Country, With_Dates, With_Reminder, IdNote, TagValues, Active, 
+		 Customized, With_LKV1, LKVCode1, MFLink1, MFLinkCaption1, With_UserNamePassword</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Services 
+		 (Annual Fees)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_AD_SRVAF.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Services</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">ServCode, 
+		 Description, CurCode, UnitPrice, UnitCostMat, UnitCostTime, VATperc, 
+		 UOMService, ServiceType, Note</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Owners 
+		 &amp; Controllers Types</p>
+		<p class="hcp3">&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_AD_OWNCT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">EntityOwnerTypes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol>
+		&#160;</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Business Parameters - Document Management</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Filing 
+		 Cabinets</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_DM_FLCBT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">FolderSetup</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">FolderKey, 
+		 FolderName, ParentNr, fNote, HelpNote, RetentionPolicy, ClosedPost, 
+		 ClosedSearch</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>Allowed to import into new environment. Not allowed 
+			 to import into existing environment.</p></li>
+			<li><p>Allow to export the filing cabinet.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Task 
+		 Types</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_DM_TSKTP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">DmTaskTypes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">BtKey, 
+		 BtName, BtActive, BtNote, DateKeyOnDone, IxStatusDone</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p>If record exists, then these fields are overwritten.</p></li>
+			<li><p>If record does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Audit 
+		 Trail Setup</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_DM_AUTTP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">DmLookVals</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">LvActive</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allowed 
+		 to edit only.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Business Parameters - Practice Management</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="195">
+	<col width="100">
+	<col width="195">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Service 
+		 Master</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_RM_SVRMT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">ServiceMaster</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">ServCode, 
+		 InUse, Description, ServiceClass, ServiceType, RevEvent, ServiceGroup, 
+		 SalesTaxCode, ReferralGroup, AccountIncome, AccountMaterial, AccountTime, 
+		 SubDescr, Note, TagInfo</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Service 
+		 Tax Codes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_RM_SVRTX</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">ServiceTax</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Account 
+		 Mapping</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_RM_ACCMP</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">AcctMapping</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol>
+		&#160;</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Business Parameters - Accounting</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Account 
+		 Movement Codes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_CA_MVCDE</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">AcctMoveCodes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">AcctType, 
+		 SeqNr, MoveCode, Descr, AllowQnt, AllowTax, PostSign, UseSlExchange, 
+		 capJournalDate, capReference, capDescription, capLineDate, capLineRef, 
+		 capCheckDate, Customized</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to edit existing records.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Business Parameters - Workflow</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Step Library</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_WF_STLIB</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>WpageTemplateHeader, 
+		 &#160;&#160;DocAttributes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>WpageTemplateHeader: 
+		 All</p>
+		<p>DocAttributes: All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Workflow Library</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_WF_WFLIB</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>WflowTemplate,</p>
+		<p>DocAttributes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>WflowTemplate: 
+		 All</p>
+		<p>DocAttributes: All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol>
+		&#160;</td>
+	</tr>
+</table>
+<h3>&#160;</h3>
+<h3>Document Libraries</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms 
+		 Library</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VP_SS_ACNTR.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms, 
+		 FormEvents</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Forms: 
+		 CountryCode, FormCode, Description, FormType, LangCode, Customized, 
+		 SubForm, RequireFiling, DeadLineDays, NrCopies, FileName, Notes, 
+		 HelpText, KeyInfo, FieldDetails</p>
+		<p class="hcp3">FormEvents: CountryCode, 
+		 FormCode, LinkField, EntType, CombineForm, Status</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Word 
+		 Reports</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_AWRPC.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode, 
+		 FormCode, Description, FormType, LangCode, Customized, SubForm, 
+		 RequireFiling, DeadLineDays, NrCopies, FileName, Notes, HelpText, 
+		 KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Correspondence</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_ACCAT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode, 
+		 FormCode, Description, FormType, LangCode, Customized, SubForm, 
+		 RequireFiling, DeadLineDays, NrCopies, FileName, Notes, HelpText, 
+		 KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Billing 
+		 Templates</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_ABDCT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode, 
+		 FormCode, Description, FormType, LangCode, Customized, SubForm, 
+		 RequireFiling, DeadLineDays, NrCopies, FileName, Notes, HelpText, 
+		 KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Other 
+		 Document Templates</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_AODCT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode, 
+		 FormCode, Description, FormType, LangCode, Customized, SubForm, 
+		 RequireFiling, DeadLineDays, NrCopies, FileName, Notes, HelpText, 
+		 KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Web 
+		 Templates</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_CWRCT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode, 
+		 FormCode, Description, FormType, LangCode, Customized, SubForm, 
+		 RequireFiling, DeadLineDays, NrCopies, FileName, Notes, HelpText, 
+		 KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to add new/edit existing records. This will import the physical 
+		 forms as well.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">ESP 
+		 Templates</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_CP_FORMS</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Forms</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">CountryCode,FormCode,FormCat, 
+		 Description,FormType,LangCode,Customized, SubForm, RequireFiling, 
+		 DeadLineDays,NrCopies, FileName, Notes, HelpText, KeyInfo, FieldDetails</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol>
+		&#160;</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Dashboard Widget 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_SS_AWIDG.xml 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>DashboardWidget 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>WidgetId, SeqNr, 
+		 ApNr, WidgetType, MenuGroup, Caption, [Description], Tag, WidgetWidth, 
+		 WidgetHeight, VpStandard, IsActive, Customized </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Allow to add 
+		 new/edit existing records. </p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Reporting</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Standard Report 
+		 - ViewPoint Report</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_SS_RPSTD</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>StandardReports</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>StandardReports: 
+		 Apnr, RepFolder, SeqNr, RepTitle, Authority, Thelp, Customized 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>If record exists, 
+		 then these fields are overwritten.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Standard Report 
+		 - SSRS Report</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_SS_RPSSR</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>StandardReports, 
+		 EventLinks, DocAttributes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>StandardReports: 
+		 All,</p>
+		<p>EventLinks: EventCode,SeqNr, LinkType, LinkCategory, LinkId, 
+		 Description, Condition, TagValues, HelpText, Note, LinkSelect</p>
+		<p>DocAttributes: All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Standard Report 
+		 - Analysis Report</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>VPSS_SS_RPANA</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>StandardReports, 
+		 DocAttributes</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>StandardReports: 
+		 All, DocAttributes: All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>New and edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ol class="hcp4">
+			<li><p class="hcp3">If record 
+			 exists, then these fields are overwritten.</p></li>
+			<li><p class="hcp3">If record 
+			 does not exist, it will be added.</p></li>
+		</ol>
+		&#160;</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Defaults</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td><p class="hcp1">Settings</p></td>
+		<td><p class="hcp2">File Code</p></td>
+		<td><p class="hcp1">Database 
+		 Table</p></td>
+		<td><p class="hcp1">Fields 
+		 Added/Overwritten</p></td>
+		<td><p class="hcp1">Allow</p></td>
+		<td><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">VPSS_SS_SETTG.xml</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Settings</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">All</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Edit</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Allow 
+		 to edit existing records.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Accounting</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="900">
+	<col width="140">
+	<col width="150">
+	<col width="120">
+	<col width="200">
+	<col width="100">
+	<col width="200">
+	<tr class="t1st">
+		<td class="hcp6"><p class="hcp1">Settings</p></td>
+		<td class="hcp6"><p class="hcp2">File 
+		 Code</p></td>
+		<td class="hcp6"><p class="hcp1">Database Table</p></td>
+		<td class="hcp6"><p class="hcp1">Fields Added/Overwritten</p></td>
+		<td class="hcp6"><p class="hcp1">Allow</p></td>
+		<td class="hcp6"><p class="hcp1">Remarks</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Main/Sub 
+		 Groups</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">VPSS_CA_GROUP.xml</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">COAaccount</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">COAcode, 
+		 AcctCode, AcctType, CarryForward, MainGroup, Name, Active, Note</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Allow 
+		 to add new/edit existing records. If the Account Type and Carry 
+		 Forward does not match the existing record, then the record will 
+		 be not be imported.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Nominal 
+		 Account Templates</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">VPSS_CA_NMACT.xml</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">COAHeader, 
+		 COAaccount</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">COAHeader: 
+		 COAcode, ForTrust, Description, RetEarnings, ProfitTransfer, Suspense, 
+		 Country, DefCurCode, Notes</p>
+		<p class="hcp3">CoaAccount: COAcode, 
+		 AcctCode, AcctType, Name, SubGroup, SpecifySub, AllowSubtype</p>
+		<p class="hcp3">COAHeader.ForTrust 
+		 and COAaccount.AcctType</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">If 
+		 template's Cap/Inc Segregation does not match the existing record, 
+		 the record will not be imported.</p>
+		<p class="hcp3">For templates and 
+		 nominal accounts, if the account type does not match, the record 
+		 will not be imported.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Security 
+		 Master &amp; History</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">VPSS_CA_SCMAS.xml</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">SecurityMaster, 
+		 SecurityPrices</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">SecurityMaster: 
+		 SecCode, Active, SecType, FullName, LongName, CurCode, NomValue, 
+		 SedolCode, IsinCode, CUSIPCode, VendorCode, UpdateSource, PriceMultiNr, 
+		 LastPrice, DateLastPrice, ValMethod, IntPerc, DivFreq, Broker, 
+		 SecCat1, SecCat2, NatureBusiness, Note, UserDefined1, UserDefined2, 
+		 UserDefined3, UserDefined4</p>
+		<p class="hcp3">SecurityPrices: 
+		 All</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Allowed 
+		 to add new/edit existing records. If record exists, it will be 
+		 overwritten.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Exchange 
+		 Rates &amp; History</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">VPSS_CA_EXRATE.xml</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">ExchangeRates, 
+		 ERateHistory</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">ExchangeRates: 
+		 RateType, BaseCur, ToCur</p>
+		<p class="hcp3">ERateHistory: DateRate, 
+		 BaseCur, ToCur,Rate</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Allowed 
+		 to add new/edit existing records. If record exists, it will be 
+		 overwritten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Journal 
+		 Scripts</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">VPSS_CA_JRSCR.xml</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">JournalTypes, 
+		 JournalAccounts</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">JournalTypes: 
+		 All</p>
+		<p class="hcp3">JournalAccounts: 
+		 All</p></td>
+		<td class="t1Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">New 
+		 and edit</p></td>
+		<td class="t2Col" style="vertical-align: top; border-left-width: 1px; 
+			 border-left-style: solid; border-top-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px;"><p class="hcp3">Allowed 
+		 to add new/edit existing records. If record exists, it will be 
+		 overwritten.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>&#160;</h3>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Import Settings - Limitations</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+</body>
+</html>

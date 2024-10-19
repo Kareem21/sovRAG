@@ -1,0 +1,171 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="robots" content="NOODP">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Viewpoint Engage Servicing Portal (ESP)</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { line-height:150%; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Engage Servicing Portal (ESP)</h1>
+<p>Engage Servicing Portal (ESP) is an interactive web portal for clients 
+ (end-users) to:</p>
+<ul class="hcp1">
+	<li><p>access information and documents related to their entities.</p></li>
+	<li><p>view calendar of upcoming events.</p></li>
+	<li><p>act as a medium of communication with the relevant parties of 
+	 the entity (directors, secretary, lawyers, shareholders, etc.).</p></li>
+	<li><p>act as a medium to request and track services and changes.</p></li>
+</ul>
+<p>The portal is designed to connect through the web with one or multiple 
+ Viewpoint core environments (effectively the 'Back-Office' databases or 
+ VP-DB, for short) making it possible for portal users (clients) to instantly 
+ and transparently access their authorised information. The ESP system 
+ consists of the following:</p>
+<p>Back-Office:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 25.866%;">
+	<col style="width: 74.134%;">
+	<tr class="t1st">
+		<td><p>Application Block </p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Viewpoint Connect (VP-BO)</p></td>
+		<td class="t2Col"><p>This refers to the Viewpoint Connect (Back-Office 
+		 application).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Viewpoint Back-Office database (VP-DB)</p></td>
+		<td class="t2Col"><p>This refers to the Viewpoint database in Viewpoint 
+		 Connect.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Viewpoint Connect REST Services</p></td>
+		<td class="t2Col"><p>This refers to the REST API host in IIS and 
+		 is connected to the Back-Office database (VP-DB). It acts as an 
+		 endpoint for various requests from CP-WP.</p>
+		<p><span class="hcp2">Note</span>: 
+		 Viewpoint Connect REST Services needs to be same version as ESP.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Front-Office:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 25.866%;">
+	<col style="width: 74.134%;">
+	<tr class="t1st">
+		<td><p>Application Block </p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Client Portal Administrator (CP-AD)</p></td>
+		<td class="t2Col"><p>This is the Viewpoint Connect program for 
+		 various Engage Servicing Portal configuration.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Client Portal Database (CP-DB)</p></td>
+		<td class="t2Col"><p>This is the Engage Servicing Portal database. 
+		 Information and data to be published to the Engage Servicing Portal 
+		 are retrieved from VP-DB and cached in this database.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Task Scheduler &amp; Notification Agent (TSNA)</p></td>
+		<td class="t2Col"><p>This refers to the Windows service that manages 
+		 various Viewpoint scheduled activities such as update ESP calendar, 
+		 review To-Do list etc.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Viewpoint Connect REST Services</p></td>
+		<td class="t2Col"><p>This refers to the REST API host in IIS and 
+		 is connected to the Front-Office database (CP-DB). It acts as 
+		 an endpoint to receive requests from TSNA.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Client Portal Web (CP-WP) </p></td>
+		<td class="t2Col"><p>This is the Engage Portal (web portal) that 
+		 is available to the end client.</p>
+		<p><span class="hcp2">Note</span>: 
+		 Microsoft Internet Information Service (IIS) is required for this 
+		 block.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>The following diagram shows the various components in the Engage Servicing 
+ Portal:</p>
+<p><img src="../App%20Block%202.PNG" alt="" style="border: none;" border="0"></p>
+<p>All user activities on ESP are recorded in the <a href="ESP_Audit_Trail.htm">Audit 
+ Trail</a> screen in the Client Portal Administrator (CP-AD).</p>
+<h2>Configuration of Engage Servicing Portal</h2>
+<p>Setting up of ESP is done via Engage Servicing Portal Administrator 
+ (CP-AD) through the following screens in Viewpoint Connect - Home &gt; 
+ Configuration &gt; Engage Servicing Portal:</p>
+<ul class="hcp1">
+	<li><p><a href="ESP_Databases.htm">Global &gt; Databases</a> - &#160;to 
+	 define the database(s) for the ESP</p></li>
+	<li><p><a href="ESP_Menus.htm">Global &gt; Menus</a> - to define properties 
+	 of the screens in ESP</p></li>
+	<li><p><a href="ESP_Relations.htm">Global &gt; Relations</a> - to define 
+	 the caption for the relation types seen in ESP</p></li>
+	<li><p><a href="ESP_Dashboard.htm">Global &gt; Dashboard</a> - to customise 
+	 caption and/or activate/deactivate available widgets for the Dashboard 
+	 screen in ESP</p></li>
+	<li><p><a href="ESP_Notifications.htm">Global &gt; Notifications</a> 
+	 - to define the notifications that the user will receive</p></li>
+	<li><p><a href="ESP_Followers.htm">Global &gt; Followers</a> - to define 
+	 the items in ESP that a user can follow</p></li>
+	<li><p><a href="ESP_Organisations_(Configuration).htm">Configuration 
+	 &gt; Organisations</a> - to set up the organisations in ESP</p></li>
+	<li><p><a href="ESP_Users_(Configuration).htm">Configuration &gt; Users</a> 
+	 - to set up user accounts for accessing the ESP</p></li>
+	<li><p><a href="ESP_Notice_Board.htm">Notice Board</a> - to configure 
+	 items for the Notice Board in ESP</p></li>
+	<li><p><a href="ESP_User_Roles.htm">User Role</a> - to configure access 
+	 to the screens in ESP</p></li>
+</ul>
+<p>Optionally, you can also proceed with the following once configured:</p>
+<ul class="hcp1">
+	<li><p class="hcp3">approval of Organisations and Users, 
+	 if required. Refer to <a href="ESP_Organisations_(Approval).htm">Approval</a>.</p></li>
+	<li><p class="hcp3">sharing of documents stored in Viewpoint 
+	 Back-Office Database (VP-BO). Refer to <a href="../Document_Manager/Document_Sharing_on_Engage_Servicing_Portal.htm">Document 
+	 Sharing on Engage Servicing Portal</a>.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; Engage Servicing Portal (ESP)</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

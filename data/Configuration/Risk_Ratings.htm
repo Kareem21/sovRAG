@@ -1,0 +1,273 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Risk Ratings</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+li.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:normal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Risk Ratings</h1>
+<p>Risk Ratings is how you can set scores required for checklists and workflows. 
+ The scores are for values in the following items:</p>
+<ul class="hcp1">
+	<li><p>Lookup Tables</p></li>
+	<li><p>User Tables</p></li>
+	<li><p>Identity/AEOI Register Types</p></li>
+	<li><p>Relationship Types</p></li>
+	<li><p>Service Master</p></li>
+</ul>
+<p>To do this, the following steps are required:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">The 
+	 Risk Rating option must be ticked in the respective item.</a></p>
+	<div class="droptext" id="POPUP382904926" style="display: none;">
+		<p>For Lookup Tables and User Tables, click Edit on the top grid.</p>
+		<p>Tick the Risk Rating option.</p>
+		<p>&#160;</p>
+		<p>For Identity Register Types, Relationship Types and Service 
+		 Master, select the relevant record and click Edit.</p>
+		<p>Tick the Risk Rating option.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">The 
+	 score is set in the Risk Ratings screen.</a></p>
+	<div class="droptext" id="POPUP383036248" style="display: none;">
+		<ol class="hcp2">
+			<li><p>In Viewpoint - Home, go to Configuration &gt; Business 
+			 Parameters &gt; General &gt; Risk Ratings.</p></li>
+			<li><p>Once you have specified the group, table and type, enter 
+			 the score in the Value field.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+ </div></li>
+</ul>
+<p>For Lookup Table and User Table values, if you had scores assigned using 
+ the Score Tags earlier, then you can use the Convert function in Risk 
+ Ratings screen.</p>
+<p>&#160;</p>
+<h2>Risk Rating Option</h2>
+<p>This option is available in the following screens:</p>
+<ul class="hcp1">
+	<li><p>Configuration &gt; Business Parameters &gt; General &gt; Lookup 
+	 Values.</p></li>
+	<li><p>Configuration &gt; Business Parameters &gt; General &gt; User 
+	 Tables/Values.</p></li>
+	<li><p>Configuration &gt; Business Parameters &gt; Entity Administration 
+	 &gt; Identity/AEOI Register Types.</p></li>
+	<li><p>Configuration &gt; Business Parameters &gt; Entity Administration 
+	 &gt; Relationship Types.</p></li>
+	<li><p>Configuration &gt; Business Parameters &gt; Practice Management 
+	 &gt; Service Master.</p></li>
+</ul>
+<p>For Lookup Tables and User Tables, ticking the option is at the table 
+ level and will apply to all values of the table. For the other three, 
+ the option is available for the record and only applies to the record 
+ itself.</p>
+<p>&#160;</p>
+<h3>Enabling Risk Rating Option</h3>
+<p>If you are unable to see the Risk Rating option in the screen, it means 
+ that the option is turned off. In this case, go to Configuration &gt; 
+ Settings &gt; Customise &gt; Field Settings to enable it.</p>
+<p>For instance, to enable the option for Service Master, do the following:</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Settings &gt; 
+	 Customise &gt; Field Settings for Service Master.</p></li>
+	<li><p>Click to select Risk Rating.</p></li>
+	<li><p>Click Edit.</p></li>
+	<li><p>Set the Auth. Req. for Update to Regular User [6].</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Risk Ratings Screen</h2>
+<p>The Risk Ratings screen is located in Configuration &gt; Business Parameters 
+ &gt; General &gt; Risk Ratings. If you are not able to see the screen, 
+ then check the following:</p>
+<ul class="hcp1">
+	<li><p>In Configuration &gt; Settings &gt; Customise &gt; Windows, 
+	 check to ensure the screen is Active.</p></li>
+	<li><p>In Configuration &gt; Users &amp; Security &gt; User Roles, 
+	 check to ensure that authority is given to the screen for the required 
+	 User Role(s).</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Rating Group</p>
+<p>This refers to the scoring system where the default Standard [STDR] 
+ is the same as assigning scores using [WSCORE=] tag. If you require additional 
+ scoring system, then new group can be set up in the Risk Rating Groups 
+ [RRGR] Lookup Table.</p>
+<p>&#160;</p>
+<p class="FldExplain">Table</p>
+<p>This will list out items where the Risk Rating option is ticked.</p>
+<p>&#160;</p>
+<p class="FldExplain">Type</p>
+<p>By default, this shows Current [C] which means the current score. The 
+ other options available are:</p>
+<ul class="hcp1">
+	<li><p>Prepare Revision [R]</p></li>
+	<li><p>Scenario Evaluation [S]</p></li>
+</ul>
+<p>The different types allow you to have another set of scores within the 
+ same scoring system for comparison.</p>
+<p>&#160;</p>
+<p class="FldExplain">Compare With</p>
+<p>This is to select the type for comparison.</p>
+<p>&#160;</p>
+<p class="FldExplain">Value List</p>
+<p>This shows value(s) that require scores to be set. You need to click 
+ on Refresh to view the value(s). In the list, you have the following:</p>
+<ul class="hcp1">
+	<li><p>Code - This is the code of the table value or selected record.</p></li>
+	<li><p>Name - This is the name/description of the table value or selected 
+	 record.</p></li>
+	<li><p>Effective - This reflects the effective date of the score set 
+	 and is populated when an effective date is set and updated.</p></li>
+	<li><p>Value - This reflects the score being set for the value/record 
+	 and is populated once a score has been set and updated.</p></li>
+	<li><p>Change to Effective - This allows you to enter the effective 
+	 date of the score.</p></li>
+	<li><p>Value - Score for the value/record is entered here.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li class="hcp3"><p>Convert <span class="hcp4">- 
+	 Click this to convert scores assigned to Lookup Table values and User 
+	 Tables values using the [&lt;ScoreSystem&gt;=] tag in earlier version. 
+	 This is available when Rating Group is other than Standard [STDR].</span></p></li>
+	<li class="hcp3"><p>Refresh <span class="hcp4">- 
+	 Click this to load the selected record or values of the specified 
+	 Lookup Table or User Table.</span></p></li>
+	<li class="hcp3"><p>Copy <span class="hcp4">- 
+	 Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">copy</a> 
+	 the scores set for a Rating Group/Type &#160;to another Rating Group/Type. 
+	 This can be used as a basis for new Rating Group/Type where you copy 
+	 existing scores and make changes where relevant.</span></p>
+	<div class="droptext" id="POPUP196639005" style="display: none;">
+		<ol class="hcp2">
+			<li><p>Select the Rating Group/Type.</p></li>
+			<li><p>Click Copy.</p></li>
+			<li><p>In the Copy Risk Ratings Score From screen, specify 
+			 the Rating Group and/or Type to copy from.</p></li>
+			<li><p>Click OK.</p></li>
+		</ol>
+ </div></li>
+	<li class="hcp3"><p>Update<span class="hcp4">&#160;- 
+	 Click this to save the changes made.</span></p></li>
+	<li class="hcp3"><p>Cancel <span class="hcp4">- 
+	 Click this to cancel the changes made.</span></p></li>
+</ul>
+<p>&#160;</p>
+<h2>Conversion from Score Tags</h2>
+<p>The use of [WSCORE=] and [&lt;ScoreSystem&gt;=] tags to assign scores 
+ to Lookup Table value and User Table values is no longer possible as this 
+ now needs to be done through Risk Ratings. However, functions are available 
+ to make the conversion for you and these are:</p>
+<ul class="hcp1">
+	<li><p>Upgrade Risk Ratings function in Configuration &gt; Database 
+	 Archiving &gt; Troubleshooting.</p></li>
+	<li><p>Convert command button in Configuration &gt; Business Parameters 
+	 &gt; General &gt; Risk Ratings.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Using Upgrade Risk Ratings</h3>
+<p>This will work for scores assigned using:</p>
+<ul class="hcp1">
+	<li><p>[WSCORE] tag where the scores will be retrieved and updated 
+	 to the Standard [STDR] Rating Group.</p></li>
+	<li><p>[&lt;ScoreSystem&gt;=] if the length of &lt;ScoreSystem&gt; 
+	 is less than 5 characters where a Rating Group will be created automatically 
+	 and the scores will be retrieved and updated to the new Rating Group. 
+	 If the length of &lt;ScoreSystem&gt; is five characters or longer, 
+	 then you need to use the Convert command button.</p></li>
+</ul>
+<p>This is to be done after you have ensured that you are able to access 
+ Risk Ratings screen.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Database Archiving 
+	 &gt; Troubleshooting.</p></li>
+	<li><p>Click Upgrade Risk Ratings.</p></li>
+	<li><p>Enter an effective date.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>When complete, click OK.</p></li>
+</ol>
+<p>Once completed, the conversion will automatically tick the Risk Rating 
+ option for Lookup Tables and User Tables if scores were retrieved from 
+ the table and updated to Risk Ratings screen.</p>
+<p>&#160;</p>
+<h3>Using Convert Command Button</h3>
+<p>For scoring system where the name/description is longer than five characters, 
+ you need to use this to get the scores into the Risk Ratings screen. This 
+ requires you to set up the &lt;ScoreSystem&gt; as its own Rating Group.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p>Select Risk Rating Groups [RRGR[ Lookup Table.</p></li>
+	<li><p>Click Edit in the bottom grid to add the &lt;ScoreSystem&gt; 
+	 as a new Rating Group. Note that the code can only be a maximum of 
+	 four characters.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Exit Viewpoint and log in again.</p></li>
+	<li><p>Go to Configuration &gt; Business Parameters &gt; General &gt; 
+	 Risk Ratings.</p></li>
+	<li><p>Select the Rating Group created earlier.</p></li>
+	<li><p>Click Convert.</p></li>
+	<li><p>Enter the &lt;ScoreSystem&gt; in the Score Tag field.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>When complete, click OK.</p></li>
+	<li><p>Click Refresh to see the scores.</p></li>
+</ol>
+<p>Doing this will also update the existing [SCORETAG=] in the Tag Values 
+ field for the checklist/workflow step to show the new code used for the 
+ scoring system.</p>
+<p>&#160;</p>
+<h2>Using Localise Script</h2>
+<p>Entry to the Risk Ratings screen is also possible through the use of 
+ Localise Script. This will be a custom Localise Script with tags for Risk 
+ Rating. Refer to <a href="Localise_Script_-_Risk_Rating.htm">Localise 
+ Script - Risk Ratings</a>.</p>
+<p>&#160;</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Lookup_Values.htm">General</a> &gt; Risk Ratings</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP382904926');
+	TextPopupInit('a2','POPUP383036248');
+	TextPopupInit('a3','POPUP196639005');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Email Notification - Unread Notification Summary</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Email Notification - Unread Notification Summary</h1>
+<p>This job type will notify the users of the unread <a href="../Configuration/Notifications.htm">Notifications</a> 
+ summary through e-mail if the users do not log on to Viewpoint Connect 
+ for some time. This period is defined when you set up the job.</p>
+<p><span class="hcp1">Note</span>: This 
+ job requires SMTP Server configuration to be specified in Configuration 
+ &gt; Settings &gt; System Defaults &gt; SMTP Server Configuration.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Email Notification 
+	 - Unread Notification Summary [EUNS]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, specify the value for 'User Idle Duration (hours)'. 
+	 This refers to the duration of when the user has not logged in to 
+	 Viewpoint Connect. Only numeric value and a value larger than 0 will 
+	 be accepted. </p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Notification tab, the ‘Enable E-mail Notification’ option 
+	 is ticked by default and cannot be disabled. You are required to specify 
+	 the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">details 
+	 for the e-mail notification</a>. </p>
+	<div class="droptext" id="POPUP589531861" style="display: none;">
+		<p>The following tags are supported for ‘To’, ‘CC’, ‘BCC’ and 'Reply 
+		 To' fields:</p>
+		<ul class="hcp2">
+			<li><p><span>(+U.supervisorMail+) - This refers to the supervisor's 
+			 e-mail.</span></p></li>
+			<li><p><span>(+U.MailID+) - This refers to the recipient/user's 
+			 e-mail.</span></p></li>
+		</ul>
+ </div></li>
+	<li><p>If you are using an e-mail template, tick the ‘Use Template’ 
+	 option and ensure that the e-mail template exists in the environment 
+	 (in Configuration &gt; Document Libraries &gt; Other Document Templates, 
+	 under the Document Type 'Email Notification Templates [D03]’). <br>
+	<br>
+	<span class="hcp1">Note</span>: Alternatively, 
+	 you can also tick the ‘Advanced’ option to configure the<a class="dropspot" href="javascript:TextPopup(this)" id="a3"> 
+	 First Notification, First Reminder and Second Reminder e-mail notifications</a>. 
+	 Both ‘Basic’ and ‘Advanced’ support <a class="dropspot" href="javascript:TextPopup(this)" id="a6">tags 
+	 configuration</a>. </p>
+	<div class="droptext" id="POPUP587759989" style="display: none;">
+		<p><span lang="EN-GB" xml:lang="EN-GB">T</span>he following are 
+		 the tags syntax for E-mail Notification:</p>
+		<p><span class="hcp1">Note</span>: 
+		 Please replace the text within the &lt; &gt; with the value as 
+		 described.</p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">Basic:</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT =&lt;Email 
+		 Subject&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO=&lt;To Recipient&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY=&lt;Body Text/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[</span>/MAIL_CC=&lt;CC 
+		 Recipient&gt;/]</p>
+		<p>[/MAIL_BCC=&lt;BCC Recipient&gt;/]</p>
+		<p>[/MAIL_REPLYTO=&lt;Reply to Recipient&gt;/]</p>
+		<div style="box-sizing: border-box; color: #000000; font-family: 'Segoe UI VSS ', , 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Ubuntu, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; 
+			 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+			 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+			 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+			 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+			 background-color: #ffffff; text-decoration-thickness: initial; 
+			 text-decoration-style: initial; text-decoration-color: initial;">
+			<p>&#160;</p>
+		</div>
+		<p><span lang="EN-GB" xml:lang="EN-GB">Advanced:</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R0=&lt;To Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R0=&lt;CC Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R0=&lt;BCC Recipient 
+		 for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R0=&lt;Reply 
+		 to Recipient for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R0=&lt;E-mail 
+		 subject for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R0=&lt;Body 
+		 Text for first notification&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R1=&lt;To Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R1=&lt;CC Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R1=&lt;BCC Recipient 
+		 for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R1=&lt;Reply 
+		 to Recipient for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R1=&lt;E-mail 
+		 subject for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R1=&lt;Body 
+		 Text for first reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_TO.R2=&lt;To Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_CC.R2=&lt;CC Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BCC.R2=&lt;BCC Recipient 
+		 for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_REPLYTO.R2=&lt;Reply 
+		 to Recipient for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_SUBJECT.R2=&lt;Email 
+		 subject for second reminder&gt;/]</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">[/MAIL_BODY.R2=&lt;Body 
+		 Text for second reminder&gt;/]</span></p>
+ </div>
+	<div class="droptext" id="POPUP589579374" style="display: none;">
+		<ul class="hcp2">
+			<li><p>First Notification – This is for the first e-mail notification 
+			 that will be sent.</p></li>
+			<li><p>First Reminder – This is for the second e-mail notification 
+			 that will be sent if the user still have pending item.</p></li>
+			<li><p>Second Reminder – This is for the third e-mail notification 
+			 that will be sent if the user still have pending item.</p></li>
+		</ul>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency. This job type provides 
+	 three types of job frequency which are daily, weekly and monthly.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Email Notification - Unread Notification Summary</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP589531861');
+	TextPopupInit('a3','POPUP589579374');
+	TextPopupInit('a6','POPUP587759989');
+//]]></script>
+</body>
+</html>

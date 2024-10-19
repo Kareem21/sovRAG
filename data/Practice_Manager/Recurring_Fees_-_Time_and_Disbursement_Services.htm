@@ -1,0 +1,98 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Recurring Fees - Time and Disbursements Services</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Recurring Fees - Time and Disbursements Services</h1>
+<p>The option 'Use Recurring Services for Time Entries' or 'Use Recurring 
+ Services for Disbursement Entries' in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+ Defaults &gt; Time and Disbursements</a> allows for filtering of Time 
+ or Disbursement services per Billing File. This means that when creating 
+ Time or Disbursement entries for a Billing File, users can select only 
+ services that are being provided to that Billing File instead of all active 
+ Time or Disbursement services.</p>
+<p>&#160;</p>
+<p><span class="hcp1">Note</span>:</p>
+<ul class="hcp2">
+	<li><p>This can be in addition to filtering by Matter through enabling 
+	 the option 'Link Services to Matter Types' in <a href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+	 Defaults &gt; Practice Management</a>.</p></li>
+	<li><p>The system does not allow user to create or edit the Time entry/Disbursement 
+	 entry with the date later than the Recurring Fee's 'Date Terminated'.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Set up the Recurring Fee</h3>
+<p>When setting up the time or disbursement service, the following fields 
+ must be set up as follows:</p>
+<ul class="hcp2">
+	<li><p>Service - This will be your Time or Disbursement service.</p></li>
+	<li><p>Number of Units - Enter '0' for this field.</p></li>
+	<li><p>Unit Price - Enter '0' for this field.</p></li>
+	<li><p>Next Invoicing Due - Enter the Next Invoicing Due date for this 
+	 field. <span class="hcp1">Note:</span> 
+	 If the Next Invoicing Due date is before the Fee Period From Date, 
+	 it is automatically set as 'Advance'. If the Next Invoicing Due date 
+	 is after the Fee Period To Date, it is automatically set as 'Arrears'.<br>
+	</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Calculating the Number of Units to be Charged</h3>
+<p>The calculation of the number of units to be charges for the Time and 
+ Disbursement services depends on whether or not you have the option 'Use 
+ Recurring Services for Time Postings' or 'Use Recurring Services for Disbursement 
+ Postings' ticked in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+ Defaults &gt; Time and Disbursements</a>:</p>
+<ul class="hcp2">
+	<li><p>When the option is not ticked, the draft invoice will include 
+	 Time or Disbursement entries that are within the date range for Posting 
+	 of WIP.</p></li>
+	<li><p>When the option is ticked, the draft invoice will only include 
+	 approved Time or Disbursement entries dated before the 'Next Invoicing 
+	 Due' specified in the Recurring Fees screen. It will not include Time 
+	 or Disbursement entries that are after the 'Next Invoicing Due' even 
+	 if they are within the date range set for Posting of WIP.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Recurring_Fees.htm">Recurring Fees</a></p></li>
+	<li><p><a href="../Configuration/System_Defaults.htm">System Defaults</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Recurring Fees - Time and Disbursements Services</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

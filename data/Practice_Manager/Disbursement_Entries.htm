@@ -1,0 +1,306 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Disbursement Entries</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Disbursement Entries</h1>
+<p>The Disbursements screen opens as a separate window and is divided into 
+ two - on the left is for data entry while the right is the Detail window. 
+ You may find that some fields are pre-completed if you have switched on 
+ the context sensitivity option in the <a href="Timesheet_-_Selection_&amp;_Options.htm">Selection 
+ &amp; Options</a> folder or there is a <a href="../Configuration/Users_-_Tags.htm">default 
+ service code</a> defined in your User record.</p>
+<p>&#160;</p>
+<p class="FldExplain">Administrator</p>
+<p>The administrator defaults to the user who is logged on to the system. 
+ If you are authorised to do so, you can select another user.</p>
+<p>&#160;</p>
+<p class="FldExplain">Date</p>
+<p>The date field defaults to today's date.</p>
+<p>&#160;</p>
+<p class="FldExplain">Billing File</p>
+<p>Select the Billing File for the disbursement entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Matter</p>
+<p>Select the matter for the time entry. A matter can be compared with 
+ projects your company is managing for clients. Different invoices will 
+ be created for different matters.</p>
+<p>&#160;</p>
+<p class="FldExplain">Activity</p>
+<p>Select the activity for the time entry. This activity selection option 
+ is being set up in the Activities screen and is linked to the Matter account. 
+ </p>
+<p><span class="hcp1">Note:</span>This 
+ will only be available if the 'All Time/Disbursement Entries Link to an 
+ Activity' option is enabled and will replace the 'Matter' field. The selection 
+ options for Activity will only be available for Activities status which 
+ is not in New, Cancelled or Completed.</p>
+<p>&#160;</p>
+<p class="FldExplain">Rate List</p>
+<p>The rate list defaults to the rate list selected for the Matter in the 
+ Matters screen. If you are authorised to do so, you can select a different 
+ rate list.</p>
+<p><span class="hcp1">Note</span>: When 
+ editing a disbursement entry, the rate list value will not be displayed. 
+ </p>
+<h6 class="Heading8">&#160;</h6>
+<p class="FldExplain">Service</p>
+<p>Enter the service for the disbursement entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Service Date</p>
+<p>The 'Service Date' field is seen when the Tag Value on the Service in 
+ the Service Master is [SRVDATE.Visible=Y]. For Disbursement entry with 
+ Service Class ‘DW’, this field will validate against the Recurring Fees’ 
+ ‘Fee Period From Date’ and ‘Fee Period To Date’ when creating invoice 
+ in arrears for Disbursement exceeding the Fixed Fee. When this field is 
+ enabled, the Disbursements grid will also show how much chargeable/non-chargeable 
+ for the 'Service Date - Fee Details'. Note that for Service Class that 
+ is not 'DW', this field will only function to record the date of the service.</p>
+<p>&#160;</p>
+<p class="FldExplain">Fee History</p>
+<p>The Fee History button is seen when the Tag Value on the Service in 
+ the Service Master is [SRVDATE.Visible=Y] and there is an existing Recurring 
+ Fee record for the Service.</p>
+<p>Clicking on the Fee History button will launch the Fee History window. 
+ The Fee History window shows the list of the invoiced fees for the selected 
+ Service.</p>
+<p>When user highlights an entry and clicks Select button, it will set 
+ 'Fee Period - To Date' as ‘Service Date’ for the Disbursements entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Currency</p>
+<p>This field is completed automatically when you select the Matter or 
+ service. If you are using Multi-currency rate lists, then the currency 
+ follows the Matter currency. If you are not, the currency follows the 
+ service currency.</p>
+<p>&#160;</p>
+<p class="FldExplain">No of Units/Cost</p>
+<p>The field caption changes depending on the type of service selected. 
+ Enter the appropriate number or cost.</p>
+<p>&#160;</p>
+<p class="FldExplain">Exchange</p>
+<p>The exchange rate is taken from the Exchange Rate Master.</p>
+<p>&#160;</p>
+<p class="FldExplain">Charge/Unit/Markup</p>
+<p>The charge/unit or markup percentage defaults from the rates set up 
+ for the service.</p>
+<p>&#160;</p>
+<p class="FldExplain">Non-charged</p>
+<p>This field displays the amount written off, if any. You can update this 
+ field by amending the Total &lt;currency&gt; field to the amount you want 
+ to charge. Any difference in the actual value and this amount will be 
+ written off.</p>
+<p>&#160;</p>
+<p><span class="hcp1">Note</span>: For 
+ Time/Disbursements entry with Service Class ‘TW’/ 'DW', the Time/Disbursements 
+ entry details window will show the amount 'Charged' and 'Non-charged' 
+ based on the following scenarios:</p>
+<ul class="hcp2">
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a6">Scenario 
+	 1: When No Available Fixed Fee AND current Time/Disbursements Entry 
+	 Fully Chargeable.</a><span class="expandtext" id="POPUP588872042" style="display: none;"><span lang="EN-US" xml:lang="EN-US"><br>
+	Example:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 3,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 1,000</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount = 0</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field) = 500</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 3000 - 2000 + 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= Fixed Fee</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 2,000</span></span></p></li>
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a7">Scenario 
+	 2: When Current Time/Disbursements Entry Amount &lt; Available Fixed 
+	 Fee.</a><span class="expandtext" id="POPUP588937868" style="display: none;"><span lang="EN-US" xml:lang="EN-US"><br>
+	Example:<br>
+	Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 1,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 0</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount = 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field) = 0</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,000 – 2,000 + 0</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= -1,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">This yields a negative value, hence 
+	 ‘Charged’ amount is zero.</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Fixed Fee) - (Time/Disbursement 
+	 by Service Date excluding current entry) + (current Time/Disbursement 
+	 entry non-charged amount<br>
+	= 2,000 – 1,000 + 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500</span></span></p></li>
+	<li><p><a class="expandspot" href="javascript:TextPopup(this)" id="a8">Scenario 
+	 3: When Current Time/Disbursements Entry Amount &gt; Available Fixed 
+	 Fee AND Current Time/Disbursements Entry Partial Chargeable.</a><span class="expandtext" id="POPUP588964876" style="display: none;"><span 
+	 lang="EN-US" xml:lang="EN-US"><br>
+	Example:<br>
+	Fixed Fee = 2,000</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 excluding current entry = 1,500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Time/Disbursement by Service Date 
+	 invoiced previously = 1,000</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">In the current Time/Disbursement 
+	 entry:</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 amount (No. of units * Charge/unit) = 800</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 non-charged amount<br>
+	= (Fixed Fee) - (Time/Disbursement by Service Date excluding current 
+	 entry)<br>
+	= 2,000 -1,500<br>
+	= 500</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Current Time/Disbursement entry 
+	 charged amount (Time/Disbursement entry ‘Total’ field)<br>
+	= (Current Time/Disbursement entry amount) - (Current Time/Disbursement 
+	 entry non-charged amount)<br>
+	= 800 – 500<br>
+	= 300</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Hence, in the Time/Disbursement 
+	 entry details window,</span><br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= (Time/Disbursement by Service 
+	 Date excluding current entry) - (Fixed Fee) + (Current Time/Disbursement 
+	 entry charged amount)</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 1,500 - 2,000 + 800</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 300</span><br>
+	<br>
+	<span lang="EN-US" xml:lang="EN-US">Fixed Fee ‘Non-charged’ amount</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= Fixed Fee</span><br>
+	<span lang="EN-US" xml:lang="EN-US">= 2,000</span></span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Unit Cost</p>
+<p>The field displays the addition of unit cost time and unit cost material 
+ of the selected service. </p>
+<p><span class="hcp1">Note: </span>If 
+ both 'Mutli Rate/CCY List' and 'Multi Rate/CCY List Cost of Services' 
+ options are ticked, the system will retrieve the Unit Cost Time and Unit 
+ Cost Expense from the Service Rates (based on entry Rate List and Currency). 
+ The sum of Unit Cost Time and Unit Cost Expense will be the value and 
+ it will be converted to Reporting currency.</p>
+<p>The Unit Cost field will refer to the Cost field if the selected service 
+ is from DM service class.</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Why am I not 
+ able to see this?</a></p>
+<div class="droptext" id="POPUP522120885" style="display: none;">
+	<p>This may have been turned off by ticking the Hide Unit/Total Cost 
+	 on Time Entry option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a>.</p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Total Cost</p>
+<p>The total cost of the service is displayed here. </p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Why am I not 
+ able to see this?</a></p>
+<div class="droptext" id="POPUP5221208851" style="display: none;">
+	<p>This may have been turned off by ticking the Hide Unit/Total Cost 
+	 on Time Entry option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements.</a></p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Total &lt;currency&gt;</p>
+<p>This is calculated based on the No. of Units multiplied by the Charge/Unit; 
+ or the Cost plus the Markup percentage.</p>
+<p>&#160;</p>
+<p class="FldExplain">Description</p>
+<p>The service description defaults to this field.</p>
+<p>&#160;</p>
+<p class="FldExplain">Update</p>
+<p>Click this to save the entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Cancel</p>
+<p>Click this to delete your entry.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Timesheet_-_Disbursements.htm">Timesheet - Disbursements</a></p></li>
+	<li><p><a href="Disbursements.htm">Disbursements</a></p></li>
+	<li><p><a href="../Configuration/Service_Master.htm">Service Master</a></p></li>
+	<li><p><a href="../Configuration/Service_Master_-_Tags.htm">Service 
+	 Master - Tags</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Disbursement Entries</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a6','POPUP588872042');
+	TextPopupInit('a7','POPUP588937868');
+	TextPopupInit('a8','POPUP588964876');
+	TextPopupInit('a4','POPUP522120885');
+	TextPopupInit('a5','POPUP5221208851');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Additional Charges">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Additional Charges</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Additional Charges</h1>
+<p>Apart from taxes, sometimes, there are extra charges that need to be 
+ included in the invoices. This is done by using Charge tags which needs 
+ to be set up in Configuration &gt; Business Parameters &gt; Practice Management 
+ &gt; Setup &gt; Revenue Entities.</p>
+<p>The tags allow for you to define:</p>
+<ul class="hcp1">
+	<li><p>The service that will be added as an additional charge.</p></li>
+	<li><p>The percentage or amount of the charge.</p></li>
+	<li><p>The items that will be exempted from the charge.</p></li>
+	<li><p>Whether or not the charge can be edited or removed.</p></li>
+</ul>
+<p>You can add up to nine charges per revenue entity. If the charge is 
+ a percentage, then the calculation will be as follows:</p>
+<p>&#160;</p>
+<p>First charge = (Total chargeable services + Total VAT amount) x % of 
+ charge</p>
+<p>Second charge = (Total chargeable services + Total VAT amount + First 
+ charge) x % of charge</p>
+<p>Third charge = Total chargeable services + Total VAT amount + First 
+ charge + Second charge ) x % of charge</p>
+<p>&#160;</p>
+<p>... and so on.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[Charge1_Service=CHRG1]</p>
+<p>[Charge1_Descr=Service Tax]</p>
+<p>[Charge1_Percent=12]</p>
+<p>[Charge1_InclTax=Y]</p>
+<p>[Charge1_Rounding=N0]</p>
+<p>&#160;</p>
+<p>The tags above will add an invoice line with the description 'Service 
+ Tax' in the invoice. This will be calculated as 12% of the chargeable 
+ services and VAT amount of the invoice.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Configuration/Revenue_Entities.htm">Revenue Entities</a></p></li>
+	<li><p><a href="../Configuration/Revenue_Entities_-_Tags.htm">Revenue 
+	 Entities - Tags</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Additional Charges</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,314 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Document Management</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-weight:bold; }
+ul.hcp4 { list-style:disc; }
+span.hcp5 { font-weight:bold; }
+li.hcp6 { list-style:none;
+display:inline; }
+img.hcp7 { border:none; }
+p.hcp8 { font-weight:normal;
+text-decoration:none; }
+p.hcp9 { font-weight:bold;
+font-style:italic;
+text-decoration:none; }
+p.hcp10 { font-weight:bold;
+text-decoration:none; }
+li.hcp11 { text-decoration:none; }
+li.hcp12 { list-style:disc; }
+span.hcp13 { font-weight:normal; }
+li.hcp14 { font-weight:normal; }
+p.hcp15 { font-weight:normal; }
+p.hcp16 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Document Management</h1>
+<p>Document Management tags can be used to set up your filing cabinet and 
+ index fields.</p>
+<p>&#160;</p>
+<h3>Setting up Filing Cabinets</h3>
+<p>When using Localise Script to add a new filing cabinet, tags for creation 
+ of the filing cabinet and defining the cabinet settings are required.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">To create a new cabinet:</p>
+<p class="hcp3">DFCADD:&lt;FolderNr&gt;+&lt;FolderKey&gt;=&lt;CabinetName&gt;</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp2">To define the cabinet 
+ settings:</p>
+<p class="hcp3">DFCVAL:&lt;FolderNr&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p><span class="hcp5">&lt;FolderNr&gt;</span> is 
+	 the number for the filing cabinet. This should start at 1.</p></li>
+	<li><p><span class="hcp5">&lt;FolderKey&gt;</span> is 
+	 the Key Tag for the filing cabinet. This should be a unique key.</p></li>
+	<li><p><span class="hcp5">&lt;CabinetName&gt;</span> 
+	 is the name for the filing cabinet. If you want to group cabinets 
+	 together, enter the group name and a colon ‘:’ before the cabinet 
+	 name. In this example, “Correspondence” is the name of the group, 
+	 and Confidential is the name of the cabinet: Correspondence:Confidential</p></li>
+	<li><p><span class="hcp5">&lt;DBField&gt;</span> is the 
+	 database field for the cabinet and you require a DFCVAL tag for each 
+	 &lt;DBField&gt;.</p></li>
+	<li class="hcp6"><ul class="hcp4">
+		<li><p>HelpNote - Help Text field</p></li>
+		<li><p>RetentionPolicy - Retention Policy field</p></li>
+		<li><p>ClosedPost - Closed for new documents option</p></li>
+		<li><p>ClosedSearch - Closed for searching option</p></li>
+		<li><p>fNote - Note field</p></li>
+	</ul></li>
+</ul>
+<p><img src="../image121.jpg" alt="" width="839" height="292" border="0" class="hcp7"></p>
+<p style="margin-left: 88px;">Additional &lt;DBField&gt; fields:</p>
+<ul class="hcp4">
+	<li class="hcp6"><ul class="hcp4">
+		<li><p>ParentNr – this is used when you are creating a sub-cabinet 
+		 under another cabinet. If the main cabinet FolderNr=1 then a sub-cabinet 
+		 under this would have ParentNr=1</p></li>
+		<li><p>KeyWords – this field is not currently used.</p></li>
+		<li><p>SizeLimit – this field is not currently used.</p></li>
+		<li><p>FolderSize – this field is used to indicate the limit on 
+		 the size of the folder in the file structure. Normally the field 
+		 is left as 0.</p></li>
+	</ul></li>
+	<li><p><span class="hcp5">&lt;Value&gt;</span> is the 
+	 value for &lt;DBField&gt;. Use 1 to tick a checkbox field and 0 to 
+	 untick the checkbox.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set up a new cabinet as shown above:</p>
+<p>DFCADD:1+CORCON=Correspondence:Confidential</p>
+<p>DFCVAL:1+HelpNote=</p>
+<p>DFCVAL:1+RetentionPolicy=000 (you can obtain the appropriate code from 
+ the Document Retention Policy [DRTP] lookup table)</p>
+<p>DFCVAL:1+ClosedPost=0</p>
+<p>DFCVAL:1+ClosedSearch=0</p>
+<p>DFCVAL:1+fNote=</p>
+<p>DFCVAL:1+ParentNr=0</p>
+<p>DFCVAL:1+SizeLimit=0</p>
+<p>DFCVAL:1+FolderSize=0</p>
+<p>&#160;</p>
+<h3>Setting up Index Fields</h3>
+<p class="hcp8">When creating index 
+ fields, you also need both the tags to create the index field and to specify 
+ the settings for the index field.</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp9">To 
+ create a new index field:</p>
+<p class="hcp10">DIXADD:&lt;IndexNr&gt;+&lt;IndexKey&gt;=&lt;IndexName&gt;</p>
+<p class="hcp10">&#160;</p>
+<p class="hcp9">To 
+ specify the index field settings:</p>
+<p class="hcp10">DIXVAL:&lt;IndexNr&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">where:</p>
+<ul class="hcp4">
+	<li class="hcp11"><p class="hcp8"><span class="hcp5">&lt;IndexNr&gt;</span> is the number for 
+	 the index field. Viewpoint comes with two index fields that should 
+	 not be over-written, INDEX and DOCDATE. Therefore, when you create 
+	 a new index field, the &lt;IndexNr&gt; should start at 3.</p></li>
+	<li class="hcp11"><p class="hcp8"><span class="hcp5">&lt;IndexKey&gt;</span> is key tag for 
+	 the index field.</p></li>
+	<li class="hcp11"><p class="hcp8"><span class="hcp5">&lt;IndexName&gt;</span> is the name of 
+	 the index field.</p></li>
+	<li class="hcp11"><p class="hcp8"><span class="hcp5">&lt;DBField&gt;</span> is the database 
+	 field for the index field. You need to have one DIXVAL tag for each 
+	 &lt;DBField&gt;.</p></li>
+	<li class="hcp6"><ul class="hcp4">
+		<li class="hcp11"><p class="hcp8">IxMandatory 
+		 - Mandatory option</p></li>
+		<li class="hcp11"><p class="hcp8">SortNr 
+		 - position of the index field in the index field list</p></li>
+		<li class="hcp11"><p class="hcp8">IxHelpNote 
+		 - Help/Note field</p></li>
+		<li class="hcp11"><p class="hcp8">IxFldType 
+		 - Field Type field</p></li>
+		<li class="hcp11"><p class="hcp8">FldMask 
+		 - Format/Mask field</p></li>
+		<li class="hcp11"><p class="hcp8">IxAllowDups 
+		 - Allow duplicate index relations for this field option<br>
+		<br>
+		<span style="font-weight: bold; text-decoration: underline; "><img src="../image122.jpg" alt="" width="842" height="349" border="0" class="hcp7"></span><br>
+		</p></li>
+	</ul></li>
+	<li class="hcp11"><p class="hcp8"><span 
+	 style="font-weight: bold; text-decoration: none; ">&lt;Value&gt;</span> 
+	 <span style="font-weight: normal; text-decoration: none; ">is the 
+	 value for &lt;DBField&gt;. Use 1 to tick a checkbox field and 0 to 
+	 untick the checkbox.</span></p></li>
+</ul>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set up an index field as shown above:</p>
+<p>DIXADD:3+CORR=Correspondent</p>
+<p>DIXVAL:3+SortNr=4</p>
+<p>DIXVAL:3+IxHelpNote=</p>
+<p>DIXVAL:3+IxMandatory=0</p>
+<p>DIXVAL:3+IxAllowDups=1</p>
+<p>DIXVAL:3+IxFldType=40</p>
+<p>&#160;</p>
+<h3>Adding Index Fields to Filing Cabinets</h3>
+<p>When you have created an index field, you need to specify which cabinet 
+ will require the index field. Additionally you will need to specify the 
+ settings for the index field in each cabinet.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">To add <span style="font-weight: bold; 
+	 font-style: italic;">the index field to a cabinet:</span></p>
+<p class="hcp3">DCIXADD:&lt;FolderNr&gt;+&lt;IndexNr&gt;=&lt;IndexName&gt;</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp2">To specify the settings 
+ for the field in the cabinet:</p>
+<p class="hcp3">DCIXVAL:&lt;FolderIndexNr&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p><span class="hcp5">&lt;FolderNr&gt;</span> is 
+	 the folder number of the filing cabinet (see To create a new cabinet, 
+	 above).</p></li>
+	<li><p><span class="hcp5">&lt;IndexNr&gt;</span> is the 
+	 number of the index field you want to add (see To create a new index 
+	 field, above).</p></li>
+	<li><p><span class="hcp5">&lt;IndexName&gt;</span> is 
+	 the name you want the field to use in the selected cabinet. For instance, 
+	 the Correspondent index field can be renamed ‘Sender’ in the Correspondence:Confidential 
+	 cabinet.</p></li>
+	<li><p><span class="hcp5">&lt;FolderIndexNr&gt;</span> 
+	 is derived from the folder number for the cabinet and the index number 
+	 for the index field in this manner using the formula (&lt;FolderNr&gt;*100)+&lt;IndexNr&gt;. 
+	 For example:</p></li>
+	<li class="hcp6"><ul class="hcp4">
+		<li><p>If &lt;FolderNr&gt; is 1 and &lt;IndexNr&gt; is 1, &lt;FolderIndexNr&gt; 
+		 would be 101</p></li>
+		<li><p>If &lt;FolderNr&gt; is 11 and &lt;IndexNr&gt; is 2, &lt;FolderIndexNr&gt; 
+		 would be 1102</p></li>
+	</ul></li>
+	<li><p><span class="hcp5">&lt;DBField&gt;</span> is the 
+	 database field for the index field settings within the cabinet. You 
+	 need to specify one DCIXVAL tag for the following &lt;DBField&gt;:</p></li>
+	<li class="hcp6"><ul class="hcp4">
+		<li class="hcp12"><p>Mandatory – define index field 
+		 as mandatory.</p></li>
+		<li><p>AllowDups&#160;– allow duplicate index relations for this 
+		 field option.</p></li>
+		<li class="hcp12"><p>SortNr – this should match the 
+		 SortNr for the index field (see Setting up Index Fields, above).</p></li>
+		<li class="hcp12"><p>FType – this should match the 
+		 FldType for the index field (see Setting up Index Fields, above).</p></li>
+		<li class="hcp12"><p>FMask – this should match the 
+		 FldMask for the index field (see Setting up Index Fields, above).</p></li>
+	</ul></li>
+	<li><p><span class="hcp5">&lt;Value&gt;</span> is the 
+	 value for &lt;DBField&gt;. Use 1 to tick a checkbox field and 0 to 
+	 untick the checkbox.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set up the Correspondent index field in the Correspondence:Confidential 
+ Filing Cabinet:</p>
+<p>DCIXADD:21+3=Sender</p>
+<p>DCIXVAL:2103+Mandatory=0</p>
+<p>DCIXVAL:2103+AllowDups=1</p>
+<p>DCIXVAL:2103+SortNr=4</p>
+<p>DCIXVAL:2103+FType=40</p>
+<p>DCIXVAL:2103+FMask=</p>
+<p>&#160;</p>
+<h3>Adding Task Types</h3>
+<p>When you create a new task type, you also need to specify the settings 
+ for the task.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">To add a new task:</p>
+<p class="hcp3">DTSKADD:&lt;TaskNr&gt;+&lt;TaskKey&gt;=&lt;TaskName&gt;</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp2">To specify task settings:</p>
+<p class="hcp3">DTSKVAL:&lt;TaskNr&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp4">
+	<li><p class="hcp3">&lt;TaskNr&gt; <span class="hcp13">is 
+	 the task number, and starts from 1.</span></p></li>
+	<li><p class="hcp3">&lt;TaskKey&gt; <span class="hcp13">is 
+	 key tag for the task. This should be a unique code.</span></p></li>
+	<li><p class="hcp3">&lt;TaskName&gt; <span class="hcp13">is 
+	 the description of the task.</span></p></li>
+	<li><p class="hcp3">&lt;DBField&gt; <span class="hcp13">is 
+	 the database field for the task settings.</span></p></li>
+	<li class="hcp6"><ul class="hcp4">
+		<li class="hcp14"><p class="hcp15">BtNr 
+		 - position of the task in the task type list</p></li>
+		<li class="hcp14"><p class="hcp15">BtNote 
+		 - Help/Note field</p></li>
+		<li class="hcp14"><p class="hcp15">BtTagValues 
+		 - Tag Values field<br>
+		<br>
+		<img src="../image255.gif" alt="" border="0" class="hcp7"></p></li>
+	</ul></li>
+	<li><p class="hcp3">&lt;Value&gt; <span class="hcp13">is 
+	 the value for &lt;DBField&gt;.</span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To create a task as shown above:</p>
+<p>DTSKADD:21+SINV=Send invoice</p>
+<p>DTSKVAL:21+BtTagValues=[DD.ConvertMail=Y]&lt;BR&gt;[DD.NoMail=R]</p>
+<p>&#160;</p>
+<p>To create a task with follow up tasks:</p>
+<p>DTSKADD:22+APPROVAL=Approval Required for Processing</p>
+<p>DTSKVAL:22+BtTagValues=[On_Complete.Codes=DEVTASK]&lt;BR&gt;[On_Complete.Default=DEVTASK]&lt;BR&gt;[On_Complete.Descr=Send 
+ Invoice]&lt;BR&gt;[On_Complete.Assign=ANNE]&lt;BR&gt;[On_Complete.Due=3]&lt;BR&gt;[On_Complete.Action.ConfirmDraft=VpDocId]&lt;BR&gt;[On_Reject.Codes=DOCSUB,DOCREV]&lt;BR&gt;[On_Reject.Default=DOCREV]&lt;BR&gt;[On_Reject.Descr=Rejected 
+ (-Copy-)]&lt;BR&gt;[On_Reject.Caption=Decline]&lt;BR&gt;[On_Reject.Complete=Y]&lt;BR&gt;[On_Reject.Assign=ANNE]&lt;BR&gt;[On_Reject.Due=3]</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp4">
+	<li><p><a href="Filing_Cabinets.htm">Filing Cabinets</a></p></li>
+	<li><p><a href="Index_Fields.htm">Index Fields</a></p></li>
+	<li><p><a href="Tasks_-_Configuration.htm">Tasks - Configuration</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Document Management</p>
+<p class="hcp16">&#160;</p>
+<p class="hcp16">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp16">Version: 8.0.2022.09.20</p>
+</body>
+</html>

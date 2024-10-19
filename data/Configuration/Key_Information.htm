@@ -1,0 +1,1026 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Key Information">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Key Information</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+td.hcp2 { vertical-align:top; }
+p.hcp3 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp4 { margin-left:6pt;
+margin-right:6pt;
+font-weight:normal;
+font-style:normal;
+text-decoration:none; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+p.hcp6 { margin-left:0px; }
+p.hcp7 { margin-left:6pt;
+margin-right:6pt;
+color:#300063; }
+p.hcp8 { margin-left:12px; }
+ol.hcp9 { list-style:decimal; }
+p.hcp10 { margin-left:36px; }
+p.hcp11 { margin-left:6pt;
+margin-right:6pt;
+mso-ansi-language:EN-US; }
+span.hcp12 { font-weight:bold; }
+li.hcp13 { list-style:disc; }
+p.hcp14 { font-weight:bold;
+color:#300063; }
+br.hcp15 { page-break-before:always; }
+p.hcp16 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Key Information</h1>
+<p>&#160;</p>
+<p>The Key Information field of a template contains additional codes or 
+ queries that will determine the information retrieved for the template. 
+ Depending on the template type, the following can also be added to the 
+ Key Information:</p>
+<ul class="hcp1">
+	<li><p>Word Templates</p></li>
+	<ul class="hcp1">
+		<li><p>Document Management index tags</p></li>
+		<li><p>Action Management tags</p></li>
+		<li><p>Special codes</p></li>
+	</ul>
+	<li><p>HTML Templates</p></li>
+	<ul class="hcp1">
+		<li><p>Grid Attributes</p></li>
+		<li><p>Context Menu Statements</p></li>
+	</ul>
+</ul>
+<p>&#160;</p>
+<h2>Queries and Statements</h2>
+<p>For both Word and HTML templates, the queries and statements are used 
+ for information retrieval and can be divided into the following:</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="1296">
+	<col style="width: 16.235%;">
+	<col style="width: 83.765%;">
+	<tr class="t1st">
+		<td class="hcp2"><p class="hcp3">Item</p></td>
+		<td class="hcp2"><p class="hcp3">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">Header 
+		 statement</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 depends on the selection of the Select Definition field for the 
+		 template but can be customised by the user. It is not applicable 
+		 to Forms.</p>
+		<p class="hcp3">For HTML templates, 
+		 this is used only with the ftyp=evw prefix.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Syntax:</p>
+		<p class="hcp3">[/HD-SQL=SELECT 
+		 .../]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">When Select Definition 
+		 = Entity Information [015], the header statement would be</p>
+		<p class="hcp3">[/HD-SQL=SELECT 
+		 * FROM CR_Entity WHERE/]</p>
+		<p class="hcp3">&#160;</p>
+		<p style="margin-left: 6pt; margin-right: 6pt; font-weight: bold; 
+			 text-decoration: underline; "><span style="font-weight: bold; 
+												 text-decoration: underline; ">Billing 
+		 templates</span></p>
+		<p class="hcp4">Billing templates 
+		 have two header statements: one for proforma invoices and the 
+		 other <span style="font-weight: normal; font-style: normal; text-decoration: none; ">for 
+		 invoices. Each template must have both, regardless if they are 
+		 used only for draft, invoice, or both types of documents.</span></p>
+		<p class="hcp4">[/HD-SQL=SELECT 
+		 * FROM ProformaHeader WHERE /]</p>
+		<p class="hcp4">[/HD-SQL!=SELECT 
+		 * FROM InvoiceHeader WHERE /]</p>
+		<p class="hcp4">&#160;</p>
+		<p style="margin-left: 6pt; margin-right: 6pt; font-style: normal; 
+			 font-weight: bold; text-decoration: underline; ">HTML templates</p>
+		<p class="hcp4">HTML templates 
+		 must also have the following:</p>
+		<p class="hcp4">[/HD-SelKey=&lt;Field&gt;='(-MF-)'/] 
+		 - to link the selected Master File to the Master File field of 
+		 the header statement e.g. &#160;[/HD-SelKey=RefCode='(-MF-)'/] 
+		 means value for the RefCode field is the selected Master File</p>
+		<p class="hcp4">[/HD-SelRef=MF=&lt;Field&gt;/] 
+		 - to define the Master File field to use for checking on whether 
+		 the user can access the Master File or not e.g. [/HD-SelRef=MF='(-RefCode-)'/] 
+		 means the RefCode field will determine if the user has access 
+		 to the Master File</p>
+		<p class="hcp4">For both, &lt;Field&gt; 
+		 is a field retrieved by the header statement e.g. (-EntCode-),(-RefCode-)</p>
+		<p class="hcp4">&#160;</p>
+		<p class="hcp4"><span class="hcp5">Note</span>: Ensure that the query does not 
+		 contain any '&amp;' (ampersand), '[' ']' (square brackets) and 
+		 '[/' '/]' (square brackets slash). These characters are the reserved 
+		 query characters and cannot be used by the user.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">SQL 
+		 query</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 is defined by the user to specify the database table or view required 
+		 to obtain the necessary information.</p>
+		<p class="hcp3">For HTML templates, 
+		 this can be used with both ftyp=evw and fgrd prefixes.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Syntax:</p>
+		<p class="hcp3">&#160;[/&lt;Query&gt;=SELECT.../]</p>
+		<p class="hcp3">where &lt;Query&gt; 
+		 is a unique name for the query.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">[/CoType=SELECT 
+		 ShortName FROM EntityTypes INNER JOIN Entity ON (EntityTypes.EType=Entity.EntType 
+		 AND EntityTypes.JurisDic=Entity.IncorpPlace) WHERE Entity.EntCode='(-EntCode-)'/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3"><span class="hcp5">Note</span>: Ensure that the query does not 
+		 contain any '&amp;' (ampersand), '[' ']' (square brackets) and 
+		 '[/' '/]' (square brackets slash). These characters are the reserved 
+		 query characters and cannot be used by the user.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">DT 
+		 query and statement</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 is also defined by the user to obtain information which will be 
+		 presented in rows and columns. The query is to specify the database 
+		 table or view required to obtain the information and the statement 
+		 is to define the formatting for the retrieved information by the 
+		 corresponding query.</p>
+		<p class="hcp3">For HTML templates, 
+		 this is used only with the ftyp=evw prefix.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Syntax:</p>
+		<p class="hcp3">For the query - 
+		 [/DT.&lt;Query&gt;-SQL=SELECT.../]</p>
+		<p class="hcp3">For the statement- 
+		 [/DT.&lt;Query&gt;-FORMAT=\&lt;Column&gt;:&lt;Format&gt;\.../]</p>
+		<p class="hcp3">where</p>
+		<ul class="hcp1">
+			<li><p class="hcp3">&lt;Query&gt; 
+			 for both the query and statement must be the same</p></li>
+			<li><p class="hcp3">&lt;Column&gt; 
+			 refers to the column number</p></li>
+			<li><p class="hcp3">&lt;Format&gt; 
+			 is the Format Option code</p></li>
+		</ul>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">[/DT.BUSNAME-SQL=SELECT 
+		 BusRegNr, PrincipleBNR, BusNames.DateRegistration, BAddrNr, BusName, 
+		 DateRenew, BusNature FROM BusNames WHERE ((EntCode='(-ENTCODE-)'))/]</p>
+		<p class="hcp3">[/DT.BUSNAME-FORMAT=\2:Yes/No\3:DMB\4:#AC-1-1\6:DMB/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3"><span class="hcp5">Note:</span> Ensure that the query does not 
+		 contain any '&amp;' (ampersand), '[' ']' (square brackets) and 
+		 '[/' '/]' (square brackets slash). These characters are the reserved 
+		 query characters and cannot be used by the user.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Header Statement - Field Codes</h3>
+<p class="hcp6">When your header statement selects all fields 
+ (*) from a table or view, you can retrieve any of the fields in the template 
+ using the prefix HD.</p>
+<p class="hcp6">For example, with&#160;</p>
+<p class="hcp6">[/HD-SQL=SELECT * FROM CR_Company WHERE /]</p>
+<p class="hcp6">you can use (+HD.Name,+), (+HD.EntClient+), 
+ etc.</p>
+<p class="hcp6">&#160;</p>
+<h3>Customising the Header Statement</h3>
+<p class="hcp6">The header statement can be changed such as 
+ replacing * with actual fields that you require, adding condition(s) or 
+ adding ORDER BY to sort the retrieved information.</p>
+<p class="hcp6">To add condition(s), you need to add the condition 
+ and 'AND' to the header statement - [/HD-SQL=SELECT * FROM &lt;Table/View&gt; 
+ WHERE &lt;Condition&gt; AND/]</p>
+<p class="hcp6">To sort information, add ORDER BY - [/HD-SQL=SELECT 
+ * FROM &lt;Table/View&gt; WHERE &lt;Condition&gt; AND ORDER BY &lt;Field&gt;/]</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6"><a class="dropspot" href="javascript:TextPopup(this)" id="a2">How 
+ do I get information for all entities into one report?</a></p>
+<div class="droptext" id="POPUP316566778" style="display: none;">
+	<p>This is normally required for reports that provide a snapshot of 
+	 information in the database at a particular time, such as entities 
+	 that are due for renewal in the first half of the year. Use the COUNT 
+	 function in the header statement for situations such as this.</p>
+	<p><span class="hcp5">Note</span>: 
+	 You may not be able to use the HD prefix for your field codes, and 
+	 will have to retrieve the information using normal SQL queries.</p>
+	<p>&#160;</p>
+	<p>When using COUNT, the conditions specified in the selection criteria 
+	 screen will have no impact on the results, and you need to make sure 
+	 that your conditions are specified in your SQL queries.</p>
+	<p>For example:</p>
+	<p>[/HD-SQL=SELECT COUNT(EntCode) FROM CR_Shareholders WHERE /]</p>
+	<p>&#160;</p>
+</div>
+<p class="hcp6"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">I 
+ am getting multiple copies of the same report. What should I do?</a></p>
+<div class="droptext" id="POPUP316556188" style="display: none;">
+	<p>Generally, the addition of the keyword 'DISTINCT' to the header 
+	 statement will resolve this issue. You may need to further customise 
+	 the query so that you get the exact results that you want.</p>
+	<p>For example:</p>
+	<p>[/HD-SQL=SELECT DISTINCT EntCode FROM CR_Shareholders WHERE /]</p>
+</div>
+<p class="hcp6">&#160;</p>
+<h3>Same Selection Criteria as HD-SQL</h3>
+<p class="hcp6">Using (-HDSEL-) will get the exact conditions 
+ as HD-SQL query.</p>
+<p class="hcp6">Word Report Statement Billing File - with 
+ Outstanding Invoices [RMSTBFE2]</p>
+<p class="hcp6">[/OUTINV=SELECT O.RefCode, O.BillAddress, 
+ O.RevEntity, O.HeaderNote, O.DateCreate, O.EntClient, O.DateDue, O.DateInvoice, 
+ O.ProformaNr, O.InvoiceType, O.CurCode, O.InvoiceCur</p>
+<p class="hcp6">FROM BR_OverDueAgeingCur O WHERE RefCode = 
+ '(-RefCode-)' AND RevEntity = '(-RevEntity-)' AND CurCode = '(-CurCode-)' 
+ AND (-HDSEL-) ORDER BY DateInvoice/]</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">XML Report</p>
+<p class="hcp6">[/ADDRESSES=SELECT * FROM CR_RefAddresses 
+ WHERE Active = 1 AND (-HDSEL-)/]</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">Word Report Statement Billing File - Include 
+ Outstanding Invoices without Draft [RMSTBFINV1]</p>
+<p class="hcp6">[/OUTINV=SELECT RefCode, ProformaNr FROM BR_OverDueAgeingCur 
+ WHERE RefCode = '(-RefCode-)' AND (-HDSEL-)/]</p>
+<p>&#160;</p>
+<h2>Index Tags</h2>
+<p>These refer to the Document Management <a href="../Document_Manager/Document_Management_Tags.htm">index 
+ tags</a> which can be added for Word templates in the following libraries:</p>
+<ul class="hcp1">
+	<li><p>Word Reports</p></li>
+	<li><p>Form Library</p></li>
+	<li><p>Correspondence</p></li>
+	<li><p>Billing Templates</p></li>
+</ul>
+<p>The tags are obtained from <a href="../Document_Manager/Index_Wizard.htm">Index 
+ Wizard</a> and placed here.</p>
+<p>&#160;</p>
+<h2>Action Management Tags</h2>
+<p>These tags apply only to Billing templates and will automatically create 
+ a new action when the document is generated. This way, there is no need 
+ for user to manually create the action. Refer to <a href="../Practice_Manager/Action_Management.htm">Action 
+ Management</a> for more information.</p>
+<p>&#160;</p>
+<h2>Special Codes</h2>
+<p>These are additional codes that can be added for specific purposes as 
+ follows:</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="1372">
+	<col style="width: 32.202%;">
+	<col style="width: 67.798%;">
+	<tr class="t1st">
+		<td class="hcp2"><p class="hcp7">Code</p></td>
+		<td class="hcp2"><p class="hcp7">Usage</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/DELETE_FORM=&lt;Code&gt;/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where &lt;Code&gt; 
+		 refers to the code of the template</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">Deletes 
+			 the change links for specified forms to disable the forms 
+			 when replacements are imported into the Form Library.</p></li>
+			<li><p class="hcp3">Normally 
+			 used for statutory forms.</p></li>
+		</ul>
+		<p>Example:</p>
+		<p>[/DELETE_FORM=FRM123,FRM145/]</p>
+		<p>The above will delete the change links for forms FRM123 and 
+		 FRM145.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/SAVETO=&lt;FileName&gt;/]</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">where &lt;Filename&gt; 
+		 can be normal text or field code or both</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>Used in Word Reports, Correspondence, and Billing Templates 
+			 libraries only.</p></li>
+			<li><p>Allows you to specify the file name to use when saving 
+			 the generated document.</p></li>
+			<li><p>For field code, this must be fields retrieved by the 
+			 header statement and must be defined using this syntax '(-Field-)'.</p></li>
+		</ul>
+		<p>Example:</p>
+		<p>[/SAVETO=(-RefCode-) Draft Invoice (-ProformaNr-)/]</p>
+		<p>The above will result in a file name that contains the code 
+		 of the Billing File (RefCode) and the draft invoice number (ProformaNr).</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 For posted invoices, the above needs to be repeated with an exclamation 
+		 mark '!' after SAVETO, as in:</p>
+		<p>[/SAVETO!=(-RefCode-) Invoice (-InvoiceNr-)/]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/HD-Mailto=RefCode/]</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>Used in Word Reports and Billing Templates libraries 
+			 only.</p></li>
+			<li><p>This will ensure the Master File column in the E-mail 
+			 Bin picks up the name of the Master File when the generated 
+			 document is sent to E-mail Bin.</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/PRINT_DIALOG=Y/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">Prevents 
+			 users from editing the form after generation.</p></li>
+			<li><p class="hcp3">Adding 
+			 this code to the Key Information will display the Output Document 
+			 screen when users click on Print. This allows users to choose 
+			 whether to print the form or convert it to a PDF file.</p></li>
+		</ul>
+		&#160;</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/EDIT_DIALOG=&lt;UserGroup/]</p>
+		<p class="hcp3">where &lt;UserGroup&gt; 
+		 refers to the code of the User Group.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">Prevents 
+			 users in the specified User Groups from editing the form after 
+			 generation.</p></li>
+			<li><p class="hcp3">Adding 
+			 this code to the Key Information will display the Output Document 
+			 screen when users click on Print. This allows users to choose 
+			 whether to print the form or convert it to a PDF file.</p></li>
+		</ul>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">[/EDIT_DIALOG=ADMIN,MGRS,SYSMGR/]</p>
+		<p class="hcp3">means that users 
+		 in these three User Groups will see the Output Document screen, 
+		 and are not able to edit the generated form before it is printed 
+		 or converted to</p>
+		<p class="hcp3">PDF.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/GROUPDOC=&lt;Field&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>Used to merge Word reports into a single Word file where 
+			 the group &lt;field&gt; is the same.</p></li>
+			<li><p>The &lt;field&gt; must be a database field returned 
+			 by the header statement and the header statement must be sorted 
+			 by this field.</p></li>
+			<li><p>If [/GROUPDOC=*/] is used, you will only get one Word 
+			 file. This is equivalent to the obsolete [TO_ONE_FILE] option.</p></li>
+			<li><p>When using this code, do not use Viewpoint (+...+) codes 
+			 in the header or footer of the document template.</p></li>
+		</ul>
+		<p class="hcp8">Example:</p>
+		<p class="hcp8">[/GROUPDOC=*/]</p>
+		<p class="hcp8">will merge all generated documents 
+		 to one file.</p>
+		<p class="hcp8">&#160;</p>
+		<p class="hcp8">[/HD-SQL=SELECT * FROM CR_Company 
+		 WHERE ORDER BY EntClient, EntCode/]</p>
+		<p class="hcp8">[/SAVETO=Register of Directors - 
+		 &#160;Client Group Code: (-EntClient-)/]</p>
+		<p class="hcp8">[/GROUPDOC=EntClient/]</p>
+		<p class="hcp8">will result in one generated document 
+		 with the filename containing the code of the client Master File 
+		 e.g. 'Register of Directors - Client Group Code: ARCHER.doc'</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/LINKCODE.&lt;ChangeCode&gt;=&lt;GridCode&gt;/]</p>
+		<p class="hcp3">where</p>
+		<ul class="hcp1">
+			<li><p class="hcp3">&lt;ChangeCode&gt; 
+			 is the change code that triggers the form</p></li>
+			<li><p class="hcp3">&lt;GridCode&gt; 
+			 is the code for the grid containing the record that you wish 
+			 to link the form to</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">Links generated 
+			 form to a record in the specified grid once the form has been 
+			 stored.</p></li>
+			<li><p class="hcp3">This code 
+			 can be used multiple times in a form template to create record 
+			 links in different grid for different changes.</p></li>
+			<li><p class="hcp3">The list 
+			 of Change Codes are available in the <a href="../Shared/Changes_Codes.htm">Change 
+			 Codes</a> screen.</p></li>
+			<li><p class="hcp3">For the 
+			 Grid Code, click <a class="dropspot" href="javascript:TextPopup(this)" id="a31">here</a> 
+			 to learn how to obtain the code.</p>
+			<div class="droptext" id="POPUP3165761661" style="display: none;">
+				<ol class="hcp9">
+					<li><p>Go to &#160;the screen containing the grid.</p></li>
+					<li><p>Click Grid Details tab on the right.</p></li>
+					<li><p>The gridcode is located on the bottom of the 
+					 screen.</p></li>
+				</ol>
+				<p>Alternatively, right-click within the grid and click 
+				 View Details.</p>
+   </div></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/MERGE_EVENT=&lt;ChangeCode&gt;/]</p>
+		<p class="hcp3">where &lt;ChangeCode&gt; 
+		 can be:</p>
+		<ul class="hcp1">
+			<li><p class="hcp3">OFP for 
+			 Officer/Relation - Change of Particulars</p></li>
+			<li><p class="hcp3">SMP for 
+			 Shareholders - Change of Particulars</p></li>
+			<li><p class="hcp3">BEP for 
+			 Beneficiary - Change of Particulars</p></li>
+			<li><p class="hcp3">ITP for 
+			 Entity Interest Holder - Change of Particulars</p></li>
+			<li><p class="hcp3">ONC for 
+			 Owners &amp; Controllers - Change of Particulars</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p>Used in the Form Library only.</p></li>
+			<li><p>Used to report multiple changes to one Master File as 
+			 one change.</p></li>
+			<li><p>This is normally used for change of particulars forms.</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 This is required if the form includes [/GOSUB=OFFGENERAL/] sub-routine, 
+		 see below.</p>
+		&#160;</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/GOSUB=&lt;Sub-Routine&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">These codes 
+			 are used when the form requires a specific sub-routine in 
+			 order to properly retrieve information.</p></li>
+			<li><p class="hcp3">There can 
+			 only be one sub-routine per form.</p></li>
+		</ul>
+		<p class="hcp3">For example:</p>
+		<p class="hcp3">[/GOSUB=OFFGENERAL/]</p>
+		<p class="hcp3">will retrieve:</p>
+		<ul class="hcp1">
+			<li><p class="hcp3">details 
+			 of appointed officers where the officer code starts with D,S 
+			 or M</p></li>
+			<li><p class="hcp3">details 
+			 of change of particulars for Master Files that are Statutory 
+			 or Trust Officers, Entity Relations, Shareholders, Beneficiaries, 
+			 Interest Holders, Owners and Controllers.</p></li>
+		</ul>
+		<p class="hcp3">This is normally 
+		 used for change of particulars forms where the BLOCK statement 
+		 within the template should contain the condition EGRP=OFFGEN.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">[/GOSUB=ALLT/]</p>
+		<p class="hcp3">will retrieve information 
+		 related to issuance of shares in a specific format. Examples of 
+		 field codes for this sub-routine are:</p>
+		<p class="hcp3">(+SUB.IssueAmount+) 
+		 to get the currency and amount of shares issued</p>
+		<p class="hcp3">(+SUB.NewAllotC+) 
+		 to get details of shares issued like the share class, currency, 
+		 number of shares issued, amount paid per share and amount unpaid 
+		 per share.</p>
+		<p class="hcp3">You can see this 
+		 sub-routine in these templates for Hong Kong - HK14NSC1 and HK14NSC11.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">[/GOSUB=ShareIssueNrs/]</p>
+		<p class="hcp3">allows for SQL 
+		 queries in the template to refer to share issue number to retrieve 
+		 related information.</p>
+		<p class="hcp3">For example, when 
+		 this sub-routine is added, the CanCSh query contains the condition 
+		 'IssueNr IN (-ShareIssueNrs-)'</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">[/GOSUB=ShareIssueNrs/]</p>
+		<p class="hcp3">[/CancSh=SELECT 
+		 SUM(NrShare*-1), ShareClassName, CASE WHEN Currency='GBP' THEN 
+		 NCHAR(0xA3) WHEN Currency='EUR' THEN NCHAR(0x20AC) WHEN Currency='USD' 
+		 THEN NCHAR(0x024) ELSE Currency END AS Currency, NomValShare FROM 
+		 CR_ShareTransactions WHERE EntCode='(-EntCode-)' AND IssueNr IN 
+		 (-ShareIssueNrs-) GROUP BY ShareClassName, Currency, NomValShare/]</p>
+		<p class="hcp3">You can see this 
+		 sub-routine in this template - GI14NTCNCLSH.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">[/GOSUB=CHANGEPRTCOFF/]</p>
+		<p class="hcp3">will retrieve details 
+		 of change of particulars for statutory officers with hard-coded 
+		 field codes and requires the use of BLOCK statements with certain 
+		 conditions.</p>
+		<p class="hcp3">You can see this 
+		 sub-routine in these templates for Gibraltar - GI14PTSEC, GI14PTDIR, 
+		 GI14PTMGR.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3">[/GOSUB=CHANGEPRTCSHR/]</p>
+		<p class="hcp3">will retrieve details 
+		 of change of particulars for shareholders with hard-coded field 
+		 codes and requires the use of BLOCK statement with the condition 
+		 EGRP=SHPX.</p>
+		<p class="hcp3">You can see this 
+		 sub-routine in these templates for Gibraltar - GI14MEMDET.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3"><span class="hcp5">Note</span>: These sub-routines are also 
+		 available but they apply only to certain jurisdictions and the 
+		 information retrieved is very specific - OfficerGib, OfficerMal, 
+		 OfficerLab, OfForGib, OfForIOM and OfFReignMa.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/FRMHKG=&lt;Sub-routine/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><ul class="hcp1">
+			<li><p class="hcp3">Used in 
+			 the Form Library only.</p></li>
+			<li><p class="hcp3">Similar 
+			 to [/GOSUB=&lt;Sub-routine&gt;/].</p></li>
+			<li><p class="hcp3">These codes 
+			 will retrieve certain information in a specific manner and 
+			 is based on requirements and design of the template. If the 
+			 design of the template changes, an enhancement is required.</p></li>
+			<li><p class="hcp3">There can 
+			 only be one sub-routine per form.</p></li>
+			<li><p class="hcp3">Examples:</p></li>
+			<li><p class="hcp10">[/FRMHKG=CYHE57/]</p></li>
+			<li><p class="hcp10">[/FRMHKG=CYHE4/]</p></li>
+			<li><p class="hcp10">[/FRMHKG=D2B/]</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[$MAIL]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 is automatically added when the template is refreshed if the template 
+		 contains <a href="E-mail_Tags.htm">E-mail Tags</a>.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp3">[/FILEEXT=&lt;Format&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 tag is used to allow .txt templates to be saved as another format 
+		 such as .xml or .csv. The tag is useful for templates that are 
+		 to be submitted to authorities who require it in a specific format 
+		 such as .csv.</p>
+		<p class="hcp3">&#160;</p>
+		<p class="hcp3"><span class="hcp5">Note</span>: A number of .txt templates generate 
+		 as .xml file by default so this tag is not necessary.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/Editor.Mode=&lt;mode&gt;/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">where &lt;mode&gt; should be specified 
+		 as 'Comparison'</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 tag is used for Data Comparison. It will enabled the XML Viewer 
+		 which showing the 'Retrieve Data' ribbon button.</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/Editor.Mode=Comparison/]</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/Editor.&lt;Column&gt;=&lt;ColumnCaption&gt;/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">where &lt;Column&gt; is either 'CompareFrom' 
+		 or 'CompareTo'</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">where &lt;ColumnCaption&gt; is the 
+		 intended caption to put for specified column during Data Comparison</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">This 
+		 tag is used to change the default column caption in the XML Viewer 
+		 during Data Comparison to the caption as per defined in the template's 
+		 Key Information.</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/Editor.CompareFrom=Viewpoint Data/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/Editor.CompareTo=Authority Data/]</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/ComparePatterns=&lt;Element&gt;,&lt;Element&gt;…./]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/&lt;Element&gt;.Pattern=&lt;Format&gt;/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">where &lt;Element&gt; is to specify 
+		 the element especially identifier e.g. DateOfBirth.</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">where &lt;Format&gt; is the format 
+		 of the identifier to be formatted to e.g. yyyy-MM-dd</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp11">The 
+		 value of the specified element in the tag will be formatted to 
+		 the defined format if this tag is included in the Key Information 
+		 of a template with the mode 'Comparison.' This will improve the 
+		 accuracy of the Data Comparison.</p>
+		<p class="hcp11">Because 
+		 the date format returned from Authority data could not be matched 
+		 with the format for Viewpoint data, this is especially useful 
+		 for elements with date formatted data</p>
+		<p class="hcp11">Example:</p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/ComparePatterns=DateOfBirth,StartDate,EndDate,DateOfRegistration/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/DateOfBirth.Pattern=yyyy-MM-dd/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/StartDate.Pattern=yyyy-MM-dd/]</span></p>
+		<p class="hcp11"><span 
+		 lang="EN-US" xml:lang="EN-US">[/EndDate.Pattern=yyyy-MM-dd/]</span></p>
+		<p class="hcp11">[/DateofRegistration.Pattern=yyyy.MM.dd/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11">[/Editor.CaseSensitive=Y/</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp11">&#160;This 
+		 tag is used in the template's Key Information during Data Comparison, 
+		 and it allows each data to be case sensitive. The data will be 
+		 in case insensitive format by default if this tag is not defined 
+		 in the template's Key Information.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp11">[/Editor.WhitespaceSensitive=Y/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp11">This 
+		 tag is used in the template's Key Information during Data Comparison 
+		 to allow for whitespace sensitive leading and trailing spaces 
+		 on each data set. If this tag is not defined in the template's 
+		 Key Information, the data will be insensitive to whitespace by 
+		 default.</p></td>
+	</tr>
+</table>
+<p class="hcp6">&#160;</p>
+<h6 class="Heading8">Tips on Coding</h6>
+<ol class="hcp9">
+	<li><p class="Listing">Use single quote ( ' ) instead of double quotes 
+	 ( &quot; ) EXCEPT for abbreviations(datepart) for DATEADD, DATEPART, 
+	 DATEDIFF functions in MS Access.</p>
+	<ul class="hcp1">
+		<li><p class="Listing">For MS Access: DateAdd(<span class="hcp12">&quot;</span>yyyy<span class="hcp12">&quot;</span>,1,AcctYearEnd).</p></li>
+		<li><p class="Listing">For MSSQL: DateAdd(yyyy,1,AcctYearEnd).</p></li>
+	</ul></li>
+	<li><p class="Listing">Use brackets around all keywords:</p>
+	<ul>
+		<li class="hcp13"><p class="Listing">SELECT [Open],[Left].</p></li>
+		<li class="hcp13"><p class="Listing">SELECT DateAppoint 
+		 AS [Date].</p></li>
+	</ul></li>
+</ol>
+<h2>Grid Statements</h2>
+<p>These are for HTML templates where the prefix fgrd is used in the template 
+ to display retrieved information in a grid with additional features such 
+ as ability to sort by column and a Refresh button.</p>
+<p><img src="../image282.gif" alt="" style="border: none;" border="0"></p>
+<p>&#160;</p>
+<p>The grid statement is as follows:</p>
+<p>[/Query&gt;-&lt;Setting&gt;=&lt;Value&gt;/]</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+	<li><p>&lt;Query&gt; is the name of the grid statement and must be 
+	 unique</p></li>
+	<li><p>&lt;Setting&gt; refers to the attribute of the grid</p></li>
+	<li><p>&lt;Value&gt; refers to the required information for the &lt;Setting&gt; 
+	 and differs based on the &lt;Setting&gt;</p></li>
+</ul>
+<p>&#160;</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 7.136%;">
+	<col style="width: 33.259%;">
+	<col style="width: 59.605%;">
+	<tr class="t1st">
+		<td class="hcp2"><p class="hcp14">&lt;Setting&gt;</p></td>
+		<td class="hcp2"><p class="hcp14">Syntax</p></td>
+		<td class="hcp2"><p class="hcp14">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>SQL</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>[/&lt;Name&gt;-SQL=&lt;Statement&gt;/]</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>This is to define 
+		 the query for retrieving information.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/OEREL-SQL=SELECT MeetType, MeetName, MGTT.[Name], CASE WHEN 
+		 MeetActive = 0 THEN 'Inactive' ELSE 'Active' END AS MeetActive, 
+		 EntCode, MeetCode FROM EntMeetType EMT LEFT JOIN qLvFNRP MGTT 
+		 ON MGTT.ElCode = EMT.MeetFreq WHERE EntCode = '(-EntCode-)'/]</p>
+		<p>The above specifies that the OEREL grid will be retrieving information 
+		 from EntMeetType.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>CAPTION</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>[/&lt;Name&gt;-CAPTION=\1:&lt;Caption1&gt;\2:&lt;Caption2&gt;\:.../]</p>
+		<p>&#160;</p>
+		<p>where &lt;Caption1&gt;,&lt;Caption2&gt;,.. will be text that 
+		 will appear as the column heading.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>This is to define 
+		 the column header for each column of the grid. Each column is 
+		 separated by a '\:'.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/OEREL-CAPTION=\1:Meeting Type\2:Meeting Name\3:Frequency\4:Status/]</p>
+		<p>The above specifies that the grid will have four columns and 
+		 the headings are 'Meeting Type', 'Meeting Name', 'Frequency' and 
+		 'Status'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>WIDTH</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>[/&lt;Query&gt;-WIDTH=\1:&lt;Width1&gt;\2:&lt;Width2&gt;\:.../]</p>
+		<p>&#160;</p>
+		<p>where &lt;Width1&gt;,&lt;Width2&gt;,..values will add up to 
+		 100.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>This is to define 
+		 the column width for each column of the grid. Each column is separated 
+		 by a '\:'.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/OEREL-WIDTH=\1:20\2:40\3:30\4:10/]</p>
+		<p>The above specifies that the first column will have a width 
+		 of 20, the second column width is 40, the third column width if 
+		 30 and the fourth column width is 10.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>FORMAT</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>[/&lt;Query&gt;-FORMAT=\1:&lt;Format1&gt;\2:&lt;Format2&gt;\:.../]</p>
+		<p>&#160;</p>
+		<p>where &lt;Format1&gt;,&lt;Format2&gt;,... is the format which 
+		 can be:</p>
+		<ul class="hcp1">
+			<li><p><span style="mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+			 xml:lang="EN-US">DMB – Date format</span></span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">DATETIME – Date 
+			 &amp; time</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">C2 – 2 decimal points 
+			 for amount</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">C4 – 4 decimal points 
+			 for amount</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">C0 – No decimal 
+			 points for amount</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">C6 – 6 decimal points 
+			 for amount</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">PEC – Percentage</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">DTM – Time</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">NS – Not show</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">CM=&lt;Id&gt; – 
+			 Context menu</span></p></li>
+			<li><p><span lang="EN-US" xml:lang="EN-US">Viewpoint <a href="Format_Options.htm">Format 
+			 Option</a> codes</span></p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>This is to define 
+		 the format for values in the column. Each column is separated 
+		 by a '\:'.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/OEREL-FORMAT=\1:\2:\3:\4:\5:*NS\6:*NS/]</p>
+		<p>The above specifies format for the 5th and 6th column. For the 
+		 other columns, no formatting is specified.</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 The format must be in order so if there is no format required 
+		 for a column, leave it empty.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>CM</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>[/&lt;Query&gt;-CM=&lt;Option1&gt;,&lt;Option2&gt;,…/]</p>
+		<p>where &lt;Option1&gt;,&lt;Option2&gt;,... refers to the workflow 
+		 that you would like to make available for selection. However, 
+		 &lt;Option1&gt;, &lt;Option2&gt; is not the name of the workflow 
+		 template but rather, the name of the Context Menu Statements used 
+		 to define the workflow.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>This is used 
+		 to specify the workflow that can be started when you right-click 
+		 on a Master File option in the grid. Each workflow is linked to 
+		 the option which must be further specified using the Context Menu 
+		 Statements.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/OEREL-CM=APPREL, RESREL/]</p>
+		<p>The above specifies two options for the context menu and properties 
+		 for the option will refer to additional context menu statements 
+		 in the Key Information with the name 'APPREL' and 'RESREL'.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Context Menu Statements</h2>
+<p>These statements are required for context menu options that you want 
+ to add to the template. </p>
+<p>For HTML template with the ftyp=evw prefix, apart from the View Details, 
+ Open File, Enquiry and Relations options, you can specify more options 
+ that will open other Viewpoint screen. To do this, add the context menu 
+ statement in the following syntax:</p>
+<p>[/CM.&lt;Identifier&gt;=&lt;Screen&gt;/]</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+	<li><p>&lt;Identifier&gt; is the field with the context menu </p></li>
+	<li><p>&lt;Screen&gt; is the screenID</p></li>
+</ul>
+<p>Example:</p>
+<p class="hcp3">In Key Information - [/CM.Info=FSEGENER,FSEMNADT/]</p>
+<p class="hcp3">In the template - <span class="hcp12">(+ftyp=evw|CM.EntClient\#INFO+)</span>(+ftyp=evw|HD.EntClient\#AD-1-0+) 
+ <span class="hcp12">(+ftyp=evw|CM.EntClient\#INFO|END+)</span></p>
+<p>&#160;</p>
+<p>For HTML template with the fgrd prefix, additional context menu options 
+ would be for starting workflows where both the caption and the workflow 
+ template for each option must be specified.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 22.659%;">
+	<col style="width: 77.341%;">
+	<tr class="t1st">
+		<td class="hcp2"><p class="hcp14">Syntax</p></td>
+		<td class="hcp2"><p class="hcp14">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>[/&lt;Option&gt;-CAPTION=&lt;Caption&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is used 
+		 to specify the caption that will be seen when user performs a 
+		 right-click to access the context menu.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/APPREL-CAPTION=Appoint Relation/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>[/&lt;Option&gt;-URL=WF.mfCode=&lt;Field&gt;&amp;Wkey=&lt;WorkflowTemplateKey&gt;/]</p>
+		<p>where </p>
+		<ul class="hcp1">
+			<li><p>&lt;Field&gt; is to define the Master File for the worklow</p></li>
+			<li><p>&lt;WorkflowTemplateKey&gt; is the Key of the workflow 
+			 template</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is used 
+		 to launch a workflow from the context men and requires the workflow 
+		 template key and the Master File for the workflow. </p>
+		<p>[/APPREL-URL=WF.mfCode=(-HD.EntCode-)&amp;Wkey=VPWFR001/]</p>
+		<p>The above will launch the workflow with the key 'VPWFR001' for 
+		 the Master File selected within the grid.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>[/&lt;Option&gt;-URL=WF.mfCode=&lt;Field&gt;&amp;Wkey=&lt;WorkflowTemplateKey&gt;&amp;defaultValue=&lt;Item&gt;/]</p>
+		<p>where </p>
+		<ul class="hcp1">
+			<li><p>&lt;Field&gt; is to define the Master File for the worklow</p></li>
+			<li><p>&lt;WorkflowTemplateKey&gt; is the Key of the workflow 
+			 template</p></li>
+			<li><p>&lt;Item&gt; refers to a checklist item within the workflow 
+			 and must be defined with the item key and the default value 
+			 enclosed within square brackets: <br class="hcp15">
+			<br class="hcp15">
+			[ItemKey=&lt;DefaultValue&gt;] e.g. [HD.ACT=Appoint of Entity 
+			 Relation]</p></li>
+		</ul>
+		<p><span class="hcp5">Note</span>: 
+		 It is possible to specify multiple default values but each must 
+		 have the item key and the default value.</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is similar 
+		 to the above but with default values specified for items in the 
+		 workflow. </p>
+		<p>Example:</p>
+		<p>[/APPREL-URL=WF.mfCode=(-HD.EntCode-)&amp;Wkey=VPWFR001&amp;defaultValue=[HD.ACT=Appointment 
+		 of Entity Relation]/]</p>
+		<p>The above will launch the workflow with the key 'VPWFR001' for 
+		 the Master File selected within the grid where the checklist item 
+		 'ACT' will have the default value 'Appointment of Entity Relation'.</p>
+		<p>[/APPREL-URL=WF.mfCode=(-HD.EntCode-)&amp;Wkey=VPWFR001&amp;defaultValue=[HD.ACT=Appointment 
+		 of Entity Relation][HD.RTYPE=Registered Agent]/]</p>
+		<p>The above will launch the workflow with the key 'VPWFR001' for 
+		 the Master File selected within the grid where the checklist item: 
+		 </p>
+		<ul class="hcp1">
+			<li><p>'ACT' will have the default value 'Appointment of Entity 
+			 Relation'</p></li>
+			<li><p>'RTPE' will have the default value 'Registered Agent'</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Buttons and Hyperlinks</h2>
+<p>When the page has button and hyperlink, the following must be specified 
+ for the button/hyperlink:</p>
+<ul class="hcp1">
+	<li><p>the caption</p></li>
+	<li><p>the workflow template</p></li>
+</ul>
+<p>There are two types of button/hyperlink behaviour:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">When 
+	 clicked, it will launch the Workflow based on the record from the 
+	 grid</a>.</p>
+	<div class="droptext" id="POPUP573511978" style="display: none;">
+		<p>[/&lt;fgrd Name&gt;-RD=&lt;Function Name&gt;/]&#160;</p>
+		<p>[/&lt;Function Name &gt;-URL=&lt;URL value&gt;/]</p>
+		<p>&#160;</p>
+		<p>In HTML page: </p>
+		<p>For button: </p>
+		<p>&lt;input type=&quot;button&quot; value=&quot;button caption&quot; 
+		 onclick=&quot;FunctionName()&quot;/&gt;</p>
+		<p>&#160;</p>
+		<p>For hyperlink: </p>
+		<p>&lt;a onclick=&quot;FunctionName()&quot;&gt; hyperlink caption&lt;/a&gt;</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Example (for button):</p>
+		<p>[/OEREL-RD=GetAddrCode/]</p>
+		<p>[/GetAddrCode-URL=WF.mfCode=(-HD.EntCode-)&amp;Wkey=VPWFR001&amp;defaultValue=[HD.ACT=Appointment 
+		 of Entity Relation(s)][HD.C1=Yes][HD.AddrCode=(-AddrCode-)]/]</p>
+		<p>&#160;</p>
+		<p>In HTML page: &lt;input type=&quot;button&quot; value=&quot;Appoint 
+		 Relation&quot; onclick=&quot;GetAddrCode()&quot;/&gt;</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">When 
+	 clicked, it will launch the Workflow in standalone manner (not retrieving 
+	 information from the grid).</a></p>
+	<div class="droptext" id="POPUP573588867" style="display: none;">
+		<p>[/&lt;Function Name&gt;=&lt;URL value&gt;/]</p>
+		<p>&#160;</p>
+		<p>In HTML page: </p>
+		<p>For button: </p>
+		<p>&lt;input type=&quot;button&quot; value=&quot;button caption&quot; 
+		 onclick=&quot;(+ftyp=evw|WF.FunctionName+)”/&gt;</p>
+		<p>&#160;</p>
+		<p>For hyperlink:</p>
+		<p>&lt;a onclick=&quot;(+ftyp=evw|WF.FunctionName+)&quot;&gt;hyperlink 
+		 caption&lt;/a&gt;</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Example (for button):</p>
+		<p>[/AppointRelation= WF.mfCode=(-HD.EntCode-)&amp;Wkey=VPWFR001&amp;defaultValue=[HD.ACT=Appointment 
+		 of Entity Relation(s)][HD.C1=Yes]/]</p>
+		<p>&#160;</p>
+		<p>In HTML page: &lt;input type=&quot;button&quot; value=&quot;Appoint 
+		 Relation&quot; onclick=&quot;(+ftyp=evw|WF.AppointRelation+)&quot;/&gt;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Coding_a_Word_Template.htm">Coding a Word Template</a></p></li>
+	<li><p><a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a></p></li>
+	<li><p><a href="BLOCK_Statements.htm">Block Statements</a></p></li>
+	<li><p><a href="Format_Options.htm">Format Options</a></p></li>
+	<li><p><a href="../Shared/XML_Viewer_Screen.htm">XML Viewer</a></p></li>
+	<li><p><a href="../Shared/MFSEC_Tag_for_Reports_and_Widgets.htm">Master 
+	 File Security in Reports and Widgets</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_HTML_Template.htm\">Coding a HTML Template</a> &gt; Key Information</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_Word_Template.htm\">Coding a Word Template</a> &gt; Key Information</p>");
+</script>
+
+ <p class="hcp16">&#160;</p>
+ <p class="hcp16">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp16">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP316566778');
+	TextPopupInit('a1','POPUP316556188');
+	TextPopupInit('a31','POPUP3165761661');
+	TextPopupInit('a3','POPUP573511978');
+	TextPopupInit('a4','POPUP573588867');
+//]]></script>
+</body>
+</html>

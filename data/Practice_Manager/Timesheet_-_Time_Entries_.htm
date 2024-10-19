@@ -1,0 +1,201 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Time Entries Folder">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Timesheet - Time Entries</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Time Entries Folder</h1>
+<p>The details of each time entry can be viewed, edited and deleted in 
+ this folder. You can also create new entries here. If you have set up 
+ context sensitivity in the Time Sheet Options screen, then if you double-click 
+ on a particular line, some of the fields in the Time Entries window will 
+ be completed for you. You can also click New (see below) to add a new 
+ entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Time Entries list</p>
+<p>This displays the time entries that have not been invoiced:</p>
+<ul class="hcp1">
+	<li><p>For the timesheet that you select in Summary folder; or</p></li>
+	<li><p>That fulfils the criteria in Selection &amp; Options folder.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a href="Time_Entries.htm">add</a> a time entry. This will display 
+	 the Time Entry screen.</p></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 make changes to a selected time entry. If changing the service, it 
+	 must be of the same service class. If the original service is a [TA] 
+	 service class, you cannot change it to another service of [RA] service 
+	 class.</p></li>
+	<li><p><span class="hcp2">Copy</span> - Click this to 
+	 copy the selected time entry. You can also copy approved entries but 
+	 if approval is required, the entry will require manual approval. When 
+	 time entry screen is opened for ‘Copy’, it will not remove the existing 
+	 ‘description’ whenever the Billing File/ Service/ Matter/ Analyses 
+	 code selection is changed. When the destination Billing File has multiple 
+	 Recurring services with the same Service Code, it will select the 
+	 first service in the list.</p></li>
+	<li><p><span class="hcp2">Select All/Deselect All</span> 
+	 - Click this to select/deselect all records.</p></li>
+	<li><p><span class="hcp2">Approve</span> - Click this 
+	 to approve the time entry. Approved entries cannot be edited nor deleted 
+	 from the table. Once a time entry is approved it can be posted to 
+	 a draft invoice. This button is enabled only if time and disbursement 
+	 entries require approval before they are posted to a draft invoice. 
+	 User must have authority level 8 - Power User.</p></li>
+	<li><p><span class="hcp2">Undo Approve</span> - Click 
+	 this to remove the approval on a selected record. An entry that has 
+	 been posted to a draft invoice cannot be unapproved.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected record. This button is only activated if the 
+	 selected record has not been approved and user has authority level 
+	 8 - Power User.</p></li>
+	<li><p><span class="hcp2">Special</span> - Click this 
+	 to open the <a class="dropspot" href="javascript:TextPopup(this)" id="a11">Special</a> 
+	 functions window. This is available only if you have the proper authority. 
+	 Note that whether or not you can use this on approved time entries 
+	 depend on the setting in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a>.</p>
+	<div class="droptext" id="POPUP522369228" style="display: none;">
+		<div>
+<p>The Special Functions screen provides options that you can perform on 
+ unapproved and unposted charges.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Set entries to NO CHARGE</h6>
+<p>Select this option to write off the Total Charge amount.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Transfer to another Billing File and/or Matter</h6>
+<p>Select this to transfer the service to another Billing File or Matter. 
+ Select the Billing File and/or Matter you want to transfer to. If 'Use 
+ Recurring Services for Time Entries' and/or 'Use Recurring Services for 
+ Disbursement Entries' is enabled in the Time and Disbursements settings, 
+ this option will appear as 'Transfer to another Billing File, Matter and/or 
+ Service Code' and additional fields are seen:</p>
+<ul class="hcp1">
+	<li><p>'Transfer to (service code)' field - Select the new service 
+	 code from the list.</p></li>
+	<li><p>'Recalculate the unit price, total amount, unit cost and total 
+	 cost' option - Once enabled, the system will perform recalculation 
+	 for the entry. Otherwise, only the service code is changed.</p></li>
+	<li><p>'Overwrite current description' option - This option will overwrite 
+	 the current description with the description of the newly selected 
+	 Service Code. User can also enter a customised description in the 
+	 Description box.</p></li>
+</ul>
+<h6 class="Heading8">Transfer to another Billing File and/or Activity</h6>
+<p>Select this to transfer the service to another Billing File or Activity. 
+ Select the Billing File and/or Activity you want to transfer to. </p>
+<p><span class="hcp3">Note</span>: This 
+ option will only be available when the 'All Time/Disbursement Entries 
+ Link to an Activity' option is enabled in the Time and Disbursements settings 
+ and it will replace the 'Transfer to another Billing File and/or Matter' 
+ option.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Proportionally change the 'Total Charge' by entering 
+ a new total charge</h6>
+<p>Enter the new amount chargeable or percentage for mark up/down. If you 
+ enter a new amount, then the system will calculate the percentage, and 
+ vice versa.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Reset 'Total Charge' to 'Units' x 'Unit Price'</h6>
+<p>Reset the total charge to units multiplied by unit price according to 
+ the default.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Change Service Code</h6>
+<p>Select this option to change the service code for the time or disbursement 
+ entries. Once selected, the following options are seen:</p>
+<ul class="hcp1">
+	<li><p>'Transfer to (service code)' field - Select the new service 
+	 code from the list.</p></li>
+	<li><p>'Recalculate the unit price, total amount, unit cost and total 
+	 cost' option - Once enabled, the system will perform recalculation 
+	 for the entry. Otherwise, only the service code is changed.</p></li>
+	<li><p>'Overwrite current description' option - This option will overwrite 
+	 the current description with the description of the newly selected 
+	 Service Code. User can also enter a customised description in the 
+	 Description box.</p></li>
+</ul>
+<p><span class="hcp3">Note:</span> This 
+ is not available in Time Entries if 'Use Recurring Services for Time Entries' 
+ is enabled in the Time and Disbursements settings, and it is not available 
+ in Disbursements if &#160;'Use Recurring Services for Disbursement Entries' 
+ is enabled. For disbursement entries, it is not possible to change services 
+ from Service Class DI to DM and vice versa.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Change Analysis Code</h6>
+<p>Select this option to change the analysis code. Enter the new analysis 
+ code.</p>
+<p><span class="hcp3">Note:</span> This 
+ option is only available if 'Enable Analysis Code' is enabled in the Time 
+ and Disbursements settings, and it is not available in Disbursements.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Recalculate Entry with New Unit Price</h6>
+<p>Select this option to recalculate the entries based on a new unit price. 
+ Non-chargeable part in the entry, if any, will be recalculated with the 
+ same chargeable ratio.</p>
+</div>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">How do I print 
+ the sheet?</a></p>
+ <div class="droptext" id="POPUP442630127" style="display: none;">
+	<p>Right-click your mouse on the table and select Print...</p>
+ </div>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Timesheet - Time Entries</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP522369228');
+	TextPopupInit('a2','POPUP442630127');
+//]]></script>
+</body>
+</html>

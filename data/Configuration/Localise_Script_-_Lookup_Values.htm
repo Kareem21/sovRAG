@@ -1,0 +1,195 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Lookup Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-weight:bold;
+text-decoration:underline; }
+p.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { font-weight:normal;
+text-decoration:none; }
+span.hcp6 { font-weight:normal;
+text-decoration:none; }
+span.hcp7 { font-weight:bold;
+font-style:italic; }
+p.hcp8 { font-style:italic;
+font-weight:bold; }
+img.hcp9 { border:none; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Lookup Values</h1>
+<p>You can use tags to perform three types of actions in relation to lookup 
+ values:</p>
+<ul class="hcp1">
+	<li><p>Deactivate an existing value.</p></li>
+	<li><p>Delete an existing value.</p></li>
+	<li><p>Add and define a new value.</p></li>
+</ul>
+<p>&#160;</p>
+<h3>Deactivating a Value</h3>
+<p>The tag below will deactivate the specified lookup table value.</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp3">LVINACT:&lt;TCode&gt;+&lt;VCode&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">&lt;TCode&gt;</span> is the 
+	 Lookup Table code, obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p><span class="hcp4">&lt;VCode&gt;</span> is the 
+	 code of the lookup table value to be deactivated.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Example</p>
+<p>To deactivate the Low [01] code from the CDD Classification [KYCC] lookup 
+ table: LVINACT:KYCC+01</p>
+<p>&#160;</p>
+<p class="hcp5"><span class="hcp6"><span class="hcp7">Note</span>: 
+ To deactivate all values in a lookup table, use asterisk e.g. LVINACT:KYCC+*</span></p>
+<p>&#160;</p>
+<h3>Deleting a Value</h3>
+<p>The tag below will remove the specified lookup table value.</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp3">LVDEL:&lt;TCode&gt;+&lt;VCode&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">&lt;TCode&gt;</span> is the 
+	 Lookup Table code, obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p><span class="hcp4">&lt;VCode&gt;</span> is the 
+	 code of the lookup table value to be deleted.</p></li>
+</ul>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">Example</p>
+<p>To delete the value 'Low [01]' from the CDD Classification [KYCC] lookup 
+ table: LVDEL:KYCC+01</p>
+<p>&#160;</p>
+<p style="font-weight: bold; text-decoration: none; "><span style="font-weight: bold; 
+															 text-decoration: none; "><span 
+	 style="font-style: italic;">Note</span>: <span style="font-weight: normal;">To 
+ delete all values in a lookup table, use asterisk e.g. LVDEL:ROSU+*</span></span></p>
+<p>&#160;</p>
+<h3>Adding a Value</h3>
+<p>When you add a value to a lookup table, you need to first create the 
+ value in the table and then specify the settings for the value. The new 
+ value will have the Customised and Active checkboxes ticked by default.</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp8">To add a new value:</p>
+<p class="hcp3">LVADD: &lt;TCode&gt;+&lt;VCode&gt;=&lt;VName&gt;</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">To specify the value 
+ settings:</p>
+<p class="hcp3">LVVAL:&lt;TCode&gt;-&lt;VCode&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">&lt;TCode&gt;</span> is the 
+	 lookup table code, obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p><span class="hcp4">&lt;VCode&gt;</span> is the 
+	 code of the Lookup Table value to be added. There should not be duplicates 
+	 of any (existing) code.</p></li>
+	<li><p><span class="hcp4">&lt;VName&gt;</span> is the 
+	 name of the value.</p></li>
+	<li><p><span class="hcp4">&lt;DBField&gt;</span> is the 
+	 database field for the lookup table value</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Tag - Long Name field</p></li>
+		<li><p>eFile - Electronic Filing Code field</p></li>
+		<li><p>ElValue - Element/Sort Value field</p></li>
+		<li><p>ConvertValues - Tag Values field</p></li>
+	</ul></li>
+	<li><p><span class="hcp4">&lt;Value&gt;</span> is the 
+	 value for the field.</p></li>
+</ul>
+<p class="hcp2">Example 1</p>
+<p>To add Resident [2] to the User Defined – 1 [USR1] lookup table: LVADD:USR1+2=Resident</p>
+<p><img src="../image110.jpg" alt="" width="734" height="171" border="0" class="hcp9"></p>
+<p>&#160;</p>
+<p class="hcp2">Example 2</p>
+<p>To add a Document Management index tag to the Minute [MI] code in the 
+ Form Type [FRMT] lookup table:</p>
+<p>LVVAL:FRMT-MI+ConvertValues=Document index code:&lt;BR&gt;[/DMW.DocIndex|Descr=(-DCM.Description-)|Cabinet=CSFORM|VpDocId=(-FRM.FQnumber-)|Note=(-FRM.FieldDetails-)|/]&lt;BR&gt;&lt;BR&gt;Main 
+ Master File index&lt;BR&gt;[/DMW.Relation|KeyTag=INDEX|KeyValue=(-FRM.EntCode-)|/]&lt;BR&gt;&lt;BR&gt;Index 
+ field&lt;BR&gt;[/DMW.Relation|KeyTag=DOCDATE|KeyValue=(+EVT.Effective+)|/]&lt;BR&gt;&lt;BR&gt;Index 
+ field - Document type&lt;BR&gt;[/DMW.Relation|KeyTag=DOCTYPE|KeyValue=AI|/]&lt;BR&gt;&lt;BR&gt;Add 
+ the task that the document must be signed&lt;BR&gt;[/DMW.Task|TaskType=SIGNDOC|TaskDescr=(-DCM.Description-) 
+ |AssignTo=(-APP.UCode-)|TaskDue=(-APP.NOW-)+15|/]</p>
+<p><img src="../image111.jpg" alt="" width="832" height="429" border="0" class="hcp9"></p>
+<p>&#160;</p>
+<p><span class="hcp7">Note:</span> &lt;BR&gt; 
+ is used for line feeds.</p>
+<p>&#160;</p>
+<h3>Adding Tag Values</h3>
+<p>The tag below allows you to add tags to existing lookup table values 
+ in the Tag Values field. This applies only to certain lookup tables.</p>
+<p>&#160;</p>
+<p class="hcp2">Syntax</p>
+<p class="hcp3">LVTAG:&lt;TCode&gt;+&lt;Code&gt;=&lt;Tag&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">&lt;TCode&gt;</span> is the 
+	 lookup table code, obtained from Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p><span class="hcp4">&lt;Code&gt;</span> is the 
+	 code you want to set up the WSCORE tag for.</p></li>
+	<li><p><span class="hcp4">&lt;Tag&gt;</span> <span>refers 
+	 to the tag for the lookup table values.</span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="hcp2">Example</p>
+<p class="hcp5"><span class="hcp6">To add the required country tag for 'Telephone 
+ - Office [TB] in Contact Types [ADRC] lookup table:LVTAG:ADRC+TB=REQCNTR=Y</span></p>
+<p>&#160;</p>
+<p><span class="hcp7">Note:</span> You 
+ can use either the LVVAL tag or the LVTAG tag to add score information. 
+ However, LVVAL will over-write existing information in the ConvertValues 
+ field, whereas LVTAG will append information.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Lookup Values</p>
+<p class="hcp10">&#160;</p>
+<p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp10">Version: 8.0.2022.09.20</p>
+</body>
+</html>

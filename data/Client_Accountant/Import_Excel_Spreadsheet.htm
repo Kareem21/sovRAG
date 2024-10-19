@@ -1,0 +1,150 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Import Excel Spreadsheet">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Import Excel Spreadsheet</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+li.hcp3 { font-size:14px; }
+p.hcp4 { font-size:14px; }
+p.hcp5 { font-size:13px; }
+span.hcp6 { font-size:14px; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Import Excel Spreadsheet</h1>
+<p>Apart from entering the information into Viewpoint, it is also possible 
+ to import the information in using Import Sheet. Viewpoint has prepared 
+ a number of Import Sheet templates that can be downloaded from Viewpoint's 
+ support portal website.</p>
+<p>You may download these import sheets and use as is; or modify them to 
+ better suit your needs, e.g. removing fields that are not relevant to 
+ you.</p>
+<p>For each Excel Import Sheet:</p>
+<ul class="hcp1">
+	<li><p>The import code {$IMPORT:&lt;SHEET&gt;} must be in cell A1. 
+	 For example: {$IMPORT:JOURNAL}. The Import Sheet for Identity Register, 
+	 Classification and Indicia and Reportable Accounts can also contain 
+	 the following:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>Import sheet for Identity Register/Classification and Indicia:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>{$IMPORT:IDREG_Country} - When this is inserted in cell 
+			 A1, it will compare records based on these fields - FileCode, 
+			 IdType and Country. If there is an existing record in Viewpoint 
+			 with the same information for these three fields as in the 
+			 Import Sheet, then the existing record will be updated with 
+			 the record from the Import Sheet. Otherwise, a new record 
+			 is created when you perform import.</p></li>
+			<li><p>{$IMPORT:IDREG_UdCode} - When this is inserted in cell 
+			 A1, it will compare records based on these fields - FileCode, 
+			 IdType and UdCode. If there is an existing record in Viewpoint 
+			 with the same information for these three fields as in the 
+			 Import Sheet, then the existing record will be updated with 
+			 the record from the Import Sheet. Otherwise, a new record 
+			 is created when you perform import.</p></li>
+			<li><p>{$IMPORT:IDREG_IdCode} - When this is inserted in cell 
+			 A1, it will compare records based on these fields - FileCode, 
+			 IdType and IdCode. If there is an existing record in Viewpoint 
+			 with the same information for these three fields as in the 
+			 Import Sheet, then the existing record will be updated with 
+			 the record from the Import Sheet. Otherwise, a new record 
+			 is created when you perform import.</p></li>
+		</ul></li>
+		<li><p>Import sheet for Reportable Accounts:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>{$IMPORT:VPRA_ACCTACTION} - When this is inserted in 
+			 cell A1, the Import Sheet will allow information for Reportable 
+			 Account record and Reportable Account Actions to be entered 
+			 into the Import Sheet and imported into Viewpoint.</p></li>
+			<li><p>{$IMPORT:VPRA_ACCOUNTS} - When this is inserted in cell 
+			 A1, the Import Sheet is only for importing Reportable Accounts. 
+			 It will check on existing records based on these fields - 
+			 FileCode, RepAuthority, AcctCode. If there is an existing 
+			 record in Viewpoint with the same information for these three 
+			 fields as in the Import Sheet, then the existing record will 
+			 be updated with the record from the Import Sheet. Otherwise, 
+			 a new record is created when you perform import.</p></li>
+			<li><p>{$IMPORT:VPRA_ACTIONS} - When this is inserted in cell 
+			 A1, the Import Sheet is only for importing Reportable Account 
+			 Actions.</p></li>
+		</ul></li>
+	</ul></li>
+	<li><p>Columns in an import sheet cannot be hidden. If you want to 
+	 hide the information in a column, change the width of the column to 
+	 the smallest allowed size (0.5 points) instead.</p></li>
+	<li><p>Every row that is to be imported must start with {$IR} which 
+	 must always be in column A.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Using Import Sheet</h2>
+<p>These import sheet must be completed with the relevant details before 
+ they are to be imported through Viewpoint Connect Add-ins in Microsoft 
+ Excel.</p>
+<ol style="list-style: decimal;">
+	<li class="hcp3"><p class="hcp4">Open the Import 
+	 Sheet and enter the required information.</p></li>
+	<li class="hcp3"><p class="hcp4">In Microsoft 
+	 Excel, select the Viewpoint add-in menu.</p></li>
+	<li class="hcp3"><p class="hcp4">Click Import 
+	 Sheet. The Import Sheet screen will appear.</p></li>
+	<li class="hcp3"><p class="hcp4">Click Import.</p></li>
+	<li style="font-size: 13px;"><p class="hcp5"><span class="hcp6">Click 
+	 Close </span><span style="font-family: Arial, sans-serif; font-size: 14px;">to 
+	 exit the</span><span class="hcp6"> Import sheet screen 
+	 when the import is complete.</span> &#160;</p></li>
+</ol>
+<p class="hcp5">&#160;</p>
+<p class="hcp4">If the Import Sheet is for importing journals, 
+ you can choose:</p>
+<ul style="list-style: disc; font-size: 14px;">
+	<li class="hcp3"><p class="hcp4">Import &amp; 
+	 Post - Import only selected row and post to Accounting.</p></li>
+	<li class="hcp3"><p class="hcp4">Post ALL - 
+	 Post all rows in the Excel spreadsheet.</p></li>
+</ul>
+<p class="hcp4">&#160;</p>
+<p class="hcp4"><span style="font-weight: bold; font-style: italic;">Note</span>: 
+ The Copy button on the left allows user to copy the grid information to 
+ the clipboard. It copies the message and import status for analysis.</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p style="font-size: 9pt;"><span style="font-size: 13px;"><a href="../Document_Manager/Add-ins.htm#Microsoft_Excel">Add-ins 
+	 - Microsoft Excel</a></span></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Import Excel Spreadsheet</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+</body>
+</html>

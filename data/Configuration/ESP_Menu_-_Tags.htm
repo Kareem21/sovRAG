@@ -1,0 +1,571 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Menu - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border-bottom-width:1px;
+border-bottom-style:Solid;
+border-right-width:1px;
+border-right-style:Solid;
+border-left-width:1px;
+border-left-style:Solid;
+border-top-width:1px;
+border-top-style:Solid; }
+td.hcp2 { border-bottom-width:1px;
+border-bottom-style:Solid;
+border-right-width:1px;
+border-right-style:Solid;
+border-top-width:1px;
+border-top-style:Solid; }
+p.hcp3 { mso-fareast-language:ZH-CN; }
+ul.hcp4 { list-style:disc; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+img.hcp6 { border:none; }
+p.hcp7 { font-size:13px; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>ESP Menu - Tags</h1>
+<p>Tag is used to define certain values in further configuring the ESP 
+ menus.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 15.95%;">
+	<col style="width: 36.63%;">
+	<col style="width: 47.42%;">
+	<tr class="t1st">
+		<td class="hcp1"><p>Menu 
+		 Type</p></td>
+		<td class="hcp2"><p>Tag Value</p></td>
+		<td class="hcp2"><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; 
+			 border-left-style: Solid;"><p>Header [100]</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">[/link=&lt;child 
+		 menu ID&gt;/]</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">[/link=CP2NOTBC/]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">This 
+		 will direct to the page when user clicks on the side menu.&#160;You 
+		 can only link to a child menu ID (Level 2 menu in Configuration 
+		 &gt; Engage Servicing Portal &gt; Global &gt; Menus).</p>
+		<p class="hcp3">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" rowspan="3" style="border-bottom-width: 1px; 
+			 border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; 
+			 border-left-width: 1px; border-left-style: Solid;"><p>Grid 
+		 Display [102]</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">[/link=&lt;grid 
+		 code&gt;/]</p>
+		<p class="hcp3">Example:</p>
+		<p class="hcp3">[/link=CPANNOCE/]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p><span 
+		 style="mso-fareast-language: ZH-CN;">The grid code can be retrieved 
+		 from the table GridHeader in the Back-office database.</span> 
+		 This will direct to the selected grid display.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>[/GridOptions=&lt;bitwise 
+		 value&gt;/]</p>
+		<p>Example:</p>
+		<p>[/GridOptions=3/]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>The 
+		 option is based on the value:</p>
+		<ul class="hcp4">
+			<li><p>1 - system to filter the grid.</p></li>
+			<li><p>2 - system to display the grid filter bar.</p></li>
+		</ul>
+		<p>This is a bitwise value; hence, you may add up the value (1+2) 
+		 if you wish to have both options.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>[/Params=&lt;key:value&gt;/]</p>
+		<p>Example:</p>
+		<p>[Params=StatusCode:NW,PD/]</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is handled by ESP framework; therefore, it is not recommended 
+		 for you to change it without consulting Viewpoint.</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>This 
+		 will further filter the grid display (Sub Menu View).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" rowspan="2" style="border-bottom-width: 1px; 
+			 border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; 
+			 border-left-width: 1px; border-left-style: Solid;"><p>Normal 
+		 Display [103]</p>
+		<p>&#160;</p>
+		<p>Normal View Without Content Header [105]</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>[/link=&lt;state 
+		 name&gt;/]</p>
+		<p>where the state name is defined in config.router.js</p>
+		<p>Example:</p>
+		<p>[/link=app.documentHolder/]</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is handled by ESP framework; therefore, it is not recommended 
+		 for you to change it without consulting Viewpoint.</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">This 
+		 will direct to the page when user clicks on the menu.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>[/Params=&lt;key:value&gt;/]</p>
+		<p>Example:</p>
+		<p>[Params=StatusCode:NW,PD/]</p>
+		<p>&#160;</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is handled by ESP framework; therefore, it is not recommended 
+		 for you to change it without consulting Viewpoint.</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>This 
+		 will further filter the grid display (Sub Menu View).</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; 
+			 border-left-style: Solid;"><p>e-View Display [104]</p>
+		<p>Customised e-View Display [114]</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p>[/link=&lt;Form 
+		 Code&gt;/]</p>
+		<p>Example:</p>
+		<p>[/link=CPSTAT/]</p>
+		<p>&#160;</p>
+		<p>The Master File type can be used to further indicate which eView 
+		 template to be used for a specific Master File type:</p>
+		<p>[/link=[MF.&lt;Master File type&gt;=&lt;Form Code&gt;]/]</p>
+		<p>where the Master File type is represented by the following:</p>
+		<ul class="hcp4">
+			<li><p>Company - C</p></li>
+			<li><p>Foundation - N</p></li>
+			<li><p>Individual - I</p></li>
+			<li><p>Other (non-individual) - O</p></li>
+			<li><p>Partnership - P</p></li>
+			<li><p>Trust - T</p></li>
+		</ul>
+		<p>To specify the default, the code 'DF' is used.</p>
+		<p>Example:</p>
+		<p>[/link=[MF.C=CPSTAC] [MF.T=CPSTAU] [MF.P=CPSTAP] [MF.N=CPSTAN] 
+		 [DF=CPSTAT] /]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">This 
+		 will direct the page to the e-View template page when user clicks 
+		 on the menu. The e-View template is maintained in the Back-office 
+		 Document Libraries.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-right-width: 1px; border-right-style: Solid; 
+			 border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px;"><p>Custom 
+		 Display [106]</p>
+		<p>Customised Static Display [116]</p></td>
+		<td class="t2Col" style="border-right-width: 1px; border-right-style: Solid; 
+			 border-bottom-width: 1px;"><p>[/link=&lt;html file name&gt;/]</p>
+		<p>Example:</p>
+		<p>[/link=content.html/]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-right-width: 1px; 
+			 border-right-style: Solid;"><p>This will link to a static 
+		 html. The static html file is stored in &lt;ESP Folder&gt;/tpl/custom 
+		 folder. By default, this folder does not exist. User is required 
+		 to manually create the folder and copy the static html file into 
+		 this folder.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 15.95%;">
+	<col style="width: 36.63%;">
+	<col style="width: 47.42%;">
+	<tr class="t1st">
+		<td class="hcp1"><p>Menu 
+		 Group</p></td>
+		<td class="hcp2"><p>Tag Value</p></td>
+		<td class="hcp2"><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; 
+			 border-left-style: Solid;"><p>Home Menu [11]</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">[/AlwaysShow=Y/]</p></td>
+		<td class="t1Col" style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid;"><p class="hcp3">This 
+		 tag will enable the Home menus to be displayed in the File tab. 
+		 Clicking on the Home menu from the File tab will redirect users 
+		 to the Home tab and opens the Home menu which display the records 
+		 for all the entities within the Organisation. Having the Home 
+		 menu to be displayed in the File tab provides ease of navigation 
+		 as users need not have to go to the Home tab to access the Home 
+		 menu.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Exclusive Custom Tag</h2>
+<p>The below Custom Tags are only applicable for certain Menus:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 16.151%;">
+	<col style="width: 36.83%;">
+	<col style="width: 47.019%;">
+	<tr class="t1st">
+		<td><p>Menu ID</p></td>
+		<td><p>Tag Value</p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>CP2DOCRE</p>
+		<p>CPHDOCRE</p></td>
+		<td class="t2Col"><p>[/WReport=Desc=&lt;Description&gt;|FormCode=&lt;Form 
+		 Code&gt;|Desc=&lt;Description&gt;|FormCode=&lt;Form Code&gt;/]</p>
+		<p><span class="hcp5">Note</span>: 
+		 You may refer the Form Code in Configuration &gt; Document Libraries. 
+		 </p>
+		<p>Example:</p>
+		<p>[/WReport=Desc=Register of Directors|FormCode=REGDIRECTOR|Desc=Register 
+		 of Managers|FormCode=REGMNGR|Desc=Register of Members|FormCode=REGMEMBER|Desc=Register 
+		 of Partners|FormCode=REGPARTNERS|/]</p>
+		<p>It also allows customisation on the File Code column by including 
+		 the tag value with '|Column=&lt;FileCode&gt;|'.</p>
+		<p>Example:</p>
+		<p>Desc=Practice Management Template|FormCode=RMSTBFE6|Column=RefCode|</p>
+		<p><span class="hcp5">Note</span>: 
+		 By default, the Entity Administration related forms/reports are 
+		 based on EntCode. The File Code column is required to be defined 
+		 when other than EntCode is used.</p></td>
+		<td class="t1Col"><p>This sets the Register document template. 
+		 Use '|' to separate each template if there is more than one template.</p>
+		<p><span class="hcp5">Note</span>: 
+		 You can configure the ESP Register printing to<a class="dropspot" href="javascript:TextPopup(this)" id="a11"> 
+		 generate different registers based on Master File type/Entity 
+		 type/Ownership type/Jurisdiction.</a></p>
+		<div class="droptext" id="POPUP5875784711" style="display: none;">
+			<table class="Table1" cellspacing="0px" width="100%">
+				<col style="width: 44.334%;">
+				<col style="width: 55.666%;">
+				<tr class="t1st">
+					<td><p>Tag Value</p></td>
+					<td><p>Description</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>[/WReport: MF.&lt;Master File 
+					 type&gt;= …./],</p>
+					<p>Example,</p>
+					<p>[/WReport:MF.C= &#160;…/]</p>
+					<p>[/WReport:MF.T=…/]</p></td>
+					<td class="t2Col"><p>Document templates filtered by 
+					 Master File type, where Master File type can be referred 
+					 from Configuration &gt; Business Parameters &gt; General 
+					 &gt; Lookup Values in the 'Master File Types [ADTP]' 
+					 lookup table. &#160;&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>[/WReport: ET.&lt;Jurisdiction&gt;-&lt;Entity 
+					 type&gt;=../]</p>
+					<p>Example,</p>
+					<p>[/WReport:ET.JE-TR=../]</p>
+					<p>[/WReport:ET.GG-TR=../]</p></td>
+					<td class="t2Col"><p>Document templates filtered by 
+					 Entity type, where Entity type can be referred from 
+					 Configuration &gt; Business Parameter &gt; Entity 
+					 Administration &gt; Entity Types - Type Code field.</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>[/WReport:OS.&lt;Ownership type&gt;=../]</p>
+					<p>Example,</p>
+					<p>[/WReport:OS.SA=../]</p>
+					<p>[/WReport:OS.TR=../]</p></td>
+					<td class="t2Col"><p>Document templates filtered by 
+					 Ownership type, where Ownership type can be referred 
+					 from Configuration &gt; Business Parameter &gt; Entity 
+					 Administration &gt; Entity Types -Ownership Structure 
+					 field.</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>[/WReport:JU.&lt;Jurisdiction&gt;=../]</p>
+					<p>Example,</p>
+					<p>[/WReport:JU.HK=../]</p>
+					<p>[/WReport:JU.JE=../]</p></td>
+					<td class="t2Col"><p>Document templates filtered by 
+					 Jurisdiction, where Jurisdiction can be referred from 
+					 Configuration &gt; Business Parameter &gt; Entity 
+					 Administration &gt; Entity Types - Jurisdiction field.</p></td>
+				</tr>
+			</table>
+			<p>You can combine multiple condition in a single tag, separated 
+			 by colon (:)</p>
+			<p>Example,</p>
+			<p>[/WReport:MF.C:MF.T= Desc=Register of Directors|FormCode=REGDIRECTOR|Desc=Register 
+			 of Managers|FormCode=REGMNGR|Desc=Register</p>
+			<p>of Members|FormCode=REGMEMBER|Desc=Register of Partners|FormCode=REGPARTNERS|/]</p>
+			<p>&#160;</p>
+			<p>Multiple tags can be combined where the system will take 
+			 the template with the following priority order:</p>
+			<p>Master File type &gt; Entity type &gt; Ownership type &gt; 
+			 Jurisdiction &gt; Default tag ([/WReport=../])</p>
+  </div></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" rowspan="4"><p>CP2CITSF</p></td>
+		<td class="t2Col"><p>[/hostName=&lt;Citrix ShareFile URL&gt;/]</p></td>
+		<td class="t1Col"><p>This refers to the Citrix ShareFile URL.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p>[/clientID=&lt;Client ID&gt;/]</p></td>
+		<td class="t1Col"><p>This refers to the Citrix ShareFile Client 
+		 ID. It can be retrieved from the Citrix website.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col"><p>[/ClientSecret=&lt;Client Secret&gt;/]</p></td>
+		<td class="t1Col"><p>Similar as Client ID, this can be retrieved 
+		 from the Citrix Website.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p>[/errorMessage=Fail to connect to ShareFile. 
+		 (-ErrorMsg-)/]</p></td>
+		<td class="t1Col"><p>This allows user to customise the display 
+		 message when error occurs.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td rowspan="6" class="t1Col"><p>CP2CPINV, CPFCPINV</p>
+		<p><span class="hcp5">Note</span>: 
+		 This is used for the payment confirmation (in the Invoices page) 
+		 to open a Request (Workflow).</p>
+		<p>A new button to open the Workflow will be available in the Invoices 
+		 payment confirmation page when the following tags are defined.</p></td>
+		<td class="t2Col"><p>[/WFButton=&lt;Button ID&gt;/]</p></td>
+		<td class="t1Col"><p>This defines the button ID.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p>[/WFButton.&lt;Button ID&gt;.WKey=&lt;Workflow 
+		 Key&gt;/]</p></td>
+		<td class="t1Col"><p>This defines the Workflow that will be retrieved 
+		 from the Back-office.</p>
+		<p><span class="hcp5">Note</span>: 
+		 The Home and File ‘Invoices payment confirmation page’ must use 
+		 different Workflow Key due to the global Workflow template requires<a class="dropspot" href="javascript:TextPopup(this)" id="a2"> 
+		 attributes setup</a>.</p>
+		<div class="droptext" id="POPUP562538020" style="display: none;">
+			<h6 class="Heading8">Additional Setup to Enable Request Initiated 
+			 from Home</h6>
+			<p>If the Invoices page is opened from the Home tab, additional 
+			 setup is required to allow the users to initiate Request (Workflow) 
+			 from the ESP Home &gt; Invoices payment confirmation page. 
+			 Follow the steps below to configure:</p>
+			<ol style="list-style: decimal;">
+				<li><p>In the Front-office, go to Home &gt; Configuration 
+				 &gt; Engage Servicing Portal &gt; Configuration &gt; Organisations, 
+				 select the organisation and click Edit.</p></li>
+				<li><p>In the Edit screen, select the 'Database' and 'Master 
+				 File’. This will set the ESP to open the selected Database 
+				 and Master File when initiating the Request (Workflow) 
+				 from the ESP Home &gt; Invoices payment confirmation page.</p></li>
+				<li><p>Click Update.</p></li>
+				<li><p>In the Back-office, go to Home &gt; Configuration 
+				 &gt; Business Parameters &gt; Workflow &gt; Workflow Library, 
+				 select the Workflow template that will be opened from 
+				 the configured button.<br>
+				<br>
+				<span class="hcp5">Note</span>: 
+				 The configured button will not appear if Workflow Key 
+				 is invalid or Workflow is not published to the ESP.</p></li>
+				<li><p>Click Attributes.</p></li>
+				<li><p>In 'Attributes Configuration' screen, at Master 
+				 File, select the Type 'Master File' and set the Value 
+				 to the Master File that you have configured in step (2).</p></li>
+				<li><p>Click Update to save the setting.</p></li>
+			</ol>
+  </div></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col"><p>[/WFButton.&lt;Button ID&gt;.FldKey=&lt;Workflow 
+		 Field Key&gt;/]</p></td>
+		<td class="t1Col"><p>This defines the Workflow field that will 
+		 display the invoice details for payment confirmation.</p>
+		<p>You can define more than one field by separating each with a 
+		 comma (,).</p>
+		<p><span class="hcp5">Note</span>: 
+		 Additionally, the Back-office Workflow field requires to also 
+		 include <a class="dropspot" href="javascript:TextPopup(this)" id="a1">[+HD.&lt;Workflow 
+		 Field Key&gt;+] at the 'Values/Default'</a> to 
+		 define the default value.</p>
+		<div class="droptext" id="POPUP535840103" style="display: none;">
+			<p><img src="../HDworkflow.png" alt="" border="0" class="hcp6"></p>
+  </div></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p>[/WFButton.&lt;Button ID&gt;.Text=&lt;Button 
+		 Name&gt;/]</p></td>
+		<td class="t1Col"><p>This defines the button name that will show 
+		 in the Invoices payment confirmation page. This button will trigger 
+		 to open the Request (Workflow) upon clicked.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t2Col"><p>[/WFButton.&lt;Button ID&gt;.&lt;Workflow 
+		 Field Key&gt; =(+Field Name+)/]</p>
+		<p>where the (+Field Name+) can be:</p>
+		<ul class="hcp4">
+			<li><p>(+Currency+) – This refers to the invoice currency.</p></li>
+			<li><p>(+DateDue+) – This refers to the invoice date due.</p></li>
+			<li><p>(+DateInvoice+) – This refers to the invoice date.</p></li>
+			<li><p>(+InvoiceType+) – This refers to the Invoice type. This 
+			 should have DbId prefixed when the invoice is from multiple 
+			 Back-offices.</p></li>
+			<li><p>(+FileName+) – This refers to the Master File name.</p></li>
+			<li><p>(+InvoiceNr+) – This refers to the invoice number.</p></li>
+			<li><p>(+InvoiceTotal+) – This refers to the invoice total.</p></li>
+			<li><p>(+PaymentAmount+) – This refers to the amount payable 
+			 for the invoice.</p></li>
+			<li><p>(+TotalAmount+) – This will total up the (+PaymentAmount+) 
+			 for all invoices.</p></li>
+			<li><p>(+ProformaNr+) – This refers to the invoice proforma 
+			 number. It should have DbId prefixed when the invoice is from 
+			 multiple Back-offices.</p></li>
+			<li><p>(+FileCode+) – This refers to the Master File code.</p></li>
+		</ul></td>
+		<td class="t1Col"><p>This defines the invoice details that will 
+		 show in the Request field for payment confirmation.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t2Col"><p>[/WFButton.&lt;Button ID&gt;.&lt;Workflow 
+		 Field Key&gt;.Format=LC or LL/]</p>
+		<p>where:</p>
+		<ul class="hcp4">
+			<li><p>LC = List with comma</p></li>
+			<li><p>LL = List with lines</p></li>
+		</ul></td>
+		<td class="t1Col"><p class="Tablecontent">This defines the display 
+		 format of the payment confirmation text.</p>
+		<p class="Tablecontent">List with comma (LC) will display each 
+		 invoice details separated by a comma.</p>
+		<p class="Tablecontent">List with lines (LL) will display each 
+		 invoice detail in a separate line.</p>
+		<p class="Tablecontent"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">See 
+		 full example of the tag values.</a></p>
+		<div class="droptext" id="POPUP562847652" style="display: none;">
+			<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">Example 
+			 tag values as shown:</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton=wire/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.WKey=VPWFSS/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.FldKey=INV1,INV2,INV3,INV4/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.Text=Wire 
+			 Transfer/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV1=(+FileCode+), 
+			 Invoice Number (+InvoiceNr+)/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV1.Format=LL/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV2=(+PaymentAmount+)/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV2.Format=LC/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV3=(+Currency+)/]</span></p>
+			<p class="hcp7"><span lang="EN-US" xml:lang="EN-US">[/WFButton.wire.INV4=(+TotalAmount+)/]</span></p>
+			<p class="MsoNormal">&#160;</p>
+			<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">The 
+			 Workflow Field Key is based on the Back-office Workflow Field 
+			 Key as follow:</span></p>
+			<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US"><img src="../workflow%20seeting.png" alt="" border="0" class="hcp6"></span></p>
+			<p class="MsoNormal">&#160;</p>
+			<p class="MsoNormal">The tag values above display the confirmation 
+			 text in the following output:</p>
+			<p class="MsoNormal"><img src="../output.png" alt="" border="0" class="hcp6"></p>
+  </div>
+		<p class="Tablecontent">&#160;</p>
+		<p class="Tablecontent"><span class="hcp5">Note</span>: 
+		 When no format is defined, the field will display only the first 
+		 record.</p>
+		<p class="Tablecontent">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col">CP2TIMEN</td>
+		<td class="t2Col"><p>[/NavigationLink=&lt;enter redirect link here&gt;/]</p>
+		<p>Example:</p>
+		<p>[/NavigationLink=https://www.google.com/]</p>
+		<p>&#160;</p>
+		<p>OR</p>
+		<p>&#160;</p>
+		<p>[/NavigationLink=&lt;enter redirect link here&gt;/usercode={{ucode}}?periodnumber={{periodnr}}/]</p>
+		<p>Example:</p>
+		<p>[/NavigationLink=https://www.google.com/usercode={{ucode}}?periodnumber={{periodnr}}/]</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p class="Tablecontent">This defines a hyperlink 
+		 that redirects to an external (such as SSRS report).</p>
+		<p class="Tablecontent">&#160;</p>
+		<p class="Tablecontent">&#160;</p>
+		<p class="Tablecontent">&#160;</p>
+		<p class="Tablecontent">&#160;</p>
+		<p class="Tablecontent">This defines a hyperlink that redirects 
+		 to an external as well as passing the parameters to the external.</p>
+		<p class="Tablecontent"><span class="hcp5">Note</span>: 
+		 The parameters are user code and period number of the current 
+		 opened Timesheet.</p>
+		<p class="Tablecontent">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Custom Tag for Sub Menu</h2>
+<p>The below Custom Tag is applicable for Sub Menu (where level &gt; 1)</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 39.61%;">
+	<col style="width: 60.39%;">
+	<tr class="t1st">
+		<td><p>Tag Value</p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>[/Align=r/]</p></td>
+		<td class="t2Col"><p>This will display the Sub Menu on the right 
+		 panel of the ESP screen (By default, it is on the left).</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; ESP Menu - Tags</p>
+  <p class="hcp8">&#160;</p>
+  <p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP5875784711');
+	TextPopupInit('a2','POPUP562538020');
+	TextPopupInit('a1','POPUP535840103');
+	TextPopupInit('a3','POPUP562847652');
+//]]></script>
+ </body>
+</html>

@@ -1,0 +1,159 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Account Mapping">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Account Mapping</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:none; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1 style="background-color: Transparent;">Account Mapping</h1>
+<p style="background-color: Transparent;">You can post appropriate journal 
+ entries in Accounting for invoice transactions in Practice Management. 
+ In order to correctly post these journal entries, the mapping of the components 
+ of the invoice in Practice Management to the Nominal Accounts in Accounting 
+ must be done. Ensure that you have selected the appropriate setting for 
+ the posting function in Configuration &gt; Settings &gt; <a href="System_Defaults_-_Accounting.htm">System 
+ Defaults &gt; Accounting</a> - PM Accounting Journals, then set up the 
+ mapping of the accounts. Depending on your selection for this, you may 
+ need to map one or both of the following:</p>
+<ul class="hcp1">
+	<li><p>Revenue Entities - 'inhouse' - Set up the revenue entities and 
+	 their bank accounts before proceeding.</p></li>
+	<li><p>Sales Ledger - Client Accounts.</p></li>
+</ul>
+<p>You should have already set up the Chart of Accounts in Accounting before 
+ you proceed.</p>
+<p>&#160;</p>
+<p class="FldExplain">Mapping Table</p>
+<p>The mapping table is split into two columns. The first column is divided 
+ into two sections: the first for Revenue Entities and their bank accounts, 
+ and the second section for the Client Accounts. In this second section, 
+ all the Charts of Accounts that you have created in Accounting will be 
+ displayed. Selecting one of these will display the related components 
+ in the second column of the table.</p>
+<ul class="hcp1">
+	<li><p>Components - This is a list of all the sales and purchase invoice 
+	 components. The Income and Expense Accounts entries are specified 
+	 by the Service Code in the Service Master. These are grouped by Service 
+	 Type. Note that for Expense Accounts - Supplier Invoices - R.PA, the 
+	 mapping can be empty as long as the nominal account is specified in 
+	 Nominal Account field (in Create/Edit Purchase Orders screen) when 
+	 creating the Purchase Order.</p></li>
+	<li><p>Type - Select the account type and code from the list. Your 
+	 selection here will load the available accounts in the Account field 
+	 (see below).</p></li>
+	<li><p>Account - Press F12 on your keyboard to display the list of 
+	 accounts. When you have selected the account you want to map to, the 
+	 Account Name field will be completed.</p></li>
+	<li><p>Line Description and Narrative - The default line description 
+	 and narrative that will be used for the generated journal line in 
+	 Accounting will displayed here. Click the field to display the browse 
+	 button and amend the description as necessary.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Add Matter map</span> - Click 
+	 this to map account code <a class="dropspot" href="javascript:TextPopup(this)" id="a1">based 
+	 on Matter type</a>.</p>
+	<div class="droptext" id="POPUP480759328" style="display: none;">
+		<p>This button is only active for the following components:</p>
+		<ul class="hcp1">
+			<li><p>Control Accounts - Sales Ledger</p></li>
+			<li><p>Control Accounts - Receipt/Payments</p></li>
+			<li><p>Control Accounts - Intercompany</p></li>
+			<li><p>Income Accounts - Sales Invoices - R.SA</p></li>
+		</ul>
+		<p>These would include also the Accounting Posting rule for Debtors 
+		 Provision Accrual, Recurring Fees in Arrears Accrual and WIP Accrual 
+		 Posting rule.</p>
+		<p>If there is a matter type specified, the account mapping will 
+		 take preference on the matter type specified.</p>
+		<p>Example:</p>
+		<p>For Components 'Accounts Preparation - TACCS', the journal will 
+		 be generally posted to Account code '6132'. However, for the specified 
+		 matter 'Company Secretarial (CO)', it will be posted to Account 
+		 code '6133'.</p>
+		<p><img src="../map1.png" alt="" border="0" class="hcp3"></p>
+		<p>In this example, the Journal '880' for Matter Code 'CO' has 
+		 been posted to account code '6133' in the Revenue Entity DREAMW.</p>
+		<p><img src="../map%202.png" alt="" border="0" class="hcp3"></p>
+		<p><img src="../map%203.png" alt="" border="0" class="hcp3"></p>
+ </div></li>
+	<li><p><span class="hcp2">Remove Matter map</span> - 
+	 Click this to remove the Matter map.</p></li>
+	<li><p><span class="hcp2">Save</span> - Click this to 
+	 save changes made to the mapping table.</p></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to cancel any changes made.</p></li>
+	<li><p><span class="hcp2">Reset Mapping</span> - Click 
+	 this if you want to clear the 'Account Mapping', 'Line Description', 
+	 and 'Narrative' for the selected template.</p></li>
+	<li><p><span class="hcp2">Reset Description/Narrative</span> 
+	 - Click this to reset the 'Line Description' and 'Narrative' of the 
+	 selected template to the system defaults. The defaults are set up 
+	 in the Account Types Practice Management [PMAT] <a href="Lookup_Tables.htm">Lookup 
+	 Table</a>.</p></li>
+	<li><p><span class="hcp2">Copy</span> - Click this to 
+	 copy the mapping data. You can paste the results elsewhere, such as 
+	 in an Excel spreadsheet.</p></li>
+	<li><p><span class="hcp2">Close</span> <span>- Click 
+	 this to exit the screen.</span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Account_Mapping_Client_Accounts.htm">Account Mapping 
+	 - Client Accounts</a></p></li>
+	<li><p><a href="Account_Mapping_Journals.htm">Account Mapping - Journals</a></p></li>
+	<li><p><a href="Account_Mapping_Revenue_Entities.htm">Account Mapping 
+	 - Revenue Entities</a></p></li>
+	<li><p><a href="Revenue_Entities.htm">Revenue Entities</a></p></li>
+	<li><p><a href="Bank_Accounts.htm">Bank Accounts</a></p></li>
+	<li><p><a href="System_Defaults_-_Accounting.htm">System Default - 
+	 Accounting</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Revenue_Entities.htm">Practice Management</a> &gt; <a href="Account_Mapping.htm">Account Mapping</a> &gt; Account Mapping</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP480759328');
+//]]></script>
+</body>
+</html>

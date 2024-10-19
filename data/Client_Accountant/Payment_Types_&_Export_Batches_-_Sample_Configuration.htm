@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Payment Types &amp; Export Batches - Sample Configuration</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:40px; }
+p.hcp2 { margin-left:80px; }
+p.hcp3 { margin-left:120px; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Payment Types &amp; Export Batches - Sample Configuration</h1>
+<p>The following sample was set up based on the requirements of a specific HSBC branch.</p>
+<p>&#160;</p>
+<p><img src="../image125.gif" alt="" style="border: none;" width="595" height="135" border="0"></p>
+<p>&#160;</p>
+<p>[/PAYSTART=&lt;?xml version="1.0" encoding="utf-8"?&gt;</p>
+<p>&lt;Document&gt;</p>
+<p>&#160;&#160;&lt;pain.001.001.02&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;GrpHdr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;MsgId&gt;Payment Batch #(+PEB.BatchNr+)&lt;/MsgId&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;CreDtTm&gt;(+PEB.DateExport\YYYY-MM-DD\Thh:mm:ss+)&lt;/CreDtTm&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;NbOfTxs&gt;(+PEB.TotalTrans+)&lt;/NbOfTxs&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;Grpg&gt;MIXD&lt;/Grpg&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;InitgPty&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Id&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;OrgId&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;BkPtyId&gt;(+CLIENT_BANK_PAYMENT_ID+)&lt;/BkPtyId&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/OrgId&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Id&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/InitgPty&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;/GrpHdr&gt;</p>
+<p>/]</p>
+<p>{PAYEND Sample 1}:</p>
+<p>[/PAYEND=&lt;/pain.001.001.02&gt;</p>
+<p>&lt;/Document&gt;</p>
+<p>/]</p>
+<p>{PAYEND Sample 2}:</p>
+<p>[/PAYEND=&lt;control&gt;</p>
+<p>&#160;&#160;&lt;recordType&gt;9&lt;/recordType&gt;</p>
+<p>&#160;&#160;&lt;numTrans&gt;(+PEB.TotalTrans+)&lt;/numTrans&gt;</p>
+<p>&#160;&#160;&lt;value&gt;(+PSB.TotalAmount+)&lt;/value&gt;</p>
+<p>&lt;/control&gt;</p>
+<p>&lt;/importfile/&gt;</p>
+<p>/]</p>
+<p>[/PAYINFO=&lt;PmtInf&gt;</p>
+<p>&#160;&#160;&lt;PmtInfId&gt;VP Payment #(+PAY.PaymentId+)&lt;/PmtInfId&gt;</p>
+<p>&#160;&#160;&lt;PmtMtd&gt;TRF&lt;/PmtMtd&gt;</p>
+<p>&#160;&#160;&lt;PmtTpInf&gt;</p>
+<p>&lt;ClrChanl&gt;MPNS&lt;/ClrChanl&gt;</p>
+<p>&#160;&#160;&lt;/PmtTpInf&gt;</p>
+<p>&#160;&#160;&lt;ReqdExctnDt&gt;(+PAY.PayDate\YYYY-MM-DD+)&lt;/ReqdExctnDt&gt;</p>
+<p>&#160;&#160;&lt;Dbtr&gt;</p>
+<p>&lt;Nm&gt;(+PAY.EntCode\#AD-1-0+)&lt;/Nm&gt;</p>
+<p>&#160;&#160;&lt;/Dbtr&gt;</p>
+<p>&#160;&#160;&lt;DbtrAcct&gt;</p>
+<p class="hcp1">&lt;Id&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;PrtryAcct&gt;</p>
+<p class="hcp2">&lt;Id&gt;(+PSB.ExtAcctNo+)&lt;/Id&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;/PrtryAcct&gt;</p>
+<p class="hcp1">&lt;/Id&gt;</p>
+<p>&#160;&#160;&lt;/DbtrAcct&gt;</p>
+<p>&#160;&#160;&lt;DbtrAgt&gt;</p>
+<p class="hcp1"><span style="margin-left: 80px;">&lt;FinInstnId&gt;</span></p>
+<p class="hcp1">&#160;&#160;&lt;CmbndId&gt;</p>
+<p class="hcp2">&lt;ClrSysMmbId&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;Id&gt;(+HSBC_BANK_ID+)&lt;/Id&gt;</p>
+<p class="hcp2">&lt;/ClrSysMmbId&gt;</p>
+<p class="hcp2">&lt;PstlAdr&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;Ctry&gt;(+HSBC_BANK_CNTR+)&lt;/Ctry&gt;</p>
+<p class="hcp2">&lt;/PstlAdr&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;/CmbndId&gt;</p>
+<p class="hcp1">&lt;/FinInstnId&gt;</p>
+<p>&#160;&#160;&lt;/DbtrAgt&gt;</p>
+<p>&#160;&#160;&lt;CdtTrfTxInf&gt;</p>
+<p class="hcp1">&lt;PmtId&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;EndToEndId&gt;(+PAY.PayReference+)&lt;/EndToEndId&gt;</p>
+<p class="hcp1">&lt;/PmtId&gt;</p>
+<p class="hcp1">&lt;Amt&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;InstdAmt Ccy="(+PAY.PayCCY+)"&gt;(+PAY.PayAmount+)&lt;/InstdAmt&gt;</p>
+<p class="hcp1">&lt;/Amt&gt;</p>
+<p class="hcp1">&lt;CdtrAgt&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;FinInstnId&gt;</p>
+<p class="hcp2">&lt;CmbndId&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;ClrSysMmbId&gt;</p>
+<p class="hcp3">&lt;Id&gt;(+PAY.BankIdCode+)&lt;/Id&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;/ClrSysMmbId&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;PstlAdr&gt;</p>
+<p class="hcp3">&lt;Ctry&gt;(+PAY.BankCNTR+)&lt;/Ctry&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;/PstlAdr&gt;</p>
+<p class="hcp2">&lt;/CmbndId&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;/FinInstnId&gt;</p>
+<p class="hcp1">&lt;/CdtrAgt&gt;</p>
+<p class="hcp1">&lt;Cdtr&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;Nm&gt;(+PAY.PayeeName+)&lt;/Nm&gt;</p>
+<p class="hcp1">&lt;/Cdtr&gt;</p>
+<p class="hcp1">&lt;CdtrAcct&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;Id&gt;</p>
+<p class="hcp2">&lt;PrtryAcct&gt;</p>
+<p class="hcp2">&#160;&#160;&lt;Id&gt;(+PAY.BankAccount+)&lt;/Id&gt;</p>
+<p class="hcp2">&lt;/PrtryAcct&gt;</p>
+<p class="hcp1">&#160;&#160;&lt;/Id&gt;</p>
+<p class="hcp1">&lt;/CdtrAcct&gt;</p>
+<p>&#160;&#160;&lt;/CdtTrfTxInf&gt;</p>
+<p>&lt;/PmtInf&gt;</p>
+<p>/]</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+<li>
+<p><a href="Payment_Types_&amp;_Export_Batches.htm">Payment Types &amp; Export Batches</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Payment Types & Export Batches - Sample Configuration</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

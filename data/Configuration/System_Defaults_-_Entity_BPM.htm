@@ -1,0 +1,167 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Entity/BPM</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>System Defaults - Entity/BPM</h1>
+<p>The defaults for the Entity and Forms are set up here. Before you proceed, 
+ ensure that you have set up the Master File for the Presenter, and codes 
+ for the various jurisdictions. Viewpoint comes pre-installed with two-letter 
+ ISO-standard codes for most countries. However, if the country code you 
+ need is not in the list, you can create it in the Country Codes [CNTR] 
+ lookup table.</p>
+<p>&#160;</p>
+<p class="FldExplain">Jurisdiction</p>
+<p>Enter the default country for the Form Library. Each time you open the 
+ form library, the jurisdiction will automatically default to the country 
+ entered here.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Form_Library.htm">Form Library</a></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Presenter</p>
+<p>Enter the Presenter's Master File. This information appears on some 
+ statutory forms and can be coded to appear in your own customised forms. 
+ There are special codes in the Field Wizard that will retrieve the Presenter's 
+ information on statutory forms.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Field_Wizard.htm">Field Wizard</a></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Master File Bearer Shares</p>
+<p>Enter the Master File that is to be used as shareholder for bearer shares. 
+ This information is used to report on Bearer shares in some statutory 
+ forms.</p>
+<p>&#160;</p>
+<p class="FldExplain">Exclude General Forms from Selections</p>
+<p>Tick this box if you want to EXCLUDE Forms in the 'General' category 
+ from being triggered in Viewpoint Administrator. When ticked, the program 
+ will only look through the Jurisdiction-related forms when processing 
+ an event.</p>
+<p>&#160;</p>
+<p class="FldExplain">Deactivate Validation of Share Certificate Number</p>
+<p>Tick if you wish to inactivate the validation of share certificate numbers.</p>
+<p>&#160;</p>
+<p class="FldExplain">Restrict Distributions to Beneficiaries</p>
+<p>Tick this box if you want to restrict distributions only to the beneficiaries 
+ of a Trust. If you do not tick this box then you can do a distribution 
+ to any Master File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow Multiple Foreign Registration in one Jurisdiction</p>
+<p>Tick this box if you want to allow more than one Foreign Registration 
+ to be created for one jurisdiction. This is useful if you want to record 
+ multiple details such as the VAT number and the Income Tax number for 
+ the same jurisdiction in the Foreign Registration screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger Change Processing for Global File Review</p>
+<p>Tick this box if you want to display the Change Processing screen when 
+ posting updates from Global File Review. This will list all items linked 
+ to the changes applied (updates posted).</p>
+<p>&#160;</p>
+<h4>Global Change of Particulars</h4>
+<p>The options below are to determine if the Global Change of Particulars 
+ for statutory filing will be triggered due to changes made for Master 
+ Files that are appointed different roles.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Statutory/Trust/Foundation Officers</p>
+<p>This option is ticked by default and will trigger Global Change of Particulars 
+ for statutory filing of changes made for active Statutory, Trust and Foundation 
+ Officers. &#160;</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Entity Relations</p>
+<p>This option is ticked by default and will trigger Global Change of Particulars 
+ for statutory filing of changes made for active Entity Relations.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Shareholders</p>
+<p>Tick this option to trigger the Global Change of Particulars for statutory 
+ filing of changes made for active shareholders.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Beneficiaries</p>
+<p>Tick this option to trigger the Global Change of Particulars for statutory 
+ filing of changes made for trust beneficiaries where Date Ceased is empty 
+ or later than the date of the change.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Entity Interest Holders</p>
+<p>Tick this option to trigger Global Change of Particulars for statutory 
+ filing of changes made for interest holders of managed entities where 
+ Date Ceased is empty or later than the date of the change.</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: This 
+ does not apply to interest holders for non-managed entities.</p>
+<p>&#160;</p>
+<p class="FldExplain">Trigger for Owners &amp; Controllers</p>
+<p>Tick this option if requires changes to Owners/Controllers details to 
+ trigger the Global Change for statutory filing. This will only trigger 
+ for Owners/Controllers without ‘Date Ceased’ defined or ‘Date Ceased’ 
+ with a later date.</p>
+<p>&#160;</p>
+<p class="FldExplain">Mandatory to Select Change of Particulars</p>
+<p>Tick this option to trigger the Global Change without prompting a message 
+ to confirm Yes/No whenever the details of the Master File has been changed.</p>
+<p>&#160;</p>
+<h4>Workflow</h4>
+<p class="FldExplain">Create Activity for Workflow If None Exists</p>
+<p>Tick this option to trigger the creation of activity if the workflow 
+ does not has a linked activity when saved. Activity will be created based 
+ on the activity template that is linked to the workflow template. Activity's 
+ details such as Category, Sub-Category, Description, Assign To, Due Date 
+ and Note will be the same as the workflow.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Administrator/Global_Change_of_Particulars.htm">Global 
+	 Change of Particulars</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Entity/BPM</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,188 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Accounting</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>System Defaults - Accounting</h1>
+<p>The defaults for Accounting are set up here.</p>
+<p>&#160;</p>
+<p class="FldExplain">PM Accounting Journals</p>
+<p>Select the format for the accounting journals in Practice Management 
+ from system standards. &#160;</p>
+<ul class="hcp1">
+	<li><p>None [0] - No postings are made, and no journals are kept.</p></li>
+	<li><p>PM Journals [1] - Journals are generated in Practice Manager 
+	 and you can create an Excel report on these journals for manual import 
+	 or entry into a third party accounting software.</p></li>
+	<li><p>CA Journals RC [2] - Journals are posted to the Revenue Entity's 
+	 account(s) only. This option is used when you use Accounting for internal 
+	 (in-house) accounts, but not for your Client's accounts.</p></li>
+	<li><p>CA Journals CE [4] - Journal are posted to the Client's Entity 
+	 account(s) only. This option is used when you keep accounts for the 
+	 Client's entities, and do not use Accounting for your internal (in-house) 
+	 accounts.</p></li>
+	<li><p>CA Journals RC + CE [6] - Journals are posted to the Revenue 
+	 Entity's account(s) as well as the Client's accounts.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Generate Journals Automatically</p>
+<p>Tick this option if you want the journals created in Practice Management&#160;to 
+ be generated automatically in Accounting. If this option is not ticked, 
+ you can manually post journals to Accounting. You can find out more in 
+ the Practice Management and Accounting help files.</p>
+<p>&#160;</p>
+<p class="FldExplain">Post Client File Journal as Draft</p>
+<p>Tick this option to post invoices and receipts to Accounting as draft 
+ journal for client file. </p>
+<p>This requires the Draft Journals option to be ticked in File Maintenance 
+ &gt; Accounting &gt; Account File &gt; General &gt; Settings. Otherwise, 
+ it will still post as Final. </p>
+<p>&#160;</p>
+<p class="FldExplain">Global Reporting Currency</p>
+<p>Select the reporting currency for global reports. Global reports can 
+ be accessed from Viewpoint - Home screen through the Reporting section.</p>
+<p>&#160;</p>
+<p class="FldExplain">Reporting Location</p>
+<p>Enter the default location for global reports.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disable use of Line Reference Date</p>
+<p>Tick this option if you want to disable the use of the Line Reference 
+ Date. Once disabled, you will not be able to enter a Line Date during 
+ journal entry. In Journal Quick Entry – Entries Tab, the ribbon button 
+ ‘Line Date’ will not be shown and the grid column ‘Line Date’ will be 
+ hidden.</p>
+<p>&#160;</p>
+<p class="FldExplain">Auto Calculate Reverse Exchange Rate</p>
+<p>This option allows Accounting to automatically calculate the reverse 
+ exchange rate to the one entered into the Exchange Rates Master. For example, 
+ if the exchange rate for USD to Pound Sterling is entered into the system, 
+ it will automatically calculate the rate for Pound Sterling to USD. Select 
+ either this option, or the Use 'Triangular/Cross' Exchange Rates option 
+ (see below) to calculate the exchange rate. You should not use both at 
+ the same time.</p>
+<p>&#160;</p>
+<p class="FldExplain">Use 'Triangular/Cross' Exchange Rates</p>
+<p>When ticked, the system will automatically calculate the exchange rate 
+ between two currencies if there are already rates available for these 
+ two currencies against a third currency. For example, if the rate between 
+ Euro and USD, and Pound Sterling and Euro are available, Viewpoint will 
+ be able to calculate the rate between USD and Pound Sterling. Select either 
+ this option, or the Auto Calculate Reverse Exchange Rate option (see above) 
+ to calculate the exchange rate. You should not use both at the same time.</p>
+<ol style="list-style: decimal;">
+	<li><p>Direct rate (A &#8594; B); or</p></li>
+	<li><p>Inverse of the direct rate from B to A (1/B &#8594; A); or</p></li>
+	<li><p>Indirect rate through another currency (C), where the priority 
+	 is the most recent rate (A &#8594; C x C &#8594; B); or</p></li>
+	<li><p>As per 3, but using the inverse rate (A &#8594; C x 1/(B &#8594;C))</p></li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>:</p>
+<ul class="hcp1">
+	<li><p>The program will search for the most recent rate ON/BEFORE the 
+	 journal date.</p></li>
+	<li><p>For 3 and 4, the rates (of A &#8594; C and C &#8594; B) must be on the same 
+	 date.</p></li>
+</ul>
+<p>If you opt for this method after having used the Auto Calculate Reverse 
+ Exchange Rate option (see above) prior to this, then it is advisable to 
+ clean up the Exchange Rates Master and delete unused exchange rate currency 
+ combinations, i.e. those which you no longer update, to avoid referring 
+ to them and returning old or outdated rates. If the old rates are left 
+ as is, Viewpoint could pick them up as it will first look for the direct 
+ rate - even though it might be years old. We suggest that you have only 
+ the exchange rates for your currency of choice (e.g. GBP -&gt;&lt;Currencies&gt;) 
+ to avoid confusion. Note that if you do a backdated valuation, Viewpoint 
+ will use the cross rates.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disable Automatic Tax Entries</p>
+<p>Tick this if you DO NOT want a tax journal line to be automatically 
+ created in the general journal and journal script screens when a tax account 
+ is selected or specified in a journal line.</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow Editing of Automatic Tax Entries</p>
+<p>Tick this option to allow editing of tax amount in Journal Quick Entries 
+ and Journal Script.</p>
+<p>&#160;</p>
+<p class="FldExplain">Split Authority for Draft &amp; Posting</p>
+<p>If the Draft Journals function is used in the Account File, when this 
+ option is ticked, the program will not allow the user who last edited 
+ a draft journal to post it. <i style="font-style: normal;">This option 
+ is only applicable on ‘Post as Final’.</i></p>
+<p>&#160;</p>
+<p class="FldExplain">Enforce Credit Limit for Sub-ledgers</p>
+<p>Tick the check box if you want to enforce the credit limit for the Creditor 
+ and Bank Account sub-ledgers. You will not be able to post any more journals 
+ to the sub-ledger when you reach the credit limit.</p>
+<p>&#160;</p>
+<p class="FldExplain">Line Reference Date Must be in Posting Window</p>
+<p>This option is ticked if you want to validate that the Line Reference 
+ date is within the posting period.</p>
+<p>&#160;</p>
+<p class="FldExplain">Show Assigned Journal No. on Posting</p>
+<p>Tick this to show the assigned Journal Number on posting. This does 
+ not apply to Journal Quick Entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Roll Year-End: Warn for Un-posted Transactions</p>
+<p>Tick this if you want to be informed of un-posted transactions such 
+ as invoices, receipts, payments or draft journals when you roll the year-end.</p>
+<p>&#160;</p>
+<p class="FldExplain">Use Unit Codes Default Values in Journal Entry</p>
+<p>Tick this to apply default values for Unit Codes to Journal entry screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Include Unrealised Revaluation in Cost Calculations</p>
+<p>When this option is ticked, transactions assigned to the Unrealised 
+ Revaluation movement code ending with 'U'(*U) will be included in the 
+ disposal cost calculation when using journal scripts, depending on the 
+ Security Valuation method used.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Accounting</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

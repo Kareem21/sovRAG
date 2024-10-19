@@ -1,0 +1,196 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Payments and Approvals">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Pending Payments</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { mso-add-space:auto;
+mso-list:l0 level1 lfo1; }
+b.hcp4 { mso-bidi-font-weight:normal; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Pending Payments</h1>
+<p>Payments can be made in Accounting and Entity Administration to approved 
+ payees; each payment must be approved according to the approval process 
+ set up in the approval cards before they can be released. Approved payments 
+ are then released to bank payment batches for inclusion in bank payment 
+ export files. Once released, the payment will automatically create a pending 
+ journal. You should set up your journal scripts before using this function. 
+ This screen is part of the Bank Payment feature, which also includes the 
+ Payees and Export Batches functions.</p>
+<p>&#160;</p>
+<h2>Pending Payments Screen</h2>
+<p>This screen can be opened through:</p>
+<ul class="hcp1">
+	<li><p>Viewpoint - Home screen</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Click Accounting Ribbon button and select Bank Payment &gt; 
+		 Pending Payments from the navigation listing in Accounting Overview.</p></li>
+		<li><p>In Section Menu, click Home &gt; Accounting &gt; Bank Payment 
+		 &gt; Pending Payments.</p></li>
+	</ul></li>
+	<li><p>File Maintenance screen:</p></li>
+	<ul class="hcp1">
+		<li><p>Click Accounting Ribbon button and select Processing &gt; 
+		 Pending Payments from the navigation listing in Accounting Overview.</p></li>
+		<li><p>In Section Menu, click File &gt; Accounting &gt; Processing 
+		 &gt; Pending Payments.</p></li>
+	</ul>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Filter</p>
+<p>You can filter based on the <a class="dropspot" href="javascript:TextPopup(this)" id="a11">status</a> 
+ or apply selection criteria using the Select button.</p>
+<div class="droptext" id="POPUP3238874761" style="display: none;">
+	<ul class="hcp1">
+		<li><p><span class="hcp2">Waiting Approval</span> 
+		 - displays the payments that are waiting for approval.</p></li>
+		<li><p><span class="hcp2">Waiting Release</span> 
+		 - displays the approved payments that are waiting for release.</p></li>
+		<li><p><span class="hcp2">All</span> - displays both 
+		 Waiting Approval and Waiting Release payments.</p></li>
+	</ul>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Payments list</p>
+<p>This shows payments that have been created.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a href="Payments_New.htm">create</a> new payment.</p></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit a payment. If an approved payment is edited, the payment will 
+	 have to be re-approved.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the payment.</p></li>
+	<li><p><span class="hcp2">Approval</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">approve</a> 
+	 the payment. Payments will be approved based on the payment approval 
+	 cards set up in Configuration.</p>
+	<div class="droptext" id="POPUP561837458" style="display: none;">
+		<p>If you are authorised to approve the payment, you can click 
+		 on the Approve button.</p>
+		<p>Otherwise, you will see a message saying you are not authorised 
+		 for the approval.</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Release</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a2">release</a> 
+	 the payment to a bank payment batch. This button will be enabled after 
+	 the payment is approved. </p>
+	<div class="droptext" id="POPUP323896126" style="display: none;">
+		<ol style="list-style: decimal;">
+			<li><p>Select the applicable batch option.</p></li>
+			<li><p>Click Release.</p></li>
+		</ol>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h2>Approve Payments</h2>
+<p>Payments must be approved by the required number of users before they 
+ can be released. The approval process is determined by the approval cards 
+ set up in Configuration - the cards determine who can approve a payment, 
+ and the number of approvals required to approve the payment.</p>
+<p>The Approval screen opens as a separate window when you click the Approval 
+ button. The payment that had been approved will shown a green colour header 
+ at the upper side with note ‘Approved &amp; Completed. You can also see 
+ the status of the payment in the ‘Approved’ column. If the payment has 
+ been approved, the status will show ‘Yes’ and vice versa.</p>
+<p>&#160;</p>
+<h2>Release Payments</h2>
+<p>When a payment has been approved, it must be released to either a manual 
+ batch or an exportable bank payment batch. On release, a pending journal 
+ will be created for the transaction.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp3">Proceed 
+	 to release payment by clicking on the <b class="hcp4">Release</b> 
+	 button.</span></p></li>
+	<li><p style="mso-add-space: auto;"><span style="mso-list: l0 level1 lfo1;">The 
+	 record will be disappeared from the list upon released.</span></p></li>
+	<li><p><span class="hcp3">The 
+	 record has now transferred to export step in <b class="hcp4">Home 
+	 &gt; Accounting &gt; Bank Payment Functions &gt; Payment Types &amp; 
+	 Export Batches</b> Select the Payee bank and the release record will 
+	 be displayed at the bottom panel.</span></p></li>
+	<li><p><span class="hcp3">Click 
+	 <b class="hcp4">Export/Close</b> to export 
+	 the payment into batch file.</span></p></li>
+	<li><p>The ‘Bank File Export’ window appears when <b class="hcp4">Export/Close</b> 
+	 button is clicked. </p></li>
+	<li><p>When you release a payment, you will be given the option to 
+	 add the payment to a batch. The available batches are displayed in 
+	 the Payment Release screen, which opens as a separate window.</p></li>
+	<li><p>Manual options should only be selected if you have not configured 
+	 a batch file for this bank.</p></li>
+	<li><p>Once a payment has been released to the Manual - Completed or 
+	 Cancelled Payments batch option, the process cannot be undone.</p></li>
+</ul>
+<p><i><span class="hcp2">Note:</span> <span style="font-style: normal;">The 
+ option ‘Export file’ is checked by default. You may uncheck the box if 
+ using manual method to export the file. The option ‘Close Batch’ will 
+ be disabled when ‘Export File’ is checked.</span></i></p>
+<p>&#160;</p>
+<p><a href="Payments_Released.htm">I assigned the payment to a wrong batch. 
+ What do I do now?</a></p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Payees_and_Approval.htm">Payees &amp; Approvals</a></p></li>
+	<li><p><a href="Bank_Payments.htm">Bank Payments</a></p></li>
+	<li><p><a href="Payment_Types_&amp;_Export_Batches.htm">Banks &amp; 
+	 Export Batches</a></p></li>
+	<li><p><a href="Payees.htm">Payees</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/File_Maintenance_screen.htm\">File Maintenance</a> &gt; <a href=\"Accounting.htm\">Accounting</a> &gt; <a href=\"Reconcile_Account.htm\">Processing</a> &gt; Pending Payments</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"Draft_Journals.htm\">Accounting</a> &gt; <a href=\"Bank_Payments.htm\">Bank Payments</a> &gt; Pending Payments</p>");
+</script>
+
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP3238874761');
+	TextPopupInit('a1','POPUP561837458');
+	TextPopupInit('a2','POPUP323896126');
+//]]></script>
+</body>
+</html>

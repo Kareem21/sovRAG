@@ -1,0 +1,182 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Security</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>System Defaults - Security</h1>
+<p>The security for your environment is set up here.</p>
+<p>&#160;</p>
+<p class="FldExplain">Security Model</p>
+<p>Show the <a href="Security_Models.htm">security model</a> from the system 
+ standards. This field is not editable. You are required to select the 
+ Security Model from Viewpoint Management.</p>
+<p>&#160;</p>
+<p class="FldExplain">Token Expires In </p>
+<p>This field is used to set the number of hours for the password activation 
+ or reset token to remain valid. Tokens exceeding the number of hours set 
+ will expire and the users will not be able to use the links sent in the 
+ e-mails to activate or reset a password. The value for this field must 
+ be numerical. The default value is 5.</p>
+<p>&#160;</p>
+<p class="FldExplain">Exception Log</p>
+<p>Select the location for the exception log:</p>
+<ul class="hcp1">
+	<li><p>Log to File [1] - Writes exceptions to file.</p></li>
+	<li><p>Log to Database [2] - Stores exceptions to database.</p></li>
+</ul>
+<p>Option [2] will store the errors in '<a href="Exception_Log.htm">Exception 
+ Log</a>' screen under Configuration &gt; Users &amp; Security &gt; Security 
+ Setup.</p>
+<p>&#160;</p>
+<p class="FldExplain">Maintain User/System Access Log</p>
+<p>Tick this to keep a record of user activity in Viewpoint. The information 
+ will be seen in the <a href="User_System_Access_Log.htm">User/System Access 
+ Log</a> screen. This feature can be useful when trying to determine the 
+ source of a user's login problems.</p>
+<p>&#160;</p>
+<p class="FldExplain">Password Expires in (days)</p>
+<p>Enter the number of days a password can be used before it expires. Enter 
+ '0' to disable the feature.</p>
+<p><span class="hcp2">Note</span>: This 
+ option does not apply if the user logs in using Windows Authentication. 
+ </p>
+<p>&#160;</p>
+<p class="FldExplain">Minimum Password Length</p>
+<p>Enter the minimum number of characters for the password. Enter '0' to 
+ disable the feature.</p>
+<p><span class="hcp2">Note</span>: This 
+ option does not apply if the user logs in using Windows Authentication. 
+ </p>
+<p>&#160;</p>
+<p class="FldExplain">Login Failure Threshold</p>
+<p>Enter the maximum number of attempts allowed for user account login. 
+ When the login attempt reaches the threshold, the user account will be 
+ deactivated. Enter '0' to disable the feature and allow infinite attempts. 
+ </p>
+<p><span class="hcp2">Note</span>: This 
+ option does not apply if the user logs in using Windows Authentication. 
+ </p>
+<p>&#160;</p>
+<p class="FldExplain">Require Complex Passwords</p>
+<p>Tick this box to enforce complex password. When this option is enabled, 
+ password should consist of a mix of alphanumeric, upper case, lower case 
+ and special characters. It will validate the password length as set in 
+ the 'Minimum Password Length' field and prompt an 'Invalid Minimum Password 
+ Length' message if the password length is less than 6 or more than 20.</p>
+<p><span class="hcp2">Note</span>: This 
+ option does not apply if the user logs in using Windows Authentication. 
+ </p>
+<p>&#160;</p>
+<p class="FldExplain">Prompt with Last Login</p>
+<p>Tick this box if you want the date and time of the user's last login 
+ session to be shown at the subsequent login.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disable Multiple Logins</p>
+<p>Tick this box to disable multiple logins for the same user account.</p>
+<p>&#160;</p>
+<p class="FldExplain">Apply Master File Security to Reports and Widgets</p>
+<p>Tick this box to restrict information retrieved for the reports and 
+ widgets to Master Files that the user can access. If this is not ticked, 
+ then the reports and widgets will include Master Files that the user cannot 
+ access as well. This applies to Custom Reports, Word Reports, Excel Statements, 
+ SSRS Reports and widgets. For custom reports, this requires the custom 
+ report to have Use Administrator Group Authority = Yes, while the others 
+ require <a href="../Shared/MFSEC_Tag_for_Reports_and_Widgets.htm">MFSEC 
+ tag</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Two-Step Verification</p>
+<p>Tick this box to enable two-step verification for Viewpoint Connect 
+ and Local Agent logins. When enabled, after logging in, users must key 
+ in a six-digit code in a verification screen to complete the login process.</p>
+<p><span class="hcp2">Note</span>: Please 
+ ensure that the workstation and mobile phone are in sync with the current 
+ date and time. Otherwise, the six-digit code entered on the verification 
+ screen will be invalid.</p>
+<p>&#160;</p>
+<p class="FldExplain">Restrict Master Files to Users</p>
+<p>Tick this box to restrict users from seeing Master Files that they cannot 
+ access. This applies to Master File Search performed in Viewpoint - Home, 
+ File Maintenance, and Billing Enquiry. When accessing Changes screen from 
+ Viewpoint - Home, records of changes applied to Master Files that user 
+ cannot access will also be hidden. This option applies to the Services 
+ Provided Model [5] security model.</p>
+<p><span class="hcp2">Note</span>: Records 
+ in File Maintenance and File Enquiry containing Master Files that user 
+ cannot access will still be available.</p>
+<p>&#160;</p>
+<h6 class="Heading8" style="font-style: italic;">Enable Authentication 
+ Using E-mail</h6>
+<p>Tick this to use E-mail ID to login to Viewpoint Connect instead of 
+ User Code. This is also applicable to using the Single Sign-On user login 
+ mode. </p>
+<h6 class="Heading8">&#160;</h6>
+<p class="FldExplain">User Logout after Idle for (Minutes)</p>
+<p>This field defines the idle time in Minutes. User will be logged out 
+ after the application is idle over a specific time. By default, the value 
+ of this field is Nil. Enter '0' to disable the feature.</p>
+<p>&#160;</p>
+<p class="FldExplain">Login Alert</p>
+<p>Enter the displayed warning message to user when there is unauthorised 
+ access. The displayed message will have a 'Yes' and 'No' button. Proceeds 
+ login on 'Yes' and immediately exits on 'No'.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp3">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp3">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p class="SeeAlso">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Users.htm">Users</a></p></li>
+	<li><p><a href="../Shared/MFSEC_Tag_for_Reports_and_Widgets.htm">Master 
+	 File Security in Reports and Widgets</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Security</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

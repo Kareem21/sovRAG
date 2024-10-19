@@ -1,0 +1,105 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Automatic Valuation/Revaluation Reference">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Automatic Valuation/Revaluation Reference</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Automatic Valuation/Revaluation Reference</h1>
+<p>It is possible to automate the Reference field as the default reference 
+ when creating a valuation or revaluation. This is done by creating user 
+ fields in Configuration.</p>
+<ol style="list-style: decimal;">
+	<li><p>In Viewpoint - Home, go to Configuration Ribbon button &gt; 
+	 Business Parameters &gt; User Fields &gt; Account File and click New.</p></li>
+	<li><p>Tick General Field.</p></li>
+	<li><p>Enter the following information:</p>
+	<ul class="hcp1">
+		<li><p>Key - Type the relevant code:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>VAL.F.RE - For Account File Valuation.</p></li>
+			<li><p>VAL.P.RE - For Portfolio Valuation.</p></li>
+			<li><p>VAL.X.RE - For Exchange Revaluation.</p></li>
+			<li><p>VAL.V.RE - For Sub-ledger Revaluation.</p></li>
+		</ul></li>
+		<li><p>Field Type - Select Text [11].</p></li>
+		<li><p>Caption - Enter a suitable caption.</p></li>
+		<li><p>Default Value - This is the starting number of the field. 
+		 If the default value is 100, the first number assigned will be 
+		 101, followed by 102, 103, etc.</p></li>
+		<li><p>Default Note - This is used to add text and/or other information 
+		 to the reference. You may use a mixture of text and the following 
+		 codes in this field to automatically pick up and display specific 
+		 information:</p></li>
+		<li class="hcp2"><ul class="hcp1">
+			<li><p>(-EC-) will be replaced by the Account File code.</p></li>
+			<li><p>(-NR-) will be replaced by the sequence number generated. 
+			 If this code is not included in the Default Note field, the 
+			 sequence number will be suffixed.</p></li>
+			<li><p>(-NOW\format-) will be replaced by today's date following 
+			 the specified format string. For example:</p></li>
+			<li class="hcp2"><ul class="hcp1">
+				<li><p>(-NOW\yyyy-) returns the year, i.e. 2011.</p></li>
+				<li><p>(-NOW\yyyy.MM-) returns the year and month, i.e. 
+				 2011.02.</p></li>
+			</ul></li>
+		</ul></li>
+	</ul></li>
+	<li>Click Update.</li>
+</ol>
+<p>After you have defined the user field, Viewpoint will automatically 
+ add it to the Reference field each time a Valuation or Revaluation is 
+ created.</p>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Example of how 
+ the Default Note field can be used</a></p>
+<div class="droptext" id="POPUP348562039" style="display: none;">
+	<p>If you enter the following in this field:</p>
+	<p>AF:(-EC-)~(-NOW\yyyy.MM-)`(-NR-)</p>
+	<p>when you create a new journal, the Reference field will return:</p>
+	<p>AF:INVEST~2011.02`655</p>
+</div>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Automatic Valuation/Revaluation Reference</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP348562039');
+//]]></script>
+</body>
+</html>

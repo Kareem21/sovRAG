@@ -1,0 +1,125 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Bank Payment Export File for PO Settlements</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+img.hcp3 { border:none; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Bank Payment Export File for PO Settlements</h1>
+<p>If you would like a payment export file for PO settlements, you need 
+ to first do the following:</p>
+<ul class="hcp1">
+	<li><p>Enable the ‘Create Accounting Payment Record for Payments’ option.</p></li>
+	<li><p>Enable the ‘Remit from’ and ‘Remit to’ field in <a href="../Practice_Manager/Supplier_File_-_General.htm">Supplier 
+	 File – General</a> screen.</p></li>
+	<li><p>Set up the Revenue Entity’s bank account.</p></li>
+	<li><p>Configure the Payment Export File.</p></li>
+	<li><p>Set up and approve Payee and Payer Bank Accounts records.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Enable the ‘Create Accounting Payment Record for Payments’ option</h2>
+<p>This option will automatically create payment record for a supplier 
+ payment.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration Ribbon button &gt; 
+	 Settings &gt; <a href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+	 Defaults &gt; Practice Management.</a></p></li>
+	<li><p>Tick the ‘Create Accounting Payment Record for Payments’ option.</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Enable the ‘Remit from’ and ‘Remit to’ fields</h2>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration Ribbon button &gt; 
+	 Settings &gt; Customise &gt; Field Settings.</p></li>
+	<li><p>Specify the following:</p>
+	<ul class="hcp1">
+		<li><p>Menu Group = File [8]</p></li>
+		<li><p>Section = Purchase Ledger [FPPURCLG]</p></li>
+		<li><p>Screen = General [FPSGENER]</p></li>
+	</ul></li>
+	<li><p>Select the Remit from field and click Edit.</p></li>
+	<li><p>Set the Authority Required to at least level 6.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Do the same for Remit to field.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Set up the Revenue Entity’s Bank Account</h2>
+<p>Ensure that the bank account has been added to the Revenue Entity in 
+ Configuration &gt; Business Parameters &gt; Practice Management &gt; Setup 
+ &gt; Bank Accounts:</p>
+<p><img src="../image213.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p>Ensure that this bank account is mapped to the Chart of Accounts through 
+ Account Mapping:</p>
+<p><img src="../image215.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<h2>Configure the Bank Export File</h2>
+<p>If you require export batch files to be sent to the bank for further 
+ processing, you need to define the export file configuration. This depends 
+ on the bank file is for.</p>
+<p>You may send the bank’s requirement to Viewpoint for assistance on creating 
+ the export file configuration. However, ensure that the configuration 
+ is updated when the bank requirement changes.</p>
+<p>&#160;</p>
+<h2>Set up and approve Payee and Payer Bank Accounts records</h2>
+<p>Before you record the settlement, set up both the Revenue Entity’s bank 
+ account and a Payee record for the Supplier.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Revenue Entity Bank Account</h6>
+<p>In Home &gt; Practice Management &gt; Payee/Payer Bank Accounts screen, 
+ click New to create the Revenue Entity’s bank account record.</p>
+<p>Ensure that you approve this record.</p>
+<p><img src="../image216.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<h6 class="Heading8">Supplier Payee Record</h6>
+<p>In Home &gt; Practice Management &gt; Payee/Payer Bank Accounts screen, 
+ click New to create the Supplier’s payee record.</p>
+<p>Ensure that you approve this record.</p>
+<p><img src="../image217.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p>In the Supplier File’s General screen, set the following:</p>
+<ul class="hcp1">
+	<li><p>Remit from – Revenue Entity’s Bank Account record.</p></li>
+	<li><p>Remit to – The Supplier’s Payee record.</p></li>
+</ul>
+<p><img src="../image218.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<h2>Recording the Settlements</h2>
+<p>After the configuration is complete, record the settlements in the normal 
+ manner.</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Approval_Cards_for_Payees_and_Payments.htm">Practice Management</a> &gt; Bank Payment Export File for PO Settlements</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

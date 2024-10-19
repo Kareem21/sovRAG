@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>HTML Codes</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>HTML Codes</h1>
+<p>This refers to standard HTML codes used to define the design elements of the template. When adding HTML codes, follow the conventional syntax where the code will be enclosed within '&lt;&gt;'. The use of HTML codes allow for the following in the template:</p>
+<ul class="hcp1">
+<li>
+<p>Defining the style used in the template</p>
+</li>
+<li>
+<p>Adding headings</p>
+</li>
+<li>
+<p>Adding links</p>
+</li>
+<li>
+<p>Defining table properties</p>
+</li>
+</ul>
+<p>For links, typically, this is to a website address but it can also be used as a link to Viewpoint screens by specifying SH.&lt;ScreenID&gt; e.g. <span lang="EN-US" xml:lang="EN-US">&lt;a href="<b>SH.FSEAMEET</b>" class="btn btn-link"&gt;</span></p>
+<p>&#160;</p>
+<h2>Commonly-used HTML Codes</h2>
+<p>The default CSS framework is Bootstrap CSS framework version 3.3.1 and the more commonly-used HTML codes are described below.</p>
+<h6 class="Heading8">&lt;h#&gt;Heading&lt;/h#&gt;</h6>
+<p>where # refers to 1, 2, 3 or any number specified in the style sheet, and Heading is the title that will appear in the screen.</p>
+<p>&lt;h1&gt;Master File Information Sheet – (+ftype=evw|HD.FullName+)&lt;/h1&gt;</p>
+<p>&#160;</p>
+<h6 class="Heading8">&lt;div&gt;grouped information&lt;/div&gt;</h6>
+<p>This is used to group information together, such as bookmarks. See class=”style” for example.</p>
+<p>&#160;</p>
+<h6 class="Heading8">id="heading ID", name=”name”</h6>
+<p>These codes are used to identify the header, and can be referred to in a bookmark.</p>
+<p>&lt;h2 id=”favGen” name=”favGen”&gt;General Information&lt;/h2&gt;</p>
+<p>&#160;</p>
+<h6 class="Heading8">&lt;a href="#heading ID"&gt;Hyperlink text&lt;/a&gt;</h6>
+<p>This code is used create hyperlinks.</p>
+<p>This code will link to an id in the template:</p>
+<p>&lt;a href="#favGen"&gt;General Information&lt;/a&gt;</p>
+<p>This code on the other hand, is prefixed with SH. and will link to a screen in Viewpoint</p>
+<p>&lt;a href="SH.FMMCOMPN" &gt;Compliance Details&lt;/a&gt;</p>
+<p>You can get the screen ID that you want to link to, from the VpSysMenu table in the database.</p>
+<p>&#160;</p>
+<h6 class="Heading8">class="style"</h6>
+<p>This is used to determine the style used for that section.</p>
+<p>&lt;a class="btn btn-link"&gt;&lt;span class="glyphicon glyphicon-share-alt"&gt;&lt;/span&gt; For more details see Client information&lt;/a&gt;</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-style: italic;">Important note:</p>
+<p>Use data-role="collapsiblePanel" to allow a section to expand/collapse where the data-target must point to the id of the panel body.</p>
+<p>&lt;div class="panel panel-info" id="favClient"&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;div class="panel-heading"&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;h3 class="panel-title" data-target="#pnlClient" data-role="collapsiblePanel"&gt;Client Information&lt;/h3&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&lt;div id="pnlClient" class="panel-body"&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;content&gt;</p>
+<p><span style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;/div&gt;</span></p>
+<p>&lt;/div&gt;</p>
+<p>&#160;</p>
+<h6 class="Heading8">&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</h6>
+<p>These codes are used for tables. Here, &lt;table&gt; refers to table, &lt;tr&gt; refers to table row, and &lt;td&gt; refers to table data. In the following example:</p>
+<ul class="hcp1">
+<li>
+<p>width=”x%” is the percentage of the table width for the column</p>
+</li>
+<li>
+<p>colspan=”3” means that the selected column is to be spread over 3 columns</p>
+</li>
+<li>
+<p>&amp;npsb; is used to place a blank space in the column if the query used for that section returns a blank</p>
+</li>
+<li>
+<p>Align=”center” is used to align the information to the centre of the cell.</p>
+</li>
+</ul>
+<p>&lt;table class="table table-hover table-bordered"&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;tr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="22%" align="center" &#160;class="active"&gt;Company name&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="78%"&gt;(+ftyp=evw|HD.EntCode\#AD-0-0+)&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;/tr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;tr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="22%" class="active"&gt;(+ftyp=evw|DT.AddressMF+)&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="78%"&gt;&amp;nbsp;&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;/tr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;tr&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="22%" class="active"&gt;Residential Address&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;td width="78%" colspan="3"&gt;(+ftyp=evw|HD.RefCode\#AD-42-1+)&lt;/td&gt;</p>
+<p>&#160;&#160;&#160;&#160;&lt;/tr&gt;</p>
+<p>&lt;/table&gt;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a></p>
+</li>
+<li>
+<p><a href="Prefix.htm">Prefix</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Document_Libraries.htm">Document Libraries</a> &gt; <a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a> &gt; HTML Codes</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,625 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Compliance Review - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-language:TH; }
+ul.hcp2 { list-style:disc; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+span.hcp4 { font-family:"MS Reference Sans Serif"  , sans-serif;
+mso-fareast-font-family:Times New Roman;
+mso-bidi-font-family:Times New Roman;
+mso-ansi-language:EN-GB;
+mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA; }
+span.hcp5 { font-weight:bold;
+text-decoration:underline; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Compliance Review - Tags</h1>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">For Compliance reviews, tags are available to check on fields in screens such as Addresses, Identity Details, Identity Register and CDD; as well as update the status fields in the CDD screen.</span></p>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">The tags are to be entered to the Compliance review rule with the code ‘<a class="expandspot" href="javascript:TextPopup(this)" id="a8">KYREVIEW</a><span class="expandtext" id="POPUP466161257" style="display: none;">- such as&#160;Compliance Review Rules KYCREVIEWA, KYCREVIEWB, KYREVIEWC, KYREVIEWD, KYREVIEWE and KYCREVIEWF -</span>’ and enable the following:</span></p>
+<ul class="hcp2">
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">Define which Master Files to include for Compliance review based on the Identity Details and CDD Required options.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">Define which Master Files to include for Compliance review based on status fields in CDD screen.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">Specify values that need to be flagged.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp1">Update status fields in the CDD screen.</span></p>
+</li>
+</ul>
+<p>&#160;</p>
+<h2>Identity Details and CDD Required Options</h2>
+<p>The Identity Details and CDD Required options are in a Master File’s Setup screen. By default, Compliance review will be performed on Master Files where the CDD Required option is ticked. However, you can use the tags below to specify which Master Files to include for the Compliance review.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Include Master Files based on Identity Details option</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.MF.CP:&lt;Value&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.MF.CP:0]</p>
+<p>Include Master Files even when the Identity Details option is not ticked.</p>
+<p>&#160;</p>
+<p>[RVW.MF.CP:1]</p>
+<p>Include Master Files when the Identity Details option is ticked.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Include Master Files based on CDD Required option</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.MF.KY:&lt;Value&gt;]</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.MF.KY:0]</p>
+<p>Include Master Files even when the CDD Required option is not ticked.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h2>Compliance Review Status Field in CDD Screen</h2>
+<p>Six status fields are available in the CDD screen – one each for the Compliance review rule type. The following tags can be used to include and/or update these compliance review status fields.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify status to be included for review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Include:&lt;StatusCode&gt;]</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Include:P,V,O,-]</p>
+<p>If the compliance review status field is set to P,V,O or left empty, the compliance review will be performed on the Master File.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="2" class="t1Col" style="vertical-align: top;">
+<p>To propose new status if match is found</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Find.Code:&lt;StatusCode&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Find.Code:V]</p>
+<p>Update the compliance review status field to 'In scope for review [V]' when there is a match when you choose to post update.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Find.MSG:&lt;Message to display&gt;]</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Find.MSG:Found possible association - update to In Scope for review]</p>
+<p>Display this message when there is a match.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="2" class="t1Col" style="vertical-align: top;">
+<p>To propose new status if the status is empty</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Empty.Code:&lt;StatusCode&gt;]</p>
+<p>&#160;</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Empty.Code:P]</p>
+<p>Update the compliance review status field to 'Pending [P]' if it is empty during the review.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Empty.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Empty.MSG:Review status is empty - update to Pending]</p>
+<p>Display this message when there is no value in the compliance review status field.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="2" class="t1Col" style="vertical-align: top;">
+<p>To propose new status if there is no match</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NoFind.Code:&lt;StatusCode&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p class="MsoNormal" style="margin-top: 3.0pt;">[RVW.NoFind.Code:N]</p>
+<p class="MsoNormal" style="margin-top: 3.0pt;">If there is no match, the compliance review status field will be updated to ‘Not Required[N]’ if you choose to post update.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NoFind.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p class="MsoNormal" style="margin-top: 3.0pt;">[RVW.NoFind.MSG:There is no match – update to Not Required]</p>
+<p class="MsoNormal" style="margin-top: 3.0pt;">This message will be displayed for files without any match.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p><span class="hcp3">Note</span>: The [RVW.Find.Code:&lt;StatusCode&gt;] and [RVW.Empty.Code:&lt;StatusCode&gt;] tags require the corresponding Compliance review rules with the review code ‘KYREVUPD’ to be active in order to work e.g. if the tags are defined for Compliance review rule ‘KYREVIEWA’, then the Compliance review rule ‘KYREVUPDA’ must be active. Otherwise, the review will not produce any update items.</p>
+<p>&#160;</p>
+<h2>Fields in Addresses, Identity Details, Identity Register and CDD Screens</h2>
+<p>These tags allow you to define values for addresses, contact numbers and various other fields that need to be flagged.</p>
+<p>&#160;</p>
+<h3>Country</h3>
+<p><span lang="EN-GB" xml:lang="EN-GB">The country tag applies to:</span></p>
+<ul class="hcp2">
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">Addresses.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">The ‘Deemed Residence’ and ‘Domicile’ fields in CDD screen.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">The Country/Jurisdiction field for an Identity Register type in the Identity Register screen.</span></p>
+</li>
+</ul>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify country code that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp4">[RVW.CNTR</span><span lang="EN-GB" xml:lang="EN-GB" style="font-family: 'MS Reference Sans Serif', sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: normal;">:&lt;Country</span><span lang="EN-GB" xml:lang="EN-GB" class="hcp4"><b style="mso-bidi-font-weight: normal; font-weight: normal;">Code&gt;</b>]</span></p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.CNTR:USA,US,US-DE,US-NV,US-NY]</p>
+<p>This will flag files with the specified country codes used in addresses, <span lang="EN-GB" xml:lang="EN-GB" style="font-size: 8.0pt; font-family: 'MS Reference Sans Serif', sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">the fields Deemed Residence and Domicile</span> and/or the Contry/Jurisdiction field for an Identity Register type.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify address types to be excluded from the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Address.Exclude:&lt;AddressType&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Address.Exclude:ST,SM]</p>
+<p>This code is to exclude the address type ‘ST’ and ‘SM’.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the Identity Register types to include in the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.IDREG.Review:&lt;Code&gt;]</p>
+<p>where &lt;Code&gt; refers to the Identity Register Type code</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.IDREG.Review:PSP,BCT]</p>
+<p>This code will check on the Country/Jurisdiction field for the Identity Register Type ‘Passport [PSP]’ and ‘Birth Certificate [BCT]’.</p>
+<p>&#160;</p>
+<p>[RVW.IDREG.Review:*]</p>
+<p>This code will check on the Country/Jurisdiction field for all Identity Register Types.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="4" class="t1Col" style="vertical-align: top;">
+<p>Display message when specified country code is found</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Address.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Address.MSG:US Address found (-CODE-)]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.KYC_Country1.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.KYC_Country1.MSG:Deemed Residence is in (-CODE-)]</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.KYC_Country2.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.KYC_Country2.MSG:Domiciled in (-CODE-)]</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.IDREG.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.IDREG.MSG: (-Description-) issued in the United States]</p>
+<p>&#160;</p>
+<p>The defined message will be displayed if the specified country code is found in the file.</p>
+</td>
+</tr>
+</table>
+<p><span class="hcp3">Note</span>: KYC_Country1 refers to Deemed Residence field, KYC_Country2 refers to Domicile field.</p>
+<p>&#160;</p>
+<h3>Nationality</h3>
+<p>The tags below are for nationality-related fields in Identity Details screen.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st" style="height: 26px;">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 58px;">
+<td class="t1Col" rowspan="2" style="border-bottom: Solid 1px #000000; vertical-align: top; border-left-width: 1px; border-right-width: 1px;">
+<p>Specify value for the Nationality field that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Nationality:&lt;Text&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Nationality:Amer,USA,States]</p>
+<p>This code will check if the value for Nationality field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 55px;">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.Nationality.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.Nationality.MSG:Nationality requires review &#160;(-CODE-)]</p>
+<p>This message will be displayed if the Nationality field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 58px;">
+<td rowspan="2" class="t1Col" style="border-bottom: Solid 1px #000000; vertical-align: top; border-left-width: 1px; border-right-width: 1px;">
+<p>Specify value for the Nationality Code field that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NationalityCode:&lt;Code&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.NationalityCode:503,721]</p>
+<p>This code will check if the code assigned to Nationality Code field is 503 or 721. The codes are from the lookup tables Nationality Individual Codes [NATI] and Nationality Corporate Codes [NATC].</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 58px;">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NationalityCode.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.NationalityCode.MSG:Nationality code requires review &#160;(-CODE-)]</p>
+<p>This message will be displayed if the Nationality Code is set to 503 or 271.</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 58px;">
+<td rowspan="2" class="t1Col" style="vertical-align: top;">
+<p>Specify value for the Nationality of Origin field that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NationalityOrigin:&lt;Text&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.NationalityOrigin:Amer,USA,States]</p>
+<p>This code will check if the value for Nationality of Origin field contains the text ‘America, USA, States’.</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 58px;">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.NationalityOrigin.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.NationalityOrigin.MSG:Nationality requires review &#160;(-CODE-)]</p>
+<p>This message will be displayed if the Nationality of Origin field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>Place of Issue/Place of Birth</h3>
+<p><span lang="EN-GB" xml:lang="EN-GB">The tags below are for ‘Place of Issue’ and ‘Place of Birth’ fields in Identity Details screen.</span></p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" rowspan="2" style="border-bottom: Solid 1px #000000; vertical-align: top; border-left-width: 1px; border-right-width: 1px;">
+<p>Specify value for Place of Issue (Passport) field that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:&lt;Text&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:Amer,USA,States]</p>
+<p>This code will check if the value for Place of Issue field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue.MSG:Passport Place of Issue requires review (-CODE-)]</p>
+<p>This message will be displayed if the Place of Issue field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="2" class="t1Col" style="vertical-align: top;">
+<p>Specify value for Place of Birth field that should be flagged during the review</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.PlaceBirth:&lt;Text&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PlaceBirth:Amer,USA,States]</p>
+<p>This code will check if the value for Place of Birth field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t2Col" style="vertical-align: top;">
+<p>[RVW.PlaceBirth.MSG:&lt;Message to display&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>&#160;[RVW.PlaceBirth.MSG:Passport Place of Issue requires review (-CODE-)]</p>
+<p>This message will be displayed if the Place of Birth field contains the text ‘Amer, USA, States’.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h3>Contact Numbers</h3>
+<p>The following tags apply to contact numbers in Addresses screen.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 22.035%;">
+<col style="width: 22.872%;">
+<col style="width: 55.093%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify type of contact number to include in the review.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[TEL.Type:&lt;Type&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[TEL.Type:T,F]</p>
+<p>This will include telephone numbers (indicated by T) and fax numbers (indicated by F).</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the prefix (for international numbers) to include in the review. To include numbers without any prefix, use ‘-‘.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[TEL.INT:&lt;Prefix&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[TEL.INT:00,0,+,-]</p>
+<p>This code will review numbers starting with 00, 0 or +; and also numbers without any prefix (indicated by -).</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the number following the prefix to include in the review.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[TEL.Review:&lt;Number&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[TEL.Review:1]</p>
+<p>This code will flag numbers starting with ‘1’ as a USA number.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>Specify the numbers that will be excluded</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>[TEL.EXCL:&lt;Number&gt;]</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[TEL.EXCL:1264,1268,1242,1246,1441,1284,1345,1767,1809,1829,1849,1473,1876,1664,1869,1758,</p>
+<p>1784,1721,1868,1649,1403,1587,1780,1825,1236,1250,1604,1672,1778,1204,1431,1506,1709,1902,</p>
+<p>1226,1249,1289,1343,1365,1416,1437,1519,1613,1647,1705,1807,1905,1418,1438,1450,1514,1579,</p>
+<p>1581,1819,1873,1306,1639,1867]</p>
+<p>This code will exclude the specified numbers from being flagged as a US number.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p style="font-weight: bold; text-decoration: underline;">Wildcard</p>
+<p>For text values, note that this is not case-sensitive and you can use the following wildcard options:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 10.497%;">
+<col style="width: 24.008%;">
+<col style="width: 65.495%;">
+<tr class="t1st">
+<td>
+<p>Purpose</p>
+</td>
+<td>
+<p>Syntax</p>
+</td>
+<td>
+<p>Example and Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>&lt;text&gt;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will search for exact match to the specified text.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:&lt;US&gt;]</p>
+<p>This will flag Master Files where Place of Issue is ‘US’ only.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>&lt;text</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will search for values starting with the specified text.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:&lt;US]</p>
+<p>This will flag Master Files where Place of Issue starts with ‘us’ such as <span class="hcp5">US</span>A.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>text&gt;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will search for values ending with the specified text</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:US&gt;]</p>
+<p>This will flag Master Files where Place of Issue ends with ‘US’ such as Cypr<span class="hcp5">us</span>.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>text</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will search for values containing the specified text.</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p>[RVW.PasPlaceIssue:US]</p>
+<p>This will flag Master Files where Place of Issue contains ‘US’ such as <span class="hcp5">US</span>A, Br<span class="hcp5">us</span>sels, La<span class="hcp5">us</span>anne and Cypr<span class="hcp5">us</span>.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+<li>
+<p><a href="../Shared/File_Review_Function.htm">File Review</a></p>
+</li>
+<li>
+<p><a href="Review_Rules.htm">Review Rules</a></p>
+</li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Compliance Review - Tags</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a8','POPUP466161257');
+//]]></script>
+</body>
+</html>

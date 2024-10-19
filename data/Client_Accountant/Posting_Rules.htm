@@ -1,0 +1,1099 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Posting Rules">
+<meta name="MS-HAID" content="Fixed Fee Appropriation">
+<meta name="MS-HAID" content="Debtors Provision Accrual">
+<meta name="MS-HAID" content="WIP Accrual Posting">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Posting Rules</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { text-align:center; }
+li.hcp3 { list-style:none;
+display:inline; }
+p.hcp4 { margin-left:48px; }
+span.hcp5 { font-weight:bold; }
+p.hcp6 { text-decoration:underline; }
+p.hcp7 { margin-left:8px; }
+p.hcp8 { text-decoration:none; }
+span.hcp9 { text-decoration:underline; }
+span.hcp10 { font-size:13px; }
+span.hcp11 { font-weight:bold;
+font-style:italic; }
+span.hcp12 { font-style:italic; }
+img.hcp13 { border:none; }
+p.hcp14 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Posting Rules</h1>
+<p>This feature is used when you want to post journals based on a set of 
+ rules. There are four different types of rules that can be created:</p>
+<ul class="hcp1">
+	<li class="p"><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Appropriate 
+	 Deferred Income</a></p>
+	<div class="droptext" id="POPUP413143727" style="display: none;">
+		<p>This rule type is used for deferred income/expense, and will 
+		 calculate and divide a fixed amount from a designated &quot;source&quot; 
+		 account for periodic release into a &quot;release&quot; account.</p>
+		<p>Deferred income is income that is received for goods or services 
+		 that have yet to be supplied or rendered. An example of this would 
+		 be when you bill a client in advance for the services to be provided 
+		 for the coming year, such as for management fees. The full amount 
+		 cannot yet be recognised as income and is thus placed in a liability 
+		 account, to be progressively moved to an income account as the 
+		 year progresses.</p>
+		<p>An item that gives rise to deferred income is prepayment, or 
+		 deferred expense. If you are keeping client accounts, then the 
+		 payment made by the client to you for services-to-be-rendered, 
+		 is considered prepayment. In the client's accounts, the amount 
+		 is placed in an asset account and progressively moved to an expense 
+		 account as the year progresses. If you also pay a supplier in 
+		 advance for goods or services to be supplied or rendered, then 
+		 this would also be recorded as a deferred expense.</p>
+		<p>In the explanation given above, the amounts posted to the source 
+		 account originate from the Billing module. In this case, the following 
+		 must be done in order to use this rule type:</p>
+		<ul class="hcp1">
+			<li><p>Account mapping - Account mapping must be done for the 
+			 services that feed the source account.</p></li>
+			<li><p>Posting rule - This must be set up correctly to ensure 
+			 that each source account feeds the correct release account.</p></li>
+			<li><p>Exchange rates - All relevant exchange rates must be 
+			 set up.</p></li>
+			<li><p>Beginning and end dates - The beginning and end dates 
+			 for the post to the source account determine how long the 
+			 rule will run. These dates are represented by the Date - From 
+			 and Date - To fields of the detail line of the invoice. The 
+			 same fields must be completed for supplier invoices.&#160;The 
+			 Date - From will be updated as Line Date whereas the Date 
+			 - To will be updated as Reconcile Date in the invoice's journal. 
+			 </p></li>
+		</ul>
+		<p>You may also create a journal to feed the source account directly 
+		 in Accounting. In this case, you need to enter the beginning and 
+		 end dates of the period into the fields that are represented by 
+		 the Line Date and Reconciliation Date fields in the Journal screen.</p>
+		<p>When the rule is run, the system calculates the number of days 
+		 in the specified run period and divides that by the number of 
+		 days specified by the beginning and end dates in the invoice or 
+		 journal. This number is then multiplied by the amount of the invoice 
+		 or journal. This final amount is moved from the source to the 
+		 release account.</p>
+		<p>For example:</p>
+		<p>You have an invoice for Director fees for the period from 1 
+		 January to 31 December amounting to EUR12,000.00.</p>
+		<p>If you run this rule from 1 January to 31 March, the amount 
+		 moved from the source account to the release account would be 
+		 calculated as follows:</p>
+		<table cellspacing="0">
+			<col>
+			<col>
+			<col>
+			<tr>
+				<td style="border-bottom: Solid 1px #000000;"><p class="hcp2">(31+28+31)</p></td>
+				<td rowspan="2"><p class="hcp2">x &#160;EUR12,000.00</p></td>
+				<td rowspan="2"><p class="hcp2">&#160;= 
+				 EUR2,958.90</p></td>
+			</tr>
+			<tr>
+				<td><p class="hcp2">365</p></td>
+				
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>The following tags can be used in Note/Tag Values field. Only 
+		 one tag type is allowed per rule.</p>
+		<table class="Table1" cellspacing="0px" width="92.807%">
+			<col style="width: 35.753%;">
+			<col style="width: 64.247%;">
+			<tr class="t1st" style="height: 26px;">
+				<td><p>Tag</p></td>
+				<td><p>Description</p></td>
+			</tr>
+			<tr class="t2Row" style="height: 42px;">
+				<td class="t1Col"><p>[SOURCESCREEN=120]</p></td>
+				<td class="t2Col"><p>This tag narrows down the source account's 
+				 journal to the Revenue Entity Account File invoice's journal.</p></td>
+			</tr>
+			<tr class="t1Row" style="height: 44px;">
+				<td class="t1Col"><p>[SOURCESCREEN=130]</p></td>
+				<td class="t2Col"><p>This tag narrows down the source account's 
+				 journal to the Client Account File invoice's journal.</p></td>
+			</tr>
+			<tr class="t2Row" style="height: 123px;">
+				<td class="t1Col"><p>[Validate_DN_JournalDate=&lt;Value&gt;]</p>
+				<p>where value can be:</p>
+				<ul class="hcp1">
+					<li>Y for Yes</li>
+					<li>N for No (default)</li>
+				</ul></td>
+				<td class="t2Col"><p>This tag validates the Journal Date 
+				 for credit entries from the source account and can be 
+				 used with the [SOURCESCREEN=] tag. If there is no tag 
+				 value specified, the [Validate_DN_JournalDate=N] tag will 
+				 be used.</p></td>
+			</tr>
+			<tr class="t1Row" style="height: 154px;">
+				<td class="t1Col"><p>[Validate_CN_JournalDate=&lt;Value&gt;]</p>
+				<p>where value can be:</p>
+				<ul class="hcp1">
+					<li>Y for Yes</li>
+					<li>N for No (default)</li>
+				</ul></td>
+				<td class="t2Col"><p>This tag validates the Journal Date 
+				 for debit entries from the source account and can be used 
+				 with the [SOURCESCREEN=] tag. If there is no tag value 
+				 specified, the [Validate_CN_JournalDate=N] tag will be 
+				 used.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p class="SeeAlso">See also:&#160;</p>
+		<ul class="hcp1">
+			<li><p><a href="../Configuration/Account_Mapping_Client_Accounts.htm">Account 
+			 Mapping - Client Accounts</a></p></li>
+			<li><p><a href="../Configuration/Account_Mapping_Revenue_Entities.htm">Account 
+			 Mapping - Revenue Entities</a></p></li>
+		</ul>
+		<p>&#160;</p>
+ </div></li>
+	<li class="p"><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Debtors 
+	 Provision Accrual</a></p>
+	<div class="droptext" id="POPUP413149801" style="display: none;">
+		<p>This feature posts bad debt provisions from invoices created 
+		 in Billing, and reverses them the next day. It is a useful management 
+		 reporting tool, and is meant for use by Revenue Entities only. 
+		 When run, the system checks through all outstanding invoices for 
+		 bad debt provisions and compares them to the invoice amount based 
+		 on the date of the run.</p>
+		<ul class="hcp1">
+			<li><p>If the provision amount is lower than the invoice amount, 
+			 the provision amount is posted.</p></li>
+			<li><p>If the provision amount is higher than the invoice amount, 
+			 the invoice amount is posted.</p></li>
+		</ul>
+		<p>If you utilise the organisational units feature, then the provisions 
+		 are grouped by organisational unit.</p>
+		<p>The following must be done In order to use this rule type:</p>
+		<ul class="hcp1">
+			<li><p>Account mapping - This is done in System Manager, and 
+			 must be done correctly for the components specified below; 
+			 which is found under Control Accounts - Sales Ledger for the 
+			 selected Revenue Entity. If the components cannot be seen, 
+			 then activate them in the Account Types Practice Management 
+			 [PMAT] lookup table.</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>Debtors Provision (Credit) [R.SO] - This is the 
+				 nominal account where provisions are credited to.</p></li>
+				<li><p>Debtors Provision (Debit) [R.SP] - This is the nominal 
+				 account where provisions are debited to.</p></li>
+			</ul></li>
+			<li><p>Posting rule - This must be set up correctly so that 
+			 the appropriate journal reference and line description is 
+			 used for the journal entries.</p></li>
+		</ul>
+		<p>Debtor provision calculation can be set in the tag value of 
+		 Posting Rule:</p>
+		<p class="hcp4">[ProvisionXX_Y=t]</p>
+		<p class="hcp4">[ProvisionXX_Percent=P]</p>
+		<p class="hcp4">[Provision_Method=X]</p>
+		<p class="hcp4">[Provision_DateType=Z]</p>
+		<p>Where:</p>
+		<ul class="hcp1">
+			<li><p>XX is a sequence number in 2 digit format, 01, 02, 03 
+			 to 10 with maximum ten brackets.</p></li>
+			<li><p>Y is the period from the invoice due date. Y denotes 
+			 Year, M denotes Month, W denotes Week and D denotes Day.</p></li>
+			<li><p>P is percentage of provision, valid range from 1 to 
+			 100.</p></li>
+			<li><p>X can be <span class="hcp5">A</span> for 
+			 Ageing or <span class="hcp5">I</span> for Invoicing.</p></li>
+			<li><p>Z can be DateInvoice or DateDue.</p></li>
+		</ul>
+		<p class="hcp6">Example 1</p>
+		<p>[Provision01_Y=2][Provision01_Percent=100]</p>
+		<p>[Provision02_M=18][Provision02_Percent=80]</p>
+		<p class="hcp7">&#160;</p>
+		<p class="hcp7">This would mean that provision amount 
+		 for Invoice due for two years and above will be 100% of the outstanding 
+		 amount. Meanwhile, Provision amount for Invoice due for 18 months 
+		 and above will be 80% of the outstanding amount.</p>
+		<p class="hcp7">&#160;</p>
+		<p style="margin-left: 8px; text-decoration: underline; ">Example 
+		 2</p>
+		<p class="hcp7"><span class="hcp6">[Provision01_Y=2][Provision01_Percent=100]</span></p>
+		<p class="hcp7"><span class="hcp6">[Provision02_M=18][Provision02_Percent=80]</span></p>
+		<p class="hcp7"><span class="hcp6">[Provision03_M=12][Provision03_Percent=60]</span></p>
+		<p class="hcp7"><span class="hcp6">[Provision04_d=120][Provision04_Percent=40]</span></p>
+		<p class="hcp7"><span class="hcp6">[Provision05_d=45][Provision05_Percent=30]</span></p>
+		<p class="hcp7">&#160;</p>
+		<p class="MsoNormal"><span class="hcp6">An Invoice amounting EUR1000 
+		 is created on 1 Jan 2016. A receipt for this invoice is issued 
+		 on <strong>1 August 2016</strong> with the amount of EUR100.</span></p>
+		<p class="MsoNormal"><span class="hcp6">When the user runs the 
+		 Debtor provision rule on <strong>31 July 2016</strong> with Tag 
+		 Values defined above, it identifies that it has exceeded 120 days 
+		 but yet to reach 12 months. This provision rule will apply:</span></p>
+		<p class="MsoNormal" style="margin-left: 48px;"><span class="hcp6">[Provision01_d=120][Provision04_Percent=40]</span></p>
+		<p class="MsoNormal"><span class="hcp6">The provision amount will 
+		 be 40% of the unsettled debt.</span></p>
+		<p class="MsoNormal"><span class="hcp6">Hence on 31 July 2016, 
+		 Provision amount = EUR1000 X 40% = EUR400.</span></p>
+		<p class="MsoNormal"><span class="hcp6">However, when the user 
+		 runs the Debtor provision rule on <strong>1 August 2016 (or onwards)</strong>, 
+		 the debtor has settled an amount of EUR100, resulting in the total 
+		 of unsettled debt to EUR1000-EUR100 = EUR900. Hence the Provision 
+		 amount = EUR900 X 40% = EUR360.</span></p>
+		<p>The provision amount will be posted to the journal.</p>
+		<p>When the rule is run, the sum of all bad debts up to the Reconcile 
+		 date is credited to the Debtors Provision (Credit) [R.SO] account. 
+		 This credit is matched by a debit to the Debtors Provision (Debit) 
+		 [R.SP] account. Both transactions use the Reconcile date as the 
+		 journal date. The entries are then immediately reversed, using 
+		 the next day's date as the journal date.</p>
+		<p>&#160;</p>
+		<p>By default, Debtors Provision Accrual calculates the amount 
+		 based on the invoice 'Due Date'.</p>
+		<p>It also supports calculation based on 'Invoice Date' by adding 
+		 a tag line [Provision_DateType=DateInvoice].</p>
+		<p class="hcp6">Example 3</p>
+		<p>[Provision01_Y=2][Provision01_Percent=100]</p>
+		<p>[Provision02_M=18][Provision02_Percent=80]</p>
+		<p>[Provision03_M=12][Provision03_Percent=60]</p>
+		<p>[Provision04_D=120][Provision04_Percent=50]</p>
+		<p>[Provision05_D=45][Provision05_Percent=30]</p>
+		<p>[Provision_DateType=DateInvoice]</p>
+		<p>&#160;</p>
+		<p>For example, five invoices are created with details as followed 
+		 and the Posting Rule run on date = 31/12/2017.</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<tr class="t1st">
+				<td><p>&#160;</p></td>
+				<td><p>&#160;Invoice 1</p></td>
+				<td><p>&#160;Invoice 2</p></td>
+				<td><p>&#160;Invoice 3</p></td>
+				<td><p>&#160;Invoice 4</p></td>
+				<td><p>&#160;Invoice 5</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Invoice Date</p></td>
+				<td class="t2Col"><p>1-Jan-2016</p></td>
+				<td class="t1Col"><p>1-Apr-2016</p></td>
+				<td class="t2Col"><p>1-Mar-2017</p></td>
+				<td class="t1Col"><p>1-Aug-2017</p></td>
+				<td class="t2Col"><p>1-Oct-2017</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Payment Term</p></td>
+				<td class="t2Col"><p>30 Days from Invoice Date [03]</p></td>
+				<td class="t1Col"><p>Due on Presentation [00]</p></td>
+				<td class="t2Col"><p>90 Days from Invoice Date [06]</p></td>
+				<td class="t1Col"><p>90 Days from Invoice Date [06]</p></td>
+				<td class="t2Col"><p>15 Days from Invoice Date [01]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Due Date</p></td>
+				<td class="t2Col"><p>&#160;31-Jan-2016</p></td>
+				<td class="t1Col"><p>1-Apr-2016</p></td>
+				<td class="t2Col"><p>&#160;30-May-2017</p></td>
+				<td class="t1Col"><p>30-Oct-2017</p></td>
+				<td class="t2Col"><p>16-Oct-2017</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Total Line</p></td>
+				<td class="t2Col"><p>1000</p></td>
+				<td class="t1Col"><p>2000</p></td>
+				<td class="t2Col"><p>3000</p></td>
+				<td class="t1Col"><p>4000</p></td>
+				<td class="t2Col"><p>5000</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>By applying the tag [Provision_DateType=DateInvoice], the amount 
+		 calculation will be based on the Invoice Date, hence the outcomes 
+		 are:</p>
+		<ul class="hcp1">
+			<li><p>Provision amount for Invoice due for 2 years and above 
+			 will be 100% of the outstanding amount. In this example, provision 
+			 amount = 0.</p></li>
+			<li><p>Provision amount for Invoice due more than 18th months 
+			 and less than 2 years will be 80% of the outstanding amount. 
+			 In this example, provision amount = 2400 (from Invoice 1 and 
+			 2).</p></li>
+			<li><p>Provision amount for Invoice due more than 12th months 
+			 and less than 18th months will be 60% of the outstanding amount. 
+			 In this example, provision amount = 0.</p></li>
+			<li><p>Provision amount for Invoice due more than 120 days 
+			 and less than 12 months will be 50% of the outstanding amount. 
+			 In this example, provision amount = 3500 (from Invoice 3 and 
+			 4).</p></li>
+			<li><p>Provision amount for Invoice due more than 45 days and 
+			 less than 120 days will be 30% of the outstanding amount. 
+			 In this example, provision amount = 1500 (from Invoice 5).</p></li>
+		</ul>
+		<p>Therefore, the total amount is 2400 + 3500 + 1500 = 7400.</p>
+		<p>&#160;</p>
+		<p>If the tag [Provision_DateType=DateInvoice] is excluded, the 
+		 amount calculation will be based on the respective invoice’s Due 
+		 Date, hence the outcomes are:</p>
+		<ul class="hcp1">
+			<li><p>Provision amount for Invoice due for 2 years and above 
+			 will be 100% of the outstanding amount. In this example, provision 
+			 amount = 0.</p></li>
+			<li><p>Provision amount for Invoice due more than 18th months 
+			 and less than 2 years will be 80% of the outstanding amount. 
+			 In this example, provision amount = 2400 (from Invoice 1 and 
+			 2).</p></li>
+			<li><p>Provision amount for Invoice due more than 12th months 
+			 and less than 18th months will be 60% of the outstanding amount. 
+			 In this example, provision amount = 0.</p></li>
+			<li><p>Provision amount for Invoice due more than 120 days 
+			 and less than 12 months will be 50% of the outstanding amount. 
+			 In this example, provision amount = 1500 (from Invoice 3).</p></li>
+			<li><p>Provision amount for Invoice due more than 45 days and 
+			 less than 120 days will be 30% of the outstanding amount. 
+			 In this example, provision amount = 2700 (from Invoice 4 and 
+			 5).</p></li>
+		</ul>
+		<p>Therefore, the total amount is 2400 + 1500 + 2700 = 6600.</p>
+		<p>&#160;</p>
+		<p style="font-weight: bold; text-decoration: underline; ">Provision 
+		 Method Invoicing [Provision_Method=I]</p>
+		<p>When using Provision Method I, the provision amount will be 
+		 calculated as follows:</p>
+		<ul class="hcp1">
+			<li><p><span style="color: rgba(0, 0, 0, 0.9); font-family: 'Segoe UI VSS ', , 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Ubuntu, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; 
+						 font-variant-ligatures: normal; font-variant-caps: normal; 
+						 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+						 background-color: #ffffff; text-decoration-thickness: initial; 
+						 text-decoration-style: initial; text-decoration-color: initial; 
+						 display: inline	 ! important ; float: none;">When 
+			 a 'Provision Amount &gt; 0' is specified in the Settlement 
+			 &gt; Notes screen and the invoice outstanding amount is &gt; 
+			 0, the provision is calculated as the smallest of the 'Provision 
+			 Amount' and the 'Outstanding amount'.</span> </p></li>
+		</ul>
+		<p class="hcp6">Example 1</p>
+		<p class="hcp8">[Provision_Method=I]</p>
+		<p class="hcp8">This means that the system will 
+		 include all invoices with a Due Date &lt;= Rule run date.</p>
+		<p class="hcp8">&#160;</p>
+		<p class="hcp6"><span class="hcp9">Example 
+		 2</span></p>
+		<p class="hcp8">[Provision_Method=I]</p>
+		<p class="hcp8">[Provision_DateType=DateInvoice]</p>
+		<p class="hcp8">This means that the system will 
+		 include all invoices with Invoice Date &lt;= Rule run date.</p>
+		<p>&#160;</p>
+		<p style="font-weight: bold; font-style: italic;">Note: <span style="font-weight: normal; 
+		 font-style: normal;">If no [Provision DateType] is specified, 
+		 the system will check the 'Due Date' by default.</span></p>
+		<p class="hcp7">&#160;</p>
+		<p class="hcp7">The system will apply the Ageing method 
+		 if the below condition is met:</p>
+		<ul class="hcp1">
+			<li><p class="hcp7">Only [Provision01] tag is 
+			 being defined or;</p></li>
+			<li><p class="hcp7">[Provision_Method=A] and [Provision01] 
+			 tags are defined</p></li>
+		</ul>
+		<p class="hcp7">The system will apply the Invoicing 
+		 method if the below condition is met:</p>
+		<ul class="hcp1">
+			<li><p class="hcp7">No tag is defined or;</p></li>
+			<li><p class="hcp7">[Provision_Method=A] tag is 
+			 defined without [Provision01] tag or;</p></li>
+			<li><p class="hcp7">[Provision_Method=I] tag is 
+			 defined</p></li>
+		</ul>
+		<p class="hcp7">The system will apply both the Ageing 
+		 and Invoicing method if the below condition is met:</p>
+		<ul class="hcp1">
+			<li><p class="hcp7">[Provision_Method=I] and [Provision01] 
+			 tags are defined</p></li>
+		</ul>
+		<p class="hcp7">For Invoices with a Provision amount, 
+		 the Invoicing method will be used, and for Invoices without Provision 
+		 amount, the Ageing method will be used.</p>
+		<p>&#160;</p>
+		<p><a class="dropspot" href="javascript:TextPopup(this)" id="a6">Where 
+		 do I specify the bad debt amount?</a></p>
+		<div class="droptext" id="POPUP413183313" style="display: none;">
+			<p>This is done by selecting the invoice and clicking Notes 
+			 in Sales Ledger &gt; Accounts Receivable &gt; Settlements.</p>
+  </div>
+		<p>&#160;</p>
+ </div></li>
+	<li class="p"><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Recurring 
+	 Fees in Arrears Accrual</a></p>
+	<div class="droptext" id="POPUP413166210" style="display: none;">
+		<p>This feature posts recurring fee lines that are:</p>
+		<ul class="hcp1">
+			<li><p>In arrears - The selection for the In field in the Recurring 
+			 Fee set up in Billing is Arrears [R].</p></li>
+			<li><p>Active - Only active fees are picked up.</p></li>
+			<li><p>Not yet pulled into a draft invoice - This means that 
+			 the Draft No. is 0.</p></li>
+			<li><p>Due after the reconcile date - This means that the Next 
+			 Due Date is after the Reconcile Date selected for the posting 
+			 rule run.</p></li>
+			<li><p>Effective before the reconcile date - This means that 
+			 the fee is effective before the Reconcile Date selected for 
+			 the posting rule run.</p></li>
+			<li><p>Not in the Minimum Time Fee [RM] service class - The 
+			 time entered for this service class will already be picked 
+			 up by the WIP Accrual Posting rule.</p></li>
+		</ul>
+		<p>The following must be done to use this rule type:</p>
+		<ul class="hcp1">
+			<li><p>Account mapping - This needs to be done correctly for 
+			 the following components under the Control Accounts - Sales 
+			 Ledger for the selected Revenue Entity:</p></li>
+			<li><p>WIP - Fees in Arrears - This is the nominal account 
+			 where fees are debited to on the Reconcile Date, and credited 
+			 to on the next day.</p></li>
+			<li><p>WIP - Arrears offset - This is the nominal account where 
+			 time fees are credited to on the Reconcile Date and debited 
+			 to on the next day.</p></li>
+			<li><p>Posting rule - This must be set up correctly, so that 
+			 the appropriate journal reference and line description are 
+			 used for the journal entries.</p></li>
+		</ul>
+		<p>You are allowed to specify account used for posting and also 
+		 the scope of the rule. This can be configured under Noted/Tag 
+		 Values.</p>
+		<p>Tag configuration:</p>
+		<p>[R.SF=X]</p>
+		<p>[R.SG=Y]</p>
+		<p>[R.SERVCODE=A,B,C]</p>
+		<p>Where:</p>
+		<ul class="hcp1">
+			<li><p>X is posting account code for 'WIP - Fees in Arrears'.</p></li>
+			<li><p>Y is posting account code for 'WIP - Arrears offset'.</p></li>
+			<li><p>A,B,C is the list of service codes to be included in 
+			 the scope.</p></li>
+		</ul>
+		<p>These will override setting in account mapping R.SF and R.SG.</p>
+		<p>Note:</p>
+		<ul class="hcp1">
+			<li><p>Only Account type 1-4 for X and Y is allowed.</p></li>
+			<li><p>R.SF and R.SG must set in pair.</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>The below are some examples of how the accrual amount is calculated:</p>
+		<p class="FldExplain">Example 1:</p>
+		<table class="Table1" cellspacing="0px" width="930">
+			<col width="150">
+			<col width="350">
+			<col width="150">
+			<col width="120">
+			<tr class="t1st">
+				<td><p><span class="hcp10">Formula</span></p></td>
+				<td><p><span class="hcp10">Calculation</span></p></td>
+				<td colspan="2"><p>Example/Result</p></td>
+				
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>{TODATE}</p></td>
+				<td class="t2Col"><p>Next Due Date</p></td>
+				<td colspan="2" class="t1Col"><p>1/1/2012</p></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>{FROMDATE}</p></td>
+				<td class="t2Col"><p>Next Due Date - Charge frequency</p></td>
+				<td colspan="2" class="t1Col"><p>1/1/2011</p></td>
+				
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>{RUNDATE}</p></td>
+				<td class="t2Col"><p>Reconcile Date</p></td>
+				<td colspan="2" class="t1Col"><p>31/10/2011</p></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Charge Percentage</p></td>
+				<td class="t2Col"><p>Number of days between {FROMDATE} 
+				 and {RUNDATE} ÷</p>
+				<p>Number of days between {FROMDATE} and {TODATE}</p>
+				<p>&#160;</p>
+				<p><span class="hcp11">Note</span><span>: 
+				 Number of days between {FROMDATE} and {RUNDATE} includes 
+				 the {RUNDATE}</span></p></td>
+				<td class="t1Col"><p>304 ÷ 365</p></td>
+				<td class="t2Col">= 0.832877</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Total Amount</p></td>
+				<td class="t2Col"><p>(Unit Price x Number of Units) - Discount</p></td>
+				<td colspan="2" class="t1Col"><p>6,000</p></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Line Amount Charged</p>
+				<p>(in Billing base currency)</p></td>
+				<td class="t2Col"><p><span>Total Amount x Charge Percentage</span> 
+				 <span class="hcp12">(x Exchange rate, if 
+				 applicable)</span></p></td>
+				<td class="t1Col"><p>6,000 x 0.832877</p></td>
+				<td class="t2Col">= 4,997.26</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Post Amount</p>
+				<p>(in Account File's currency)</p></td>
+				<td class="t2Col"><p>Total Line Amount Charged</p></td>
+				<td colspan="2" class="t1Col"><p>4,997.26</p></td>
+				
+			</tr>
+		</table>
+		<p class="FldExplain" style="font-size: 13px;">Example 2:</p>
+		<table class="Table1" cellspacing="0px" width="930">
+			<col width="150">
+			<col width="350">
+			<col width="150">
+			<col width="120">
+			<tr class="t1st">
+				<td><p><span class="hcp10">Formula</span></p></td>
+				<td><p><span class="hcp10">Calculation</span></p></td>
+				<td colspan="2"><p>Example/Result</p></td>
+				
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p><span>{TODATE}</span></p></td>
+				<td class="t2Col"><p><span>Next Due Date</span></p></td>
+				<td colspan="2" class="t1Col"><span>1/1/2012</span></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border: Solid 1px #000000;"><p><span class="hcp10">{FREQUENCY}</span></p>
+				<p>&#160;</p></td>
+				<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top;" bgcolor="#FFFFFF"><p><span class="hcp10">Charge 
+				 Per Frequency</span></p></td>
+				<td colspan="2" class="t1Col" style="border: Solid 1px #000000;" bgcolor="#FFFFFF"><span class="hcp10">Annually 
+				 [A]</span></td>
+				
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border: Solid 1px #000000;"><p><span class="hcp10">{DUEDATE}</span></p></td>
+				<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top;" bgcolor="#FFFFFF"><p><span class="hcp10">Next 
+				 Due Date – (No. Charge Frequency)</span></p></td>
+				<td colspan="2" class="t1Col" style="border: Solid 1px #000000;" bgcolor="#FFFFFF"><span class="hcp10">1/1/2011</span></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p><span>{FROMDATE}</span></p></td>
+				<td class="t2Col" style="vertical-align: top;" bgcolor="#FFFFFF"><p>{FROMDATE}= 
+				 {DUEDATE}</p>
+				<p>If Effective Date &gt; {DUEDATE}, {FROMDATE}=Effective 
+				 Date</p></td>
+				<td colspan="2" class="t1Col" bgcolor="#FFFFFF">25/8/2011</td>
+				
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p><span>{RUNDATE}</span></p></td>
+				<td class="t2Col"><p><span>Reconcile Date</span></p></td>
+				<td colspan="2" class="t1Col"><span>31/10/2011</span></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p><span>Charge Percentage</span></p></td>
+				<td class="t2Col"><p>Number of days between {FROMDATE} 
+				 and {RUNDATE} ÷ Number of days between {TODATE}</p>
+				<p>and {DUEDATE}</p>
+				<p><span>&#160;&#160;</span></p>
+				<p><span class="hcp11">Note</span><span>: 
+				 Number of days between {FROMDATE} and {RUNDATE} includes 
+				 the {RUNDATE}</span></p></td>
+				<td class="t1Col"><span>68 ÷ 365</span></td>
+				<td class="t2Col">= 0.186301</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p><span>Total Amount</span></p></td>
+				<td class="t2Col"><p><span>(Unit Price x Number of Units) 
+				 - Discount</span></p></td>
+				<td colspan="2" class="t1Col"><span>6,000</span></td>
+				
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p><span>Line Amount Charged</span></p>
+				<p><span>(in Billing base currency)</span></p></td>
+				<td class="t2Col"><p><span>Total Amount x Charge Percentage</span> 
+				 <span class="hcp12">(x Exchange rate, if 
+				 applicable)</span></p></td>
+				<td class="t1Col"><span>6 ,0000 X</span> 0.186301</td>
+				<td class="t2Col">= <span style="font-size: 11.0pt; font-family: Calibri, sans-serif; 
+											 mso-fareast-font-family: Calibri; 
+											 mso-fareast-theme-font: minor-latin; 
+											 mso-bidi-font-family: 'Times New Roman'; 
+											 mso-ansi-language: EN-MY; 
+											 mso-fareast-language: EN-MY; 
+											 mso-bidi-language: AR-SA;">1,117.81</span></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p><span>Post Amount</span></p>
+				<p><span>(in Account File's currency)</span></p></td>
+				<td class="t2Col"><p><span>Total Line Amount Charged</span></p></td>
+				<td colspan="2" class="t1Col"><p>1,117.81</p></td>
+				
+			</tr>
+		</table>
+		<p class="FldExplain">&#160;</p>
+ </div></li>
+	<li class="p"><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">WIP 
+	 Accrual Posting</a></p>
+	<div class="droptext" id="POPUP413176574" style="display: none;">
+		<p>This feature posts accrual income from works-in-progress (WIP) 
+		 in the Time and Disbursements module, and reverses them the next 
+		 day, which may be useful for management reporting purposes. When 
+		 run, the system checks through all approved time and disbursement 
+		 entries and ignores unapproved ones. As with the Debtors Provision 
+		 Accrual rule type, if you are utilising the organisational units 
+		 feature, then the WIP amounts for time and disbursements are grouped 
+		 by organisational unit. This rule is meant for use on Revenue 
+		 Entities only.</p>
+		<p>The following must be done in order to use this rule type:</p>
+		<ul class="hcp1">
+			<li><p>Account mapping - This needs to be done correctly for 
+			 the following components under the Control Accounts - Sales 
+			 Ledger for the selected Revenue Entity:</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>WIP - Time charges [R.SX] - This is the nominal 
+				 account where time charges are debited to.</p></li>
+				<li><p>WIP - Time offset [R.ST] - This is the nominal account 
+				 where time charges are credited to.</p></li>
+				
+				<li><p>WIP - Disb. charges [R.SY] - This is the nominal 
+				 account where disbursement charges are debited to.</p></li>
+				<li><p>WIP - Disb. offset [R.SU] - This is the nominal 
+				 account where disbursement charges are credited to.</p></li>
+				
+			</ul></li>
+			<li><p>Posting rule - This must be set up correctly, so that 
+			 the appropriate journal reference and line description are 
+			 used for the journal entries.</p></li>
+		</ul>
+		<p>When the rule is run, the sum amount of all approved WIP are 
+		 debited and credited to the respective accounts. Immediately after, 
+		 this accrual journal is reversed, using the next day's date as 
+		 the journal date.</p>
+		<p style="font-weight: normal; font-style: normal;">Viewpoint picks 
+		 up all approved WIP as at the date entered. As this date can be 
+		 in the past, the sum amount will include any works that may have 
+		 since been invoiced.</p>
+		<p>&#160;</p>
+		<p>The following tags can be used in Note/Tag Values field.</p>
+		<table class="Table1" cellspacing="0px" width="92.807%">
+			<col style="width: 35.753%;">
+			<col style="width: 64.247%;">
+			<tr class="t1st">
+				<td><p>Tag</p></td>
+				<td><p>Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>[TDTYPE.EXCL=DISB]</p></td>
+				<td class="t2Col"><p>This tag excludes Disbursement in 
+				 WIP Accrual posting rule.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>[TDTYPE.EXCL=TIME]</p></td>
+				<td class="t2Col"><p>This tag excludes Time in WIP Accrual 
+				 posting rule.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>[MTSTATUS.EXCL=&lt;Status&gt;]</p></td>
+				<td class="t2Col"><p>This tag excludes time and disbursement 
+				 entries based on Matter File status. The tag supports 
+				 multiple status, separated with a comma. For example: 
+				 [MSTATUS.EXCL=2,5] will exclude Matter File Status 2 and 
+				 5.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>[BFSTATUS.EXCL=&lt;Status&gt;]</p></td>
+				<td class="t2Col"><p>This tag exclude time and disbursement 
+				 entries based on Billing File status. The tag supports 
+				 multiple status, separated with a comma. For example: 
+				 [BFSTATUS.EXCL=2,5] will exclude Billing File Status 2 
+				 and 5.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>[GROUP_XX=&lt;Days&gt;][PERCENT_XX=&lt;Percentage&gt;]</p></td>
+				<td class="t2Col"><p>This tag will determine which of the 
+				 approved Time and Disbursement entries as well as the 
+				 percentage applied that will be calculated in WIP Accrual 
+				 posting rule. Note that XX can only support from 01-10, 
+				 while &lt;Days&gt; and &lt;Percentage&gt; can only support 
+				 whole numbers. For more information, refer to examples 
+				 below. </p></td>
+			</tr>
+			
+				
+			
+		</table>
+		<p>&#160;</p>
+		<p>WIP Accrual Posting also supports the amount calculation based 
+		 on the percentage of total amount.</p>
+		<p>&#160;</p>
+		<p>For example, two invoices from Time Entry and two invoices from 
+		 Disbursement Entry are created with details as followed:</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 20%;">
+			<col style="width: 20%;">
+			<col style="width: 20%;">
+			<col style="width: 20%;">
+			<col style="width: 20%;">
+			<tr class="t1st">
+				<td>&#160;</td>
+				<td><p>&#160;Invoice T1</p></td>
+				<td><p>&#160;Invoice T2</p></td>
+				<td><p>&#160;Invoice D1</p></td>
+				<td><p>&#160;Invoice D2</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Entry Date</p></td>
+				<td class="t2Col"><p>15-Oct-2017</p></td>
+				<td class="t1Col"><p>15-Nov-2017</p></td>
+				<td class="t2Col"><p>15-Dec-2017</p></td>
+				<td class="t1Col"><p>15-Jan-2018</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Matter</p></td>
+				<td class="t2Col"><p>Accounting [AC]</p></td>
+				<td class="t1Col"><p>Accounting [AC]</p></td>
+				<td class="t2Col"><p>General [GE]</p></td>
+				<td class="t1Col"><p>General [GE]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Service</p></td>
+				<td class="t2Col"><p>TADMIN</p></td>
+				<td class="t1Col"><p>TADMIN</p></td>
+				<td class="t2Col"><p>DCLEAN</p></td>
+				<td class="t1Col"><p>DCLEAN</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Total Line (EUR)</p></td>
+				<td class="t2Col"><p>500</p></td>
+				<td class="t1Col"><p>500</p></td>
+				<td class="t2Col"><p>500</p></td>
+				<td class="t1Col"><p>500</p></td>
+			</tr>
+		</table>
+		<p>The Posting Rule is run on date 28/02/2018.</p>
+		<p>&#160;</p>
+		<p><span class="hcp9">E</span>xample Tag 
+		 1:</p>
+		<p>[GROUP_01=0][PERCENT_01=60]</p>
+		<p>&#160;</p>
+		<p>By applying the tag as stated above, the condition is:</p>
+		<p>Entries with difference of days that are more than 0 days when 
+		 compared between the Entry Date and Posting Rule Run Date will 
+		 be charged 60% of the total amount.</p>
+		<p>In this example, the posting amount = 1200 (from Invoice T1, 
+		 T2, D1, D2).</p>
+		<p>Breakdown calculation as below:</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 19.552%;">
+			<col style="width: 18.434%;">
+			<col style="width: 20.671%;">
+			<col style="width: 20.671%;">
+			<col style="width: 20.671%;">
+			<tr class="t1st">
+				<td><p>&#160;Invoice T1</p></td>
+				<td><p>&#160;Invoice T2</p></td>
+				<td><p>Invoice D1</p></td>
+				<td><p>Invoice D2</p></td>
+				<td><p>&#160;Total (EUR)</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>&#160;EUR500 * 0.6 = 300</p></td>
+				<td class="t2Col"><p>&#160;EUR500 * 0.6 = 300</p></td>
+				<td class="t1Col"><p>EUR500 * 0.6 = 300</p></td>
+				<td class="t2Col"><p>EUR500 * 0.6 = 300</p></td>
+				<td class="t1Col"><p>&#160;<span lang="EN-US" xml:lang="EN-US">T1+T2+T3+T4 
+				 = 1200</span></p></td>
+			</tr>
+		</table>
+		<p><span class="hcp11">Note</span>: 
+		 If the group starts with ‘0’, all entries greater than 0 day will 
+		 be charged as per stated percentage.</p>
+		<p>&#160;</p>
+		<p><span class="hcp9">Example Tag 2</span>:</p>
+		<p>[GROUP_01=90][PERCENT_01=60]</p>
+		<p>[GROUP_02=60][PERCENT_02=80]</p>
+		<p>[GROUP_03=0][PERCENT_03=90]</p>
+		<p>&#160;</p>
+		<p>By applying the tag as stated above, the first condition is:</p>
+		<p>Entries with difference of days that are more than 90 days when 
+		 compared between the Entry Date and Posting Rule Run Date will 
+		 be charged 60% of the total amount.</p>
+		<p>In this example, the posting amount = 600 (from Invoice T1 and 
+		 T2).</p>
+		<p>Breakdown calculation as below:</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td><p>&#160;Invoice T1</p></td>
+				<td><p>&#160;Invoice T2</p></td>
+				<td><p>&#160;Total (EUR)</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>&#160;EUR500 * 0.6 = 300</p></td>
+				<td class="t2Col"><p>&#160;EUR500 * 0.6 = 300</p></td>
+				<td class="t1Col"><p>&#160;<span lang="EN-US" xml:lang="EN-US">T1+T2 
+				 = 300+300 = 600</span></p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>The second condition is:</p>
+		<p>Entries with difference of days that are on/between 60 days 
+		 to 90 days when compared between the Entry Date and Posting Rule 
+		 Run Date will be charged 80% of the total amount.</p>
+		<p>In this example, the posting amount = 400 (from Invoice D1).</p>
+		<p>Breakdown calculation as below:</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 50%;">
+			<col style="width: 50%;">
+			<tr class="t1st">
+				<td><p>&#160;Invoice D1</p></td>
+				<td><p>Total (EUR)</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>&#160;EUR500 * 0.8 = 400 </p></td>
+				<td class="t2Col"><p>&#160;D1 = 400</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>The third condition is:</p>
+		<p>Entries with difference of days that are less than 60 days when 
+		 compared between the Entry Date and Posting Rule Run Date will 
+		 be charged 90% of the total amount.</p>
+		<p>In this example, the posting amount = 450 (from Invoice D2).</p>
+		<p>Breakdown calculation as below:</p>
+		<table class="Table1" cellspacing="0px" width="100%">
+			<col style="width: 50%;">
+			<col style="width: 50%;">
+			<tr class="t1st">
+				<td><p>&#160;Invoice D2</p></td>
+				<td><p>&#160;Total (EUR)</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>&#160;EUR500 * 0.9 = 450</p></td>
+				<td class="t2Col"><p>&#160;D2 = 450</p></td>
+			</tr>
+		</table>
+		<p>Therefore, the total posting amount is 600 + 400 + 450 = 1450. 
+		 </p>
+		<p><span class="hcp11">Note</span>: 
+		 If the percentage is not defined for the group, the entries will 
+		 be charged 100% by default. Likewise, any remaining entries that 
+		 do not fall into any of the conditions listed, will also be charged 
+		 100%.</p>
+		<p>&#160;</p>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<p>&#160;</p>
+		<p class="SeeAlso">See also:</p>
+		<ul class="hcp1">
+			<li><a href="../Configuration/Account_Mapping_Revenue_Entities.htm">Account 
+			 Mapping - Revenue Entities</a></li>
+		</ul>
+ </div></li>
+</ul>
+<p>You can click on the following to minimise or expand the sections in 
+ this screen:</p>
+<ul class="hcp1">
+	<li><p><img src="../image307.gif" alt="" border="0" class="hcp13"> 
+	 - To minimise this section and hide the command buttons. In the grid, 
+	 only the selected row will be seen.</p></li>
+	<li><p><img src="../image308.gif" alt="" border="0" class="hcp13"> 
+	 - To expand the section and show the command buttons.</p></li>
+</ul>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Posting Rule list</p>
+<p>This shows the posting rules that you have set up for the Account File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the posting rule list. Click the relevant command button 
+ to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp5">New</span> - Click this to 
+	 add a <a class="dropspot" href="javascript:TextPopup(this)" id="a5">new</a> 
+	 rule.</p>
+	<div class="droptext" id="POPUP411451045" style="display: none;">
+		<ol>
+			<li><p class="Listing">Enter the information required to set 
+			 up your rule.</p></li>
+			<li><p class="Listing">Click Update.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp5">Edit</span> - Click this&#160;to 
+	 edit a rule.</p></li>
+	<li><p><span class="hcp5">Delete</span> - Click this 
+	 to delete a rule.</p></li>
+	<li><p><span class="hcp5">Run rule</span> - Click this 
+	 to run a specific rule, or, if the Run-all checkbox has been ticked, 
+	 all rules at once. The run rule date range needs to be within the 
+	 48 periods open of an Account File. If the rule is run for the first 
+	 time, the date control is enabled where user can set the date range 
+	 for the rule run. For the subsequent run, the date control will be 
+	 <span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a8">semi-enabled</a></span>. 
+	 For Appropriate Deferred Income [DI] posting rule, the <a class="dropspot" href="javascript:TextPopup(this)" id="a9">Reconcile</a> 
+	 option in the 'Run Rule' window allows user to reconcile right after 
+	 the run.</p>
+	<div class="droptext" id="POPUP577370611" style="display: none;">
+		<p>When the Reconcile option is ticked, the system will run rule 
+		 from 01/01/1900 in addition to the 'From' date. Hence, you will 
+		 see two rules being posted after the successful run.</p>
+ </div>
+	<div class="droptext" id="POPUP469076757" style="display: none;">
+		<ul class="hcp1">
+			<li><p>Appropriated Deferred Income [DI] - the 'From' date 
+			 will default to 'the last succeeded run date + 1 day' and 
+			 is not editable (date control is disabled). The 'to' date 
+			 is set to 'the last day of the particular calendar period' 
+			 and is editable (date control is enabled). <span class="hcp11">Note</span>: There is a validation on 
+			 the 'to' date even though it is editable. However, it is limited 
+			 to not exceed the current period’s last day.</p></li>
+			<li><p>Other Posting Type - &#160;the 'On Date' will default 
+			 to the following month-end date based on the last succeeded 
+			 run month and is editable (date control is enabled).</p></li>
+		</ul>
+ </div></li>
+	<li><p><span class="hcp5">Reconcile</span> - Click to 
+	 reconcile up to the date of last succeeded rule run. This will calculate 
+	 the Amount Left in the Posting Rule Run Details report. This function 
+	 is used to clear up left-over balances when run at the end of your 
+	 accounting period.</p></li>
+</ul>
+<p><span class="hcp11">Note</span>: Upon 
+ upgrading from a lower version, it is recommended to reconcile 'Appropriated 
+ Deferred Income [DI]' posting rule. Note that the Run Rule or Reconcile 
+ will take longer than usual for the first time to calculate/correct the 
+ balance and release amount for history run records.</p>
+<p>&#160;</p>
+<p class="FldExplain">Run-all</p>
+<p>Tick this checkbox if you want to run all rules at the same time.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Record of rule run</p>
+<p>This lists each instance a posting rule was run.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the record of the posting rule run. Click the relevant 
+ command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp5">Print</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a7">print</a> 
+	 the posting rule run details.</p>
+	<div class="droptext" id="POPUP413159141" style="display: none;">
+		<p class="FldExplain">Include all Run</p>
+		<p>Tick this to include details all run numbers of the selected 
+		 Posting Rule. Otherwise, the report will only include details 
+		 of the selected run.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Output to</p>
+		<p>Choose if you want to view the report on the screen or send 
+		 it to the printer.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">OK</p>
+		<p>Click to start.</p>
+		<p>&#160;</p>
+		<p class="FldExplain">Cancel</p>
+		<p>Click to close the screen.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp5">View</span> <span class="hcp5">Journal</span> 
+	 - Click this to view posted journal.</p></li>
+	<li><p><span class="hcp5">Post as Final</span> - Click 
+	 this to post draft journal as final journal.</p></li>
+	<li><p><span class="hcp5">Recalculate</span> - This button 
+	 recalculates the balance for the previous periods on the 'Appropriated 
+	 Deferred Income [DI]' posting rule only. This button is hidden by 
+	 default.</p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Reconcile_Account.htm">Processing</a> &gt; Posting Rules</p>
+ <p class="hcp14">&#160;</p>
+ <p class="hcp14">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp14">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP413143727');
+	TextPopupInit('a2','POPUP413149801');
+	TextPopupInit('a6','POPUP413183313');
+	TextPopupInit('a4','POPUP413166210');
+	TextPopupInit('a3','POPUP413176574');
+	TextPopupInit('a5','POPUP411451045');
+	TextPopupInit('a8','POPUP469076757');
+	TextPopupInit('a9','POPUP577370611');
+	TextPopupInit('a7','POPUP413159141');
+//]]></script>
+</body>
+</html>

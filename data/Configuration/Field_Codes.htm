@@ -1,0 +1,1022 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Field codes">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Field Codes</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+td.hcp3 { vertical-align:top; }
+p.hcp4 { margin-left:6pt;
+margin-right:6pt;
+color:#300063; }
+p.hcp5 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp6 { margin-right:6pt;
+margin-left:0px; }
+span.hcp7 { mso-ansi-language:EN-US; }
+p.hcp8 { margin-left:0px; }
+span.hcp9 { mso-list:l0 level1 lfo1; }
+i.hcp10 { mso-bidi-font-style:normal; }
+span.hcp11 { mso-char-type:symbol;
+mso-symbol-font-family:Wingdings; }
+table.hcp12 { border-collapse:separate; }
+span.hcp13 { font-weight:bold;
+font-style:italic; }
+p.hcp14 { font-weight:bold;
+color:#300063; }
+p.hcp15 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Field codes</h1>
+<p>Field codes are used to retrieve information for a form, report, invoice 
+ or HTML template. The codes will be replaced by data in the corresponding 
+ field in the generated document, ESP or Summary Screen. Some field codes 
+ can be found in the <a href="Field_Wizard.htm">Field Wizard</a> while 
+ others can be retrieved using SQL queries placed in the <a href="Key_Information.htm">Key 
+ Information</a>.</p>
+<p>Defining the field code in the template follows this syntax:</p>
+<p style="font-weight: bold;">(+&lt;Prefix&gt;.&lt;Field&gt;+)</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p>&lt;Prefix&gt; can be:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>HD when the field is retrieved by the header statement for 
+		 the template.</p></li>
+		<li><p>the name of the SQL query used to retrieve the field.</p></li>
+		<li><p>EVT when the field is linked to a change.</p></li>
+		<li><p>DF when the field is a special field hard-coded to the program 
+		 as listed in the <a href="Field_Wizard.htm">Field Wizard.</a></p></li>
+		<li><p>DC when the field is a default Entity Information field 
+		 as listed in the <a href="Field_Wizard.htm">Field Wizard.</a></p></li>
+		<li><p>DU when the field is a User Field.</p></li>
+		<li><p>SUB when the field is from a sub-routine.</p></li>
+	</ul></li>
+	<li><p>&lt;Field&gt; is the database field name.</p></li>
+</ul>
+<p>If you want to define how the retrieved field is displayed, then you 
+ can also add the format option at the end: <span class="hcp2">(+&lt;Prefix&gt;.&lt;Field&gt;\&lt;Format&gt;+)</span>. 
+ You can refer to the <a href="Field_Wizard.htm">Field Wizard</a> for format 
+ options as well as <a href="Format_Options.htm">Format Options</a>.</p>
+<p>&#160;</p>
+<h3>Forms</h3>
+<p>The following table shows the types of field codes that are used for 
+ form templates.</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="1399">
+	<col style="width: 22.307%;">
+	<col style="width: 34.857%;">
+	<col style="width: 36.397%;">
+	<tr class="t1st" style="height: 31px;">
+		<td class="hcp3"><p class="hcp4">Code</p></td>
+		<td class="hcp3"><p class="hcp4">Explanation</p></td>
+		<td class="hcp3"><p class="hcp4">Example</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 129px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+EVT.&lt;Field&gt;+)</p>
+		<p class="hcp5">(+EVT.&lt;Field&gt;\&lt;Format&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Format&gt; is the code of the Format Option.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 will replace the code with the specified field from the change 
+		 information based on the change code linked to the form template. 
+		 If a format option is included, then this will determine how the 
+		 information will look like in the generated document.</p>
+		<p class="hcp5">Look in the Field 
+		 Wizard for the available change information for the template according 
+		 to the change code.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+EVT.EntCode+)</p>
+		<p class="hcp5">&#160;will retrieve 
+		 the code of the Entity File.</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">(+EVT.EntCode\#AD-0-0+)</p>
+		<p class="hcp5">will retrieve the 
+		 code of the Entity File but display the entity name.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 210px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+&lt;QNAME&gt;.ALL-TAB\&lt;ColFormat&gt;+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">where:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">&lt;QNAME&gt; 
+			 is the name given to the SQL query and must be unique.</p></li>
+			<li><p class="hcp5">&lt;ColFormat&gt; 
+			 is the code of the Format Option to be applied to the column.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code it to be placed in a table. It will execute the &lt;QNAME&gt; 
+		 query placed in the Key Information &#160;and places the results 
+		 in a table.</p>
+		<p class="hcp5">The &lt;ColFormat&gt; 
+		 defines multiple format strings that includes the column number 
+		 and the Format Option code. The number of the format string should 
+		 match the information retrieved by the SQL query.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+Members.ALL-TAB\1:#AD-40-0\2:#AD-42-0\3:#AD-50-0+)</p>
+		<p class="hcp5">&#160;will retrieve 
+		 fields by the 'Members' query and format all three columns according 
+		 to the specified Format Option code.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 54px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+&lt;QNAME&gt;.&lt;Field&gt;+)</p>
+		<p class="hcp5">(+&lt;QNAME&gt;.&lt;Field&gt;\&lt;Format&gt;+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code will execute the &lt;QNAME&gt; query placed in the Key Information 
+		 and replaces the code with the specified field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+Auditor.AddrCode\#AD-40-0+)</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 210px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+&lt;QNAME&gt;.&lt;Field1&gt;&amp;&lt;Field2&gt;&amp;&lt;Field3&gt;\&lt;FieldFormat&gt;+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">where:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">&lt;Field1&gt;, 
+			 &lt;Field2&gt;, &lt;Field3&gt; are database fields.</p></li>
+			<li><p class="hcp5">&lt;FieldFormat&gt; 
+			 is the code of the Format Option to be applied to each field.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code will execute the &lt;QNAME&gt; query and places the results 
+		 in a row.</p>
+		<p class="hcp5">The &lt;FieldFormat&gt; 
+		 defines the multiple format strings &#160;for fields of the query 
+		 such as \1:Format\2:Format\3:Format etc. The number for the format 
+		 string must correspond to the information being retrieved, i.e. 
+		 to format Field2, the format string is \2:Format, and to format 
+		 Field4, the format string is \4:Format.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+Members.AddrCode&amp;NrShare&amp;ShareClassName\1:#AD-40-0\2:N2+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 46px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+SUB.&lt;Field&gt;+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 replaces the code with the result of the sub-routine, such as 
+		 [/GOSUB=ALLT/]. Sub-routines are generally hard-coded.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">&#160;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DC.&lt;Field&gt;\&lt;Format&gt;+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 replaces the code with the specified default field for Entity.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DC.IncorpNr+)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 31px;">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DF.PRESEN+)</p>
+		<p class="hcp5">(+DF.PRESEN\&lt;Format&gt;+) 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 replaces the code with the presenter which may be retrieved from:</p>
+		<ul class="hcp1">
+			<li><p>appointed entity relation as presenter</p></li>
+			<li><p>presenter specified for the jurisdiction</p></li>
+			<li><p>default presenter in the Presenter field in Configuration 
+			 &gt; Settings &gt; <a href="System_Defaults_-_Entity_BPM.htm">System 
+			 Defaults &gt; Entity/BPM</a> screen</p></li>
+		</ul>
+		<p class="hcp5">For the first two, 
+		 tags are required in the Country Codes [CNTR] lookup table. Refer 
+		 to <a href="Lookup_Tables.htm">Lookup Tables</a>.</p>
+		<p class="hcp5">If a format option 
+		 is included, then this will determine how the information will 
+		 look like in the generated document.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DF.PRESEN+)</p>
+		<p class="hcp5">&#160;will retrieve 
+		 the code of the presenter's Master File.</p>
+		<p class="hcp5">(+DF.PRESEN\#AD-0-0+)</p>
+		<p class="hcp5">will retrieve the 
+		 code of the presenter's Master File but display the entity name.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Word Reports, Correspondence and Billing Templates</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" width="1568" cellspacing="0px">
+	<col style="width: 14.201%;">
+	<col style="width: 42.9%;">
+	<col style="width: 37.691%;">
+	<tr class="t1st">
+		<td class="hcp3"><p class="hcp4">Code</p></td>
+		<td class="hcp3"><p class="hcp4">Explanation</p></td>
+		<td class="hcp3"><p class="hcp4">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+HD.&lt;Field&gt;+)</p>
+		<p class="hcp5">(+HD.&lt;Field&gt;\&lt;Format&gt;+)</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 will replace the code with Field from the header (HD) statement 
+		 for the template. If a format option is included, then this will 
+		 determine how the information will look like in the generated 
+		 document.</p>
+		<p class="hcp5">Look in the Field 
+		 Wizard for fields included in the HD query.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+HD.EntCode\#AD-0-0+)</p>
+		<p class="hcp5">Master File Name: 
+		 (+HD.FileCode\#AD-40-0+)</p>
+		<p class="hcp5">Workflow Number: 
+		 (+HD.WflowNr+)</p>
+		<p class="hcp5">Workflow Description: 
+		 (+HD.WflowDescr+)</p>
+		<p class="hcp5">Administrator: 
+		 (+HD.AdminCode+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DT.&lt;QNAME&gt;+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">where &lt;QNAME&gt; 
+		 is the name given to the SQL query and must be unique.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is to be placed in a table. It will execute the &lt;QNAME&gt; 
+		 query placed in the Key Information &#160;and places the results 
+		 in a table.</p>
+		<p class="hcp5">The formatting 
+		 of the fields is also specified in Key Information with a corresponding 
+		 statement.</p>
+		<p class="hcp5">Hierarchical SQL 
+		 statements may be used in the formatting, where the SELECT statement 
+		 will retrieve information in the table cell related to the field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">[/DT.CompList-SQL=SELECT 
+		 EntCode, Name, '(' + IncorpPlace + ' - ' + IncorpNr + ')', 'Dir','Sec','Share', 
+		 AdminCode FROM CR_Company WHERE (-HDSEL-) ORDER BY Name/]</p>
+		<p class="hcp5">[/DT.CompList-FORMAT=\1:*NS\2:*L</p>
+		<p class="hcp5">\4:@SQL:SELECT 
+		 SearchName + ' (' + OfficerText + ')' FROM CR_Officer WHERE EntCode 
+		 = '(-EntCode-)' AND Left(OfficerType,1) = 'D' AND Status = 'A' 
+		 ORDER BY SearchName</p>
+		<p class="hcp5">\5:@SQL:SELECT 
+		 SearchName + ' (' + OfficerText + ')' FROM CR_Officer WHERE EntCode 
+		 = '(-EntCode-)' AND Left(OfficerType,1) = 'S' AND Status = 'A' 
+		 ORDER BY SearchName</p>
+		<p class="hcp5">\6:@SQL:SELECT 
+		 Name + ': ' + CAST(SharesHeld AS Varchar)+ ' ' + ShareClassName 
+		 + ' share(s)' FROM CR_ShareHolders LEFT JOIN RefLabels ON CR_ShareHolders.AddrCode 
+		 = RefLabels.Code WHERE EntCode= '(-DT.EntCode-)' AND SharesHeld&gt;0/]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+&lt;QNAME&gt;.&lt;Field&gt;+)</p>
+		<p class="hcp5">(+&lt;QNAME&gt;.&lt;Field&gt;\&lt;Format&gt;+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code will execute the &lt;QNAME&gt; query placed in the Key Information 
+		 and replaces the code with the specified field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+Auditor.AddrCode\#AD-40-0+)</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+CODE\#IP-FilePart.Ext+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to insert client-specific logos or pictures into 
+		 letters or other word templates.</p>
+		<p class="hcp5">The program will 
+		 evaluate the CODE and use the value returned by the code (CODERETURN) 
+		 to construct the following file name:</p>
+		<p class="hcp5">FormsFolder\DocumentPictures\CodereturnFilePart.Ext</p>
+		<p class="hcp5">where 'DocumentPictures' 
+		 is the designated location of the picture files.</p>
+		<p class="hcp5">If the file name 
+		 returned doesn't exist the code will return an error message. 
+		 See example below.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+CODE\#IP-FilePart.Ext#NoValue+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">As 
+		 above.</p>
+		<p class="hcp5">If the file name 
+		 returned doesn't exist and there is a second format specified 
+		 (starting with #) it will format the CODERETURN with this format 
+		 and return this value. If the second format only has the # character, 
+		 the code will return an empty string.</p>
+		<p class="hcp5">For example:</p>
+		<p class="hcp5">A word document 
+		 generated for the Master File ('RefCode') ABCCOM:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">The code 
+			 (+HD.RefCode\#IP-.logo.jpg<span class="hcp2">#AD-5-0</span>+) 
+			 will look for the file &#160;...Viewpoint\Forms\DocumentPictures\ABCCOM.logo.jpg</p></li>
+		</ul>
+		<p class="hcp5">If the file exists, 
+		 the picture will be inserted on the location of the code. If the 
+		 file doesn't exist, the program will replace the code with the 
+		 name and address (format code #AD-5-0).</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">The code 
+			 (+HD.RefCode\#IP-.logo.jpg+) will, if the picture file doesn't 
+			 exist, replace the code with the message &quot;Picture file 
+			 '...\Viewpoint\Forms\DocumentPictures\ABCCOM.logo.jpg' doesn't 
+			 exist&quot;</p></li>
+			<li><p class="hcp5">The code 
+			 (+HD.RefCode\#IP-.logo.jpg<span class="hcp2">#</span>+) 
+			 will, if the picture file doesn't exist, remove the code only.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+EffDate=(-HD.&lt;CutOffDate&gt;-)+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">where &lt;CutOffDate&gt; 
+		 is any date field retrieved by the header statement</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to insert the address as at CutOffDate, which is 
+		 any date used as &#160;the cut off date. If the address is changed 
+		 after CutOffDate, the previous address will still be used.</p>
+		<p class="hcp5">If you are using 
+		 BLOCK statements, the syntax SB can be used in place of HD. Refer 
+		 to <a href="BLOCK_Statements.htm">Block Statements</a> for more 
+		 information.</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Example:</p>
+		<p class="hcp5">A word report generated 
+		 for the share holders of Master File ('EntCode') XYZCom:</p>
+		<p class="hcp5">The code (+EffDate=(-HD.LastOfTransferDate-)+) 
+		 in the report will insert the address of the share holder as at 
+		 the cut-off date when he ceases to be the share holder of XYZCom.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+EFFDATE=&lt;CutOffDate&gt;+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">where the &lt;CutOffDate&gt; 
+		 can be any date used as the cut-off date</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to retrieve contact records based on the point-in-time. 
+		 </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+EFFDATE=(-BF.DateResign-)+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp5">(+DOCAPPEND+) 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to combine multiples Word reports into a single Word 
+		 report. It will generate a document based on the form code and 
+		 selection criteria specified in the syntax. The generated document 
+		 will be appended at the end of the document that has the specified 
+		 syntax and will produce a single document. </p>
+		<p class="hcp5">Where:</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">FORMCODE: The Template 
+		 Code to be generated and a ! symbol can be include or exclude 
+		 at the end of the template code.</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">Without 
+			 ! symbol - TemplateCode, it is to indicate that is for Draft 
+			 Invoice.</p></li>
+			<li><p class="hcp5">With ! 
+			 symbol - TemplateCode, it is to indicate that is for Posted 
+			 Invoice.</p></li>
+		</ul>
+		<p style="margin-left: 6pt; margin-right: 6pt; display: inline	 ! important ; 
+			 background-color: rgba(255, 255, 255, 1); color: rgba(0, 0, 0, 0.9); 
+			 font-family: 'Segoe UI VSS ', , 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Ubuntu, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">HD-SEL: 
+		 Selection Criteria of the template.</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Attach_[Template 
+		 Type]: It can be either PDF or DOC. </p>
+		<ul class="hcp1">
+			<li><p class="hcp5">without 
+			 Attach_[Template Type], the generated document will append 
+			 at the end of the main document </p></li>
+			<li><p class="hcp5">Attach_PDF: 
+			 Attach the generated document as PDF when converting to an 
+			 e-mail </p></li>
+			<li><p class="hcp5">Attach_DOC: 
+			 Attach the generated document as Word when converting to an 
+			 e-mail </p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp6"><span 
+		 lang="EN-US" xml:lang="EN-US" style="mso-margin-top-alt: auto; 
+		 mso-margin-bottom-alt: auto; mso-ansi-language: EN-US;">(+DOCAPPEND:FORMCODE=RMINV01|HD-SEL=ProformaNr=(-BF.ProformaNr-) 
+		 AND</span></p>
+		<p class="MsoNormal" style="mso-ansi-language: EN-US;"><span lang="EN-US" 
+		 xml:lang="EN-US">RefCode='(-BF.RefCode-)'|Attach_PDF=Invoice (-BF.ProformaNr-)+)</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US" class="hcp7">The 
+		 above shown DocAppend for Draft Invoice.</span></p>
+		<p class="MsoNormal" style="mso-margin-top-alt: auto; margin-right: 6.0pt; 
+			 mso-margin-bottom-alt: auto; margin-left: 6.0pt; mso-ansi-language: EN-US;">&#160;</p>
+		<p class="MsoNormal" style="mso-margin-top-alt: auto; margin-right: 6.0pt; 
+			 mso-margin-bottom-alt: auto; mso-ansi-language: EN-US; margin-left: 0px;"><span 
+		 lang="EN-US" xml:lang="EN-US">(</span><span lang="EN-US" xml:lang="EN-US">+DOCAPPEND:FORMCODE=RMINV01!|HD-SEL=ProformaNr=(-BF.ProformaNr-) 
+		 AND</span></p>
+		<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US" class="hcp7">RefCode='(-BF.RefCode-)'|Attach_PDF=Invoice 
+		 (-BF.ProformaNr-)+)</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US" class="hcp7">The 
+		 above shown DocAppend for Posted Invoice.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><b><i><span lang="EN-US" xml:lang="EN-US" class="hcp7">Note:</span></i></b> 
+		 <span lang="EN-US" xml:lang="EN-US" class="hcp7">Only 
+		 Billing Template will use both, other than Billing Templates it 
+		 will be without ! symbol.</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+WF.FLDKEY:ABCD+) 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to insert the value of the specified FldKey in Workflow 
+		 with the specific format.</p>
+		<p class="hcp5">(+WF.FLDKEY:&lt;KEY&gt;\&lt;Format&gt;+)</p>
+		<p class="hcp5">The prefix WF is 
+		 used only when the information being retrieved is linked to the 
+		 Workflow.</p>
+		<p class="hcp5">Replace &lt;KEY&gt; 
+		 with a valid FldKey.</p>
+		<p class="hcp5">Replace &lt;Format&gt; 
+		 with one of the format strings as per example:</p>
+		<ul class="hcp1">
+			<li><p class="hcp8">(+WF.FLDKEY:ABCD\CAP+) – This 
+			 tag is to show the caption of the Workflow Key.</p></li>
+			<li><p class="hcp8">(+WF.FLDKEY:ABCD\HELP+) – 
+			 This tag is to show help information of the Workflow Key.</p></li>
+			<li><p class="hcp8">(+WF.FLDKEY:ABCD+) or (+WF.FLDKEY:ABCD\VALUE+) 
+			 – This tag is to show the value of the Workflow Key.</p></li>
+			<li><p class="hcp8">(+WF.FLDKEY:ABCD\VALSHOW+) 
+			 – This tag is to show the &#160;description of the Workflow 
+			 Key.</p></li>
+			<li><p class="hcp8">(+WF.FLDKEY:ABCD\SCORE+) – 
+			 This tag is to show the score of the Workflow Key.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp6">(+WF.FLDKEY:DUP1\CAP+) 
+		 - This will show the caption.</p>
+		<p class="hcp6">(+WF.FLDKEY:DUP1\HELP+) 
+		 - This will show Help Text.</p>
+		<p class="hcp6">(+WF.FLDKEY:DUP1+) 
+		 or (+WF.FLDKEY:DUP1\VALUE+) - This will show the value.</p>
+		<p class="hcp6">(+WF.FLDKEY:DUP1\VALSHOW+) 
+		 - This will show the description.</p>
+		<p class="hcp6">(+WF.FLDKEY:DUP1\SCORE+) 
+		 - This will show the score.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+WF.TAB.&lt;KEYTYPE&gt;:&lt;KEY&gt;\FieldFormat+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to display in table format and support format option.</p>
+		<p class="hcp5">(WF.TAB.&lt;KEYTYPE&gt;):&lt;KEY&gt;\FieldFormat</p>
+		<p class="hcp5">The prefix WF.TAB 
+		 is used only when the information being retrieved is linked to 
+		 the Workflow and it is to be shown in the tabular format.</p>
+		<p class="hcp5">Replace &lt;KEYTYPE&gt; 
+		 with a valid FLDKEY, GROUPKEY or STEPKEY.</p>
+		<p class="hcp5">Replace &lt;KEY&gt; 
+		 with a valid key for the Workflow Field, Group or Step.</p>
+		<p class="hcp5">The FieldFormat 
+		 is to define multiple format strings for fields of tabular display 
+		 such as:</p>
+		<p class="hcp5">1:&lt;Format&gt;\2:&lt;Format&gt;\3:&lt;Format&gt;</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">(+WF.TAB.FLDKEY:ABCD\...+) 
+			 – This tag is for one row to display field for that Key.</p></li>
+			<li><p class="hcp5">(+WF.TAB.GROUPKEY:G1\...+) 
+			 – This tag is to list all the rows in the Duplicate Group 
+			 of the Workflow Step.</p></li>
+			<li><p class="hcp5"><span class="hcp9">(+WF.TAB.STEPKEY:<i class="hcp10">S1</i>\...+) </span><span class="hcp11">– 
+			 This tag is to</span><span class="hcp9"> 
+			 list all the rows in the Workflow Step.</span></p></li>
+			<li><p class="hcp5"><span class="hcp9">(+WF.TAB\...+) 
+			 </span><span class="hcp11">– 
+			 This tag is to</span><span class="hcp9"> 
+			 list all rows in the Workflow. It will be split by Workflow 
+			 Step Description as Heading.</span></p></li>
+			<li><p class="hcp5"><span class="hcp9">(</span>+WF.TAB.STEPKEY:<i class="hcp10">S1</i>\CAP*IS+) – This 
+			 tag is to show the caption of the Workflow Key in Indent level, 
+			 add one space for additional one level.</p></li>
+			<li><p class="hcp5">(+WF.TAB.STEPKEY:<i class="hcp10">S1</i>\CAP*IT+) – This 
+			 tag is to show the caption of the Workflow Key in Indent level, 
+			 add one tab for additional one level.</p></li>
+		</ul>
+		<p><b><i><span lang="EN-US" xml:lang="EN-US" class="hcp7">Note:</span></i></b> 
+		 \... refers to the displayed columns - Caption, Field Value, Field 
+		 Description, Score and Help.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp6">Field 
+		 Key: DUP4 Field Key is a Master File Type to support format option:</p>
+		<p class="hcp6">(+WF.TAB.FLDKEY:DUP4\1:CAP\2:VALUE\3:VALSHOW\4:SCORE\5:HELP\6:VALUE#AD-50-0+) 
+		 </p>
+		<p class="hcp6">Result:</p>
+		<table cellspacing="0" width="100%" border="1" class="hcp12">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<col style="width: 16.667%;">
+			<tr>
+				<td>Caption</td>
+				<td>Value</td>
+				<td>Description</td>
+				<td>Score</td>
+				<td>Help</td>
+				<td>Occupation</td>
+			</tr>
+			<tr>
+				<td>Sample</td>
+				<td>BROWNC</td>
+				<td>Brown Charles</td>
+				<td>0</td>
+				<td>Sample Help</td>
+				<td>Engineer</td>
+			</tr>
+		</table>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">Group Key:</p>
+		<p class="hcp6">(+WF.TAB.GROUPKEY:DUP2\1:CAP\2:VALUE\3:VALSHOW+)</p>
+		<p class="hcp6">Result:</p>
+		<table cellspacing="0" width="100%" border="1" class="hcp12">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<tr>
+				<td>Caption</td>
+				<td>Value</td>
+				<td>Description</td>
+			</tr>
+			<tr>
+				<td>Officer Type</td>
+				<td>DIR</td>
+				<td>Director</td>
+			</tr>
+			<tr>
+				<td>Master File of Appointee</td>
+				<td>LEETRS</td>
+				<td>Lee - Teresa</td>
+			</tr>
+		</table>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">Step Key:</p>
+		<p class="hcp6">(+WF.TAB.STEPKEY:VPWFTTDPS1\1:CAP*IT\2:VALSHOW+)</p>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">Workflow:</p>
+		<p class="hcp6">(+WF.TAB\1:CAP*IS\2:VALSHOW+)</p>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">IS = Indent by 
+		 Space</p>
+		<p class="hcp6">IT = Indent by 
+		 Tab</p>
+		<p style="margin-right: 6pt; margin-left: 0px; mso-ansi-language: EN-US;"><b><i><span 
+		 lang="EN-US" xml:lang="EN-US">Note:</span><span lang="EN-US" xml:lang="EN-US" 
+														 style="font-style: normal;"> 
+		 </span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal; 
+						 font-style: normal;">Indent level is depending 
+		 on the Level Column in WflowFields</span></i></b></p>
+		<p class="hcp6">&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+BLOCK.BlockName&amp;WF=&lt;KEYTYPE&gt;:&lt;KEY&gt;+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin-left: 0px;">This 
+		 code is used to display Duplicate Step, Group or Item/Field in 
+		 a Block Statement.</p>
+		<p class="MsoNormal" style="margin-left: 0px;">WF=&lt;KEYTYPE&gt;:&lt;KEY&gt;</p>
+		<p class="MsoNormal" style="margin-left: 0px;">Replace &lt;KEYTYPE&gt; 
+		 with FLDKEY, GROUPKEY or STEPKEY</p>
+		<p class="MsoNormal" style="margin-left: 0px;">Replace &lt;KEY&gt; 
+		 with a valid key for the Workflow Field, Group or Step.</p>
+		<p class="MsoNormal" style="margin-left: 0px;">&#160;</p>
+		<p class="MsoNormal" style="margin-left: 0px;">Include the tag 
+		 above into Block Statement:</p>
+		<ul class="hcp1">
+			<li><p class="MsoNormal" style="margin-left: 0px;">(+BLOCK.BlockName&amp;WF=STEPKEY:S1&amp;VP_OPTION+) 
+			 - This tag is for duplicated Step.</p></li>
+			<li><p class="MsoNormal" style="margin-left: 0px; mso-list: l0 level1 lfo1;">(+BLOCK.BlockName&amp;WF=GROUPKEY:G1&amp;VP_OPTION+) 
+			 - This tag is for duplicated Group</p></li>
+			<li><p class="MsoNormal" style="margin-left: 0px; mso-list: l0 level1 lfo1;">(+BLOCK.BlockName&amp;WF=FLDKEY:ABCD&amp;VP_OPTION+) 
+			 - This tag is for duplicated Item/Field</p></li>
+		</ul>
+		<p class="MsoNormal" style="margin-left: 0px; mso-list: l0 level1 lfo1;">Ending 
+		 code with (+BLOCK.BlockName&amp;END+)</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp6">Duplicate 
+		 Steps:</p>
+		<p class="hcp6">(+BLOCK.BlockName&amp;WF=STEPKEY:VPWFTTDPS1&amp;VP_OPTION+)</p>
+		<p class="hcp6">Jurisdiction = 
+		 (+BF.FLDKEY:IncP\VALSHOW+)</p>
+		<p class="hcp6">Entity Type = (+BF.FLDKEY.ET\VALSHOW+)</p>
+		<p class="hcp6">(+BLOCK.BlockName&amp;END+)</p>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">Duplicate Groups:</p>
+		<p class="hcp6">(+BLOCK.BlockName1&amp;WF=GROUPKEY:DUP2&amp;VP_OPTION+)</p>
+		<p class="hcp6">&#160;</p>
+		<p class="hcp6">Duplicate fields:</p>
+		<p class="hcp6">(+BLOCK.NameXX&amp;WF=FLDKEY:DD&amp;VP_OPTION+)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+WF.KEY:ABCD\VALSHOW+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is to display the description of the field type below:</p>
+		<table cellspacing="0" width="34.899%" border="1" class="hcp12">
+			<col style="width: 100%;">
+			<tr>
+				<td><span class="hcp2">Field Type Name</span></td>
+			</tr>
+			<tr>
+				<td>Master File (CSP)</td>
+			</tr>
+			<tr>
+				<td>Entity Type</td>
+			</tr>
+			<tr>
+				<td>User Defined</td>
+			</tr>
+			<tr>
+				<td>Address Card</td>
+			</tr>
+			<tr>
+				<td>Lookup Value</td>
+			</tr>
+			<tr>
+				<td>User Table Value</td>
+			</tr>
+			<tr>
+				<td>System User</td>
+			</tr>
+			<tr>
+				<td>Administrator Group</td>
+			</tr>
+			<tr>
+				<td>Master File</td>
+			</tr>
+		</table>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp6">(+WF.KEY:A\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:B\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:C\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:D\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:E\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:F\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:G\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:H\VALSHOW+)</p>
+		<p class="hcp6">(+WF.KEY:I\VALSHOW+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>(+BLOCK.BlockName&amp;CD=WF.FLDKEY:ABCD+) 
+		 </p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to control the visibility of the Block by Condition.</p>
+		<p class="hcp5">CD=&lt;Condition&gt;</p>
+		<p class="hcp5">The prefix CD is 
+		 to specify the condition for the Block to be shown in the generated 
+		 report.</p>
+		<p class="hcp5">Replace &lt;Condition&gt; 
+		 for the condition.</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Display fields 
+		 in conditional group</p>
+		<p class="hcp5">Single condition:</p>
+		<p class="hcp5">(+BLOCK.CRSAABlock&amp;CD=(-WF.FLDKEY:HD1\VALSHOW-)=CRSAA&amp;VP_OPTION+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_DET2\yyyy-MM-dd+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_CRSAA4+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_CRSAA5+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_DET6+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_DET8+)</p>
+		<p class="hcp5">(+WF.FLDKEY:AP_D1_DET9+)</p>
+		<p class="hcp5">(+BLOCK.CRSAABlock&amp;END+)</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Multiple conditions:</p>
+		<p class="hcp5">(+BLOCK.CRSAABlock&amp;CD=AND((-WF.FLDKEY:HD1\VALSHOW-)=CRSAA;(-WF.FLDKEY:HD2\VALSHOW-)=OOS)&amp;VP_OPTION+)</p>
+		<p class="hcp5">Disclosure Date: 
+		 (+WF.FLDKEY:AP_D1_DET2\yyyy-MM-dd+)</p>
+		<p class="hcp5">Reason: (+WF.FLDKEY:AP_D1_CRSAA4+)</p>
+		<p class="hcp5">Type: (+WF.FLDKEY:AP_D1_CRSAA5+)</p>
+		<p class="hcp5">Narrative: (+WF.FLDKEY:AP_D1_DET6+)</p>
+		<p class="hcp5">Jurisdictions: 
+		 (+WF.FLDKEY:AP_D1_DET8+)</p>
+		<p class="hcp5">Summary: (+WF.FLDKEY:AP_D1_DET9+)</p>
+		<p class="hcp5">(+BLOCK.CRSAABlock&amp;END+)</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>(+BLOCK.CrsAvoidanceBlock&amp;CD=(-BF.FldValue-)=CRSAA&amp;VP_OPTION+)</p>
+		<p>&#160;</p>
+		<p>The Block will be visible if the (-BF.FldValue-) is equal to 
+		 ‘CRSAA’. This is specifically designed to support Conditional 
+		 Groups in Workflow. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">(+BARCODE.&lt;Name&gt;&amp;BarcodeType=&lt;BarcodeTypeCode&gt;&amp;&lt;Property&gt;+) 
+		 
+		<br>&#160; 
+		<br>Ending code with (+BARCODE.&lt;Name&gt;&amp;END+)</td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp5">This 
+		 code is used to generate a QR Code for Word Reports generation. 
+		 For Swiss QR Code, the code will be integrated into Invoice Template 
+		 and will have all the invoice details.</p>
+		<p class="hcp5">Name - This is 
+		 a user-assigned name for the barcode block. This needs to be unique.</p>
+		<p class="hcp5">BarcodeTypecode 
+		 - Specify the barcode symbology to be inserted for this Barcode 
+		 Block. For example:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">SWISSQR 
+			 - for Swiss QR Code</p></li>
+			<li><p class="hcp5">QR - for 
+			 normal QR Code</p></li>
+		</ul>
+		<p class="hcp5">Property - Specify 
+		 the properties of barcode in accordance to the specified barcode 
+		 symbology such as language and the output size.</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">Swiss QR Code would 
+		 require Language and OutputSize:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">Language:</p></li>
+			<ul class="hcp1">
+				<li><p class="hcp5">EN 
+				 - English (Default)</p></li>
+				<li><p class="hcp5">DE 
+				 - German</p></li>
+				<li><p class="hcp5">FR 
+				 - French</p></li>
+				<li><p class="hcp5">IT 
+				 - Italian</p></li>
+				<li><p class="hcp5">RM 
+				 - Romansh</p></li>
+			</ul>
+			<li><p class="hcp5">OutputSize: 
+			 </p></li>
+			<ul class="hcp1">
+				<li><p class="hcp5">QrBillOnly 
+				 - This is the default size of the QR code. The size is 
+				 105mm x 210mm. This size is suitable if the QR code has 
+				 no horizontal line. If the horizontal line is needed and 
+				 the A4 sheet size is not suitable, use QrBillExtraSpace 
+				 instead.</p></li>
+				<li><p class="hcp5">A4PortraitSheet 
+				 - A4 sheet in portrait orientation. The QR code is at 
+				 the bottom.</p></li>
+				<li><p class="hcp5">QrCodeOnly 
+				 - QR code only. The size is 46mm x 46mm.</p></li>
+				<li><p class="hcp5">QrBillExtraSpace 
+				 - QR code only with additional space at the top for the 
+				 horizontal line. The size is about 110mm x 210mm. The 
+				 extra 5mm at the top create space for the horizontal line 
+				 and optionally for the scissors.</p></li>
+			</ul>
+		</ul>
+		<p class="hcp5">Normal QR Code 
+		 would requires ModuleSize.</p>
+		<ul class="hcp1">
+			<ul class="hcp1">
+				<li><p class="hcp5">ModuleSize 
+				 - &#160;This is to set the size of QR code. This is not 
+				 mandatory to be set. When it is not set, the value will 
+				 be defaulted to 4. <span class="hcp13">Note:</span> 
+				 The size of generated QR code will vary depending on the 
+				 size of the data.</p></li>
+			</ul>
+		</ul>
+		<p class="hcp5">Ending code with 
+		 (+BARCODE.&lt;Name&gt;&amp;END+)</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Swiss QR Code: 
+		 </p>
+		<p>(+BARCODE.CHQR&amp;BarcodeType=SWISSQR&amp;Language=EN&amp;OutputSize=QrBillOnly+)</p>
+		<p>&#160;</p>
+		<p>Successful QR Code generation will have the following:</p>
+		<ol style="list-style: decimal;">
+			<li><p>A valid address must contains the name, postal code, 
+			 town and country ISO code.</p></li>
+			<li><p>The creditor's name, address and account number are 
+			 mandatory.</p></li>
+			<li><p>The debtor's details is optional. If it is not used, 
+			 all address fields must be empty or null, or they must be 
+			 completely omitted.</p></li>
+			<li><p>The account number needs to be a valid IBAN from Switzerland 
+			 or Liechtenstein.</p></li>
+			<li><p>If a reference number is given, it must be a valid QR/ISR 
+			 reference number or an ISO 11649 creditor reference number 
+			 (i.e. the applicable check digits must be valid)</p></li>
+			<li><p>The currency must either be CHF or EUR.</p></li>
+		</ol>
+		<p>Normal QR Code:</p>
+		<p>(+BARCODE.QR&amp;BarcodeType=QR&amp;ModuleSize=10+)</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>HTML Templates</h3>
+<p>These templates use the same codes as the ones used for Word Reports 
+ with the addition of '(+ftyp=evw|' before the code. For example, where 
+ you would use (+HD.EntCode\#AD-0-0+) to retrieve the entity name in a 
+ Word report, you would use (+ftype=evw|HD.EntCode\#AD-0-0+) for HTML templates.</p>
+<p>Below are additional codes that apply only to HTML templates:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="86.966%" border="1">
+	<col style="width: 31.339%;">
+	<col style="width: 32.375%;">
+	<col style="width: 36.286%;">
+	<tr class="t1st">
+		<td class="hcp3"><p class="hcp14">Code</p></td>
+		<td class="hcp3"><p class="hcp14">Explanation</p></td>
+		<td class="hcp3"><p class="hcp14">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|HD.&lt;Field&gt;+)</p>
+		<p>(+ftyp=evw|HD.&lt;Field&gt;\&lt;Format&gt;+)</p>
+		<p>&#160;</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Field&gt; is the database field name</p></li>
+			<li><p>&lt;Format&gt; is the <a href="Format_Options.htm">format 
+			 option</a> code</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is to retrieve 
+		 a single field from the header statement of the template.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp.evw|HD.EntCode+)</p>
+		<p>The above retrieves the Master File code of the entity.</p>
+		<p>&#160;</p>
+		<p>(+ftyp.evw|HD.EntCode\#AD-0-0+)</p>
+		<p>The above retrieves the Master File code of the and displays 
+		 its name.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|DT.&lt;Query&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Query&gt; is the name of the SQL query</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is to retrieve 
+		 multiple fields using an SQL query and display the information 
+		 in a table format.</p>
+		<p>It requires the following:</p>
+		<ul class="hcp1">
+			<li><p>The SQL is defined in the Key Information of the template</p></li>
+			<li><p>HTML codes to define the table properties</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp.evw|DT.AddrList+)</p>
+		<p>The above executes the query ‘AddrList’ specified in the Key 
+		 Information of the template and displays it in a table.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|&lt;Query&gt;.&lt;Field&gt;+)</p>
+		<p>(+ftyp=evw|&lt;Query&gt;.&lt;Field&gt;\&lt;Format&gt;+)</p>
+		<p>&#160;</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Query&gt; is the name of the SQL query</p></li>
+			<li><p>&lt;Field&gt; is the database field name</p></li>
+			<li><p>&lt;Format&gt; is the <a href="Format_Options.htm">format 
+			 option</a> code</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is to retrieve 
+		 a single field from an SQL query. It requires the SQL to be defined 
+		 in the Key Information of the template.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|MasterFile.Status+)</p>
+		<p>The above executes the query ‘MasterFile’ and displays the field 
+		 ‘Status’.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|CM.&lt;Field&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Field&gt; is the Master File field that will have 
+		 the context menu</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p class="hcp5">This 
+		 allows for enabling context menu in the Summary Screen or ESP 
+		 screen when users right-click on a Master File information. The 
+		 default options are:</p>
+		<ul class="hcp1">
+			<li><p class="hcp5">View Details 
+			 - opens the Information window for the Master File.</p></li>
+			<li><p class="hcp5">Open File 
+			 - opens the File Maintenance screen of the Master File. This 
+			 is not available for ESP screens.</p></li>
+			<li><p class="hcp5">Enquiry 
+			 - opens the File Enquiry screen of the Master File. This is 
+			 not available for ESP screens.</p></li>
+			<li><p class="hcp5">Relations 
+			 - opens the Relations Enquiry screen of the Master File. This 
+			 is not available for ESP screens.</p></li>
+		</ul>
+		<p class="hcp5">The code must be 
+		 added to the field code that retrieves the Master File information 
+		 with the ftyp=evw prefix. </p>
+		<p class="hcp5">When the information 
+		 is retrieved using the HD prefix, an ending tag is also required.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p class="hcp5">(<span class="hcp2">+ftyp=evw|CM.EntClient+)</span> (+ftyp=evw|HD.EntClient\#AD-0-0+)<span class="hcp2">(+ftyp=evw|CM.EntClient|END+)</span></p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5"><span class="hcp13">Note</span>: If the information is in a table 
+		 retrieved using DT prefix, then the ‘CM’ code and the Master File 
+		 field is to be added to the [/DT.&lt;QNAME&gt;-FORMAT=…] in Key 
+		 Information e.g.</p>
+		<p class="hcp5">[/DT.EntClients-FORMAT=\1:<span class="hcp2">CM=EntCode</span>\2:#LT-CNTR\3:DMB\5:DMB\6:#LT-COST\7:*NS/]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|CM.&lt;Field&gt;\#&lt;Identifier&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Identifier&gt; refers to the item that contains the 
+		 screen(s)</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p class="hcp5">Similar 
+		 to the above but allows for more options to be added to the context 
+		 menu. The options act as links to other screens.</p>
+		<p class="hcp5">The screens must 
+		 be specified in the Key Information as [/CM.&lt;Identifier&gt;=&lt;Screen&gt;/] 
+		 where &lt;Screen&gt; is the NavigationID of the screen.</p>
+		<p class="hcp5">This code applies 
+		 only for Summary Screens.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p class="hcp5">In 
+		 Key Information:</p>
+		<p class="hcp5">[/CM.Info=FSEGENER,FSEMNADT/]</p>
+		<p class="hcp5">&#160;</p>
+		<p class="hcp5">In the template: 
+		 </p>
+		<p class="hcp5"><span class="hcp2">(+ftyp=evw|CM.EntClient\#INFO+)</span>(+ftyp=evw|HD.EntClient\#AD-1-0+) 
+		 <span class="hcp2">(+ftyp=evw|CM.EntClient\#INFO|END+)</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|auth=&lt;Screen&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Screen&gt; is the NavigationID of the screen and can 
+		 be obtained from Configuration &gt; Settings &gt; Customise &gt; 
+		 Windows Menu.</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is the beginning 
+		 code to apply User Group authority to hide/show information. When 
+		 this code is added, if the user does not have access to the screen 
+		 from where the information is obtained, he/she will not be able 
+		 to see the information.</p>
+		<p>The ending code is also required.</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+ftyp=evw|auth=&lt;Screen&gt;|END+)</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is the ending 
+		 code to apply User Group authority to hide/show information. It 
+		 is to be used with the beginning code (refer to above).</p></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: Top;"><p>(+fgrd=&lt;Query&gt;+)</p>
+		<p>&#160;</p>
+		<p>where &lt;Query&gt; is the name of the SQL query</p></td>
+		<td class="t2Col" style="vertical-align: Top;"><p>This is to retrieve 
+		 multiple fields using an SQL query and display the information 
+		 in a grid:</p>
+		<ul class="hcp1">
+			<li><p>with scroll bar and Refresh button</p></li>
+			<li><p>with page options like navigation buttons and number 
+			 of records per page</p></li>
+			<li><p>that allows sorting by column</p></li>
+		</ul>
+		<p>It requires the SQL to be defined in the Key Information of 
+		 the template along with properties of the grid such as:</p>
+		<ul class="hcp1">
+			<li><p>the caption for each grid column</p></li>
+			<li><p>the width of each column</p></li>
+			<li><p>the format of each column</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: Top;"><p>(+fgrd=OEREL+)</p>
+		<p>The above executes the query ‘OEREL’ and displays the information 
+		 in a grid.</p>
+		<p>&#160;</p>
+		<p><span class="hcp5" style="font-weight: bold; font-style: italic;">Note</span>: 
+		 When using this code, there is no need to use HTML code to define 
+		 a table.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Coding_a_Word_Template.htm">Coding a Word Template</a></p></li>
+	<li><p><a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a></p></li>
+	<li><p><a href="Format_Options.htm">Format Options</a></p></li>
+	<li><p><a href="Key_Information.htm">Key Information</a></p></li>
+	<li><p><a href="BLOCK_Statements.htm">Block Statements</a></p></li>
+	<li><p><a href="User_Field_Codes.htm">User Field Codes</a></p></li>
+</ul>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_HTML_Template.htm\">Coding a HTML Template</a> &gt; Field Codes</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_Word_Template.htm\">Coding a Word Template</a> &gt; Field Codes</p>");
+</script>
+
+<p class="hcp15">&#160;</p>
+<p class="hcp15">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp15">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Identity Register Types</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-weight:normal; }
+span.hcp4 { font-weight:bold; }
+li.hcp5 { list-style:none;
+display:inline; }
+li.hcp6 { text-decoration:none; }
+p.hcp7 { font-weight:normal;
+text-decoration:none; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Identity/AEOI Register Types</h1>
+<p>Tag is available to allow new Identity/AEOI Register Types to be added 
+ using Localise Script where the type will have the Customised and Active 
+ checkboxes ticked by default.</p>
+<p>&#160;</p>
+<h3>Adding New Identity/AEOI Register Types</h3>
+<p>When using Localise Script to add a new type, you need to specify the 
+ required fields and values for the type. Each field will be separated 
+ with the pipe '|'.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p style="font-weight: bold;">IDTYPE:&lt;IDTypeCode&gt;+&lt;IDTypeCat&gt;=&lt;DBField&gt;=&lt;Value&gt;|...</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp2">
+	<li><p class="hcp3"><span class="hcp4">&lt;IDTypeCode&gt;</span> 
+	 refers to the code of the Identity Register type</p></li>
+	<li><p class="hcp3"><span class="hcp4">&lt;IDTypeCat&gt;</span> 
+	 refers to the category of the Identity Register type and can be</p></li>
+	<li class="hcp5"><ul class="hcp2">
+		<li><p class="hcp3">C for Compliance</p></li>
+		<li><p class="hcp3">R for AEOI</p></li>
+	</ul></li>
+	<li><p class="hcp3"><span class="hcp4">&lt;DBField&gt;</span> 
+	 is the database field for the Identity Register type and they are</p></li>
+	<li class="hcp5"><ul class="hcp2">
+		<li><p class="hcp3"><span style="font-weight: normal;">Description 
+		 – Description field</span></p></li>
+		<li><p class="hcp3">Individual – Apply to Individual 
+		 Master Files option</p></li>
+		<li><p class="hcp3">MFLink1 – Associated Master 
+		 File field</p></li>
+		<li><p class="hcp3">MFLinkCaption1 – Caption for 
+		 Associated Master File field</p></li>
+		<li><p class="hcp3">IdCaption – Caption for Identity 
+		 Text field, when this is specified, Identity Text checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp3">LKVCode1 – Table Code for Lookup 
+		 Value 1 field, when this is specified, Lookup Table Value 1 checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp3">LKVCode2 – Table Code for Lookup 
+		 Value 2 field, when this is specified, Lookup Table Value 2 checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp3">UdCode1Table – Table Code for 
+		 User Table &#160;1 field, when this is specified, User Table 1 
+		 checkbox will be ticked</p></li>
+		<li><p class="hcp3">UdCode2Table – Table Code for 
+		 User Table 2 field, when this is specified, User Table 2 checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp3">With_Country – Country/Jurisdiction 
+		 field</p></li>
+		<li><p class="hcp3">AdCaption – Caption for Additional 
+		 Text field, when this is specified, Additional Text checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp3">With_UserNamePassword – User/Account 
+		 Name and Password field</p></li>
+		<li><p class="hcp3">With_Dates – From Date field</p></li>
+		<li><p class="hcp3">With_DateTo – To Date field</p></li>
+		<li><p class="hcp3">With_Reminder – Reminder field</p></li>
+		<li><p class="hcp3">Ud1Caption – Caption for Check 
+		 Box 1 field, when this is specified, Check Box 1 checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp3">Ud2Caption – Caption for Check 
+		 Box 2 field, when this is specified, Check Box 2 &#160;checkbox 
+		 will be ticked</p></li>
+		<li><p class="hcp3">Ud3Caption – Caption for Check 
+		 Box 3 field, when this is specified, Check Box 3 checkbox will 
+		 be ticked</p></li>
+		<li><p class="hcp3">TagValues – Tag Values field</p></li>
+		<li><p class="hcp3">IdNote – Note field</p></li>
+		<li><p class="hcp3">WithRating - Risk Rating field</p></li>
+	</ul></li>
+	<li class="hcp6"><p class="hcp7"><span class="hcp4">&lt;Value&gt;</span> is the value for &lt;DBField&gt;.</p></li>
+	<li class="hcp5"><ul class="hcp2">
+		<li><p class="hcp7">For 
+		 &lt;DBField&gt; that are checkboxes, value is 1 to tick the checkbox 
+		 field and indicate the field is required.</p></li>
+		<li><p class="hcp7">For 
+		 other &lt;DBField&gt;, specifying the caption or Table Code will 
+		 indicate the field is required.</p></li>
+		<li><p class="hcp7">For 
+		 Tag Values field, the &lt;Value&gt; can include</p></li>
+		<li class="hcp5"><ul class="hcp2">
+			<li class="hcp6"><p class="hcp7">&lt;br&gt; 
+			 for a line break</p></li>
+			<li><p class="hcp7">&lt;pipe&gt; 
+			 for a | symbol</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p class="hcp1"><img src="../image219.gif" alt="" style="border: none;" border="0"></p>
+<p class="hcp7">&#160;</p>
+<p class="hcp1">Example</p>
+<p>To set up a new code as shown above:</p>
+<p>IDTYPE:DRL+C=Description=Driving Licence|Individual=1|IdCaption=Driver 
+ number|With_Country=1|With_Dates=1|With_DateTo=1</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Identity_AEOI_Register_Types.htm">Identity/AEOI Register 
+	 Types</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Identity Register Types</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp8">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="robots" content="NOODP">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Organisations (Configuration)</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Organisations (Configuration)</h1>
+<p>Organisations can be divided into:</p>
+<ul class="hcp1">
+	<li><p>Internal - When an Organisation is Internal, the 'Database' 
+	 and 'Viewpoint User' fields are enabled in Configuration &gt; Engage 
+	 Servicing Portal &gt; Configuration &gt; Users, which allow the user 
+	 to be linked to their Viewpoint User ID (in Back-office).</p></li>
+	<li><p>External - When an Organisation is External, the 'Database' 
+	 and 'Viewpoint User' fields are disabled in Configuration &gt; Engage 
+	 Servicing Portal &gt; Configuration &gt; Users. User which is assigned 
+	 to an External Organisation will not be able to link to a Viewpoint 
+	 User ID (in Back-office).</p></li>
+	<li><p>Group - Organisations can be grouped. When a user is assigned 
+	 to a Group, they can have access to all Organisations under that Group. 
+	 A group can <span class="dropspot">consists of</span> <a class="dropspot" href="javascript:TextPopup(this)" id="a5">multiple 
+	 Sub-Groups with each having Organisations below it</a>.</p>
+	<div class="droptext" id="POPUP566718688" style="display: none;">
+		<p><img src="../Coca.png" alt="" style="border: none;" border="0"></p>
+		<p>In the Organisation grouping,</p>
+		<ul class="hcp1">
+			<li><p>a Group can only have multiple Sub-Groups and/or Organisations, 
+			 but cannot have Master Files with it.</p></li>
+			<li><p>only Organisations can have Master Files.</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The filters apply to the Organisation list.</p>
+<ul class="hcp1">
+	<li><p>Organisation status - You can choose to view Active, Inactive 
+	 or All.</p></li>
+	<li><p>Organisation Type &#160;- You can choose to view External, Internal, 
+	 Group or All.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Organisation list</p>
+<p>The list shows all Organisations that have been set up manually, added 
+ through the Enable Auto-Load Profile option in <a href="System_Defaults_-_Engage_Servicing_Portal.htm">System 
+ Defaults &gt; Engage Servicing Portal</a>, or through the <a href="Front-Office_Import_Sheet.htm">Excel 
+ Import Sheet for ESP</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the Organisation list. Click on the relevant command 
+ buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">add</a> 
+	 an Organisation. The record status will be set to 'New' until the 
+	 record is approved.</p>
+	<div class="droptext" id="POPUP380981450" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the required details.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>: 
+		 If you would like the requests to be initiated from the Home tab 
+		 in ESP for this organisation, make sure to specify the Database 
+		 and Master File. The Master File refers to the Master File that 
+		 will be used when initiating the request and must also be added 
+		 as an attribute for the workflow template of the request in Configuration 
+		 &gt; Business Parameters &gt; <a href="../Shared/Workflow_Library.htm">Workflow 
+		 Library</a>.</p>
+		<p>For Auto Load Profile mode, the Database field is automatically 
+		 filled with value and is not editable.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a6">edit</a> 
+	 the selected Organisation record. The record status will be set to 
+	 'Edited' until the change is approved.</p>
+	<div class="droptext" id="POPUP594812350" style="display: none;">
+		<p>You will be able to change the following:</p>
+		<ul class="hcp1">
+			<li><p>Name</p></li>
+			<li><p>Type</p></li>
+			<li><p>Parent Group</p></li>
+			<li><p>Database</p></li>
+			<li><p>Master File</p></li>
+			<li><p>Note</p></li>
+		</ul>
+		<p>If the organisation record is from the auto-load profile, then 
+		 you can only edit the following:</p>
+		<ul class="hcp1">
+			<li><p>Master File </p></li>
+			<li><p>Note</p></li>
+		</ul>
+		<p><span class="hcp4">Note</span>: 
+		 If you would like the requests to be initiated from the Home tab 
+		 in ESP for this organisation, make sure to specify the Database 
+		 and Master File. The Master File refers to the Master File for 
+		 the request and must also be added as an attribute for the workflow 
+		 template of the request in Configuration &gt; Business Parameters 
+		 &gt; <a href="../Shared/Workflow_Library.htm">Workflow Library</a>.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected Organisation record. The record status will 
+	 be set to 'Deleted' but you will be able to see the Organisation record 
+	 as long as the deletion has not been approved. This is deactivated 
+	 if the selected organisation is added through Enable Auto Load Profile 
+	 option.</p></li>
+	<li><p><span class="hcp2">Users</span> - Click this to 
+	 navigate to the Users screen and filter it based on the selected Organisation.</p></li>
+</ul>
+<p><span class="hcp4">Note</span>: You 
+ can only delete an Organisation if there is no user or Master File linked 
+ to the Organisation.</p>
+<p>&#160;</p>
+<p class="FldExplain">File Configuration list</p>
+<p>It is necessary to define the Master File(s) for each Organisation. 
+ If approval is required, it can be done in <a href="ESP_Organisations_(Approval).htm">Configuration 
+ &gt; Engage Servicing Portal &gt; Approval &gt; Organisations</a>.</p>
+<p>This lists the Master Files accessible for an Organisation which would 
+ have been set up manually, added through Enable Auto Load option in <a 
+	 href="System_Defaults_-_Engage_Servicing_Portal.htm">System Defaults 
+ &gt; Engage Servicing Portal</a>, or through the <a href="Front-Office_Import_Sheet.htm">Excel 
+ Import Sheet for ESP</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>These apply to the File Configuration list. Click on the relevant command 
+ buttons to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a2">add</a> 
+	 a file configuration for the selected Organisation.</p>
+	<div class="droptext" id="POPUP381005060" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the required details.</p></li>
+			<li><p>Click Update.</p></li>
+			<li><p>Click Configure. In the Master File screen, select the 
+			 Master File and click Include. If you have selected the wrong 
+			 Master File for inclusion, you may re-select again and click 
+			 Exclude.</p></li>
+			<li><p>Click Close when done.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected file configuration.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected file configuration record.</p></li>
+	<li><p><span class="hcp2">Configure</span> - Click this 
+	 to open the <a class="dropspot" href="javascript:TextPopup(this)" id="a3">Master 
+	 File screen</a> to view Master Files retrieved by 
+	 the selected file configuration. You can customise the grid via right-click.</p>
+	<div class="droptext" id="POPUP380986255" style="display: none;">
+		<p>In this screen, you can filter the list by the following record 
+		 status:</p>
+		<ul class="hcp1">
+			<li><p>Approved [1] - Master File is approved to be accessed 
+			 on CP-WP</p></li>
+			<li><p>New [2] - Master File is new to the list</p></li>
+			<li><p>Deleted [4] - Master File is to be deleted from the 
+			 list</p></li>
+			<li><p>Approved Excluded [6] - Exclusion of the Master File 
+			 from CP-WP has been approved</p></li>
+			<li><p>Included [7] - Master File is included in the list, 
+			 pending approval</p></li>
+			<li><p>Excluded [8] - Master File is to be excluded, pending 
+			 approval</p></li>
+			<li><p>All [*] - show all Master Files</p></li>
+		</ul>
+ </div></li>
+	<li><p><span class="hcp2">Configure All</span> - Click 
+	 this to open the <a class="dropspot" href="javascript:TextPopup(this)" id="a4">Master 
+	 File screen</a> to view Master Files retrieved by 
+	 the selected Organisation.</p>
+	<div class="droptext" id="POPUP380989619" style="display: none;">
+		<p>In this screen, you can filter the list by the following record 
+		 status:</p>
+		<ul class="hcp1">
+			<li><p>Approved [1] - Master File is approved to be accessed 
+			 on CP-WP</p></li>
+			<li><p>New [2] - Master File is new to the list</p></li>
+			<li><p>Deleted [4] - Master File is to be deleted from the 
+			 list</p></li>
+			<li><p>Approved Excluded [6] - Exclusion of the Master File 
+			 from CP-WP has been approved</p></li>
+			<li><p>Included [7] - Master File is included in the list, 
+			 pending approval</p></li>
+			<li><p>Excluded [8] - Master File is to be excluded, pending 
+			 approval</p></li>
+			<li><p>All [*] - show all Master Files</p></li>
+		</ul>
+ </div></li>
+	<li><p><span class="hcp2">Requery</span> - Click this 
+	 to synchronise CP-DB with VP-DB. This is to check the validity of 
+	 the Master Files for the selected File Configuration. A Master File 
+	 is invalid if the status is no longer Active.</p></li>
+	<li><p><span class="hcp2">Requery All</span> - Click 
+	 this to synchronise CP-DB with VP-DB. This is to check the validity 
+	 of the Master Files for all the File Configuration.</p></li>
+</ul>
+<p><span class="hcp4">Note</span>: All 
+ command buttons are deactivated if the selected File Configuration is 
+ added through Enable Auto Load option.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Viewpoint 
+	 Engage Servicing Portal</a></p></li>
+	<li><p><a href="Front-Office_Import_Sheet.htm">Front-office Import 
+	 Sheet</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; <a href="ESP_Organisations_(Configuration).htm">Configuration</a> &gt; Organisations (Configuration)</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a5','POPUP566718688');
+	TextPopupInit('a1','POPUP380981450');
+	TextPopupInit('a6','POPUP594812350');
+	TextPopupInit('a2','POPUP381005060');
+	TextPopupInit('a3','POPUP380986255');
+	TextPopupInit('a4','POPUP380989619');
+//]]></script>
+</body>
+</html>

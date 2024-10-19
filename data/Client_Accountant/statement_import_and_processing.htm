@@ -1,0 +1,226 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statement Import and Processing</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { list-style:none;
+display:inline; }
+li.hcp3 { font-size:10pt; }
+p.hcp4 { font-size:10pt; }
+p.hcp5 { font-size:14px; }
+li.hcp6 { font-size:14px; }
+span.hcp7 { font-size:14px; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Statement Import &amp; Processing</h1>
+<p style="font-weight: bold; font-style: italic; color: #334796;"><span 
+	 style="font-weight: bold; font-style: italic; color: #334796;">This 
+ feature is an additional option and is only available if included in your 
+ licence.</span></p>
+<p>&#160;</p>
+<p>The Statement Import &amp; Processing feature allows you to import an 
+ electronic bank statement and:</p>
+<ul class="hcp1">
+	<li><p>Reconcile or create journals relating to bank account sub-ledgers 
+	 in Accounting.</p></li>
+	<li><p>Process Practice Management receipts.</p></li>
+</ul>
+<p>The first step of that process is to recognise the account numbers in 
+ the electronic bank statement:</p>
+<ul class="hcp1">
+	<li><p>If the account number matches a bank account sub-ledger in Accounting, 
+	 the program will further determine if there exists a journal line 
+	 with the same account number, currency, amount, and date as the statement 
+	 line. If an exact match is found, the journal will be automatically 
+	 reconciled.</p></li>
+	<li><p>If an exact match is not found, but if there exists a journal 
+	 whose bank account number, currency and amount are the same while 
+	 the date is within a specified range, the journal will be reconciled. 
+	 This reconciliation may be either automatic or require user confirmation.</p></li>
+	<li><p>If the account number matches that of a bank account sub-ledger 
+	 in Accounting but no journal line has been created; the amount is 
+	 a debit entry (i.e. more than zero); and the bank account sub-ledger 
+	 belongs to a Revenue Company and has been mapped in the Account Mapping 
+	 of Bank Accounts, the following processes will take place:</p></li>
+	<li class="hcp2"><ol style="list-style: decimal;">
+		<li><p>Retrieve outstanding invoices (not draft invoices) from 
+		 Viewpoint Practice Management:</p>
+		<ul class="hcp1">
+			<li><p>The bank statement Narrative is analysed for the invoice 
+			 number(s) of outstanding invoices and the matching outstanding 
+			 invoice(s) are retrieved.</p></li>
+			<li><p>If none found, the bank statement Narrative is analysed 
+			 for the Billing File name and the Billing File’s outstanding 
+			 invoices are retrieved.</p></li>
+			<li><p>If none found, all outstanding invoices with the same 
+			 currency and outstanding amount are retrieved.</p></li>
+			<li><p>If none found, users can browse for the Billing File 
+			 and Matter to retrieve all outstanding invoices with the same 
+			 currency as the bank receipt and matching the selected criteria.</p></li>
+		</ul></li>
+		<li><p>Users can select an outstanding invoice to settle in full 
+		 or partially. There is also an option to settle multiple outstanding 
+		 invoices to a Matter. For multiple settlements, the Matter currency 
+		 must match the bank receipt currency.</p></li>
+		<li><p>If no outstanding invoices are selected, the entire bank 
+		 receipt can be posted as a Matter Receipt. This will automatically 
+		 update the receipts in Practice Management and post a permanent 
+		 journal in Accounting.</p></li>
+	</ol></li>
+	<li><p>If the account number matches that of a bank account sub-ledger 
+	 in Accounting but no journal line has been created, various rules 
+	 should be defined to create either a pending journal or draft journal 
+	 based on different conditions relating to the statement line. How 
+	 the fields in the new pending or draft journal are to be completed 
+	 can also be defined in the rules. Additionally, the rule can define 
+	 whether the pending or draft journal should be automatically posted, 
+	 or whether the user needs to confirm the posting.</p></li>
+	<li><p>Lastly, if the account number is not recognised, the statement 
+	 line relating to it will be ignored, and will not be processed further.</p></li>
+</ul>
+<p>To access this feature, you can either go to:</p>
+<ul class="hcp1">
+	<li><p>Viewpoint - Home screen:</p></li>
+	<li class="hcp2"><ul class="hcp1">
+		<li><p>Click Accounting Ribbon button and select Functions &gt; 
+		 Statement Import &amp; Processing from the navigation listing 
+		 in Accounting Overview.</p></li>
+		<li><p>In Section Menu, click Home &gt; Accounting &gt; Functions 
+		 &gt; Statement Import &amp; Processing.</p></li>
+	</ul></li>
+	<li><p>File Maintenance screen:</p></li>
+	<ul class="hcp1">
+		<li><p>Click Accounting Ribbon button and select Processing &gt; 
+		 Statement Processing (Import on Global screen) from the navigation 
+		 listing in Accounting Overview.</p></li>
+		<li><p>In Section menu, click File &gt; Accounting &gt; Processing 
+		 &gt; Statement Processing (Import on Global screen).</p></li>
+	</ul>
+</ul>
+<p>Doing so will open the Electronic Statement Import &amp; Reconciliation 
+ screen where you will see the following folders:</p>
+<ul class="hcp1">
+	<li class="hcp3"><p class="hcp4"><a href="Statement_Import_Select_Import_Folder.htm">Select/Import</a></p></li>
+	<li class="hcp3"><p class="hcp4"><a href="Statement_Import_Process_Reconcile_Folder.htm">Process 
+	 &amp; Reconcile</a></p></li>
+</ul>
+<p class="hcp5">Before you begin using the feature, ensure 
+ that you have:</p>
+<ul style="list-style: disc; font-size: 13px;">
+	<li class="hcp6"><p class="hcp5">Defined a 
+	 Source folder, where various bank source files are saved.</p></li>
+	<li class="hcp6"><p class="hcp5">Defined a 
+	 Statement folder, where electronic statements will be saved prior 
+	 to import.</p></li>
+	<li class="hcp6"><p class="hcp5">Defined an 
+	 Archive folder, where electronic statements are moved to after import.</p></li>
+	<li class="hcp6"><p class="hcp5">Set up your 
+	 journal scripts.</p></li>
+	<li class="hcp6"><p class="hcp5">Imported your 
+	 source files.</p></li>
+</ul>
+<p class="hcp5"><a class="dropspot" href="javascript:TextPopup(this)" id="a1"><span class="hcp7">I cannot see the screen, what do I need to 
+ do?</span></a></p>
+<div class="droptext" id="POPUP305934570" style="display: none;">
+	<p class="hcp5">If you cannot view the screen:</p>
+	<ol style="list-style: decimal; font-size: 14px;">
+		<li class="hcp6"><p class="hcp5">Check 
+		 that it has been enabled in System Manager - Settings - Windows 
+		 Menu.</p></li>
+		<li class="hcp6"><p class="hcp5">Ensure 
+		 that you have the appropriate authority to access the functions 
+		 in Configuration &gt; Users &amp; Security &gt; Security Setup.</p></li>
+	</ol>
+</div>
+<p class="hcp5"><a class="dropspot" href="javascript:TextPopup(this)" id="a2"><span class="hcp7">Where do I obtain the source files?</span></a></p>
+<div class="droptext" id="POPUP305915157" style="display: none;">
+	<p class="hcp5">If Viewpoint does not already support the 
+	 format you require, then obtain an electronic statement from the bank 
+	 and send it to your Viewpoint Support representative. A source file 
+	 will be created for you.</p>
+	<p class="hcp5">If the bank changes the format of their 
+	 electronic statement, you will need to send an updated copy to Viewpoint 
+	 so a new source file can be created.</p>
+	<p class="hcp5">The source files are in .xml format and 
+	 apart from being designed to 'read' the bank's statement file, also 
+	 support the following tags:</p>
+	<h6 class="Heading8">[/FORMAT-CULTURE=&lt;FormatCode&gt;/]</h6>
+	<p>This is to define how dates should be recognised and &lt;FormatCode&gt; 
+	 can be:</p>
+	<ul style="list-style: disc; font-size: 14px;">
+		<li class="hcp6"><p class="al(none)">en-UK - recognise 
+		 dates as Day-Month-Year</p></li>
+		<li class="hcp6"><p class="al(none)">en-US - recognise 
+		 dates as Month-Day-Year</p></li>
+	</ul>
+	<p>For example, if the original source file recognises the date as 
+	 Day-Month-Year but the bank's statement file has the date in Month-Day-Year 
+	 format, you can use this tag to make it compatible with the statement 
+	 file.</p>
+	<p>&#160;</p>
+	<h6 class="Heading8">[/AMOUNT_NO_REVERSE=1/]</h6>
+	<p>This tag is to ensure that the amount in the bank's statement file 
+	 will not be reversed i.e. if the amount is a positive value, it will 
+	 be a positive value in Viewpoint after the import.</p>
+</div>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p class="hcp4"><a href="Statement_Import_Defining_Rules.htm">Statement 
+	 Import &amp; Processing - Defining Rules</a></p></li>
+	<li><p class="hcp4"><a href="Statement_Import_Process_Diagram.htm">Statement 
+	 Import &amp; Processing - Process Diagram</a></p></li>
+	<li><p class="hcp4"><a href="Statement_Import_&amp;_Processing_-_Source_File_Amendment.htm">Statement 
+	 Import &amp; Processing - Source File Amendment</a></p></li>
+	<li><p class="hcp4"><a href="Journal_Scripts.htm">Journal 
+	 Scripts</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/File_Maintenance_screen.htm\">File Maintenance</a> &gt; <a href=\"Accounting.htm\">Accounting</a> &gt; <a href=\"Reconcile_Account.htm\">Processing</a> &gt; Statement Processing</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"../Shared/Overview.htm\">Home</a> &gt; <a href=\"Draft_Journals.htm\">Accounting</a> &gt; <a href=\"Draft_Journals.htm\">Functions</a> &gt; Statement Import and Processing</p>");
+</script>
+
+<p class="hcp8">&#160;</p>
+<p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP305934570');
+	TextPopupInit('a2','POPUP305915157');
+//]]></script>
+</body>
+</html>

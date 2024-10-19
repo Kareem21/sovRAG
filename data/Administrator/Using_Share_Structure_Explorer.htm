@@ -1,0 +1,197 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Using Share Structure Explorer</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-ansi-language:EN-US; }
+ul.hcp2 { list-style:disc; }
+li.hcp3 { list-style:none;
+display:inline; }
+ol.hcp4 { list-style:decimal; }
+img.hcp5 { border:none; }
+span.hcp6 { mso-ansi-language:EN-US;
+mso-bidi-font-weight:bold; }
+b.hcp7 { mso-bidi-font-weight:normal; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Using Share Structure Explorer</h1>
+<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US" class="hcp1">The function can be used to correct details for share transactions as well as rectify errors seen when rebuilding the share register.</span></p>
+<p class="MsoNormal" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">Following are examples of scenarios where the function can be used.</span></p>
+<ul class="hcp2">
+<li>
+<p>Share Certificate Number Not Used:</p>
+</li>
+<li class="hcp3">
+<ul class="hcp2">
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Issue with allotment - Subscriber Shareholder status changed.</a></p>
+<div class="droptext" id="POPUP466409355" style="display: none;">
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">The Subscriber Shareholder option previously ticked for a shareholder is un-ticked after performing a share transfer.</span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Example:</span></p>
+<ol class="hcp4">
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">Issue share to Shareholder A without ticking Subscriber Shareholder option.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">Issue share to Shareholder A again, this time, tick the Subscriber Shareholder option.</span></p>
+</li>
+<li>
+<p><span lang="EN-GB" xml:lang="EN-GB">Transfer shares from Shareholder A to someone else.</span></p>
+</li>
+</ol>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Result – The Subscriber Shareholder option for Shareholder A is now un-ticked (seen as False in the screenshot below).</span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB"><img src="../image148.gif" alt="" border="0" class="hcp5"></span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" style="font-weight: bold; font-style: italic;">Note</span><span lang="EN-GB" xml:lang="EN-GB">: For the first and second share issue, consideration per share is the same.</span></p>
+<p class="MsoNormal">&#160;</p>
+<p class="MsoNormal">To correct this:</p>
+<ol class="hcp4">
+<li>
+<p><span style="mso-list: l0 level1 lfo1;"><span lang="EN-US" xml:lang="EN-US" class="hcp6">In Shares &gt; Transaction, click Explore.</span></span></p>
+</li>
+<li>
+<p><span lang="EN-US" xml:lang="EN-US" class="hcp6">Edit third and fourth transaction – tick the Subscriber Shareholder option.</span></p>
+</li>
+</ol>
+<p class="MsoNormal"><img src="../image149.gif" alt="" border="0" class="hcp5"></p>
+<p class="MsoNormal"><img src="../image150.gif" alt="" border="0" class="hcp5"></p>
+</div></li>
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Issue with redemption - Incorrect Issue Price and Paid.</a></p>
+<div class="droptext" id="POPUP466601446" style="display: none;">
+<p>Example:</p>
+<ol class="hcp4">
+<li>
+<p>First allotment with paid=1, issue price=1 for Shareholder A</p>
+</li>
+<li>
+<p>Second allotment with paid=1.1, issue price=1.1 for Shareholder A</p>
+</li>
+<li>
+<p>Redeem the first allotment with 1000 numbers of shares.</p>
+</li>
+<li>
+<p>The first allotment share is fully transferred from Shareholder A to Shareholder B</p>
+</li>
+</ol>
+<p>Result – The paid and issue price mismatch for share redemption and transfer as compared to first allotment.</p>
+<p><img src="../image151.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><span lang="EN-US" xml:lang="EN-US" class="hcp1"><b class="hcp7">TO DO</b>: Undo the third transaction and its subsequence transactions and re-enter the same entries</span></p>
+<p style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US"><img src="../image152.gif" alt="" border="0" class="hcp5"></span></p>
+</div></li>
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Issue when performing call paid - Error seen: Failed to reconcile transaction.</a></p>
+<div class="droptext" id="POPUP466702535" style="display: none;">
+<p>Example:</p>
+<ol class="hcp4">
+<li>
+<p>First allotment with paid=0.1, issue price=1 for Shareholder A.</p>
+</li>
+<li>
+<p>The full value of the share is paid by the Shareholder without effective date.</p>
+</li>
+<li>
+<p>The full value of the share is paid by the Shareholder with effective date.</p>
+</li>
+<li>
+<p>Post the transaction 2 with any date.</p>
+</li>
+</ol>
+<p>Result – The share register failed to reconcile after rebuilding shares.</p>
+<p>&#160;</p>
+<p><img src="../image153.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><img src="../image154.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><span lang="EN-US" xml:lang="EN-US" class="hcp1"><b class="hcp7">TO DO</b>: Undo the second and third transactions and fully paid the shares with effective date.</span></p>
+<p>&#160;</p>
+</div></li>
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Issue with forfeiture - Error seen: Problem in shares.</a></p>
+<div class="droptext" id="POPUP466821624" style="display: none;">
+<p>Example:</p>
+<ol class="hcp4">
+<li>
+<p>First allotment for Shareholder A.</p>
+</li>
+<li>
+<p>Forfeit 125 shares from Shareholder A.</p>
+</li>
+</ol>
+<p>Result – The outstanding share is missing (New Certificate is missing to hold the outstanding of the share).</p>
+<p>&#160;</p>
+<p><img src="../image155.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><img src="../image156.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><span lang="EN-US" xml:lang="EN-US" class="hcp1"><b class="hcp7">TO DO</b>: Undo the second transaction and re-enter the same entries.</span></p>
+<p>&#160;</p>
+</div></li>
+</ul>
+</li>
+<li>
+<p>Share Certificate Number Used:</p>
+</li>
+<li class="hcp3">
+<ul class="hcp2">
+<li>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Issue with allotment - Allotment Transaction is Missing.</a></p>
+<div class="droptext" id="POPUP466944023" style="display: none;">
+<p>Example:</p>
+<p>Result - Losing track of transaction since no allotment found.</p>
+<p><img src="../image157.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><img src="../image158.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p><span lang="EN-US" xml:lang="EN-US" class="hcp1"><b class="hcp7">TO DO</b>: Undo all orphan transactions and re-enter the same entries.</span></p>
+</div></li>
+</ul>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold; font-size: 13px;"><span lang="EN-US" xml:lang="EN-US">When to edit share transactions and when to reverse and re-enter the transactions?</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">Edit share transactions using Share Structure Explorer – This can be used to update transaction details such as the transaction date, effective date, share certificate prefix, certificate location, beneficial owner, previous owner, previous certificate number or note.</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">Reverse and re-enter share transactions – This should be performed to correct share balance, number of shares, transfer total, payment method, and subscriber.</span></p>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Using Share Structure Explorer</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP466409355');
+	TextPopupInit('a2','POPUP466601446');
+	TextPopupInit('a3','POPUP466702535');
+	TextPopupInit('a4','POPUP466821624');
+	TextPopupInit('a5','POPUP466944023');
+//]]></script>
+</body>
+</html>

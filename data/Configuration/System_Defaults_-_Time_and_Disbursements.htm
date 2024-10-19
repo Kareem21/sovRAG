@@ -1,0 +1,362 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Defaults">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Defaults - Time and Disbursements</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+li.hcp2 { font-weight:normal;
+font-style:normal; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>System Defaults - Time and Disbursements</h1>
+<p>The defaults for Time and Disbursements are set up here.</p>
+<p>&#160;</p>
+<p class="FldExplain">Time Unit of Measure</p>
+<p>This is the standard value in which all time entries are entered. For 
+ example, if you choose Hour(s) [1], one unit of time will represent one 
+ hour and if you wish to enter ten minutes you must enter it as one sixth 
+ of a unit or 0.16. The options available as per below:</p>
+<ul class="hcp1">
+	<li class="hcp2">Hour(s) [1]</li>
+	<li class="hcp2">Minute(s) [2]</li>
+	<li class="hcp2">10 Minute(s) [3]</li>
+	<li class="hcp2">6 Minute(s) [4]</li>
+	<li class="hcp2">15 Minute(s) [5]</li>
+	<li class="hcp2">5 Minute(s) [6]</li>
+</ul>
+<p><span class="hcp3">Note:</span> The 
+ time unit of measure cannot be changed once the system has been set up 
+ so it is vital that you consider your choice carefully and select the 
+ most appropriate unit from the system standards.</p>
+<p>&#160;</p>
+<p class="FldExplain">Blocked Matters - Time Service</p>
+<p>This is to set a Time - Administrator Rate [TA] service code for time 
+ entries that will be logged for Matters with status 2 and 3.</p>
+<p>&#160;</p>
+<h4>Timesheet - Default Service for:</h4>
+<p class="FldExplain">Public Holiday</p>
+<p>This is to set the default service for the time entry that will be created 
+ when you click Public Holiday in the Timesheet screen.</p>
+<p><span class="hcp3">Note</span>: If 
+ there is no service specified, the Public Holiday command button will 
+ not be available.</p>
+<p>&#160;</p>
+<p class="FldExplain">Leave</p>
+<p>This is to set the default service for the time entry that will be created 
+ when you click Leave in the Timesheet screen.</p>
+<p><span class="hcp3">Note</span>: If 
+ there is no service specified, the Leave command button will not be available.</p>
+<p>&#160;</p>
+<p class="FldExplain">Internal Meeting</p>
+<p>This is to set the default service for the time entry that will be created 
+ when you click Internal Meetings in the Timesheet screen.</p>
+<p><span class="hcp3">Note</span>: If 
+ there is no service specified, the Internal Meetings command button will 
+ not be available.</p>
+<p>&#160;</p>
+<h4>Time</h4>
+<p class="FldExplain">Allow All Services for Time Entry</p>
+<p>Tick to allow all services created to be used for Time Entry. The option 
+ CANNOT be used in conjunction with the option Link Services to Matter 
+ Types (see above). If you tick this, then services in the Disbursement 
+ service class are charged at Administrator rate when entered in the Time 
+ Entry screen.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Service_Rates.htm">Service Rates</a></p></li>
+</ul>
+<h6 class="Heading8">&#160;</h6>
+<p class="FldExplain">Use Recurring Services for Time Entries</p>
+<p>Tick to enable the selection of recurring fees for Time entries. This 
+ will limit the services that the user can select in Time entries to the 
+ recurring fees set up for the Billing File. Services other than those 
+ in the 'Time' service class will be charged at the prevailing administrator 
+ rate, while the Time - Non Chargeable [TN] services will not be charged, 
+ as normal. You will need to set the Number of Units and Unit Price to 
+ 0 when setting up the services in the Recurring Fees screen in Sales Ledger. 
+ This is done automatically if the Sales Ledger in <a href="Service_Master.htm">Service 
+ Master</a> is unticked.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Practice_Manager/Recurring_Fees_-_Time_and_Disbursement_Services.htm">Recurring 
+	 Fees - Time and Disbursement Services</a></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Use Recurring Services for Time Postings</p>
+<p>This option can be used together with the option 'Use Recurring Services 
+ for Time Entries'.</p>
+<p>When 'Use Recurring Services for Time Entries' and 'Use Recurring Services 
+ for Time Posting' options are ticked:</p>
+<ul class="hcp1">
+	<li><p>users can choose to enter Time services in either Recurring 
+	 Fees or Transaction Charging screen.</p></li>
+	<li><p>users would use Recurring Fees and Transaction Charging when 
+	 they want to separate the authority i.e. Finances to set up Recurring 
+	 Fees and Administrators to set up Transaction Charging.</p></li>
+</ul>
+<p>If this option is not ticked, the draft invoice will include time entries 
+ that are within the date range specified for the Posting of WIP. The Date 
+ from and Date to for the invoice line will also follow the date range 
+ specified for the Posting of WIP.</p>
+<p>If ticked, draft invoices prepared using Posting of WIP will:</p>
+<ul class="hcp1">
+	<li><p>include approved time entries dated BEFORE the Next Invoicing 
+	 Due set for the service in the Recurring Fees screen.</p></li>
+	<li><p>NOT include time entries that are AFTER the Next Invoicing Due 
+	 set for the service in the Recurring Fees screen.</p></li>
+</ul>
+<p>In this case, if the Entry Date is earlier than Recurring Fees From 
+ Date, the system will roll one period before (based on Charge Frequency) 
+ of Recurring Fees From Date and assign the date as From Date of the Invoice 
+ Line.</p>
+<p>[Date - from] = [Recurring Fees From Date] - [Charge per]</p>
+<p><span class="hcp4">Example:</span> When Recurring Fees 
+ From Date = 01 Jan 2019, Charge per = Annually, and earliest time entry 
+ is dated 01 Jan 2018, the [Date - from] will be 01 Jan 2018.</p>
+<p>&#160;</p>
+<p>If the Entry Date is equal to or later than Recurring Fees From Date, 
+ the system will assign Recurring Fees From Date as the From Date of the 
+ Invoice Line.</p>
+<p><span class="hcp4">Example:</span> When Recurring Fees 
+ From Date = 01 Jan 2019, Charge per = Annually, and earliest time entry 
+ is dated 03 Jan 2019, the [Date - from] will be 01 Jan 2019.</p>
+<p>&#160;</p>
+<p>If Next Invoicing Due of Recurring Fees is equal to or earlier then 
+ Recurring Fees To Date, the system will assign the Earliest Entry Date 
+ as the From Date of the Invoice Line.</p>
+<p><span class="hcp4">Example:</span> When Recurring Fees 
+ To Date = 31 Dec 2019, Recurring Fees Next Invoicing Due = 01 Jan 2019, 
+ earliest time entry is dated 31 Dec 2018, the [Date - from] will be 31 
+ Dec 2018.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow Special Function on Approved Time</p>
+<p>This option will apply the Special function on time entries that have 
+ been approved. If this option is not ticked, the Special function can 
+ only be applied on time entries that have not been approved.</p>
+<p>&#160;</p>
+<p class="FldExplain">Enable Analysis Code</p>
+<p>Tick this to enable the Analysis Code field in Time Entries screen. 
+ This option is useful if you need to further analyse the allocation of 
+ time spent by users.</p>
+<p>&#160;</p>
+<p class="FldExplain">Default Description with Analysis Code</p>
+<p>Tick this to have the description for time entry default to the Analysis 
+ Code's description.</p>
+<p>&#160;</p>
+<p class="FldExplain">Set Administrator Rates by Rate Level</p>
+<p>Tick this if you are using Rate Level instead of Administrator Rate. 
+ You can create new Rate Level list in the Service Rate Admin Levels [SRAL] 
+ lookup value table.</p>
+<p>&#160;</p>
+<p class="FldExplain">Use Client Fee Agreement for Administrator Rates</p>
+<p>Tick to apply rates in Client Fee Agreement for services of the service 
+ class 'TA'.</p>
+<p>&#160;</p>
+<p class="FldExplain">Use Budget &amp; Rates for Administrators</p>
+<p>Tick this to allow different time rates to be set up for Billing Files. 
+ The rates are to be set up in <a href="../Practice_Manager/Budget_&amp;_Rates.htm">Budget 
+ &amp; Rates</a> screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Hide Unit/Total Cost</p>
+<p>Tick this to hide the fields 'Unit Cost' and 'Total Cost' in the Time 
+ Entries screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disallow Negative Entry</p>
+<p>Tick this option to disallow negative value for the total amount of 
+ time entries. This option is not ticked by default.</p>
+<p>&#160;</p>
+<p class="FldExplain">Disallow Entry when 'Time Charge Limit' Exceeded</p>
+<p>Tick this to disallow time entries if it exceeds the limit set for the 
+ <a href="../Practice_Manager/Matters.htm">Matter</a> or <a href="../Practice_Manager/Recurring_Fees_Setup.htm">Recurring 
+ Fees</a> (whichever limit that exceeds first). If unticked, the time entry 
+ can still be added.</p>
+<p>&#160;</p>
+<p class="FldExplain">Show 'Time Clocks' in Tools</p>
+<p>Tick this to enable Time Clocks tab in Tools. This will be seen only 
+ in Viewpoint - Home.</p>
+<p>&#160;</p>
+<h4>Time Management</h4>
+<p class="FldExplain">Enable Time Management</p>
+<p>Tick this to enable the Time Management feature. This will display the 
+ <a href="../Practice_Manager/Timesheet_-_Summary.htm">Summary</a> folder 
+ in Timesheet screen and the date selection will default to the current 
+ week. If this option is not ticked, date validation for the time entries 
+ will use the dates for WIP Time in <a href="../Practice_Manager/Posting_control_settings.htm">Posting 
+ Control Settings</a>.</p>
+<p>&#160;</p>
+<p class="FldExplain">Create Two Timesheets when Month Ends on a Weekday</p>
+<p>Tick this to create two timesheets for the week instead of one. This 
+ applies only when the end of the month falls on a weekday and the start 
+ of the next month is also a weekday. Both timesheets will have the same 
+ week number e.g.</p>
+<ul class="hcp1">
+	<li><p>49-2015A (period from 30/11/2015 to 30/11/2015)</p></li>
+	<li><p>49-2015B (period from 1/12/2015 to 6/12/2015)</p></li>
+</ul>
+<p class="FldExplain">Approve Time Entries on Timesheet Approval</p>
+<p>Tick this to have related time entries approved when the timesheet is 
+ approved. This removes the need to approve the time entries separately.</p>
+<p>&#160;</p>
+<p class="FldExplain">Require Approval for Weekly Timesheet</p>
+<p>Tick this if administrators are required to submit their timesheet for 
+ approval. This will set the timesheet status to 'Waiting for Approval' 
+ after submission. If this is not ticked, the timesheet will be automatically 
+ approved and closed.</p>
+<p>&#160;</p>
+<h4>Disbursement</h4>
+<p class="FldExplain">Use Recurring Services for Disbursement Entries</p>
+<p>Tick to enable the selection of recurring fees for Disbursement entries. 
+ This will limit the services that the user can select in Disbursement 
+ entries to the recurring fees set up for the Billing File. You will need 
+ to set the Number of Units and Unit Price to 0 when setting up the services 
+ in the Recurring Fees screen in Sales Ledger. This is done automatically 
+ if the Sales Ledger in <a href="Service_Master.htm">Service Master</a> 
+ is unticked.</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Practice_Manager/Recurring_Fees_-_Time_and_Disbursement_Services.htm">Recurring 
+	 Fees - Time and Disbursement Services</a></p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Use Recurring Services for Disbursement Postings</p>
+<p class="Heading8">This option can be used together with the option 'Use 
+ Recurring Services for Disbursement Entries'.</p>
+<p>When 'Use Recurring Services for Disbursement Entries' and 'Use Recurring 
+ Services for Disbursement Posting' options are ticked:</p>
+<ul class="hcp1">
+	<li><p>users can choose to enter Disbursement services in either Recurring 
+	 Fees or Transaction Charging screen.</p></li>
+	<li><p>users would use Recurring Fees and Transaction Charging when 
+	 they want to separate the authority i.e. Finances to set up Recurring 
+	 Fees and Administrators to set up Transaction Charging.</p></li>
+</ul>
+<p>If this option is not ticked, the draft invoice will include disbursement 
+ entries that are within the date range specified for the Posting of WIP. 
+ The Date from and Date to for the invoice line will also follow the date 
+ range specified for the Posting of WIP.</p>
+<p>If ticked, draft invoices prepared using Posting of WIP will:</p>
+<ul class="hcp1">
+	<li><p>include approved disbursement entries dated BEFORE the Next 
+	 Invoicing Due set for the service in the Recurring Fees screen.</p></li>
+	<li><p>NOT include disbursement entries that are AFTER the Next Invoicing 
+	 Due set for the service in the Recurring Fees screen.</p></li>
+</ul>
+<p>In this case, if the Entry Date is earlier than Recurring Fees From 
+ Date, the system will roll one period before (based on Charge Frequency) 
+ of Recurring Fees From Date and assign the date as From Date of the Invoice 
+ Line.</p>
+<p>[Date - from] = [Recurring Fees From Date] - [Charge per]</p>
+<p style="font-weight: bold;">Example: When Recurring Fees From Date = 
+ 01 Jan 2019, Charge per = Annually, and earliest time entry is dated 01 
+ Jan 2018, the [Date - from] will be 01 Jan 2018.</p>
+<p>&#160;</p>
+<p>If the Entry Date is equal to or later than Recurring Fees From Date, 
+ the system will assign Recurring Fees From Date as the From Date of the 
+ Invoice Line.</p>
+<p><span class="hcp4">Example:</span> When Recurring Fees 
+ From Date = 01 Jan 2019, Charge per = Annually, and earliest time entry 
+ is dated 03 Jan 2019, the [Date - from] will be 01 Jan 2019.</p>
+<p>&#160;</p>
+<p>If Next Invoicing Due of Recurring Fees is equal to or earlier then 
+ Recurring Fees To Date, the system will assign the Earliest Entry Date 
+ as the From Date of the Invoice Line.</p>
+<p><span class="hcp4">Example:</span> When Recurring Fees 
+ To Date = 31 Dec 2019, Recurring Fees Next Invoicing Due = 01 Jan 2019, 
+ earliest time entry is dated 31 Dec 2018, the [Date - from] will be 31 
+ Dec 2018.</p>
+<p>&#160;</p>
+<p class="FldExplain">D Class Services are Exclusively for Disbursements</p>
+<p>Tick this to allow services of Service Classes starting with 'D' to 
+ be selected ONLY when creating Disbursement entries.</p>
+<p>&#160;</p>
+<p class="FldExplain">PO Recovery Code must exist as Recurring Fee</p>
+<p>This option needs to be enabled with ‘Use Recurring Services for Disbursement 
+ Entries’ to be effective. After enabled, when performing Add Recovery 
+ in Purchase Ledger &gt; Invoicing &gt; Create/Edit Purchase Orders screen, 
+ the PO Recovery Code by the Supplier Entity will be validated against 
+ the Service Code of the Billing Entity Recurring Fee. The PO Recovery 
+ Code by the Supplier Entity must exist as a Service Code of the Billing 
+ Entity Recurring Fee in order for the Add Recovery to proceed.</p>
+<p>&#160;</p>
+<h4>Other Options</h4>
+<p>&#160;</p>
+<p class="FldExplain">All Time/Disbursement Entries Link to an Activity</p>
+<p>Tick this if you want to link Time/Disbursement entries to an activity.</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow T&amp;D Code must Exist as Budgeted Item</p>
+<p>Tick this if Time/Disbursement must exist as budgeted item.</p>
+<p>&#160;</p>
+<p class="FldExplain">Allow Input with Decimal Places</p>
+<p>Tick this if you want to enter in parts of a unit.</p>
+<p>&#160;</p>
+<p class="FldExplain">Default with Service Description</p>
+<p>Tick this to use the service description for the time or disbursement 
+ entry.</p>
+<p>&#160;</p>
+<p class="FldExplain">Require Approval for Time &amp; Disbursement Entries</p>
+<p>Time and disbursements can only be posted to a draft invoice if they 
+ are approved. If your approval system requires the approval of time spent 
+ and disbursements entered before they are posted, tick the check box. 
+ If this option is not ticked, all time and disbursement entries are approved 
+ by default.</p>
+<p>&#160;</p>
+<p class="FldExplain">Reverse Time &amp; Disbursement on Cancel Invoice</p>
+<p>Tick this if you want time and disbursement entries to be reversed when 
+ you cancel an invoice. Posted time and disbursement entries will be offset 
+ with negative entries with the same activity date as the original entries, 
+ and new 'replacement' entries will be created in Time and Disbursements 
+ with the same activity date as the original. If you cancel the posting 
+ of the credit note during the invoice cancellation, the entries will not 
+ be made.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons:</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">Update</span> - Click this 
+	 to save changes.</p></li>
+	<li><p><span class="hcp4">Cancel</span> - Click this 
+	 to cancel the changes.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; System Defaults - Time and Disbursements</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

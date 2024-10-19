@@ -1,0 +1,382 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Dashboard -Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>ESP Dashboard - Tags</h1>
+<p>Multiple tags are available for ESP Dashboard and are used to define 
+ properties of the widget. </p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 31.931%;">
+	<col style="width: 27.07%;">
+	<col style="width: 12.71%;">
+	<col style="width: 34.051%;">
+	<tr class="t1st">
+		<td class="hcp1">Tag</td>
+		<td class="hcp1">Explanation </td>
+		<td class="hcp1">Apply to...</td>
+		<td class="hcp1">Example</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/FormCode=&lt;FormCode&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;FormCode&gt; refers to the code of 
+		 the template. 
+		<br>&#160; 
+		<br>&#160; 
+		<br>If you would like different template to be used 
+		 based on the Master File type, then the Master File type can also 
+		 be added to the tag as follows: 
+		<br>[/FormCode=[MF.&lt;Type1&gt;=&lt;FormCode1&gt;] 
+		 [MF.&lt;Type2&gt;=&lt;FormCode2] .../] 
+		<br>&#160; 
+		<br>where &lt;Type&gt; is 
+		<ul style="list-style: disc;">
+			<li><p>C for Master File Type 'Company'</p></li>
+			<li><p>P for Master File Type 'Partnership'</p></li>
+			<li><p>T for Master File Type 'Trust'</p></li>
+			<li><p>DF for Default Template for when the Master File type 
+			 is not any of the specified ones.</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;">This is used to 
+		 specify the template used for the widget. The template is maintained 
+		 in the Engage Servicing Portal Templates in Document Libraries. 
+		 
+		<br>&#160;</td>
+		<td class="t1Col" style="vertical-align: top;">Widget type = e-View 
+		 [104]</td>
+		<td class="t2Col" style="vertical-align: top;">[/FormCode=CPBFDA/] 
+		 
+		<br>&#160; 
+		<br>The above will use the template 'CPBFDA' for 
+		 the widget. 
+		<br>&#160; 
+		<br>&#160; 
+		<br>[/FormCode=[MF.C=CPCSSS] [MF.P=CPCSSS] [DF=CPMFSS]/] 
+		 
+		<br>&#160; 
+		<br>The above will use the template 'CPCSSS' for 
+		 the widget when the Master File type is Company and Partnership. 
+		 Otherwise, the template 'CPMFSS' is used.</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=rss/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the widget gets feeds from an online site. This tag requires the 
+		 [/URL=/] tag below.</td>
+		<td class="t1Col" rowspan="3" style="vertical-align: top;">Widget 
+		 type = RSS Feed [105]</td>
+		<td rowspan="3" class="t2Col" style="vertical-align: top;">[/Page=rss/][/Url=http://feeds.reuters.com/reuters/businessNews/] 
+		 
+		<br>&#160; 
+		<br>The above gets RSS feeds from Reuters. 
+		<br>&#160; 
+		<br>&#160; 
+		<br>[/Page=rss/][/Url=http://feeds.reuters.com/reuters/businessNews/] 
+		 
+		<br>[/Size=5/] 
+		<br>&#160; 
+		<br>The above gets RSS feeds from Reuters and shows 
+		 only five records.</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/URL=&lt;URL&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;URL&gt; refers to the URL for the online 
+		 site.</td>
+		<td class="t2Col" style="vertical-align: top;">This tag is mandatory 
+		 and is used with [/Page=rss/] tag.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Size=&lt;Number&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Number&gt; refers to the number of 
+		 records to display</td>
+		<td class="t2Col" style="vertical-align: top;">When used with [/Page=rss/] 
+		 tag, it will restrict the number of items seen for the RSS feed 
+		 widget. It is optional and if not defined, then all retrieved 
+		 feeds will be shown.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=calendar/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the widget gets information from the ESP Calendar.</td>
+		<td rowspan="13" class="t1Col" style="vertical-align: top;">Widget 
+		 type = General [103]</td>
+		<td rowspan="13" class="t2Col" style="vertical-align: top;">[/Page=timesheet/][/Size=5/] 
+		 
+		<br>&#160; 
+		<br>The above gets pending timesheets for the user 
+		 and shows the earliest five. 
+		<br>&#160; 
+		<br>&#160; 
+		<br>[/Page=workflowlist/][/Size=5/] 
+		<br>&#160; 
+		<br>The above gets pending requests and displays 
+		 the first five.</td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=calendar_month/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is for the 
+		 Upcoming Events widget and it gets items from the ESP Calendar 
+		 as well but only for the current month.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=workflow/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the items are requests (workflows) and the display will be shown 
+		 in Tile view.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=workflowlist/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the items are requests (workflows) and the display will be shown 
+		 in List view.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=timesheet/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the items are timesheets that have not been submitted.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=timeheet_manager/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the items are timesheets that include those that have been submitted 
+		 for approval.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=debtorage/]</td>
+		<td class="t2Col" style="vertical-align: top;">This indicates that 
+		 the items are information from Debtor Ageing.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=shareddocument/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is for the 
+		 Shared Documents widget and the items are documents that are shared 
+		 on ESP.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=entityMap/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is for the 
+		 Group Overview widget where highlights will appear on the world 
+		 map to indicate location of entities.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=feed/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is for the 
+		 Notice Board widget which gets items from Configuration &gt; Engage 
+		 Servicing Portal &gt; Notice Board. The display is based on a 
+		 grid and this tag requires the [/GridCode=/] tag below.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/GridCode=&lt;Code&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Code&gt; refers to the to code assigned 
+		 to the grid field.</td>
+		<td class="t2Col" style="vertical-align: top;">This is to specify 
+		 the grid field and is used with the [/Page=feed/] tag.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=download/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is for the 
+		 Generated Documents widget and the items are documents that have 
+		 been selected for generation.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Size=&lt;Number&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Number&gt; refers to the number of 
+		 records to display</td>
+		<td class="t2Col" style="vertical-align: top;">This tag is used 
+		 to restrict the number of items seen in the widget and is optional. 
+		 It can be used with most of the [/Page=] tag where list of items 
+		 are retrieved.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Page=workflowAction/]</td>
+		<td class="t2Col" style="vertical-align: top;">This tag is used 
+		 for the Workflow Action widget where items are retrieved based 
+		 on values in the Engage Portal Calendar Type [CPIT] lookup table. 
+		 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		<td rowspan="9" class="t1Col" style="vertical-align: top;">Widget 
+		 type = Workflow Link [106]</td>
+		<td rowspan="9" class="t2Col" style="vertical-align: top;"><p>[/Page=workflowAction/]</p>
+		<p>[/ItemTypes=EN_FLDT,EN_MEDT,EN_REDT/]</p>
+		<p>[/Line1=(-ItemDetail.EntityName-)/]</p>
+		<p>[/Line2=(-ItemDetail.Name-), (-ItemDetail.Item1-) (-ItemDetail.Item2-), 
+		 (-ItemDetail.Item3-)/] &#160;</p>
+		<p>[/Button=Linked Request/]</p>
+		<p>[/WfCode=(-ItemDetail.LinkWfCode-)/] &#160;</p>
+		<p>[/WfLinkCode=(-ItemDetail.LinkCode-)/] &#160;</p>
+		<p>[/WfLinkRecId=(-ItemDetail.LinkRecId-)/]</p>
+		<p>[/GroupText=(-ItemDetail.GroupText-)/]</p>
+		<p>&#160;</p>
+		<p>The above includes the three lookup table values for Workflow 
+		 Action widget with information to be displayed in two lines. The 
+		 caption for the button is defined as 'Linked Request'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/ItemTypes=&lt;LookupValueCode&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;LookupValueCode&gt; refers to the code 
+		 of the value in the Engage Portal Calendar Type [CPIT] lookup 
+		 table. Use comma to separate multiple values.</td>
+		<td class="t2Col" style="vertical-align: top;">This tag is used 
+		 to specify the relevant values for the widget.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Line1=&lt;Info&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Info&gt; can include text and also 
+		 reference to information defined for the lookup table value using 
+		 the [/Detail=/] tag. In this case, it must be specified as (-ItemDetail.&lt;Code&gt;-) 
+		 </td>
+		<td class="t2Col" style="vertical-align: top;">This defines the 
+		 information that will appear in the first line of the record. 
+		 Use comma to separate multiple values. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/Line2=&lt;Info&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Info&gt; can include text and also 
+		 reference to information defined for the lookup table value using 
+		 the [/Detail=/] tag. In this case, it must be specified as (-ItemDetail.&lt;Code&gt;-)</td>
+		<td class="t2Col" style="vertical-align: top;">This defines the 
+		 information that will appear in the second line of the record. 
+		 Use comma to separate multiple values. 
+		<br>This is optional. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/Button=&lt;Caption&gt;/] 
+		 
+		<br>&#160; 
+		<br>where &lt;Caption&gt; is the text label for the 
+		 button.</td>
+		<td class="t2Col" style="vertical-align: top;">This is to set the 
+		 caption for the button that will start a linked workflow.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/WfCode=(-ItemDetail.LinkWfCode-)/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is to refer 
+		 to the workflow template that is defined for the lookup table 
+		 value using the LinkWfCode code. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/WfLinkCode=(-ItemDetail.LinkCode-)/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is to refer 
+		 to the screen for linking the workflow that is defined for the 
+		 lookup table value using the LinkCode code. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;">[/WfLinkRecId=(-ItemDetail.LinkRecID-)/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is to refer 
+		 to the condition for the workflow linking that is defined for 
+		 the lookup table value using the LinkRecID code. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;">[/GroupText=(-ItemDetail.GroupText-)/]</td>
+		<td class="t2Col" style="vertical-align: top;">This is to refer 
+		 to the caption for the tag that is defined for the lookup table 
+		 value using the GroupText code. 
+		<br>&#160; 
+		<br><span class="hcp2">Note</span>: 
+		 Refer to the tags for Engage Portal Calendar Type [CPIT] in <a 
+		 href="Lookup_Tables.htm">Lookup Tables</a>.</td>
+		
+	</tr>
+</table>
+<p><span class="hcp2">Note</span>: The 
+ Engage Servicing Portal - Calendar Update job must be set up to ensure 
+ that the Calendar and Workflow Action widgets can retrieve the latest 
+ records.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; ESP Dashboard -Tags</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

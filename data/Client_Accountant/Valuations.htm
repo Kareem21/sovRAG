@@ -1,0 +1,453 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Valuations">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Valuations</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border:Solid 1px #000000;
+vertical-align:top;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-left:6pt;
+margin-right:6pt; }
+ul.hcp3 { list-style:disc; }
+li.hcp4 { margin-left:-20px; }
+p.hcp5 { font-weight:bold; }
+p.hcp6 { margin-left:40px; }
+span.hcp7 { font-weight:bold; }
+li.hcp8 { font-size:10pt; }
+p.hcp9 { text-align:center;
+font-weight:bold;
+color:#ffffff; }
+td.hcp10 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+vertical-align:top; }
+td.hcp11 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+vertical-align:top; }
+td.hcp12 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+vertical-align:top; }
+p.hcp13 { text-align:center; }
+td.hcp14 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000; }
+li.hcp15 { background-color:Transparent; }
+p.hcp16 { background-color:Transparent; }
+p.hcp17 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Valuations</h1>
+<p>This section briefly explains how the gain/loss in value and exchange 
+ rate gain/loss on sub-ledgers are determined, and the journal posting 
+ made to account for these gains/losses.</p>
+<p>&#160;</p>
+<h3>Gain/Loss in Value</h3>
+<p>The valuation methods assigned to sub-ledgers are used to determine 
+ the valuation/revaluation value and ultimately, to calculate the gain/loss 
+ in value within the Account File Valuation and Sub-ledger Revaluation 
+ features.</p>
+<p>Each valuation method employs a different calculation method to determine 
+ the valuation/revaluation value:</p>
+<table wrapperparagraphselector="P" class="Table1" style="border: Solid 2px #000000; 
+		 margin-top: 14pt;" cellspacing="0px" width="800">
+	<col width="150">
+	<col width="150">
+	<col width="500">
+	<tr class="t1st" style="vertical-align: middle;">
+		<td class="hcp1"><p class="hcp2">Valuation Method</p></td>
+		<td class="hcp1"><p class="hcp2">Calculation Method</p></td>
+		<td class="hcp1"><p class="hcp2">Description</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: middle; height: 37px;">
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Book value</p></td>
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">None</p></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Takes the sub-ledger 
+		 balance as the valuation/revaluation value.</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: middle; height: 186px;">
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Interest/Coupon</p></td>
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ul class="hcp3">
+			<li class="hcp4"><p class="hcp2"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Actual/360</a></p>
+			<div class="droptext" id="POPUP342449267" style="display: none;">
+				<p>Formula = (n/360) x Interest % x Balance CCY x Exchange 
+				 Rate</p>
+				<p>where n = number of days between Last Interest Received 
+				 Date and Valuation Date</p>
+				<p>&#160;</p>
+				<p class="hcp5">Example:</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Interest % = 10%</p>
+				<p>Exchange Rate = 1</p>
+				<p>Last Interest Received Date = 01 JUNE 2014</p>
+				<p>Valuation Date = 03 JULY 2015</p>
+				<p>n = 397 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (397/360) x 0.1 x 1000 x 1</p>
+				<p>= 110.28</p>
+   </div></li>
+			<li class="hcp4"><p class="hcp2"><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Actual/365</a></p>
+			<div class="droptext" id="POPUP342441156" style="display: none;">
+				<p>Formula = (n/365) x Interest % x Balance CCY x Exchange 
+				 Rate</p>
+				<p>where n = number of days between Last Interest Received 
+				 Date and Valuation Date</p>
+				<p>&#160;</p>
+				<p class="hcp5">Example:</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Interest % = 10%</p>
+				<p>Exchange Rate = 1</p>
+				<p>Last Interest Received Date = 01 JUNE 2014</p>
+				<p>Valuation Date = 03 JULY 2015</p>
+				<p>n = 397 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (397/365) x 0.1 x 1000 x 1</p>
+				<p>= 108.77</p>
+   </div></li>
+			<li class="hcp4"><p class="hcp2"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Actual/Actual</a></p>
+			<div class="droptext" id="POPUP342436111" style="display: none;">
+				<p>Formula = (n/y) x Interest % x Balance CCY x Exchange 
+				 Rate</p>
+				<p>where</p>
+				<p>n = number of days between Last Interest Received Date 
+				 and Valuation Date</p>
+				<p>y = number of days in a year with 366 for leap years 
+				 and 365 for non-leap years</p>
+				<p>&#160;</p>
+				<p class="hcp5">Example 1 (Non-Leap Year):</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Interest % = 10%</p>
+				<p>Exchange Rate = 1</p>
+				<p>Last Interest Received Date = 01 JUNE 2014</p>
+				<p>Valuation Date = 03 JULY 2015</p>
+				<p>n = 397 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (397/365) x 0.1 x 1000 x 1</p>
+				<p>= 108.77</p>
+				<p>&#160;</p>
+				<p class="hcp5">Example 2 (Leap Year):</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Interest % = 10%</p>
+				<p>Exchange Rate = 1</p>
+				<p>Last Interest Received Date = 01 JUNE 2014</p>
+				<p>Valuation Date = 03 JULY 2016</p>
+				<p>n = 763 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= [(32/366) x 0.1 x 1000 x 1] + [(365/365) x 0.1 x 1000 
+				 x 1]</p>
+				<p>= 208.74</p>
+   </div></li>
+			<li class="hcp4"><p class="hcp2"><a class="dropspot" href="javascript:TextPopup(this)" id="a4">360/360</a></p>
+			<div class="droptext" id="POPUP342420021" style="display: none;">
+				<p>Interest is based on twelve 30-day months, calculated 
+				 once each month on the same day of the month (i.e. interest 
+				 is paid in arrears). The 31st of the month is ignored.</p>
+				<p>&#160;</p>
+				<p>Formula = (n/360) x Interest % x Balance CCY * Exchange 
+				 Rate</p>
+				<p>where</p>
+				<p>n = number of days between Last Interest Received Date 
+				 (Date 1) and Valuation Date (Date 2) and is calculated 
+				 as [(Y2 - Y1) x 360] + [(M2 - M1) x 30] + (D2 - D1) with: 
+				 &#160;</p>
+				<ul class="hcp3">
+					<li><p class="hcp6">Y2 and Y1 being the 
+					 year of Valuation Date and Last Interest Received 
+					 Date respectively;</p></li>
+					<li><p class="hcp6">M2 and M1 being the 
+					 month of Valuation Date and Last Interest Received 
+					 Date respectively; and</p></li>
+					<li><p class="hcp6">D2 and D1 being the 
+					 day of Valuation Date and Last Interest Received Date 
+					 respectively.</p></li>
+				</ul>
+				<p>If the Valuation Date should fall on a 31st, subtract 
+				 1 day so it is [(Y2 - Y1) x 360] + [(M2 - M1) x 30] + 
+				 (D2 - D1) - 1</p>
+				<p>&#160;</p>
+				<p class="hcp5">Example 1 (Last Interest 
+				 Received Date falls on a 31st):</p>
+				<p>Last Interest Received Date = 01 JANUARY 2014</p>
+				<p>Valuation Date = 01 JULY 2014</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Exchange Rate = 1.30673</p>
+				<p>Interest % = 10%</p>
+				<p>&#160;</p>
+				<p>n is calculated as [(2014 - 2014) x 360] + [(7 - 1) 
+				 x 30] + (1 - 31) = 150 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (150/360) x 0.1 x 1000 x 1.30673</p>
+				<p>= 54.45</p>
+				<p>&#160;</p>
+				<p class="hcp5"><span class="hcp7">Example 
+				 2 (both dates fall on 31st):</span></p>
+				<p>Journal From = 31 JANUARY 2014</p>
+				<p>Valuation Date = 31 JULY 2014</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Exchange Rate = 1.5</p>
+				<p>Interest % = 10%</p>
+				<p>&#160;</p>
+				<p>n is calculated as [(2014 - 2014) x 360] + [(7 - 1) 
+				 x 30] + (31 - 31) - 1 = 179 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (179/360) x 0.1 x 1000 x 1.5</p>
+				<p>= 74.58</p>
+				<p>&#160;</p>
+				<p class="hcp5"><span class="hcp7">Example 
+				 3 (Valuation Date falls on a 31st):</span></p>
+				<p>Journal From = 01 JANUARY 2014</p>
+				<p>Valuation Date = 31 JULY 2014</p>
+				<p>Balance CCY = EUR1000</p>
+				<p>Exchange Rate = 1.2</p>
+				<p>Interest % = 10%</p>
+				<p>&#160;</p>
+				<p>n is calculated as [(2014 - 2014) x 360] + [(7 - 1) 
+				 x 30] + (31 - 1) - 1 = 209 days</p>
+				<p>&#160;</p>
+				<p>Unrealised Total</p>
+				<p>= (209/360) x 0.1 x 1000 x 1.2</p>
+				<p>= 69.67</p>
+   </div></li>
+		</ul></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ol>
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">Calculates 
+			 the interest on the sub-ledger balance using the sub-ledger 
+			 interest rate for the period from the last received date to 
+			 the valuation date. The interest last received date is automatically 
+			 updated with the journal date when a journal with an interest-related 
+			 movement type is posted.</p></li>
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">Adds 
+			 the calculated interest to the sub-ledger balance to determine 
+			 the valuation/revaluation value.</p></li>
+		</ol>
+		<p><span style="font-weight: bold; font-style: italic;">Note</span>: 
+		 Sub-ledgers with this valuation method are not included in the 
+		 Sub-ledger Revaluation function.</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: middle; height: 73px;">
+		<td rowspan="2" class="t1Col" style="border: Solid 1px #000000; 
+			 vertical-align: top; padding-left: 2px; padding-top: 2px; 
+			 padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Market 
+		 value - User-entered</p></td>
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ul class="hcp3">
+			<li class="hcp4"><p class="hcp2">Higher 
+			 of Book/Market value</p></li>
+			<li class="hcp4"><p class="hcp2">Lower 
+			 of Book/Market value</p></li>
+		</ul></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Compares the 
+		 user-entered market value to the sub-ledger balance (book value) 
+		 before selecting the valuation/revaluation value.</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: middle; height: 37px;">
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ul class="hcp3">
+			<li class="hcp4"><p class="hcp2">Market 
+			 value</p></li>
+		</ul></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Takes the user-entered 
+		 market value as the valuation/revaluation value.</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: middle; height: 103px;">
+		<td rowspan="2" class="t1Col" style="border: Solid 1px #000000; 
+			 vertical-align: top; padding-left: 2px; padding-top: 2px; 
+			 padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Market 
+		 value - Securities Master</p></td>
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ul class="hcp3">
+			<li class="hcp4"><p class="hcp2">Higher 
+			 of Book/Market value</p></li>
+			<li class="hcp4"><p class="hcp2">Lower 
+			 of Book/Market value</p></li>
+		</ul></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ol>
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">Calculates 
+			 the market value as the unit price in the Securities Master 
+			 multiplied by the quantity held in the sub-ledger.</p></li>
+			<li><p class="Listing" style="margin-left: 6pt; margin-right: 6pt;">Compares 
+			 this calculated market value to the sub-ledger balance (book 
+			 value) before selecting the valuation/revaluation value.</p></li>
+		</ol></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: middle; height: 53px;">
+		<td class="t2Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><ul class="hcp3">
+			<li class="hcp4"><p class="hcp2">Market 
+			 value</p></li>
+		</ul></td>
+		<td class="t1Col" style="border: Solid 1px #000000; vertical-align: top; 
+			 padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;"><p class="hcp2">Calculates the 
+		 market value as the unit price in the Securities Master multiplied 
+		 by the quantity in the sub-ledger. Takes this market value as 
+		 the valuation/revaluation value.</p></td>
+	</tr>
+</table>
+<p>Once the valuation/ revaluation value has been determined, the Account 
+ File Valuation and Sub-ledger Revaluation features subtract the sub-ledger 
+ balance (book value) from the valuation/revaluation value to calculate 
+ the gain/loss in value.</p>
+<p>&#160;</p>
+<h3>Exchange Rate Gain/Loss</h3>
+<p>The exchange rate gain/loss on foreign currency sub-ledgers is calculated 
+ using the Account File Valuation and Exchange Revaluation functions.</p>
+<p>The exchange rates on or before the valuation/revaluation date are extracted 
+ from the Exchange Rates Master and applied to the valuation/revaluation 
+ value determined above. This translates the valuation/revaluation value 
+ into the base currency of the Account File.</p>
+<p>Each foreign currency sub-ledger has two balances, one in the sub-ledger 
+ currency and the other in the base currency of the Account File. The sub-ledger 
+ balance in the base currency is subtracted from the valuation/revaluation 
+ value (also in the base currency), to determine the exchange rate gain/loss.</p>
+<p>&#160;</p>
+<h3>Journal Entries for Gain/Loss</h3>
+<p>Accounting has three different valuation functions for sub-ledgers:</p>
+<ul style="list-style: disc; font-size: 10pt;">
+	<li class="hcp8"><p>Account File Valuation - This calculates 
+	 the unrealised gain/loss in value based on the valuation method assigned 
+	 to the sub-ledger; and the unrealised exchange rate gain/loss. This 
+	 functions provides an optional accrual journal for all unrealised 
+	 gains/losses, which automatically reverses out of the books of account 
+	 the next day (Journal Date + 1 day). This ensures that the gains/losses 
+	 are not realised into the accounts permanently.</p></li>
+	<li class="hcp8"><p>Exchange Revaluation - This calculates 
+	 the realised exchange rate gain/loss. The optional posting of a regular 
+	 journal to realise the gain/loss in the accounts does not affect the 
+	 sub-ledger currency balance, only the sub-ledger balance in the base 
+	 currency of the Account File will be affected.</p></li>
+	<li class="hcp8"><p>Sub-ledger Revaluation - This calculates 
+	 the realised gain/loss in value based on the valuation method assigned 
+	 to the sub-ledger. This function includes an option to post a regular 
+	 journal to realise the gain/loss in the accounts.</p></li>
+</ul>
+<p>Each valuation function can automatically create journals for the gain/loss 
+ in value and exchange rate gain/loss on sub-ledgers. The posting accounts 
+ in the journal entries are determined by the properties of the control 
+ account linked to the sub-ledgers:</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 border="1">
+	<col width="167">
+	<col width="168">
+	<col width="168">
+	<col width="168">
+	<col width="168">
+	<col width="168">
+	<tr style="height: 28px;">
+		<td rowspan="2" style="border: Solid 1px #000000;" bgcolor="#334796"><p class="hcp9">Valuation 
+		 Feature</p></td>
+		<td rowspan="2" style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;" bgcolor="#334796"><p class="hcp9">Journal Type</p></td>
+		<td colspan="2" bgcolor="#334796" class="hcp10"><p class="hcp9">Value 
+		 Differences</p></td>
+		<td colspan="2" bgcolor="#334796" class="hcp10"><p class="hcp9">Exchange 
+		 Rate Differences</p></td>
+		
+	</tr>
+	<tr style="height: 28px;">
+		<td bgcolor="#334796" class="hcp11"><p class="hcp9">Gain</p></td>
+		<td bgcolor="#334796" class="hcp11"><p class="hcp9">Loss</p></td>
+		<td bgcolor="#334796" class="hcp11"><p class="hcp9">Gain</p></td>
+		<td bgcolor="#334796" class="hcp11"><p class="hcp9">Loss</p></td>
+	</tr>
+	<tr style="height: 28px;">
+		<td class="hcp12"><p class="hcp13">Account File Valuation</p></td>
+		<td class="hcp11"><p class="hcp13">Accrual 
+		 (auto-reversing)</p></td>
+		<td colspan="2" class="hcp14"><p class="hcp13">Unrealised Value Reval. property</p></td>
+		<td colspan="2" class="hcp14"><p class="hcp13">Unrealised Exchange Reval. property</p></td>
+		
+	</tr>
+	<tr style="height: 28px;">
+		<td class="hcp12"><p class="hcp13">Exchange Revaluation</p></td>
+		<td class="hcp11"><p class="hcp13">Regular</p></td>
+		<td colspan="2" class="hcp14"><p class="hcp13">Not applicable</p></td>
+		<td class="hcp14"><p class="hcp13">Exchange Gains property</p></td>
+		<td class="hcp14"><p class="hcp13">Exchange Losses property</p></td>
+	</tr>
+	<tr style="height: 28px;">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p class="hcp13">Sub-ledger 
+		 Revaluation</p></td>
+		<td class="hcp14"><p class="hcp13">Regular</p></td>
+		<td class="hcp14"><p class="hcp13">Capital Gains property</p></td>
+		<td class="hcp14"><p class="hcp13">Capital Losses property</p></td>
+		<td colspan="2" class="hcp14"><p class="hcp13">Not applicable</p></td>
+		
+	</tr>
+</table>
+<p>&#160;</p>
+<p><a href="Sub-Ledger_Accounts_Setup.htm">Where do I set up the valuation 
+ method for a sub-ledger?</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Account_File_Valuation.htm">Account File Valuation</a></p></li>
+	<li class="hcp15"><p class="hcp16"><a 
+	 href="Portfolio_Valuation.htm">Portfolio Valuation</a></p></li>
+	<li class="hcp15"><p class="hcp16"><a 
+	 href="Exchange_Revaluation.htm">Exchange Revaluation</a></p></li>
+	<li class="hcp15"><p class="hcp16"><a 
+	 href="Sub-ledger_Revaluation.htm">Sub-ledger Revaluation</a></p></li>
+</ul>
+
+   <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Account_File_Valuation.htm">Valuations</a> &gt; Valuations</p>
+   <p class="hcp17">&#160;</p>
+   <p class="hcp17">(c) Viewpoint Software for 
+ Business Ltd</p>
+   <p class="hcp17">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP342449267');
+	TextPopupInit('a2','POPUP342441156');
+	TextPopupInit('a3','POPUP342436111');
+	TextPopupInit('a4','POPUP342420021');
+//]]></script>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Auto Load Profile</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>ESP Auto Load Profile</h1>
+<p>The ESP Auto Load Profile feature enables population of Viewpoint Back-Office 
+ users to Engage Servicing Portal (ESP). This would enable the Back-Office 
+ users to log in to the ESP using the same credential and accessing their 
+ Entity Files as per Back-Office.</p>
+<p>&#160;</p>
+<h2>Concept</h2>
+<p>The Auto Load Profile feature is configured via the Back-Office. In 
+ order to allow the group of Back-Office users to access Engage Servicing 
+ Portal, the respective User Group must be enabled for ‘ESP Auto Load Profile’. 
+ Once the User Group(s) is enabled, all the users belong to that User Group(s) 
+ will be populated to the Engage Servicing Portal. Besides, all the Entity 
+ Files belong to the user’s Admin Group(s) will also be populated automatically.</p>
+<p>The diagram below illustrates the relationship between User Group, User, 
+ Admin Group and Entity File. Basically:</p>
+<ul class="hcp1">
+	<li><p>A User Group may contain many Users;</p></li>
+	<li><p>A User may belong to multiple Admin Groups; and</p></li>
+	<li><p>An Admin Group may contain many Entity Files.</p></li>
+</ul>
+<p><img src="../auto%20load.png" alt="" style="border: none;" border="0"></p>
+<p>&#160;</p>
+<p>When the Auto Load Profile feature is enabled, the followings are performed:</p>
+<ul class="hcp1">
+	<li><p>All the active Users belonging to the active User Groups will 
+	 be loaded to ESP.</p></li>
+	<li><p>All the active Admin Groups belonging to the Users will be loaded 
+	 to ESP as ‘Organisation’.</p></li>
+	<li><p>All the active Entity Files and with Master File status &lt;=5 
+	 under these Admin Group(s) will be populated. The Entity Files can 
+	 be further configured via <a class="dropspot" href="javascript:TextPopup(this)" id="a1">System 
+	 Settings</a>.</p>
+	<div class="droptext" id="POPUP569302957" style="display: none;">
+		<p>By default, only the ‘Entity Administration’ enabled Master 
+		 Files are included as Entity Files. However, the Entity Files 
+		 can be further customised by configuring the 'AUTWHR' Key in the 
+		 'VPCSP' Application in the Back-Office Configuration &gt; Settings 
+		 &gt; Customised &gt; System Settings. </p>
+		<p>The 'Value' field defines the type of Master Files that can 
+		 be included under the 'Organisation'. This can be defined by using 
+		 SQL WHERE clause to retrieve the values from the Master File (RefMaster) 
+		 database table. The table column would need to be prefixed with 
+		 'R' in the SQL WHERE clause, for example, R.Status&lt;=5 AND R.CA=1</p>
+		<p><span style="font-weight: bold; font-style: italic;">Note</span>: 
+		 Please refer to Viewpoint Data Dictionary for the available fields 
+		 in RefMaster table.</p>
+		<p>By default, the Key 'AUTWHR' has the value:</p>
+		<p>R.Status&lt;=5 AND R.CS=1</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>R.status refers to the Master File status. The list 
+			 of status can be referred from the 'Master File Status [RECS]' 
+			 lookup value.</p></li>
+			<li><p>R.CS refers to the 'Entity Administration' component 
+			 that is activated for the Master File. The value '1' indicates 
+			 that the Master File has 'Entity Administration' component 
+			 enabled, whereas '0' indicates that the Master File has 'Entity 
+			 Administration' component disabled.</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p>Example:</p>
+<table class="Table1" cellspacing="0px" width="86.74%">
+	<col style="width: 51.206%;">
+	<col style="width: 48.794%;">
+	<tr class="t1st">
+		<td><p>Classification</p></td>
+		<td><p>Value</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>User Group to be published</p></td>
+		<td class="t2Col"><p>Finance</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Users belong to Finance Group</p></td>
+		<td class="t2Col"><p>John, Joe Xue</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Admin Group(s) for John</p></td>
+		<td class="t2Col"><p>United Kingdom, France</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Admin Group(s) for Joe Xue</p></td>
+		<td class="t2Col"><p>United Kingdom, Hong Kong</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Entity Files under Admin Group United Kingdom</p></td>
+		<td class="t2Col"><p>Swire Pte Ltd, Thames Ltd.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Entity Files under Admin Group France</p></td>
+		<td class="t2Col"><p>Accor Ltd, Atos Group.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Entity Files under Admin Group Hong Kong</p></td>
+		<td class="t2Col"><p>Amoy Pte Ltd, Asia-Pacific Ltd.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p><span lang="EN-US" xml:lang="EN-US">With Auto Load Profile feature, 
+ the following Users, Organisations and Entity Files will be populated 
+ in ESP:</span></p>
+<table class="Table1" cellspacing="0px" width="86.839%">
+	<col style="width: 51.492%;">
+	<col style="width: 48.508%;">
+	<tr class="t1st">
+		<td><p>User</p></td>
+		<td><p>Organisation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>John</p></td>
+		<td class="t2Col"><p>United Kingdom, France</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Joe Xue</p></td>
+		<td class="t2Col"><p>United Kingdom, Hong Kong</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="86.839%">
+	<col style="width: 51.492%;">
+	<col style="width: 48.508%;">
+	<tr class="t1st">
+		<td><p>Organisation</p></td>
+		<td><p>Entity File</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>United Kingdom</p></td>
+		<td class="t2Col"><p>Swire Pte Ltd, Thames Ltd.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>France</p></td>
+		<td class="t2Col"><p>Accor Ltd, Atos Group.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Hong Kong</p></td>
+		<td class="t2Col"><p>Amoy Pte Ltd. Asia-Pacific Ltd</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>When the user has access to multiple Administrator Groups in Viewpoint 
+ Back-Office, the user will have the option to select&#160;all Administrator&#160;Groups 
+ by clicking on 'All' in the web portal Organisations selector.</p>
+<p>&#160;</p>
+<h2>Configuration</h2>
+<p>Configuration needs to be done in both Viewpoint Back-Office and Viewpoint 
+ Front-Office.</p>
+<p>&#160;</p>
+<h3>Viewpoint Back-Office</h3>
+<p>In Viewpoint Back-Office, grant the authority for publishing of user 
+ profiles. This is by User Group instead of individual user account.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint Home, go to Configuration &gt; User &amp; Security 
+	 &gt; Security Setup &gt; User Groups screen, select the User Group 
+	 which you want to enable the ESP access.</p></li>
+	<li><p>Click on Authority button.</p></li>
+	<li><p>In the ‘User Group Authority Settings’ window, tick the ‘Publish 
+	 User Profile to ESP’ option.</p></li>
+	<li><p>Click Update button to save the setting.</p></li>
+	<li><p>Repeat step (1) to (4) to grant access to ESP for other User 
+	 Group(s).</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Viewpoint Front-Office (ESP Configuration)</h3>
+<p>In Viewpoint Front-Office, you need to enable the auto loading and set 
+ up the relevant task in Agent Job Scheduler.</p>
+<p>&#160;</p>
+<h4>Enabling Auto Load</h4>
+<ol class="hcp2">
+	<li><p>In Viewpoint Home, go to Configuration &gt; Settings &gt; System 
+	 Defaults &gt; Engage Servicing Portal screen, tick the ‘Enable Auto 
+	 Load Profile’ option.</p></li>
+	<li><p>Click Update to save the setting. Once this feature is enabled, 
+	 the existing feature that links ESP users to the Back-Office users 
+	 will be disabled as all the Back-Office users will be auto populated 
+	 into the Configuration &gt; Engage Servicing Portal &gt; Configuration 
+	 &gt; Users screen.</p></li>
+</ol>
+<p>&#160;</p>
+<h4>Setting up Task Scheduler for Auto Load Profile</h4>
+<p>The following step is to configure a routine task to auto refresh/populate 
+ Users, Admin Groups and Entity Files.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint Home, go to Configuration &gt; Business Parameters 
+	 &gt; Task Scheduler &gt; Agent Job Scheduler screen.</p></li>
+	<li><p>Click New and ensure the Job Type is set to 'Engage Servicing 
+	 Portal – Auto Load Profile [CPAP]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, select the Back-Office database that the Front-Office 
+	 will be connected to.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - This is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - This is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Agent_Job_Scheduler.htm">Agent Job Scheduler</a></p></li>
+	<li><p><a href="../Configuration/System_Defaults_-_Engage_Servicing_Portal.htm">System 
+	 Defaults - Engage Servicing Portal</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; ESP Auto Load Profile</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP569302957');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Electronic PDF Forms</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Electronic PDF Forms</h1>
+<p>Electronic PDF forms are PDF files which accept input i.e. fillable 
+ forms. These forms generally contain fixed text which cannot be edited 
+ for the form title, heading or field labels; and control elements that 
+ allow information to be entered.</p>
+<p>Such forms can be generated from Viewpoint with all or some of the information 
+ completed by having Viewpoint retrieve the information if they are already 
+ in the database. Other information can then be completed by the user on 
+ the form itself.</p>
+<p>In order for this, you need to have the template for the form in Viewpoint 
+ so that the following can be take place:</p>
+<ul class="hcp1">
+	<li><p>SQL queries and Viewpoint field codes can be added to retrieve 
+	 the information.</p></li>
+	<li><p>Users can generate the PDF forms from Viewpoint.</p></li>
+</ul>
+<p>At the moment, only the XFA (XML Forms Architecture) PDF is supported.</p>
+<p>&#160;</p>
+<h2>PDF Form Templates</h2>
+<p>To have the template in Viewpoint, you need to have the .pdf file for 
+ the PDF form itself and the form's .xml file. If you do not have the .xml 
+ file, you can export the PDF form data using Adobe Acrobat or Adobe Reader. 
+ This will give you an .xml file - <span style="font-style: italic;">&lt;FileName&gt;_data.xml</span> 
+ <span lang="EN-US" xml:lang="EN-US">and you have to change this to <i>&lt;FileName&gt;_data.txt</i>.</span></p>
+<ol style="list-style: decimal;">
+	<li><p>Save both the .pdf and .txt files to an accessible location.</p></li>
+	<li><p>In Viewpoint - Home, go to Configuration &gt; Document Libraries.</p></li>
+	<li><p>Select Form Library or Word Reports.</p></li>
+	<li><p>Click New.</p></li>
+	<li><p>Enter the template properties and ensure the following:</p>
+	<ul class="hcp1">
+		<li><p>Form Type is set to Electronic PDF Report [ER] if the template 
+		 is in Word Reports, PDF Form [EP] if the template is in Form Library.</p></li>
+		<li><p>Path &amp; File Name points to the .txt file in the location.</p></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Select the template and click:</p>
+	<ul class="hcp1">
+		<li><p>Edit - To add the SQL queries needed to retrieve information 
+		 in the Key Information section.</p></li>
+		<li><p>Edit Document - To open the .txt file in your default text 
+		 editor program (such as Notepad or Notepad++) to add Viewpoint 
+		 field codes in the relevant areas. The field codes are the same 
+		 as those used in Word templates.</p></li>
+	</ul></li>
+</ol>
+<p style="font-weight: bold; font-style: italic;">Note: <span style="font-weight: normal; 
+	 font-style: normal;">Viewpoint is used to code the template for retrieving 
+ information only and not for amending the PDF form itself. For changes 
+ to the PDF form, this is to be done using Adobe Acrobat program.</span></p>
+<p>&#160;</p>
+<p>Once you have the template in Viewpoint, you can share the template 
+ to other Viewpoint environments using the Export and Import command buttons. 
+ When exporting the template, you will get:</p>
+<ul class="hcp1">
+	<li><p>.def file</p></li>
+	<li><p>.txt file</p></li>
+	<li><p>.pdf file</p></li>
+</ul>
+<p>To import, you must ensure that you have all the three files placed 
+ in the same location. When you select the location, only the .def file 
+ is listed but performing the import will bring in all three files to Viewpoint.</p>
+<p>&#160;</p>
+<h2>Generate PDF Form</h2>
+<p>When the template is in Viewpoint, you can generate it like you would 
+ for Word Report or Forms. If you are generating a PDF form for the first 
+ time, Viewpoint will prompt you to enter a PDF Form/Report Registration 
+ Code. You can obtain this from your Viewpoint representative.</p>
+<p>Once you have entered the code, you do not need to re-enter it for subsequent 
+ generations. Every generation will give you the PDF form with the retrieved 
+ information. The retrieved information is also contained in an .xml data 
+ file.</p>
+<p>If you do not enter the code, then you will see an error message informing 
+ you of the location of the .xml data file. You can then import this data 
+ file into the PDF form using Adobe Reader.</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Electronic PDF Forms</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Reminder Notifications</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { mso-ansi-language:EN-US; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Reminder Notifications</h1>
+<p class="hcp1">This job type will send e-mails to users with outstanding Reminder. The job can be set up for all Reminder or for specific Reminder based on the relevant Review Rule. When it is run, it first checks the Reminders to determine if a user will receive the notification.</p>
+<p class="hcp1">To ensure that the reminders are correct, the Reminders must be up-to-date either by:</p>
+<ul class="hcp2">
+<li>
+<p>Having users review the Reminders manually on a regular basis.</p>
+</li>
+<li>
+<p>Automating the Reminders review with the ‘Reminders Review [TDRE]’ job type.</p>
+</li>
+</ul>
+<p class="hcp1">If the latter, ensure that the job is scheduled to run earlier than the Reminder Notifications job type.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+<li>
+<p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler &gt; Agent Job Scheduler.</p>
+</li>
+<li>
+<p>Click New and select the Job Type ‘Reminder Notifications [TDNT]’.</p>
+</li>
+<li>
+<p>Click Next &gt;.</p>
+</li>
+<li>
+<p>In Criteria, you may specify values for the following:</p>
+<ul class="hcp2">
+<li>
+<p>No Operation Time – This is to specify the interval between e-mail notifications in hours.</p>
+</li>
+<li>
+<p>Reminder Code – This is to specify the Reminder Rules for the job. If nothing is specified, the job applies to all active Reminder Rules. To select a Reminder Rule, tick the checkbox for the Reminder Rule. You can also tick ‘(Select All)’ to select all listed Reminder Rules.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click Next &gt;.</p>
+</li>
+<li>
+<p>In Notification, you need to tick Enable E-mail Notification and specify details for the email</p>
+<p>such as the recipient(s), subject line and the message body. If you want different types of e-mail notification, tick the Advanced option and you will see the following:</p>
+<ul class="hcp2">
+<li>
+<p>First Notification – This is for the first e-mail notification that will be sent.</p>
+</li>
+<li>
+<p>First Reminder – This is for the second e-mail notification that will be sent if the user still fails to close the outstanding item.</p>
+</li>
+<li>
+<p>Second Reminder – This is for the third e-mail notification that will be sent if the user still fails to close the outstanding item.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click Next &gt;.</p>
+</li>
+<li>
+<p>In Schedule, enter the job frequency.</p>
+</li>
+<li>
+<p>Click Done.</p>
+</li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: You can get the relevant tags for the e-mail notifications from the Parameter Wizard.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+<li>
+<p><a href="Task_Scheduler.htm">Task Scheduler and Notification Agent</a></p>
+</li>
+<li>
+<p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p>
+</li>
+<li>
+<p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Reminder Notifications</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

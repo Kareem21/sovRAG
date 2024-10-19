@@ -1,0 +1,164 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Automatic - Separate Range for EA/BF[14]</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+img.hcp3 { border:none; }
+span.hcp4 { mso-fareast-language:EN-GB; }
+ol.hcp5 { list-style:decimal; }
+p.hcp6 { mso-list:l0 level1 lfo2; }
+span.hcp7 { tab-stops:list 36.0pt; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Automatic - Separate Range for EA/BF[14]</h1>
+<p>The Automatic - Separate Range for EA/BF [14] coding method will assign 
+ a Master File code that is made up of prefix and a running number where 
+ different prefixes can be set for the following:</p>
+<ul class="hcp1">
+	<li><p>Master Files that are managed entities - the Entity Administration 
+	 option is ticked</p></li>
+	<li><p>Master Files that are non-managed Billing Files - the Time &amp; 
+	 Billing (Sales Ledger) option is ticked</p></li>
+	<li><p>Master Files that are non-managed entities - both the Entity 
+	 Administration and Time &amp; Billing (Sales Ledger) options are NOT 
+	 ticked</p></li>
+</ul>
+<p>The prefix for each type will be set in Configuration &gt; Settings 
+ &gt; Customise &gt; System Running Numbers for the following System Running 
+ Number Types:</p>
+<ul class="hcp1">
+	<li><p>Entity File Codes [ADE] for managed entities</p></li>
+	<li><p>Billing File Codes [ADB] for non-managed Billing Files</p></li>
+	<li><p>Master File Codes [ADR] for non-managed entitiees</p></li>
+</ul>
+<p><span class="hcp2">Note</span>: For 
+ Master Files with both Entity Administration and Time &amp; Billing (Sales 
+ Ledger) options ticked, these are considered as managed entities and will 
+ follow the prefix set for Entity File Codes [ADE].</p>
+<p>&#160;</p>
+<h2>Format of the Master File Code</h2>
+<p>The first few characters will be the prefix that you have specified 
+ and the remaining will be the number for the the Entity File Codes [ADE], 
+ the Billing File Codes [ADB] or the Master File Codes [ADR] </p>
+<p>e.g.</p>
+<p><img src="../image204.png" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p><img src="../image205.png" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p><img src="../image206.png" alt="" border="0" class="hcp3"></p>
+<p>Both the numbers are running numbers that will start at 1 and increases 
+ so the length of the Master File code&#160;will depend on the prefix that 
+ you defined as well as the number. &#160;</p>
+<p><span class="hcp2">Note</span>: The 
+ Master File code cannot be longer than 10 characters.</p>
+<p>&#160;</p>
+<h2>Using 'Automatic - Separate Range for EA/BF [14]' coding method</h2>
+<p class="MsoNormal"><span class="hcp4">To start 
+ using this coding method, do the following:</span></p>
+<ul class="hcp1">
+	<li><p><span class="hcp4">Select the coding 
+	 method in System Defaults &gt; General/Master File</span></p></li>
+	<li><p><span class="hcp4">Set up the required 
+	 System Running Number types</span></p></li>
+</ul>
+<h3>Select Coding Method</h3>
+<ol class="hcp5">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Settings &gt; 
+	 <a href="System_Defaults_-_General_Master_File.htm">System Defaults 
+	 &gt; General/Master File</a>.</p></li>
+	<li><p>Under Coding Method for Master File, select Automatic - Separate 
+	 Rage for EA/BF [14].</p></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Set up System Running Number Types</h3>
+<p>The three System Running Number types may not yet be available in your 
+ system. If you are not able to locate it, then you need to add the type 
+ by doing the following:</p>
+<ol class="hcp5">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Settings &gt; 
+	 Customise &gt; System Running Numbers.</p></li>
+	<li><p>Click New.</p></li>
+	<li><p class="hcp6"><span class="hcp7">In 
+	 Document Type, select the required type e.g. Billing File Codes [ADB].</span></p></li>
+	<li><p class="hcp6"><span class="hcp7">Specify 
+	 the Current Doc. Number as 0.</span></p></li>
+	<li><p class="hcp6"><span class="hcp7">Specify 
+	 the required prefix in the Prefix &amp; Format field.</span></p></li>
+	<li><p class="hcp6"><span class="hcp7">Click 
+	 Update.</span></p></li>
+	<li><p><span style="mso-list: l0 level1 lfo2; tab-stops: list 36.0pt;">Repeat 
+	 for the other types - Entity File Codes [ADE], Master File Codes [ADR].</span></p></li>
+</ol>
+<p>If the type is already available, you can select it and click Edit to 
+ specify the required prefix.</p>
+<p>&#160;</p>
+<h2>Prefix and Format</h2>
+<p>The Prefix &amp; Format field can also include the following:</p>
+<ul class="hcp1">
+	<li><p>Zero '0' to set a uniform length</p></li>
+	<li><p>User Office code</p></li>
+</ul>
+<?rh-placeholder type="snippet" ref="Prefix and Format field Value" ?>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">How do I assign 
+ a user to a User Office?</a></p>
+<div class="droptext" id="POPUP509403386" style="display: none;">
+	<p>This is done in Configuration &gt; Users &amp; Security &gt; Users 
+	 but you must ensure that:</p>
+	<ul class="hcp1">
+		<li><p>User Office field is enabled</p></li>
+		<li><p>Values have been added to the User Office [USOF] Lookup 
+		 Table</p></li>
+	</ul>
+	<p class="SeeAlso">See also:</p>
+	<ul class="hcp1">
+		<li><p><a href="User_Office_+_Numeric_Automatic_12_.htm">User 
+		 Office + Numeric Automatic[12]</a></p></li>
+	</ul>
+</div>
+<p>&#160;</p>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Automatic - Separate Range for EA/BF[14]</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP509403386');
+//]]></script>
+</body>
+</html>

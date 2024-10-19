@@ -1,0 +1,187 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Payment Types &amp; Export Batches - Tag Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { margin-left:36px; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Payment Types &amp; Export Batches - Tag Values</h1>
+<p>The following are tag values that can be added for the export batch configuration.</p>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px" width="99.202%">
+<col style="width: 50%;">
+<col style="width: 38.547%;">
+<tr class="t1st">
+<td>
+<p>Tag</p>
+</td>
+<td>
+<p>Explanation and Example</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[&lt;Field&gt;.&lt;Setting&gt;=&lt;Value&gt;]</p>
+<p>where</p>
+<ul class="hcp1">
+<li>
+<p>&lt;Field&gt; can be:</p>
+</li>
+<li>
+<p class="hcp2">PayCharge = Charges</p>
+</li>
+<li>
+<p class="hcp2">PayReference = Payment Reference</p>
+</li>
+<li>
+<p class="hcp2">PayNote = Payment Note</p>
+</li>
+<li>
+<p>&lt;Setting&gt; can be:</p>
+</li>
+<li>
+<p class="hcp2">Visible - to set the field as visible</p>
+</li>
+<li>
+<p class="hcp2">Value - to set a default value</p>
+</li>
+<li>
+<p class="hcp2">Enabled - to set the field as editable</p>
+</li>
+<li>
+<p>&lt;Value&gt; refers to the value for the &lt;Setting&gt;</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is to allow the <span class="hcp2">define the field settings.</span></p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[PayCharge.Visible=Y]</p>
+<p>[PayCharge.Enabled=N]</p>
+<p>&#160;</p>
+<p>This sets the Charges field as visible but not editable.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[PayReference.Chars=&lt;Value&gt;]</p>
+<p>where &lt;Value&gt; can be</p>
+<ul class="hcp1">
+<li>
+<p>A special character like hyphen, backslash, etc.</p>
+</li>
+<li>
+<p>A to accept uppercase alphabet.</p>
+</li>
+<li>
+<p>A to accept lowercase alphabet.</p>
+</li>
+<li>
+<p>0 to accept numbers.</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is define acceptable input for the Payment Reference field.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[PayReference.Chars=Aa -0]</p>
+<p>&#160;</p>
+<p>This will allow input containing uppercase and lowercase alphabet, numbers, hyphen and space so the following are acceptable:</p>
+<ul class="hcp1">
+<li>
+<p>Dp - 00012017</p>
+</li>
+<li>
+<p>DEP - Bk1001</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>[PayReference.Chars=Aa-/0]</p>
+<p>&#160;</p>
+<p>This will allow input containing uppercase and lowercase alphabet, numbers, hyphen and backslash so the following are acceptable:</p>
+<ul class="hcp1">
+<li>
+<p>Dp-0001/2017</p>
+</li>
+<li>
+<p>DEP-Bk1/001</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[PayDate.Validate=&lt;Value&gt;]</p>
+<p>where &lt;Value&gt; can be Y for Yes and N for No.</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is to validate the PayDate value on data entry and export.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>[PayDate.Validate=Y]</p>
+<p>&#160;</p>
+<p>If any of the payments' Pay date is before today, the export will be rejected.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[AutoRelease=Y]</p>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This is to release the payment upon final approval. This means that there is no need for user to manually release the payment.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+<li>
+<p><a href="Payment_Types_&amp;_Export_Batches.htm">Payment Types &amp; Export Batches</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Payment Types & Export Batches - Tag Values</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+</body>
+</html>

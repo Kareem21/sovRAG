@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Filtering List Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Filtering List Values</h1>
+<p>Fields that require users to choose from a list of options can be retrieved 
+ from lookup tables, user tables and other types such as Entity Types, 
+ Relationship Types, etc where the values seen are those that are active. 
+ However, if the list is long, then it is possible to filter the values 
+ by applying one of the following tags:</p>
+<ul class="hcp1">
+	<li><p>[FILTER:] - to specify values to include for the field</p></li>
+	<li><p>[EXCLFILTER:] - to specify values to exclude for the field</p></li>
+</ul>
+<p>Syntax &#160;for both tags are as follows:</p>
+<p>[FILTER:&lt;FIeldDef&gt;=&lt;ValudeCode1&gt;,&lt;ValueCode2&gt;,...]</p>
+<p>[EXCLFILTER:&lt;FIeldDef&gt;=&lt;ValudeCode1&gt;,&lt;ValueCode2&gt;,...]</p>
+<p>&#160;</p>
+<p>where</p>
+<ul class="hcp1">
+	<li><p>&lt;FieldDef&gt; refers to the Field Definition code of the 
+	 field that uses the lookup table. You can obtain this from Configuration 
+	 &gt; Settings &gt; Field Settings - Field Definition column.</p></li>
+	<li><p>&lt;ValueCode&gt; refers to the code of the value that you want 
+	 to include.</p></li>
+</ul>
+<p>The filtering can be applied:</p>
+<ul class="hcp1">
+	<li><p>on a user basis - the tag is to be added to the Tag Values field 
+	 for the User account</p></li>
+	<li><p>by entity type - the tag is to be added to the Tag Values field 
+	 for the Entity Type</p></li>
+	<li><p>by Master File type - the tag is to be added to the Tag Values 
+	 field on the type in the Master File Type [ADTP] lookup table</p></li>
+</ul>
+<p>If the tag for the same field is applied in a user account, Entity Type 
+ and Master File Types [ADTP] lookup table with different values, the one 
+ in a user account will take precedence, followed by the entity type and 
+ then the Master File type. If the same field contains both [FILTER:] tag 
+ and [EXCLFILTER:] tag, then the [FILTER:] tag will take precedence. </p>
+<p>In addition, it is also possible to filter the value for a lookup table 
+ (secondary) based on value of another lookup table (primary). This requires 
+ the tag to be added to the primary lookup table. For example, to filter 
+ the list of Compliance Register Action Types based on the selected Compliance 
+ Register Type, add the tag to the Compliance Register Types [CRTP] lookup 
+ table.</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If 
+ the list is already filtered due to the field being a child of another 
+ field, then it is not possible to filter this further. For example, values 
+ for Compliance Register Sub-Type field depends on the selection for the 
+ Compliance Register Type field. As such, it is not possible to apply the 
+ [FILTER:] tag for the Compliance Register Sub-Type field.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Lookup_Tables.htm">Lookup Tables</a></p></li>
+	<li><p><a href="Users_-_Tags.htm">Users - Tags</a></p></li>
+	<li><p><a href="Entity_Type_-_Tags.htm">Entity Type - Tags</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Filtering List Values</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

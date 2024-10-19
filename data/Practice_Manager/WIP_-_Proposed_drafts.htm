@@ -1,0 +1,153 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Proposed Drafts">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Proposed Drafts</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>WIP - Proposed Drafts</h1>
+<p>This folder displays the results of the proposed drafts based on the 
+ criteria entered in the <a href="WIP_-_Select.htm">Select</a> folder.</p>
+<p>&#160;</p>
+<p class="FldExplain">Over WIP limit/All selected BF/Matters</p>
+<p>This allows to filter the list based on items that are over the WIP 
+ limit or not.</p>
+<p>&#160;</p>
+<p class="FldExplain">Proposed draft list</p>
+<p>This shows items that can be invoiced according to the criteria specified 
+ in the Select folder.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Recurring Fees</span> - Click 
+	 to view the Recurring Fees record for the selected Billing File. The 
+	 information will be shown at the bottom of the screen.</p></li>
+	<li><p><span class="hcp2">Activity Products</span> - 
+	 Click to view the Activity record that is not in Time or Disbursements 
+	 service class for the selected Billing File. The information will 
+	 be shown at the bottom of the screen.</p></li>
+	<li><p><span class="hcp2">Time Charges</span> - Click 
+	 to view the Time Entry record for the selected Billing File. The information 
+	 will be shown at the bottom of the screen.</p></li>
+	<li><p><span class="hcp2">Disbursements</span> - Click 
+	 to view the Disbursements record for the selected Billing File. The 
+	 information will be shown at the bottom of the screen.</p></li>
+	<li><p><span class="hcp2">Print</span> - Click to print 
+	 a report on the selected records.</p></li>
+	<li><p><span class="hcp2">Select All</span> - Click to 
+	 select all proposed drafts.</p></li>
+	<li><p><span class="hcp2">Deselect All</span> - Click 
+	 to deselect the selected proposed drafts.</p></li>
+	<li><p><span class="hcp2">Prepare Draft(s)</span> - Click 
+	 to prepare draft invoices for the selected records.<br>
+	If the status for Billing File or the selected matter does not allow 
+	 for invoicing, you will see the total charges but the draft invoice 
+	 will not be created. There will be an alert to let you know that you 
+	 need to reopen the matter or Billing File to create the invoice.</p></li>
+	<li><p><span class="hcp2">Queue Invoice</span> - Click 
+	 this to <span class="dropspot"><a class="dropspot" href="javascript:TextPopup(this)" id="a10">queue</a></span> 
+	 the proposed drafts. This will generate list of invoices to be processed. 
+	 You can choose to manually process or wait for the Task Scheduler 
+	 to automatically process it.</p>
+	<div class="droptext" id="POPUP321215672" style="display: none;">
+		<h6 class="Heading8">Invoice Date</h6>
+		<p>Define the invoice date in the draft.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Journal Date</h6>
+		<p class="Heading8">Define the journal date in the draft.</p>
+		<p class="Heading8">&#160;</p>
+		<h6 class="Heading8">Overwrite for (existing) Draft Invoices</h6>
+		<p>Tick this to overwrite the invoice date or journal date for 
+		 existing draft invoices.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Add to Existing open Draft Invoice</h6>
+		<p>Tick this to add to existing draft invoice.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Add Administrative Mark-up</h6>
+		<p>Tick this to apply administrative markup if applicable.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Invoice Deliver Queue</h6>
+		<h6 class="Heading8">Create Draft Invoice</h6>
+		<p>Select this to create draft invoice.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Create and Approve Draft Invoice</h6>
+		<p>Select this to create and approve draft invoice.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Create and Post Invoice</h6>
+		<p>Select this to create, approve and post invoice as final.</p>
+		<p>&#160;</p>
+		<h6 class="Heading8">Generate and Deliver Draft Invoice</h6>
+		<p>Tick this to send document to Document Queue. This will have 
+		 another TSNA task to generate and deliver invoice. <span style="font-weight: bold; 
+		 font-style: italic;">Note</span>: This option will be ticked by 
+		 default for the first time you perform Queue Invoice action. The 
+		 option in the next action will be determined by the last action 
+		 selection.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Post Non-Ch. T&amp;D</span> 
+	 - Click to post non-chargeable time and disbursement entries to move 
+	 the entries from the TimeEntry and DisbEntry tables in the database 
+	 to the TimePost and DisbPost tables. This is done in the back-end 
+	 and is transparent to the user, but should be done on a regular basis 
+	 to remove non-chargeable items in the TimeEntry and DisbEntry tables 
+	 so that they are no longer seen by the user in Time Entries and Disbursement 
+	 screens.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Draft_Invoices.htm">Draft Invoices</a></p></li>
+	<li><p><a href="../Shared/Status.htm">Status</a></p></li>
+	<li><p><a href="Invoice_Queue.htm">Invoice Queue</a></p></li>
+	<li><p><a href="../Shared/Document_Queue.htm">Document Queue</a></p></li>
+	<li><p><a href="../Task_Scheduler/Queue_Invoice.htm">Queue Invoice</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Proposed Drafts</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a10','POPUP321215672');
+//]]></script>
+</body>
+</html>

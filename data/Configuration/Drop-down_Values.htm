@@ -1,0 +1,111 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Drop-down Values">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Drop-down Values</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Drop-down Values</h1>
+<p>Drop-down tables are fields where you can enter a value or select one 
+ from the drop-down list. For example, the Title field in the Master File 
+ - General screen is a drop-down list that can be over-written. The entries 
+ in these fields can be populated so that distinct new entries are added 
+ to the database.</p>
+<p>&#160;</p>
+<p class="FldExplain">Drop-down Table list</p>
+<p>This shows all the available drop-down tables in Viewpoint. Click to 
+ select the table you require.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 add a new value to the selected table when you do not want the table 
+	 to be updated by user input. This requires setting the <a class="dropspot" href="javascript:TextPopup(this)" id="a2">mask 
+	 value 1 for the field that utilises the table</a>. 
+	 For Nationality Individual Codes [NATI] table, you will be able to 
+	 add the value and link it to a country from the Country Codes [CNTR] 
+	 lookup table.&#160;&#160; </p>
+	<div class="droptext" id="POPUP547754006" style="display: none;">
+		<p>For example, the drop-down table 'Titles for Individuals [ITIT]' 
+		 is used for the Title field in Master File - General screen for 
+		 Master Files of Individual Master File type.</p>
+		<p>To prevent update to this table by user input, do the following:</p>
+		<ol style="list-style: decimal;">
+			<li><p>Go to Settings &gt; <a href="Field_Settings.htm">Field 
+			 Settings</a>.</p></li>
+			<li><p>Select the screen by specifying:</p>
+			<ul class="hcp1">
+				<li><p>Menu Group - File [8]</p></li>
+				<li><p>Section - General [FTDMAINF]</p></li>
+				<li><p>Screen - General [FMMGENEI]</p></li>
+			</ul></li>
+			<li><p>Select the Title field.</p></li>
+			<li><p>Click Edit.</p></li>
+			<li><p>In Mask, enter 1.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">edit</a> 
+	 the selected value.</p>
+	<div class="droptext" id="POPUP456343713" style="display: none;">
+		<ol style="list-style-type: decimal;">
+			<li><p>Make the change.</p></li>
+			<li><p>Tick Global Update to globally update the name from 
+			 the previous one to the new one.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected value.</p></li>
+	<li><p><span class="hcp2">Populate</span> - Click this 
+	 to update the selected table with new values that may have been entered 
+	 elsewhere in Viewpoint.</p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Lookup_Values.htm">Business Parameters</a> &gt; <a href="Lookup_Values.htm">General</a> &gt; Drop-down Values</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP547754006');
+	TextPopupInit('a1','POPUP456343713');
+//]]></script>
+</body>
+</html>

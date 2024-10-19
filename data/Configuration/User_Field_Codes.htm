@@ -1,0 +1,659 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+<meta name="MS-HAID" content="User Field Codes">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>User Field Codes</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border-right-style:Solid;
+border-bottom-style:Solid;
+border-bottom-width:1px;
+border-right-width:1px; }
+td.hcp2 { border-bottom-style:Solid;
+border-bottom-width:1px; }
+p.hcp3 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp4 { font-weight:normal; }
+p.hcp5 { margin-left:6pt;
+margin-right:6pt;
+color:#053d8c; }
+td.hcp6 { vertical-align:top; }
+span.hcp7 { color:#053d8c; }
+p.hcp8 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>User Field Codes</h1>
+<p>User fields are retrieved using specific codes as described below.</p>
+<p>&#160;</p>
+<h3>Syntax</h3>
+<h5>Forms</h5>
+<table class="Table1" cellspacing="0px" width="950">
+	<col style="width: 40%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td class="hcp1"><p>Code</p></td>
+		<td class="hcp2"><p class="hcp3">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">(+DU.FLDKEY|FLDSELECT\Format+)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">Retrieves 
+		 the user field for the Entity related to the form. Please refer 
+		 to FLDKEY and FLDSELECT, below, for more information.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">(+EVT.FileCode\#DU-FLDKEY|FLDSELECT\Format+)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">The 
+		 #DU format options retrieves the specified code for the Master 
+		 File code specified by FileCode.</p>
+		<p class="hcp3">For example: (+EVT.EntCode\#DU-CYOCC|VALTEXT+)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">(+QueryName.FileCode\#DU-FLDKEY|FLDSELECT\Format+)</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">As 
+		 above. The format option works for all Master File codes retrieved 
+		 by QueryName.</p>
+		<p class="hcp3">For example: (+AllEntities.EntCode\#DU-MF01|VALUE\#AD-40-0+)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h5>Word reports, Correspondence and Billing Templates</h5>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 40%;">
+	<col style="width: 60%;">
+	<tr class="t1st">
+		<td style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; 
+			 border-left-style: Solid; border-top-width: 1px; border-top-style: Solid;"><p>Code</p></td>
+		<td style="border-bottom-width: 1px; border-bottom-style: Solid; 
+			 border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; 
+			 border-right-style: Solid;"><p class="hcp3">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-width: 1px; 
+			 border-right-style: Solid; border-left-width: 1px; border-left-style: Solid; 
+			 border-bottom-width: 1px; border-bottom-style: Solid;"><p class="hcp3">(+QueryName.FileCode\#DU-FLDKEY|FLDSELECT\Format+)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px; 
+			 border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;"><p 
+			 style="margin-right: 6pt; margin-left: 8px;">As above.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>FLDKEY</h3>
+<p>This is the value of the Key field as defined in the User Field set 
+ up. Use the following letters as the prefix to the value of the Key.</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td class="hcp1"><p class="hcp3">Prefix</p></td>
+		<td class="hcp2"><p class="hcp3">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">M*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Master File user fields.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">N*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Compliance user fields</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">C*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Company user fields.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">T*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Trust user fields</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">F*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Fund user fields</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">S*CLASS</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Share Class-related user fields, where CLASS is the share class 
+		 code.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">B*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Billing File user fields</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">R*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Matter Account user fields</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">A*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Client Account File user fields</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">L*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Sub-ledger account user fields</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">P*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-style: Solid; 
+			 border-bottom-width: 1px;"><p class="hcp3">All 
+		 Portfolio user fields</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp3">*</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px;"><p class="hcp3">All user fields 
+		 related to the Master File</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>The following are format codes for field keys returning multiple values 
+ (FLDKEY* options).</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td style="border-right-width: 1px; border-right-style: Solid;"><p>Prefix</p></td>
+		<td><p>Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-width: 1px; 
+			 border-right-style: Solid;"><p class="hcp3">FMT01</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Return 
+		 the field values for a two-column table where the first column 
+		 holds the field caption and the second column the field values 
+		 (in the VALTEXT format). The code must be placed in the left column 
+		 of a two-column table.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-width: 1px; 
+			 border-right-style: Solid; border-bottom-width: 1px;"><p class="hcp3">FMT02</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px;"><p class="hcp3">Same as above 
+		 except that the code must be placed in a three-column table and 
+		 the code will retrieve the Note field in the third column.</p></td>
+	</tr>
+</table>
+<p>For example: (+HD.RefCode\#DU-C*|FMT01+)</p>
+<p>&#160;</p>
+<h3>FLDSELECT</h3>
+<p>This is the value of the other fields as defined in the User Field set 
+ up. The following options for FLDSELECT explains their corresponding field 
+ in the User Field setup.</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td style="border-left-width: 1px; border-left-style: solid; border-top-width: 1px; 
+			 border-right-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p>Option</p></td>
+		<td style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;"><p>Field</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">CAP</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Field 
+		 caption</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">VALTEXT</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Formatted 
+		 value of the user field. See VALTEXT below, for the format applied 
+		 to various user field types.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">VALUE</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Value 
+		 of the field. For Master File/User/Lookup value fields, this option 
+		 returns the code.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">VALDESCR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Returns 
+		 the Name/Description for the Master File/User/Lookup value fields. 
+		 For other field types, it returns the VALUE.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">NOTE</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Note 
+		 field</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">DFROM</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Date 
+		 from</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">DTO</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Date 
+		 to</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">TABVAL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Code 
+		 of the Lookup/User table value for Master File + Lookup/User table 
+		 fields.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">TABVALDESCR</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Name/Description 
+		 of the Lookup/User table value for Master File + Lookup/User table 
+		 fields.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px; border-bottom-width: 1px;"><p class="hcp3">TABVALCAP</p></td>
+		<td class="t2Col" style="vertical-align: top; border-bottom-width: 1px;"><p class="hcp3">Caption text 
+		 of the Lookup/User table field.</p></td>
+	</tr>
+</table>
+<p>For example: (+HD.RefCode\#DU-CODE|VALTEXT+)</p>
+<p>&#160;</p>
+<h6 class="Heading8">VALTEXT</h6>
+<p>The following are some examples and explanations of field types relating 
+ to the FLDSELECT VALTYPE.</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td style="border-left-style: Solid; border-top-style: Solid; border-right-style: Solid; 
+			 border-bottom-width: 1px; border-right-width: 1px; border-left-width: 1px; 
+			 border-top-width: 1px;"><p>Field type</p></td>
+		<td style="border-top-style: Solid; border-right-style: Solid; 
+			 border-bottom-width: 1px; border-top-width: 1px; border-right-width: 1px;"><p>Example/Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">Master File (MF)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Boxer 
+		 - John Kelly</p>
+		<p class="hcp3">OR</p>
+		<p class="hcp3">Belair Management 
+		 Consultants Company Limited</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">Lookup Value 
+		 (LF)</p>
+		<p class="hcp3">User Table Value 
+		 (UV)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Guernsey, 
+		 C.I.</p>
+		<p class="hcp3">OR</p>
+		<p class="hcp3"><span style="margin-bottom: 0;">Provision 
+		 of Milling Services</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">MF/LF/UV + Dates</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Belair 
+		 Management Consultants Company Limited</p>
+		<p class="hcp3">Date from: 15-Aug-2011</p>
+		<p class="hcp3">OR</p>
+		<p class="hcp3">Boxer - John Kelly</p>
+		<p class="hcp3">Date from: 15-Aug-2011 
+		 - to: 18-Sep-2012</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">MF + LF/UV + 
+		 Dates</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Boxer 
+		 - John Kelly</p>
+		<p class="hcp3">Residence: France</p>
+		<p class="hcp3">Date from: 15-Aug-2011 
+		 - to: 18-Sep-2012</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">Date/Number/Amount</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Formatted 
+		 according to the setting in System Defaults &gt; Field Formats.</p>
+		<p class="hcp3">Date: Date format</p>
+		<p class="hcp3">Number: Exchange 
+		 Rates (&lt;= 6 decimal places)</p>
+		<p class="hcp3">Amounts: Amount 
+		 (&lt;= 4 decimal places)</p>
+		<p class="hcp3">See also <a href="System_Defaults.htm">System 
+		 Defaults</a>.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-right-width: 1px; border-left-width: 1px;"><p class="hcp3">Yes/No</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-right-width: 1px;"><p class="hcp3">Yes 
+		 or No</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top; border-left-style: Solid; 
+			 border-right-style: Solid; border-bottom-style: Solid; border-right-width: 1px; 
+			 border-left-width: 1px; border-bottom-width: 1px;"><p class="hcp3">Others (text)</p></td>
+		<td class="t2Col" style="vertical-align: top; border-right-style: Solid; 
+			 border-bottom-style: Solid; border-bottom-width: 1px; border-right-width: 1px;"><p class="hcp3">As entered in 
+		 field.</p></td>
+	</tr>
+</table>
+<p class="hcp4">&#160;</p>
+<p class="hcp4"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">How 
+ are the user fields format options used?</a></p>
+<div class="droptext" id="POPUP367763656" style="display: none;">
+	<h5>Example 1</h5>
+	<p>The following shows various field specific options in a form, where 
+	 TEST80 is a User Field defined as a Master File code and TEST83 is 
+	 a User Field defined as a Master File/User Field/Date field.</p>
+	<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+			 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+		<col style="width: 27%;">
+		<col style="width: 35%;">
+		<col style="width: 38%;">
+		<tr class="t1st">
+			<td colspan="2"><p class="hcp5">Field-specific Options</p></td>
+			<td><p class="hcp5">Result 
+			 of Generation</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Caption</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST80|CAP+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">MF 
+			 only - Company</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Test 
+			 Value code TEST80</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST80|VALTEXT+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">CMS 
+			 International Limited</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Value 
+			 (Master File code)</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST80|VALUE+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">CMSINT</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Value 
+			 (formatted as address)</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST80|VALUE\#AD-42-2+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">CMS 
+			 International Limited,<br>
+			4/F, Unit 1, Henry House,<br>
+			10, Peddar Street,<br>
+			25896 Wanchai,<br>
+			Hong Kong</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Note 
+			 field</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST80|NOTE+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">This 
+			 is the note.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">&#160;</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">&#160;</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">&#160;</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Caption</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|CAP+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">MF 
+			 + DEL + UV</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Test 
+			 Value code TEST83</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|VALTEXT+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Asia 
+			 Pacific Investment Company Limited</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">(Master 
+			 File/User Field/Date)</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">&#160;</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">FRUIT 
+			 VEGETABLES</p>
+			<p class="hcp5">Date 
+			 from: 1-Aug-2011</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Value 
+			 (Master File code)</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|VALUE+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">ASIAPA</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Value 
+			 (formatted as address)</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|VALUE\#AD-42-2+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Asia 
+			 Pacific Investment Company Limited,<br>
+			Ground Floor, Unit G,<br>
+			Block 3, Mei Fu Sun Chuen,<br>
+			5, Hing Wah Strret,<br>
+			Sum Shui Po,<br>
+			Kowloon,<br>
+			Hong Kong</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Lookup/User 
+			 Field Caption</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|TABVALCAP+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Singapore 
+			 - SSIC principle activity codes</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Lookup/User 
+			 Field Description</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|TABVALDESCR+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">FRUIT 
+			 VEGETABLES</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Lookup/User 
+			 Field code</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|TABVAL+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">01132</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Date 
+			 From</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|DFROM+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">1-Aug-2011</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Date 
+			 To</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|DTO+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">&#160;</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">Note 
+			 field</p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">(+EVT.EntCode\#DU-TEST83|NOTE+)</p></td>
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp5">This 
+			 is the note.</p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+	<h5>Example 2</h5>
+	<p>In this example the field code (+HD.EntCode\#DU-C*|FMT01+) uses 
+	 the sample format code FMT01 in a Word report. This must be placed 
+	 in a two-column table.</p>
+	<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+			 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="950">
+		<col style="width: 40%;">
+		<col style="width: 60%;">
+		<tr class="t1st">
+			<td class="hcp6"><p class="hcp5">Field</p></td>
+			<td class="hcp6"><p class="hcp3"><span class="hcp7">Result</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">MF only - Company</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">CMS 
+			 International Limited</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample Lookup value</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">Barbados</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">MF LV Dates</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp5">Castlemaine 
+			 Brewery Limited</p>
+			<p class="hcp5">Euro</p>
+			<p class="hcp5">Date 
+			 to: 30-Apr-2011</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">MF + DEL + UV</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">Asia Pacific Investment Company Limited</span></p>
+			<p class="hcp3"><span class="hcp7">FRUIT 
+			 VEGETABLES</span></p>
+			<p class="hcp3"><span class="hcp7">Date 
+			 from: 1-Aug-2011</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">MF Dates</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">Asia Pacific Investment Company Limited</span></p>
+			<p class="hcp3"><span class="hcp7">Date 
+			 from: 1-Apr-2011 - to: 30-Apr-2012</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample LV with date</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">Usd Dollar</span></p>
+			<p class="hcp3"><span class="hcp7">Date 
+			 to: 12-Aug-2011</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample UserTab with date</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">ROOT CROPS</span></p>
+			<p class="hcp3"><span class="hcp7">Date 
+			 from: 15-Apr-2006</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample date</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">15-Apr-2011</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample amount</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">12345.67</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample number</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">55.8888</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample text</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">This is the text</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample yes/no</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">Yes</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">By-Laws version</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3">&#160;</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td style="vertical-align: top;" class="t1Col"><p class="hcp3"><span class="hcp7">Sample User Field</span></p></td>
+			<td style="vertical-align: top;" class="t2Col"><p class="hcp3"><span class="hcp7">LEAFY VEGETABLES</span></p></td>
+		</tr>
+	</table>
+</div>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+	<li><p class="hcp4"><a href="User_Fields_(Configuration).htm">User 
+	 Fields</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Document_Libraries.htm">Document Libraries</a> &gt; <a href="Coding_a_Word_Template.htm">Coding a Word Template</a> &gt; User Field Codes</p>
+<p class="hcp8">&#160;</p>
+<p class="hcp8">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp8">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP367763656');
+//]]></script>
+</body>
+</html>

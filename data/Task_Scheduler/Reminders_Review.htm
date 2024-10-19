@@ -1,0 +1,180 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Reminders Review</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-ansi-language:EN-US; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-weight:bold; }
+td.hcp4 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Reminders Review, To Do Summary Recalculation</h1>
+<p><span class="hcp1">This job includes two options, which is to review Reminder and to recalculate the items in To Do Summary.</span> <span style="mso-spacerun: yes;">&#160;</span><span class="hcp1">You can set up to have this job automated based on a set frequency.</span></p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+<li>
+<p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler &gt; Agent Job Scheduler.</p>
+</li>
+<li>
+<p>Click New and ensure that the Job Type is set to 'Reminders Review, To Do Summary Recalculation [TDRE]'.</p>
+</li>
+<li>
+<p>Click Next &gt;.</p>
+</li>
+<li>
+<p>In Criteria, select the job as Reminders Review or To Do Summary Recalculation and specify if it applies to multiple users or only specific users.</p>
+</li>
+<li>
+<p>Click Next &gt;.</p>
+</li>
+<li>
+<p>If an e-mail notification for the job is required, tick Enable E-mail Notification and specify details for the e-mail. If you want different types of e-mail notification, tick Advanced and you will get the following:</p>
+<ul class="hcp2">
+<li>
+<p>Success - this is the notification when the job is completed successfully</p>
+</li>
+<li>
+<p>Fail - this is the notification when the job is not completed</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In Schedule, enter the job frequency.</p>
+</li>
+<li>
+<p>Click Done.</p>
+</li>
+</ol>
+<p>The Reminders Review job will review the Reminders screen for items with due date up to the 'Review Horizon' as set in 'Reminders Options' in Viewpoint Home &gt; Configuration &gt; Business Parameters &gt; General &gt; Reminder Rules - Options.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If you ticked Advanced Settings in Setup tab, you can use the following tags as well as MAIL tags.</p>
+<table class="Table1" cellspacing="0px">
+<col style="width: 17.168%;">
+<col style="width: 49.499%;">
+<col style="width: 33.333%;">
+<tr class="t1st">
+<td style="border: Solid 1px #000000;">
+<p class="hcp3">Tag</p>
+</td>
+<td class="hcp4">
+<p class="hcp3">Explanation</p>
+</td>
+<td class="hcp4">
+<p class="hcp3">Example</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/SELTYPE=&lt;Value&gt;/]</p>
+</td>
+<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>This is to define ‘whose’ Reminder to review. You can set it to a particular user, User Group, Administrator Group or for all users.</p>
+<p>Values for SelType:</p>
+<ul class="hcp2">
+<li>
+<p>2048 - To review for user.</p>
+</li>
+<li>
+<p>4096 - To review for Administrator Group.</p>
+</li>
+<li>
+<p>8192 - To review for User Group.</p>
+</li>
+<li>
+<p>16384 - To review for ALL users.</p>
+</li>
+<li>
+<p>32768 - To review for primary Administrator Group.</p>
+</li>
+</ul>
+</td>
+<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/SELTYPE=2048/]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/SELCODE=&lt;Code&gt;/]</p>
+</td>
+<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>This is to define the selection based on the selection type by using the code for the user, Administrator Group or User Group.</p>
+<p>If SelType=16384, you can leave the value as blank.</p>
+</td>
+<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/SELCODE=SM/]</p>
+<p>[/SELCODE='SM','Anne']</p>
+<p>[/SELCODE='GROUP1','GROUP2','GROUP3'/]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/JOBTYPE=&lt;value&gt;/]</p>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>This is to define the job type to for the action. The values are:</p>
+<ul class="hcp2">
+<li>
+<p>0 - Reminders Review</p>
+</li>
+<li>
+<p>1 - To Do Summary Recalculation</p>
+</li>
+</ul>
+</td>
+<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: top;">
+<p>[/JOBTYPE=0/]</p>
+</td>
+</tr>
+
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+<li>
+<p><a href="Task_Scheduler.htm">Task Scheduler and Notification Agent</a></p>
+</li>
+<li>
+<p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p>
+</li>
+<li>
+<p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Reminders Review</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

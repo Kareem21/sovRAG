@@ -1,0 +1,407 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Select">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>WIP Select</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top;
+border:solid #000000 1.0pt;
+mso-border-alt:solid windowtext .5pt;
+mso-background-themecolor:background1;
+mso-background-themeshade:242;
+padding:0cm 5.4pt 0cm 5.4pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp2 { vertical-align:top;
+border:solid #000000 1.0pt;
+border-left:none;
+mso-border-left-alt:solid windowtext .5pt;
+mso-border-alt:solid windowtext .5pt;
+mso-background-themecolor:background1;
+mso-background-themeshade:242;
+padding:0cm 5.4pt 0cm 5.4pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>WIP - Select</h1>
+<p>This is where you select the Matter and date range to retrieve information 
+ for the draft invoices.</p>
+<p>&#160;</p>
+<p class="FldExplain">Filter</p>
+<p>Select the filter you want to apply and then select the value from the 
+ list.</p>
+<p>&#160;</p>
+<p class="FldExplain">Matter Type</p>
+<p>Select the Matter you want to retrieve information on.</p>
+<p>&#160;</p>
+<p class="FldExplain">Date - from and To</p>
+<p>Enter the date range.</p>
+<p>&#160;</p>
+<p class="FldExplain">Service Type</p>
+<p>Select the service type. If no Service Type is selected, then it will 
+ include all Service Types.</p>
+<p>&#160;</p>
+<p class="FldExplain">Include -</p>
+<p>Tick the boxes for the service classes you want to include in the draft 
+ invoice.</p>
+<ul style="list-style: disc;">
+	<li><p>Recurring Fees -Tick this to retrieve recurring fees that are 
+	 due.</p></li>
+	<li><p>Time Charges - Tick this to retrieve approved time charges entered 
+	 via the Time Entry screen. Note that the date range entered in the 
+	 Date - from and - to above will be posted to the Date - from and - 
+	 to fields in the Detail Lines folder when the entries are posted to 
+	 a draft invoice. However, if the 'Use Recurring Services for Time 
+	 Postings' option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a> is ticked, then the Date 
+	 - from field will be calculated based on the 'Next Invoicing Due' 
+	 date and the frequency set for 'Charge Per' in the Recurring Fees 
+	 screen and will not be later than the earliest Time entry.</p></li>
+	<li><p>Disbursement Charges - Tick this to retrieve approved Disbursement 
+	 Charges entered via the Disbursements screen. Note that the date range 
+	 entered in the Date - from and - to above will be posted to the Date 
+	 - from and - to fields in the Detail Lines folder when the entries 
+	 are posted to a draft invoice. However, if the 'Use Recurring Services 
+	 for Disbursement Postings' option in <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+	 Defaults &gt; Time and Disbursements</a> is ticked, then the 'Fee 
+	 Period From Date' field will be calculated based on the 'Next Invoicing 
+	 Due' date and the frequency set for 'Charge Per' in the Recurring 
+	 Fees screen and will not be later than the earliest Disbursement entry.</p></li>
+	<li><p>Include Time and/or Disbursement only if Recurring Fees are 
+	 due - Tick this if you want the Time and Disbursement charges to be 
+	 posted only if there is also a recurring fee due.</p></li>
+	<li><p>Link (and post with invoice) non-chargeable Time and/or Disbursements 
+	 - Select this to post approved non-chargeable entries from the Time 
+	 Entries and Disbursement screens so that they are no longer seen in 
+	 Time and Disbursements. These entries are not posted to any invoice.</p></li>
+	<li><p>Roll the next due date forward for 0 value Time and/or Disbursements 
+	 fees to align with the posting period - This option applies only when 
+	 you have enabled 'Use Recurring Services for Time Entries' and 'Use 
+	 Recurring Services for Time Postings' or have enabled 'Use Recurring 
+	 Services for Disbursement Entries' and 'Use Recurring Services for 
+	 Disbursement Postings' in System Defaults &gt; Time Management. If 
+	 ticked, it will update the 'Next Invoicing Due' date field for Time 
+	 or Disbursements services when the Time or Disbursements service is 
+	 not invoiced. The update is done when you click on Propose Drafts.</p></li>
+	<li><p>Time Cut-off - Enter the cut-off date for Time Charges. Time 
+	 entries later than this date will not be included. This date will 
+	 be used as the '-to' date for the invoice detail line for the Time 
+	 charges. This field is mandatory when the 'Set Time Cut-off' option 
+	 is enabled.</p></li>
+	<li><p>Set Time Cut-off - Tick this to filter approved Time Charges 
+	 using a cut-off date. The date is to be entered in the Time Cut-off 
+	 field. Any approved Time Entries after that date will not be included. 
+	 For more information, click <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a>.</p>
+	<div class="droptext" id="POPUP388023126" style="display: none;">
+		<table class="Table1" style="border-collapse: collapse; border: none; 
+				 mso-border-alt: solid windowtext .5pt; mso-yfti-tbllook: 1152; 
+				 mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" cellspacing="0px">
+			<tr class="t1st" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+				<td width="125" bgcolor="#F2F2F2" class="hcp1"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Use Recurring Services for 
+				 Time Postings</span></p></td>
+				<td width="125" bgcolor="#F2F2F2" class="hcp2"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Set Time Cut-off</span></p></td>
+				<td width="373" bgcolor="#F2F2F2" class="hcp2"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Outcome to Time Charges</span></p></td>
+			</tr>
+			<tr class="t2Row" style="mso-yfti-irow: 1;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent"><span 
+				 lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Approved 
+				 time charges within the posting period.</span></p></td>
+			</tr>
+			<tr class="t1Row" style="mso-yfti-irow: 2;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent" 
+															 style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Approved time charges within 
+				 the start of the posting period and the cut-off date.</span></p></td>
+			</tr>
+			<tr class="t2Row" style="mso-yfti-irow: 3;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Approved 
+				 time charges which date is before/on the Recurring Fee 
+				 ‘Fee Period To Date’.</span></p>
+				<p class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">This 
+				 only applies if the Recurring Fee 'Next Invoicing Due' 
+				 is within the posting period.</span></p></td>
+			</tr>
+			<tr class="t1Row" style="mso-yfti-irow: 4; mso-yfti-lastrow: yes;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent" 
+															 style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Approved Time charges which 
+				 date is before the 'Time Cut-off' date only if the 'Time 
+				 Cut-off' date falls before the Recurring Fee ‘Fee Period 
+				 To Date’</span></p>
+				<p class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">OR</span></p>
+				<p class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Approved time charges which 
+				 date is before/on the recurring fee ‘Fee Period To Date’ 
+				 if the recurring fee ‘Fee Period To Date’ falls before 
+				 the 'Time Cut-off' date.</span></p>
+				<p class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">This only applies if the 
+				 Recurring Fee 'Next Invoicing Due' is within the posting 
+				 period.</span></p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<table class="Table1" style="border-collapse: collapse; border: none; 
+				 mso-border-alt: solid windowtext .5pt; mso-yfti-tbllook: 1152; 
+				 mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" cellspacing="0px">
+			<tr class="t1st" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+				<td width="125" bgcolor="#F2F2F2" class="hcp1"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Use Recurring Services for 
+				 Disbursement Postings</span></p></td>
+				<td width="125" bgcolor="#F2F2F2" class="hcp2"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Set Time Cut-off</span></p></td>
+				<td width="373" bgcolor="#F2F2F2" class="hcp2"><p 
+					 class="MsoNoSpacing" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Outcome to Disbursement 
+				 Charges</span></p></td>
+			</tr>
+			<tr class="t2Row" style="mso-yfti-irow: 1;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent"><span 
+				 lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Approved 
+				 disbursements charges within the posting period.</span></p></td>
+			</tr>
+			<tr class="t1Row" style="mso-yfti-irow: 2;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent" 
+															 style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Approved disbursements charges 
+				 within the posting period.</span></p></td>
+			</tr>
+			<tr class="t2Row" style="mso-yfti-irow: 3;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Disabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent"><span lang="EN-US" xml:lang="EN-US">Approved 
+				 disbursement charges dated before the Recurring Fee 'Next 
+				 Invoicing Due' specified in the Recurring Fee setup.</span></p></td>
+			</tr>
+			<tr class="t1Row" style="mso-yfti-irow: 4; mso-yfti-lastrow: yes;">
+				<td class="t1Col" style="vertical-align: top; border: solid #000000 1.0pt; 
+					 border-top: none; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+					 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+					 padding-bottom: 0px;" width="125"><p class="Tablecontent" 
+															 style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t2Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="125"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Enabled</span></p></td>
+				<td class="t1Col" style="vertical-align: top; border-top: none; 
+					 border-left: none; border-bottom: solid #000000 1.0pt; 
+					 border-right: solid #000000 1.0pt; mso-border-top-alt: solid windowtext .5pt; 
+					 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+					 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+					 padding-right: 0px; padding-bottom: 0px;" width="373"><p 
+					 class="Tablecontent" style="mso-yfti-cnfc: 64;"><span 
+				 lang="EN-US" xml:lang="EN-US">Approved disbursement charges 
+				 dated before the Recurring Fee 'Next Invoicing Due' specified 
+				 in the Recurring Fee setup.</span></p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Propose to create Draft invoice if -</p>
+<p>Select if you want to view the work in progress only when it reaches 
+ the limit specified for each Matter as set up in the Matters folder, or 
+ by the amount that you can enter in the total over field.</p>
+<p>&#160;</p>
+<p class="FldExplain">&gt;&gt; Propose Drafts</p>
+<p>Click this to retrieve information based on the criteria you have entered. 
+ The results will be displayed in the <a href="WIP_-_Proposed_drafts.htm">Proposed 
+ Drafts</a> folder.</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; WIP Select</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP388023126');
+//]]></script>
+</body>
+</html>

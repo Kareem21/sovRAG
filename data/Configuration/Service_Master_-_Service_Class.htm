@@ -1,0 +1,129 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Service Master - Service Class</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { text-align:center;
+font-weight:bold; }
+p.hcp3 { text-align:center; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Service Master - Service Class</h1>
+<p>Every service added must be assigned to a service class. The available 
+ classes are:</p>
+<ul class="hcp1">
+	<li><p>Ad Valorem Fee [RV] - Based on the Accounting Net Asset Value. 
+	 Refer to <a href="../Practice_Manager/Ad_Valorem.htm">Ad Valorem</a>.</p></li>
+	<li><p>Credit: Disbursement charges [CD] - This allows for a Billing 
+	 File or Matter to have an amount of chargeable disbursements that 
+	 will not be invoiced. Only when the specified amount has been reached, 
+	 then subsequent disbursement charges will be invoiced. Refer to <a 
+	 href="../Practice_Manager/Recurring_Fees_-_Disbursement_Credit.htm">Recurring 
+	 Fee - Disbursement Credit</a>.</p></li>
+	<li><p>Credit: Time Charge [CT] - This allows for a Billing File or 
+	 Matter to have an amount of chargeable time that will not be invoiced. 
+	 Only when the specified amount has been reached, then subsequent time 
+	 charges will be invoiced. Refer to <a href="../Practice_Manager/Recurring_Fees_-_Time_Credit.htm">Recurring 
+	 Fee - Time Credit.</a></p></li>
+	<li><p>Disbursement - markup [DM] - Disbursement with markup.</p></li>
+	<li><p>Disbursement - normal [DI] - Normal disbursement.</p></li>
+	<li><p>Disbursement billed in advance with carry forward [DW] - This 
+	 allows invoicing the Fixed Fee in advance and later, to invoice in 
+	 arrears any Disbursement exceeding the Fixed Fee. </p></li>
+	<li><p>Expense - non-recoverable [DS] - This is for services that are 
+	 mainly used in supplier invoices, where the service cost is not recoverable 
+	 from your clients.</p></li>
+	<li><p>Minimum time fee [RN] and [RM] - Use this if you want to charge 
+	 a minimum amount for a specific service when entering time. Refer 
+	 to <a href="Minimum_Time_Fee.htm">Minimum Time Fee</a>.</p></li>
+	<li><p>Professional service [PS].</p></li>
+	<li><p>Recurring Fee [RA] - Fee charged at standard intervals.</p></li>
+	<li><p>Recurring Fee - excl. for t&amp;d entry [RX] - Similar to [RA] 
+	 except that this service class will not be available for selection 
+	 in Time and Disbursements module when the option 'Use recurring services 
+	 for T&amp;D entries' is ticked in Settings &gt; <a href="System_Defaults_-_Practice_Management.htm">System 
+	 Defaults &gt; Practice Management</a>.</p></li>
+	<li><p>Time - Administrator Rate [TA] - Time is charged based on the 
+	 Administrator's rate.</p></li>
+	<li><p>Time - Non Chargeable [TN] - Non-chargeable time such as annual 
+	 leave or public holidays.</p></li>
+	<li><p>Time - Service Rate [TC] - Time is charged based on service 
+	 rates.</p></li>
+	<li><p>Time at Fixed Price [TF] - Total amount charged is fixed at 
+	 the service rate, while the unit price is taken from the Administrator's 
+	 rate. The difference between the (number of units x administrator 
+	 rate) and the total amount is written off. In the following example, 
+	 the service rate is EUR10 whereas the Administrator's rate is EUR15. 
+	 The table below shows the figures that are used when entering time 
+	 for the service in Time and Disbursements:<br>
+	</p>
+	<table style="border-collapse: separate; border-collapse: separate;" 
+			 cellspacing="0" border="1">
+		<col style="width: 20.975%;">
+		<col style="width: 21.285%;">
+		<col style="width: 22.368%;">
+		<col style="width: 35.372%;">
+		<tr>
+			<td><p class="hcp2">Unit 
+			 Time Charged</p></td>
+			<td><p class="hcp2">Charge/Unit 
+			 Time</p></td>
+			<td><p class="hcp2">Total 
+			 Charged</p></td>
+			<td><p class="hcp2">Total 
+			 Written Off</p></td>
+		</tr>
+		<tr>
+			<td><p class="hcp3">10</p></td>
+			<td><p class="hcp3">EUR 15</p></td>
+			<td><p class="hcp3">EUR 10</p></td>
+			<td><p class="hcp3">(10 x EUR 15) - EUR 10 = 
+			 EUR 140</p></td>
+		</tr>
+	</table></li>
+	<li><p>Time billed in advance with carry forward [TW] - This allows 
+	 invoicing the Fixed Fee in advance and later, to invoice in arrears 
+	 any Time exceeding the Fixed Fee.</p></li>
+	<li><p>Transaction Fee [RT] - Used for automatic calculation of client 
+	 account transactions and document storing. Refer to <a href="../Practice_Manager/Recurring_Fees_Transaction_Fee.htm">Recurring 
+	 Fee - Transaction Fee</a>.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Service_Master_-_Tags.htm">Service Master - Tags</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Service Master - Service Class</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

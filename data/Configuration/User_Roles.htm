@@ -1,0 +1,129 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="User Roles">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>User Roles</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>User Roles</h1>
+<p>User Roles are used to control access to screens and functions in Viewpoint 
+ through authority levels. These User Roles are then assigned to one or 
+ more User Groups. In instances where two or more roles with differing 
+ authority levels to the same screen are assigned to the same User Group, 
+ the higher authority level will prevail.</p>
+<p>&#160;</p>
+<p class="FldExplain">User Roles list</p>
+<p>This shows User Roles that have been set up. Viewpoint comes with a 
+ standard set of User Roles but you can <a class="dropspot" href="javascript:TextPopup(this)" id="a1">create</a> 
+ your own User Roles.</p>
+<div class="droptext" id="POPUP425209143" style="display: none;">
+	<ol class="hcp1">
+		<li><p>Go to Configuration &gt; Business Parameters &gt; General 
+		 &gt; Lookup Values.</p></li>
+		<li><p>Locate and click to select User Roles [URLS] lookup table.</p></li>
+		<li><p>Click New.</p></li>
+		<li><p>Enter details for the new User Role.</p>
+		<ul class="hcp2">
+			<li><p>Element Code - Enter a code for the User Role you want 
+			 to create. Each element code must be unique, so if you enter 
+			 a code that is already in use, you will not be able to create 
+			 the role.</p></li>
+			<li><p>Name - Enter a simple description of the role.</p></li>
+			<li><p>Long Name - This field is used to group user roles together 
+			 in the User Roles screen. For example, if you enter Accounting 
+			 in this field, this User Role will be grouped together with 
+			 other roles that have Accounting in this field.</p></li>
+			<li><p>Electronic Filing Code - If the user role being created 
+			 is to be used as a service provided then enter SP in this 
+			 field, otherwise, leave this blank.</p></li>
+			<li><p>Element/Sort Value - This field is not used for User 
+			 Roles.</p></li>
+			<li><p>Tag Values - If the <a href="Security_Models.htm">security 
+			 model</a> is Services Provided Model [5] and the user role 
+			 is a service provided, then tags for <a href="../Shared/File_Review_Function.htm">File 
+			 Review</a> can be entered here. </p></li>
+			<li><p>Active - This is ticked by default. Removing the tick 
+			 will remove the role from the User Roles screen.</p></li>
+		</ul></li>
+		<li><p>Click Update.</p></li>
+	</ol>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Authorities button</p>
+<p>Click this to <a class="dropspot" href="javascript:TextPopup(this)" id="a2">assign/amend</a> 
+ authority level for the selected User Role.</p>
+<div class="droptext" id="POPUP424621500" style="display: none;">
+	<ol class="hcp1">
+		<li><p>In the User Role Authority Settings screen, set the appropriate 
+		 authority level for the screens listed in the Navigation column.</p></li>
+		<li><p>Click OK when complete.</p></li>
+	</ol>
+	<p><span class="hcp3" style="font-weight: bold; font-style: italic;">Note</span>: 
+	 When specifying the authority level for a summary screen, it is not 
+	 possible to set it to 0 if any of the summary screen's child menus 
+	 have a higher value.</p>
+</div>
+<p>&#160;</p>
+<h2>Authority Levels</h2>
+<p>There are four authority levels that you can set for each screen:</p>
+<ul class="hcp2">
+	<li><p>0 - No Access (default value): No access to the screen. Users 
+	 will not see the screen in their Section Menu.</p></li>
+	<li><p>1 - View Only: View-only access for the screen.</p></li>
+	<li><p>6 - Regular User: Users can view the screen and have access 
+	 to command buttons with authority required set to level 6 or lower, 
+	 e.g. New and Edit.</p></li>
+	<li><p>8 - Power User: Users can view the screen and have access to 
+	 command buttons with authority required set to level 8 or lower, e.g. 
+	 Delete.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="Field_Settings.htm">Field Settings</a></p></li>
+	<li><p><a href="User_Groups.htm">User Groups</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Users.htm">Users & Security</a> &gt; <a href="User_Roles.htm">Security Setup</a> &gt; User Roles</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP425209143');
+	TextPopupInit('a2','POPUP424621500');
+//]]></script>
+</body>
+</html>

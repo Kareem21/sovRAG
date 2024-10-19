@@ -1,0 +1,154 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Fees Payable - Strike Off</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { background-color:Transparent; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+ul.hcp3 { list-style:disc; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Fees Payable - Strike Off</h1>
+<p class="hcp1">This function is used to change 
+ the status of entities that are to be struck off from their current status 
+ to the value that being are defined in the STKOFF and STKSUB system setting 
+ key. You can do this for one entity or for all entities at the same time. 
+ Viewpoint will check that the selected entities are due to be struck off 
+ by checking the Strike Date for the entity.</p>
+<p class="hcp1">Viewpoint recommends that you 
+ add the entities selected for strike off to a payment batch designated 
+ for strike off. If the outstanding debit notes are cancelled by credit 
+ notes (see options below), the fee and penalty total for the strike off 
+ batch should add up to zero (0) as the credit notes created are also included 
+ in the same batch.</p>
+<p class="hcp1">When you perform a strike off, 
+ the Automatic Strike Off of Entities screen will open in a separate window.</p>
+<p class="hcp1">&#160;</p>
+<p><span class="hcp2">Note</span>: Setting 
+ key 'STKSUB' is to set the Entity Sub-Status when perform strike off. 
+ If Setting key value for STKOFF is a 'Entity Sub Status', please update 
+ the value of STKOFF key to the relevant entity status, and STKSUB to the 
+ relevant entity sub-status.</p>
+<p class="hcp1">&#160;</p>
+<p class="FldExplain">Due Date Before</p>
+<p>Enter the due date. Viewpoint will check for all entities with strike 
+ dates before this date and change their status to the value that being 
+ defined in the STKOFF and STKSUB system setting key.</p>
+<p>&#160;</p>
+<p class="FldExplain">Practice Management / Sales Ledger</p>
+<p>Select handling options for the Sales Ledger of affected entities:</p>
+<ul class="hcp3">
+	<li><p>Delete Draft debit/credit notes pending - <span style="font-weight: normal; 
+															 font-style: normal;">Tick 
+	 this to delete all pending drafts.</span></p></li>
+	<li><p>Create credit (debit) notes to cancel outstanding debit (credit) 
+	 notes - Select this if you want the system to create credit (debit) 
+	 notes. </p></li>
+	<ul class="hcp3">
+		<li><p>Only include Invoices with the selected fee type included 
+		 - You can choose this option if you only want to create credit 
+		 (debit) notes for the selected invoice.</p></li>
+		<li><p>Automatically settle all the debit and credit notes - You 
+		 can also choose this option if you want the notes to be settled.</p></li>
+	</ul>
+	<li><p>Write-off all the outstanding debit and credit notes - Tick 
+	 this if you want the outstanding credit and debit notes to be written 
+	 off. </p></li>
+	<ul class="hcp3">
+		<li><p>Only include Invoices with the selected fee type included 
+		 - You can choose this option if you only want to write-off the 
+		 outstanding for the selected invoice.</p></li>
+	</ul>
+	<li><p>No credit (debit) note creation and/or write-off - Tick this 
+	 if you do not want any credit or debit note to be created or written 
+	 off.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Entity - Strike off &#160;</p>
+<p>Select form generation option:</p>
+<ul class="hcp3">
+	<li><p>Automatic Select Forms - Tick this if you want all forms that 
+	 are triggered for this event to be selected automatically.</p></li>
+	<li><p>TEST/REVIEW run - no update and/or credit/debit note creation 
+	 and settlement - Tick this for a test or review run. The proposed 
+	 actions will be shown in the log file.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Update/Cancel</p>
+<p>Click this to start/cancel the process.</p>
+<p>&#160;</p>
+<p class="FldExplain">Open Log</p>
+<p>Click this to view the results of the activity. This opens the AutoStrike-log.txt 
+ file which can be found in the Viewpoint Archive folder.</p>
+<p>&#160;</p>
+<p class="FldExplain">Close</p>
+<p>Click this to exit the screen.</p>
+<p class="Listing">&#160;</p>
+<p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">I 
+ do not want to use the status T when striking off an entity. How do I 
+ change this?</a></p>
+<div class="droptext" id="POPUP385163082" style="display: none;">
+	<p>Set up the status you want to use in Configuration &gt; Settings 
+	 &gt; Customise &gt; System Settings. Select VPBILLS - STKOFF and click 
+	 Edit. Change the value from T to the one you want to use.</p>
+</div>
+<p class="Listing">&#160;</p>
+<p class="Listing"><span class="hcp2">Note</span>: 
+ When you perform Strike Off with the options 'Create credit(debit) notes 
+ to cancel outstanding debit(credit) notes' and 'Automatically settle all 
+ the debit and credit notes' ticked, for Billing Files or Matter that is 
+ inactive, the program will temporarily activate the Billing File and/or 
+ Matter to perform the posting and then revert the status to its original 
+ value.</p>
+<p class="Listing">If this is only on a test run, then the log file will 
+ display a warning with the Billing File status.</p>
+<p class="Listing">&#160;</p>
+<p class="Listing">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Fees_Payable.htm">Fees Payable</a></p></li>
+	<li><p><a href="Fees_Payable_-_Batch_Maintenance.htm">Fees Payable 
+	 - Batch Maintenance</a></p></li>
+	<li><p><a href="../Configuration/System_Settings.htm">System Settings</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Fees Payable - Strike Off</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP385163082');
+//]]></script>
+</body>
+</html>

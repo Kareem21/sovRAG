@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>User Office + Numeric Automatic[12]</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+ul.hcp2 { list-style:disc; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { mso-list:l0 level1 lfo1; }
+span.hcp5 { mso-add-space:auto;
+text-indent:-18.0pt;
+mso-list:l0 level2 lfo1; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>User Office + Numeric Automatic[12]</h1>
+<p>This method will result in Master File codes with a User Office code 
+ prefix followed by a number. The User Office code prefix follows the User 
+ Office of the user who created the Master File. In an environment where 
+ users may be from different jurisdictions, this coding method makes it 
+ easy to identify which User Office the Master File was created for.</p>
+<p>&#160;</p>
+<h2>Format of the Master File code</h2>
+<p>The first two characters of the code is the User Office code while the 
+ rest is from the 'Master File Codes [ADR]' system running number</p>
+<p>e.g.</p>
+<p>&#160;</p>
+<p><img src="../image181.gif" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>For the Master File Codes [ADR] system running number, this starts out 
+ at number 1 and increases so the length of a Master File code can be:</p>
+<ul class="hcp2">
+	<li><p>As short as three characters comprising the 2-character User 
+	 Office code and a single-digit value for Master File Codes [ADR]; 
+	 or</p></li>
+	<li><p>As long as ten characters comprising the 2-character User Office 
+	 code and eight-digit value for Master File Codes [ADR]</p></li>
+</ul>
+<p>If you want the length of Master File codes to be uniform, you can set 
+ a format for <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">Master 
+ File Codes [ADR]:</span></p>
+<ol class="hcp3">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Settings &gt; 
+	 Customise &gt; System Running Numbers.</p></li>
+	<li><p>Select the document type ‘ADR’.</p></li>
+	<li><p><span class="hcp4">Click Edit.</span></p></li>
+	<li><p>In the Prefix &amp; Format field, <a class="dropspot" href="javascript:TextPopup(this)" id="a1">enter 
+	 a ‘0’ (zero) for each digit</a>.</p>
+	<div class="droptext" id="POPUP389974091" style="display: none;">
+		<p>For example:</p>
+		<ul class="hcp2">
+			<li><p>I<span class="hcp5">f you want the 
+			 Master File code to be 8 characters, enter 000000 to get Master 
+			 File codes like NL000012 and NL001234.</span></p></li>
+			<li><p><span class="hcp5">If you want the Master 
+			 File code to be 10 characters, enter 00000000 to get Master 
+			 File codes like NL00000012 and NL00001234.</span></p></li>
+		</ul>
+ </div></li>
+	<li><p>Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Using 'User Office + Numeric Automatic [12]' coding method</h2>
+<p>In order to use this coding method, ensure that the following is done:</p>
+<ul class="hcp2">
+	<li><p>Values for User Office is set up</p></li>
+	<li><p>User is assigned to a User Office</p></li>
+</ul>
+<p>Once the above is done, you can then select this coding method in Configuration 
+ &gt; <a href="System_Defaults_-_General_Master_File.htm">System Defaults 
+ &gt; General/Master File</a>.</p>
+<p>&#160;</p>
+<h3>Setting up User Office Values</h3>
+<ol class="hcp3">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Business Parameters 
+	 &gt; General &gt; Lookup Values.</p></li>
+	<li><p>Select ‘USOF – User Office’.</p></li>
+	<li><p><span class="hcp4">Click New.</span></p></li>
+	<li><p>Enter the following:</p>
+	<ul class="hcp2">
+		<li><p>Element Code – this will be the User Office prefix and it 
+		 can be any two alphanumeric characters.</p></li>
+		<li><p>Name – this is the name of the User Office.</p></li>
+	</ul></li>
+	<li><p>Click Update.</p></li>
+	<li><p>Repeat until you have entered all required values for User Office.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>Assigning User Office to Users</h3>
+<ol class="hcp3">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Users &amp; Security 
+	 &gt; Users.</p></li>
+	<li><p>Select the user account and click Edit.</p></li>
+	<li><p>Assign the relevant User Office to the User.</p></li>
+	<li><p><span class="hcp4">Click Update.</span></p></li>
+</ol>
+<p>User Office must be assigned for all users with the rights to create 
+ Master Files. Otherwise, the following message is seen and the user will 
+ not be able to create new Master Files:</p>
+<p><img src="../image182.gif" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p><b><i>Note</i></b>: If the User Office field is not seen, it may be 
+ disabled. Enable this field in the Configuration &gt; Settings &gt; Customise 
+ &gt; Field Settings.</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; User Office + Numeric Automatic[12]</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP389974091');
+//]]></script>
+</body>
+</html>

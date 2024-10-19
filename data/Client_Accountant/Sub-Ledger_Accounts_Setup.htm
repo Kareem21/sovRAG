@@ -1,0 +1,810 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Tax Account">
+<meta name="MS-HAID" content="Products/Services">
+<meta name="MS-HAID" content="Share/Unit Holder">
+<meta name="MS-HAID" content="Investment">
+<meta name="MS-HAID" content="Securities">
+<meta name="MS-HAID" content="Fixed Asset">
+<meta name="MS-HAID" content="Bank Account">
+<meta name="MS-HAID" content="Creditor">
+<meta name="MS-HAID" content="Debtor">
+<meta name="MS-HAID" content="Setup">
+<meta name="MS-HAID" content="Sub-ledger">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Sub-Ledger Accounts - Setup</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+li.hcp1 { list-style:disc; }
+ul.hcp2 { list-style:disc; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1 style="background-color: #ffffff;">Sub-Ledger Accounts - Setup</h1>
+<p>The setting up of sub-ledger accounts is done in the Select folder of 
+ the sub-ledger screen.</p>
+<ol>
+	<li><p class="Listing">Select the appropriate sub-ledger screen.</p></li>
+	<li><p class="Listing">In the Select folder, click New.</p></li>
+	<li><p class="Listing">Enter the information for the new sub-ledger 
+	 account:</p>
+	<ul>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Debtor 
+		 sub-ledger</a></p>
+		<div class="droptext" id="POPUP381424853" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Open Item - Select the Open Items, if relevant. 
+				 This field will be available if you have any Open Items 
+				 records in Entity Administration.</p></li>
+				<li><p>Master File - If the debtor has been set up as a 
+				 Master File, then you may select it here. Otherwise, leave 
+				 this field blank.</p></li>
+				<li><p>Sub-ledger Code - Enter a sub-ledger code here. 
+				 If you had selected a Master File above, the Master File 
+				 Code defaults to this field. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 D so that it appears only when you are setting up a Debtor 
+				 sub-ledger.</p></li>
+				<li><p>Debtors (Item) Name - Enter the sub-ledger name. 
+				 If you had selected a Master File earlier, then the name 
+				 of the Master File defaults to this field. Change this 
+				 if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account, if 
+				 relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Creditor 
+		 sub-ledger</a></p>
+		<div class="droptext" id="POPUP381417965" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Open Item - Select the Open Items, if relevant. 
+				 This field will be available if you have any Open Items 
+				 records in Entity Administration.</p></li>
+				<li><p>Master File - If the creditor has been set up as 
+				 a Master File, then you may select it here. Otherwise, 
+				 leave this field blank.</p></li>
+				<li><p>Sub-Ledger Code - Enter a sub-ledger code here. 
+				 If you had selected a Master File above, the Master File 
+				 Code defaults to this field. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 C so that it appears only when you are setting up a Creditor 
+				 sub-ledger.</p></li>
+				<li><p>Creditors Item Name - Enter the sub-ledger name. 
+				 If you had selected a Master File earlier, then the name 
+				 of the Master File defaults to this field. Change this 
+				 if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Credit Limit (CR) - If you enforce the use of credit 
+				 limits, then enter the credit limit here. You will receive 
+				 a warning message if you exceed this amount when posting 
+				 journals. The limit check will also apply to journals 
+				 imported through API calls or posted from the valuation/revaluation 
+				 screens.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Bank 
+		 Account sub-ledger</a></p>
+		<div class="droptext" id="POPUP381403660" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Statutory Bank Account - If the sub-ledger account 
+				 you are creating has been set up as a bank account for 
+				 the Account File in the Entity Administration, it will 
+				 be listed here for selection. If you select an account 
+				 here, some other fields will be automatically completed.<br>
+				<span class="hcp3">Note:</span> 
+				 The currency of the bank account for selection can only 
+				 be seen in the drop-down list when you are adding a new 
+				 bank account to the Account File.</p></li>
+				<li><p>Sub-Ledger Code - Enter a sub-ledger code here. 
+				 If you had selected a statutory bank account, the account 
+				 number defaults to this field. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 B so that it appears only when you are setting up a Bank 
+				 Account sub-ledger.</p></li>
+				<li><p>Account Name - If you had selected a statutory bank 
+				 account, then the account name defaults to this field. 
+				 Change this if necessary.</p></li>
+				<li><p>IBAN/Account Code - If you had selected a statutory 
+				 bank account, the IBAN number defaults to this field. 
+				 Change this if necessary.</p></li>
+				<li><p>Bank - If you have set up the bank as a Master File, 
+				 then select it here. If you had selected a statutory bank 
+				 account, this field is automatically completed.</p></li>
+				<li><p>Currency Code - Select the account currency. If 
+				 you had selected a statutory bank account, the currency 
+				 defaults here.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Credit Limit (CR) - If you enforce the use of credit 
+				 limits, then enter the credit limit here. You will receive 
+				 a warning message if you exceed this amount when posting 
+				 journals. The limit check will also apply to journals 
+				 imported through API calls or posted from the valuation/revaluation 
+				 screens.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Fixed 
+		 Asset sub-ledger</a></p>
+		<div class="droptext" id="POPUP381427371" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Assets - Administrator - If the sub-ledger account 
+				 you are creating has been set up as a fixed asset in Administrator, 
+				 then it will be displayed here. Selecting a fixed asset 
+				 in this field will automatically complete other fields.</p></li>
+				<li><p>Sub-Ledger Code - Enter a sub-ledger code here. 
+				 If you had selected a fixed asset in the field above, 
+				 the Reference field of the fixed asset defaults here. 
+				 Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 F so that it appears only when you are setting up a Fixed 
+				 Asset sub-ledger.</p></li>
+				<li><p>Asset Name - Enter the sub-ledger name. If you had 
+				 selected a fixed asset earlier, then the name defaults 
+				 to this field. Change this if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Master File - This field retrieves banks for selection 
+				 and can be used to record the bank from which a loan was 
+				 taken to finance the purchase of the asset.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Depreciation Method - Select a depreciation method 
+				 from the list. At the moment, there is only the straight 
+				 line depreciation method. Options for this field are from 
+				 Depreciation Methods [DEMT] lookup value table.</p></li>
+				<li><p>Residual Value - Enter the value for the fixed asset 
+				 at the end of its useful life.</p></li>
+				<li><p>Frequency - Select the interval for the depreciation.</p></li>
+				<li><p>Number of periods - Enter the length of the fixed 
+				 asset's useful life. This is based on the frequency selected 
+				 so if Frequency = Monthly, a value of 60 in Number of 
+				 periods means the useful life for the fixed asset is 60 
+				 months.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p class="SeeAlso">See also:</p>
+			<ul class="hcp2">
+				<li>&#160;<a href="Fixed_Asset_Depreciation.htm">Fixed 
+				 Asset Depreciation</a></li>
+			</ul>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a6">Securities 
+		 sub-ledger</a></p>
+		<div class="droptext" id="POPUP381426814" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Security - Select the security to be set up as the 
+				 sub-ledger account.</p></li>
+				<li><p>Sub-Ledger Code - This defaults to the code of the 
+				 selected security. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 E so that it appears only when you are setting up a Securities 
+				 sub-ledger.</p></li>
+				<li><p>Security Name - The security name defaults to this 
+				 field. Change this if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Registered Holder - Select the registered holder 
+				 of the security, if relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Control Quantity - Tick this to display the Quantity 
+				 field in the Script and Journal folders.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p class="SeeAlso">See also:</p>
+			<ul class="hcp2">
+				<li>&#160;<a href="Securities_Rebalance.htm">Securities 
+				 Rebalance</a></li>
+			</ul>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a7">Investment 
+		 sub-ledger</a></p>
+		<div class="droptext" id="POPUP381414753" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Master File - Select the Master File to be set up 
+				 as the sub-ledger account or leave this field blank.</p></li>
+				<li><p>Sub-Ledger Code - This defaults to the code of the 
+				 selected Master File. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 I so that it appears only when you are setting up a Investment 
+				 sub-ledger.</p></li>
+				<li><p>Sub-ledger Name - The name of the selected Master 
+				 File defaults to this field, if you had selected one earlier. 
+				 Change this if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Control Quantity - Tick this to display the Quantity 
+				 field in the Script and Journal folders.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a8">Share/Unit 
+		 Holder sub-ledger</a></p>
+		<div class="droptext" id="POPUP381421236" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Master File - Select the Master File to be set up 
+				 as the sub-ledger account or leave this field blank.</p></li>
+				<li><p>Sub-Ledger Code - This defaults to the code of the 
+				 selected Master File. Change this if necessary.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 H so that it appears only when you are setting up a Share/Unit 
+				 Holder sub-ledger.</p></li>
+				<li><p>Sub-ledger Name - The name of the selected Master 
+				 File defaults to this field, if you had selected one earlier. 
+				 Change this if necessary.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Control Quantity - Tick this to display the Quantity 
+				 field in the Script and Journal folders.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a9">Products/Services 
+		 sub-ledger</a></p>
+		<div class="droptext" id="POPUP381415805" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Sub-Ledger Code - Enter a sub-ledger code here.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 You can add more sub-ledger types in the Sub-ledger Type 
+				 Values [SLTP] lookup table in System Manager - Business 
+				 Parameters - Lookup Values. When adding a new sub-ledger 
+				 type to the lookup table, ensure the code starts with 
+				 P so that it appears only when you are setting up a Products/Services 
+				 sub-ledger.</p></li>
+				<li><p>Products/Services - Enter the sub-ledger name or 
+				 a description of the product/service this account is for.</p></li>
+				<li><p>Related Master File - Select a Master File related 
+				 to the account, if relevant.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Control Quantity - Tick this to display the Quantity 
+				 field in the Script and Journal folders.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p class="SeeAlso">See also:</p>
+			<ul class="hcp2">
+				<li>&#160;<a href="Products_Services.htm">Products/Services</a>.</li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+		<li class="hcp1"><p class="Listing"><a class="dropspot" href="javascript:TextPopup(this)" id="a10">Tax 
+		 Account sub-ledger</a></p>
+		<div class="droptext" id="POPUP381470211" style="display: none;">
+			<ul class="hcp2">
+				<li><p>Tax/Sub-ledger Code - Enter a sub-ledger code here.</p></li>
+				<li><p>Type - Select the sub-ledger type, if relevant. 
+				 More sub-ledger types can be set up in the Sub-ledger 
+				 Type Values [SLTP] lookup table with the code starting 
+				 with W so that these appear only when you are setting 
+				 up a Tax Account sub-ledger.<br>
+				If you are using the option 'Use Accounting Tax Sub-ledger 
+				 as Tax Codes' option in <a href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+				 Defaults - Practice Management</a>, select from the following 
+				 type to specify if the tax sub-ledger is for the Sales 
+				 Ledger, Purchase Ledger, both or neither:</p></li>
+				<li style="list-style: none; display: inline;"><ul class="hcp2">
+					<li><p>Tax Account - Both Invoiced and Received [WBSP] 
+					 - used for both Sales and Purchase Ledger for netting 
+					 off the amount of tax.</p></li>
+					<li><p>Tax Account - Others [WOTH] - taxes not related 
+					 to Sales or Purchase Ledger.</p></li>
+					<li><p>Tax Account - Received [WPUR] - used for Purchase 
+					 Ledger</p></li>
+					<li><p>Tax Account - Invoiced [WSLS] - used for Sales 
+					 Ledger</p></li>
+				</ul></li>
+				<li><p>Account Name - Enter the sub-ledger name.</p></li>
+				<li><p>External/Account Code - This field is used to record 
+				 the external account code of the sub-ledger account if 
+				 relevant.</p></li>
+				<li><p>Tax Percentage - Enter the tax percentage for the 
+				 account.</p></li>
+				<li><p>Currency Code - Select the account currency.</p></li>
+				<li><p>Nominal Account - Link the sub-ledger account to 
+				 a nominal control account for journal posting and reporting 
+				 purposes.</p></li>
+				<li><p>Portfolio - If the sub-ledger account is to be linked 
+				 to a portfolio, then select a portfolio from the list.</p></li>
+				<li><p>Exchange Revaluation - This refers to the type of 
+				 revaluation.</p></li>
+				<li><p>Last Revalued Exchange - The date when the last 
+				 exchange revaluation was performed.</p></li>
+				<li><p>Valuation - Select the valuation method for the 
+				 sub-ledger account. The valuation method is fundamental 
+				 to the Accounting valuation and revaluation functions. 
+				 If the selected method is Interest/Coupon, the Interest 
+				 field must also be completed. Additionally, with this 
+				 valuation method, the account will not be included when 
+				 the sub-ledger is revalued.</p></li>
+				<li><p>Interest % - Enter the percentage interest if your 
+				 Valuation method is Interest/Coupon.</p></li>
+				<li><p>Last Received - The date the interest is last received 
+				 is used when the Valuation method for the sub-ledger is 
+				 Interest/Coupon. The field is automatically updated with 
+				 the journal date when an 'Interest Received/Paid' journal 
+				 is posted.</p></li>
+				<li><p>Revaluation - Select the frequency of the revaluation.</p></li>
+				<li><p>Last Revalued Market - The date when last value 
+				 revaluation was performed.</p></li>
+				<li><p>Revaluation are booked to the 'unrealised' accounts 
+				 - If the checkbox is ticked, the Nominal Account Code 
+				 shown under Unrealised Value Gains/Losses and Unrealised 
+				 Exchange Gains/Losses will be used to create revaluation.</p></li>
+				<li><p>Capital/Income - This field is normally used for 
+				 Trust accounting only, and is enabled if the Account File 
+				 uses a Chart of Accounts template that has been enabled 
+				 for Capital/Income Segregation. When creating a sub-ledger 
+				 account you have to specify if journal postings are allowed 
+				 for capital, income or both types of transactions.</p></li>
+				<li><p>Date Opened - This defaults to today's date.</p></li>
+				<li><p>Date Closed - This field is used to record the date 
+				 the account is closed, and is left blank.</p></li>
+				<li><p>Note - Enter any notes relating to the sub-ledger 
+				 account.</p></li>
+				<li><p>Active - This is ticked by default. To deactivate 
+				 the account, untick the checkbox. This will prevent further 
+				 transactions being posted to the account.</p></li>
+			</ul>
+			<p>&#160;</p>
+  </div></li>
+	</ul>
+	<p class="Listing"><span class="hcp3">Note:</span> 
+	 The '[' ']' (square brackets) is not recommended to be used as Sub-ledger 
+	 Code. </p></li>
+	<li><p class="Listing">Click Update.</p></li>
+</ol>
+<p>&#160;</p>
+<p><a href="Portfolios.htm">How do I create a portfolio?</a></p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">How do I enforce 
+ a credit limit for a sub-ledger account?</a></p>
+  <div class="droptext" id="POPUP381431980" style="display: none;">
+	<p>This is done in Configuration &gt; Settings &gt; <a href="../Configuration/System_Defaults_-_Accounting.htm">System 
+	 Defaults &gt; Accounting</a>. Tick the Enforce Credit Limit for Sub-ledgers 
+	 checkbox.</p>
+  </div>
+<p><a href="Capital_Income_Segregation.htm">What is Capital/Income segregation?</a></p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Sub-Ledger Accounts - Setup</p>
+  <p class="hcp4">&#160;</p>
+  <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP381424853');
+	TextPopupInit('a2','POPUP381417965');
+	TextPopupInit('a4','POPUP381403660');
+	TextPopupInit('a5','POPUP381427371');
+	TextPopupInit('a6','POPUP381426814');
+	TextPopupInit('a7','POPUP381414753');
+	TextPopupInit('a8','POPUP381421236');
+	TextPopupInit('a9','POPUP381415805');
+	TextPopupInit('a10','POPUP381470211');
+	TextPopupInit('a3','POPUP381431980');
+//]]></script>
+ </body>
+</html>

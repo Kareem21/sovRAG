@@ -1,0 +1,135 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Approval Cards in Workflow</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+img.hcp2 { border:none; }
+span.hcp3 { font-weight:bold;
+font-style:italic; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Approval Cards in Workflow</h1>
+<p>Checklist item configured with the Approval Card field type is used 
+ to prevent users from going to the next step without approval.</p>
+<p>&#160;</p>
+<h2>Approving a Step</h2>
+<p>Approving a step can be done in Workflows screen and Workflow Steps 
+ screen if the user has access to these screens.</p>
+<ol class="hcp1">
+	<li><p>In Viewpoint - Home, go to To Do &gt; Overview &gt; To Do Summary 
+	 &gt; Jobs – Workflows/Jobs – Workflow Steps or To Do &gt; Action Items 
+	 &gt; Workflows/Workflow Steps screen.</p></li>
+	<li><p>Select the workflow to update.</p></li>
+	<li><p>Click Open. In the opened workflow, the status and approval 
+	 Id of the item will be seen.</p></li>
+	<li><p>Click Approval.</p></li>
+	<li><p>The Approval screen is shown on the left panel and the checklist 
+	 items in the step are shown on the right panel. Users can copy the 
+	 information in the checklist items and paste them in the Note field 
+	 in the Approval screen.</p></li>
+	<li><p>Users can view multiple tabs on the right panel if there is 
+	 a checklist item configured as Go to Screen field type. The information 
+	 shown can also be copied and pasted in the Note field in the Approval 
+	 screen. </p></li>
+	<li><p>In the Approval screen, the details of the approval such as 
+	 the Approval ID, number of approvals required, and users who are authorised 
+	 to approve will be shown.</p></li>
+	<li><p>Click Approve. </p></li>
+</ol>
+<p>The status of an approved approval card will change from 'Pending Approval' 
+ to 'Approved and Completed'. </p>
+<p><img src="../Approval%20Card.PNG" alt="" width="501" height="186" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<p><span class="hcp3">Note:</span> The 
+ approval details can also be viewed in the print preview screen of the 
+ workflow step containing the approval card by clicking on the ‘Print Workflow’ 
+ or ‘Print Step’ ribbon. &#160;</p>
+<p>Once a step has been approved, it is considered as completed so the 
+ next step becomes the current step.</p>
+<p>If the approver does not have access to either the Workflows or Workflow 
+ Steps screen, the approving is to be done through Approvals screen.</p>
+<ol class="hcp1">
+	<li><p>In Viewpoint - Home, go to To Do &gt; Action Items &gt; Approvals 
+	 screen.</p></li>
+	<li><p>Select the workflow step to approve.</p></li>
+	<li><p>Click Go to.</p></li>
+	<li><p>In the opened workflow, click Approval to open the Approval 
+	 screen.</p></li>
+</ol>
+<p><span class="hcp3">Note:</span> The 
+ workflow step may require multiple approvers. In this case, all the approvers 
+ must perform the approval before the step is considered as complete.</p>
+<p>&#160;</p>
+<h2>Undoing Step Approval</h2>
+<p>You can click on ‘Undo Approve’ to undo the approval. This is applicable 
+ only when more than one approval is required. After undoing the approval, 
+ you will need to re-approve the Approval Card.</p>
+<p><img src="../image4.png" alt="" border="0" class="hcp2"></p>
+<p><img src="../Image12.png" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<h2>Rejecting a Step</h2>
+<p>To reject a workflow step, ensure that you specify the reason in the 
+ Note field and then click Reject. This may prompt the New Task screen 
+ for a task to be created for the rejection. If so, review t he task details 
+ and click Update. </p>
+<p><span class="hcp3">Note</span>: Whether 
+ a task is created for rejecting a step or not depends on the configuration 
+ of your environment. </p>
+<p>&#160;<img src="../Image13.png" alt="" border="0" class="hcp2"></p>
+<p>The rejection task will be placed below the workflow item. If the workflow 
+ step is rejected for more than once, the task details of the latest record 
+ will be first shown.</p>
+<p><img src="../Image16.png" alt="" border="0" class="hcp2"></p>
+<p>Once the task assigned have been completed, you will need to approve 
+ the approval card again. In the approval screen, rejection details including 
+ timestamp and the approvals are displayed chronologically. &#160;</p>
+<p><img src="../image32.png" alt="" border="0" class="hcp2"></p>
+<p>If there are two or more approval cards within the same workflow step, 
+ rejecting a later approval card will void all earlier approvals where 
+ the status will change from ‘Approved and Completed’ to ‘Pending Approval’. 
+ You will need to approve the approval card again.</p>
+<p><img src="../image33.png" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+	<li><p><a href="Checklist_Item_-_Field_Types.htm">Checklist Item - 
+	 Field Types</a></p></li>
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+	<li><p><a href="Configuring_Checklist_Item.htm">Configuring Checklist 
+	 Item</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Approval Cards in Workflow</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

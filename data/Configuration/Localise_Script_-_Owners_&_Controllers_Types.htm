@@ -1,0 +1,147 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - Owners &amp; Controllers Types</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+p.hcp4 { font-weight:normal; }
+span.hcp5 { font-weight:bold; }
+li.hcp6 { list-style:none;
+display:inline; }
+li.hcp7 { text-decoration:none; }
+p.hcp8 { font-weight:normal;
+text-decoration:none; }
+span.hcp9 { font-weight:bold;
+text-decoration:underline; }
+span.hcp10 { font-weight:normal; }
+p.hcp11 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - Owners &amp; Controllers Types</h1>
+<p>Tag is available to allow new Owners and Controller Types to be added 
+ using Localise Script where the type will have the Customised checkbox 
+ ticked by default.</p>
+<p>&#160;</p>
+<h3>Adding New Type</h3>
+<p>When using Localise Script to add a new type, you need to specify the 
+ required fields and values for the type. Each field will be separated 
+ with the pipe '|'.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">OCTYPE:&lt;CountryCode&gt;=TypeDescription=&lt;Desc&gt;|&lt;DBField&gt;=&lt;Value&gt;|...</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp3">
+	<li><p class="hcp4"><span class="hcp5">&lt;CountryCode&gt;</span> 
+	 refers to the code of the country the type is for</p></li>
+	<li><p class="hcp4"><span class="hcp5">&lt;Desc&gt;</span> 
+	 refers to the description for the type</p></li>
+	<li><p class="hcp4"><span class="hcp5">&lt;DBField&gt;</span> 
+	 refers to the fields required for the type and comprises User Table 
+	 fields, Tag Values field and Active checkbox</p></li>
+	<li class="hcp6"><ul class="hcp3">
+		<li><p class="hcp4">UTCODE_EOTP - Register Type 
+		 - User Table field and is mandatory</p></li>
+		<li><p class="hcp4">UTCODE_EORS - Exemption Reason 
+		 - User Table field</p></li>
+		<li><p class="hcp4">UTCODE_EOCO - Capacity - User 
+		 Table field</p></li>
+		<li><p class="hcp4">UTCODE_EONI - Nature of Interest 
+		 - User Table field</p></li>
+		<li><p class="hcp4">UTCODE_EOST - Status - User 
+		 Table field</p></li>
+		<li><p class="hcp4">UTCODE_EOX1 - Extra 1 - User 
+		 Table field</p></li>
+		<li><p class="hcp4">UTCODE_EOX2 - Extra 2 - User 
+		 Table field</p></li>
+		<li><p class="hcp4">UTCODE_EOX3 - Extra 3 - User 
+		 Table field</p></li>
+		<li><p class="hcp4">UTCODE_ACTP - Action Type - 
+		 User Table field and is mandatory</p></li>
+		<li><p class="hcp4">TagValues - Tag Values field</p></li>
+		<li><p class="hcp4">IsActive - Active checkbox</p></li>
+	</ul></li>
+	<li class="hcp7"><p class="hcp8"><span class="hcp5">&lt;Value&gt;</span> is the value for &lt;DBField&gt;</p></li>
+	<li class="hcp6"><ul class="hcp3">
+		<li><p class="hcp8">For 
+		 &lt;DBField&gt; that are User Table field, the value must be the 
+		 code of the User Table</p></li>
+		<li><p class="hcp8">For 
+		 Tag Values field, the &lt;Value&gt; are tags to define the field 
+		 settings of non-User Table fields and can include</p></li>
+		<li class="hcp6"><ul class="hcp3">
+			<li class="hcp7"><p class="hcp8">&lt;br&gt; 
+			 for a line break</p></li>
+			<li><p class="hcp8">&lt;pipe&gt; 
+			 for a | symbol</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p class="SeeAlso">&#160;</p>
+<p class="hcp1">Example</p>
+<p class="hcp1"><span style="font-weight: normal; 
+	 text-decoration: none; ">OCTYPE:GG=TypeDescription=Guernsey|UTCODE_EOTP=GG_EOTP|UTCODE_ACTP=GG_ACTP|TagValues=[RefDirect.Visible=Y][RefDirect.Caption=Direct 
+ Owner][RefDirect.Mandatory=Y]</span></p>
+<p class="hcp8">&#160;</p>
+<h3>Deleting a Type</h3>
+<p>The tag below will delete the Owner and Controller Type for the specified 
+ jurisdiction.</p>
+<p>&#160;</p>
+<p class="hcp1"><span class="hcp9">Syntax</span></p>
+<p class="hcp2">OCTYPEDEL:&lt;CountryCode&gt;</p>
+<p class="hcp2"><span class="hcp10">where</span> 
+ &lt;CountryCode&gt; <span class="hcp10">refers to the country 
+ code of the jurisdiction.</span></p>
+<p class="hcp2">&#160;</p>
+<p class="hcp1"><span><span class="hcp9">Example</span></span></p>
+<p style="font-family: Arial, Verdana, Tahoma; font-size: 12px; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; background-color: #ffffff; 
+	 display: inline	 ! important ; text-decoration: none; "><span style="font-family: Arial, Verdana, Tahoma; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+	 text-decoration-color: initial;">To delete the Owner and Controller 
+ type for Guernsey: OCTYPEDEL:GG</span></p>
+<p class="hcp2">&#160;</p>
+<p class="hcp4">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Owners_&amp;_Controllers_Types.htm">Owners &amp; Controllers 
+	 Types</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p class="hcp4">&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - Owners & Controllers Types</p>
+<p class="hcp11">&#160;</p>
+<p class="hcp11">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp11">Version: 8.0.2022.09.20</p>
+</body>
+</html>

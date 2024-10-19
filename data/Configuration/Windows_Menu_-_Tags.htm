@@ -1,0 +1,172 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Windows Menu - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Windows Menu - Tags</h1>
+<p>For a Dashboard or a Summary screen, it is necessary to add tags to:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">specify 
+	 the widgets for the Dashboard or Overview screen</a></p>
+	<div class="droptext" id="POPUP593531057" style="display: none;">
+		<h6 class="Heading8">[/Widgets=&lt;WidgetID&gt;/]</h6>
+		<p>You can obtain the Widget ID from Dashboard Widgets or use the 
+		 Tag Values Wizard. For multiple widgets, separate the widget IDs 
+		 with a comma. For example:</p>
+		<p>[/Widgets=VPEAJUR001,VPEAOFF001,VPEAREL001/]</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">hide 
+	 the Selection Setup area from the screen</a></p>
+	<div class="droptext" id="POPUP600353726" style="display: none;">
+		<h6 class="Heading8"><span lang="EN-GB" xml:lang="EN-GB" style="mso-bidi-font-family: 'Times New Roman'; 
+									 mso-bidi-theme-font: minor-latin;">[/EnableSelection=0/]</span></h6>
+		<p class="MsoNormal" style="margin-bottom: 0in; line-height: normal; 
+			 mso-layout-grid-align: none; text-autospace: none; mso-bidi-font-family: 'Times New Roman';"><span 
+		 lang="EN-GB" xml:lang="EN-GB" style="mso-bidi-theme-font: minor-latin;">(Optional) 
+		 Only applicable to Home level Widgets. Apply this tag to hide 
+		 the Selection Setup area. </span></p>
+		<p class="MsoNormal" style="margin-bottom: 0in; line-height: normal; 
+			 mso-layout-grid-align: none; text-autospace: none; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-bidi-theme-font: minor-latin;"><span lang="EN-GB" xml:lang="EN-GB" 
+														 style="font-weight: bold; 
+														 font-style: italic;">Note</span><span 
+		 lang="EN-GB" xml:lang="EN-GB">: Scope selection is shown by default. 
+		 </span></p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">the 
+	 template for the Summary screen</a></p>
+	<div class="droptext" id="POPUP594174059" style="display: none;">
+		<h6 class="Heading8">[/Summary=[&lt;Condition&gt;=&lt;FormCode&gt;]/]</h6>
+		<p>For each Summary screen, it is possible to set different templates 
+		 based on condition so that only relevant information is shown 
+		 in the Summary screen where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Condition&gt; can be</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp1">
+				<li><p>MF.&lt;TypeCode&gt; to set condition based on Master 
+				 File type e.g. MF.I, MF.C</p></li>
+				<li><p>ET.&lt;JurisdictionCode&gt;-&lt;EntityTypeCode&gt; 
+				 to set condition based on entity's jurisdiction and type 
+				 e.g. ET.HK-CG</p></li>
+				<li><p>OS.&lt;OwnershipStructureCode&gt; to set condition 
+				 based on entity's ownership structure e.g. OS.SA</p></li>
+				<li><p>JU.&lt;CountryCode&gt; to set condition based on 
+				 jurisdiction e.g. JU.HK</p></li>
+				<li><p>DF to set as default template for the Summary screen</p></li>
+			</ul></li>
+			<li><p>&lt;FormCode&gt; refers to the form code of the template</p></li>
+		</ul>
+		<p><span lang="EN-GB" xml:lang="EN-GB">The caption for conditional 
+		 widgets will be ‘Multiple widgets’. Users can change this by adding 
+		 the [Caption=] tag to define a new caption.</span></p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">link 
+	 a workflow to a screen</a></p>
+	<div class="droptext" id="POPUP594157028" style="display: none;">
+		<h6 class="Heading8">[/WF=&lt;WorkflowKey&gt;/]</h6>
+		<p>You can obtain the Workflow Key from <a href="../Shared/Workflow_Library.htm">Workflow 
+		 Library</a> or use the Tag Values Wizard.</p>
+ </div></li>
+</ul>
+<p>Some dashboards contain default widgets. <span lang="EN-GB" xml:lang="EN-GB">While 
+ these widgets can still be removed, a reset dashboard function in Viewpoint 
+ Management can restore the <a class="dropspot" href="javascript:TextPopup(this)" id="a4">default 
+ widgets</a>. </span></p>
+ <div class="droptext" id="POPUP514878940" style="display: none;">
+	<h6 class="Heading8">[/DF.Widgets=/]</h6>
+	<p>Default widgets will appear with this tag.</p>
+ </div>
+<p>&#160;</p>
+<h2>Tag Values Wizard</h2>
+<p>This screen is used to generate and insert the tags based on the selected 
+ widget and/or workflow for the screen. To access it, click on the Browse 
+ button next to the Tag Values field.</p>
+<p>&#160;</p>
+<p class="FldExplain">Tabs</p>
+<p>The available tabs allow you to select the relevant widget and workflow 
+ template.</p>
+<p>&#160;</p>
+<p class="FldExplain">List of available items</p>
+<p>This shows the available widgets and workflow templates in the relevant 
+ tab that you can select.</p>
+<p>&#160;</p>
+<p class="FldExplain">List of selected items</p>
+<p>This shows the widgets/workflow templates that you have selected.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">&gt;&gt;</span> - Click this 
+	 to add to the list of selected items</p></li>
+	<li><p><span class="hcp2">&lt;&lt;</span> - Click this 
+	 to remove from the list of selected items</p></li>
+	<li><p><span class="hcp2">Move Up</span> - Click this 
+	 to move the selected item up the list</p></li>
+	<li><p><span class="hcp2">Move Down</span> - Click this 
+	 to move the selected item down the list</p></li>
+	<li><p><span class="hcp2">&lt; Back</span> - This is 
+	 enabled in Select Workflows tab and will return to the Select Widgets 
+	 tab.</p></li>
+	<li><p><span class="hcp2">Next &gt;/OK</span> - Click 
+	 Next &gt; to go to the Select Workflows tab. Click OK after you have 
+	 completed your selection so the tags are added to the Tag Values field.</p></li>
+	<li><p><span class="hcp2">Cancel</span> - Click this 
+	 to exit the screen without adding any tags.</p></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Settings_-_Windows_menu.htm">Windows Menu</a></p></li>
+	<li><p><a href="Dashboard_Widgets.htm">Dashboard Widgets</a></p></li>
+	<li><p><a href="../Shared/Overview_Screen.htm">Overview screen</a></p></li>
+	<li><p><a href="../Shared/Dashboard_Screen.htm">Dashboard screen</a></p></li>
+	<li><p><a href="../Shared/Summary_Screen.htm">Summary screen</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Windows Menu - Tags</p>
+ <p class="hcp3">&#160;</p>
+ <p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP593531057');
+	TextPopupInit('a5','POPUP600353726');
+	TextPopupInit('a2','POPUP594174059');
+	TextPopupInit('a3','POPUP594157028');
+	TextPopupInit('a4','POPUP514878940');
+//]]></script>
+</body>
+</html>

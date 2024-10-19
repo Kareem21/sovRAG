@@ -1,0 +1,206 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Localise Script - User Fields</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:normal; }
+img.hcp5 { border:none; }
+p.hcp6 { font-weight:bold;
+font-style:italic; }
+ul.hcp7 { list-style:disc; }
+p.hcp8 { font-weight:normal; }
+li.hcp9 { list-style:none;
+display:inline; }
+li.hcp10 { text-decoration:none; }
+p.hcp11 { font-weight:normal;
+text-decoration:none; }
+p.hcp12 { color:Transparent; }
+p.hcp13 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Localise Script Tags - User Fields</h1>
+<p>Three tags are available for Localise Scripts - &#160;for deleting an 
+ existing user field, creating a new user field and then defining the characteristics 
+ of the user field.</p>
+<p>&#160;</p>
+<h3>Deleting a User Field</h3>
+<p>The tag below is to delete an existing User Field.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp2">FUDEL:&lt;FKey&gt;</p>
+<p>&#160;</p>
+<p>where <span class="hcp3">&lt;FKey&gt;</span> <span class="hcp4">is 
+ the user field code that is obtained from Configuration &gt; Business 
+ Parameters &gt; User Fields.</span></p>
+<p><img src="../image115.jpg" alt="" width="679" height="205" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p class="hcp1">Example</p>
+<p>To delete the field Reference [KYC120]: FUDEL:KYC120</p>
+<p>&#160;</p>
+<h3>Adding and Defining a User Field</h3>
+<p>When using Localise Script to add a new User Field, tags are required 
+ to create the User Field and specify its settings.</p>
+<p>&#160;</p>
+<p class="hcp1">Syntax</p>
+<p class="hcp6">To add a user field:</p>
+<p class="hcp2">FUADD:&lt;FKey&gt;+&lt;FCat&gt;=&lt;Caption&gt;</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp6">To define the user field:</p>
+<p class="hcp2">FUVAL:&lt;FKey&gt;+&lt;DBField&gt;=&lt;Value&gt;</p>
+<p>&#160;</p>
+<p>where:</p>
+<ul class="hcp7">
+	<li><p class="hcp2">&lt;FKey&gt; <span class="hcp4">is 
+	 the user field code that is obtained from Configuration &gt; Business 
+	 Parameters &gt; User Fields.</span></p></li>
+	<li><p class="hcp8"><span class="hcp3">&lt;FCat&gt;</span> 
+	 is the Category/Jurisdiction/Type/Classification of user field. Enter 
+	 ALL if it is a General Field.</p></li>
+	<li><p class="hcp8"><span class="hcp3">&lt;Caption&gt;</span> 
+	 is the Caption of the user field.</p></li>
+	<li><p class="hcp8"><span class="hcp3">&lt;DBField&gt;</span> 
+	 is the database field for the user field setting, and can be obtained 
+	 from Configuration &gt; Settings &gt; Customise &gt; Field Settings.</p></li>
+	<li class="hcp9"><ul class="hcp7">
+		<li><p class="hcp8">MfType - to indicate the User 
+		 Field Type</p></li>
+		<li><p class="hcp8"><span class="hcp4">AllowDup 
+		 - Allow Duplicates option</span></p></li>
+		<li><p class="hcp8">AutoAdd - Automatically Add 
+		 option</p></li>
+		<li><p class="hcp8">FldType - Field Type field</p></li>
+		<li><p class="hcp8">FldCaption - Caption field</p></li>
+		<li><p class="hcp8">DefValue - Default Value field</p></li>
+		<li><p class="hcp8">DefNote - Default Note field</p></li>
+		<li><p class="hcp8">KeyValues - Key Values field<br>
+		<br>
+		<span style="font-weight: bold; text-decoration: underline; "><img src="../image116.jpg" alt="" width="965" height="405" border="0" class="hcp5"></span></p></li>
+	</ul></li>
+	<li class="hcp10"><p style="font-weight: bold; text-decoration: none; ">&lt;Value&gt; 
+	 <span class="hcp4">is the value for &lt;DBField&gt;</span></p></li>
+	<li class="hcp9"><ul class="hcp7">
+		<li class="hcp10"><p class="hcp11">For 
+		 MfType, &lt;Value&gt; is a code to indicate the User Field Type:<br>
+		</p>
+		<table class="Table1" cellspacing="0px" width="53.396%">
+			<col style="width: 62.691%;">
+			<col style="width: 37.309%;">
+			<tr class="t1st">
+				<td><p class="hcp12">User Field Type</p></td>
+				<td><p class="hcp12">Code</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Master File</p></td>
+				<td class="t2Col"><p>M</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Identity Details</p></td>
+				<td class="t2Col"><p>N</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Tax Details</p></td>
+				<td class="t2Col"><p>O</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Company</p></td>
+				<td class="t2Col"><p>C</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Trust</p></td>
+				<td class="t2Col"><p>T</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Fund</p></td>
+				<td class="t2Col"><p>F</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Share Class</p></td>
+				<td class="t2Col"><p>S</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Billing File</p></td>
+				<td class="t2Col"><p>B</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Matter Account</p></td>
+				<td class="t2Col"><p>R</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Client Account File</p></td>
+				<td class="t2Col"><p>A</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Sub-ledger Accounts</p></td>
+				<td class="t2Col"><p>L</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>Portfolios</p></td>
+				<td class="t2Col"><p>P</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>Fixed Assets</p></td>
+				<td class="t2Col"><p>X</p></td>
+			</tr>
+		</table></li>
+	</ul></li>
+</ul>
+<p class="hcp11"><span style="font-weight: bold; 
+	 text-decoration: none underline; "><img src="../image117.jpg" alt="" width="850" height="349" border="0" class="hcp5"></span></p>
+<p class="hcp11">&#160;</p>
+<p class="hcp1">Example</p>
+<p style="font-weight: normal; font-style: normal;">To set up a user field 
+ as shown below:</p>
+<p><img src="../image119.jpg" alt="" width="569" height="340" border="0" class="hcp5"></p>
+<p>FUADD:KYC120+KYG=Reference</p>
+<p>FUVAL:KYC120+MfType=M</p>
+<p>FUVAL:KYC120+AllowDup=-1</p>
+<p>FUVAL:KYC120+AutoAdd=0</p>
+<p>FUVAL:KYC120+FldType=71</p>
+<p>FUVAL:KYC120+DefValue=</p>
+<p>FUVAL:KYC120+DefNote=</p>
+<p>FUVAL:KYC120+KeyValues=[TABLECODE=REID][SHOWCOMBO]</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp7">
+	<li><p><a href="User_Fields_(Configuration).htm">User Fields</a></p></li>
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+	<li><p><a href="Creating_Custom_Script_for_Localise.htm">Creating Custom 
+	 Script for Localise Function</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Localise Script - User Fields</p>
+<p class="hcp13">&#160;</p>
+<p class="hcp13">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp13">Version: 8.0.2022.09.20</p>
+</body>
+</html>

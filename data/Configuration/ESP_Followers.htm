@@ -1,0 +1,210 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>ESP Followers</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+ol.hcp3 { list-style:decimal; }
+li.hcp4 { list-style:disc; }
+span.hcp5 { font-weight:bold; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Followers</h1>
+<p>The ESP Followers settings screen consists of a list of Followers types 
+ that the administrator can activate in the CP-WP. Once activated, users 
+ can ‘follow’ the components in Engage Servicing Portal (ESP). The Followers 
+ feature is available for these types:</p>
+<ul class="hcp1">
+	<li><p>Entity Information</p></li>
+	<li><p>Meetings</p></li>
+	<li><p>Filings</p></li>
+	<li><p>Documents</p></li>
+	<li><p>Workflows (Requests)</p></li>
+</ul>
+<p>When the component is followed, users will receive notification in ESP 
+ if there is any update (change) in their followed items.</p>
+<p>&#160;</p>
+<h2>Configuration</h2>
+<p>A few configurations are required in the <a class="dropspot" href="javascript:TextPopup(this)" id="a4">Front-office</a> 
+ prior to enabling the Followers feature in ESP.</p>
+<div class="droptext" id="POPUP600843365" style="display: none;">
+	<h4>Activate the Follower Components</h4>
+	<p>In the Front-office, the Administrator is required to activate the 
+	 Followers component.</p>
+	<p>This is done in the Configuration &gt; Engage Servicing Portal &gt; 
+	 Global &gt; Followers screen.</p>
+	<p><span class="hcp2">Note</span>: 
+	 The Followers screen is hidden by default due to authority settings. 
+	 To access this screen, you may grant authority in Configuration &gt; 
+	 Users &amp; Security &gt; Security Setup &gt; Users Roles.</p>
+	<ol class="hcp3">
+		<li><p>In the Configuration &gt; Engage Servicing Portal &gt; Global 
+		 &gt; Followers screen, select the Followers component and click 
+		 Edit.</p></li>
+		<li><p>Update the settings by tick/untick the options.</p></li>
+		<li><p>Click Update once done.</p></li>
+		<li><p>Repeat step (1) to (3) for other Followers component.</p></li>
+	</ol>
+	<p>&#160;</p>
+	<h4>Enabling Task Scheduler Job ‘Engage Servicing Portal – Follower 
+	 Notification [CPFN]’ </h4>
+	<p>In the Front-office, the Task Scheduler job ‘Engage Servicing Portal 
+	 – Follower Notification [CPFN]’ processes any Notification triggered 
+	 by the Change from the Back-office. </p>
+	<ol class="hcp3">
+		<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+		 &gt; Agent Job Scheduler.</p></li>
+		<li><p>Click New. In the ‘Setup’, select Job Type ‘Engage Servicing 
+		 Portal – Follower Notification [CPFN]’.</p></li>
+		<li><p>Click Next &gt;.</p></li>
+		<li><p>In the ‘Criteria’, enter the Database where the notification 
+		 is retrieved.</p></li>
+		<li><p>Click Next &gt;.</p></li>
+		<li><p>If an e-mail notification for the job is required, tick 
+		 the option ‘Enable E-mail Notification’ and specify details for 
+		 the e-mail. If you prefer different types of e-mail notification, 
+		 tick ‘Advanced’ and you will get the following:</p></li>
+	</ol>
+	<ul>
+		<ul>
+			<li class="hcp4"><p>Success - this is the notification 
+			 when the job is completed successfully.</p></li>
+			<li class="hcp4"><p>Fail - this is the notification 
+			 when the job is not completed.</p></li>
+		</ul>
+	</ul>
+	<ol start="7" class="hcp3">
+		<li><p>Click Next &gt;.</p></li>
+		<li><p>In the ‘Schedule’, enter the job frequency. </p></li>
+		<li><p>Click Done.</p></li>
+	</ol>
+	<p><span class="hcp2">Note</span>: 
+	 Whenever there is a configuration update in the Front-office, it is 
+	 recommended to recycle the Web IIS Application Pool to refresh the 
+	 settings in the Web Portal. This is followed by restarting the Web 
+	 IIS Application Pool.</p>
+</div>
+<p>&#160;</p>
+<p class="FldExplain">Filters</p>
+<p>The filters apply to the Followers type list. You can select either 
+ Active, Inactive or All.</p>
+<p>&#160;</p>
+<p class="FldExplain">Followers item list</p>
+<p>The list shows the Followers type available in the ESP.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command button</p>
+<p>Click on the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp5">Edit</span> - Click this to 
+	 edit the selected Follower component.</p></li>
+	<li><p><span class="hcp5">Configure</span> - Click this 
+	 to configure the Follower component. This includes <a class="dropspot" href="javascript:TextPopup(this)" id="a2">assign 
+	 and edit a Change Code</a> or deleting a Change Code. 
+	 </p>
+	<div class="droptext" id="POPUP574731977" style="display: none;">
+		<ol class="hcp3">
+			<li><p>To assign a Change Code, click on the magnifier glass 
+			 icon to select a Change Code.</p></li>
+			<li><p>Select the Change Code and click Select.</p></li>
+			<li><p>Click Assign&gt;&gt;&gt;.</p></li>
+			<li><p>Click Close once done.</p></li>
+		</ol>
+		<p>For a newly assigned Change Code, it is important to include 
+		 the tag value, otherwise no notification will be generated for 
+		 the Change.</p>
+		<p>The Edit button in the Select Change Code window is available 
+		 to allow the administrator to enter/customise the tag value for 
+		 the Change Code. To include the tag value:</p>
+		<ol class="hcp3">
+			<li><p>In the Select Change Code window, select a Change Code 
+			 and click Edit.</p></li>
+			<li><p>This will launch the Configure Tag Values window. </p></li>
+			<li><p>Enter the Tag Values accordingly. The available syntax 
+			 are as <a class="dropspot" href="javascript:TextPopup(this)" id="a1">follows</a>:</p>
+			<div class="droptext" id="POPUP568858296" style="display: none;">
+				<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="100%">
+					<col style="width: 20.991%;">
+					<col style="width: 45.676%;">
+					<col style="width: 33.333%;">
+					<tr class="t1st">
+						<td><p>Syntax</p></td>
+						<td><p>Description</p></td>
+						<td><p>Example</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>NOTIFY_MSG </p></td>
+						<td class="t2Col"><p>This is the message template 
+						 for the notification that is shown to the portal 
+						 users. It uses standard Viewpoint template variables. 
+						 The defined variables will be replaced by values 
+						 in the Back-office.</p></td>
+						<td class="t1Col"><p>[/NOTIFY_MSG=(+CC.AddrCode\#AD-40-0+) 
+						 has been appointed as (+CC.OfficerText+)./]</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>FILTER</p></td>
+						<td class="t2Col"><p>This defines the conditions 
+						 to filter the EventLog records retrieved from 
+						 the Back-office. </p></td>
+						<td class="t1Col"><p>[/FILTER=CSPUserCode &lt;&gt; 
+						 '' AND CSPUserCode IS NOT NULL/]</p></td>
+					</tr>
+				</table>
+				<p>&#160;</p>
+				<p>&#160;</p>
+   </div></li>
+			<li><p>Click OK.</p></li>
+			<li><p>Click Close.</p></li>
+		</ol>
+  </div></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Viewpoint 
+	 Engage Servicing Portal</a></p></li>
+</ul>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="ViewPoint_Engage_Servicing_Portal_(ESP).htm">Engage Servicing Portal</a> &gt; <a href="ESP_Databases.htm">Global</a> &gt; Followers</p>
+  <p class="hcp6">&#160;</p>
+  <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a4','POPUP600843365');
+	TextPopupInit('a2','POPUP574731977');
+	TextPopupInit('a1','POPUP568858296');
+//]]></script>
+ </body>
+</html>

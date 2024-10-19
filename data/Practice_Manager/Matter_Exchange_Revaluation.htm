@@ -1,0 +1,327 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="MS-HAID" content="Matter Exchange Revaluation">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Matter Exchange Revaluation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+li.hcp3 { font-family:Arial, sans-serif;
+font-size:13px; }
+p.hcp4 { font-family:Arial, sans-serif; }
+span.hcp5 { mso-bidi-font-size:10.0pt;
+mso-fareast-font-family:MS Mincho;
+mso-bidi-font-family:Times New Roman;
+mso-ansi-language:EN-GB;
+mso-fareast-language:ZH-TW;
+mso-bidi-language:AR-SA;
+font-family:Arial, sans-serif;
+font-weight:bold; }
+span.hcp6 { font-family:Arial, sans-serif; }
+span.hcp7 { mso-bidi-font-size:10.0pt;
+mso-fareast-font-family:MS Mincho;
+mso-bidi-font-family:Times New Roman;
+mso-ansi-language:EN-GB;
+mso-fareast-language:ZH-TW;
+mso-bidi-language:AR-SA;
+font-family:Arial, sans-serif; }
+span.hcp8 { font-weight:bold;
+font-style:italic; }
+td.hcp9 { border-top:solid 1pt #000000;
+border-right:solid 1pt #000000;
+border-bottom:solid 1pt #000000;
+vertical-align:top;
+mso-border-left-alt:solid windowtext .5pt;
+mso-border-alt:solid windowtext .5pt;
+padding:0cm 5.4pt 0cm 5.4pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp10 { border-top:solid 1pt #000000;
+border-right:solid 1pt #000000;
+border-bottom:solid 1pt #000000;
+vertical-align:top;
+mso-border-left-alt:solid windowtext .5pt;
+mso-border-alt:solid windowtext .5pt;
+mso-background-themecolor:background2;
+padding:0cm 5.4pt 0cm 5.4pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+p.hcp11 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Matter Exchange Revaluation</h1>
+<p>This menu allows users to perform Matter Exchange revalue. The 'New 
+ Exchange' rate will be populated from the exchange rate master table based 
+ on the Revaluation Date. The revalue will be logged in the change log 
+ with Change Code 'BMEV'.</p>
+<p>The controls in this screen as listed:</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Revaluation Date</span> - This 
+	 refers to the date where the 'New Exchange' rate is retrieved from.</p></li>
+	<li><p><span class="hcp2">Revenue Entity</span> - If 
+	 specified, the system will load all the matters related to the revenue 
+	 entity. If this is not defined, it will load all the matters.</p></li>
+	<li><p><span class="hcp2">Load Currencies and Rates</span> 
+	 - <span lang="EN-GB" xml:lang="EN-GB">Based on the ‘revaluation date’, 
+	 and ‘revenue entity’ fields defined, system will populate all the 
+	 records. The system will calculate the below:</span></p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p><span lang="EN-GB" xml:lang="EN-GB">Exchange column = [CCY 
+		 Balance] / Base Balance</span></p></li>
+		<li><p><span lang="EN-GB" xml:lang="EN-GB">Exchange Gain/Loss = 
+		 (Matter Balance * [New Exchange]) - (Base Balance)</span></p></li>
+	</ul></li>
+	<li class="hcp3"><p class="hcp4"><span lang="EN-GB" xml:lang="EN-GB" class="hcp5">Select All</span> <span class="hcp6">-</span> 
+	 <span class="hcp7">This 
+	 button will s</span><span lang="EN-GB" xml:lang="EN-GB" class="hcp7">elects 
+	 all records in the grid.</span></p></li>
+	<li class="hcp3"><p class="hcp4"><span lang="EN-GB" xml:lang="EN-GB" class="hcp5">Deselect All</span> <span class="hcp6">- 
+	 This button</span> will <span lang="EN-GB" xml:lang="EN-GB" class="hcp7">de-selects 
+	 all records in the grid.</span></p></li>
+	<li><p><span lang="EN-GB" xml:lang="EN-GB" class="hcp5">Revalue</span> <span class="hcp6">- 
+	 This button</span> <span class="hcp7">w</span><span lang="EN-GB" xml:lang="EN-GB" class="hcp7">ill 
+	 post the ‘revaluation receipt’. When clicked, the system will show 
+	 a ‘Note’ column indicating that the record is successfully posted/failed.</span></p></li>
+</ul>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" class="hcp8">Note:</span><span lang="EN-GB" 
+	 xml:lang="EN-GB"> W</span>hen right-mouse click on the screen, there 
+ will be four control options which are Print Preview, Print, Copy and 
+ Export to Excel.</p>
+<p>&#160;</p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" style="text-decoration: underline; ">Example 
+ Calculation:</span></p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">I</span>f Revenue 
+ Entity is specified, system will load all the matter belongs to the specified 
+ Revenue Entity grouped by Currency.</p>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Two different 
+ currencies – GBP and MYR. The grid will load two records, GBP and MYR. 
+ Below are the data for these two currencies:</span></p>
+<table class="Table1" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" cellspacing="0px">
+	<tr class="t1st" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+		<td style="border: solid 1pt #000000; vertical-align: top; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="108"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">Currency</span></p></td>
+		<td width="107" class="hcp9"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Revenue 
+		 Entity</span></p></td>
+		<td width="86" class="hcp9"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Balance 
+		 Cur (CCY)</span></p></td>
+		<td width="105" class="hcp9"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Balance 
+		 Base</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">(RC)</span></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="108"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">GBP</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="107"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">MAINBI</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="86"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">800</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="105"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">1951.30</span></p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="108"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">GBP</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="107"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">MAINBI</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="86"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">750</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="105"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">1258.84</span></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 3;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="108"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">MYR</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="107"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">MAINBI</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="86"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">500</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="105"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">125.80</span></p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 4; mso-yfti-lastrow: yes;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="108"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">MYR</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="107"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">MAINBI</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="86"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">800</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="105"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">215.80</span></p></td>
+	</tr>
+</table>
+<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">The calculated 
+ 'Exchange' as shown:</span></p>
+<table class="Table1" style="border: none; mso-border-alt: solid windowtext .5pt; 
+		 mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" cellspacing="0px">
+	<tr class="t1st" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 25.1pt;">
+		<td style="border: solid 1pt #000000; vertical-align: top; mso-border-alt: solid windowtext .5pt; 
+			 mso-background-themecolor: background2; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="118" bgcolor="#334796"><p class="MsoNormal"><span lang="EN-GB" 
+		 xml:lang="EN-GB">Currency</span></p></td>
+		<td width="111" bgcolor="#334796" class="hcp10"><p 
+			 class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">CCY 
+		 Balance</span></p></td>
+		<td width="111" bgcolor="#334796" class="hcp10"><p 
+			 class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">&lt;RC&gt; 
+		 Balance</span></p></td>
+		<td width="97" bgcolor="#334796" class="hcp10"><p 
+			 class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Exchange</span></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1; height: 14.9pt;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="118"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">GBP</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="111"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">1550</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="111"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">3210.14</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="97"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">0.482845</span></p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2; mso-yfti-lastrow: yes; height: 14.9pt;">
+		<td class="t1Col" style="border-left: Solid 1pt #000000; border-right: solid 1pt #000000; 
+			 border-bottom: solid 1pt #000000; vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="118"><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">MYR</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="111"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">1300</span></p></td>
+		<td class="t1Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="111"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">341.60</span></p></td>
+		<td class="t2Col" style="border-right: solid 1pt #000000; border-bottom: solid 1pt #000000; 
+			 vertical-align: top; mso-border-top-alt: solid windowtext .5pt; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="97"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">3.805621</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p><span lang="EN-GB" xml:lang="EN-GB" class="hcp8">Note:</span><span 
+	 style="display: inline	 ! important ; float: none; background-color: rgba(255, 255, 255, 1); 
+	 color: var(--component-htmlEditor-foreground-color, rgba(0, 0, 0, .9)); 
+	 font-family: 'Segoe UI VSS ', , 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Ubuntu, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; 
+	 -ms-user-select: text; orphans: 2; -webkit-text-stroke-width: 0px;"> 
+ Due to the rounding-off difference, the total exchange gain/loss posted 
+ can slightly differ from the amount displayed in the grid.</span></p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Configuration/Exchange_Rates.htm">Exchange Rates</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="../Shared/Overview.htm">Home</a> &gt; <a href="Posting_control_settings.htm">Practice Management</a> &gt; <a href="Time_Management.htm">Sales Ledger</a> &gt; Matter Exchange Revaluation</p>
+<p class="hcp11">&#160;</p>
+<p class="hcp11">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp11">Version: 8.0.2022.09.20</p>
+</body>
+</html>

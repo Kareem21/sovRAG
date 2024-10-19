@@ -1,0 +1,260 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Global File Review</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { margin-left:60px; }
+p.hcp3 { margin-top:12px; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Global File Review</h1>
+<p>User can schedule to periodically run the Global File Review task in 
+ Viewpoint Task Scheduler and Notification Agent. This can be done through 
+ the new Global File Review [GLFR] job type.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure the Job Type is set to ‘Global File Review 
+	 [GLFR]’.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Tag Values, add the tags to specify the requirements and 
+	 review scope for the job.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>When the scheduled Global File Review job is successfully executed, 
+ user will be able to see the created review tasks in the File Review screen. 
+ Separate records will be created for each defined ‘Group’.</p>
+<p>&#160;</p>
+<h3>Global File Review – Tags</h3>
+<p>The following tags are used to specify which Master Files to review 
+ and review scope for the job.</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 23.865%;">
+	<col style="width: 33.623%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td><p>Tag</p></td>
+		<td><p>Explanation</p></td>
+		<td><p>Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[Description=&lt;Text&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the ‘Review Description’ column in the File Review screen.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[Description=AEOI 
+		 Review]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[&lt;Parameter&gt;&lt;Operator&gt;&lt;Value&gt;]</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the Master Files for the review where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Parameter&gt; can be:</p></li>
+			<li><p class="hcp2">MfType - To include/exclude 
+			 Master Files based on Master File type.</p></li>
+			<li><p class="hcp2">MfStatus - To include/exclude 
+			 Master Files based on Master File status.</p></li>
+			<li><p class="hcp2">AdminGroup - To include/exclude 
+			 Master Files based on the Administrator Group of the Master 
+			 File.</p></li>
+			<li><p class="hcp2">OrgUnit - To include/exclude 
+			 Master Files based on the Organisational Unit of the Master 
+			 File.</p></li>
+			<li><p class="hcp2">Team - To include/exclude 
+			 Master Files based on the Team.</p></li>
+			<li><p>&lt;Operator&gt; can be:</p></li>
+			<li><p class="hcp2">= to include</p></li>
+			<li><p class="hcp2">&lt;&gt; to exclude</p></li>
+			<li><p>&lt;Value&gt; refers to the code for the parameter e.g. 
+			 if &lt;Parameter&gt; is MfType, &lt;Value&gt; is the code 
+			 of the Master File Types [ADTP] lookup values.</p></li>
+		</ul>
+		<p>To have multiple values, separate with a comma.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[MfType=C,I,T]</p>
+		<p>means to include Company, Individual and Trust for Master File 
+		 Type.</p>
+		<p>&#160;</p>
+		<p>[MfType&lt;&gt;N,O,P,F]</p>
+		<p>means to exclude Master Files of the type 'Foundation', 'Other', 
+		 'Partner' and 'Fund'.</p>
+		<p>&#160;</p>
+		<p>[MfStatus=0]</p>
+		<p>means to include Master Files that are Open/Active only.</p>
+		<p>&#160;</p>
+		<p>[MfStatus&lt;&gt;8]</p>
+		<p>means to exclude Master Files with the status 'Closed/Inactive'.</p>
+		<p>&#160;</p>
+		<p>[AdminGroup=GROUP1,GROUP3]</p>
+		<p>means to include Master Files in the Administrator Groups 'GROUP1' 
+		 and 'GROUP3'.</p>
+		<p>&#160;</p>
+		<p>[AdminGroup&lt;&gt;GROUP2]</p>
+		<p>Means to exclude Master Files in the Administrator Group 'GROUP2'.</p>
+		<p>&#160;</p>
+		<p>[OrgUnit=ACC,CSC]</p>
+		<p>means to include Master Files in 'ACC' and 'CSC' Organisational 
+		 Unit.</p>
+		<p>&#160;</p>
+		<p>[OrgUnit&lt;&gt;CSL]</p>
+		<p>means to exclude Master Files in the 'CSL' Organisational Unit.</p>
+		<p>&#160;</p>
+		<p>[Team=T1]</p>
+		<p>means to include Master Files in the 'T1' Team.</p>
+		<p>&#160;</p>
+		<p>[Team&lt;&gt;T2]</p>
+		<p>means to exclude Master Files in the 'T2' Team.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[ReviewScope=&lt;Value&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the file review scope where &lt;Value&gt; can be:</p>
+		<ul class="hcp1">
+			<li><p class="hcp3">0 - All review scope</p></li>
+			<li><p class="hcp3">1 - Setup review</p></li>
+			<li><p class="hcp3">4 - Compliance review </p></li>
+			<li><p class="hcp3">8 - Statutory review of managed 
+			 entities</p></li>
+			<li><p class="hcp3">64 - Meetings review </p></li>
+			<li><p class="hcp3">128 - Filings review </p></li>
+			<li><p class="hcp3">256 - Reviews review</p></li>
+			<li><p class="hcp3">512 - Data Validation review</p></li>
+			<li><p class="hcp3">1024 - AEOI review </p></li>
+			<li><p class="hcp3">2048 - AEOI review of managed 
+			 entities</p></li>
+			<li><p class="hcp3">4096 - Activities Profiles 
+			 review</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[ReviewScope=0]</p>
+		<p>means to include all review scopes</p>
+		<p>&#160;</p>
+		<p>[ReviewScope=448]</p>
+		<p>means to include Filings review (128), Meetings review (64) 
+		 and Reviews review (256)</p>
+		<p>[128+64+256=448]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[GroupBy=&lt;Field&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the group that will be used to separate the review results where 
+		 &lt;Field&gt; refers to the grouping and can be:</p>
+		<ul class="hcp1">
+			<li><p>MfType – To group by Master File type.</p></li>
+			<li><p>MfStatus – To group by Master File status.</p></li>
+			<li><p>AdminGroup – To group by the Administrator Group of 
+			 the Master File.</p></li>
+			<li><p>OrganisationUnit – To group by the Organisational Unit.</p></li>
+			<li><p>Team – To group by the Master File team.</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[GroupBy=AdminGroup]</p>
+		<p>means to separate review results according to the Administrator 
+		 Groups.</p>
+		<p>If the parameter is defined as [AdminGroup=GROUP1, GROUP2],the 
+		 review results will be separated into GROUP1 and GROUP2.</p>
+		<p>If the parameter is defined as [AdminGroup&lt;&gt;GROUP1], the 
+		 review results will be separated into other available Administrator 
+		 Groups.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[AssignedTo=&lt;Group&gt;:&lt;User&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the user who will be assigned to the review results where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Group&gt; can be:</p></li>
+			<li><p class="hcp2">Entity - this refers to Master 
+			 Files that are managed entities and can further be grouped 
+			 by Administrator Group, Organisational Unit or Team</p></li>
+			<li><p class="hcp2">NonEntity - this refers to 
+			 Master Files that are not managed entities and can also be 
+			 grouped by Administrator Group, Organisational Unit or Team</p></li>
+			<li><p class="hcp2">Default - this will be applied 
+			 to all Master Files that are not included in the above options</p></li>
+			<li><p>&lt;User&gt; can be:</p></li>
+			<li><p class="hcp2">AdminCode - user in the Administrator 
+			 field</p></li>
+			<li><p class="hcp2">Admin2Code - user in the 
+			 Manager field</p></li>
+			<li><p class="hcp2">Admin3Code - user in the 
+			 Controller field</p></li>
+			<li><p class="hcp2">User Code</p></li>
+		</ul>
+		<p>To specify different users for different groups, separate with 
+		 '|' symbol.</p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[AssignedTo=Entity:AdminCode|NonEntity:sm]</p>
+		<p>means results for:</p>
+		<ul class="hcp1">
+			<li><p>managed entities will be assigned to the Administrator 
+			 of the Entity File</p></li>
+			<li><p>non-managed entities will be assigned to the user 'sm'</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>[AssignedTo;Entity.GROUP1:MARK|Entity.GROUP2:ANNE|Default:SM]</p>
+		<p>means results for:</p>
+		<ul class="hcp1">
+			<li><p>managed entities in GROUP1 will be assigned to the user 
+			 'MARK'</p></li>
+			<li><p>managed entities in GROUP2 will be assigned to the user 
+			 'ANNE'</p></li>
+			<li><p>all other Master Files will be assigned to the user 
+			 'SM'</p></li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[POSTUPDATE=&lt;Value&gt;]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 whether the Global File Review results to be posted on the File 
+		 Review screen.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[POSTUPDATE=1]</p>
+		<p>means the Global File Review updates can be seen on the File 
+		 Review screen.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p></li>
+	<li><p><a href="../Shared/File_Review.htm">File Review</a></p></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Global File Review</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+</body>
+</html>

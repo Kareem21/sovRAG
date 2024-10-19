@@ -1,0 +1,142 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="Localize">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Creating Custom Script for Localise</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+span.hcp2 { color:#ffffff;
+font-weight:bold; }
+ul.hcp3 { list-style:disc; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1 style="background-color: Transparent;">Creating Custom Script for Localise 
+ Function</h1>
+<p>You can create customised scripts to make the database changes that 
+ you want to apply provided you have sufficient <a class="dropspot" href="javascript:TextPopup(this)" id="a1">authority</a>. 
+ Create your custom script in any text file and then copy and paste it 
+ to the Edit script: &lt;Settings&gt; screen.</p>
+<div class="droptext" id="POPUP396840892" style="display: none;">
+	<p>You will need to have the necessary access rights in order to use 
+	 and/or customise the feature. To verify that you have the required 
+	 access, do the following:</p>
+	<ol style="list-style: decimal;">
+		<li><p>In Configuration, go to Users &amp; Security &gt; Security 
+		 Setup &gt; User Group.</p></li>
+		<li><p>Click View Authority.</p></li>
+		<li><p>Select the Configuration tab, select the Windows Menus radio 
+		 button and then scroll down to Settings &gt; Tools &amp; Utilities 
+		 &gt; Localise.</p></li>
+	</ol>
+	<p>&#160;</p>
+	<p>You will need at least authority level 6 – Regular User to run the 
+	 Localise function, and 8 – Power User to customise the scripts.</p>
+</div>
+<p>The following will explain the tags used in custom scripts:</p>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 24.148%;">
+	<col style="width: 75.852%;">
+	<tr class="t1st">
+		<td class="hcp1"><p><span class="hcp2">Tag</span></p></td>
+		<td class="hcp1"><p><span class="hcp2">Usage</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>CAPTION</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This must be 
+		 defined in the FIRST line of the script.</p>
+		<p>Syntax:</p>
+		<p>CAPTION:&lt;Caption Text&gt;</p>
+		<p>Example:</p>
+		<p>CAPTION:Set the Workflow ratings on Country codes</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Tags</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>There are specific 
+		 tags to be entered depending on what you want the script to do. 
+		 Find out more in the appropriate section:</p>
+		<ul class="hcp3">
+			<li><p><a href="Localise_Script_-_System_Defaults.htm">System 
+			 Defaults</a></p></li>
+			<li><p><a href="Localise_Script_-_Menus.htm">Menus</a></p></li>
+			<li><p><a href="Localise_Script_-_Field_Settings.htm">Fields</a></p></li>
+			<li><p><a href="Localise_Script_-_Lookup_Values.htm">Lookup 
+			 Values</a></p></li>
+			<li><p><a href="Localise_Script_-_User_Table_Values.htm">User 
+			 Table Values</a></p></li>
+			<li><p><a href="Localise_Script_-_User_Fields.htm">User Fields</a></p></li>
+			<li><p><a href="Localise_Script_-_Relationship_Types.htm">Relationship 
+			 Types</a></p></li>
+			<li><p><a href="Localise_Script_-_Identity_Register_Types.htm">Identity/AEOI 
+			 Register Types</a></p></li>
+			<li><p><a href="Localise_Script_-_Owners_&amp;_Controllers_Types.htm">Owners 
+			 and Controllers Types</a></p></li>
+			<li><p><a href="Localise_Script_-_Document_Management.htm">Index 
+			 Fields and Filing Cabinets</a></p></li>
+			<li><p><a href="Localise_Script_-_Document_Management.htm">Task 
+			 Types</a></p></li>
+			<li><p><a href="Localise_Script_-_Risk_Rating.htm">Risk Ratings</a></p></li>
+			<li><p><a href="Localise_Script_-_Link_Type_(Notifications).htm">Link 
+			 Type for Notifications</a></p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>Remarks</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Remarks can be 
+		 added if you want to explain what a particular section of the 
+		 script is meant to do.</p>
+		<p>Syntax:</p>
+		<p>//&lt;Text&gt;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="font-weight: bold; text-decoration: none; ">Example:</p>
+<p><img src="../image101.jpg" alt="" style="border: none;" width="717" height="286" border="0"></p>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp3">
+	<li><p><a href="Localise.htm">Localise</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Creating Custom Script for Localise</p>
+<p class="hcp4">&#160;</p>
+<p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP396840892');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Recurring Fees - Disbursement Credit</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Recurring Fees - Disbursement Credit</h1>
+<p>Disbursement Credit Service refers to a type of recurring fee that allows 
+ for a specified amount of chargeable disbursement to not be invoiced for 
+ a Billing File or Matter. This is done using the service class 'Credit: 
+ Disbursement Charge [CD] with the credit specified through the setup of 
+ the service in the Recurring Fees screen as a recurring fee where:</p>
+<ul class="hcp1">
+	<li><p>The 'Fee Period - From' and 'Fee Period - To' determine the 
+	 from and to date of the <span style="font-weight: bold;">applicable 
+	 credit period</span>.</p></li>
+	<li><p>The credit is entered as a negative amount in Unit Price and 
+	 it is to be charged in Advanced.<br>
+	<br>
+	<img src="../image130.gif" alt="" style="border: none;" width="518" height="82" border="0"></p></li>
+</ul>
+<p>The credit will then be applied against chargeable disbursement entries 
+ with dates that fall in the applicable period. On Posting of WIP (where 
+ such fee exists and is due for invoicing), the program will calculate 
+ the chargeable amount for all disbursement entries due in the applicable 
+ period.</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 border="1">
+	<col style="width: 100%;">
+	<tr>
+		<td><p>When the total chargeable amount is more or equal to the 
+		 credit amount, the program will:</p>
+		<ul class="hcp1">
+			<li><p>Add the Disbursement Credit Service recurring fee to 
+			 the draft invoice for the full (credit) fee amount.</p></li>
+			<li><p>Invoice all the disbursement charges.</p></li>
+		</ul>
+		<p>The resulting invoice will have one credit line (the Disbursement 
+		 Credit Service recurring fee) and a line for each distinct service 
+		 code used for the disbursement entries.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td><p>When the total chargeable amount is less than the credit 
+		 amount and the applicable period's 'to date' is earlier than the 
+		 date set for Posting Control Settings - WIP Time's Date Open, 
+		 the program will:</p>
+		<ul class="hcp1">
+			<li><p>Add the Disbursement Credit Service recurring fee to 
+			 the draft invoice for a (credit) fee amount equal to all disbursement 
+			 charges.</p></li>
+			<li><p>Invoice all the disbursement charges.</p></li>
+		</ul>
+		<p>This is to say that the Disbursement Credit Service recurring 
+		 fee is invoiced as the end date falls before the WIP Time's Date 
+		 Open. Hence no more disbursement entries can be entered in the 
+		 applicable period.</p>
+		<p>The resulting invoice will have one credit line (the Disbursement 
+		 Credit Service recurring fee) and a line for each distinct service 
+		 code used with the disbursement entries. The total invoice amount 
+		 will be 0 unless there are other recurring fee or disbursements 
+		 due for invoicing.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td><p>Otherwise, the Disbursement Credit Service and time are 
+		 not invoiced as the (credit) fee amount has not been reached and 
+		 disbursement charges can still be added for the applicable period.</p>
+		<p>Note that any disbursement charges with a date before the applicable 
+		 period will be invoiced as usual (the Disbursement Credit Service 
+		 is not applied).</p>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Recurring Fees - Disbursement Credit</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

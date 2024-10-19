@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Minimum Time Fee">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Minimum Time Fee</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp2 { text-align:center; }
+p.hcp3 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Minimum Time Fee</h1>
+<p>There are two Minimum Time Fee service classes:</p>
+<ul style="list-style: disc;">
+<li>
+<p>Minimum time fee - with carry forward [RM]</p>
+</li>
+<li>
+<p>Minimum time fee - w/o carry forward [RN]</p>
+</li>
+</ul>
+<p>Take note of the following when you are setting up recurring fees of the service class Minimum Time Fee.</p>
+<p>&#160;</p>
+<h3>Configuration</h3>
+<p>In Configuration &gt; Settings &gt; <a href="System_Defaults_-_Time_and_Disbursements.htm">System Defaults &gt; Time and Disbursements.</a> It is compulsory for you to tick 'Use Recurring Services for Time Entries' option. The reason is that you need to use the same service for time entry.</p>
+<p>&#160;</p>
+<h3>Practice Management - Sales Ledger</h3>
+<p>When setting up the Recurring Fee the following fields must be complete as specified:</p>
+<p>&#160;</p>
+<p class="FldExplain">Currency</p>
+<p>If you are not using the multi-rate list feature, then this must be the same as your base currency. If you are using the multi-rate list feature then this must be the Matter currency.</p>
+<p>&#160;</p>
+<p class="FldExplain">Number of Units</p>
+<p>Set this as 1.</p>
+<p>&#160;</p>
+<p class="FldExplain">Unit Price</p>
+<p>Enter the minimum amount to charge the client. If the total time charged is less than this amount, the program will add a time charge for the shortfall, using the date entered in the - to field in the Posting of WIP screen. This time charge is reversed the next day if the service class is Minimum time fee - with carry forward [RM].</p>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px">
+<col width="97">
+<col width="141">
+<col width="152">
+<col width="477">
+<tr class="t1st">
+<td>
+<p class="hcp1">Unit Price</p>
+</td>
+<td>
+<p class="hcp1">Total Approved Time</p>
+</td>
+<td>
+<p class="hcp1">Time Charged to Client</p>
+</td>
+<td>
+<p class="hcp1">Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p class="hcp2">EUR2,000</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p class="hcp2">EUR1,800</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p class="hcp2">EUR2,000</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p class="hcp1">In this example, the total approved time entries does not reach the minimum price of EUR2,000. Therefore, Viewpoint will create a time entry for EUR200, dated ('Next Invoicing Due' date - 1 day).</p>
+<p class="hcp1">It will then create another time entry amounting to -EUR200 dated 'Next Invoicing Due' as a reverse of the shortfall value.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p class="hcp2">EUR2,000</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p class="hcp2">EUR2,100</p>
+</td>
+<td class="t1Col" style="vertical-align: top;">
+<p class="hcp2">EUR2,100</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p class="hcp1">In this example, the actual approved time exceeds the minimum price of EUR2,000. Therefore, the actual approved time will be charged to the client.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="FldExplain">In</p>
+<p>Select Arrears [R].</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: Pro-rating does not work for this service class.</p>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Can I customise the description of the time entries that are created to handle the shortfall?</a></p>
+<div class="droptext" id="POPUP415256346" style="display: none;">
+<p>Yes, you can, by customising the information in the Tag information field of the service in the <a href="Service_Master.htm">Service Master</a>.</p>
+</div>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Minimum Time Fee</p>
+<p class="hcp3">&#160;</p>
+<p class="hcp3">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp3">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP415256346');
+//]]></script>
+</body>
+</html>

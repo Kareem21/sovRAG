@@ -1,0 +1,173 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Report Queue Generation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+li.hcp3 { color:#000000; }
+p.hcp4 { font-weight:bold; }
+td.hcp5 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Report Queue Generation</h1>
+<p>This job allows for the automatic generation of reports that have been 
+ sent to Document Queue. With this job, users do not need to manually choose 
+ to generate the reports.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Report Queue 
+	 Generation [RPQG]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Criteria, you can set the following:</p>
+	<ul class="hcp1">
+		<li><p>select the user in the 'User' field. If the job is for all 
+		 users, leave this blank.</p></li>
+		<li><p>specific Word report(s) by selecting the template(s) in 
+		 the 'Word Reports' field. If the job is for all Word reports, 
+		 leave this blank.</p></li>
+		<li><p>specific Excel statement(s) by selecting the template(s) 
+		 in the 'Excel Statements' field. If the job is for all Excel statements, 
+		 leave this blank.</p></li>
+		<li><p>specify Document Limit with number for how many records 
+		 of Document Queue to be processed in a single job execution.</p></li>
+		<li><p>select Yes or No for Document Delivery. The Document Delivery 
+		 is an option to enable or disable &#160;the Document Delivery 
+		 Manager in this job type. When choosing Yes, it will automatically 
+		 send out email if the document consists of Delivery Manager tag.</p></li>
+		<li><p>specify When the e-mail is sent. Below options can be selected:</p></li>
+		<ul class="hcp1">
+			<li><p>Store the Document Holder (no e-mail) - The holder will 
+			 be stored in Document Manager and removed from the Word Reports 
+			 In-tray. </p></li>
+			<li><p>Delete the Document Holder - If you select this option, 
+			 the Document Holder will be deleted from the Word Reports 
+			 In-tray when the document is converted to e-mail or printed 
+			 out.</p></li>
+		</ul>
+	</ul>
+	<p><span class="hcp2">Note</span>: 
+	 When the user selects the templates from only one of the categories 
+	 (Word Reports or Excel Statements), <a class="dropspot" href="javascript:TextPopup(this)" id="a1">it 
+	 will only applies to that selected category and templates</a>. 
+	 </p>
+	<div class="droptext" id="POPUP565129412" style="display: none;">
+		<p>Example:</p>
+		<ul class="hcp1">
+			<li class="hcp3"><p><span>When the user selects 
+			 one/more Word report(s) and did not select any Excel statement, 
+			 it will only proceed with the selected Word reports.</span></p></li>
+			<li class="hcp3"><p><span>When the user selects 
+			 one/more Excel statement(s) and did not select any Word report, 
+			 it will only proceed with the selected Excel statements.</span></p></li>
+		</ul>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification for the job is required, tick Enable 
+	 E-mail Notification and specify details for the e-mail. If you want 
+	 different types of e-mail notification, tick Advanced and you will 
+	 get the following:</p>
+	<ul class="hcp1">
+		<li><p>Success - this is the notification when the job is completed 
+		 successfully.</p></li>
+		<li><p>Fail - this is the notification when the job is not completed.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>When the job has been performed, users will be able to see the generated 
+ reports in Document Queue. If e-mail notification was set up, this will 
+ be sent out as well.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: If 
+ you ticked Advanced Settings in Setup tab, you can use the following tag 
+ as well as MAIL tags:</p>
+<table class="Table1" cellspacing="0px">
+	<col style="width: 15.257%;">
+	<col style="width: 51.409%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="hcp4">Tag</p></td>
+		<td class="hcp5"><p class="hcp4">Explanation</p></td>
+		<td class="hcp5"><p class="hcp4">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/CONDITION-UCode=&lt;UserCode&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to apply only to reports 
+		 for the specified user(s).</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/CONDITION-Ucode=SM/]</p>
+		<p>&#160;</p>
+		<p>means to only apply to reports sent to Document Queue by the 
+		 user 'SM'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/CONDITION-DocCode=&lt;TemplateCode&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to apply to the selected 
+		 Word report(s) only.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/CONDITION-DocCode=MFUFLDCO/]</p>
+		<p>&#160;</p>
+		<p>means to only apply to the Document 'MFUFLDCO' sent to Document 
+		 Queue by any user.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Report Queue Generation</p>
+ <p class="hcp6">&#160;</p>
+ <p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp6">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP565129412');
+//]]></script>
+</body>
+</html>

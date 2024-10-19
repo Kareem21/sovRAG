@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+<meta name="MS-HAID" content="Chart of Accounts">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Chart of Accounts Setup</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Chart of Accounts Setup</h1>
+<p>There are three layers to the structure of Accounting:</p>
+<ul>
+	<li class="p"><p>Global account classification.</p></li>
+	<li class="p"><p>Shared templates.</p></li>
+	<li class="p"><p>Entity accounting.</p></li>
+</ul>
+<p>The global account classification used in Accounting is split into three 
+ groups: Main and Sub groups, nominal accounts and sub-ledger accounts. 
+ Main and Sub groups are defined globally for the database and can be regarded 
+ as a general account classification that pre-defines the reports, balance 
+ sheet, profit and loss enquiries. Examples of Main groups are Assets, 
+ Liabilities, Expenses and Income.</p>
+<p>Each Main group has its own Sub groups, which are linked directly to 
+ their corresponding nominal accounts. The global account classification 
+ forms the backbone of the program; therefore, it is important to give 
+ due weight and consideration when structuring it.</p>
+<p>Nominal accounts are either for direct posting, or function as control 
+ accounts for sub-ledger accounts. Control accounts have sub-ledger accounts 
+ linked to them, where the posting will take place.</p>
+<p>For example, a control account can be specified for bank accounts. You 
+ would then set up a sub-ledger account for each bank account. Similarly, 
+ a control account can be specified for securities, and you would set up 
+ separate sub-ledger accounts for each security held. Transactions are 
+ recorded in the sub-ledger accounts and posted. Once posted, the control 
+ account balances will be updated with the transaction information.</p>
+<p>Each grouping of Main, Sub and nominal accounts is known as a Chart 
+ of Accounts (CoA) template. You can have as many CoA templates as required, 
+ depending on the Account Files that you create in Viewpoint. For example, 
+ you may use specific templates for property-holding companies, trade companies 
+ and trusts - each template can be used in as many Account Files as required.</p>
+<p>A CoA template can be further customised in each individual Account 
+ File. Thus, you may use a specific template for a particular entity type, 
+ but you may further activate or deactivate nominal accounts in the Account 
+ File once the template has been assigned to the Account File.</p>
+<p>Journals are used to record transactions into the nominal (general) 
+ ledger. There is an optional provisional journal (draft journal) facility 
+ for management review and control before permanent posting to the nominal 
+ ledger takes place. Account b<span style="margin-bottom: 0;">alances are 
+ updated after each posting of either a provisional/ draft journal or a 
+ regular journal.</span></p>
+<p>The setting up of a Chart of Accounts requires the following to be set 
+ up:</p>
+<ul style="list-style: disc;">
+	<li class="p"><p><a href="Chart_of_Accounts_-_Main_Sub_Groups.htm">Main/Sub 
+	 Groups</a></p></li>
+	<li class="p"><p><a href="Chart_of_Accounts_-_Templates.htm">Templates</a></p></li>
+	<li class="p"><p><a href="Chart_of_Accounts_-_Nominal_Accounts.htm">Nominal 
+	 Accounts</a></p></li>
+	<li class="p"><p><a href="Chart_of_Accounts_-_Account_Files.htm">Account 
+	 Files</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="../Shared/Overview.htm">Home</a> &gt; <a href="Draft_Journals.htm">Accounting</a> &gt; <a href="Chart_of_Accounts_Setup.htm">Chart of Accounts</a> &gt; Chart of Accounts</p>
+<p class="hcp1">&#160;</p>
+<p class="hcp1">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp1">Version: 8.0.2022.09.20</p>
+</body>
+</html>

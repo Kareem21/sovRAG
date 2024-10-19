@@ -1,0 +1,103 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Presenter Information</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Presenter Information</h1>
+<p>In certain jurisdictions, the statutory forms require details of the 
+ presenter such as the name and address. If there is only for presenter 
+ for all managed entities, then the presenter can be specified in the Presenter 
+ field in <a href="../Configuration/System_Defaults_-_Entity_BPM.htm">System 
+ Default &gt; Entity/BPM</a>. However, if there are different presenters 
+ for different jurisdictions, then tags can be added for the jurisdiction 
+ in the Country Codes [CNTR] lookup table. The tags will allow for the 
+ following:</p>
+<ul class="hcp1">
+	<li><p>different presenters for different managed entities in the jurisdiction</p></li>
+	<li><p>same presenter for all managed entities in the jurisdiction</p></li>
+</ul>
+<p>In Viewpoint's standard statutory form templates, the presenter information 
+ that is retrieved will depend on the jurisdiction of the entity where 
+ the system will check if there is a tag added for the jurisdiction. If 
+ there is no tag added, then the presenter will still be the one defined 
+ in System Default &gt; Entity/Forms. However, if tag has been added, then 
+ the information will be according to the tag.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: The 
+ jurisdiction can refer to either where the entity is incorporated, or 
+ where the entity has a foreign registration. This depends on whether the 
+ form template is linked to Country of Incorporation or Country of Registration. 
+ </p>
+<p>&#160;</p>
+<h2>How it Works</h2>
+<p>Two tags are available:</p>
+<ul class="hcp1">
+	<li><p>PRESENT.RELTYPE</p></li>
+	<li><p>PRESENT.MFCODE</p></li>
+</ul>
+<p>When retrieving the presenter information for an entity, the system 
+ will check if the jurisdiction contains tag for presenter. If both tags 
+ are added, the system will retrieve the presenter information based on 
+ PRESENT.RELTYPE tag first. If this is not available i.e. there is no relation 
+ for the entity, then it retrieves the presenter based on PRESENT.MFCODE 
+ tag. This means that even within one jurisdiction, depending on the entity, 
+ it is possible to have the presenter either as an appointed relation, 
+ or a defined Master File.</p>
+<p>&#160;</p>
+<h2>Different Presenter for Different Managed Entities</h2>
+<p>When there is a need to have a different presenter for different managed 
+ entities in a jurisdiction, there must be a relationship type for presenter, 
+ and presenter must be appointed for the managed entities. Then, ensure 
+ that the [PRESENT.RELTYPE=&lt;RelCode&gt;] is added for the jurisdiction 
+ in the Country Codes [CNTR] lookup table with the &lt;RelCode&gt; being 
+ the code of the relationship type for presenter. </p>
+<p>If the entity does not have an active appointed presenter, then presenter 
+ will refer to the one defined in System Defaults &gt; Entity/Forms.</p>
+<p>&#160;</p>
+<h2>Same Presenter for all Managed Entities</h2>
+<p>If the presenter is the same for all managed entities in the jurisdiction, 
+ then you only need to add the [PRESENT.MFCODE=&lt;MFCode&gt;] is added 
+ for the jurisdiction in the Country Codes [CNTR] lookup table with the 
+ &lt;MFCode&gt; being the code of the presenter's Master File.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="../Configuration/Lookup_Tables.htm">Lookup Tables</a></p></li>
+	<li><p><a href="../Configuration/Field_Codes.htm">Field Codes</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Change_Ownership_Structure.htm">Entity Administration</a> &gt; Presenter Information</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp2">Version: 8.0.2022.09.20</p>
+</body>
+</html>

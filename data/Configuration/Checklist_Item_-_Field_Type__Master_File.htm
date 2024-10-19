@@ -1,0 +1,299 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Checklist Item - Field Type: Master File</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+img.hcp2 { border:none; }
+p.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Checklist Item - Field Type: Master File</h1>
+<p>The Master File field type is used to hold a Master File value which 
+ can be:</p>
+<ul class="hcp1">
+	<li><p>a new Master File created by the user</p></li>
+	<li><p>existing Master File selected by user or retrieved for the workflow</p></li>
+</ul>
+<p>For new Master File, this will bring the user to the New Master File 
+ Wizard for user to create a new Master File. For existing Master File, 
+ this can be all active Master Files or the list can be filtered based 
+ on predefined option or user-defined data source.</p>
+<p>&#160;</p>
+<h3>Master File List based on Predefined Option</h3>
+<p>These are options that you select as the Data Source and can be based 
+ on</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Components 
+	 activated for a Master File</a></p>
+	<div class="droptext" id="POPUP580166661" style="display: none;">
+		<ul class="hcp1">
+			<li><p>#CS - Entity Administration component is enabled.</p></li>
+			<li><p>#RM.B - Practice Management component (Sales Ledger) 
+			 is enabled.</p></li>
+			<li><p>#TR - Practice Management component (Purchase Ledger) 
+			 is enabled.</p></li>
+			<li><p>#CA - Accounting component is enabled.</p></li>
+		</ul>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Roles 
+	 allowed for a Master File</a></p>
+	<div class="droptext" id="POPUP580342587" style="display: none;">
+		<ul class="hcp1">
+			<li><p>#CL - Client/Group role is enabled.</p></li>
+			<li><p>#SH.B - Shareholder/Partner/Interest Holder role is 
+			 enabled.</p></li>
+			<li><p>#OC - Statutory/Trust/Foundation Officer role is enabled.</p></li>
+			<li><p>#PR - Relation role is enabled.</p></li>
+			<li><p>#MF - Master Files with any role enabled.</p></li>
+			<li><p>#BA - Bank/Broker role is enabled.</p></li>
+			<li><p>#SI.B - Bank/Broker Account Signatory role is enabled.</p></li>
+		</ul>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">How 
+	 a Master File is related</a></p>
+	<div class="droptext" id="POPUP580636536" style="display: none;">
+		<ul class="hcp1">
+			<li><p>#RAP - Master File appointed as any relation.</p></li>
+			<li><p>#RT - Master File appointed as Trust officer.</p></li>
+			<li><p>#RE - Master File appointed as Entity relation.</p></li>
+			<li><p>#RO - Master File appointed as Statutory officer.</p></li>
+			<li><p>#RM - Master File appointed as Master File relation.</p></li>
+			<li><p>#BE - Master File added as beneficiary.</p></li>
+			<li><p>#SI - Master File added as bank/broker account signatory.</p></li>
+			<li><p>#SH - Master File that holds shares.</p></li>
+			<li><p>#IN - Master File added as Interest holder.</p></li>
+			<li><p>#OW - Master File added as Owners &amp; Controllers.</p></li>
+			<li><p>#MRT - Master File is linked to the workflow's Master 
+			 File.</p></li>
+			<li><p>#MRT.CHL - Master File is added as a child relation 
+			 of the workflow's Master File.</p></li>
+			<li><p>#GRT - Master File is in the same ESP Organisation as 
+			 the workflow's Master File or linked to any of the Master 
+			 File in the same ESP Organisation as a relation (e.g. Officers, 
+			 Relations and Beneficiaries).</p></li>
+			<li><p>#GRT.CHL - Master File is in the same ESP Organisation 
+			 as the workflow's Master File or linked to any of the Master 
+			 File in the same ESP Organisation as a child relation.</p></li>
+			<li><p>#GRT.ORG - Master File is in the same ESP Organisation 
+			 as the workflow's Master File.</p></li>
+			<li><p>#CA.ASL - Master File is linked to the sub-ledger account.</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p><img src="../image90.png" alt="" border="0" class="hcp2"></p>
+<p>As you select an option, the code is seen. You can also customised the 
+ code to further filter by relationship type by specifying the data source 
+ like below:</p>
+<p class="hcp3">&lt;OptionCode&gt;:&lt;Type&gt;</p>
+<p>where</p>
+<ul class="hcp1">
+	<li><p>&lt;OptionCode&gt; refers to the code of the selected option.</p></li>
+	<li><p>&lt;Type&gt; refers to the code of the type.</p></li>
+</ul>
+<table class="Table1" cellspacing="0px" width="94.391%">
+	<col style="width: 22.272%;">
+	<col style="width: 77.728%;">
+	<tr class="t1st" style="height: 26px;">
+		<td><p>Option Code</p></td>
+		<td><p>Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 155px;">
+		<td class="t1Col" style="vertical-align: top;"><p>All Relation 
+		 options:</p>
+		<ul class="hcp1">
+			<li><p>RT</p></li>
+			<li><p>RE</p></li>
+			<li><p>RO</p></li>
+			<li><p>RM</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This applies 
+		 to all Relation options such as Relations [Entity Relations] and 
+		 Relation [Statutory Officers]. You can add code of the relationship 
+		 type.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>RO:DIR – the list will show only Directors.</p>
+		<p>RO:D* - the list will show only Statutory Officers where type 
+		 starts with ‘D’ such as DIR (Director) and DAL (Alternate Director).</p>
+		<p>RO:D*,S* - the list will show Statutory Officers where type 
+		 starts with ‘D’ or ‘S’.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 97px;">
+		<td class="t1Col" style="vertical-align: top;"><p>BE</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is only 
+		 for Beneficiaries option.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>BE:I – the list will show only beneficiaries where Beneficiary 
+		 Type is Income [I].</p>
+		<p><span class="hcp4">Note</span>: 
+		 The types are from Beneficiary Type [BEFT] lookup table.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 95px;">
+		<td class="t1Col" style="vertical-align: top;"><p>SI</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is only 
+		 for Bank Signatories option.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>SI:A – the list will show only signatories belonging to Group 
+		 A.</p>
+		<p><span class="hcp4">Note</span>: 
+		 The types are from Signing Auth. Group [SIGR] lookup table.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 97px;">
+		<td class="t1Col" style="vertical-align: top;"><p>SH</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is only 
+		 for Shareholders option.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>SH:O*,P* – the list will show only Shareholders holding share 
+		 class type starts with 'O' or 'P'.</p>
+		<p><span class="hcp4">Note</span>: 
+		 The types are from Share Types [SHRT] lookup table.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 95px;">
+		<td class="t1Col" style="vertical-align: top;"><p>IN</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is only 
+		 for Interests option.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>IN:BEO – the list will show only Beneficial Owners.</p>
+		<p><span class="hcp4">Note</span>: 
+		 The types are from Interest Types [INTP] lookup table.</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 89px;">
+		<td class="t1Col" style="vertical-align: top;"><p>CA.ASL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is only 
+		 for sub-ledger account type related to Master File.</p>
+		<p>&#160;</p>
+		<p>Example:<br>
+		CA.ASL:B,F – the list will show only sub-ledger where the account 
+		 type is 'B' or 'F'.</p>
+		<p><span class="hcp4">Note</span>: 
+		 The types are from sub-ledger account types.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>For the #MRT and #GRT options, you can filter by customising the code 
+ as follows:</p>
+<p class="hcp3">&lt;OptionCode&gt;:&lt;RelationID&gt;</p>
+<p>where</p>
+<ul class="hcp1">
+	<li><p>&lt;OptionCode&gt; refers to the code of the selected option.</p></li>
+	<li><p>&lt;RelationID&gt; refers to the ID of the relationship type 
+	 which can be obtained using Workflow Field Wizard under the category 
+	 'Master File Data Source Type'.</p></li>
+</ul>
+<p>Example:</p>
+<p>#MRT:560 - Will retrieve Master Files that are bankers/brokers for the 
+ workflow's Master File.</p>
+<p>#MRT:560,566 - Will retrieve Master Files that are bankers/brokers and 
+ bank/broker signatories for the workflow's Master File.</p>
+<p>#MRT:56* - Will retrieve Master Files that are relations with RelationID 
+ starting with '56' for the workflow's Master File.</p>
+<p>#GRT:560 - Will retrieve Master Files that are bankers/brokers for all 
+ Master Files in the same ESP Organisation as the workflow's Master File.</p>
+<p>&#160;</p>
+<h3>Show Additional Information in Master File drop-down list</h3>
+<p>Additional information such as the caption from database field can be 
+ configured to show in a column in the Master File drop-down list. Ensure 
+ that the 'Show Combo List' option is ticked to have the column displayed.</p>
+<p>To configure, add the following tag:</p>
+<p class="hcp3"><span style="font-weight: bold;">&lt;OptionCode&gt;:&lt;DBField&gt;</span></p>
+<p>where:</p>
+<ul class="hcp1">
+	<li><p>&lt;OptionCode&gt; refers to the code of the selected option 
+	 and is currently supported for all Relation options except #GRT.</p></li>
+	<li><p>&lt;DBField&gt; is the database field required to be shown as 
+	 the additional information. Only one database field can be configured 
+	 for each Master File field type.</p></li>
+</ul>
+<p><span class="hcp4">Note</span>: For 
+ #MRT, the &lt;DBField&gt; supported are RelCaption, RelFrom, RelTo and 
+ RelNote only.</p>
+<p>&#160;</p>
+<p>The field ‘Data Source Attribute’ is only applicable when the Data Source 
+ value is #OC, #PR or #MF. This is to allow Master Files to be further 
+ filtered according to Individual ‘I’ or Non Individual ‘N’.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p>#MRT\RelCaption - will show the relations caption for Master Files linked 
+ to the workflow's Master File:</p>
+<p><img src="../image3.gif" alt="" border="0" class="hcp2"></p>
+<p>In the workflow, clicking on the step will show the following:</p>
+<p><img src="../image4.gif" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<p><span class="hcp4">Note</span>: The 
+ total search result of Master File in the drop-down list for +Global Data 
+ Source will display accordingly to the value entered in 'Maximum Master 
+ File Search Returns' field in Configuration &gt; Settings &gt; System 
+ Defaults &gt; General/Master File.</p>
+<p>For Master File drop-down list for +Relations Data Source, this will 
+ display according to the total number of Master File which fit the selected 
+ option.</p>
+<p>&#160;</p>
+<p><span class="hcp4">Note</span>: In 
+ ESP, when the 'Master File' field type is configured without a Data Source, 
+ the default value will be set to #GRT.ORG (ESP Global Relations [From 
+ Organisation]).</p>
+<p>&#160;</p>
+<h3>Master File List based on User-Defined Data Source</h3>
+<p>This allows you to filter the list using other conditions. This requires 
+ the following:</p>
+<ul class="hcp1">
+	<li><p>Define the data source in the workflow step properties using 
+	 [/&lt;DataSource&gt;=/]. Refer to <a href="Checklist_Workflow_Step_-_Tags.htm">Checklist/Workflow 
+	 Step - Tags.</a></p></li>
+	<li><p>Add the name of the data source to the Data Source field instead 
+	 of selecting an option.</p></li>
+</ul>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Checklist_Item_-_Values_Default.htm">Checklist Item 
+	 - Values/Default</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Checklist Item - Field Type: Master File</p>
+ <p class="hcp5">&#160;</p>
+ <p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp5">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP580166661');
+	TextPopupInit('a2','POPUP580342587');
+	TextPopupInit('a3','POPUP580636536');
+//]]></script>
+</body>
+</html>

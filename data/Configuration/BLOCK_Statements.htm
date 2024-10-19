@@ -1,0 +1,277 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+<meta name="MS-HAID" content="Block statements">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>BLOCK Statements</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:6pt;
+margin-right:6pt;
+color:#300063; }
+p.hcp2 { margin-left:6pt;
+margin-right:6pt; }
+p.hcp3 { margin-top:3pt;
+margin-left:6pt;
+margin-right:6pt; }
+p.hcp4 { font-weight:bold;
+font-style:italic; }
+img.hcp5 { border:none; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>BLOCK Statements</h1>
+<p>BLOCK statements are used to selectively generate a paragraph in a template. 
+ If the criterion for the paragraph to be printed is fulfilled, then it 
+ will appear, otherwise it will not. There is no limit to the length of 
+ a block; it can span pages and can contain pictures, tables, etc.</p>
+<p>&#160;</p>
+<h3>General Syntax</h3>
+<p>Each BLOCK statement must have a beginning and ending code. Paragraphs 
+ of text and field codes are placed in between the beginning and ending 
+ codes, and will appear if the condition of the BLOCK is fulfilled. You 
+ cannot have another BLOCK within a BLOCK. BLOCK statements are placed 
+ in the Word document, not in the Key Information of the template.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Beginning code</h6>
+<p>(+BLOCK.BlockName&amp;Condition1&amp;Condition2&amp;VP_Option+)</p>
+<p>OR</p>
+<p>(+BLOCK.BlockName&amp;SQL=QNAME&amp;VP_OPTION+)|DELLINE|</p>
+<p>&#160;</p>
+<h6 class="Heading8">Ending code</h6>
+<p>(+BLOCK.BlockName&amp;END+)</p>
+<p>OR</p>
+<p>|DELLINE|(+BLOCK.BlockName&amp;END+)</p>
+<p>&#160;</p>
+<h3>Code Syntax for Forms and Word/Web reports</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="850">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Code 
+		 Section</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">BlockName</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">This 
+		 is a user-assigned name for the block. This needs to be unique, 
+		 i.e., two or more blocks cannot have the same name, otherwise 
+		 you will encounter an error during refresh and generation. The 
+		 name can contain only characters (A...Z), numbers (0...9) and 
+		 underscores (_).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">&amp;END</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">This 
+		 is placed at the end of the block. Each block must end properly 
+		 with a (+BLOCK.BlockName&amp;END+) statement.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">|DELLINE|</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">This 
+		 is an optional statement that is used to delete the line where 
+		 the statement is placed, during the form generation. Use this 
+		 if you place the BLOCK statements on new lines and you want those 
+		 lines deleted after generation.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">SQL=QueryTag</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">The 
+		 program will retrieve the SQL query specified by the query tag 
+		 from the Key Information, and execute the query. The fields returned 
+		 by the query can be addressed within the using field codes with 
+		 prefix BF, such as (+BF.FieldName+).</p>
+		<p class="hcp2">The query must 
+		 be defined in the Key Information of the form as follows:</p>
+		<p class="hcp2">[/QueryTag = SELECT 
+		 … FROM Table WHERE Field = ‘(-EventField-)’ AND…/]</p>
+		<p class="hcp2">If the query does 
+		 not return a record, the block will be deleted, except where VP_SHOW_EMPTY 
+		 is specified as an option (see VP_OPTION, below).</p>
+		<p class="hcp2">If the query returns 
+		 multiple records, the block is copied for each record unless VP_GROUP 
+		 is specified as an option (see VP_OPTION, below).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">VP_OPTION</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">Valid 
+		 options are:</p>
+		<p class="hcp2">VP_NO_GROUP (default): 
+		 the BLOCK text is copied for EACH event meeting the condition(s), 
+		 or for each record returned by the SQL query.</p>
+		<p class="hcp2">VP_GROUP: the BLOCK 
+		 text is NOT copied if more than one event meets the condition. 
+		 Use the #LP, #LS, #TB or #TC format option to combine the event 
+		 field of the events that meet the condition. For details on format 
+		 options, refer to <a href="Format_Options.htm">Format Options</a>.</p>
+		<p class="hcp2">VP_SHOW_EMPTY: 
+		 the block is not deleted if NO event meets the condition or if 
+		 the SQL query does not return any records. The fields in the block 
+		 are replaced by a dash (-).</p>
+		<p class="hcp2">VP_ADD_EMPTY: Add 
+		 this option to the Block Statement so that it displays blank when 
+		 the value is empty.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Code Syntax for Forms Only</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="850">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Code 
+		 Section</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">Condition</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp2">Field 
+		 literal that the program will check with the event information, 
+		 and if the condition is found in the event, the block will be 
+		 completed for that event.</p>
+		<p class="hcp2">For example:</p>
+		<p class="hcp2">OfficerType=D</p>
+		<p class="hcp2">is true for all 
+		 officer types starting with D.</p>
+		<p class="hcp2">or</p>
+		<p class="hcp2">OFTYPE=NID</p>
+		<p class="hcp2">which is used for 
+		 all New Individual Officer Types starting with D.</p>
+		<p class="hcp2">or</p>
+		<p class="hcp2">EVT=BAN</p>
+		<p class="hcp2">which is normally 
+		 used for forms that are combined for multiple events, and the 
+		 block is only required for New Bank Accounts (event code=BAN).</p>
+		<p class="hcp2">or</p>
+		<p class="hcp2">AND(,)</p>
+		<p class="hcp2">which is used if 
+		 an event condition(EVT) exists in the BLOCK tag. It only support 
+		 other conditions that are not VP_, BLOCKSIZE=, MFO=, EVT=, SQL=, 
+		 WF_, WF=, CD=, EGRP=.</p>
+		<p class="hcp2">&#160;</p>
+		<p class="hcp2"><span style="font-weight: bold; 
+		 font-style: italic;">Note</span>: You can obtain this information 
+		 from the Events folder in Administrator. Click Details for the 
+		 event in question.</p>
+		<p class="hcp2">Multiple conditions 
+		 can be entered, separated by an ampersand (&amp;). If multiple 
+		 conditions are set, the program will complete the block if at 
+		 least one of the conditions is met (i.e., Condition1 OR Condition2)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Code Syntax for Word/Web Reports Only</h3>
+<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+		 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="850">
+	<col style="width: 20%;">
+	<col style="width: 80%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Code 
+		 Section</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">Condition</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">Field 
+		 literal that the program will check with field values returned 
+		 by the HD (header) query statement.</p>
+		<p class="hcp3">For 
+		 example:</p>
+		<p class="hcp3">The 
+		 condition EntType=B requires the field EntType to be returned 
+		 by the HD (header) query, and the condition is met if the returned 
+		 value equals to B.</p>
+		<p class="hcp3">Multiple 
+		 conditions can be entered, separated by an ampersand (&amp;). 
+		 If multiple conditions are set, the program will complete the 
+		 block if at least one of the conditions is met (i.e. Condition1 
+		 OR Condition2).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="hcp2">SB</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="hcp3">To 
+		 get a field that is not available from the field wizard.</p>
+		<p class="hcp3">Example: 
+		 To get incorporation date from Compliance table, where the corporation 
+		 is a director of another company.</p>
+		<p class="hcp3">[/IncorpDate=SELECT 
+		 PasDateIssue FROM Compliance WHERE AddrCode=’(-SB.AddrCode-)’/]</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Code Syntax for HTML Templates Only</h3>
+<p>For HTML templates, BLOCK statements can also be used to include/exclude 
+ information based on whether certain conditions are met. The conditions 
+ are to be defined using SQL query that is to be added to the Key Information 
+ and the BLOCK statement will refer to the query. There must be both a 
+ beginning and ending code for each BLOCK statement and it applies to items 
+ contained within. BLOCK statements are used with the ftyp=evw prefix.</p>
+<p>&#160;</p>
+<p class="hcp4">Beginning code</p>
+<p>(+ftyp=evw|BLOCK.&lt;Name&gt;|SQL=&lt;Query&gt;+)</p>
+<p>&#160;</p>
+<p class="hcp4">Ending code</p>
+<p>(+ftyp=evw|BLOCK.&lt;Name&gt;|SQL=&lt;Query&gt;|END+)</p>
+<p>&#160;</p>
+<p>The &lt;Name&gt; for the BLOCK must be unique and &lt;Query&gt; is the 
+ SQL query used to specify the required condition(s). When the condition(s) 
+ is met, then the items within the beginning and ending code of the BLOCK 
+ statement will be included.</p>
+<p>&#160;</p>
+<p>Example:</p>
+<p><img src="../image257.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p>Results:</p>
+<p><img src="../image258.gif" alt="" border="0" class="hcp5"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+	<li><p><a href="Coding_a_Word_Template.htm">Coding a Word Template</a></p></li>
+	<li><p><a href="Coding_a_HTML_Template.htm">Coding a HTML Template</a></p></li>
+	<li><p><a href="Key_Information.htm">Key Information</a></p></li>
+</ul>
+<p style="font-size: 8pt; margin-bottom: 1.5pt; margin-top: 1.5pt;">&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript">
+if(bc1 == 1)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_HTML_Template.htm\">Coding a HTML Template</a> &gt; BLOCK Statements</p>");
+if(bc1 == 0)
+ document.write("<p style=\"text-align:left;\" class=\"breadcrumbs\">You are here:<a class=\"breadcrumbs\" href=\"../Shared/Copyright_Notice.htm\">Home</a> &gt; <a href=\"../Shared/Overview.htm\">Viewpoint - Home</a> &gt; <a href=\"Configuration.htm\">Configuration</a> &gt; <a href=\"Document_Libraries.htm\">Document Libraries</a> &gt; <a href=\"Coding_a_Word_Template.htm\">Coding a Word Template</a> &gt; BLOCK Statements</p>");
+</script>
+
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

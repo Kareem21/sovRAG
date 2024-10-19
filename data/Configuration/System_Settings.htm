@@ -1,0 +1,1570 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+<meta name="MS-HAID" content="System Settings">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>System Settings</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { color:#300063; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-weight:bold; }
+td.hcp6 { vertical-align:top; }
+p.hcp7 { margin-left:6pt;
+margin-right:6pt;
+color:#300063; }
+p.hcp8 { margin-left:6pt;
+margin-right:6pt; }
+li.hcp9 { list-style:none;
+display:inline; }
+p.hcp10 { margin-left:6pt;
+margin-right:6pt;
+text-decoration:underline; }
+p.hcp11 { margin-left:12px; }
+p.hcp12 { font-size:8pt;
+margin-bottom:1.5pt;
+margin-top:1.5pt; }
+p.hcp13 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>System Settings</h1>
+<p>Settings for Viewpoint are stored in this screen and should not be changed 
+ without prior instructions from Viewpoint.</p>
+<p>&#160;</p>
+<p class="FldExplain">System Settings list</p>
+<p>The list shows the settings identified by the area of application and 
+ its key.</p>
+<p>&#160;</p>
+<p class="FldExplain">Edit</p>
+<p>If necessary, click this to change the value for a system setting.</p>
+<p>&#160;</p>
+<h2>General System Settings</h2>
+<p>The available settings here allow for:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">configuring 
+	 version alert message</a></p>
+	<div class="droptext" id="POPUP584558768" style="display: none;">
+		<p>The version alert message pops up when your databaseversion differs 
+		 from the version of the program's executable files. The version 
+		 number comprises of the following: </p>
+		<ul class="hcp1">
+			<li><p>Major - This is the first part of the version number 
+			 e.g. for the version number 8.0.15.200 this would be 8.</p></li>
+			<li><p>Minor - This is the second part of the version number 
+			 e.g. for the version number 8.0.15.200, this would be 0.</p></li>
+			<li><p>Build- This is the third part of the version number 
+			 e.g. for the version number 8.0.15.200, this would be 15.</p></li>
+			<li><p>Revision - This is the last part of the version number 
+			 e.g. for the version number 8.0.15.200, this would be 200.</p></li>
+		</ul>
+		<p>You can specify when to show the message by entering the relevant 
+		 value for the VERCHK Key:</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-bottom-width: 2px; border-top-width: 2px;" cellspacing="0px" width="858">
+			<colgroup>	<col width="137">
+				<col width="697">
+			</colgroup>
+			<tr class="t1st">
+				<td><p class="hcp2">Value</p></td>
+				<td><p class="hcp2" style="color: #300063;">Result</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>0</p></td>
+				<td class="t2Col"><p>Prompt warning message will be displayed 
+				 when Major and Minor parts are the same but the Build 
+				 part is different e.g. 8.0.<span class="hcp3">15</span> 
+				 vs 8.0.<span class="hcp3">20</span>. </p>
+				<p>After the message is prompted, user may choose to continue/discontinue 
+				 with the login process.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>2</p></td>
+				<td class="t2Col"><p>No prompt message, user may continue 
+				 as normal.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>3</p></td>
+				<td class="t2Col"><p>No warning message. The user may continue 
+				 as normal if the difference between the executable and 
+				 database  version is within the Version.AllowMinRevision 
+				 and Version.Revision number in the Version table in the 
+				 database.</p>
+				<p>For instance, when the Version.AllowMinRevision number 
+				 is 20 and the Version.Revision number is 15, then no warning 
+				 will be displayed if the executable version is between 
+				 8.0.<span class="hcp3">15</span> and 8.0.<span class="hcp3">20</span>.</p>
+				<p>If the executable is not within this range, then a warning 
+				 message will be displayed as per setting 0.</p>
+				<p><span class="hcp4">Note</span>: 
+				 Version.Revision number in the database is actually referring 
+				 to Build part.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>4</p></td>
+				<td class="t2Col"><p>Compatible Rule – Prompt error message 
+				 will be displayed when Major and Minor parts are the same 
+				 but the Build part is different. E.g. &#160;8.0.<span class="hcp3">20 </span>vs 8.0.<span class="hcp3">25</span></p>
+				<p>This has the same behaviour as value 0. However, this 
+				 will prompt an error message instead of a warning message.<span class="hcp3"> </span><span>After the error 
+				 message is prompted, the login process will discontinue 
+				 and the application will shut down.</span></p>
+				<p class="hcp5">Value 4 is the default system 
+				 setting.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>5</p></td>
+				<td class="t2Col"><p>Strict Rule - Prompt message will 
+				 be displayed when version number part is different. E.g. 
+				 for version number 8.0.25.62, all <span class="hcp3">8.0.25.62</span> 
+				 must be the same.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">configuring 
+	 the default start up screen</a></p>
+	<div class="droptext" id="POPUP584726715" style="display: none;">
+		<p>You can have a different startup screen for Viewpoint - Home, 
+		 File Maintenance and File Enquiry screens. To do this, enter the 
+		 Navigation ID of the screen that you want for the following Keys: 
+		 </p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="851">
+			<col style="width: 12.674%;">
+			<col style="width: 87.326%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp2">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DFHOME</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the Navigation ID of the 
+				 screen that you want to see when you first log in to Viewpoint.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DFFILE</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the Navigation ID of the 
+				 screen that you want to see when you first open the File 
+				 Maintenance screen for a selected Master File.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DEFILE</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the Navigation ID of the 
+				 screen that you want to see when you first open the File 
+				 Enquiry screen for a selected Master File.</p></td>
+			</tr>
+		</table>
+		<p>The settings here apply to all users but individual users can 
+		 override these settings and set their <a href="../Shared/Customising_ViewPoint_Interface.htm">own 
+		 default startup screen</a>.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a26">specifying 
+	 Master File Details Report templates</a></p>
+	<div class="droptext" id="POPUP586893123" style="display: none;">
+		<p>Master File Details reports list out information stored in Viewpoint 
+		 in compliance with EU GDPR's Right of Access. There is a total 
+		 of six reports and they are generated through Reporting &gt; Word 
+		 Reports. The design of the reports is based on the value of the 
+		 MFDETR Key. To amend the report, you would amend the value.</p>
+		<table class="Table1" cellspacing="0px" width="68.997%">
+			<col style="width: 17.839%;">
+			<col style="width: 82.161%;">
+			<tr class="t1st">
+				<td>Key</td>
+				<td>Value</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;">MFDETR </td>
+				<td class="t2Col" style="vertical-align: top;">The value 
+				 is made up of tags that is divided into the following 
+				 sections: 
+				<ul class="hcp1">
+					<li><p>Templates - this is to specify the following:</p></li>
+					<li class="hcp9"><ul class="hcp1">
+						<li><p>[/FormCode=/] - this refers to the Form 
+						 Code field.</p></li>
+						<li><p>[/Title=/] - this refers to the Description 
+						 field and can be changed if required.</p></li>
+						<li><p>[/Content=/] - this refers to the information 
+						 to be included such as C for Child Relations, 
+						 P for Parent Relations and D for Documents.</p></li>
+						<li><p>[/Type=/] - this refers to the format which 
+						 can be System Format (S) or Friendly Format (F).</p></li>
+						<li><p>[/HelpText=/] - this refers to the Help 
+						 Text for the report and can be changed if required.</p></li>
+						<li><p>[/Notes=/] - this refers to the Notes field 
+						 for the report and can be changed if required.</p></li>
+					</ul></li>
+					<li><p>Properties - this is to specify the following:</p></li>
+					<li class="hcp9"><ul class="hcp1">
+						<li><p>[/CountryCode=/] - this refers to the Report 
+						 Folder.</p></li>
+						<li><p>[/FormCat=/] - this refers to the Document 
+						 Library for the report which is 1 for Word Reports.</p></li>
+						<li><p>[/LangCode=/] - this refers to the Language 
+						 field.</p></li>
+						<li><p>[/HeaderSQL=/] - this refers to the header 
+						 SQL for the report and can be changed if required.</p></li>
+						<li><p>[/SelectDef=/] - this refers to the Select 
+						 Definition field.</p></li>
+					</ul></li>
+				</ul>
+				<p>If you have made changes, you need to export the templates 
+				 and import them. To export the templates, click Master 
+				 File Details Report Templates in &#160;Database Archiving 
+				 &gt; <a href="Troubleshooting.htm">Troubleshooting</a>.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a6">specifying 
+	 currencies without decimal places</a></p>
+	<div class="droptext" id="POPUP584745072" style="display: none;">
+		<p>The CURDEC Key is for specifying currencies without decimal 
+		 places so that rounding up will be performed to have the amount 
+		 as 'XX.00'. This applies to currency fields in Annual Fees, Sales 
+		 Ledger, Purchase Ledger and Accounting. </p>
+		<p>To specify the currencies:</p>
+		<ol style="list-style: decimal;">
+			<li><p>In Viewpoint - Home &gt; Configuration &gt; Settings 
+			 &gt; Customise &gt; System Settings, look for VPCROSS Application.</p></li>
+			<li><p>Click CURDEC.</p></li>
+			<li><p>Click Edit.</p></li>
+			<li><p>Add the currency code(s) to the Value field. Ensure 
+			 that you separate each currency code with a comma e.g. CLP,JPY,KRW,ISK,VND</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>: 
+		 Users can still manually enter amount with decimal places.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a7">specifying 
+	 the maximum records for Subtotal option</a></p>
+	<div class="droptext" id="POPUP584753649" style="display: none;">
+		<p>To restrict the number of records for the Subtotal option, you 
+		 can enter the maximum number of records in the GSUBMX Key. If 
+		 the number of records in the grid exceeds the value, then the 
+		 Subtotal option will not work. By default, the value is 3500.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">adding 
+	 tabs to New Master File Wizard</a></p>
+	<div class="droptext" id="POPUP586169822" style="display: none;">
+		<p>By default, the New Master File Wizard displays these - Setup, 
+		 General and Addresses which allows for information to be entered 
+		 for these sections before the Master File is created. With the 
+		 introduction of new screens such as Identity Register and Reportable 
+		 Accounts, it is now possible to also have these appear in the 
+		 New Master File Wizard by adding the screens' Navigation ID added 
+		 as values for the MWNECT Key and separate them with a pipe symbol 
+		 '|'.</p>
+		<p>Example:</p>
+		<p>FMMKYCVV|FMMUSRFC</p>
+		<p><span class="hcp4" style="font-weight: bold; font-style: italic;">Note</span>: 
+		 A screen's Navigation ID can be obtained from Configuration &gt; 
+		 Settings &gt; Customise &gt; Windows Menu.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">enabling 
+	 Identity Details and CDD tab in New Master File Wizard</a></p>
+	<div class="droptext" id="POPUP586252735" style="display: none;">
+		<p>The optional Identity Details and CDD tabs will not appear by 
+		 default in New Master File Wizard but can be enabled by changing 
+		 the value for the SETIDR Key to the following:</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-bottom-width: 2px; border-top-width: 2px; height: 174px; 
+				 left: 0px; top: 658px;" cellspacing="0px" width="700">
+			<colgroup>	<col width="76">
+				<col width="600">
+			</colgroup>
+			<tr class="t1st">
+				<td><p class="hcp2">Value</p></td>
+				<td><p class="hcp2" style="color: #300063;">Effect</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>0</p></td>
+				<td class="t2Col"><p>Disable both Identity Details and 
+				 CDD tabs (default value)</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>1</p></td>
+				<td class="t2Col"><p>Enable Identity Details tab only</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>2</p></td>
+				<td class="t2Col"><p>Enable CDD tab only</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>3</p></td>
+				<td class="t2Col"><p class="hcp5"><span style="font-weight: normal;">Enable 
+				 both Identity Details and CDD tabs</span></p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a27">configuring 
+	 number of e-mails for TSNA services to process</a></p>
+	<div class="droptext" id="POPUP386714139" style="display: none;">
+		<p><span lang="EN-GB" xml:lang="EN-GB">You can configure the number 
+		 of e-mails to process per installation of Task Scheduler &amp; 
+		 Notification Agent services in Viewpoint Management. This can 
+		 improve the handling of bulk e-mail processing if the number of 
+		 e-mail notifications for a job causes performance issues.</span></p>
+		<p>To set the number of e-mails for a single TSNA installation 
+		 to process,</p>
+		<ol>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">From 
+			 Viewpoint – Home, go to Configuration &gt; Settings &gt; Customise 
+			 &gt; System Settings.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Select 
+			 VPCROSS – TSNANR.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 Edit.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Change 
+			 the value in the Value field. <span class="hcp4">Note</span>:The 
+			 default and recommended value for this is 100. </p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 Update. </p></li>
+		</ol>
+		<p class="Listing-NrList">Each TSNA service installed will process 
+		 the number of e-mails based on the value set for TSNANR. To improve 
+		 bulk e-mail processing, it is encouraged to install more TSNA 
+		 service. All installations will process the e-mails at the same 
+		 time and with the sequence divided between the installations. 
+		 </p>
+		<p class="Listing-NrList">For example, if the bulk e-mails number 
+		 at 1000, TSNANR is set to 100, and there are two TSNA services 
+		 installation:</p>
+		<ul class="hcp1">
+			<li><p class="Listing-NrList">TSNA 1 – processes 100 e-mail 
+			 (1-100)</p></li>
+			<li><p class="Listing-NrList">TSNA 2 – processes 100 e-mails 
+			 (101-201)</p></li>
+			<li><p class="Listing-NrList">TSNA 1 – processes 100 e-mails 
+			 (202-302)</p></li>
+			<li><p class="Listing-NrList">And the process will continue 
+			 until all 1000 e-mails are processed. </p></li>
+		</ul>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a271">configuring 
+	 limit for e-mails sent for TSNA services</a></p>
+	<div class="droptext" id="POPUP3867141391" style="display: none;">
+		<p><span lang="EN-GB" xml:lang="EN-GB">You can configure the e-mail 
+		 sending limit per installation of Task Scheduler &amp; Notification 
+		 Agent services in Viewpoint Management. </span>This allows users 
+		 to ensure that e-mails sent out do not exceed the limits set by 
+		 e-mail service providers. </p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">The limit set is based on 
+		 a 24-hour period. E-mails that exceed the limit will be processed 
+		 in the next 24-hour cycle. To set the e-mail sending limit,</span></p>
+		<ol>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">From 
+			 Viewpoint – Home, go to Configuration &gt; Settings &gt; Customise 
+			 &gt; System Settings.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Select 
+			 VPCROSS – TSNADL.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 Edit.</p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Change 
+			 the value in the Value field. <span class="hcp4">Note</span>:The 
+			 default value is 0, indicating unlimited sending of e-mails. 
+			 </p></li>
+			<li class="p-Listing-NrList"><p class="Listing-NrList">Click 
+			 Update. </p></li>
+		</ol>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Each TSNA 
+		 service installed will process the number of e-mails based on 
+		 the value set for TSNANR. For bulk e-mail sending, the limit defined 
+		 by TSNADL will work concurrently with the value set for TSNANR.</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">For example, 
+		 with 1000 e-mails to send, TSNANR set to 100, TSNADL set to 500, 
+		 and one TSNA service installation: </span></p>
+		<ul class="hcp1">
+			<li>TSNA - Processes 100 e-mails</li>
+			<li><p>TSNA - Processes 100 e-mails</p></li>
+			<li><p>TSNA - Processes 100 e-mails</p></li>
+			<li><p>TSNA - Processes 100 e-mails</p></li>
+			<li><p>TSNA - Processes 100 e-mails</p></li>
+		</ul>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">The TSNA 
+		 will process up to 500 out of the 1000 e-mails within 24 hours. 
+		 The remaining 500 e-mails will be processed in the next 24-hour 
+		 cycle.</span></p>
+		<p class="Note"><span lang="EN-GB" xml:lang="EN-GB" class="hcp4">Note</span><span 
+		 lang="EN-GB" xml:lang="EN-GB">: E-mails processed will never exceed 
+		 the limit defined by TSNADL regardless of any remaining process 
+		 slots from the TSNANR value.</span><span lang="EN-GB" xml:lang="EN-GB" 
+													 style="mso-spacerun: yes;">&#160;</span></p>
+		<p class="Listing-NrList">&#160;</p>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: These 
+ settings are in the VPCROSS application.</p>
+<p>&#160;</p>
+<h2>Document Management System Settings</h2>
+<p>The available settings here allow for:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a8">configuring 
+	 of scan batches</a></p>
+	<div class="droptext" id="POPUP585051372" style="display: none;">
+		<p>If you do not see these keys when you first enable the carbon-copy 
+		 function in Viewpoint - Home &gt; Configuration &gt; Settings 
+		 &gt; <a href="System_Defaults.htm">System Defaults &gt; Document 
+		 Management</a>, you will need to create a new (dummy) scan batch 
+		 in Document Management, and edit the batch to assign the copies. 
+		 </p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="818">
+			<col style="width: 14.107%;">
+			<col style="width: 85.893%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DMASSI</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the default owner to be 
+				 assigned the batch. Each batch can only be assigned to 
+				 one owner. The system can be set up so that it recognises 
+				 users based on how the Master File/Entity File/Billing 
+				 File/Account File is set up.</p>
+				<p class="hcp8">Default 
+				 assign codes that can be used are made up of the file 
+				 type, followed by the user's level, separated by a pipe.</p>
+				<p class="hcp10">File 
+				 types</p>
+				<ul class="hcp1">
+					<li><p class="hcp8">EN 
+					 - Entity File</p></li>
+					<li><p class="hcp8">BF 
+					 - Billing File</p></li>
+					<li><p class="hcp8">AF 
+					 - Account File</p></li>
+					<li><p class="hcp8">SF 
+					 - Supplier File</p></li>
+					<li><p class="hcp8">RE 
+					 - Relation</p></li>
+				</ul>
+				<p class="hcp10">User's 
+				 level</p>
+				<ul class="hcp1">
+					<li><p class="hcp8">AD 
+					 - Administrator</p></li>
+					<li><p class="hcp8">MG 
+					 - Manager</p></li>
+				</ul>
+				<p class="hcp8">Therefore, 
+				 the sample setting shown below will first locate the Administrator 
+				 of the Entity File. If this has not been set up, the system 
+				 will locate the Administrator of the Billing File:</p>
+				<p class="hcp8">EN.AD|BF.AD</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DMCOPY</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the codes for user(s) the 
+				 carbon copy/copies are to be assigned to.</p>
+				<p class="hcp8">As described 
+				 above, this will select users to be given a copy of the 
+				 scanned batch. In this instance, it is usually a Manager 
+				 level who will be assigned a copy.</p>
+				<p class="hcp8">Thus, the 
+				 sample setting below will assign a copy first to the Manager 
+				 of the Entity File and, if this has not been set up, to 
+				 the Manager of the Billing File:</p>
+				<p class="hcp8">EN.MG|BF.MG</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DMNRCC</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the number of default carbon 
+				 copies to be assigned. For example, if the number of copies 
+				 is 2, then, based on the example given for DMCOPY above, 
+				 both the Managers will be given a copy of the batch, if 
+				 both have been set up.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a9">specifying 
+	 file types for image import</a></p>
+	<div class="droptext" id="POPUP585103464" style="display: none;">
+		<p>The file types that can be imported into Document Management 
+		 include jpg, jpeg, bmp, tif, tiff and gif. </p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="807">
+			<col style="width: 14.424%;">
+			<col style="width: 85.576%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">DMTYPE</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the file type separated 
+				 by a semi-colon.</p>
+				<p class="hcp8">E.g.: jpg;jpeg;bmp;tif;tiff;gif;png</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a10">specifying 
+	 common access document holder</a></p>
+	<div class="droptext" id="POPUP585164257" style="display: none;">
+		<p>If there are documents that can be accessed by all users, then 
+		 instead of adding multiple index fields of this type, i.e., one 
+		 for each Administrator Group, create a common Administrator Group 
+		 and select this in the index field of the document holder. </p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">ADGALL</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the Administrator Group 
+				 code here.</p>
+				<p class="hcp8">E.g.: GROUP1</p></td>
+			</tr>
+		</table>
+		<p class="SeeAlso">&#160;</p>
+		<p class="SeeAlso">See also:</p>
+		<ul class="hcp1">
+			<li><p><a href="Administrator_Groups.htm">Administrator Groups</a></p></li>
+			<li><p><a href="Filing_Cabinet_and_Holder_Security.htm">Filing 
+			 Cabinet and Holder Security</a></p></li>
+		</ul>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a20">specifying 
+	 OCR Full Text Search limit</a></p>
+	<div class="droptext" id="POPUP585596956" style="display: none;">
+		<p>You may set the record limit for OCR full text searches by setting 
+		 the limit value in the DCFTSL Key. By default, the value is 2000 
+		 so the query is on the first 2000 records. If you set the value 
+		 to 0, then the search will query the entire database.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 This setting is under VPDOCMG application.</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a21">customisng 
+	 the algorithm for Revision Management</a></p>
+	<div class="droptext" id="POPUP586422538" style="display: none;">
+		<p>The Revision Management algorithm groups files together based 
+		 on file format and file name similarity. The default file name 
+		 similarity percentage is 50%. You can change the file name similarity 
+		 percentage by editing the REVPEC Key to a value between 0 and 
+		 100. Selecting 0 will group all files based on file format regardless 
+		 of file name similarity. This customisation does not affect the 
+		 algorithm for e-mails. </p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 This setting is under VPDOCMG application.</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a29">specifying 
+	 language for OCR using GdPicture component</a></p>
+	<div class="droptext" id="POPUP598592523" style="display: none;">
+		<p>Type your drop-down text here.</p>
+		<p>&#160;</p>
+		<p>Note: This does not apply to Transym component.</p>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: These 
+ settings are in the VPCROSS application unless stated otherwise.</p>
+<p>&#160;</p>
+<h2>Engage Servicing Portal System Settings</h2>
+<p>The available settings here allow for:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a11">restricting 
+	 file types that can be uploaded to ESP</a></p>
+	<div class="droptext" id="POPUP585134786" style="display: none;">
+		<p>Due to security concerns and to prevent malware attack, only 
+		 certain file types are allowed to upload to the ESP. The allowed 
+		 file types are listed in this white list. This setting is done 
+		 in the Front-Office.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">UPLFIL</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Enter the file type separated 
+				 by a comma.</p>
+				<p class="hcp8">E.g.: .doc,.docx,.msg,.odt,.rtf,.txt,.wpd,.pages,.csv,.pps,.ppt,.pptx,.key,.vcf,.xml,.bmp,.gif,.jpg,.jpeg,.png,.psd,</p>
+				<p class="hcp8">.tif,.tga,.tiff,.ai,.svg,.ps,.eps,.indd,.pct,.pict,.pdf,.xlr,.xls,.xlsx</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a12">customising 
+	 ESP display information</a></p>
+	<div class="droptext" id="POPUP585173111" style="display: none;">
+		<p>The ESP Entities list allows customisation of the Entity's display 
+		 information and Master File compliance status or any defined status 
+		 in colour badge. This can be done by configuring tags for both 
+		 ENTADD and ENTLST Keys. The task scheduler job 'Engage Servicing 
+		 Portal - Entity Update [CPEU]' retrieves Back-office records based 
+		 on the queries stored in System Settings ‘ENTADD’ key and stores 
+		 the records in the Front-office database. The records will then 
+		 be displayed in the ESP 'Entities' list.</p>
+		<p>The ENTADD Key stores SQL queries that retrieves data from the 
+		 Back-office database.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp8">Key</p></td>
+				<td class="hcp6"><p class="hcp8">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">ENTADD</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Syntax:</p>
+				<p class="hcp8">[/EntityField.sql=SELECT 
+				 &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;entity_column_name&gt;=‘(-MF-)’/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Default 
+				 Value:</p>
+				<p class="hcp8">[/EntityField.sql=/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Example 
+				 Tag:</p>
+				<p class="hcp8">[/EntityField.sql= 
+				 SELECT AdminGroup FROM RefMaster WHERE RefCode=‘(-MF-)’/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Multiple 
+				 queries can be entered by separating each with a ‘;’. 
+				 See below syntax:</p>
+				<p class="hcp8">[/EntityField.sql= 
+				 SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE 
+				 &lt;entity_column_name&gt;=‘(-MF-)’;</p>
+				<p class="hcp8">SELECT 
+				 &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;entity_column_name&gt;=‘(-MF-)’/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Example 
+				 tag:</p>
+				<p class="hcp8">[/EntityField.sql= 
+				 SELECT AdminGroup FROM RefMaster WHERE RefCode=‘(-MF-)’;</p>
+				<p class="hcp8">SELECT 
+				 EntClient FROM Entity WHERE EntCode=‘(-MF-)’;</p>
+				<p class="hcp8">SELECT 
+				 AddrCode from Officers WHERE EntCode=‘(-MF-)’;</p>
+				<p class="hcp8">SELECT 
+				 KYC_Status FROM RefMaster WHERE RefCode =‘(-MF-)’/]</p></td>
+			</tr>
+		</table>
+		<p>The ENTLST key stores the display settings of the Entity’s customised 
+		 fields and Master File status colour badge.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp8">Key</p></td>
+				<td class="hcp6"><p class="hcp8">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">ENTLST</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">Tag syntax for the Entity’s customised 
+				 fields:</p>
+				<p class="hcp8">Syntax:</p>
+				<p class="hcp8">[/Ent.cols=&lt;column_name&gt;,&lt;column_name&gt;,&lt;column_name&gt;/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Default 
+				 Value:</p>
+				<p class="hcp8">[/Ent.cols=JurType, 
+				 EntType/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Example 
+				 Tag:</p>
+				<p class="hcp8">[/Ent.cols=AdminGroup, 
+				 EntType, JurType/]</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Tag syntax 
+				 for Master File status ‘colour badge’:</p>
+				<p class="hcp8">Syntax:</p>
+				<p class="hcp8">[/Ent.badge=&lt;badge 
+				 ID&gt;/]</p>
+				<p class="hcp8">[/Ent.badge.&lt;badge 
+				 ID&gt;.title=&lt;badge title&gt;/]</p>
+				<p class="hcp8">[/Ent.badge.&lt;badge 
+				 ID&gt;.colour=&lt;any CSS colour name or colour code&gt;/]</p>
+				<p class="hcp8">[/Ent.badge.&lt;badge 
+				 ID&gt;.condition=&lt;status condition defined in SQL query&gt;/]</p>
+				<p class="hcp8"><span class="hcp4">Note</span>: You can define more 
+				 than one badge ID in the tag [/Ent.badge=&lt;badge ID&gt;/] 
+				 by separating each with a comma (,).</p>
+				<p class="hcp8">&#160;</p>
+				<p class="hcp8">Example 
+				 Tag:</p>
+				<p class="hcp8">[/Ent.badge=comp,noncomp/]</p>
+				<p class="hcp8">[/Ent.badge.comp.title=Compliance/]</p>
+				<p class="hcp8">[/Ent.badge.comp.colour=Green/]</p>
+				<p class="hcp8">[/Ent.badge.comp.condition=KYC_Status=09/]</p>
+				<p class="hcp8">[/Ent.badge.noncomp.title=Non-Compliance/]</p>
+				<p class="hcp8">[/Ent.badge.noncomp.colour=Red/]</p>
+				<p class="hcp8">[/Ent.badge.noncomp.condition=KYC_Status&lt;&gt;09 
+				 OR KYC_Status IS NULL/]</p></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">customising 
+	 ESP error messages</a></p>
+	<div class="droptext" id="POPUP583918381" style="display: none;">
+		<p>You may customise the ESP error message with unique identifiers 
+		 to include the error description and ID.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp11">CSPERR</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>Enter 
+				 the customised message with the unique identifiers as 
+				 follows:</p>
+				<ul class="hcp1">
+					<li><p><span class="hcp3">(-Id-)</span> 
+					 to retrieve Id from the ClpAuditTrail table.</p></li>
+					<li><p><span class="hcp3">(-Description-)</span> 
+					 to retrieve Description from the ClpAuditTrail table.</p></li>
+				</ul>
+				<p>Example:</p>
+				<p>The following error occurred while processing the request: 
+				 (-Description-). Please contact your system administrator.</p>
+				<p>&#160;</p>
+				<p>The error message customisation is not applicable for 
+				 the following:</p>
+				<ul class="hcp1">
+					<li><p>Payment Gateway error - which is configurable 
+					 in the System Settings Application 'VPCROSS', Key 
+					 'PAYGTW'.</p></li>
+					<li><p>DocuSign error - which is configurable in the 
+					 System Settings Application 'VPCSP', Key 'PAYDSE'.</p></li>
+					<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a13">System 
+					 error exception</a>.</p>
+					<div class="droptext" id="POPUP3700017741" style="display: none;">
+						<p>The following are the system errors or exception 
+						 error types with the respective standard error 
+						 message:</p>
+						<table class="Table1" cellspacing="0px" width="100%">
+							<col style="width: 50%;">
+							<col style="width: 50%;">
+							<tr class="t1st">
+								<td>System Error/Exception Error Type</td>
+								<td>Error Message as Configured in the 
+								 System</td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Invalid username or 
+								 password</p></td>
+								<td class="t2Col"><p>Invalid username or 
+								 password.</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Maximum attempts reached</p></td>
+								<td class="t2Col"><p>This account has exceeded 
+								 the maximum number of attempts.</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Invalid user role 
+								 in default Organisation</p></td>
+								<td class="t2Col"><p>Invalid user role 
+								 for default organisation.</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Invalid user role 
+								 *</p></td>
+								<td class="t2Col"><p>$&quot;Invalid user 
+								 role for organisation{If(Not String.IsNullOrEmpty(details), 
+								 $&quot; - {details}&quot;, &quot;&quot;)}.&quot;</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Invalid username or 
+								 password for Application Server</p></td>
+								<td class="t2Col"><p>Failed to login to 
+								 ViewPoint Application Server using the 
+								 logon information provided.</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Invalid File Code 
+								 or File Config Id</p></td>
+								<td class="t2Col"><p>Invalid file code 
+								 or file config id.</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Invalid Database Id</p></td>
+								<td class="t2Col"><p>The database id(DbId) 
+								 that stores in ClpFileConfigs is invalid.</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Exception from Application 
+								 Server *</p></td>
+								<td class="t2Col"><p>&quot;Error occurred 
+								 while getting data from application server.&quot; 
+								 &amp; If(Not String.IsNullOrEmpty(details), 
+								 $&quot; Details: {details}&quot;, &quot;&quot;)</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Application Server 
+								 is not available *</p></td>
+								<td class="t2Col"><p>&quot;Failed to establish 
+								 connection with application server.&quot; 
+								 &amp; If(Not String.IsNullOrEmpty(details), 
+								 $&quot; service address : {details}&quot;, 
+								 &quot;&quot;)</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Inactive user</p></td>
+								<td class="t2Col"><p>Your login attempt 
+								 was not successful. Please try again or 
+								 contact your system administrator.</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Unauthorised to view 
+								 information</p></td>
+								<td class="t2Col"><p>You do not have the 
+								 rights to view this information.</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Invalid tag</p></td>
+								<td class="t2Col"><p>Invalid tag.</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Vendor credential 
+								 is not configured *</p></td>
+								<td class="t2Col"><p>If(Not String.IsNullOrEmpty(details), 
+								 details, &quot;Service&quot;) &amp; &quot; 
+								 is not configured.&quot;</p></td>
+							</tr>
+							<tr class="t1Row">
+								<td class="t1Col"><p>Currency Code is not 
+								 defined in ISO 4217 standard *</p></td>
+								<td class="t2Col"><p>$&quot;Currency code 
+								 '{details}' is not defined in ISO 4217 
+								 standard.&quot;</p></td>
+							</tr>
+							<tr class="t2Row">
+								<td class="t1Col"><p>Unable to record online 
+								 payment in the Back-office *</p></td>
+								<td class="t2Col"><p>$&quot;Completed payment 
+								 could not be posted to Back-Office. {If(String.IsNullOrEmpty(details), 
+								 &quot;&quot;, $&quot;Payment Details: 
+								 {details}. &quot;)}&quot;</p></td>
+							</tr>
+						</table>
+						<p><span class="hcp4">Note</span>: 
+						 * indicates that the system error message contains 
+						 programming syntax.</p>
+     </div></li>
+				</ul></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+    </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a14">defining 
+	 the payment gateway</a></p>
+	<div class="droptext" id="POPUP583928078" style="display: none;">
+		<p>This setting defines which payment gateway to be used in the 
+		 ESP payment feature. Currently, only Worldpay and Barclaycard 
+		 ePDQ are supported. This setting is configured in the Front-Office.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp11">PAYGTW</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>General 
+				 Configuration:</p>
+				<table class="Table1" cellspacing="0px" width="100%">
+					<col style="width: 50%;">
+					<col style="width: 50%;">
+					<tr class="t1st">
+						<td><p class="hcp2">Value</p></td>
+						<td><p class="hcp2">Description</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/PaymentProvider=WPJS/]</p>
+						<p>or</p>
+						<p>[/PaymentProvider=BCEC/]</p>
+						<p>&#160;</p></td>
+						<td class="t2Col"><p>This defines the payment provider 
+						 to be used in ESP payment:</p>
+						<ul class="hcp1">
+							<li><p>'WPJS' refers to Worldpay</p></li>
+							<li><p>'BCEC' refers to Barclaycard ePDQ E-Commerce</p></li>
+						</ul>
+						<p><span class="hcp4">Note</span>: 
+						 The payment provider will default to Worldpay 
+						 if this value is not defined.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/BackOfficeBankAccount=&lt;DBCode&gt;:&lt;BANumber&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the bank 
+						 account for the receipt after payment is completed 
+						 on the payment gateway with:</p>
+						<ul class="hcp1">
+							<li><p>&lt;DBCode&gt; referring to the Back-office 
+							 database. You can obtain this from the Code 
+							 field in Configuration &gt; Engage Servicing 
+							 Portal &gt; Global &gt; Databases.</p></li>
+							<li><p>&lt;BANumber&gt; referring to the bank 
+							 account set up for the Revenue Entity. You 
+							 can obtain this from the Number field in Configuration 
+							 &gt; Business Parameters &gt; Practice Management 
+							 &gt; Setup &gt; Bank Accounts.</p></li>
+						</ul>
+						<p>If the ESP connects to multiple databases, separate 
+						 the bank account for each database with a ‘|’ 
+						 symbol, for example:</p>
+						<p>[/BackOfficeBankAccount=EUPROD:WPACC01|ASPROD:WPACC02/]</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/NotesFormat=&lt;Notes&gt;/]</p></td>
+						<td class="t2Col"><p>This is the receipt note when 
+						 receipt is posted to the Back-office. The notes 
+						 can be a combination of text and these codes which 
+						 will be replaced by actual information of the 
+						 transaction:</p>
+						<ul class="hcp1">
+							<li><p>(-Amount-)</p></li>
+							<li><p>(-BillingAddress-)</p></li>
+							<li><p>(-CardHolderName-)</p></li>
+							<li><p>(-CardNumber-)</p></li>
+							<li><p>(-CardType-)</p></li>
+							<li><p>(-CardIssuer-)</p></li>
+							<li><p>(-TelephoneNumber-)</p></li>
+						</ul>
+						<p>Example:</p>
+						<p>[/NotesFormat=Amount: (-Amount-)|Billing Address: 
+						 (-BillingAddress-)|Card Holder Name: (-CardHolderName-)|Card 
+						 Number: (-CardNumber-)|Card Type: (-CardType-)|Card 
+						 Issuer: (-CardIssuer-)|Telephone Number: (-TelephoneNumber-)/]</p></td>
+					</tr>
+				</table>
+				<p>&#160;</p>
+				<p>Configuration for Worldpay:</p>
+				<table class="Table1" cellspacing="0px" width="100%">
+					<col style="width: 43.342%;">
+					<col style="width: 56.658%;">
+					<tr class="t1st">
+						<td><p>Value</p></td>
+						<td><p>Description</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/WorldPayErrorMessageFormat=&lt;Message&gt;/]</p></td>
+						<td class="t2Col"><p>This is the message to be 
+						 displayed when an error occurs. The message can 
+						 be a combination of text and the code (-ErrorMsg-) 
+						 to include actual error message.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/WorldPayPublicApiUrl=&lt;URL&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the URL 
+						 for Worldpay API.</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/WorldPayServiceKey=&lt;ServiceKey&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the service 
+						 key of your Worldpay account.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/WorldPayClientKey=&lt;ClientKey&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the client 
+						 key of your Worldpay account.</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/WorldPaySecurePayment=&lt;Value&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify if:</p>
+						<ul class="hcp1">
+							<li><p>3D secure payment is used - &lt;Value&gt; 
+							 is 1</p></li>
+							<li><p>3D secure payment is not used - &lt;Value&gt; 
+							 is 0</p></li>
+						</ul></td>
+					</tr>
+				</table>
+				<p>&#160;</p>
+				<p>Configuration for Barclaycard ePDQ:</p>
+				<table class="Table1" cellspacing="0px" width="100%">
+					<col style="width: 43.339%;">
+					<col style="width: 56.661%;">
+					<tr class="t1st">
+						<td><p>Value</p></td>
+						<td><p>Description</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/BarclayEpdqPspId=&lt;PSPID 
+						 value&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the PSPID 
+						 of Barclaycard ePDQ E-Commerce account.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/BarclayEpdqApiUrl=&lt;API 
+						 URL&gt;/] &#160;</p></td>
+						<td class="t2Col"><p>This is to specify the URL 
+						 for Barclaycard ePDQ E-Commerce site.</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/BarclayEpdqApiShaIn=&lt;SHAIN 
+						 value&gt; /] &#160;</p></td>
+						<td class="t2Col"><p>This is to specify the SHAIN 
+						 value of Barclaycard ePDQ E-Commerce account.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/BarclayEpdqApiShaOut=&lt;SHAOUT 
+						 value&gt;/]</p></td>
+						<td class="t2Col"><p>This is to specify the SHAOUT 
+						 value of Barclaycard ePDQ E-Commerce account.</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/BarclayEpdqErrorMessageFormat=Error 
+						 connecting to Barclaycard ePDQ E-Commerce. (-ErrorMsg-)/]</p></td>
+						<td class="t2Col"><p>This is to customise the error 
+						 message to be displayed in ESP when connection 
+						 to Barclaycard ePDQ E-Commerce site fails.</p></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a15">defining 
+	 timeout period for payment transactions</a></p>
+	<div class="droptext" id="POPUP585262728" style="display: none;">
+		<p>This setting will update the pending payment transaction in 
+		 ESP to ‘Expired’ status if it is pending for more than 10 minutes. 
+		 Please ensure that the task scheduler job 'Engage Servicing Portal 
+		 - Payment Record Cleanup [CPPC]' is set up with active status 
+		 to run the task.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp11">CSPPYT</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>10</p></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a16">defining 
+	 condition for invoices-related grids</a></p>
+	<div class="droptext" id="POPUP585289384" style="display: none;">
+		<p>This setting retrieves and display certain invoice records from 
+		 the Back-office. This setting is configured in the Front-office.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp11">CSPINV</p>
+				<p class="hcp11">(for 'Invoices' grid)</p>
+				<p class="hcp11">&#160;</p>
+				<p class="hcp11">CSPINP</p>
+				<p class="hcp11">(for 'Paid Invoices' grid)</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>The following 
+				 describe the tag value used in defining the condition:</p>
+				<table class="Table1" cellspacing="0px" width="100%">
+					<col style="width: 45.718%;">
+					<col style="width: 54.282%;">
+					<tr class="t1st">
+						<td><p class="hcp2">Value</p></td>
+						<td><p class="hcp2">Description</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/GridCode=&lt;Database Grid 
+						 Code&gt;/]</p></td>
+						<td class="t2Col"><p>This is a mandatory field. 
+						 It defines which grid header's SQL will be used 
+						 to query the Back-office database for invoice 
+						 record retrieval. Default value is [/GridCode=REFRECMF/].</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[/Condition=&lt;Database Field&gt;/]</p></td>
+						<td class="t2Col"><p>This defines the database 
+						 field(s) used to filter the invoice records. If 
+						 there is more than one field, use the comma (,) 
+						 delimiter to separate each of them.</p>
+						<p>The database field can be referred from Back-office 
+						 Configuration &gt; Settings &gt; Customise &gt; 
+						 Grid Fields, refer to the Grid Code 'REFRECMF' 
+						 and check for the <a class="dropspot" href="javascript:TextPopup(this)" id="a511">Database 
+						 Field</a>.</p>
+						<div class="droptext" id="POPUP58573298411" style="display: none;">
+							<p><img src="../dbfield.png" alt="" style="border: none;" border="0"></p>
+      </div>
+						<p>When this is defined, it is mandatory to include 
+						 the tags below:</p>
+						<ul class="hcp1">
+							<li><p>[Condition.&lt;Database Field&gt;.Operator=&lt;Operator&gt;/]</p></li>
+							<li><p>[Condition.&lt;Database Field&gt;.Value=&lt;Value&gt;/]</p></li>
+						</ul></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[Condition.&lt;Database Field&gt;.Operator=&lt;Operator&gt;/]</p></td>
+						<td class="t2Col"><p>This refers to the operator 
+						 used in defining the condition. Supported operators 
+						 are: LIKE, BETWEEN, =, &lt;&gt;, !=, &gt;, &lt;, 
+						 &lt;=, &gt;=, IN, IS, IS NOT</p>
+						<p><span class="hcp4">Note</span>: 
+						 This is a mandatory tag when [/Condition=&lt;Database 
+						 Field&gt;/] is defined, otherwise system will 
+						 prompt error.</p></td>
+					</tr>
+					<tr class="t1Row">
+						<td class="t1Col"><p>[Condition.&lt;Database Field&gt;.Value=&lt;Value&gt;/]</p></td>
+						<td class="t2Col"><p>This refers to the value that 
+						 is used in defining the condition. It is mandatory 
+						 to be defined together with the [Condition.&lt;Column 
+						 Name&gt;.Operator=&lt;Operator&gt;/] tag, otherwise 
+						 it yields no result.</p>
+						<p><span class="hcp4">Note</span>: 
+						 This is a mandatory tag when [/Condition=&lt;Database 
+						 Field&gt;/] is defined, otherwise system will 
+						 prompt error.</p></td>
+					</tr>
+					<tr class="t2Row">
+						<td class="t1Col"><p>[/Sort=&lt;Database Field&gt;/]</p></td>
+						<td class="t2Col"><p>This tag is optional and is 
+						 used to define the column sorting. By default, 
+						 it will sort the column in ascending order and 
+						 will supersede the default sorting in the ESP 
+						 ‘Invoices’/'Paid Invoices' grid upon defined.</p>
+						<p>To sort the column in descending order, [/Sort=&lt;Database 
+						 Field&gt; DESC/] can be used. For example:</p>
+						<p>[/Sort=DateInvoice DESC, RefCode DESC/]</p></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+     </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a17">defining 
+	 entity files for auto-load profile</a></p>
+	<div class="droptext" id="POPUP585299759" style="display: none;">
+		<p>By default, only the ‘Entity Administration’ enabled Master 
+		 Files are included as Entity Files in Auto Load Profile mode. 
+		 However, the Entity Files can be further customised by configuring 
+		 the below key in the Back-office. This setting is in VPCSP application.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp11">AUTWHR</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>Default 
+				 value is:</p>
+				<p>R.Status&lt;=5 AND R.CS=1 </p>
+				<p>where:</p>
+				<ul class="hcp1">
+					<li><p>R.status refers to the Master File status. The 
+					 list of status can be referred from the 'Master File 
+					 Status [RECS]' lookup value.</p></li>
+					<li><p>R.CS refers to the 'Entity Administration' component 
+					 that is activated for the Master File. The value '1' 
+					 indicates that the Master File has 'Entity Administration' 
+					 component enabled, whereas '0' indicates that the 
+					 Master File has 'Entity Administration' component 
+					 disabled.</p></li>
+				</ul>
+				<p>The Entity Files for ESP Organisation can be defined 
+				 by using SQL WHERE clause to retrieve the values from 
+				 the Master File (RefMaster) database table. The table 
+				 column would need to be prefixed with 'R' in the SQL WHERE 
+				 clause, for example, R.Status&lt;=5 AND R.CA=1</p>
+				<p><span class="hcp4">Note</span>: 
+				 Please refer to Viewpoint Data Dictionary for the available 
+				 fields in RefMaster table.</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p class="SeeAlso">&#160;</p>
+		<p class="SeeAlso">See also:</p>
+		<ul class="hcp1">
+			<li style="font-weight: normal;"><p class="SeeAlso" style="font-weight: normal;"><a 
+			 href="../Task_Scheduler/ESP_Auto_Load_Profile.htm" style="font-weight: normal;">ESP 
+			 Auto Load Profile</a></p></li>
+		</ul>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a18">specifying 
+	 Master Files for synchronisation</a></p>
+	<div class="droptext" id="POPUP584111113" style="display: none;">
+		<p>These are additional settings to be configured at the Back-office 
+		 which allows filtering on the Master File for synchronisation 
+		 to the ESP. The synchronisation is applicable to the File Configuration 
+		 in the Front-office which are performed via 'Engage Servicing 
+		 Portal - Entity Update [CPEU]' task scheduler job, or during 'Requery' 
+		 in Configuration &gt; Engage Servicing Portal &gt; Configuration 
+		 &gt; Organisations. The synchronisation would also be performed 
+		 when importing users/organisations data via Import Sheet. </p>
+		<p>By default, there is no value defined in these Keys. As such, 
+		 it would synchronise all records from the Back-office to the Front-office. 
+		 </p>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="81.707%">
+			<col style="width: 16.503%;">
+			<col style="width: 83.497%;">
+			<tr class="t1st">
+				<td><p class="hcp2">Key</p></td>
+				<td><p class="hcp2">Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>CFMFST</p></td>
+				<td class="t2Col"><p>This refers to the Master File status 
+				 and the value can be referred from the lookup table Master 
+				 File Status [RECS]. If you would like to synchronise certain 
+				 record status, enter the lookup value from the table.</p>
+				<p>Example: 0</p>
+				<p><span class="hcp4">Note</span>: 
+				 You can use comma to separate each status if more than 
+				 one status, for example: 0,1</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col"><p>CFENST</p></td>
+				<td class="t2Col"><p>This refers to the Entity status and 
+				 the value can be referred from the lookup table Entity 
+				 Status [COST]. If you would like to synchronise certain 
+				 record status, enter the lookup value from the table.</p>
+				<p>Example: 3</p>
+				<p><span class="hcp4">Note</span>: 
+				 You can use comma to separate each status if more than 
+				 one status, for example: 0,1,3</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>CFESST</p></td>
+				<td class="t2Col"><p>This refers to the Entity sub-status 
+				 and the value can be referred from the lookup table Entity 
+				 Sub-Status [COSU]. If you would like to synchronise certain 
+				 record status, enter the lookup value from the table.</p>
+				<p>Example: 0A</p>
+				<p><span class="hcp4">Note</span>: 
+				 You can use comma to separate each status if more than 
+				 one status, for example: 0A,C1</p></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a19">setting 
+	 the timeout period for Entity Summary</a></p>
+	<div class="droptext" id="POPUP584156578" style="display: none;">
+		<p>This setting defines the Entity Summary timeout in Engage Servicing 
+		 Portal. When the process is taking longer than the defined timeout 
+		 value, the system will terminate and resubmit another request 
+		 to the server to retrieve the Entity information. This setting 
+		 is configured in the Front-office.</p>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="81.707%">
+			<col style="width: 16.503%;">
+			<col style="width: 83.497%;">
+			<tr class="t1st">
+				<td><p>Key</p></td>
+				<td><p>Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col"><p>CSPEXP</p></td>
+				<td class="t2Col"><p>5</p>
+				<p><span class="hcp4">Note</span>: 
+				 Upon upgrade, the default value '5' (5 minutes) will only 
+				 be inserted/updated into the table if the existing value 
+				 is 'NULL' or empty (blank).</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 This setting is under VPCSP application.</p>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a22">keeping 
+	 track of session ID for cache refresh</a></p>
+	<div class="droptext" id="POPUP585577811" style="display: none;">
+		<p class="Listing">Whenever there is an update in the entity, Engage 
+		 Servicing Portal will prompt a modal notification to the user 
+		 to either refresh the entity cache or proceed with the existing. 
+		 </p>
+		<p class="Listing">The system setting key 'ENTCLC' in the Front-office 
+		 keeps track of the session Id. Session Id is triggered by the 
+		 following actions:</p>
+		<ul class="hcp1">
+			<li><p class="Listing">Add a new File Configuration</p></li>
+			<li><p class="Listing">Delete an existing File Configuration</p></li>
+			<li><p class="Listing">Requery</p></li>
+			<li><p class="Listing">Requery All</p></li>
+			<li><p class="Listing">Configure - Include file</p></li>
+			<li><p class="Listing">Configure - Exclude file</p></li>
+			<li><p class="Listing">Run 'Engage Servicing Portal - Entity 
+			 Update [CPEU]' task scheduler job</p></li>
+			<li><p class="Listing">Perform tasks via Front-office import 
+			 sheet</p></li>
+		</ul>
+		<p class="Listing">&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a30">configuring 
+	 footer for Engage Servicing Portal</a></p>
+	<div class="droptext" id="POPUP584717807" style="display: none;">
+		<p>This setting configures the footer for the Engage Servicing 
+		 Portal. This is configured in the Front-office.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="805">
+			<col style="width: 14.709%;">
+			<col style="width: 85.291%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp7">Key</p></td>
+				<td class="hcp6"><p class="hcp7">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>FOOTER</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>Enter 
+				 the value in the following syntax:</p>
+				<p>[/Footer=&lt;enter footer name 1&gt;,&lt;enter footer 
+				 name 2&gt;/]</p>
+				<p>[/&lt;footer name 1&gt;.Title=&lt;enter footer title 
+				 here&gt;/]</p>
+				<p>[/&lt;footer name 1&gt;.Link=&lt;enter redirect link 
+				 here&gt;/]</p>
+				<p>[/&lt;footer name 1&gt;.ToolTips=&lt;enter tooltips 
+				 here&gt;/]</p>
+				<p>[/&lt;footer name 2&gt;.Title=&lt;enter footer title 
+				 here&gt;/]</p>
+				<p>[/&lt;footer name 2&gt;.Link=&lt;enter redirect link 
+				 here&gt;/]</p>
+				<p>[/&lt;footer name 2&gt;.ToolTips=&lt;enter tooltips 
+				 here&gt;/]</p>
+				<p>&#160;</p>
+				<p><span class="hcp4">Note</span>: 
+				 When the footer only has text, you can omit in defining 
+				 the link and tooltips.</p>
+				<p>&#160;</p>
+				<p>Example:</p>
+				<p>[/Footer=Footer1,Footer2/]</p>
+				<p>[/Footer1.Title=Term and Conditions/]</p>
+				<p>[/Footer1.Link=https://www.google.com/]</p>
+				<p>[/Footer1.ToolTips=Google/]</p>
+				<p>[/Footer2.Title=Privacy Statement/]</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: These 
+ settings are in the VPCSP application unless stated otherwise.</p>
+<p>&#160;</p>
+<h2>Practice Management System Settings</h2>
+<p>The available settings here allow for:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a23">using 
+	 invoice line current amount to calculate base VAT amount</a></p>
+	<div class="droptext" id="POPUP585738707" style="display: none;">
+		<p>You may opt to calculate Base VAT amount using Invoice line 
+		 currency amount in the Practice Management.</p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="700">
+			<col style="width: 18.6%;">
+			<col style="width: 81.4%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp8">Key</p></td>
+				<td class="hcp6"><p class="hcp8">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>INVOPT</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">1</p>
+				<p class="hcp8">When INVOPT 
+				 = 1, Base VAT amount will be calculated using <a class="dropspot" href="javascript:TextPopup(this)" id="a31">Invoice line currency amount 
+				 (LineInvCur)</a>.</p>
+				<div class="droptext" id="POPUP5780477461" style="display: none;">
+					<p>Conversion to Base VAT amount = Invoice line currency 
+					 amount * VAT % * exchange rate.</p>
+					<p><span class="hcp4">Note</span>: 
+					 'Invoice line currency amount' is referring to the 
+					 value stored in 'LineInvCur' field.</p>
+    </div>
+				<p class="hcp8">When INVOPT 
+				 is not defined, the Base VAT amount will be calculated 
+				 using<a class="dropspot" href="javascript:TextPopup(this)" id="a41"> 
+				 Invoice line currency (VatLineCur)</a>.</p>
+				<div class="droptext" id="POPUP5780762851" style="display: none;">
+					<p>Conversion to Base VAT amount = VAT amount (rounded 
+					 to 2 d.p) in invoice line currency * exchange rate.</p>
+					<p><span class="hcp4">Note</span>: 
+					 'VAT amount (rounded to 2 d.p) in invoice line currency' 
+					 is referring to the value stored in 'VatLineCur' field.</p>
+    </div></td>
+			</tr>
+		</table>
+		<p class="Listing">&#160;</p>
+   </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a24">defining 
+	 the entity status and entity sub-status for strike-off</a></p>
+	<div class="droptext" id="POPUP586378723" style="display: none;">
+		<p>For Fees Payable - Strike Off, the program will check entities 
+		 that are due to be struck off based on the Strike Date for the 
+		 entity and update the entity status and entity sub-status accordingly 
+		 to the value set for the following Keys:</p>
+		<table class="Table1" cellspacing="0px" width="81.707%">
+			<col style="width: 16.503%;">
+			<col style="width: 83.497%;">
+			<tr class="t1st">
+				<td><p class="hcp2">Key</p></td>
+				<td><p class="hcp2">Description</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col">STKOFF</td>
+				<td class="t2Col">This is to specify the new entity status 
+				 when the entity has been struck off. The value is the 
+				 code for the entity sub-status maintained in the Entity 
+				 Sub-Status [COSU] lookup table. </td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col">STKSUB</td>
+				<td class="t2Col">This is to specify the new entity sub-status 
+				 when the entity has been struck off. The value is the 
+				 code for the entity sub-status maintained in the Entity 
+				 Sub-Status [COSU] lookup table. </td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: These 
+ settings are in the VPBILLS application.</p>
+<p>&#160;</p>
+<h2>Accounting System System Setting</h2>
+<p>The available setting here allow for:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a25">changing 
+	 the display order of statutory bank accounts</a></p>
+	<div class="droptext" id="POPUP585860968" style="display: none;">
+		<p>You may opt to display an Account File's statutory bank accounts 
+		 in the &lt;Account Number&gt;&lt;Currency&gt;&lt;Sort Code&gt; 
+		 format in Accounting. If selected option is set up, this will 
+		 be the default value of the Sub-Ledger Code field. </p>
+		<table class="Table1" style="border-left-width: 2px; border-right-width: 2px; 
+				 border-top-width: 2px; border-bottom-width: 2px;" cellspacing="0px" width="700">
+			<col style="width: 18.6%;">
+			<col style="width: 81.4%;">
+			<tr class="t1st">
+				<td class="hcp6"><p class="hcp8">Key</p></td>
+				<td class="hcp6"><p class="hcp8">Value</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p class="hcp8">CLNTNR</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p class="hcp8">64</p>
+				<p class="hcp8">To use 
+				 this option with another CLNTNR setting, add the two numbers 
+				 together, e.g. to activate 32 and 64 together, use 96.</p></td>
+			</tr>
+		</table>
+		<p class="hcp12">&#160;</p>
+		<p class="hcp12">&#160;</p>
+ </div></li>
+</ul>
+<p class="hcp12">&#160;</p>
+<p class="hcp12">&#160;</p>
+
+
+
+<p class="Listing">&#160;</p>
+<p>&#160;</p>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Overview.htm">Viewpoint - Home</a> &gt; <a href="Configuration.htm">Configuration</a> &gt; <a href="Settings.htm">Settings</a> &gt; <a href="Settings_-_Windows_menu.htm">Customise</a> &gt; System Settings</p>
+ <p class="hcp13">&#160;</p>
+ <p class="hcp13">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp13">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP584558768');
+	TextPopupInit('a5','POPUP584726715');
+	TextPopupInit('a26','POPUP586893123');
+	TextPopupInit('a6','POPUP584745072');
+	TextPopupInit('a7','POPUP584753649');
+	TextPopupInit('a3','POPUP586169822');
+	TextPopupInit('a4','POPUP586252735');
+	TextPopupInit('a27','POPUP386714139');
+	TextPopupInit('a271','POPUP3867141391');
+	TextPopupInit('a8','POPUP585051372');
+	TextPopupInit('a9','POPUP585103464');
+	TextPopupInit('a10','POPUP585164257');
+	TextPopupInit('a20','POPUP585596956');
+	TextPopupInit('a21','POPUP586422538');
+	TextPopupInit('a29','POPUP598592523');
+	TextPopupInit('a11','POPUP585134786');
+	TextPopupInit('a12','POPUP585173111');
+	TextPopupInit('a1','POPUP583918381');
+	TextPopupInit('a13','POPUP3700017741');
+	TextPopupInit('a14','POPUP583928078');
+	TextPopupInit('a15','POPUP585262728');
+	TextPopupInit('a16','POPUP585289384');
+	TextPopupInit('a511','POPUP58573298411');
+	TextPopupInit('a17','POPUP585299759');
+	TextPopupInit('a18','POPUP584111113');
+	TextPopupInit('a19','POPUP584156578');
+	TextPopupInit('a22','POPUP585577811');
+	TextPopupInit('a30','POPUP584717807');
+	TextPopupInit('a23','POPUP585738707');
+	TextPopupInit('a31','POPUP5780477461');
+	TextPopupInit('a41','POPUP5780762851');
+	TextPopupInit('a24','POPUP586378723');
+	TextPopupInit('a25','POPUP585860968');
+//]]></script>
+</body>
+</html>

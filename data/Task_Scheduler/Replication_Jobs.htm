@@ -1,0 +1,851 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Replication Jobs</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+ol.hcp2 { list-style:decimal; }
+li.hcp3 { list-style:none;
+display:inline; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+span.hcp5 { font-weight:bold; }
+span.hcp6 { unicode-bidi:embed;
+mso-line-break-override:none;
+word-break:normal;
+punctuation-wrap:hanging; }
+p.hcp7 { language:en-MY; }
+span.hcp8 { direction:ltr;
+unicode-bidi:embed;
+mso-line-break-override:none;
+word-break:normal;
+punctuation-wrap:hanging; }
+p.hcp9 { language:en-MY;
+direction:ltr; }
+span.hcp10 { mso-line-break-override:none;
+word-break:normal;
+punctuation-wrap:hanging; }
+td.hcp11 { border-bottom-width:1px; }
+p.hcp12 { text-align:center; }
+p.hcp13 { text-align:center;
+font-weight:bold; }
+p.hcp14 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Replication Jobs</h1>
+<p>There are two job types for Replication and they are:</p>
+<ul class="hcp1">
+	<li><p>Replication - Export [REEX]</p></li>
+	<li><p>Replication - Import [REIM]</p></li>
+	<li><p>Replication - Download Import File [REDL]</p></li>
+</ul>
+<p>All are used when you have MCE and subscriber environments so that you 
+ can export or import settings, Master Files and Address Cards from MCE 
+ to the subscriber environments.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for Export</h2>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Replication 
+	 - Export [REEX]'</p></li>
+	<li><p>In Tag Values, you can:</p>
+	<ul class="hcp1">
+		<li><p>&#160;See the following tags:</p></li>
+		<li class="hcp3"><ul class="hcp1">
+			<li><p>[/TASK_ROUTINE=REEX/]</p></li>
+			<li><p>[/Script=/]</p></li>
+			<ul class="hcp1">
+				<li><p>To define the script, ensure that the following 
+				 information is specified in this tag:</p></li>
+				<ul class="hcp1">
+					<li><p>[PATH=&lt;LandingArea&gt;] - This is to specify 
+					 the location of the Landing Area.</p></li>
+					<li><p>[TIMEOUT=&lt;Seconds&gt;] - This is to specify 
+					 the interval for the next attempt if the export fails.</p></li>
+					<li><p>[RETRY=&lt;Number&gt;] - This is to specify 
+					 the number of attempts for the export.</p></li>
+					<li><p>[SUBSCRIBER=&lt;SubscriberGroup&gt;] - This 
+					 is to specify the subscriber group.</p></li>
+					<li><p>[JOB=] - This is to specify what to export. 
+					 Refer to <a href="#JobTag">[JOB=] Tag</a> for more 
+					 information.</p></li>
+				</ul>
+			</ul>
+		</ul></li>
+		<li><p>Add Mail Job tags to set up e-mail notification for this 
+		 job.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p><span class="hcp4">Note</span><span class="hcp5">:</span> The Replication Excel Sheet available 
+ on Viewpoint Support Portal can be used to help generate the script.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3 style="text-decoration: none; "><a name="JobTag" style="text-decoration: none; ">[JOB=] 
+ Tag</a></h3>
+<p>The syntax for this is as follows:</p>
+<p>[JOB=&lt;Item&gt;|&lt;Parameter&gt;] where the &lt;Item&gt; and &lt;Parameter&gt; 
+ would depend on whether it is to export:</p>
+<ul class="hcp1">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Settings</a></p>
+	<div class="droptext" id="POPUP540074546" style="display: none;">
+		<p>For exporting settings,</p>
+		<ul class="hcp1">
+			<li><p>&lt;Item&gt; is to be replaced with the <a class="dropspot" href="javascript:TextPopup(this)" id="a3">item types</a> such 
+			 as lookup table values, user tables, field settings, Master 
+			 Files, etc.</p>
+			<div class="droptext" id="POPUP544668562" style="display: none;">
+				<table class="Table1" cellspacing="0px" width="70.819%">
+					<col style="width: 20.792%;">
+					<col style="width: 79.208%;">
+					<tr class="t1st">
+						<td><p>Item Code</p></td>
+						<td><p>Description</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_ENTYP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Entity 
+						 Types (includes Navigation)</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_IRTYP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Identity 
+						 Register Types</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_MFALL</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Master 
+						 File</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_OWNCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Owners 
+						 &amp; Controllers Types</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_RLTYP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Relationship 
+						 Types</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>AD_SRVAF</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Services 
+						 (Annual Fees)</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CA_EXRATE</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Exchange 
+						 Rates &amp; History (CA)</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CA_GROUP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Main/Sub 
+						 Groups</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CA_MVCDE</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Account 
+						 Movement Codes</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CA_NMACT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Nominal 
+						 Account Templates</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CA_SCMAS</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Security 
+						 Master &amp; History</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>CP_FORMS</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>CSP 
+						 Templates</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>DM_AUTTP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Audit 
+						 Trail Setup</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>DM_FLCBT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Filing 
+						 Cabinets (only applicable for NEW environment)</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>DM_TSKTP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Task 
+						 Types</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>RM_ACCMP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Account 
+						 Mapping</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>RM_SVRMT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Service 
+						 Master</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>RM_SVRTX</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Service 
+						 Tax Codes</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_ABDCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Billing 
+						 Templates - All</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_ACCAT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Correspondence 
+						 All</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_ACGRP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Access 
+						 Groups</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_ACNTR</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Forms 
+						 Library - All</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_ADGRP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Administrator 
+						 Groups</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_AGSEC</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Access 
+						 Group Security</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_AODCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Other 
+						 Document Templates - All</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_AUURL</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>User 
+						 Role Authority</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_AWRCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Web 
+						 Templates - All</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_AWRPC</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Word 
+						 Reports - All</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CBDCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Billing 
+						 Templates - customised</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CCCAT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Correspondence 
+						 - customised only</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CCNTR</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Forms 
+						 Library (General and jurisdictions)</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CHGCD</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Change 
+						 Code Link</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CODCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Other 
+						 Document Templates -customised</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CWRCT</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Web 
+						 Templates - customised</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_CWRPC</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Word 
+						 Reports - customised</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_DDVAL</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Drop-Down 
+						 Values</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_FLDST</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Field 
+						 Settings</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_GRDFD</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Grid 
+						 Fields</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_LUVAL</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Lookup 
+						 Values</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_MENUS</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Windows/Web 
+						 Menu</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_RELEQ</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Relation 
+						 Enquiry</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_RPCUS</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Custom 
+						 Report</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_RPSSR</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Standard 
+						 Report - SSRS Report</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_RPSTD</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Standard 
+						 Report - Viewpoint Report</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_RVWRL</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Review 
+						 Rules</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_SCRNST</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Screen 
+						 Settings</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_TDRLS</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Reminder 
+						 Rules</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_UFTEM</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>User 
+						 Fields Template</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_USFLD</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>User 
+						 Fields</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_USGRP</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>User 
+						 Groups</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>SS_USRTB</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>User 
+						 Tables</p></td>
+					</tr>
+					<tr class="t1Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>WF_STLIB</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Step 
+						 Library</p></td>
+					</tr>
+					<tr class="t2Row" style="height: 0px;">
+						<td class="t1Col" style="vertical-align: top;"><p>WF_WFLIB</p></td>
+						<td class="t2Col" style="vertical-align: top;"><p>Workflow 
+						 Library</p></td>
+					</tr>
+				</table>
+				<p>&#160;</p>
+   </div></li>
+			<li><p>&lt;Parameter&gt; is either CODE=&lt;Value&gt; or CODE_EXCL=&lt;Value&gt; 
+			 and &lt;Value&gt; is used to indicate the settings to include 
+			 or exclude</p></li>
+		</ul>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="100%">
+			<col style="width: 9.887%;">
+			<col style="width: 20.277%;">
+			<col style="width: 29.471%;">
+			<col style="width: 40.365%;">
+			<tr class="t1st">
+				<td>Parameter</td>
+				<td>Explanation</td>
+				<td>Value</td>
+				<td>Example</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" rowspan="3" style="vertical-align: top;"><p>CODE</p></td>
+				<td rowspan="3" class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify what to include for the settings to export.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>* - this 
+				 is to indicate all values for the specified item type.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB=SS_LUVAL|CODE=*]</p>
+				<p>means to export all customised lookup values.</p>
+				<p>[JOB=AD_RLTYP|CODE=*]</p>
+				<p>means to export all customised relationship types.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>&lt;ValCode&gt; 
+				 - this is to define specific value(s) using the code.&#160;For 
+				 multiple values, use a comma to separate each value.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB= 
+				 SS_LUVAL|CODE=ADMU]</p>
+				<p>means to export customised values for the Administrative 
+				 Mark-up [ADMU] lookup table.</p>
+				<p>[JOB=SS_DDVAL|CODE=NATI,ITIT]</p>
+				<p>means to export the drop-down tables NATI and ITIT.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>&lt;KeyCode&gt;+&lt;KeyCode&gt; 
+				 - this applies to certain setting items such as Entity 
+				 Types where a record has more than one key field and you 
+				 want to specify these. You can also use a combination 
+				 of &lt;KeyCode&gt; and * as well.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB=AD_ENTYP|CODE=CY+CI]</p>
+				<p>means to export the entity type ‘CI’ in Cyprus.</p>
+				<p>[JOB=AD_ENTYP|CODE=CY+CI,IM+PL]</p>
+				<p>means to export only the entity types ‘CI’ in Cyprus 
+				 and ‘PL’ in Isle of Man.</p>
+				<p>[JOB=AD_ENTYP|CODE=CY+*]</p>
+				<p>means to export all the Entity types in Cyprus.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>CODE_EXCL</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify what to exclude for the settings to export.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>Same 
+				 as for CODE above except for *.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB= 
+				 SS_LUVAL|CODE_EXCL=ADMU]</p>
+				<p>means to export customised values for all lookup tables 
+				 except the Administrative Mark-up [ADMU] lookup table.</p>
+				<p>[JOB=AD_ENTYP|CODE_EXCLE=CY+CI,IM+PL]</p>
+				<p>means to export all Entity types except for the entity 
+				 types ‘CI’ in Cyprus and ‘PL’ in Isle of Man.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+  </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Master 
+	 Files</a></p>
+	<div class="droptext" id="POPUP540427222" style="display: none;">
+		<p>For exporting Master Files,</p>
+		<ul class="hcp1">
+			<li><p>&lt;Item&gt; is AD_MFALL</p></li>
+			<li><p>&lt;Parameter&gt; must include MF=&lt;Condition&gt; 
+			 and INFO=&lt;Value&gt; to specify the Master File(s) and details 
+			 of the Master File to export where MF=&lt;Condition&gt; and 
+			 INFO=&lt;Value&gt; is separated using a colon</p></li>
+		</ul>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="100%">
+			<col style="width: 9.194%;">
+			<col style="width: 20.214%;">
+			<col style="width: 30.416%;">
+			<col style="width: 40.176%;">
+			<tr class="t1st">
+				<td>Parameter</td>
+				<td>Explanation</td>
+				<td>Condition/Value</td>
+				<td>Example</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>MF</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Master File(s) to export.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>The &lt;Condition&gt; 
+				 can be:</p>
+				<ul class="hcp1">
+					<li><p>1=1 to include all Master files.</p></li>
+					<li><p>MfNr&lt; 0 to include only Global Master Files.</p></li>
+					<li><p>Based on any field in the RefMaster table.</p></li>
+				</ul></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB=AD_MFALL|MF=1=1|INFO=]</p>
+				<p>means to export all Master Files.</p>
+				<p>&#160;</p>
+				<p>[JOB_AD_MFALL|MF=MfNr&lt;0|INFO=]</p>
+				<p>means to export all Global Master Files.</p>
+				<p>&#160;</p>
+				<p>[JOB_AD_MFALL|MF=AdminGroup IN ('GROUP1','GROUP2')|INFO=]</p>
+				<p>means to export Master Files in Administrator Group 
+				 1 and Group 2.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>INFO</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Master File details to export.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>The &lt;Value&gt; 
+				 can be empty to export default details from the Master 
+				 File's Setup, General and CDD screens or include additional 
+				 details with the following:</p>
+				<ul class="hcp1">
+					<li><p>AL to include details from the Alerts screen.</p></li>
+					<li><p>ST to include details from Master File Status 
+					 screen.</p></li>
+					<li><p>UF to include details from User Fields - Master 
+					 File screen.</p></li>
+				</ul>
+				<p>For multiple values, separate each value with a semi 
+				 colon.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB=AD_MFALL|MF=1=1|INFO=]</p>
+				<p>means to export all Master Files and the default details.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_MFALL|MF=1=1|INFO=AL]</p>
+				<p>means to export all Master Files and details from the 
+				 Master File's Setup, General, CDD and Alerts screens.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_MFALL|MF=1=1|INFO=AL;ST;UF]</p>
+				<p>means to export all Master Files and details from the 
+				 Master File's Setup, General, CDD and additional details 
+				 from the Alerts, Master File Status and User Fields - 
+				 Master File screens.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Address 
+	 Cards</a></p>
+	<div class="droptext" id="POPUP540467563" style="display: none;">
+		<p>For exporting Address Cards,</p>
+		<ul class="hcp1">
+			<li><p>&lt;Item&gt; is AD_ADDRE</p></li>
+			<li><p>&lt;Parameter&gt; is AC=&lt;Condition&gt;</p></li>
+		</ul>
+		<table class="Table1" style="border-collapse: separate;" cellspacing="0px" width="100%">
+			<col style="width: 9.572%;">
+			<col style="width: 20.214%;">
+			<col style="width: 29.597%;">
+			<col style="width: 40.617%;">
+			<tr class="t1st">
+				<td>Parameter</td>
+				<td>Explanation</td>
+				<td>Condition</td>
+				<td>Example</td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>AC</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify which Address Card(s) to export.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>The &lt;Condition&gt; 
+				 can be:</p>
+				<ul class="hcp1">
+					<li><p>1=1 to include all Address Cards.</p></li>
+					<li><p>AddrNr &lt; 0 to include only Global Address 
+					 Cards.</p></li>
+					<li><p>Based on any field in the Addresses table.</p></li>
+				</ul></td>
+				<td class="t2Col" style="vertical-align: top;"><p>[JOB=AD_ADDRE|AC=1=1]</p>
+				<p>means to export&#160;all Address Cards.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_ADDRE|AC=AddrNr&lt;0]</p>
+				<p>means to export only Global Address Cards.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_ADDRE|AC=AddrNr=10001]</p>
+				<p>means to export the Address Card 10001.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_ADDRE|AC=Country='JE']</p>
+				<p>means to export all Address Cards where Country is Jersey.</p>
+				<p>&#160;</p>
+				<p>[JOB=AD_ADDRE|AC=Country IN ('JE', 'IM')]</p>
+				<p>means to export all Address Cards where Country is Jersey 
+				 or Isle of Man.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h3>Sample Tag Configuration</h3>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 32.746%;">
+	<col style="width: 67.254%;">
+	<tr class="t1st">
+		<td>&#160;</td>
+		<td>Explanation</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p style="direction: ltr;"><span><span 
+		 style="direction: ltr;"><span class="hcp6">[/TASK_ROUTINE=REEX/]</span></span></span></p>
+		<p class="hcp7"><span class="hcp8">[/Script=[PATH=C:\Viewpoint\Configuration]</span></p>
+		<p class="hcp7"><span class="hcp8">[TIMEOUT=60]</span></p>
+		<p class="hcp9"><span class="hcp6">[RETRY=10]</span></p>
+		<p class="hcp7"><span class="hcp8">[SUBSCRIBER=GEN]</span></p>
+		<p class="hcp7"><span class="hcp8">[JOB=SS_LUVAL|CODE=*]</span></p>
+		<p class="hcp9"><span class="hcp6">[JOB=AD_RLTYP|CODE=*]</span></p>
+		<p class="hcp9"><span class="hcp6">[JOB=AD_MFALL|MF=MfNr&lt;0|INFO=AL:ST;UF]</span></p>
+		<p class="hcp7"><span class="hcp8">[JOB=AD_ADDRE|AC=AddrNr&lt;0]</span></p>
+		<p class="hcp9"><span class="hcp6">[SUBSCRIBER=ASA]</span></p>
+		<p class="hcp7"><span class="hcp8">[JOB=SS_USRTB|CODE_EXCL=VGCHARGE,IECHARGE]</span></p>
+		<p class="hcp9"><span class="hcp6">[SUBSCRIBER=EUR]</span></p>
+		<p><span style="language: en-MY; text-align: left; direction: ltr; 
+				 unicode-bidi: embed; mso-line-break-override: none; word-break: normal; 
+				 punctuation-wrap: hanging;">[JOB=SS_USRTB|CODE_EXCL=HKCHARGE]/]</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>The tag configuration 
+		 indicates an export job where the following will be exported to 
+		 the Landing Area:</p>
+		<ul class="hcp1">
+			<li><p>For Subscriber Group - GEN:</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>All Lookup Table values.</p></li>
+				<li><p>All Relationship types.</p></li>
+				<li><p>All Global Master Files with all additional information.</p></li>
+				<li><p>All Global Address Cards.</p></li>
+			</ul></li>
+			<li><p>For Subscriber Group - ASA:</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>All User Table Values except <span class="hcp10">for 
+				 those in the User Table 'VGCHARGE' and 'IECHARGE'.</span></p></li>
+			</ul></li>
+			<li><p>For Subscriber Group - EUR:</p></li>
+			<li class="hcp3"><ul class="hcp1">
+				<li><p>All User Table Values except <span class="hcp10">for 
+				 those in the User Table 'HKCHARGE'.</span></p></li>
+			</ul></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for Import</h2>
+<ol class="hcp2">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'Replication 
+	 - Import [REIM]'.</p></li>
+	<li><p>In Tag Values, you can:</p>
+	<ul class="hcp1">
+		<li><p>&#160;See the following tags:</p></li>
+		<li class="hcp3"><ul class="hcp1">
+			<li><p>[/TASK_ROUTINE=REIM/]</p></li>
+			<li><p>[/Script=/]</p></li>
+			<ul class="hcp1">
+				<li><p>To define the script, ensure that the following 
+				 information is specified in this tag:</p></li>
+				<ul class="hcp1">
+					<li><p>[PATH=&lt;LandingArea&gt;] - This is to specify 
+					 the location of the Landing Area.</p></li>
+					<li><p>[TIMEOUT=&lt;Seconds&gt;] - This is to specify 
+					 the interval for the next attempt if the import fails.</p></li>
+					<li><p>[RETRY=&lt;Number&gt;] - This is to specify 
+					 the number of attempts for the import.</p></li>
+					<li><p>[JOB=IMPORT]</p></li>
+				</ul>
+			</ul>
+		</ul></li>
+		<li><p>Add Mail Job tags to set up e-mail notification for this 
+		 job.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p><span class="hcp4">Note</span><span class="hcp5">:</span> The Replication Excel Sheet available 
+ on Viewpoint Support Portal can be used to help generate the script.</p>
+<p>&#160;</p>
+<h3>Sample Tag Configuration</h3>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 32.62%;">
+	<col style="width: 67.38%;">
+	<tr class="t1st">
+		<td>&#160;</td>
+		<td>Explanation</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/Script=[PATH=C:\Viewpoint\Configuration]</p>
+		<p>[TIMEOUT=60]</p>
+		<p>[RETRY=10]</p>
+		<p>[JOB=IMPORT]/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>The tag configuration 
+		 indicates an import job where .xml files in the relevant subscriber 
+		 folders will be applied to the relevant subscriber environment.</p></td>
+	</tr>
+</table>
+<p><span class="hcp4">Note</span>: A 
+ log file will be generated in the relevant 'Subscriber' sub-folder within 
+ the LOG folder after each 'Replication - Import [REIM]' job is executed.</p>
+<p>&#160;</p>
+<h4>Importing Master Files</h4>
+<p>For importing exported Master Files, the RefCode and MfNr of the exported 
+ Master Files will be compared with existing Master Files in the subscriber 
+ environment. This will determine if the subscriber environment will have 
+ new Master Files added or if existing Master File will be updated.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col width="184">
+	<col width="184">
+	<col width="184">
+	<col width="184">
+	<col width="804">
+	<tr class="t1st">
+		<td colspan="2" class="hcp11"><p class="hcp12">Exported 
+		 Master File</p></td>
+		<td colspan="2" class="hcp11"><p class="hcp12">Subscriber 
+		 Environment</p></td>
+		<td rowspan="2">Results</td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-right-width: 1px; border-left-width: 1px; 
+			 border-bottom-width: 1px;" bgcolor="#CDCDCD"><p class="hcp13">RefCode</p></td>
+		<td class="t2Col" style="border-right-width: 1px; border-bottom-width: 1px;" bgcolor="#CDCDCD"><p class="hcp13">MfNr</p></td>
+		<td class="t1Col" style="border-right-width: 1px; border-bottom-width: 1px;" bgcolor="#CDCDCD"><p class="hcp13">RefCode</p></td>
+		<td class="t2Col" style="border-bottom-width: 1px; border-right-width: 1px;" bgcolor="#CDCDCD"><p class="hcp13">MfNr</p></td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p>There is an existing Master File in the subscriber 
+		 environment with the same RefCode and MfNr. This Master File will 
+		 be updated with the exported details.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">60</p></td>
+		<td class="t1Col"><p>There is an existing Master File in the subscriber 
+		 environment with the same RefCode but a different MfNr. This Master 
+		 File will be retained as is in the subscriber environment.</p>
+		<p>The exported Master File will not be imported.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p class="hcp12">ARCHER</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p>There is an existing Master File in the subscriber 
+		 environment with the same MfNr but a different RefCode. This Master 
+		 File will be retained as is in the subscriber environment.</p>
+		<p>The exported Master File will not be imported.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p class="hcp12">INVEST</p></td>
+		<td class="t2Col"><p class="hcp12">50</p></td>
+		<td class="t1Col"><p class="hcp12">-</p></td>
+		<td class="t2Col"><p class="hcp12">-</p></td>
+		<td class="t1Col"><p>There is no Master File in the subscriber 
+		 environment with the same RefCode and MfNr as the exported Master 
+		 File.</p>
+		<p>The exported Master File will be imported as a new Master File 
+		 to the subscriber environment.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>When an exported Master File is excluded from the import, the Error 
+ Log will show 'Master File import completed with error. Please check replication 
+ log.' in the Agent Job Log screen.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler for Download Import File</h2>
+<p>You can choose to download the exported files from the landing area 
+ to your local storage prior to importing using the task scheduler. This 
+ allows you to apply the .xml files in the relevant folders from your local 
+ storage to your environment at a later time.</p>
+<ol class="hcp2">
+	<li><p>In Viewpoint – Home, go to Configuration &gt; Business Parameters 
+	 &gt; Task Scheduler &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New</p></li>
+	<li><p>In the Add New Job screen, specify the following:</p>
+	<ul class="hcp1">
+		<li><p>&#160;Thread Number – Select the thread number for this 
+		 job.</p></li>
+		<li><p>Job Type – Set this to Replication – Download Import File 
+		 [REDL].</p></li>
+		<li><p>Description – This defaults to the description of the job 
+		 type, but you can change this if necessary.</p></li>
+		<li><p>Note – Enter additional notes or remarks if relevant.</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Criteria tab, define the following fields:</p></li>
+	<ul class="hcp1">
+		<li><p>Destination Folder Path - This is to specify the folder 
+		 path for the downloaded files in your local machine.</p></li>
+		<li><p>Viewpoint Username - This is to specify the Viewpoint username 
+		 to run the application service.</p></li>
+		<li><p>Viewpoint Password - &#160;This is to specify the login 
+		 password for the user.</p></li>
+		<li><p>Service Address - This is to specify the application service 
+		 address.</p></li>
+		<li><p>Port - This is to specify the port number for the application 
+		 service.</p></li>
+		<li><p>Windows Authentication - This is to specify if the user’s 
+		 login mode is set as ‘Windows account login.</p></li>
+	</ul>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Notifications tab, you can set up e-mail notifications 
+	 for this job. Refer to <a href="Add_New_Job_Wizard.htm">Add New Job 
+	 Wizard</a> on how to configure e-mail notifications.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the Schedule tab, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p><span class="hcp4">Note:</span> If 
+ an invalid value is specified in the Criteria tab for Replication – Download 
+ Import File, an error message will be seen in the Agent Job Log screen 
+ when the job is run. This requires you to check and correct the criteria 
+ for the job. </p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="../Shared/Master_Configuration_Environment_and_Data_Replication.htm">Master 
+	 Configuration Environment and Data Replication</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Replication Jobs</p>
+ <p class="hcp14">&#160;</p>
+ <p class="hcp14">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp14">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP540074546');
+	TextPopupInit('a3','POPUP544668562');
+	TextPopupInit('a1','POPUP540427222');
+	TextPopupInit('a4','POPUP540467563');
+//]]></script>
+</body>
+</html>

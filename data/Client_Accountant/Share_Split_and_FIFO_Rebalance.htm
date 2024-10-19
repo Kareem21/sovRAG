@@ -1,0 +1,541 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Share Split and FIFO Rebalance</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:none; }
+p.hcp2 { text-align:center; }
+span.hcp3 { font-weight:bold; }
+ol.hcp4 { list-style:decimal; }
+ul.hcp5 { list-style:disc; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Share Split and FIFO Rebalance</h1>
+<p><span lang="EN-US" xml:lang="EN-US">The Share Split increases the number 
+ of shares in a public company. The price is adjusted such that the before 
+ and after market capitalization of the company remains the same and dilution 
+ does not occur.</span></p>
+<p><span lang="EN-US" xml:lang="EN-US" style="mso-bidi-font-size: 12.0pt; 
+		 color: #27434B; font-weight: normal;">Take, for example, a company 
+ with 100 shares of stock priced at $30 per share. The market capitalization 
+ is 100 × $30, or $3000. The company splits its stock 2-for-1. There are 
+ now 200 shares of stock and each shareholder holds twice as many shares. 
+ The price of each share is adjusted to $15. The market capitalization 
+ is 200 × $15 = $3000, the same as before the split.</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">Share Split is now supported for 
+ Accounting Securities/Investment Sub-ledgers. Share Split Posting can 
+ now apply either Average Book Value or FIFO method.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<h2>Share Split Posting</h2>
+<p><span lang="EN-US" xml:lang="EN-US">To post a Share Split transaction, 
+ a single journal line posting is allowed through manual journal creation. 
+ As shown below:</span></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><img src="../image159.gif" alt="" border="0" class="hcp1"></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 25.137%;">
+	<col style="width: 74.863%;">
+	<tr class="t1st">
+		<td><p>Field</p></td>
+		<td><p>Description</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Movement Type</p></td>
+		<td class="t2Col"><p>Select either 'ES' (Securities) or 'IS' (Investment) 
+		 for the Share Split.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Quantity</p></td>
+		<td class="t2Col"><p>Addition/Reduction of shares for the split. 
+		 Addition Quantity is applicable for Share Split. Reduction Quantity 
+		 is applicable for Reverse Split.</p>
+		<p>Please note that the quantity has to be entered manually. For 
+		 example, if you hold 300 shares and there is a 3 for 1 split, 
+		 the split adjustment is 600 shares - making the after split quantity 
+		 balance = 900 shares.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Currency/Amount</p></td>
+		<td class="t2Col"><p>Enter '0' zero (There is no change in market 
+		 capitalisation).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Exchange</p></td>
+		<td class="t2Col"><p>Enter '0' zero (There is no change in market 
+		 capitalisation).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Description</p></td>
+		<td class="t2Col"><p>Enter the description for the split. Example: 
+		 3-for-1 split, 2-for-1 split.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Line Date</p></td>
+		<td class="t2Col"><p>This refers to Journal's line date. This defaults 
+		 to the day the entry is created.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Reconciliation Date</p></td>
+		<td class="t2Col"><p>Enter a reconciliation date for the transaction, 
+		 if applicable.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Narrative</p></td>
+		<td class="t2Col"><p>Enter a narrative for the transaction, if 
+		 applicable.</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><span 
+	 style="text-justify: inter-ideograph;">Click Update when done entering 
+ the details. Click Post for the Share Split updates to take effect.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">After 
+ the split, the updated balance share quantity can be seen here:</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><img src="../image160.gif" alt="" border="0" class="hcp1"></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<h3>Share Disposal via Average Cost Method</h3>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">The 
+ following shows an example on disposal via Average Cost Method.</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<tr class="t1st">
+		<td><p class="hcp2"><span class="hcp3">Date</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Description</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Holding 
+		 Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Price/Share</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Amount 
+		 (USD)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Amount 
+		 Balance (USD)</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>01/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>100</p></td>
+		<td class="t2Col"><p>100</p></td>
+		<td class="t1Col"><p>1.50</p></td>
+		<td class="t2Col"><p>150.00</p></td>
+		<td class="t1Col"><p>150.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>15/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>75</p></td>
+		<td class="t2Col"><p>175</p></td>
+		<td class="t1Col"><p>1.80</p></td>
+		<td class="t2Col"><p>135.00</p></td>
+		<td class="t1Col"><p>285.00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>28/01/2015</p></td>
+		<td class="t2Col"><p>Disposal</p></td>
+		<td class="t1Col"><p>-50</p></td>
+		<td class="t2Col"><p>125</p></td>
+		<td class="t1Col"><p>1.6286*</p></td>
+		<td class="t2Col"><p>-81.43</p></td>
+		<td class="t1Col"><p>203.57</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>01/03/2015</p></td>
+		<td class="t2Col"><p>Split</p></td>
+		<td class="t1Col"><p>250</p></td>
+		<td class="t2Col"><p>375</p></td>
+		<td class="t1Col"><p>0.00</p></td>
+		<td class="t2Col"><p>0.00</p></td>
+		<td class="t1Col"><p>203.57</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>15/03/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>125</p></td>
+		<td class="t2Col"><p>500</p></td>
+		<td class="t1Col"><p>0.80</p></td>
+		<td class="t2Col"><p>100.00</p></td>
+		<td class="t1Col"><p>303.57</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>20/03/2015</p></td>
+		<td class="t2Col"><p>Disposal</p></td>
+		<td class="t1Col"><p>-200</p></td>
+		<td class="t2Col"><p>300</p></td>
+		<td class="t1Col"><p>0.60714**</p></td>
+		<td class="t2Col"><p>-121.43</p></td>
+		<td class="t1Col"><p>182.14</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">* 
+ Price/Share = Amount Balance/Holding Qty</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 80px;">= 303.57/500</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 80px;">= 0.60714</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">** 
+ Price/Share = Amount Balance/Holding Qty</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 80px;">&#160;= 285/175</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 80px;">&#160;= 1.6286</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 80px;">&#160;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN-US" 
+															 xml:lang="EN-US">The 
+ calculation for average method is by dividing Amount Balance with balance 
+ Holding Quantity.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN-US" 
+															 xml:lang="EN-US">Hence, 
+ the calculation for Disposal on 20/3/2015 is illustrated as follows:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;">&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 border="1">
+	<col style="width: 17.774%;">
+	<col style="width: 82.226%;">
+	<tr>
+		<td><p>Quantity Disposal</p></td>
+		<td><p>-200</p></td>
+	</tr>
+	<tr>
+		<td><p>Amount balance</p></td>
+		<td><p>USD 303.57</p></td>
+	</tr>
+	<tr>
+		<td><p>Quantity balance</p></td>
+		<td><p>500</p></td>
+	</tr>
+	<tr>
+		<td><p>Average cost/share</p></td>
+		<td><p>USD 303.57/500 = 0.60714</p></td>
+	</tr>
+	<tr>
+		<td><p>Total Disposal Amount</p></td>
+		<td><p>0.60714 x 200 = USD 121.43</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">The 
+ disposal screen display:</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><img src="../image161.gif" alt="" border="0" class="hcp1"></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<h3>Share Disposal via FIFO Method</h3>
+<p>In FIFO method, the Price/Share calculation is determined by the quantity 
+ of Disposal and Price/Share during the Purchase.</p>
+<p>To change to FIFO Method calculation, go to File Maintenance &gt; Accounting 
+ &gt; Account File &gt; General. Under “Security Valuation” field, select 
+ “FIFO[1]”.</p>
+<p><img src="../image162.gif" alt="" border="0" class="hcp1"></p>
+<p>&#160;</p>
+<p>The following shows an example on disposal via FIFO method</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<col style="width: 14.286%;">
+	<tr class="t1st">
+		<td><p class="hcp2"><span class="hcp3">Date</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Description</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Holding 
+		 Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Price/Share</span></p></td>
+		<td><p style="text-align: center; margin-right: -13px;"><span class="hcp3">Amount 
+		 (USD)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Amount 
+		 Balance (USD)</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>01/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>100</p></td>
+		<td class="t2Col"><p>100</p></td>
+		<td class="t1Col"><p>1.50</p></td>
+		<td class="t2Col"><p>150.00</p></td>
+		<td class="t1Col"><p>150.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>15/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>75</p></td>
+		<td class="t2Col"><p>175</p></td>
+		<td class="t1Col"><p>1.80</p></td>
+		<td class="t2Col"><p>135.00</p></td>
+		<td class="t1Col"><p>285.00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>28/01/2015</p></td>
+		<td class="t2Col"><p>Disposal</p></td>
+		<td class="t1Col"><p>-50</p></td>
+		<td class="t2Col"><p>125</p></td>
+		<td class="t1Col"><p>1.50*</p></td>
+		<td class="t2Col"><p>-75.00</p></td>
+		<td class="t1Col"><p>210.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>01/03/2015</p></td>
+		<td class="t2Col"><p>Split</p></td>
+		<td class="t1Col"><p>250</p></td>
+		<td class="t2Col"><p>375</p></td>
+		<td class="t1Col"><p>0.00</p></td>
+		<td class="t2Col"><p>0.00</p></td>
+		<td class="t1Col"><p>210.00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>15/03/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>125</p></td>
+		<td class="t2Col"><p>500</p></td>
+		<td class="t1Col"><p>0.80</p></td>
+		<td class="t2Col"><p>100.00</p></td>
+		<td class="t1Col"><p>310.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>20/03/2015</p></td>
+		<td class="t2Col"><p>Disposal</p></td>
+		<td class="t1Col"><p>-200</p></td>
+		<td class="t2Col"><p>300</p></td>
+		<td class="t1Col"><p>Not applicable</p></td>
+		<td class="t2Col"><p>-105.00**</p>
+		<p>&#160;</p></td>
+		<td class="t1Col"><p>205.00</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>* The Disposal quantity is '50' which is within the quantity of the 
+ Purchase shares on 01/01/2015 (&lt;'100'). Hence the Price/Share rate 
+ follows the Price/Share rate as per 01/01/2015.</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">** 
+ The table below shows the transaction from 01/01/2015 to 28/01/2015 based 
+ on the 3-for1 split calculation:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 11.111%;">
+	<col style="width: 11.111%;">
+	<col style="width: 6.704%;">
+	<col style="width: 12.58%;">
+	<col style="width: 12.806%;">
+	<col style="width: 12.354%;">
+	<col style="width: 11.111%;">
+	<col style="width: 11.111%;">
+	<col style="width: 11.111%;">
+	<tr class="t1st">
+		<td><p class="hcp2"><span class="hcp3">Date</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Description</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Restate 
+		 Qty</span></p>
+		<p class="hcp2"><span class="hcp3">(3-for-1 
+		 split)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Restate 
+		 Holding Qty</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Price/Share 
+		 before split</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Price/Share 
+		 after split</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Amount 
+		 (USD)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Amount 
+		 Balance (USD)</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>01/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>100</p></td>
+		<td class="t2Col"><p>300</p></td>
+		<td class="t1Col"><p>300</p></td>
+		<td class="t2Col"><p>1.50</p></td>
+		<td class="t1Col"><p>0.50</p></td>
+		<td class="t2Col"><p>150.00*</p></td>
+		<td class="t1Col"><p>150.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>15/01/2015</p></td>
+		<td class="t2Col"><p>Purchase</p></td>
+		<td class="t1Col"><p>75</p></td>
+		<td class="t2Col"><p>225</p></td>
+		<td class="t1Col"><p>525</p></td>
+		<td class="t2Col"><p>1.80</p></td>
+		<td class="t1Col"><p>0.60</p></td>
+		<td class="t2Col"><p>135.00**</p></td>
+		<td class="t1Col"><p>285.00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>28/01/2015</p></td>
+		<td class="t2Col"><p>Disposal</p></td>
+		<td class="t1Col"><p>-50</p></td>
+		<td class="t2Col"><p>-150</p></td>
+		<td class="t1Col"><p>375</p></td>
+		<td class="t2Col"><p>1.50</p></td>
+		<td class="t1Col"><p>0.50</p></td>
+		<td class="t2Col"><p>-75.00</p></td>
+		<td class="t1Col"><p>210.00</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">* 
+ After split, Amount = (Restate Qty) x (Price/Share after split)</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 120px;">= 300 x 0.50</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 120px;">= 150.00</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">** 
+ After split, Amount= (Restate Qty) x (Price/Share after split)</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 120px;">= 225 x 0.60</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph; 
+	 margin-left: 120px;">= 135.00</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">After 
+ the split, there is a disposal of 200 shares on 20/03/2015. Based on FIFO 
+ method, the break-down for Disposal is as follows:</p>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 26.893%;">
+	<col style="width: 8.136%;">
+	<col style="width: 14.972%;">
+	<col style="width: 19.805%;">
+	<col style="width: 16.37%;">
+	<col style="width: 13.686%;">
+	<tr class="t1st">
+		<td><p class="hcp2"><span class="hcp3">Description</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Available 
+		 Qty</span></p>
+		<p class="hcp2"><span class="hcp3">(A)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Qty 
+		 to be disposed</span></p>
+		<p class="hcp2"><span class="hcp3">(B)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Balance 
+		 Qty</span></p>
+		<p class="hcp2"><span class="hcp3">(A-B)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Price/Share 
+		 (USD)</span></p></td>
+		<td><p class="hcp2"><span class="hcp3">Total 
+		 Amount (USD)</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col"><p>Shares purchased on 01/01/2015</p></td>
+		<td class="t2Col"><p>150</p></td>
+		<td class="t1Col"><p>150</p></td>
+		<td class="t2Col"><p>0</p></td>
+		<td class="t1Col"><p>0.50</p></td>
+		<td class="t2Col"><p>75.00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col"><p>Shares purchased on 15/01/2015</p></td>
+		<td class="t2Col"><p>225</p></td>
+		<td class="t1Col"><p>50</p></td>
+		<td class="t2Col"><p>175</p></td>
+		<td class="t1Col"><p>0.60</p></td>
+		<td class="t2Col"><p>30.00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td colspan="5" class="t1Col"><p>Total Disposal (USD)</p></td>
+		<td class="t2Col"><p>105.00</p></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">In 
+ this FIFO-method disposal scenario, 150 shares will be taken from the 
+ available quantity of shares purchased on 01/01/2015, meanwhile the remaining 
+ 50 shares will be taken from the shares purchase on 15/01/2015.</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">The 
+ Price/Share rate is different for both as they were purchased at different 
+ times but they totalled up to USD 150.00.</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">The 
+ below shows the Disposal transaction on 20/03/2015</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><img src="../image163.gif" alt="" border="0" class="hcp1"></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<h3>Security Valuation Screen</h3>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">The 
+ FIFO/LIFO Value section displays the Purchase of securities where balance 
+ is NOT NIL. Based on the example of transaction posting given, the share 
+ split is reflected in the 'Security Valuation' screen:</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<h4>Average Method:</h4>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;"><img src="../image164.gif" alt="" border="0" class="hcp1"></p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">&#160;</p>
+<ol class="hcp4">
+	<li><p>Purchase Quantity: This refers to the quantity purchased.</p>
+	<ul class="hcp5">
+		<li><p>Initial Quantity Purchased: 75.</p></li>
+		<li><p>Quantity Purchased after share split on 01/03/2015 (3-for-1 
+		 split): 75 x 3 = 225.</p></li>
+	</ul></li>
+	<li><p>Holding Quantity: This refers to the holding quantity (Balance 
+	 of shares) available as of now.</p></li>
+	<li><p>Price/Share: On 15/01/2015, the original Price/Share was USD 
+	 1.80. After the split, the Price/Share is USD 82.14/USD 0.4693714286.</p></li>
+	<li><p>Total: The total amount still holding = Holding Quantity x Price/Share.</p></li>
+</ol>
+<p>&#160;</p>
+<h4>FIFO Method</h4>
+<h4><img src="../image165.gif" alt="" border="0" class="hcp1"></h4>
+<ol class="hcp4">
+	<li><p>Purchase Quantity: This refers to the quantity purchased.</p>
+	<ul class="hcp5">
+		<li><p>Initial Quantity Purchased: 75.</p></li>
+		<li><p>Quantity Purchased after share split on 01/03/2015 (3-for-1 
+		 split): 75 x 3 = 225.</p></li>
+	</ul></li>
+	<li><p>Holding Quantity: This refers to the holding quantity (Balance 
+	 of shares) available as of now.</p></li>
+	<li><p>Price/Share: On 15/01/2015, the original Price/Share was USD 
+	 1.80. After the split, the Price/Share is USD 0.60.</p></li>
+	<li><p>Total: The total amount still holding = Holding Quantity x Price/Share.</p></li>
+</ol>
+<p>&#160;</p>
+<h3>FIFO Rebalance</h3>
+<p>In FIFO Rebalance calculation, the system will prompt for correction 
+ if any incorrect amount is posted. This is applicable only for Draft Journal.</p>
+<p>Based on the earlier example in Table 2: Transaction based on FIFO Method, 
+ if the amount posted for Disposal on 20/03/2015 is USD120.00, the below 
+ message will be displayed when user runs the ‘Security Rebalance’.</p>
+<p><img src="../image166.gif" alt="" border="0" class="hcp1"></p>
+<p>From the above ‘Message Text’, the system displays the original posted 
+ Total, the Correction to be done based on FIFO method calculation and 
+ the corrected Total. You may refer back to Table 4: Break-down based on 
+ FIFO Method Disposal for the Disposal transaction on 20/03/2015 for reference.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/Confidential_Database.htm">Additional Information</a> &gt; <a href="Account_Settlement.htm">Accounting</a> &gt; Share Split and FIFO Rebalance</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,301 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+<meta name="MS-HAID" content="Create/Edit Purchase Invoice">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Create/Edit Purchase Orders</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+td.hcp5 { vertical-align:Top; }
+p.hcp6 { text-align:center; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Create/Edit Purchase Orders</h1>
+<p>Purchase orders are written authorisations for certain parties to provide 
+ goods or services at a specified price. Once a purchase order has been 
+ accepted by the supplier and you are billed for it, you can then post 
+ the order to an invoice.</p>
+<p>A purchase order is a draft invoice (debit or credit) that has not yet 
+ been posted to the invoice ledger. As a result, it is possible to edit 
+ or delete purchase orders without affecting this ledger.</p>
+<p>When the option 'Require Approval - Purchase Order' is enabled in Practice 
+ Management system default setting, the approved purchase order will be 
+ assigned with an invoice number and cannot be deleted. It will prompt 
+ the user to set the invoice line as '0' value if user clicks the Delete 
+ button. When this option is not ticked, all the Purchase Orders entries 
+ are approved by default, however the draft invoice will not be assigned 
+ with an invoice number and can be deleted.</p>
+<p>Once the purchase order has been posted as an invoice, it is no longer 
+ possible to edit or delete the invoice - instead a debit note must be 
+ issued to offset any errors.</p>
+<p>The Create/Edit Purchase Orders screen is where you create, edit, delete 
+ and post purchase orders. This screen is automatically displayed if you 
+ click Copy PO from Purchase Ledger &gt; Supplier Invoices in <a href="../Shared/Billing_Enquiry_screen.htm">Billing 
+ Enquiry</a> screen.</p>
+<p>&#160;</p>
+<p class="FldExplain">Purchase order&#160;table</p>
+<p>Lists all purchase orders created for the selected Supplier File.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a1">create</a> 
+	 a purchase order. </p>
+	<div class="droptext" id="POPUP387077000" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the details for the purchase order.</p></li>
+			<li><p>Click Update.</p></li>
+			<li><p>Enter the lines by clicking New in Details table.</p></li>
+		</ol>
+		<p><span class="hcp4">Note: </span><span 
+		 ';="" helvetica:="" 'neue"';="" apple:="" color="" 'emoji"';="" 
+		 segoe:="" ui="" 'symbol"';"="" style="box-sizing: border-box; 
+		 color: rgba(0, 0, 0, 0.9); font-family: ;">When manually creating 
+		 a Debit Note to cancel the existing invoice, you can define the 
+		 draft number of the invoice to cancel in the field 'Original PO 
+		 No.'. </span>Any invoice line with an outstanding amount will 
+		 be copied to the newly created draft invoice.</p>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected purchase order.</p></li>
+	<li><p><span class="hcp2">Reopen</span> - Click this 
+	 to reopen a locked/closed purchase order. Purchase orders are locked 
+	 when you click Print PO button.</p></li>
+	<li><p><span class="hcp2">Delete PO</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a6">delete</a> 
+	 the selected purchase order.</p>
+	<div class="droptext" id="POPUP387052673" style="display: none;">
+		<p>Click Yes to confirm the deletion.</p>
+ </div></li>
+	<li><p><span class="hcp2">Print PO</span> - Click this 
+	 to print the selected purchase order. It will be sent to Document 
+	 Queue and from there, you can open the draft for editing or send it 
+	 for printing. Once a draft has been printed, it will be locked for 
+	 editing. You need to reopen the draft to make further changes.</p></li>
+	<li><p><span class="hcp2">Invoice</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a3">post</a> 
+	 the selected purchase orders. You can also post a purchase order in 
+	 the Purchase Orders and Settlements screens.</p>
+	<div class="droptext" id="POPUP524339252" style="display: none;">
+		<ol class="hcp3">
+			<li><p>In the Invoice Posting window that appears, complete 
+			 the following information:</p>
+			<ul class="hcp1">
+				<li><p>Invoice Date, Journal Date and Overwrite for (existing) 
+				 Draft Invoices - When you post an invoice, the invoice 
+				 and journal dates default to the date when the draft was 
+				 created. You may overwrite these dates by entering the 
+				 date you want in the Invoice Date and Journal Date fields, 
+				 and ticking the corresponding Overwrite for (existing) 
+				 Draft Invoices checkboxes.</p></li>
+				<li><p>Print Document (to document queue) - Tick this checkbox 
+				 to send a copy of the invoice to the Document Queue for 
+				 printing or editing.</p></li>
+			</ul></li>
+			<li><p>Click Start to begin the process.</p></li>
+		</ol>
+		<p><span class="hcp4">Note</span>:</p>
+		<p>When 'Use Recurring Services for T&amp;D Postings' option is 
+		 enabled in Home &gt; Configuration &gt; <a href="../Configuration/System_Defaults_-_Time_and_Disbursements.htm">System 
+		 Defaults &gt; Time and Disbursements</a>, the invoice will be 
+		 created with the following type:</p>
+		<ul class="hcp1">
+			<li>If Entity Administration component is activated - an invoice 
+			 with document type 'Recurring Fee Invoice Entity [A_CS]' will 
+			 be created.</li>
+			<li>If Entity Administration component is not activated - &#160;an 
+			 invoice with document type 'Recurring Fee Invoice Non-Entity 
+			 [A_GE]' will be created.</li>
+		</ul>
+		<p>When 'Use Recurring Services for T&amp;D Postings' option is 
+		 disabled in Home &gt; Configuration &gt; System Defaults &gt; 
+		 Time and Disbursements, the invoice will be created with the type 
+		 'Debit Note [DR_N]'.</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<p>&#160;</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<p class="FldExplain">Details table</p>
+<p>Lists all individual lines of the selected purchase order.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a2">add</a> 
+	 a new line for the selected draft. You may repeat this step as many 
+	 times as necessary.</p>
+	<div class="droptext" id="POPUP387077063" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the details for the detail line:</p>
+			<ul class="hcp1">
+				<li><p>Service - Select the service.</p></li>
+				<li><p>Description - This defaults to the description entered 
+				 for the service in Service Master.</p></li>
+				<li><p>Project - Use this field to specify which project 
+				 the purchase order is related to. If you use Accounting 
+				 for Revenue Entity accounting and require the project 
+				 information to flow through with journals posted from 
+				 Practice Management, you must complete the Unit Code 2 
+				 field for the Revenue Entity's Account File. If Unit Code 
+				 2 is not set up, selections will be taken from the Project 
+				 Code [PROJECTS] user table and the information will not 
+				 be populated with Practice manager journals.</p></li>
+				<li><p>Revenue Entity - By default, this field is not enabled. 
+				 However, if the option 'Enable Intercompany Invoice Line 
+				 Allocations' in <a href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+				 Defaults &gt; Practice Management</a> is enabled, this 
+				 field can be used to allow for a different Revenue Entity 
+				 to be specified for the invoice line.</p></li>
+				<li><p>Account Type - This defaults to the account type 
+				 mapped to the service in Account Mapping. However, if 
+				 necessary, you can change the account type. If the Revenue 
+				 Entity field is not enabled, this field is mandatory. 
+				 Note that this field is seen only if you choose to post 
+				 journals from Practice Management to Accounting using 
+				 the setting 'CA Journals RC [2]' or 'CA Journals RC + 
+				 CE [6]' in <a href="../Configuration/System_Defaults_-_Accounting.htm">System 
+				 Defaults &gt; Accounting</a>.</p></li>
+				<li><p>Account Code - This defaults to the nominal account 
+				 mapped to the service in Account Mapping. However, you 
+				 can change this if necessary.<br>
+				&#160;</p>
+				<table style="border-collapse: separate;" cellspacing="0">
+					<col style="width: 21.801%;">
+					<col style="width: 44.866%;">
+					<col style="width: 33.333%;">
+					<tr>
+						<td class="hcp5"><p>&#160;</p></td>
+						<td class="hcp5"><p class="hcp6">Journal 
+						 line Currency</p></td>
+						<td class="hcp5"><p class="hcp6">Journal 
+						 Movement Code</p></td>
+					</tr>
+					<tr>
+						<td class="hcp5"><p>Account Code 
+						 is a sub-ledger.</p></td>
+						<td class="hcp5"><p>The journal 
+						 line currency is assigned based on the sequence 
+						 below:</p>
+						<ul class="hcp1">
+							<li>Sub-ledger account currency SAME as Base 
+							 currency - Amount in Base currency.</li>
+							<li>Sub-ledger account currency SAME as Line 
+							 currency - Amount in Line currency.</li>
+							<li>Sub-ledger account currency SAME as Invoice 
+							 currency - Amount in invoice currency.</li>
+						</ul></td>
+						<td class="hcp5"><p>Movement Code 
+						 is 'Others' with the code following the sub-ledger 
+						 e.g. BO when the sub-ledger is Bank Account, DO 
+						 when the sub-ledger is Debtor.</p></td>
+					</tr>
+					<tr>
+						<td class="hcp5"><p>Account Code 
+						 is not a sub-ledger.</p></td>
+						<td class="hcp5"><p>Journal line 
+						 currency follows the invoice currency.</p></td>
+						<td class="hcp5"><p>Movement Code 
+						 is NL.<br>
+						&#160;</p></td>
+					</tr>
+				</table></li>
+				<li><p>Currency - This is the currency of the service.</p></li>
+				<li><p>Exchange Rate - If the invoicing currency is different 
+				 from the base currency, the rate is picked up from the 
+				 Exchange Rate Master. If the rate has not been set up, 
+				 enter it manually.</p></li>
+				<li><p>Number of Units - Enter the number of units you 
+				 are being billed.</p></li>
+				<li><p>Unit Price - Enter the unit price.</p></li>
+				<li><p>Discount % - Enter the discount percentage that 
+				 you have been given, e.g. type 0.15 for a discount of 
+				 15%.</p></li>
+				<li><p>Total Line - This is calculated by multiplying number 
+				 of units with unit price, minus any discount.</p></li>
+				<li><p>Tax Codes - If you enable 'Use Accounting Tax Sub-ledger 
+				 as Tax Codes', the tax account mapped in <a href="../Configuration/Service_Tax_Codes.htm">Service 
+				 Tax Codes</a> screen for Supplier Invoicing will be seen 
+				 (sub-ledger type 'WPUR' and 'WBSP'). Note that this field 
+				 is inactive by default. If the option 'Use Accounting 
+				 Tax Sub-ledger as Tax Codes' is enabled, it becomes a 
+				 mandatory field.</p></li>
+				<li><p>VAT % - Enter the VAT percentage if applicable.</p></li>
+				<li><p>Tax Amount - This is calculated as Total Line * 
+				 VAT % but can be overwritten. However, the edited value 
+				 must not vary from the calculated value by +/-1.00. To 
+				 allow for bigger differences, the option 'Disable the 
+				 Validation of the Tax Amount on Purchase Lines' must be 
+				 enabled in <a href="../Configuration/System_Defaults_-_Practice_Management.htm">System 
+				 Defaults &gt; Practice Management</a>.</p></li>
+				<li><p>Date - from - Enter the start date of the billing 
+				 period.</p></li>
+				<li><p>-to - Enter the end date of the billing period.</p></li>
+			</ul></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected line for the draft.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected line for the draft.</p></li>
+	<li><p><span class="hcp2">Recover</span> - Click this 
+	 to <a href="Recover.htm">recover</a> the supplier charge from Billing 
+	 Files.</p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Purchase_Ledger.htm">Purchase Ledger</a> &gt; <a href="Payee_Bank_Accounts.htm">Invoicing</a> &gt; Create/Edit Purchase Invoice</p>
+ <p class="hcp7">&#160;</p>
+ <p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp7">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP387077000');
+	TextPopupInit('a6','POPUP387052673');
+	TextPopupInit('a3','POPUP524339252');
+	TextPopupInit('a2','POPUP387077063');
+//]]></script>
+</body>
+</html>

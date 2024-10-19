@@ -1,0 +1,415 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Defining Rules">
+<meta name="MS-HAID" content="Statement Import and Processing">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Statement Import - Defining Rules</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold;
+font-style:italic; }
+ol.hcp3 { list-style:decimal; }
+img.hcp4 { border:none; }
+table.hcp5 { border-collapse:separate; }
+p.hcp6 { font-weight:bold;
+font-style:italic; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Statement Import&#160;&amp; Processing - Defining Rules</h1>
+<p>The first time an electronic bank statement of a particular format is 
+ imported, you will need to define the rules required to process the statement 
+ lines.</p>
+<ul class="hcp1">
+	<li><p>Rules are custom-defined per statement type, so the electronic 
+	 statements from the same source will be processed using the same rules.</p></li>
+	<li><p>The rules MUST be tested fully during the setup stage to ensure 
+	 the desired results. While this is time-consuming, it is a one-time 
+	 task.</p></li>
+	<li><p>If the source changes and a new source is imported, the rules 
+	 should be reviewed to ensure that the changes do not affect the rules.</p></li>
+	<li><p>Determine beforehand which field in Accounting you want to match 
+	 the bank account number in the electronic bank statement to. You can 
+	 use any one of the following fields related to the Bank Accounts sub-ledger:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p>Bank Account Code</p></li>
+		<li><p>External/IBAN Code</p></li>
+		<li><p>Sub-ledger Code</p></li>
+		<li><p>User Defined Sub-ledger Codes</p></li>
+	</ul></li>
+	<li><p>You need to create specific rules for specific transaction types.</p></li>
+	<li><p>The processing will be done such that all rules will be processed 
+	 in the order they appear in the Define Rules window until the default 
+	 rule, Rule 999, is reached, and if all other rules fail, the transaction 
+	 will be processed according to that rule. Rule 999 cannot be deleted 
+	 nor can its ordering position be changed.</p></li>
+	<li><p>For each statement line, after a Rule has been identified that 
+	 complies with it, all further checks against other rules in the rule 
+	 list will be stopped, and the next statement line will be processed.</p></li>
+</ul>
+<p>In order to set up the rules for a source file, you must first import 
+ the source file, then an electronic statement using that source. Subsequently, 
+ select the electronic statement in the Select/Import Folder, then click 
+ View/Process or select the Process &amp; Reconcile Folder and click Define 
+ Rules. The Define Rules screen will open as a separate window.</p>
+<p>The screen is divided into three sections: the top is where you define 
+ the bank, account code and the reconciliation date. The middle portion 
+ shows Rules 1 and 2, which are default rules; and the bottom section lists 
+ all rules, including Rule 999.</p>
+<p>&#160;</p>
+<p><span class="hcp2">Note</span>: User 
+ Defined Sub-ledger Codes are Sub-ledger Accounts User Fields. Click <a class="dropspot" href="javascript:TextPopup(this)" id="a1">here</a> 
+ to see the set up.</p>
+<div class="droptext" id="POPUP381906983" style="display: none;">
+	<ol class="hcp3">
+		<li><p>In Viewpoint - Home, go to Configuration &gt; Business Parameters 
+		 &gt; User Fields &gt; Sub-ledger Accounts.</p></li>
+		<li><p>Click New.</p></li>
+		<li><p>Define the user field:</p>
+		<ul class="hcp1">
+			<li><p>Sub-ledger Type - Set this to Bank Account</p></li>
+			<li><p>Key - This must be either ACODER_1 or ACODER_2.</p></li>
+		</ul></li>
+		<li><p>Click Update.</p></li>
+	</ol>
+	<p>&#160;</p>
+</div>
+<p>&#160;</p>
+<h2>Defining Bank, Account Code and Reconciliation Date</h2>
+<p>This is defined at the top of the Define Rules window.</p>
+<p>This is the first step of the electronic bank statement processing. 
+ During processing a matching bank and/or account code will be found.</p>
+<p><img src="../image204.jpg" alt="" width="618" height="122" border="0" class="hcp4"></p>
+<p>These fields represent where the program will try to match the Bank 
+ and Account Code from the electronic bank statement to the defined fields 
+ in Viewpoint.</p>
+<p>The Reconciliation Date will be filled in Accounting with the selected 
+ date from the electronic bank statement.</p>
+<p>The Bank Master File and Match Account Code to fields will be compared 
+ with fields relating to the Bank Accounts sub-ledger, while the currency 
+ of the transaction in the electronic statement will be matched to its 
+ Currency Code field.</p>
+<p><img src="../image205.jpg" alt="" width="674" height="239" border="0" class="hcp4"></p>
+<table cellspacing="0" border="1" class="hcp5">
+	<col style="width: 17.705%;">
+	<col style="width: 82.295%;">
+	<tr>
+		<td><p>Bank Master File</p></td>
+		<td><p>Will be matched with the Bank field.</p>
+		<p>If the checkbox for Validate Bank MF… is ticked, the program 
+		 will check for the Bank and the selected Account Code. This means 
+		 with the checkbox ticked, if the account code matches, but the 
+		 bank does not, the line will not be processed. However, if the 
+		 checkbox is not ticked, and the account code matches, the line 
+		 will be processed even if the bank does not match.</p></td>
+	</tr>
+	<tr>
+		<td><p>Validate Bank MF in Matching the sub-ledger</p></td>
+		<td><p>If you tick this, then during processing, the program will 
+		 check the Bank Master File AND the account code. If the account 
+		 code matches but the bank does not, the line will not be processed. 
+		 If the checkbox is not ticked, then if the account code matches 
+		 but the bank does not, the line will still be processed.</p></td>
+	</tr>
+	<tr>
+		<td><p>Match Account Code to</p></td>
+		<td><p>Codes from the drop down list will be matched to the following 
+		 fields:</p>
+		<ul class="hcp1">
+			<li><p>Bank Account Code – Statutory Bank Acct field.</p></li>
+			<li><p>External/IBAN Code – IBAN/Ac Code field.</p></li>
+			<li><p>Sub-ledger Code – Sub-Ledger Code field.</p></li>
+			<li><p>User Defined Sub-ledger Code ACODER_1 and ACODER_2 – 
+			 Bank Accounts sub-ledger User Defined field.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p>Reconciliation Date</p></td>
+		<td><p>This is the date from the electronic bank statement that 
+		 will be filled in Reconciliation date of the related journal.</p>
+		<p class="hcp6">Note: <span style="font-weight: normal; 
+		 font-style: normal;">You can tell the values of each of the three 
+		 dates in the selection, by right mouse click, and then select 
+		 View Details on a transaction line in the Process &amp; Reconcile 
+		 folder. Select the date that you want to use as the Reconciliation 
+		 Date.</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Processing bank and/or account code (default rule applied)</h3>
+<p>At this point, you could test the correct location of the account code 
+ and make sure the Reconciliation Date is being filled properly.</p>
+<p>In this test, we select a transaction line in the Process &amp; Reconcile 
+ folder, and click Process.</p>
+<p>With the following definition,</p>
+<p><img src="../image206.jpg" alt="" width="530" height="121" border="0" class="hcp4"></p>
+<p>where the bank account sub-ledger information is</p>
+<p><img src="../image207.jpg" alt="" width="674" height="238" border="0" class="hcp4"></p>
+<p>and the value of the dates are</p>
+<p><img src="../image209.jpg" alt="" width="501" height="298" border="0" class="hcp4"></p>
+<p>the result is,</p>
+<p><img src="../image221.jpg" alt="" border="0" class="hcp4"></p>
+<p>&#160;</p>
+<p class="hcp6">Note:</p>
+<ul class="hcp1">
+	<li><p>A journal had not yet been entered that is similar to the transaction 
+	 line being processed. Refer to explanation of Rule 1 and 2 below.</p></li>
+	<li><p>As such, the rule processed the transaction line to find a match 
+	 for the account code.</p></li>
+	<li><p>Then, as no other rules had been defined, the processing went 
+	 straight to the default rule to ‘Process as pending journal’.</p></li>
+	<li><p>If we now Confirm the processing of the line, and then Commit 
+	 Journals, we will be able to see a new journal created as a Pending 
+	 Journal, following the transaction details of the line. See below.</p></li>
+</ul>
+<p><br>
+Result of clicking Commit.<br>
+<br>
+<img src="../image212.jpg" alt="" width="1107" height="436" border="0" class="hcp4"><br>
+<br>
+Result of clicking Commit Journals after this.<br>
+<br>
+<img src="../image213.jpg" alt="" width="1102" height="434" border="0" class="hcp4"><br>
+</p>
+<p><span class="hcp2">Note:</span></p>
+<ul class="hcp1">
+	<li><p>The right pane that shows Account Reconciliation information 
+	 that was previously empty is now completed.</p></li>
+	<li><p>The Reconciliation Date has now been completed, and corresponds 
+	 to the selected date.</p></li>
+	<li><p>We know which pending journal that has been created by the Transaction 
+	 No. Look at the associated pending journal and detail.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Defining Rules 1 &amp; 2 - Comparing statement lines with journals 
+ already entered</h2>
+<p>Rules 1 and 2 will define how far the processing is to compare the date 
+ of a journal that may have already been entered to the date of a similar 
+ transaction line from the electronic bank statement.</p>
+<p>The check will be based on the bank and/or account code, and also a 
+ match of the currency and transaction amount from the electronic bank 
+ statement for an existing journal whose date is within the specified range. 
+ Then, if a match is found, Rule 1 will reconcile the journal straightaway 
+ or Rule 2 will ask for a confirmation before reconciling. If Rule 1 applies, 
+ Rule 2 will be skipped.</p>
+<p><img src="../image132.gif" alt="" width="589" height="194" border="0" class="hcp4"></p>
+<table cellspacing="0" border="1" class="hcp5">
+	<col style="width: 17.705%;">
+	<col style="width: 82.295%;">
+	<tr>
+		<td><p>Rule 1</p></td>
+		<td><p>Tick the checkbox to use this rule.</p>
+		<p>Enter the number of days before and after the transaction line 
+		 date to check against existing journal dates.</p>
+		<p>If found, the journal will be reconciled automatically.</p></td>
+	</tr>
+	<tr>
+		<td><p>Rule 2</p></td>
+		<td><p>Tick the checkbox to use this rule.</p>
+		<p>Enter the number of days before and after the transaction line 
+		 date to check against existing journal dates.</p>
+		<p>If found, you will have to Confirm before reconciling the journal.</p></td>
+	</tr>
+	<tr>
+		<td><p>Include pending journals in search</p></td>
+		<td><p>Tick the checkbox if you want the check to include pending 
+		 journals, as well.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Accounts Receivable (AR) Settlement - Rules</h2>
+<p>If the account number matches that of a bank account sub-ledger in Viewpoint 
+ Accounting but no journal line has been created; the amount is a debit 
+ entry (i.e. more than zero); and the bank account sub-ledger belongs to 
+ a Revenue Company and has been mapped in the Account Mapping of Bank Accounts, 
+ the following processes will take place:</p>
+<p>Retrieve outstanding invoices (not draft invoices) from Practice Management:</p>
+<ol class="hcp3">
+	<li><p>The bank statement Narrative is analysed for the invoice number(s) 
+	 of outstanding invoices and the matching outstanding invoice(s) are 
+	 retrieved. If the invoice numbers relate to multiple Billing Files, 
+	 they can be retrieved if the Narrative includes each invoice number.</p></li>
+	<li><p>If none found, the bank statement Narrative is analysed for 
+	 the Billing File name and the Billing File’s outstanding invoices 
+	 are retrieved. If there are no invoice numbers but the Narrative includes 
+	 more than one Billing File name, no outstanding invoices are retrieved.</p></li>
+	<li><p>If none found, all outstanding invoices with the same currency 
+	 and outstanding amount are retrieved.</p></li>
+	<li><p>If none found, users can browse for the Billing File and Matter 
+	 to retrieve all outstanding invoices with the same currency as the 
+	 bank receipt and matching the selected criteria.</p></li>
+</ol>
+<p>Users can select an outstanding invoice to settle in full or partially. 
+ There is also an option to settle multiple outstanding invoices to a Matter. 
+ For multiple settlements, the Matter currency must match the bank receipt 
+ currency. If no outstanding invoices are selected, the entire bank receipt 
+ can be posted as a Matter Receipt. This will automatically update the 
+ receipts in Practice Management and post a permanent journal in Accounting.</p>
+<p>&#160;</p>
+<h2>Rule 999 - the default rule</h2>
+<p>This is the default rule which will be applied as a ‘last resort’ when 
+ all other rules do not apply to any of the statement lines, and for this 
+ reason, this rule can not be deleted.</p>
+<p>By default, any settings defined in the Tags area of this rule will 
+ be copied to all new rules.</p>
+<p>In the Define Rules window, select Rule Number 999, and then click Edit.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Rule</h6>
+<ul class="hcp1">
+	<li><p>Description - This is the description of the rule as it appears 
+	 in the Define Rules screen.</p></li>
+	<li><p>Note - Enter any note relevant to the usage of rule, as required.</p></li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">Processing</h6>
+<p>While it is possible to amend the default values, you cannot remove 
+ any item in this section.</p>
+<ul class="hcp1">
+	<li><p>Confirm Rule - Decide whether user input is required to confirm 
+	 a process before clicking on Commit Journals. If user must click Confirm 
+	 before he can commit the journals, the select Yes, otherwise, select 
+	 No.</p></li>
+	<li><p>Journal - Decide whether you want to create a pending journal 
+	 or to post the journal when you click on Commit Journals.</p></li>
+</ul>
+<p>See also <a href="Pending_Journals.htm">Pending Journals</a> and <a 
+	 href="../Shared/Tips_&amp;_Tricks.htm#Draft_Journals_vs_Permanent_Journals">Draft 
+ Journals vs Permanent Journals</a>.</p>
+<p>&#160;</p>
+<h6 class="Heading8">Tags</h6>
+<ul class="hcp1">
+	<li><p>Description, Narrative and Journal Reference - Select the information 
+	 you want to enter in these fields from the available options. These 
+	 codes are prefixed with 'STR' to indicate that they are referring 
+	 to the statement line. The syntax of the code is {&lt;STR.Field&gt;}. 
+	 You may select more than one code and intersperse them with text, 
+	 so that the line that is displayed in your journal will reflect the 
+	 appropriate information. For example: Receipt of {STR.TransCur}{STR.AmountTrans} 
+	 from {STR.ALineDescr}.</p></li>
+	<li><p>Journal Date, Line Date and Reconciliation Date - Select the 
+	 date type you want to enter in these journal fields. If no date is 
+	 defined, the default date will be applied to the fields. The default 
+	 date will differ depending on the field.</p></li>
+	<li><p>All other fields - Select the information based on the available 
+	 options, or else enter the information required.</p></li>
+</ul>
+<p style="background-color: #ffffff;">&#160;</p>
+<h2>Other Rules</h2>
+<p>You will need to a set up other Rules to process the electronic bank 
+ statement if Rules 1 and 2 and the Accounts Receivable (AR) Settlement 
+ Rules do not apply. Do this in the Define Rules window. Click Add.</p>
+<ul class="hcp1">
+	<li><p>New rules are assigned new numbers sequentially starting from 
+	 10. If you subsequently remove a rule and add a new one, the new rule 
+	 will be assigned the next sequential number.</p></li>
+	<li><p>Rules are applied in the order they appear in the list.</p></li>
+	<li><p>You can move a rule up or down the list by dragging it to the 
+	 appropriate place.</p></li>
+	<li><p>When setting up new rules, you are required to define the Rule 
+	 Description, Condition(s) and Processing sections. If you do not define 
+	 any Tags, then the defaults will apply.</p></li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">Rule</h6>
+<ul class="hcp1">
+	<li><p>Description - This is the description of the rule as it appears 
+	 in the Define Rules screen.</p></li>
+	<li><p>Note - Enter any note relevant to the usage of rule, as required.</p></li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">Condition</h6>
+<p>Set the conditions for the statement lines here. If the conditions are 
+ met, the lines will be processed according to the definitions set up in 
+ the Processing section (see below). For each of the fields in this section, 
+ select an operator and then enter the condition. Operators that can be 
+ used are:</p>
+<ul class="hcp1">
+	<li><p>Equal - Enter the exact condition. For instance: CCY=EUR</p></li>
+	<li><p>Like - Use this for text fields or when you want to match only 
+	 a portion of the field. Use the asterisk (*) for wild card entries. 
+	 For instance: Line Description LIKE CH*</p></li>
+	<li><p>In - Use this to include more than one criterion in the condition. 
+	 Separate each criterion with a comma. For instance: Line Type In MM,TR</p></li>
+	<li><p>Between - This operator is used for amount- and quantity-related 
+	 conditions. When using this operator, enter the smaller amount before 
+	 the bigger amount, separated by a comma: -60,120. For instance: Transaction 
+	 Amount Between -60 and 120</p></li>
+</ul>
+<p>For the fields Amount and Transaction, you can also use the following 
+ operators:</p>
+<ul class="hcp1">
+	<li><p>More than</p></li>
+	<li><p>Less than</p></li>
+	<li><p>More than or equal</p></li>
+	<li><p>Less than or equal</p></li>
+</ul>
+<p>&#160;</p>
+<h6 class="Heading8">Processing</h6>
+<ul class="hcp1">
+	<li><p>Confirm Rule - Decide whether user input is required to confirm 
+	 a process before clicking on Commit Journals. If user must click Confirm 
+	 before he can commit the journals, the select Yes, otherwise, select 
+	 No.</p></li>
+	<li><p>Script - The available selections depend on the Bank Account 
+	 journal scripts you have in your environment. Select the script you 
+	 want to use for the rule. When a statement line matches the condition(s) 
+	 specified (see Condition, above), then a journal entry will be created 
+	 based on this script. The user may still be required to complete the 
+	 journal before it can be posted as a final draft.</p></li>
+	<li><p>Journal - Decide whether you want to create a pending journal 
+	 or to post the journal when you click on Commit Journals.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Journal_Scripts.htm">Journal Scripts</a></p></li>
+	<li><p><a href="statement_import_and_processing.htm">Statement Import 
+	 &amp; Processing</a></p></li>
+	<li><p><a href="Statement_Import_Import_Electronic_Bank_Statements.htm">Statement 
+	 Import &amp; Processing - Import Electronic Bank Statements</a></p></li>
+	<li><p><a href="Statement_Import_Import_Source_File.htm">Statement 
+	 Import&#160;&amp; Processing - Import Source File</a></p></li>
+	<li><p><a href="Statement_Import_Process_Diagram.htm">Statement Import&#160;&amp; 
+	 Processing - Process Diagram</a></p></li>
+	<li><p><a href="Sub-Ledger_Accounts_Setup.htm">Sub-Ledger Accounts 
+	 - Setup</a></p></li>
+</ul>
+
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Statement Import - Defining Rules</p>
+<p class="hcp7">&#160;</p>
+<p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp7">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP381906983');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Settlements - Invoice Cancellation</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+ol.hcp3 { list-style:decimal; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Settlements - Invoice Cancellation</h1>
+<p>Invoices that have been posted cannot be deleted. As such, if there 
+ is an error in the invoice, it will have to be cancelled. To cancel, you 
+ can use the Credit Note Wizard which can perform full or partial cancellation 
+ of the invoice.</p>
+<p>&#160;</p>
+<h3>Credit/Debit Note Wizard</h3>
+<p>This function is accessible through the Cancel D/C Note button in <a 
+	 href="Receivables.htm">Receivables</a> and <a href="Settlements_-_Invoice_Folder_Sales.htm">Settlements 
+ - Invoice</a> screen. It allows for outstanding invoices to be cancelled.</p>
+<p>&#160;</p>
+<p class="FldExplain">Invoice Lines</p>
+<p>This shows the invoice lines for the selected invoice and available 
+ action for the cancellation such as resetting the recurring fee. The actions 
+ depend on the invoice line.</p>
+<p>&#160;</p>
+<p class="FldExplain">Pending Actions list</p>
+<p>This shows pending actions for the selected invoice.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click on the relevant command button to perform the necessary. The buttons 
+ apply to the Pending Actions list.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a class="dropspot" href="javascript:TextPopup(this)" id="a3">set up</a> 
+	 a new action.</p>
+	<div class="droptext" id="POPUP364645930" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the required information:</p>
+			<ul class="hcp1">
+				<li><p>File Code - Select the Master File that the action 
+				 is for.</p></li>
+				<li><p>Matter Code - Select the Matter that the action 
+				 is for, if applicable.</p></li>
+				<li><p>Draft Invoice Number - If the action is not for 
+				 a specific invoice, enter 0. If any other number is entered, 
+				 system will check if the number is a valid draft number 
+				 based on the File Code selected. If the number is a valid 
+				 number,&#160;the action is deemed to be for the draft 
+				 invoice of that number. However, if the system is not 
+				 able to locate any draft invoice with the number, clicking 
+				 Update will result in the error message 'Invalid Draft 
+				 Number'.</p></li>
+				<li><p>Receipt/Payment Transaction Number - Similar to 
+				 Draft Invoice Number, enter 0 if the action is not for 
+				 a specific transaction. Otherwise, enter the receipt or 
+				 payment transaction number that the action is for.</p></li>
+				<li><p>Category - Select a category for the action. This 
+				 is for classification. New categories can be set up in 
+				 the Practice Management Action Categories [PACT] lookup 
+				 table.</p></li>
+				<li><p>Type - Select the type of action. This depends on 
+				 the category you have selected. New action types can be 
+				 added in the Practice Management Action Types [PMAC] lookup 
+				 table.</p></li>
+				<li><p>Description - Enter a description for the action.</p></li>
+				<li><p>Date Created - This defaults to today's date.</p></li>
+				<li><p>Created by - This defaults to the logged in user.</p></li>
+				<li><p>Assigned to - Select the user in charge of the action. 
+				 The action item will be seen in the assignee's Reminders.</p></li>
+				<li><p>Date Due - Enter the due date for the action. This 
+				 is mandatory if the Assigned to field is completed.</p></li>
+				<li><p>Date Completed - This is to be completed when the 
+				 action is done.</p></li>
+				<li><p>Completed - This is ticked when the action is done.</p></li>
+				<li><p>Currency - Enter the currency code.</p></li>
+				<li><p>Currency Amount - Enter the amount.</p></li>
+				<li><p>Base Currency Amount - Enter the reporting currency 
+				 code.</p></li>
+				<li><p>Note - Enter additional notes for the actions.</p></li>
+			</ul></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the selected action.</p></li>
+	<li><p><span class="hcp2">Complete</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a4">indicate</a> 
+	 that the action has been completed.</p>
+	<div class="droptext" id="POPUP364632143" style="display: none;">
+		<ol class="hcp3">
+			<li><p>Enter the Date Completed.</p></li>
+			<li><p>Click Update.</p></li>
+		</ol>
+ </div></li>
+	<li><p><span class="hcp2">Select All</span> - Click this 
+	 to select all actions.</p></li>
+	<li><p><span class="hcp2">Deselect All</span> - Click 
+	 this to deselect all actions.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected action.</p></li>
+</ul>
+<p class="FldExplain">Cancellation options</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">Select All</span> - Tick to 
+	 select all invoice lines and all action for the invoice lines.</p></li>
+	<li><p><span class="hcp2">Create Credit (Debit) Note</span> 
+	 - Tick to automatically create the credit/debit note. This is ticked 
+	 by default and will remain ticked.</p></li>
+	<li><p><span class="hcp2">Prompt Posting screen to post 
+	 the Credit (Debit) Note</span> - Tick to view the posting screen. 
+	 This allows for you to change the invoice date and/or journal date 
+	 if necessary. You can also choose to send credit/debit note to Document 
+	 Queue to be printed.</p></li>
+	<li><p><span class="hcp2">Settle both the original and 
+	 newly created Credit (Debit) Note</span> - Tick to automatically settle 
+	 both the invoice and the credit/debit note.</p></li>
+</ul>
+<p class="FldExplain">Settlement Status</p>
+<p>This is to assign a status to the resulting credit/debit note. Click 
+ to select the relevant settlement status.</p>
+<p>&#160;</p>
+<p class="FldExplain">Create</p>
+<p>Click this to cancel the invoice and create the Credit (Debit) Note.</p>
+<p>&#160;</p>
+<p class="FldExplain">Cancel</p>
+<p>Click this to exit the screen.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h4>Using Credit/Debit Note Wizard</h4>
+<ol class="hcp3">
+	<li><p>Select the invoice.</p></li>
+	<li><p>Click Cancel D/C Note. The Cancel D/C Note button is enabled 
+	 for both DR Note and CR Note (document type CR_N only) in Sales ledger, 
+	 however, it is only enabled for document type C_PO in Purchase ledger. 
+	 The button is also enabled when the invoice has discount of 100% and 
+	 is not settled.</p></li>
+	<li><p>The Credit/Debit Note wizard is seen. In this screen, you will 
+	 see the invoices lines. This allows you to specify if you want the 
+	 invoice to be cancelled in full or not. Tick only the lines that you 
+	 want to cancel. If you wish to cancel all lines, click Select All.</p></li>
+	<li><p>Tick the applicable actions. The actions depend on the invoice 
+	 lines and they are:</p>
+	<ul class="hcp1">
+		<li><p>Reset Recurring Fee - This action is available if the invoice 
+		 line is derived from Recurring Fees and if ticked, will reset 
+		 the recurring fee's next due date. If the service has been deactivated 
+		 by the creation of the invoice, this will re-activate it. This 
+		 action is not available if the invoice line has been partially 
+		 settled.</p></li>
+		<li><p>Reverse Time Entries - This action is available if the invoice 
+		 line is derived from time entries and if ticked, will reverse 
+		 the relevant time entries. If the invoice line has been partially 
+		 settled, this action is not available.</p></li>
+		<li><p>Reverse Disbursement Entries - This action is available 
+		 if the invoice line is derived from disbursement entries and if 
+		 ticked, will reverse the relevant disbursement entries. If the 
+		 invoice line has been partially settled, this action is not available.</p></li>
+	</ul></li>
+	<li><p>Select the options for the cancellation.</p></li>
+	<li><p>Click Create to start.</p></li>
+</ol>
+<p><span style="font-weight: bold; font-style: italic;">Note</span>: If 
+ there is no settlement for the invoice, by default, all invoice lines 
+ will be ticked in the Credit Note wizard screen. However, if there has 
+ been settlement made to any of the invoice lines, then the line will not 
+ be ticked by default.</p>
+<p>If the option 'Use Recurring Services for Time Postings' or 'Use Recurring 
+ Services for Disbursement Postings' is enabled, reversing time or disbursement 
+ entries will also reset the 'Next Invoicing Due' date for the services 
+ in Recurring Fees screen.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3>Manual Cancellation</h3>
+<p>There are two methods of cancelling an invoice manually:</p>
+<ul class="hcp1">
+	<li><p>Settle to Matter, in which both the invoice and the offset credit 
+	 note are settled to Matter; and</p></li>
+	<li><p>Make a receipt/payment to both the invoice and the offset credit/debit 
+	 note.</p></li>
+</ul>
+<p>Before you can proceed with a manual cancellation:</p>
+<ul class="hcp1">
+	<li><p>Create the offset credit/debit note, similar to how the system 
+	 creates an offset credit/debit note when you perform an automatic 
+	 cancellation. Depending on your internal process, the amount of this 
+	 offset invoice may be equal to the amount of the invoice or it may 
+	 be the sum of the portion being cancelled, i.e. the unpaid portion.</p></li>
+	<li><p>If the offset invoice cancels the total of the original invoice, 
+	 you may also create a new invoice/supplier invoice to replace the 
+	 one that is being cancelled.</p></li>
+</ul>
+<p>Once you have done this, follow the steps below to complete the cancellation.</p>
+<p>&#160;</p>
+<h4>Settle to Matter</h4>
+<p>Settling to Matter can only be done for Sales invoices. You need to 
+ perform the following:</p>
+<ol class="hcp3">
+	<li><p>Select the invoice that is being cancelled.</p></li>
+	<li><p>Click Settle to Matter. This will launch the Settle to Matter 
+	 Account screen.</p></li>
+	<li><p>Tick the Settle Multiple Documents and, if necessary, the Settle 
+	 by Invoice Line checkboxes. This will list all outstanding invoices 
+	 for the selected Matter.</p></li>
+	<li><p>Select the invoice that is being cancelled and the offset credit 
+	 note that you created. If you are cancelling the whole invoice and 
+	 want to apply the amount received from the client to the replacement 
+	 invoice, then also select the replacement invoice at this point.</p></li>
+	<li><p>The total Amount Rec'd (DR) should be 0.</p></li>
+	<li><p>You may want to enter relevant text as to why the invoices are 
+	 being cancelled.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>The original invoice has now been settled against the credit 
+	 note. Where relevant the sum paid to the invoice is now settled to 
+	 the replacement invoice.</p></li>
+</ol>
+<p>If there is no replacement invoice, the amount received from the client 
+ will be held in the Matter account. Refer to &#160;<a href="settle_to_matter.htm">Settlements 
+ - Settle to Matter</a>.</p>
+<p>&#160;</p>
+<h4>Make a Receipt/Payment</h4>
+<p>This method works in a similar manner to a settle to Matter.</p>
+<ol class="hcp3">
+	<li><p>Select the invoice that is being cancelled.</p></li>
+	<li><p>Click Receipt/Payment. This will launch the Receipt/Payment 
+	 screen.</p></li>
+	<li><p>Tick the Settle Multiple Documents and, if necessary, the Settle 
+	 by Invoice Line checkboxes. This will list all outstanding invoices 
+	 for the Billing/Supplier File.</p></li>
+	<li><p>Select the invoice that is being cancelled, the offset credit/debit 
+	 note that you created, and where relevant, the newly-created replacement 
+	 invoice.</p></li>
+	<li><p>The total Amount Rec'd (DR)/Amount Paid (CR) should be 0. If 
+	 you are settling a sales invoice, you may need to manually change 
+	 this to 0.</p></li>
+	<li><p>You may want to enter relevant text as to why the invoices are 
+	 being cancelled.</p></li>
+	<li><p>Click Update.</p></li>
+	<li><p>The original invoice has now been settled against the credit/debit 
+	 note. Where relevant the sum paid to the invoice is now settled to 
+	 the replacement invoice.</p></li>
+</ol>
+<p>&#160;</p>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Will the time 
+ and disbursement entries that were linked to this invoice be reversed?</a></p>
+ <div class="droptext" id="POPUP373868107" style="display: none;">
+	<p>If you have selected the Reverse time/disb on cancel invoice option 
+	 in Configuration &gt; Settings &gt; System Defaults &gt; Practice 
+	 Management then the posted entries will be reversed, provided you 
+	 select Start in Step 5 above.</p>
+	<p>In this case, identical entries will be created with negative amounts 
+	 to cancel out the original time and disbursement charges, and then 
+	 the entries are recreated in Time and Disbursements so that they can 
+	 be pulled into a new invoice. The dates in the Posting Control Settings 
+	 will have no bearing on the creation of the replacement entries.</p>
+ </div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Create_Edit_Invoice.htm">Create/Edit Invoice</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Settlements - Invoice Cancellation</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a3','POPUP364645930');
+	TextPopupInit('a4','POPUP364632143');
+	TextPopupInit('a1','POPUP373868107');
+//]]></script>
+</body>
+</html>

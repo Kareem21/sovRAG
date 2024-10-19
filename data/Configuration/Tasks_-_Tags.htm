@@ -1,0 +1,327 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Tasks - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-decoration:underline; }
+td.hcp2 { vertical-align:top; }
+span.hcp3 { font-weight:normal;
+text-decoration:none; }
+ul.hcp4 { list-style:disc; }
+p.hcp5 { margin-left:36px; }
+p.hcp6 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Tasks - Tags</h1>
+<p>When setting up a task, you can add these tags in the Tag Values field to specify if the task is a Delivery Manager or a follow-up task.</p>
+<p>&#160;</p>
+<p class="hcp1">Delivery Manager Task</p>
+<table class="Table1" cellspacing="0px" width="87.357%">
+<col style="width: 27.882%;">
+<col style="width: 72.118%;">
+<tr class="t1st">
+<td class="hcp2">
+<p>Tag</p>
+</td>
+<td class="hcp2">
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[DD.ConvertMail=Y]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will check for mail tags in the template. If the tag [$Recipient_to:] exists with a valid e-mail address, the document will be converted to an e-mail. If there is no e-mail address then the instruction specified by the [DD.NoMail] tag will be used.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[DD.NoMail=&lt;Option&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This tag will tell Viewpoint how to handle the document if there is no valid e-mail address retrieved for the document you have generated, where &lt;Option&gt; can be:</p>
+<ul class="hcp1">
+<li>
+<p>P - This will print out the document together with the e-mail tags and text for the e-mail body.</p>
+</li>
+<li>
+<p>R - This will print out the document without the e-mail tags and separate the text for the e-mail body from the attachment. The original document in the holder will be replaced by the new version without the e-mails tags and separate page for the e-mail body text.</p>
+</li>
+<li>
+<p>S - This will print out the document without the e-mail tags and the text for the e-mail body. The original document in the holder will be replaced by the new version without the e-mail tags and e-mail body text.</p>
+</li>
+<li>
+<p><span style="font-style: italic;">Blank</span> - If you prefer to handle documents that cannot be converted to e-mail manually, use [DD.NoMail=]. The document holder will not be stored regardless of the selection in the 'When the e-mail is sent' section of the Delivery Manager screen. &#160;</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="hcp1">Follow-up Task - Complete</p>
+<p class="hcp1"><span class="hcp3">The following will create a follow-up task when you click Complete for the earlier task.</span></p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 27.882%;">
+<col style="width: 72.118%;">
+<tr class="t1st">
+<td>
+<p>Tag</p>
+</td>
+<td>
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Codes=&lt;Key Tag&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This creates a follow-up task automatically created with partial details when you click the Complete button.</p>
+<p>Enter as many task key tags as required, separated by a comma (,). User will be able to select the correct task when creating the ‘follow-up’ task.</p>
+<p>Example:</p>
+<p>[On_Complete.Codes =DOCPREP,DOCSIGN]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Default=&lt;Key Tag&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>If you have multiple key tags specified in [On_Complete.Codes=&lt;Key Tag&gt;], above, then this allows you to specify a default.</p>
+<p>Example:</p>
+<p>[On_Complete.Default=DOCPREP]</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Descr=&lt;Text&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This sets the default description for the follow-up task. The default is blank</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Assign=&lt;user&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will assign the follow-up task to the user defined. The default selection is blank, but you may use any of the codes below to pick up the user that you want:</p>
+<ul class="hcp4">
+<li>
+<p>@ADM1.&lt;FileType&gt; - This picks up the Administrator of the &lt;FileType&gt; where A - Account File, B - Billing File, E - Entity File and S - Supplier File.</p>
+</li>
+<li>
+<p>@ADM2.&lt;FileType&gt; - This picks up the Manager of the &lt;FileType&gt; where A - Account File, B - Billing File, E - Entity File and S - Supplier File.</p>
+</li>
+<li>
+<p>@ADM3.&lt;FileType&gt; - This picks up the Controller of the &lt;FileType&gt; where A - Account File, B - Billing File, E - Entity File and S - Supplier File.</p>
+</li>
+<li>
+<p>@ORIG - This retrieves the originator of the task.</p>
+</li>
+<li>
+<p>@UMGR - This will select the Manager of the user completing the task (set up in Configuration &gt; Users &amp; Security &gt; Users).</p>
+</li>
+<li>
+<p>&lt;UserCode&gt; - This assigns the follow-up task to the specified user.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Due=&lt;DueDate&gt;]</p>
+<p>&#160;</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This sets the due date of the follow-up task and can be:</p>
+<ul class="hcp4">
+<li>
+<p>Dependent on the originating task - Enter a positive number. This will set the due date as n number of days from the date you complete the originating task.<br>
+<br>
+For example:<br>
+<br>
+[On_Complete.Due=3] means the due date for the follow-up task is three days from the day you clicked Complete for the originating task.</p>
+</li>
+<li>
+<p>A specific date - enter the date in this format #YYYY-MM-DD# where:</p>
+</li>
+<li>
+<p class="hcp5">YYYY refers to the year in 4-digit format.</p>
+</li>
+<li>
+<p class="hcp5">MM refers to the month in 2-digit format e.g. 01 for January, 02 for February.</p>
+</li>
+<li>
+<p class="hcp5">DD refers to the day in 2-digit format.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Complete.Action.ConfirmDraft=&lt;Option&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will automatically approve a draft invoice on the completion of an invoice-related task. To identify the draft number that is to be approved, place the information in either the index values for the related document holder, or place the information in a specific index field. This is done in the Document Management tag values that are found in the Key Information of the invoice template.</p>
+<ul class="hcp4">
+<li>VPDocID - If you intend to use the index values of the document holder to record the draft number information, place (-HDF.ProformaNr-) in the VpDocID section of the tag:<br>
+<br>
+[/DMW.DocIndex|Descr=Draft No (-HDF.ProformaNr-)|Cabinet=ACCINV|VpDocId=(-HDF.ProformaNr-)|DocConf=0|/]<br>
+<br>
+The task tag will then be:<br>
+[On_Complete.Action.ConfirmDraft=VpDocId]</li>
+</ul>
+<ul class="hcp4">
+<li>DRAFTNO - This is used if the draft number is placed in its own index field which you will need to create the with key tag DRAFTNO. This index field must be linked to the filing cabinet. The draft number is placed in the DRAFTNO index field in the Key Information of the invoice template:<br>
+<br>
+[/DMW.Relation|KeyTag=DRAFTNO|KeyValue=(-HDF.ProformaNr-)|/]<br>
+<br>
+The task tag will then be<br>
+[On_Complete.Action.ConfirmDraft=DRAFTNO]</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="hcp1"><span style="font-weight: bold; text-decoration: underline;">Follow-up Task - Reject</span></p>
+<p class="hcp1"><span class="hcp3">The following will create a follow-up task when you click Reject for the earlier task.</span></p>
+<table class="Table1" cellspacing="0px" width="100%">
+<col style="width: 27.882%;">
+<col style="width: 72.118%;">
+<tr class="t1st">
+<td>
+<p>Tag</p>
+</td>
+<td>
+<p>Explanation</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Codes=&lt;Key Tag&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will show the Reject button on the originating task. This will allow the user to select the follow-up task from the selections provided. Separate multiple selections with a comma (,).</p>
+<p>Example:</p>
+<p>[On_Reject.Codes=DOCSUB,DOCREV]</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Caption=&lt;Text&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This determines the button caption. The default is ‘Reject’, but may be changed, for example, to ‘Decline’.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Default=&lt;Key Tag&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This sets the default task when there are multiple choices set for [On_Reject.Codes=&lt;Key Tag&gt;] The default is none.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Assign=&lt;user&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This will assign the follow-up task to the user defined. The default selection is blank, but you may use any of the codes below to pick up the user that you want. Refer to the explanation provided in [On_Complete.Assign=&lt;user&gt;], above.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>On_Reject.Due=&lt;DueDate&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This sets the due date of the follow-up task and can be:</p>
+<ul class="hcp4">
+<li>
+<p>Dependent on the originating task - Enter a positive number. This will set the due date as n number of days from the date you rejected &#160;the originating task.<br>
+<br>
+For example:<br>
+<br>
+[On_Reject.Due=3] means the due date for the follow-up task is three days from the day you clicked Reject for the originating task.</p>
+</li>
+<li>
+<p>A specific date - enter the date in this format #YYYY-MM-DD# where:</p>
+</li>
+<li>
+<p class="hcp5">YYYY refers to the year in 4-digit format.</p>
+</li>
+<li>
+<p class="hcp5">MM refers to the month in 2-digit format e.g. 01 for January, 02 for February.</p>
+</li>
+<li>
+<p class="hcp5">DD refers to the day in 2-digit format.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Complete=Y]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>Valid values are Y or N (Yes or No). If Yes, it will ‘Complete’ the related (originating) task. If you use N, then nothing will be updated to the originating task, and it will remain in the Assigned Tasks until you complete it.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td class="t1Col" style="vertical-align: top;">
+<p>[On_Reject.Descr=&lt;Text&gt;]</p>
+</td>
+<td class="t2Col" style="vertical-align: top;">
+<p>This customises the text for the default description of the follow-up task. You may use (-Copy-) to include the description of the originating task. For example: [On_Reject.Descr=Declined (-Copy-)]</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp4">
+<li>
+<p><a href="Tasks_-_Configuration.htm">Tasks</a></p>
+</li>
+<li>
+<p><a href="../Shared/Tasks_for_Billing_Process.htm">Tasks for Billing Process</a></p>
+</li>
+<li>
+<p><a href="../Document_Manager/Delivery_Manager.htm">Delivery Manager</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Tasks - Tags</p>
+<p class="hcp6">&#160;</p>
+<p class="hcp6">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp6">Version: 8.0.2022.09.20</p>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>DocuSign Check In Signed Docs (JWT Grant)</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-list:l0 level1 lfo1; }
+p.hcp2 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>DocuSign - Check In Signed Docs (JWT Grant)</h1>
+<p>The task scheduler job 'DocuSign - Check In Sign Docs (JWT Grant) [ESCL]' 
+ downloads and checks in signed documents from DocuSign into Viewpoint, 
+ hence users do not need to manually check in the documents .</p>
+<p>&#160;</p>
+<h3>Setting up Task Scheduler</h3>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'DocuSign - 
+	 Check In Signed Docs [ESCL]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In the 'Criteria' tab, enter the <span lang="EN-GB" xml:lang="EN-GB" class="hcp1">&#160;<a class="dropspot" href="javascript:TextPopup(this)" id="a1">API 
+	 Username and RSA Private Key</a> of the </span>DocuSign 
+	 <span lang="EN-GB" xml:lang="EN-GB" class="hcp1">account.</span></p>
+	<div class="droptext" id="POPUP585720092" style="display: none;">
+		<p class="MsoListParagraphCxSpMiddle"><span lang="EN-GB" xml:lang="EN-GB">API 
+		 Username – This value can be retrieved from the DocuSign account 
+		 user profile. Select the API Username of the user for this job.</span></p>
+		<p class="MsoListParagraphCxSpLast"><span lang="EN-GB" xml:lang="EN-GB">RSA 
+		 Private Key – This value is generated from the DocuSign account 
+		 using the generate RSA function.</span></p>
+ </div></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>If an e-mail notification is required, tick Enable E-mail Notification 
+	 and specify details for the e-mail.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul style="list-style: disc;">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="../Document_Manager/DocuSign_Integration.htm">DocuSign 
+	 Integration</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; DocuSign Check In Signed Docs (JWT Grant)</p>
+ <p class="hcp2">&#160;</p>
+ <p class="hcp2">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp2">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP585720092');
+//]]></script>
+</body>
+</html>

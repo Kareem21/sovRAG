@@ -1,0 +1,1026 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Change Codes: Link Items - Tags</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { color:#300063; }
+ul.hcp2 { list-style:disc; }
+p.hcp3 { margin-left:36px; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+td.hcp5 { vertical-align:top; }
+span.hcp6 { mso-bidi-font-size:10.0pt;
+line-height:115%;
+mso-fareast-font-family:Times New Roman;
+mso-bidi-font-family:Times New Roman;
+color:#222222;
+background:#ffffff; }
+span.hcp7 { line-height:normal;
+background-color:#ffffff; }
+span.hcp8 { mso-bidi-font-size:10.0pt;
+mso-fareast-font-family:Times New Roman;
+mso-bidi-font-family:Segoe UI;
+color:#000000;
+mso-ansi-language:EN-US; }
+p.hcp9 { text-align:center;
+font-weight:bold; }
+p.hcp10 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Change Codes: Link Item - Tags</h1>
+<p>When an item is linked to a Change Code, tags can be added to the Tag 
+ Values field to specify additional condition for the linked item and/or 
+ additional details for the linked item. The tags will depend on the type 
+ of linked item.</p>
+<p>&#160;</p>
+<h2>Multiple Linked Item Types</h2>
+<table class="Table1" cellspacing="0px" width="100%">
+	<col style="width: 29.143%;">
+	<col style="width: 33.139%;">
+	<col style="width: 37.718%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Tag</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+		<td><p class="hcp1">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/SQL.&lt;QueryName&gt;=&lt;Query&gt;/]</p>
+		<p>&#160;</p>
+		<p>where</p>
+		<ul class="hcp2">
+			<li><p>&lt;QueryName&gt; is the name of the SQL</p></li>
+			<li><p>&lt;Query&gt; is the SELECT query that will be retrieving 
+			 the required information</p></li>
+		</ul>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This can be used 
+		 for:</p>
+		<ul class="hcp2">
+			<li><p>specifying the condition for the change parameter.</p></li>
+			<li><p>retrieving information that will be used as values for 
+			 other tags. This applies to the following link item types:</p></li>
+			<li><p class="hcp3">E-mail Notifications</p></li>
+			<li><p class="hcp3">Notifications</p></li>
+			<li><p class="hcp3">Tasks</p></li>
+		</ul></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/SQL.SQLOFC=SELECT 
+		 EntCode FROM Officers WHERE AddrCode='(-AddrCode-)' AND Left(OfficerType,1) 
+		 IN ('D', 'S') AND SeqNr=(-SeqNr-)/]</p>
+		<p>The above will refer to the specific change relating to officer 
+		 types starting with 'D' or 'S'. This means that the linked item 
+		 will be triggered once for each instance of the change.</p>
+		<p>&#160;</p>
+		<p>[/SQL.EntityAdmin=SELECT AdminCode AS FileAdm FROM Entity WHERE 
+		 EntCode='(-EntCode-)'/]</p>
+		<p>The above looks for the AdminCode field of the Entity File of 
+		 the change. This information can be used as value for other tag 
+		 such as tag to define assignee for a task.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Checklists</h2>
+<p>Available tags for Checklists linked item type are used to specify details 
+ of the checklist and action for the checklist.</p>
+<table class="Table1" cellspacing="0px">
+	<col style="width: 29.043%;">
+	<col style="width: 33.481%;">
+	<col style="width: 37.475%;">
+	<tr class="t1st">
+		<td><p class="hcp1">Tag</p></td>
+		<td><p class="hcp1">Explanation</p></td>
+		<td><p class="hcp1">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Category=&lt;CategoryCode&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;CategoryCode&gt; refers to the code of the checklist 
+		 category. You can obtain this from the File Note Types [MEMT] 
+		 lookup table.</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the category of the checklist using the code.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Category=20]</p>
+		<p>The tag above will set the Category as 'Work &amp; Outstanding'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Index=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; can be plain text or field codes related 
+		 to the change.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 information for the Index field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Index=Check 
+		 information entered]</p>
+		<p>The above will result in the value for the Index field as 'Check 
+		 information entered'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.DateEntered=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; can be an actual date or a number.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 information for the Date Entered field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.DateEntered=0]</p>
+		<p>The tag above will set today's date as Date Entered.</p>
+		<p>&#160;</p>
+		<p>[WS.DateEntered=15/06]</p>
+		<p>The tag above will set the Date Entered as 15th of June for 
+		 the current year.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.RequireDone=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; can be:</p>
+		<ul class="hcp2">
+			<li><p>1 for Yes</p></li>
+			<li><p>0 for No</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 whether or not the option 'Confirmation Required' is ticked.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.RequireDone=1]</p>
+		<p>The above will tick the Confirmation Required checkbox.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.DateDue=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; can be an actual date or a number.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 information for the Date Due field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.DateEntered=3]</p>
+		<p>The tag above will set the Date Due as three days from today.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Recurring=&lt;Code&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Code&gt; refers to the code of the frequency which 
+		 are:</p>
+		<ul class="hcp2">
+			<li><p>0 for 10 years</p></li>
+			<li><p>2 for 2 years</p></li>
+			<li><p>3 for 3 years</p></li>
+			<li><p>4 for 4 years</p></li>
+			<li><p>5 for 5 years</p></li>
+			<li><p>Y for Annually</p></li>
+			<li><p>F for Fortnightly</p></li>
+			<li><p>M for Monthly</p></li>
+			<li><p>- for Not Applicable</p></li>
+			<li><p>= for Others - see due date/note</p></li>
+			<li><p>Q for Quarterly</p></li>
+			<li><p>X for Semi-Annually</p></li>
+			<li><p>B for Two Months</p></li>
+			<li><p>W for Weekly</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the recurring frequency.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Recurring=Y]</p>
+		<p>The tag above sets the recurring frequency as Annually.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.AdminAssign=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; is the user code.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 information for the Administrator field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.AdminAssign=sm]</p>
+		<p>The tag above sets the Administrator to the user 'sm'.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Note=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where &lt;Value&gt; can be plain text or field codes related 
+		 to the change.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 information for the Note field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WS.Note=Appointment 
+		 of (+AddrCode+)]</p>
+		<p>The tag above will retrieve the 'AddrCode' to be included in 
+		 the Note field.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[WK.&lt;Key&gt;=&lt;Value&gt;]</p>
+		<p>&#160;</p>
+		<p>where</p>
+		<ul class="hcp2">
+			<li><p>&lt;Key&gt; is the key of the checklist item</p></li>
+			<li><p>&lt;Value&gt; is the default value for the checklist 
+			 item</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 default values for items in the checklist. Ensure that the checklist 
+		 items are assigned unique keys.</p>
+		<p><span class="hcp4">Note</span>: 
+		 This can be used if the field type is Text, Date, Number, Amount, 
+		 Yes/No, List with Edit, List without Edit, Lookup Value, User 
+		 Table Value, System User or Administrator Group</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[WK.CI1=Y]</p>
+		<p>The tag above sets the default value 'Yes' for checklist item 
+		 with the Key 'CI1'.</p></td>
+	</tr>
+	
+		
+		
+	
+</table>
+<p>&#160;</p>
+<h2>E-mail Notifications</h2>
+<p>Tags are to be used to define details of the e-mail.</p>
+<table class="Table1" cellspacing="0px">
+	<col style="width: 29.339%;">
+	<col style="width: 33.63%;">
+	<col style="width: 37.031%;">
+	<tr class="t1st">
+		<td class="hcp5"><p class="hcp1">Tag</p></td>
+		<td class="hcp5"><p class="hcp1">Explanation</p></td>
+		<td class="hcp5"><p class="hcp1">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_SUBJECT=&lt;Subject&gt;/]</p>
+		<p>where &lt;Subject&gt; can contain plain text and field codes.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the e-mail subject.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_SUBJECT=New 
+		 Master File created/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_TO=&lt;Recipient&gt;/]</p>
+		<p>where &lt;Recipient&gt; can be:</p>
+		<ul class="hcp2">
+			<li><p>a specific e-mail address</p></li>
+			<li><p>field codes to retrieve the e-mail address</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to define 
+		 the recipient in the To field. If the information is to be retrieved 
+		 using an SQL, ensure that the [/SQL.&lt;QueryName&gt;/] tag is 
+		 also defined.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_TO=(+SQL.SQLTO.ADMEM+)/]</p>
+		<p>The above gets the recipient from the 'SQLTO' query.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_CC=&lt;Recipient&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Similar to the 
+		 above except that this is for the CC field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_CC=(+SQL.SQLCC.MGREM+)/]</p>
+		<p>The above gets the recipient from the 'SQLCC' query.</p>
+		<p>You can have multiple email address by using semicolon (;)</p>
+		<p>[/MAIL_CC=sm@manford.com;anne@manford.com/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_BCC=&lt;Recipient&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>Similar to the 
+		 above except that this is for the BCC field.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_BCC=sm@manford.com/]</p>
+		<p>The above sets the recipient for BCC as 'sm@manford.com'.</p>
+		<p>You can have multiple email address by using semicolon (;)</p>
+		<p>[/MAIL_BCC=sm@manford.com;anne@manford.com/]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_REPLYTO=&lt;E-mail&gt;/]</p>
+		<p>where &lt;E-mail&gt; can be:</p>
+		<ul class="hcp2">
+			<li><p>a specific e-mail address</p></li>
+			<li><p>field codes to retrieve the e-mail address</p></li>
+		</ul></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the e-mail address for replies. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_REPLYTO=(+MailID+)/]</p>
+		<p>The above retrieved the e-mail address of the user who performed 
+		 the change.</p>
+		<p>You can have multiple email address by using semicolon (;)</p>
+		<p>[/MAIL_REPLYTO=sm@manford.com;anne@manford.com/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_BODY=&lt;E-mailBody&gt;/]</p>
+		<p>where &lt;E-mailBody&gt; can contain plain text, field codes 
+		 and HTML formatting tags.</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to define 
+		 the e-mail content.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MAIL_BODY=Dear 
+		 Sir,&lt;br/&gt; A new Master File has been created./]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p style="mso-bidi-font-size: 10.0pt; 
+															 color: #222222; 
+															 background-color: #ffffff;"><span 
+		 lang="EN-GB" xml:lang="EN-GB" style="mso-fareast-font-family: 'Times New Roman'; 
+		 mso-bidi-font-family: 'Times New Roman'; background: #ffffff;">(+CC.&lt;FIELDNAME&gt;+)</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p><span lang="EN-GB" 
+		 xml:lang="EN-GB">To retrieve relevant values from relevant field 
+		 in the event string.</span></p>
+		<p><span lang="EN-GB" xml:lang="EN-GB">Without stating the new 
+		 or old value, the new value will be retrieved by default.</span></p>
+		<p>&#160;</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="Tablecontent"><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">(+CC.AddrLine+)</span></p>
+		<p class="Tablecontent"><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">(+CC.Adline\*O+)</span></p>
+		<p class="Tablecontent"><span lang="EN-GB" xml:lang="EN-GB" class="hcp6">(+CC.Adline\*N+)</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">\*O = 
+		 Old value before change.</span></p>
+		<p class="MsoNormal" style="margin: 0in; line-height: normal; background-color: #ffffff;"><span 
+		 lang="EN-GB" xml:lang="EN-GB">\*N = New value after change.</span></p>
+		<p class="MsoNormal">&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin: 0in; 
+															 line-height: normal; 
+															 background-color: #ffffff;"><span class="hcp7"><span class="hcp8">(+CC.USERCODE+)</span></span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to retrieve 
+		 user code for logged in use.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin: 0in; 
+															 line-height: normal; 
+															 background-color: #ffffff;"><span class="hcp7"><span class="hcp8">Trimmed 
+		 Username: (+CC.USERCODE\#US*SUBSTR=1:5+)</span></span></p>
+		<p class="MsoNormal" style="margin: 0in; line-height: normal; background-color: #ffffff;">&#160;</p>
+		<p class="MsoNormal" style="margin: 0in; line-height: normal; background-color: #ffffff;"><span 
+		 style="mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman'; 
+		 mso-bidi-font-family: 'Segoe UI'; mso-ansi-language: EN-US;">E-mail 
+		 Notifications supports <a href="Format_Options.htm">Format Options</a>.</span></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin: 0in; 
+															 line-height: normal; 
+															 background-color: #ffffff;"><span class="hcp8">(+CC.USERNAME+)</span></p>
+		<p class="MsoNormal">&#160;</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to retrieve 
+		 username for logged in use.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p style="mso-bidi-font-size: 10.0pt;"><span 
+		 style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Segoe UI'; 
+		 mso-ansi-language: EN-US;">Username: (+CC.USERNAME+)</span></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p class="MsoNormal" 
+															 style="margin: 0in; 
+															 line-height: normal; 
+															 background-color: #ffffff;"><span class="hcp8">(+CC.USER+)</span></p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>To retrieve user 
+		 and administrator details. </p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>Email: (+CC.USER.MailD+)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>API Integration</h2>
+<table class="Table1" cellspacing="0px">
+	<col style="width: 29.339%;">
+	<col style="width: 33.63%;">
+	<col style="width: 37.031%;">
+	<tr class="t1st">
+		<td class="hcp5"><p>Tag</p></td>
+		<td class="hcp5"><p>Explanation</p></td>
+		<td class="hcp5"><p>Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/MESSAGE=&lt;Message&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the content to send to an external REST API in JSON format.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/MESSAGE=</p>
+		<p>{</p>
+		<p>&#160;&#160;&quot;X_TRANSACTION_ID&quot;: &quot;(+CC.EventNr+)&quot;,</p>
+		<p>&#160;&#160;&quot;Payload&quot;: {</p>
+		<p>&#160;&#160;&#160;&#160;&quot;eventChangeType&quot;: &quot;UPDATE&quot;,</p>
+		<p>&#160;&#160;&#160;&#160;&quot;eventTypeName&quot;: &quot;MATTER_CHANGED&quot;,</p>
+		<p>&#160;&#160;&#160;&#160;&quot;identifiers&quot;: [</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;identifierName&quot;: 
+		 &quot;Matters.RefCode&quot;,</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;identifierValue&quot;: 
+		 &quot;(+CC.RefCode+)&quot;</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;},</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;identifierName&quot;: 
+		 &quot;Matters.MatterCode&quot;,</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;identifierValue&quot;: 
+		 &quot;(+CC.MatterCode+)&quot;</p>
+		<p>&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+		<p>&#160;&#160;&#160;&#160;]</p>
+		<p>&#160;&#160;}</p>
+		<p>}</p>
+		<p>/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>[/SERVICE=&lt;Service 
+		 name&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the Service Name that indicates which Task Scheduler and Notification 
+		 job to pick up the Change Link.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/SERVICE=PrimaryApiService/]</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>Excel Statements</h2>
+<p>For Excel Statements, tags are available to define:</p>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a511">Selection 
+	 criteria</a> - This is required.</p>
+	<div class="droptext" id="POPUP33508247311" style="display: none;">
+		<h6 class="Heading8">[&lt;Field&gt;=&lt;Value&gt;]</h6>
+		<p>This allows you to define the selection criteria to trigger 
+		 the Excel Statement. Note that the fields available depend on 
+		 the Excel template and the value can be a defined value or a field 
+		 code.</p>
+		<p>Example of defined value:</p>
+		<p>[EDT=25-Feb-14]</p>
+		<p>[SLNO=0-9978635]</p>
+		<p>&#160;</p>
+		<p>Example of field code:</p>
+		<p>[EC=(+CC.RefCode+)]</p>
+		<p>- this means the value is to be retrieved by the RefCode field</p>
+		<p>&#160;</p>
+		<p>[PB=(+SQL.Filings.PeriodFrom+)</p>
+		<p>- this means the value is the PeriodFrom field that is to be 
+		 retrieved by an SQL query 'Filings'.</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1011">Generation 
+	 option</a> - If no option is defined, it will revert 
+	 to default option.</p>
+	<div class="droptext" id="POPUP33509634611" style="display: none;">
+		<h6 class="Heading8">[$GENERATE=&lt;Option&gt;]</h6>
+		<p>The option can be Q - to send to Document Queue (default), P 
+		 - to print, E - to generate and open the document for editing.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h2>Notes</h2>
+<p>For Notes, the available tag allows you to define the <a class="dropspot" href="javascript:TextPopup(this)" id="a112">type</a> 
+ of note for the change</p>
+ <div class="droptext" id="POPUP6247626331" style="display: none;">
+	<h6 class="Heading8">[Type=&lt;Value&gt;]</h6>
+	<p>where &lt;Value&gt; can be:</p>
+	<ul class="hcp2">
+		<li><p>I - This have the Info icon to indicate that the Note is 
+		 informational in nature.</p></li>
+		<li><p>W - This will have the exclamation mark icon to indicate 
+		 that it is a warning message.</p></li>
+		<li><p>E - This will have a red square icon and red text to indicate 
+		 that it is an error message.</p></li>
+	</ul>
+	<p><span class="hcp4">Note</span>: 
+	 If the Tag Values field is left blank, by default, the type will be 
+	 informational.</p>
+ </div>
+<p>&#160;</p>
+<h2>Notifications</h2>
+<p>For Notifications, tags are required to define properties of the notification 
+ item such as the category, priority, etc.</p>
+<table class="Table1" cellspacing="0px" width="94.391%">
+	<col style="width: 22.272%;">
+	<col style="width: 77.728%;">
+	<tr class="t1st" style="height: 26px;">
+		<td><p class="hcp1">Tag</p></td>
+		<td><p class="hcp1">Explanation and Example</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 214px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_CAT=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This defines 
+		 the category for the Notification item and values can be:</p>
+		<ul class="hcp2">
+			<li><p>MF – Master File</p></li>
+			<li><p>WF – Workflow</p></li>
+			<li><p>DC – Document Management</p></li>
+		</ul>
+		<p>This tag is mandatory.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/NOTIFY_CAT=MF/]</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 57px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_SYSTEMFLAGS=1/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This indicates 
+		 that the notification is for Viewpoint Connect and is mandatory.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 120px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/PRIORITY=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to set 
+		 the notification priority and is mandatory. The values can be 
+		 0 or 1. Priority 1 will include an exclamation mark icon for the 
+		 notification.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/PRIORITY=1/]</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 111px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_HEADER=&lt;Header&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the header or subject for the notification item and is mandatory. 
+		 It can be just text or include Field Codes related to the change.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/NOTIFY_HEADER=Master File Detail Changed/]</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 109px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_MSG=&lt;Msg&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the content or message for the notification item and can be just 
+		 text or include Field Codes related to the change.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/NOTIFY_MSG=Contact Change for (+CC.RefCode\#AD-1-0+)/]</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 273px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_ADMINGP=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the Administrator Group for whom the notification will appear. 
+		 Only the default Administrator Group can be selected. You can 
+		 specify this by:</p>
+		<ul class="hcp2">
+			<li><p>Entering the code of the Administrator Group.</p></li>
+			<li><p>Using an SQL query to retrieve the Administrator Group 
+			 by defining the SQL and referring to the SQL.</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/NOTIFY_ADMINGP=GROUP1/]</p>
+		<p>means the notification item will appear for all users belonging 
+		 to the Administrator Group ‘GROUP1’.</p>
+		<p>&#160;</p>
+		<p>[/NOTIFY_ADMINGP=(+SQL.RefMaster.AdminGroup+)/] [/SQL.RefMaster=SELECT 
+		 AdminGroup FROM RefMaster WHERE RefCode=’(-EntCode-)’/]</p>
+		<p>means the notification item will appear for users whose default 
+		 Administrator Group is the same as the Administrator Group retrieved 
+		 by the ‘RefMaster’ SQL.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 This tag cannot be used with the [/NOTIFY_USER=&lt;Value&gt;/], 
+		 [/NOTIFY_USERGP=&lt;Value&gt;/], <span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_ACCESSGP=&lt;Value&gt;/], 
+		 [/NOTIFY_ADMINGPALL=&lt;Value&gt;/], </span>tags.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 273px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_ADMINGPALL=&lt;Value&gt;/] 
+		 </p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">This is to specify the Administrator 
+		 Group for whom the notification will appear. Unlike [/NOTIFY_ADMINGP=&lt;Value&gt;/], 
+		 this tag allows the selection of non-default Administrator Groups. 
+		 You can specify this by:</span></p>
+		<ul class="hcp2">
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Entering 
+			 the code of the Administrator Group(s).</span></p></li>
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Using 
+			 an SQL query to retrieve the Administrator Group by defining 
+			 the SQL and referring to the SQL.</span></p></li>
+		</ul>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Example:</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_ADMINGPALL=GROUP2,GROUP1/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for all users belonging to the 
+		 Administrator Groups 'GROUP2' and 'GROUP 1'.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_ADMINGPALL=(+SQL.VpAGroupUsers.AdminGroup+)/] 
+		 [/SQL.VpAGroupUsers=SELECT AdminGroup FROM VpAGroupUsers WHERE 
+		 GroupType = 1 AND UCode = '(-CC.AssignTo-)'/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for users whose Access Group 
+		 is the same as the Access Group retrieved by the ‘VpAGroupUsers’ 
+		 SQL.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" class="hcp4">Note</span><span 
+		 lang="EN-GB" xml:lang="EN-GB">: This tag cannot be used with the 
+		 [/NOTIFY_USER=&lt;Value&gt;/], [/NOTIFY_USERGP=&lt;Value&gt;/], 
+		 [/NOTIFY_ACCESSGP=&lt;Value&gt;/], [/NOTIFY_ADMINGP=&lt;Value&gt;/] 
+		 tags.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 273px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_USERGP=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">This is to specify the User Group 
+		 for whom the notification will appear. You can specify this by:</span></p>
+		<ul class="hcp2">
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Entering 
+			 the code of the User Group(s).</span></p></li>
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Using 
+			 an SQL query to retrieve the User Group by defining the SQL 
+			 and referring to the SQL.</span></p></li>
+		</ul>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Example:</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_USERGP=SYSMGR,admin/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for all users belonging to the 
+		 User Groups 'SYSMGR' and 'admin'.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_USERGP=(+SQL.VpUser.Ugroup+)/] 
+		 [/SQL.VpUser=SELECT Ugroup FROM VpUser WHERE UCode ='(-CC.AssignTo-)'/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for users whose User Group is 
+		 the same as the User Group retrieved by the ‘VpUser’ SQL.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" class="hcp4">Note</span><span 
+		 lang="EN-GB" xml:lang="EN-GB">: This tag cannot be used with the 
+		 [/NOTIFY_USER=&lt;Value&gt;/], [/NOTIFY_ACCESSGP=&lt;Value&gt;/], 
+		 [/NOTIFY_ADMINGPALL=&lt;Value&gt;/], [/NOTIFY_ADMINGP=&lt;Value&gt;/] 
+		 tags.</span></p></td>
+	</tr>
+	<tr class="t2Row" style="height: 273px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_ACCESSGP=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p class="MsoNormal"><span 
+		 lang="EN-GB" xml:lang="EN-GB">This is to specify the Access Group 
+		 for whom the notification will appear. You can specify this by:</span></p>
+		<ul class="hcp2">
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Entering 
+			 the code of the Access Group(s).</span></p></li>
+			<li><p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Using 
+			 an SQL query to retrieve the Access Group by defining the 
+			 SQL and referring to the SQL.</span></p></li>
+		</ul>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">Example:</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_ACCESSGP=COSEC,FINANCE/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for all users belonging to the 
+		 Access Groups 'COSEC' and 'FINANCE'.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">[/NOTIFY_ACCESSGP=(+SQL.VpAGroupUsers.AdminGroup+)/] 
+		 [/SQL.VpAGroupUsers=SELECT AdminGroup FROM VpAGroupUsers WHERE 
+		 GroupType = 2 AND UCode = '(-CC.AssignTo-)'/]</span></p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB">means 
+		 the notification item will appear for users whose Access Group 
+		 is the same as the Access Group retrieved by the ‘VpAGroupUsers’ 
+		 SQL.</span></p>
+		<p class="MsoNormal">&#160;</p>
+		<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB" class="hcp4">Note</span><span 
+		 lang="EN-GB" xml:lang="EN-GB">: This tag cannot be used with the 
+		 [/NOTIFY_USER=&lt;Value&gt;/], [/NOTIFY_USERGP=&lt;Value&gt;/], 
+		 [/NOTIFY_ADMINGPALL=&lt;Value&gt;/], [/NOTIFY_ADMINGP=&lt;Value&gt;/] 
+		 tags.</span></p></td>
+	</tr>
+	<tr class="t1Row" style="height: 248px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NOTIFY_USER=&lt;Value&gt;/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the user(s) for whom the notification will appear, and it can 
+		 be for:</p>
+		<ul class="hcp2">
+			<li><p>Specific user(s) by – Specify the user code or user 
+			 codes</p></li>
+			<li><p>User related to the Master File – Specify the relevant 
+			 Assign To Code:</p></li>
+			<li style="list-style: none; display: inline;"><ul class="hcp2">
+				<li><p>(-EN.AD-) for Administrator of the Entity File</p></li>
+				<li><p>(-EN.MG-) for Manager of the Entity File</p></li>
+				<li><p>(-EN.CT-) for Controller of the Entity File</p></li>
+				<li><p>(-BF.AD-) for Administrator of the Billing File</p></li>
+				<li><p>(-BF.MG-) for Manager of the Billing File</p></li>
+				<li><p>(-BF.CT-) for Controller of the Billing File</p></li>
+				<li><p>(-AF.AD-) for Administrator of the Account File</p></li>
+				<li><p>(-AF.MG-) for Manager of the Account File</p></li>
+				<li><p>(-AF.CT-) for Controller of the Account File</p></li>
+				<li><p>(-SF.AD-) for Administrator of the Supplier File</p></li>
+				<li><p>(-SF.MG-) for Manager of the Supplier File</p></li>
+				<li><p>(-SF.CT-) for Controller of the Supplier File</p></li>
+				<li><p>(-MF.AD-) for the Administrator of the Master File</p></li>
+				<li><p>(-MF.MG-) for the Manager of the Master File</p></li>
+				<li><p>(-MF.KO-) for the CDD Officer of the Master File 
+				 &#160;</p></li>
+			</ul></li>
+		</ul>
+		<p>For certain change codes, it is also possible to notify users 
+		 who are related to the change. This requires the change field 
+		 code that will retrieve the user. For instance, when a new workflow 
+		 is started and assigned to another user, to notify the assigned 
+		 user, the tag is [/NOTIFY_USER=(+CC.AdminCode+)/].</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/NOTIFY_USER=SM,ANNE/]</p>
+		<p>means the notification item is for the users ‘SM’ and ‘ANNE’.</p>
+		<p>&#160;</p>
+		<p>[/NOTIFY_USER=(-EN.MG-),(-BF.MG-)/]</p>
+		<p>means the notification item is for the manager of the Entity 
+		 File and the Billing File.</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 This tag cannot be used with the [/NOTIFY_ADMINGP=&lt;Value&gt;/] 
+		 tag.</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 142px;">
+		<td class="t1Col" style="vertical-align: top;"><p>[/NAVIGATION_KEY=&lt;NavigationID/]</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to set 
+		 the screen for the Go To button for the notification item. This 
+		 is so that when the notification item is selected, clicking Go 
+		 To button in the Ribbon will display the specified screen. This 
+		 tag is optional and if it is not included or no Navigation ID 
+		 is defined, then clicking Go to will open the File Maintenance 
+		 screen.</p>
+		<p>&#160;</p>
+		<p>Example:<br>
+		[/NAVIGATION_KEY=FSESTATC/]</p>
+		<p>&#160;</p>
+		<p><span class="hcp4">Note</span>: 
+		 The &lt;NavigationID&gt; can be retrieved from <span>Configuration 
+		 &gt; Settings &gt; Customise &gt; Windows Menu.</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Tasks</h2>
+<p>For Tasks, tags are available to define:</p>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1311">Task 
+	 details.</a></p>
+	<div class="droptext" id="POPUP33511430611" style="display: none;">
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 27.608%;">
+			<col style="width: 39.059%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td style="border-top: Solid 1px #000000; border-left: Solid 1px #000000;"><p class="hcp9">Tag</p></td>
+				<td style="border-top: Solid 1px #000000;"><p class="hcp9">Explanation</p></td>
+				<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000;"><p class="hcp9">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TaskType=&lt;TypeCode&gt;]</p>
+				<p>&#160;</p>
+				<p>where &lt;TypeCode&gt; refers to the Key Tag of the 
+				 Task.</p>
+				<p>&#160;</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the task to be triggered.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TaskType=APPROVE]</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 vertical-align: top;"><p>[AssignedTo=&lt;Value&gt;]</p>
+				<p>&#160;</p>
+				<p>where &lt;Value&gt; can be:</p>
+				<ul class="hcp2">
+					<li><p>specific user account</p></li>
+					<li><p>field code to refer to information retrieved 
+					 using [/SQL.&lt;QueryName&gt;=/] tag</p></li>
+				</ul></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the assignee for the task.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 vertical-align: top;"><p>[AssignedTo=SM]</p>
+				<p>The above sets the assignee to the user 'SM'.</p>
+				<p>&#160;</p>
+				<p>[AssignedTo=(+SQL.EntityAdmin.FileAdm+)]</p>
+				<p>The above sets the assignee to the 'FileAdm' field value 
+				 retrieved by the 'EntityAdmin' query.</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TskDescr=&lt;Value&gt;]</p>
+				<p>&#160;</p>
+				<p>where &lt;Value&gt; can be plain text or field codes 
+				 related to the change.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the task description. You can leave this 
+				 blank to have it default to the description of the change.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TskDescr=Review and approve 
+				 if in order]</p>
+				<p>&#160;</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TskNote=&lt;Value&gt;]</p>
+				<p>&#160;</p>
+				<p>where &lt;Value&gt; can be plain text or field codes 
+				 related to the change.</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Note field for the task. You can leave 
+				 this blank if no note is required.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 vertical-align: top;"><p>[TskNote=Inform administrator 
+				 if incorrect information]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="border-left: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[DateDue=&lt;Value&gt;]</p>
+				<p>&#160;</p>
+				<p>where &lt;Value&gt; can be an actual date or a number.</p></td>
+				<td class="t2Col" style="border-bottom: Solid 1px #000000; 
+					 vertical-align: top;"><p>This is to specify the Date 
+				 Due for the task.</p></td>
+				<td class="t1Col" style="border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[DateDue=2]</p>
+				<p>The above will set the Date Due as two days from today.</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1411">Action 
+	 for the task</a> - If no action is defined, it will 
+	 revert to default action.</p>
+	<div class="droptext" id="POPUP33509944011" style="display: none;">
+		<h6 class="Heading8">[$ACTION=&lt;Value&gt;]</h6>
+		<p>This is to specify if the task is to be seen in the Change Processing 
+		 screen or not. [Value] can be:</p>
+		<ul class="hcp2">
+			<li><p>P - this is the default action and will show the task 
+			 in the Change Processing screen. To create the task, click 
+			 the Browse button in the Effective Date/Action column and 
+			 if necessary, change the task details.</p></li>
+			<li><p>S - this will automatically create the task as a Master 
+			 File task as long as the task details are defined correctly. 
+			 If invalid details have been specified, the task will be seen 
+			 in the Change Processing screen. You need to click on the 
+			 Browse button to specify the correct information to create 
+			 the task.</p></li>
+			<li><p>T - this is similar to S. However, if there is invalid 
+			 details, this task will be aborted so it does not get created 
+			 or seen in the Change Processing screen.</p></li>
+		</ul>
+ </div></li>
+</ul>
+<p><span class="hcp4">Note</span>: You 
+ need to have Document Management component to use task. Task can only 
+ be created if the Change details contain a Master File code. </p>
+<p>&#160;</p>
+<h2>Standard Report</h2>
+<p>For Standard Reports, tag can be used to define the <a class="dropspot" href="javascript:TextPopup(this)" id="a121">selection 
+ criteria.</a></p>
+ <div class="droptext" id="POPUP3350939071" style="display: none;">
+	<h6 class="Heading8">[&lt;Field&gt;=&lt;Value&gt;]</h6>
+	<p>This allows you to define the selection criteria to trigger the 
+	 SSRS report.</p>
+ </div>
+<p>&#160;</p>
+<h2>Word Reports</h2>
+<p>When the linked item type is Word Reports, tags are available to define:</p>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a311">Selection 
+	 criteria</a> - This is required.</p>
+	<div class="droptext" id="POPUP33509661511" style="display: none;">
+		<h6 class="Heading8">[HD-SEL=&lt;Criterion&gt;]</h6>
+		<p>The &lt;Criterion&gt; can be any field returned by the header 
+		 statement for the report with a specific value.</p>
+		<p>For example:</p>
+		<p>[HD-SEL=RefCode='(+CC.RefCode+)']</p>
+		<p>[HD-SEL=RefCode='(+EntCode+)']</p>
+		<p>&#160;</p>
+		<p>For &#160;multiple selection criteria, the below tag is used:</p>
+		<h6 class="Heading8">[HD-SEL=&lt;Criterion&gt; AND &lt;Criterion&gt;]</h6>
+		<p>For example:</p>
+		<p>[HD-SEL=WflowNr='(+CC.WflowNr+)' AND WfPageNr='(+CC.WfPageNr+)']</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a411">Generation 
+	 option</a> - If no option is defined, it will revert 
+	 to default option.</p>
+	<div class="droptext" id="POPUP33510132511" style="display: none;">
+		<h6 class="Heading8">[$GENERATE=&lt;Option&gt;]</h6>
+		<p>The option can be Q - to send to Document Queue (default), P 
+		 - to print, E - to generate and open the document for editing.</p>
+ </div></li>
+</ul>
+<p>&#160;</p>
+<h2>Workflows</h2>
+<p>For Workflows, tags are available to define:</p>
+<ul class="hcp2">
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a161">Details 
+	 for the workflow header.</a></p>
+	<div class="droptext" id="POPUP3351097671" style="display: none;">
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td><p class="hcp9">Tag</p></td>
+				<td><p class="hcp9">Explanation</p></td>
+				<td><p class="hcp9">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.WflowDescr=&lt;Description&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Description for the workflow header.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.WflowDescr=]</p>
+				<p>The tag above will use the Workflow's description.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.AdminCode=&lt;Administrator&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Administrator assigned to the workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.AdminCode=sm]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.DateDeadLine=&lt;Days&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Date Due for the workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.DateDeadLine=7]</p>
+				<p>The tag above will set the Date Due as seven days from 
+				 today.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.WflowNote=&lt;Note&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Note for the workflow .If not required, 
+				 you can exclude this tag.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WH.WflowNote=Include 
+				 supporting documents]</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a171">Details 
+	 for the first workflow step.</a></p>
+	<div class="droptext" id="POPUP3350962541" style="display: none;">
+		<table class="Table1" cellspacing="0px">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<col style="width: 33.333%;">
+			<tr class="t1st">
+				<td><p class="hcp9">Tag</p></td>
+				<td><p class="hcp9">Explanation</p></td>
+				<td><p class="hcp9">Example</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.WfPageDescr=&lt;Description&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Description for the first step of the 
+				 workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.WfPageDescr=]</p>
+				<p>The tag above will set the description to the step's 
+				 description.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.AdminCode=&lt;Administrator&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Administrator for the first step of 
+				 the workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.AdminCode=anne]</p></td>
+			</tr>
+			<tr class="t2Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.DateStart=&lt;Days&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Date Start for the first step of the 
+				 workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.DateStart=0]</p>
+				<p>The tag above will set today as the Date Start.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.DateDeadLine=&lt;Days&gt;]</p></td>
+				<td class="t2Col" style="vertical-align: top;"><p>This 
+				 is to specify the Date Due for the first step of the workflow.</p></td>
+				<td class="t1Col" style="vertical-align: top;"><p>[WS.DateDeadLine=4]</p>
+				<p>&#160;</p></td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+ </div></li>
+	<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a181">Default 
+	 value for items in the first workflow step.</a></p>
+	<div class="droptext" id="POPUP3350894121" style="display: none;">
+		<p>This is done using the tag [WK.&lt;Key&gt;=&lt;Value&gt;] explained 
+		 in tag values for checklist.</p>
+		<p>&#160;</p>
+ </div></li>
+	
+</ul>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp2">
+	<li><p><a href="../Shared/Changes_Codes.htm">Change Codes</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; Change Codes: Link Items - Tags</p>
+ <p class="hcp10">&#160;</p>
+ <p class="hcp10">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp10">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a511','POPUP33508247311');
+	TextPopupInit('a1011','POPUP33509634611');
+	TextPopupInit('a112','POPUP6247626331');
+	TextPopupInit('a1311','POPUP33511430611');
+	TextPopupInit('a1411','POPUP33509944011');
+	TextPopupInit('a121','POPUP3350939071');
+	TextPopupInit('a311','POPUP33509661511');
+	TextPopupInit('a411','POPUP33510132511');
+	TextPopupInit('a161','POPUP3351097671');
+	TextPopupInit('a171','POPUP3350962541');
+	TextPopupInit('a181','POPUP3350894121');
+	TextPopupInit('a201','POPUP3350945081');
+//]]></script>
+</body>
+</html>

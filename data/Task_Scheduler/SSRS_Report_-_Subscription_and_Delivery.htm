@@ -1,0 +1,258 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>SSRS Report - Subscription and Delivery</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+p.hcp2 { font-weight:bold;
+color:Transparent; }
+td.hcp3 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000; }
+ul.hcp4 { list-style:disc; }
+p.hcp5 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>SSRS Report - Subscriptions and Delivery</h1>
+<p>This job type will generate an SSRS report and deliver it at a specific 
+ time as defined in the subscription. This is an alternative to running 
+ the SSRS report on demand. On-demand SSRS reporting requires that you 
+ actively select the report for generation each time you want to view the 
+ report. With this job type, setting up the subscriptions allow the generation 
+ to be scheduled and automate the delivery of the report.</p>
+<p><span class="hcp1">Note</span>: This 
+ job type requires at least Microsoft SQL Server 2012 Express LocalDB to 
+ be installed in the Application Server environment to run.</p>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'SSRS Report 
+	 - Subscription and Delivery [SSRS]'.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Tag Values, specify the requirements for the job using the 
+	 tags.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<table class="Table1" cellspacing="0px">
+	<col style="width: 15.257%;">
+	<col style="width: 51.409%;">
+	<col style="width: 33.333%;">
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="hcp2">Tag</p></td>
+		<td class="hcp3"><p class="hcp2">Explanation</p></td>
+		<td class="hcp3"><p class="hcp2">Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/TASK_ROUTINE=SSRS/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This defines the job type as SSRS 
+		 Report - Subscription and Delivery.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/SSRS_REPORTCODE=&lt;ReportCode&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to specify the SSRS report 
+		 to generate.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/SSRS_REPORTCODE=SCADCOMC/]</p>
+		<p>&#160;</p>
+		<p>will generate the SSRS report with the code 'SCADCOMC'.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/SSRS_PARAMETERLIST=&lt;ParameterCode&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to define the parameters 
+		 for the SSRS Report. For multiple parameter, separate each parameter 
+		 code with a comma.</p>
+		<p>Optional parameter is not required to define in the parameter 
+		 list unless it is used in the report.</p>
+		<p><span class="hcp1">Note</span>: 
+		 If a SSRS Report contains a hidden mandatory parameter, it is 
+		 mandatory to hardcode the values of the parameter into the tag 
+		 values, otherwise it would result in error when generating the 
+		 report via the Task Scheduler.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/SSRS_PARAMETERLIST=RefCode/]</p>
+		<p>OR</p>
+		<p>[/SSRS_PARAMETERLIST=RefCode,RevEntity/]</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/SSRS_PARAMETER.&lt;ParameterCode&gt;.OPERATOR=&lt;Operator&gt;/]</p>
+		<p>[/SSRS_PARAMETER.&lt;ParameterCode&gt;.VALUES=&lt;Value&gt;/]</p>
+		<p>OR</p>
+		<p>[/SSRS_PARAMETER.&lt;ParameterCode&gt;.OPERATOR=&lt;Operator&gt;/]</p>
+		<p>[/SSRS_PARAMETER.&lt;ParameterCode&gt;.VALUES=&lt;Value1&gt;|&lt;Value2&gt;/]</p>
+		<p>&#160;</p>
+		<p>&#160;</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to assign an operator and 
+		 value for a report parameter. For multiple values, separate with 
+		 a '|'.</p>
+		<p>Supported operators are:</p>
+		<ul class="hcp4">
+			<li><p>=</p></li>
+			<li><p>BETWEEN</p></li>
+			<li><p>LIKE</p></li>
+		</ul>
+		<p>If the optional parameter is not defined in the parameter list, 
+		 then it will not require to assign the Operator and Value.</p>
+		<p><span class="hcp1">Note</span>: 
+		 If a SSRS Report contains a hidden mandatory parameter, it is 
+		 mandatory to hardcode the values of the parameter into the tag 
+		 values, otherwise it would result in error when generating the 
+		 report via the Task Scheduler.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>The following are examples based 
+		 on data types:</p>
+		<p>&#160;</p>
+		<p>[/SSRS_ PARAMETER.RefCode.OPERATOR=LIKE/]</p>
+		<p>[/SSRS_PARAMETER.RefCode.VALUES=IN%/]</p>
+		<p>&#160;</p>
+		<p>Above RefCode mean to retrieve for Code start with 'IN'</p>
+		<p>&#160;</p>
+		<p>OR</p>
+		<p>[/SSRS_ PARAMETER.RefCode.OPERATOR==/]</p>
+		<p>[/SSRS_PARAMETER.RefCode.VALUES=INVEST|CASEY/]</p>
+		<p>&#160;</p>
+		<p>Above RefCode mean to retrieve for 'INVEST' and 'CASEY'</p>
+		<p>&#160;</p>
+		<p>For BIT data type. Example, True/False:</p>
+		<p>[/SSRS_PARAMETER.Approved.VALUES=0/]&#160;</p>
+		<p>OR&#160;</p>
+		<p>[/SSRS_PARAMETER.Approved.VALUES=False/]&#160;</p>
+		<p>&#160;</p>
+		<p>For currency data type. Example, $750.00:</p>
+		<p>[/SSRS_PARAMETER.InvoiceTotal.VALUES=750.00/]&#160;</p>
+		<p>OR&#160;</p>
+		<p>[/SSRS_PARAMETER.InvoiceTotal.VALUES=750/]</p>
+		<p>&#160;</p>
+		<p>For number (integer) data type. e.g. range of Draft Number from 
+		 11000 to 12000:</p>
+		<p>[/SSRS_PARAMETER.ProformaNr.OPERATOR=BETWEEN/]&#160;</p>
+		<p>[/SSRS_PARAMETER.ProformaNr.VALUES=11000|12000/]&#160;</p>
+		<p>&#160;</p>
+		<p>For text (varchar) data type:</p>
+		<p>[/SSRS_PARAMETER.RevEntity.VALUES=INVEST/]</p>
+		<p>&#160;</p>
+		<p>For date data type. e.g. 01-4-2018:</p>
+		<p>[/SSRS_PARAMETER.DateInvoice.VALUES=01-Apr-2018/]</p>
+		<p>&#160;</p>
+		<p>Date values must be in the following formats:</p>
+		<ul class="hcp4">
+			<li><p>d-MMM-yyyy</p></li>
+			<li><p>dd-MMM-yyyy</p></li>
+			<li><p>d-MMMM-yyyy</p></li>
+			<li><p>dd-MMMM-yyyy</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/SSRS_FORMAT=&lt;Format&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to define the output of the 
+		 report when sent to the intended recipient. Format can be:</p>
+		<ul class="hcp4">
+			<li><p>PDF (default)</p></li>
+			<li><p>Word</p></li>
+			<li><p>Excel</p></li>
+		</ul></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/SSRS_FORMAT=EXCEL/</p>
+		<p>&#160;</p>
+		<p>will send the report as an Excel file.]</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_TO.S=&lt;Recipient&gt;/]</p>
+		<p>OR</p>
+		<p>[/MAIL_TO.S=&lt;Recipient1&gt;;&lt;Recipient2&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to define the e-mail address 
+		 of the recipient of the report.</p>
+		<p>For multiple recipients, separate each e-mail address with a 
+		 semicolon.</p>
+		<p style="font-weight: bold; font-style: italic;">Note: <span style="font-weight: normal; 
+		 font-style: normal;">SQL cannot be used as retrieve e-mail address.</span></p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/MAIL_TO.S=anne.shannon@manford.com/]</p>
+		<p>OR</p>
+		<p>[/MAIL_TO.S=anne.shannon@manford.com;sally@manford.com/]</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_SUBJECT.S=&lt;Text&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to specify the subject of 
+		 the e-mail with the report.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/MAIL_SUBJECT.S=SSRS Report Subscriptions 
+		 and Delivery/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: top;"><p>[/MAIL_BODY.S=&lt;Message&gt;/]</p></td>
+		<td class="t2Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>This is to specify the message of 
+		 the e-mail with the report.</p></td>
+		<td class="t1Col" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: top;"><p>[/MAIL_BODY.S=Attached herewith is 
+		 the report for your reference./]</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p><span class="hcp1">Note</span>: If 
+ necessary to have an e-mail notification when the job fails, the Mail 
+ Tags can be used but replace 'S' with 'F'.</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp4">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p></li>
+</ul>
+<p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; SSRS Report - Subscription and Delivery</p>
+<p class="hcp5">&#160;</p>
+<p class="hcp5">(c) Viewpoint Software for 
+ Business Ltd</p>
+<p class="hcp5">Version: 8.0.2022.09.20</p>
+</body>
+</html>

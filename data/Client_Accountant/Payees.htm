@@ -1,0 +1,111 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+<meta name="MS-HAID" content="Payees">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Payees</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+span.hcp2 { font-weight:bold; }
+br.hcp3 { page-break-before:always; }
+p.hcp4 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Payees</h1>
+<p>Payees are created in each Account File to facilitate the preparation 
+ of bank payment batches and subsequently, of bank payment export files. 
+ The creation of a new payee must be approved before any bank payments 
+ can be made to them. This feature can also be used together with the Distributions 
+ feature in Viewpoint Entity Administration to handle payments to beneficiaries.</p>
+<p>This screen is part of the <a href="Bank_Payments.htm">Bank Payments</a> 
+ feature, which also encompasses the Payments and Export Batches functions.</p>
+<p class="FldExplain">&#160;</p>
+<p class="FldExplain">Payees list</p>
+<p>This shows all the payees that have been set up.</p>
+<p>&#160;</p>
+<p class="FldExplain">Command buttons</p>
+<p>Click the relevant command button to perform the necessary.</p>
+<ul class="hcp1">
+	<li><p><span class="hcp2">New</span> - Click this to 
+	 <a href="Payees_New.htm">create</a> a new payee.</p></li>
+	<li><p><span class="hcp2">Edit</span> - Click this to 
+	 edit the details of a payee. If an approved payee is edited, the payee 
+	 must be re-approved before subsequent payments can be made.</p></li>
+	<li><p><span class="hcp2">Delete</span> - Click this 
+	 to delete the selected payee.</p></li>
+	<li><p><span class="hcp2">Approval</span> - Click this 
+	 to <a class="dropspot" href="javascript:TextPopup(this)" id="a1">approve</a> 
+	 the payee. The approval process depends on how the approval cards 
+	 were set up.</p>
+	<div class="droptext" id="POPUP485998170" style="display: none;">
+		<p>This will open the <a href="Payees_-_Approval.htm">Approval</a> 
+		 screen allowing you to review the details and approve the payee 
+		 by clicking Approve.</p>
+ </div></li>
+	<li><p><span class="hcp2">Sub-ledger</span> - Click this 
+	 to create a new sub-ledger or edit an existing sub-ledger from the 
+	 Payees screen. When creating a new sub-ledger, the ‘Master File’ and 
+	 ‘Currency Code’ value will be defaulted from the Payees’ ‘Payee Master 
+	 File’ and ‘Payments CCY'. When creating a new record from the ‘Sub-Ledger’ 
+	 button, it will always be defaulted to the Creditor screen (File Maintenance 
+	 &gt; Accounting &gt; Journals &gt; Creditor). Otherwise, it will find 
+	 the existing record from both the Debtor and Creditor screens where 
+	 the field ‘Master File’ and ‘Currency Code’ matched with the Payees 
+	 field ‘Payee Master File’ and ‘Payments CCY’. Any updates to the sub-ledger 
+	 record from the Payees screen will be reflected in the Sub-ledger 
+	 in the Creditor/Debtor screen.<br class="hcp3">
+	<br class="hcp3">
+	<span style="font-weight: bold; font-style: italic;">Note</span>: If 
+	 you have authority of less than '6-Regular User' to the Creditor screen, 
+	 you will not be authorised to create/edit the sub-ledger when clicking 
+	 this button. Similarly, if you have authority of less than '6-Regular 
+	 User' to the Debtor screen, you will not be authorised to edit the 
+	 sub-ledger if the sub-ledger is in Debtor screen.</p></li>
+</ul>
+&#160; 
+<br>&#160; 
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Pending_Payments.htm">Payments &amp; Approvals</a></p></li>
+	<li><p><a href="Payments_Released.htm">Payments Released</a></p></li>
+	<li><p><a href="Payment_Types_&amp;_Export_Batches.htm">Payment Types 
+	 &amp; Export Batches</a></p></li>
+</ul>
+
+ <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs">You are here:<a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; <a href="../Shared/File_Maintenance_screen.htm">File Maintenance</a> &gt; <a href="Accounting.htm">Accounting</a> &gt; <a href="Reconcile_Account.htm">Processing</a> &gt; Payees</p>
+ <p class="hcp4">&#160;</p>
+ <p class="hcp4">(c) Viewpoint Software for 
+ Business Ltd</p>
+ <p class="hcp4">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP485998170');
+//]]></script>
+</body>
+</html>

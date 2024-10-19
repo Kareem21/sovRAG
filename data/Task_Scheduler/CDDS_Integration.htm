@@ -1,0 +1,932 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-UK">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>CDDS Integration</title>
+<link rel="StyleSheet" href="../Vp7style.css" type="text/css">
+<script type="text/javascript" language="javascript">var strHref = document.location.href;
+var bc1=0;
+var n1 = strHref.toLowerCase().indexOf("642b3b9347ca42c9b00b820c00c373fa=");
+if(n1 != -1)
+{
+bc1 = strHref.substring(n1+33);
+document.location.href = strHref.substring(0, n1);
+}
+</script>
+<style title="hcp" type="text/css">
+<!--
+ul.hcp1 { list-style:disc; }
+p.hcp2 { color:#300063; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-weight:bold; }
+span.hcp6 { font-weight:bold;
+text-decoration:underline; }
+p.hcp7 { font-size:8pt;
+padding:0 15px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>CDDS Integration</h1>
+<p>This job allows for Master File information from Viewpoint to be transferred 
+ to an external program - AMLspotter by Customer Due Diligence Solutions 
+ (CDDS) using Task Scheduler. Tags are used to specify the following:</p>
+<ul class="hcp1">
+	<li><p>CDDS service address.</p></li>
+	<li><p>Criteria to define the Master Files to include.</p></li>
+	<li><p>Mapping between Viewpoint and AMLspotter fields.</p></li>
+</ul>
+<p>&#160;</p>
+<h2>Setting up Task Scheduler</h2>
+<ol style="list-style: decimal;">
+	<li><p>Go to Configuration &gt; Business Parameters &gt; Task Scheduler 
+	 &gt; Agent Job Scheduler.</p></li>
+	<li><p>Click New and ensure that the Job Type is set to 'CDDS Integration 
+	 [CDDS]'.</p></li>
+	<li><p>Tick Advanced Setting.</p></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Tag Values, you can see the default tags configuration for 
+	 the job. Review the tags and update the following:</p>
+	<ul class="hcp1">
+		<li><p>the service address to the service address of your AMLspotter</p></li>
+		<li><p>the criteria that will be used to determine which Master 
+		 File information to be exported</p></li>
+		<li><p>the mapping of the fields</p></li>
+	</ul></li>
+	<li><p>Click Next &gt;.</p></li>
+	<li><p>In Schedule, enter the job frequency.</p></li>
+	<li><p>Click Done.</p></li>
+</ol>
+<p>&#160;</p>
+<h2>Glossary</h2>
+<p>When configuring the tags to specify the information to transfer, you 
+ must be able to map the fields from Viewpoint to AMLspotter.</p>
+<ul class="hcp1">
+	<li><p>Class - This refers to the type of information that can be transferred. 
+	 Each class has a prefix which must be included in the configuration 
+	 to specify information that will be transferred.<br>
+	</p>
+	<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+		<col style="width: 22.396%;">
+		<col style="width: 59.271%;">
+		<col style="width: 18.333%;">
+		<tr class="t1st">
+			<td><p class="hcp2">Class</p></td>
+			<td><p class="hcp2">Definition</p></td>
+			<td><p class="hcp2">Class Prefix</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col"><p>Person</p></td>
+			<td class="t2Col"><p>Individual Master File information</p></td>
+			<td class="t1Col"><p>IND</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col"><p>Company</p></td>
+			<td class="t2Col"><p>Company File information</p></td>
+			<td class="t1Col"><p>ENT</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col"><p>Address</p></td>
+			<td class="t2Col"><p>Address details e.g. Mailing address</p></td>
+			<td class="t1Col"><p>ADDR</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td class="t1Col"><p>Communication</p></td>
+			<td class="t2Col"><p>Contact details e.g. telephone number, 
+			 e-mail address</p></td>
+			<td class="t1Col"><p>CON</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td class="t1Col"><p>Identification</p></td>
+			<td class="t2Col"><p>Identification details for Individual 
+			 Master Files e.g. ID card, passport information</p></td>
+			<td class="t1Col"><p>IDC</p></td>
+		</tr>
+	</table></li>
+	<li><p>Class property - This is a field in AMLspotter program. Each 
+	 class has its own properties:</p></li>
+	<li style="list-style: none; display: inline;"><ul class="hcp1">
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Person</a></p>
+		<div class="droptext" id="POPUP447464259" style="display: none;">
+			<table class="Table1" cellspacing="0px">
+				<col style="width: 25%;">
+				<col style="width: 15.341%;">
+				<col style="width: 34.292%;">
+				<col style="width: 25%;">
+				<tr class="t1st">
+					<td><p><span class="hcp3">Property Name</span></p></td>
+					<td><p><span class="hcp3">Data type</span></p></td>
+					<td><p><span class="hcp3">Explanation</span></p></td>
+					<td><p><span class="hcp3">Map to Viewpoint 
+					 field</span></p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>ActivitePrincipale</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Business activity</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Compliance</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>The windows ID of the Compliance 
+					 manager</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>CycleVie</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Life cycle (AC=Actif, RT = Relationship 
+					 teminated, PR = Prospect)</p></td>
+					<td class="t2Col"><p>RefMaster.Status</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Depenses</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>Estimated annual expenses</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>DteClotureRelation</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>RefStatus.DateEffective</p>
+					<p>&#160;</p>
+					<p><span class="hcp4">Note</span>: 
+					 The last DateEffective where Master File status is 
+					 changed to 'Closed/Inactive' - NewStatus=8.</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>DteEntreeRelation</p></td>
+					<td class="t2Col"><p>Date</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>RefStatus.DateEffective</p>
+					<p>&#160;</p>
+					<p><span class="hcp4">Note</span>: 
+					 The last DateEffective when the Master File was first 
+					 set up.</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>DteNaissance</p></td>
+					<td class="t2Col"><p>Date</p></td>
+					<td class="t1Col"><p>BirthDate</p></td>
+					<td class="t2Col"><p>Compliance.BirthDate</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>EtatCivil</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Marital status (SI=Single, MA 
+					 = Married, DI=Divorced, NA=Not reported)</p></td>
+					<td class="t2Col"><p>Compliance.MaritalStatus</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Fortune</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Fortune</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>IsNew</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>Is new record</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>KycBackground</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>KYC background information/reason 
+					 of relationship</p></td>
+					<td class="t2Col"><p>RefMaster.KYC_BackGround</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>LieuNaissance</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Town of birth</p></td>
+					<td class="t2Col"><p>Compliance.PlaceBirth</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Nationalite</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Nationality (country ISO code)</p></td>
+					<td class="t2Col"><p>Compliance.NationalityOriginal</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Nationalite2</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Second nationality (country ISO 
+					 code)</p></td>
+					<td class="t2Col"><p>Compliance.Nationality</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>News</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoInterne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Unique person identification number</p></td>
+					<td class="t2Col"><p>RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NoOrigineFortune</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoPersonne</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Nom</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Surname</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NomJeuneFille</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Maiden name</p></td>
+					<td class="t2Col"><p>Compliance.FormerGivenNames</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NumeroCycleVie</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>Is person still active (1 = Active, 
+					 0 = Inactive)</p></td>
+					<td class="t2Col"><p>RefMaster.Status</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NumeroEtatCivil</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>OrigineFortune</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>PayNaissance</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Country of birth (country ISO 
+					 code)</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>PrctArt</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>PrctImmobilier</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>PrctInvestissement</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Prenom</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>Compliance.GivenNames</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Residence</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Country of residence (country 
+					 ISO code)</p></td>
+					<td class="t2Col"><p>RefMaster.KYC_Country1</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Respondale</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Revenus</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>Estimated annual income</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>Sexe</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>Compliance.Gender</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Company</a></p>
+		<div class="droptext" id="POPUP438482822" style="display: none;">
+			<table class="Table1" cellspacing="0px">
+				<col style="width: 25%;">
+				<col style="width: 14.213%;">
+				<col style="width: 28.765%;">
+				<col style="width: 25%;">
+				<tr class="t1st" style="height: 27px;">
+					<td><p><span class="hcp3">Property Name</span></p></td>
+					<td><p><span class="hcp3">Data type</span></p></td>
+					<td><p><span class="hcp3">Explanation</span></p></td>
+					<td><p><span class="hcp3">Map to Viewpoint 
+					 field</span></p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>Activite</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Commercial activity</p></td>
+					<td class="t2Col"><p>Entity.UserText1</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 42px;">
+					<td class="t1Col"><p>AdresseSiege</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Registered office of a company</p></td>
+					<td class="t2Col"><p>RefAddress.AdLine</p>
+					<p>for AddrType = 'SR'</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>CapitalSocial</p></td>
+					<td class="t2Col"><p>Double</p></td>
+					<td class="t1Col"><p>Company Capital</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>Compliance</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>CycleVie</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Life Cycle</p></td>
+					<td class="t2Col"><p>Entity.Status</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 42px;">
+					<td class="t1Col"><p>DenominationSociale</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Registered company name</p></td>
+					<td class="t2Col"><p>RefMaster.Name</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>Devise</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 57px;">
+					<td class="t1Col"><p>DteClotureRelation</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Date end of relationship</p></td>
+					<td class="t2Col"><p>RefStatus.DateEffective when the 
+					 entity is marked for inactive</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 42px;">
+					<td class="t1Col"><p>DteConstitution</p></td>
+					<td class="t2Col"><p>Date</p></td>
+					<td class="t1Col"><p>Date of incorporation</p></td>
+					<td class="t2Col"><p>Entity.IncorpDate</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 42px;">
+					<td class="t1Col"><p>DteEntreeRelation</p></td>
+					<td class="t2Col"><p>Date</p></td>
+					<td class="t1Col"><p>Date of relationship setup</p></td>
+					<td class="t2Col"><p>RefStatus.DateEffective when the 
+					 entity is first set up</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>FormJuridique</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Company legal form</p></td>
+					<td class="t2Col"><p>Entity.EntType</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>IsNew</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 42px;">
+					<td class="t1Col"><p>KycBackground</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>KYC background information/remarks</p></td>
+					<td class="t2Col"><p>RefMaster.KYC_BackGround</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 57px;">
+					<td class="t1Col"><p>Nationalite</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Nationality of company (country 
+					 ISO code)</p></td>
+					<td class="t2Col"><p>Entity.IncorpPlace</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 92px;">
+					<td class="t1Col"><p>News</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>Flag indicating if hte automatic 
+					 news catcher should look for news on the company</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>NoInterne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Unique company identification 
+					 number</p></td>
+					<td class="t2Col"><p>RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>NoSociete</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>Internal number used by RiskAssessment</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>NumeroCycleVie</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>NumeroTypeSiege</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>NumeroTypeSociete</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>RegistreCommerce</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>Responsale</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>SocieteCote</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row" style="height: 27px;">
+					<td class="t1Col"><p>TypeSiege</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row" style="height: 27px;">
+					<td class="t1Col"><p>TypeSociete</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>Entity.UserCombo2</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Address</a></p>
+		<div class="droptext" id="POPUP439164078" style="display: none;">
+			<table class="Table1" cellspacing="0px">
+				<col style="width: 25%;">
+				<col style="width: 15.874%;">
+				<col style="width: 33.192%;">
+				<col style="width: 25%;">
+				<tr class="t1st">
+					<td><p class="hcp5">Property Name</p></td>
+					<td><p class="hcp5">Data type</p></td>
+					<td><p class="hcp5">Explanation</p></td>
+					<td><p class="hcp5">Map to Viewpoint 
+					 field</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Addresse</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Address</p></td>
+					<td class="t2Col"><p>Addresses.AdLine</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoAddresse</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>Handled by Web service</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NoInterne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Unique person identification number</p></td>
+					<td class="t2Col"><p>RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoPersonne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Handled by Web service</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NumeroTypeAddresse</p></td>
+					<td class="t2Col"><p>Long</p></td>
+					<td class="t1Col"><p>Handled by Web service</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>TypeAddresse</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>&#160;</p></td>
+					<td class="t2Col"><p>RefAddress.AddrType</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Communication</a></p>
+		<div class="droptext" id="POPUP439335495" style="display: none;">
+			<table class="Table1" cellspacing="0px">
+				<col style="width: 25%;">
+				<col style="width: 13.413%;">
+				<col style="width: 34.126%;">
+				<col style="width: 25%;">
+				<tr class="t1st">
+					<td><p class="hcp5">Property Name</p></td>
+					<td><p class="hcp5">Data type</p></td>
+					<td><p class="hcp5">Explanation</p></td>
+					<td><p class="hcp5">Map to Viewpoint 
+					 field</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NoInterne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Internal number of the communication 
+					 mean</p></td>
+					<td class="t2Col"><p>RefMaster.RefCode+RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoPersonne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Internal number of the person 
+					 with the communication mean</p></td>
+					<td class="t2Col"><p>RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Addresse</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Details</p></td>
+					<td class="t2Col"><p>RefAddress.cText</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>TypeCommunicationmean</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Type of ID</p></td>
+					<td class="t2Col"><p>RefAddress.cType</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+		<li><p><a class="dropspot" href="javascript:TextPopup(this)" id="a5">Identification</a></p>
+		<div class="droptext" id="POPUP439491244" style="display: none;">
+			<table class="Table1" cellspacing="0px">
+				<col style="width: 25%;">
+				<col style="width: 15.62%;">
+				<col style="width: 32.598%;">
+				<col style="width: 25%;">
+				<tr class="t1st">
+					<td><p>Property Name</p></td>
+					<td><p>Data type</p></td>
+					<td><p>Explanation</p></td>
+					<td><p>Map to Viewpoint field</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>NoInterne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Internal number of the identification</p></td>
+					<td class="t2Col"><p><span class="hcp6">Passport</span></p>
+					<p>'PA'+PassportNr</p>
+					<p>&#160;</p>
+					<p><span class="hcp6">ID</span> 
+					 <span class="hcp6">Card</span></p>
+					<p>'ID'+IDcardNr</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>NoPersonne</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Internal number of the holder</p></td>
+					<td class="t2Col"><p>RefMaster.MfNr</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>PieceIdentification</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Number of the identification</p></td>
+					<td class="t2Col"><p><span class="hcp6">Passport 
+					 information</span></p>
+					<p>Compliance.PassportNr</p>
+					<p>&#160;</p>
+					<p><span class="hcp6">ID 
+					 card information</span></p>
+					<p>Compliance.IDcardNr</p></td>
+				</tr>
+				<tr class="t1Row">
+					<td class="t1Col"><p>TypePieceIdentification</p></td>
+					<td class="t2Col"><p>String</p></td>
+					<td class="t1Col"><p>Type of identification (PA = passport, 
+					 ID = ID card, DL = driving license). This table is 
+					 fully configurable.</p></td>
+					<td class="t2Col"><p>Passport: 'PA'</p>
+					<p>ID Card: 'ID'</p></td>
+				</tr>
+				<tr class="t2Row">
+					<td class="t1Col"><p>Copie</p></td>
+					<td class="t2Col"><p>Boolean</p></td>
+					<td class="t1Col"><p>Do you have a copy of the identification</p></td>
+					<td class="t2Col"><p>&#160;</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+  </div></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<h2>CDDS Integration - Tags</h2>
+<table class="Table1" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" border="1">
+	<col style="width: 14.8%;">
+	<col style="width: 38.267%;">
+	<col style="width: 46.933%;">
+	<tr class="t1st">
+		<td><p class="hcp5">Tag</p></td>
+		<td><p class="hcp5">Definition</p></td>
+		<td><p class="hcp5">Syntax and Example</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>DOALL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the frequency for the data transfer to AMLspotter from the 'Date 
+		 lastDo All review'. When this is due, the CCODE tag is ignored.</p>
+		<p><span class="hcp4">Note</span>: 
+		 'Date lastDoAll Review' is the system recorded date when it performs 
+		 the update to AMLspotter for all changes made in the defined change 
+		 codes.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/DOALL=&lt;frequency&gt;]</p>
+		<p>where &lt;frequency&gt; can be:</p>
+		<ul class="hcp1">
+			<li><p>W - weekly</p></li>
+			<li><p>M - monthly</p></li>
+			<li><p>Q - quarterly</p></li>
+			<li><p>Y - yearly</p></li>
+		</ul>
+		<p>Example: [/DOALL=w/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>SERVICE_ADDRESS</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the URL of the AMLspotter program.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/SERVICE_ADDRESS=&lt;URL&gt;/]</p>
+		<p>where &lt;URL&gt; must be specified in full.</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>SQL.ALL</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This query is 
+		 to specify information that needs to be transferred. It will be 
+		 run during the first data transfer and each time the data transfer 
+		 is due (based on frequency set by DOALL).</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/&lt;ClassPrefix&gt;.SQL.ALL=&lt;Query&gt;/]</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;ClassPrefix&gt; indicates the class for the information</p></li>
+			<li><p>&lt;Query&gt; is SQL query to specify what is to be 
+			 included in the data transfer. The field MfNr MUST be included 
+			 in the query and mapped to the respective field.</p></li>
+		</ul>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/IND.SQL.ALL=SELECT * FROM RefMaster INNER JOIN Compliance 
+		 ON Compliance.AddrCode=RefMaster.RefCode WHERE CP&lt;&gt;0/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>SQL.DT</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This query is 
+		 to specify updated information that should be transferred based 
+		 on conditions set using the CCODE tag. This query will run if 
+		 a data transfer has been performed before and there is EventLog 
+		 table in the query.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/&lt;ClassPrefix&gt;.SQL.DT=&lt;Query&gt;/]</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">[/IND.SQL.DT=SELECT 
+		 DISTINCT MfNr, Status, Name, KYC_Country1, KYC_SourceFunds, KYC_BackGround, 
+		 RefMaster.RefCode, Compliance.* FROM RefMaster INNER JOIN Compliance 
+		 ON &#160;Compliance.AddrCode=RefMaster.RefCode INNER JOIN EventLog 
+		 ON EventLog.KeyCode=RefMaster.RefCode AND EventCode IN ('(-CCODE-)') 
+		 WHERE &#160;CP&lt;&gt;0/] &#160;&#160;&#160;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td class="t1Col" style="vertical-align: top;"><p>CCODE</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 Change Codes that will require information to be transferred from 
+		 Viewpoint to CDDS.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/&lt;ClassPrefix&gt;.CCODE=&lt;ChangeCode&gt;/]</p>
+		<p>where &lt;ChangeCode&gt; refers to Viewpoint's Change Code. 
+		 If there is more than one, separate the codes with commas.</p>
+		<p>&#160;</p>
+		<p>Example:</p>
+		<p>[/IND.CCODE=ADC/]</p>
+		<p>[/IND.CCODE=ADC,ADN,CPC/]</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td class="t1Col" style="vertical-align: top;"><p>VALUE</p></td>
+		<td class="t2Col" style="vertical-align: top;"><p>This is to specify 
+		 the mapping between Viewpoint and AMLspotter i.e. source and destination 
+		 of the information to be transferred.</p></td>
+		<td class="t1Col" style="vertical-align: top;"><p>[/&lt;ClassPrefix&gt;.VALUE=&lt;Destination&gt;|&lt;Source&gt;/]</p>
+		<p>where:</p>
+		<ul class="hcp1">
+			<li><p>&lt;Destinationy&gt; refers to the AMLspotter Property 
+			 (field). Note that this is case-sensitive.</p></li>
+			<li><p>&lt;Source&gt; refers to where the information is located 
+			 in Viewpoint. This can be the database field name in Viewpoint 
+			 or an SQL query to retrieve the information from Viewpoint. 
+			 If the information is to be taken from more than one Viewpoint 
+			 database fields, specify these fields with a plus sign.</p></li>
+		</ul>
+		<p>Example:</p>
+		<p>[/IND.VALUE=NoInterne|MfNr/]</p>
+		<p>[/IDC.VALUE=NoInterne|IdType+IdNumber/]</p>
+		<p>[/ADDR.VALUE=Addresse|SELECT Adline FROM Addresses WHERE AddrNr=(-AddrNr-)/]</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Sample Tag Configuration</h3>
+<p>[/TASK_ROUTINE=CDDS/]</p>
+<p>[/DOALL=W/]</p>
+<p>[/SERVICE_ADDRESS=http://test.raapi.cdds.lu/RaApi.svc/]</p>
+<p>&#160;</p>
+<p>------------ For Individual Master File ------------</p>
+<p>[/IND.SQL.ALL=SELECT * FROM RefMaster INNER JOIN Compliance ON Compliance.AddrCode=RefMaster.RefCode 
+ WHERE CP&lt;&gt;0/] &#160;&#160;&#160;</p>
+<p>[/IND.SQL.DT=SELECT DISTINCT MfNr,Status,Name,KYC_Country1,KCY_SourceFunds,KYC_BackGround,RefMaster.RefCode,Compliance.* 
+ FROM RefMaster INNER JOIN Compliance ON Compliance.AddrCode=RefMaster.RefCode 
+ INNER JOIN EventLog ON EventLog.KeyCode=RefMaster.RefCode AND EventCode 
+ IN ('(-CCODE-)') WHERE CP&lt;&gt;0/] &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>[/IND.CCODE=ADC,ADN,CPC/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=NoInterne|MfNr/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Nom|Name/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=NomJeuneFille|FormerGivenNames/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Prenom|GivenNames/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Sexe|Gender/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=DteEntreeRelation|SELECT TOP 1 DateEffective FROM RefStatus 
+ WHERE RefCode='(-RefCode-)' AND SType='M' AND NewStat='0' ORDER BY SeqNr 
+ ASC/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=DteClotureRelation|SELECT TOP 1 DateEffective FROM RefStatus 
+ WHERE RefCode='(-RefCode-)' AND SType='M' AND NewStat='8' ORDER BY SeqNr 
+ DESC/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=CycleVie|Status/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=DteNaissance|BirthDate/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=LieuNaissance|PlaceBirth/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Nationalite|SELECT ElCode FROM LookValues WHERE Name='(-NationalityOrigin-)' 
+ AND TabCode='NATI'/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Nationalite2|SELECT ElCode FROM LookValues WHERE Name='(-Nationality-)' 
+ AND TabCode='NATI'/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=Residence|KYC_Country1/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=EtatCivil|MaritalStatus/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=ActivitePrincipale|SELECT UserText1 FROM Entity WHERE EntCode='(-RefCode-)'/] 
+ &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=OrigineFortune|KCY_SourceFunds/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=KycBackground|KYC_BackGround/] &#160;&#160;&#160;</p>
+<p>[/IND.VALUE=NumeroCycleVie|SELECT CASE WHEN status='0' THEN 1 ELSE 0 
+ END AS [isActive] FROM Entity WHERE EntCode='(-RefCode-)'/] &#160;</p>
+<p>&#160;</p>
+<p>------------ For Company File ------------</p>
+<p>[/ENT.SQL.ALL=SELECT * FROM Entity INNER JOIN RefMaster ON RefMaster.RefCode=Entity.EntCode/] 
+ &#160;&#160;&#160;</p>
+<p>[/ENT.SQL.DT=SELECT DISTINCT Mfnr,Name,KYC_BackGround,Entity.* FROM 
+ Entity INNER JOIN RefMaster ON RefMaster.RefCode=Entity.EntCode INNER 
+ JOIN EventLog ON EventLog.KeyCode=Entity.EntCode AND EventCode IN ('(-CCODE-)')/] 
+ &#160;&#160;&#160;</p>
+<p>[/ENT.CCODE=ESC,CIN,COC/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=NoInterne|MfNr/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=DenominationSociale|Name/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=DteEntreeRelation|SELECT TOP 1 CASE WHEN DateEffective IS 
+ NOT NULL THEN DateEffective ELSE DateChange END AS DateEffective FROM 
+ RefStatus WHERE SType='E' AND NewStat='0' AND OldStat='' AND RefCode='(-EntCode-)' 
+ ORDER BY SeqNr ASC/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=DteClotureRelation|SELECT TOP 1 CASE WHEN DateEffective 
+ IS NOT NULL THEN DateEffective ELSE DateChange END AS DateEffective FROM 
+ RefStatus WHERE RefCode='(-EntCode-)' AND SType='E' AND NewStat='8' ORDER 
+ BY SeqNr DESC/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=CycleVie|Status/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=DteConstitution|IncorpDate/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=Activite|UserText1/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=FormeJuridique|EntType/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=Nationalite|IncorpPlace/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=AdresseSiege|SELECT AdLine FROM RefAddress INNER JOIN Addresses 
+ ON Addresses.AddrNr=RefAddress.AddrNr WHERE AddrType='SR' AND RefCode='(-EntCode-)' 
+ AND Active&lt;&gt;0/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=TypeSociete|UserCombo2/] &#160;&#160;&#160;</p>
+<p>[/ENT.VALUE=KycBackground|KYC_BackGround/] &#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>------------ For Address ------------</p>
+<p>[/ADDR.SQL.ALL=SELECT MfNr,refAddress.* FROM RefAddress INNER JOIN RefMaster 
+ ON RefMaster.RefCode=RefAddress.RefCode WHERE RefAddress.Active&lt;&gt;0 
+ ORDER BY RefCode/] &#160;&#160;&#160;</p>
+<p>[/ADDR.SQL.DT=SELECT MfNr,RefAddress.* FROM RefAddress INNER JOIN RefMaster 
+ ON RefMaster.RefCode=RefAddress.RefCode INNER JOIN EventLog ON EventLog.KeyCode=RefMaster.RefCode 
+ AND EventCode IN ('(-CCODE-)') WHERE RefAddress.Active&lt;&gt;0/] &#160;&#160;&#160;</p>
+<p>[/ADDR.CCODE=ADC/] &#160;&#160;&#160;</p>
+<p>[/ADDR.VALUE=Addresse|SELECT Adline FROM Addresses WHERE AddrNr=(-AddrNr-)/] 
+ &#160;&#160;&#160;</p>
+<p>[/ADDR.VALUE=TypeAddresse|AddrType/] &#160;&#160;&#160;</p>
+<p>[/ADDR.VALUE=NoInterne|MfNr/] &#160;&#160;&#160;</p>
+<p>[/ADDR.VALUE=NoPersonne|MfNr/] &#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>------------ For Communication ------------</p>
+<p>[/CON.SQL.ALL=SELECT RefContacts.*,RefMaster.MfNr FROM RefMaster INNER 
+ JOIN RefContacts ON RefContacts.RefCode=RefMaster.RefCode WHERE RefMaster.RefType='I' 
+ AND (RefContacts.ToDate IS NULL OR RefContacts.ToDate &gt;= CONVERT(datetime, 
+ GETDATE())) ORDER BY RefCode/]</p>
+<p>[/CON.SQL.DT=SELECT RefContacts.*,RefMaster.MfNr FROM RefMaster INNER 
+ JOIN RefContacts ON RefContacts.RefCode=RefMaster.RefCode INNER JOIN EventLog 
+ ON EventLog.KeyCode=RefMaster.RefCode AND EventCode IN ('(-CCODE-)') WHERE 
+ RefMaster.RefType='I' AND (RefContacts.ToDate IS NULL OR RefContacts.ToDate 
+ &gt;= CONVERT(datetime, GETDATE())) ORDER BY RefCode/] &#160;&#160;&#160;</p>
+<p>[/CON.CCODE=ADC/] &#160;&#160;&#160;</p>
+<p>[/CON.VALUE=NoInterne|RefCode+MfNr/] &#160;&#160;&#160;</p>
+<p>[/CON.VALUE=NoPersonne|MfNr/] &#160;&#160;&#160;</p>
+<p>[/CON.VALUE=Addresse|cText/] &#160;&#160;&#160;</p>
+<p>[/CON.VALUE=TypeCommunicationMean|cType/] &#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>------------ For Identification ------------</p>
+<p>[/IDC.SQL.ALL=SELECT MfNr,'PA' AS IdType,passportNr AS IdNumber FROM 
+ RefMaster INNER JOIN Compliance ON RefMaster.RefCode=Compliance.AddrCode 
+ WHERE CP&lt;&gt;0 AND PassportNr IS NOT NULL AND PassportNr&lt;&gt;'' 
+ UNION SELECT MfNr,'ID' AS &#160;&#160;&#160;IdType,IDcardNr AS IdNumber 
+ FROM RefMaster INNER JOIN Compliance ON RefMaster.RefCode=Compliance.AddrCode 
+ WHERE CP&lt;&gt;0 AND IDcardNr IS NOT NULL AND IDcardNr&lt;&gt;''/] &#160;&#160;&#160;</p>
+<p>[/IDC.SQL.DT=SELECT MfNr,'PA' AS IdType,passportNr AS IdNumber FROM 
+ RefMaster INNER JOIN Compliance ON RefMaster.RefCode=Compliance.AddrCode 
+ INNER JOIN EventLog ON EventLog.KeyCode=RefMaster.RefCode AND EventCode 
+ IN ('(-CCODE-)') &#160;&#160;&#160;WHERE CP&lt;&gt;0 AND PassportNr IS 
+ NOT NULL AND PassportNr&lt;&gt;'' UNION SELECT MfNr,'ID' AS IdType,IDcardNr 
+ AS IdNumber FROM RefMaster INNER JOIN Compliance ON RefMaster.RefCode=Compliance.AddrCode 
+ INNER JOIN EventLog ON EventLog.KeyCode=RefMaster.RefCode AND EventCode 
+ IN ('(-CCODE-)') WHERE CP&lt;&gt;0 AND IDcardNr IS NOT NULL AND IDcardNr&lt;&gt;''/] 
+ &#160;&#160;&#160;</p>
+<p>[/IDC.CCODE=CPC/] &#160;&#160;&#160;</p>
+<p>[/IDC.VALUE=NoInterne|IdType+IdNumber/] &#160;&#160;&#160;</p>
+<p>[/IDC.VALUE=NoPersonne|MfNr/] &#160;&#160;&#160;</p>
+<p>[/IDC.VALUE=PieceIdentification|IdNumber/] &#160;&#160;&#160;</p>
+<p>[/IDC.VALUE=TypePieceIdentification|IdType/][/RETRY_ON_FAILURE=0/]</p>
+<p>&#160;</p>
+<p class="SeeAlso">See also:</p>
+<ul class="hcp1">
+	<li><p><a href="Task_Scheduler.htm">Task Scheduler and Notification 
+	 Agent</a></p></li>
+	<li><p><a href="Add_New_Job_Wizard.htm">Add New Job Wizard</a></p></li>
+	<li><p><a href="Task_Scheduler_-_Tags.htm">Task Scheduler - Tags</a></p></li>
+</ul>
+
+  <p>&#160;</p>
+<p style="text-align:left;" class="breadcrumbs"><a class="breadcrumbs" href="../Shared/Copyright_Notice.htm">Home</a> &gt; CDDS Integration</p>
+  <p class="hcp7">&#160;</p>
+  <p class="hcp7">(c) Viewpoint Software for 
+ Business Ltd</p>
+  <p class="hcp7">Version: 8.0.2022.09.20</p>
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP447464259');
+	TextPopupInit('a2','POPUP438482822');
+	TextPopupInit('a3','POPUP439164078');
+	TextPopupInit('a4','POPUP439335495');
+	TextPopupInit('a5','POPUP439491244');
+//]]></script>
+ </body>
+</html>
